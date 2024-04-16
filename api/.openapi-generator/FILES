@@ -64,7 +64,6 @@ api_video_attachments.go
 api_videos.go
 api_years.go
 client.go
-configuration.go
 docs/AccessSchedule.md
 docs/ActivityLogAPI.md
 docs/ActivityLogEntry.md
@@ -669,6 +668,7 @@ model_series_info_remote_search_query.go
 model_series_status.go
 model_series_timer_info_dto.go
 model_series_timer_info_dto_query_result.go
+model_server_configuration.go
 model_server_discovery_info.go
 model_session_info.go
 model_session_info_full_now_playing_item.go
