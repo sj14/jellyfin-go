@@ -19,15 +19,15 @@ import (
 	"log"
 	"os"
 
-	jellyapi "github.com/sj14/jellyfin-go/api"
+	jellyfin "github.com/sj14/jellyfin-go/api"
 )
 
 func main() {
-	config := &jellyapi.Configuration{
-		Servers:       jellyapi.ServerConfigurations{{URL: "http://<ADDRESS>:<PORT>"}},
+	config := &jellyfin.Configuration{
+		Servers:       jellyfin.ServerConfigurations{{URL: "http://<ADDRESS>:<PORT>"}},
 		DefaultHeader: map[string]string{"Authorization": `MediaBrowser Token="<API_TOKEN>"`},
 	}
-	client := jellyapi.NewAPIClient(config)
+	client := jellyfin.NewAPIClient(config)
 
 	result, resp, err := client.ActivityLogAPI.GetLogEntries(context.Background()).Execute()
 	if err != nil {
