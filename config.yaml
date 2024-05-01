@@ -1,0 +1,11 @@
+inputSpec: jellyfin-openapi-stable.json
+generatorName: go 
+outputDir: api
+gitUserId: sj14
+gitRepoId: jellyfin-go
+additionalProperties:
+  enumClassPrefix: true
+  generateInterfaces: true
+  packageName: api
+  withGoMod: false
+  isGoSubmodule: true

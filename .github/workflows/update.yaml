@@ -12,6 +12,7 @@ jobs:
     # see: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
     permissions:
       contents: write
+      pull-requests: write
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -25,9 +26,8 @@ jobs:
       - name: Generate
         run: |
           npm install @openapitools/openapi-generator-cli -g
-          alias openapi-generator='openapi-generator-cli'
-
-          make
+          make load
+          openapi-generator-cli generate -c config.yaml
           git add --all
           ! git diff --cached --exit-code
       - name: Create pull request
@@ -35,6 +35,7 @@ jobs:
           t=$(date +%s)
           git checkout -b $t
           git commit -am "Auto-Update"
-          gh pr create -B main -H $t --title 'Auto-Update' --body 'Created by Update Action'
+          git push origin $t
+          gh pr create --base main --head $t --title 'Auto-Update' --body 'Created by Update Action'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
