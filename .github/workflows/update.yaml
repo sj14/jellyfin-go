@@ -24,13 +24,15 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
       - name: Generate
+        id: generate
         run: |
           npm install @openapitools/openapi-generator-cli -g
           make load
           openapi-generator-cli generate -c config.yaml
           git add --all
-          ! git diff --cached --exit-code
+          echo "changed=$(! git diff --cached --exit-code)" >> GITHUB_OUTPUT
       - name: Create pull request
+        if: ${{ needs.generate.outputs.changed == '1' }}
         run: |
           t=$(date +%s)
           git checkout -b $t
