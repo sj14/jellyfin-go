@@ -26,14 +26,13 @@ jobs:
       - name: Generate
         id: generate
         run: |
+          set -xue
           npm install @openapitools/openapi-generator-cli -g
           make load
           openapi-generator-cli generate -c config.yaml
           git add --all
-          echo "changed=$(! git diff --cached --exit-code)" >> GITHUB_OUTPUT
-      - name: Create pull request
-        if: ${{ needs.generate.outputs.changed == '1' }}
-        run: |
+          set +o pipefail # it should not stop on failure
+          ! git diff --cached --exit-code
           t=$(date +%s)
           git checkout -b $t
           git commit -am "Auto-Update"
