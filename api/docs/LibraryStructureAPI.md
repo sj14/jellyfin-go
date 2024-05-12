@@ -99,7 +99,7 @@ import (
 
 func main() {
 	name := "name_example" // string | The name of the virtual folder. (optional)
-	collectionType := openapiclient.CollectionTypeOptions("Movies") // CollectionTypeOptions | The type of the collection. (optional)
+	collectionType := "collectionType_example" // CollectionTypeOptions | The type of the collection. (optional)
 	paths := []string{"Inner_example"} // []string | The paths of the virtual folder. (optional)
 	refreshLibrary := true // bool | Whether to refresh the library. (optional) (default to false)
 	addVirtualFolderDto := *openapiclient.NewAddVirtualFolderDto() // AddVirtualFolderDto | The library options. (optional)
@@ -126,7 +126,7 @@ Other parameters are passed through a pointer to a apiAddVirtualFolderRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string** | The name of the virtual folder. | 
- **collectionType** | [**CollectionTypeOptions**](CollectionTypeOptions.md) | The type of the collection. | 
+ **collectionType** | **CollectionTypeOptions** | The type of the collection. | 
  **paths** | **[]string** | The paths of the virtual folder. | 
  **refreshLibrary** | **bool** | Whether to refresh the library. | [default to false]
  **addVirtualFolderDto** | [**AddVirtualFolderDto**](AddVirtualFolderDto.md) | The library options. | 
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

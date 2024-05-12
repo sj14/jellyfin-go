@@ -13,6 +13,8 @@
 
 * `CHAPTERS` (value: `"Chapters"`)
 
+* `TRICKPLAY` (value: `"Trickplay"`)
+
 * `CHILD_COUNT` (value: `"ChildCount"`)
 
 * `CUMULATIVE_RUN_TIME_TICKS` (value: `"CumulativeRunTimeTicks"`)
@@ -72,10 +74,6 @@
 * `SPECIAL_EPISODE_NUMBERS` (value: `"SpecialEpisodeNumbers"`)
 
 * `STUDIOS` (value: `"Studios"`)
-
-* `BASIC_SYNC_INFO` (value: `"BasicSyncInfo"`)
-
-* `SYNC_INFO` (value: `"SyncInfo"`)
 
 * `TAGLINES` (value: `"Taglines"`)
 

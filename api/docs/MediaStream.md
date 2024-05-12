@@ -23,13 +23,15 @@ Name | Type | Description | Notes
 **TimeBase** | Pointer to **NullableString** | Gets or sets the time base. | [optional] 
 **CodecTimeBase** | Pointer to **NullableString** | Gets or sets the codec time base. | [optional] 
 **Title** | Pointer to **NullableString** | Gets or sets the title. | [optional] 
-**VideoRange** | Pointer to **NullableString** | Gets the video range. | [optional] [readonly] 
-**VideoRangeType** | Pointer to **NullableString** | Gets the video range type. | [optional] [readonly] 
+**VideoRange** | Pointer to [**VideoRange**](VideoRange.md) | Gets the video range. | [optional] [readonly] 
+**VideoRangeType** | Pointer to [**VideoRangeType**](VideoRangeType.md) | Gets the video range type. | [optional] [readonly] 
 **VideoDoViTitle** | Pointer to **NullableString** | Gets the video dovi title. | [optional] [readonly] 
+**AudioSpatialFormat** | Pointer to [**AudioSpatialFormat**](AudioSpatialFormat.md) | Gets the audio spatial format. | [optional] [readonly] [default to AUDIOSPATIALFORMAT_NONE]
 **LocalizedUndefined** | Pointer to **NullableString** |  | [optional] 
 **LocalizedDefault** | Pointer to **NullableString** |  | [optional] 
 **LocalizedForced** | Pointer to **NullableString** |  | [optional] 
 **LocalizedExternal** | Pointer to **NullableString** |  | [optional] 
+**LocalizedHearingImpaired** | Pointer to **NullableString** |  | [optional] 
 **DisplayTitle** | Pointer to **NullableString** |  | [optional] [readonly] 
 **NalLengthSize** | Pointer to **NullableString** |  | [optional] 
 **IsInterlaced** | Pointer to **bool** | Gets or sets a value indicating whether this instance is interlaced. | [optional] 
@@ -43,6 +45,7 @@ Name | Type | Description | Notes
 **SampleRate** | Pointer to **NullableInt32** | Gets or sets the sample rate. | [optional] 
 **IsDefault** | Pointer to **bool** | Gets or sets a value indicating whether this instance is default. | [optional] 
 **IsForced** | Pointer to **bool** | Gets or sets a value indicating whether this instance is forced. | [optional] 
+**IsHearingImpaired** | Pointer to **bool** | Gets or sets a value indicating whether this instance is for the hearing impaired. | [optional] 
 **Height** | Pointer to **NullableInt32** | Gets or sets the height. | [optional] 
 **Width** | Pointer to **NullableInt32** | Gets or sets the width. | [optional] 
 **AverageFrameRate** | Pointer to **NullableFloat32** | Gets or sets the average frame rate. | [optional] 
@@ -749,20 +752,20 @@ HasTitle returns a boolean if a field has been set.
 UnsetTitle ensures that no value is present for Title, not even an explicit nil
 ### GetVideoRange
 
-`func (o *MediaStream) GetVideoRange() string`
+`func (o *MediaStream) GetVideoRange() VideoRange`
 
 GetVideoRange returns the VideoRange field if non-nil, zero value otherwise.
 
 ### GetVideoRangeOk
 
-`func (o *MediaStream) GetVideoRangeOk() (*string, bool)`
+`func (o *MediaStream) GetVideoRangeOk() (*VideoRange, bool)`
 
 GetVideoRangeOk returns a tuple with the VideoRange field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVideoRange
 
-`func (o *MediaStream) SetVideoRange(v string)`
+`func (o *MediaStream) SetVideoRange(v VideoRange)`
 
 SetVideoRange sets VideoRange field to given value.
 
@@ -772,32 +775,22 @@ SetVideoRange sets VideoRange field to given value.
 
 HasVideoRange returns a boolean if a field has been set.
 
-### SetVideoRangeNil
-
-`func (o *MediaStream) SetVideoRangeNil(b bool)`
-
- SetVideoRangeNil sets the value for VideoRange to be an explicit nil
-
-### UnsetVideoRange
-`func (o *MediaStream) UnsetVideoRange()`
-
-UnsetVideoRange ensures that no value is present for VideoRange, not even an explicit nil
 ### GetVideoRangeType
 
-`func (o *MediaStream) GetVideoRangeType() string`
+`func (o *MediaStream) GetVideoRangeType() VideoRangeType`
 
 GetVideoRangeType returns the VideoRangeType field if non-nil, zero value otherwise.
 
 ### GetVideoRangeTypeOk
 
-`func (o *MediaStream) GetVideoRangeTypeOk() (*string, bool)`
+`func (o *MediaStream) GetVideoRangeTypeOk() (*VideoRangeType, bool)`
 
 GetVideoRangeTypeOk returns a tuple with the VideoRangeType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVideoRangeType
 
-`func (o *MediaStream) SetVideoRangeType(v string)`
+`func (o *MediaStream) SetVideoRangeType(v VideoRangeType)`
 
 SetVideoRangeType sets VideoRangeType field to given value.
 
@@ -807,16 +800,6 @@ SetVideoRangeType sets VideoRangeType field to given value.
 
 HasVideoRangeType returns a boolean if a field has been set.
 
-### SetVideoRangeTypeNil
-
-`func (o *MediaStream) SetVideoRangeTypeNil(b bool)`
-
- SetVideoRangeTypeNil sets the value for VideoRangeType to be an explicit nil
-
-### UnsetVideoRangeType
-`func (o *MediaStream) UnsetVideoRangeType()`
-
-UnsetVideoRangeType ensures that no value is present for VideoRangeType, not even an explicit nil
 ### GetVideoDoViTitle
 
 `func (o *MediaStream) GetVideoDoViTitle() string`
@@ -852,6 +835,31 @@ HasVideoDoViTitle returns a boolean if a field has been set.
 `func (o *MediaStream) UnsetVideoDoViTitle()`
 
 UnsetVideoDoViTitle ensures that no value is present for VideoDoViTitle, not even an explicit nil
+### GetAudioSpatialFormat
+
+`func (o *MediaStream) GetAudioSpatialFormat() AudioSpatialFormat`
+
+GetAudioSpatialFormat returns the AudioSpatialFormat field if non-nil, zero value otherwise.
+
+### GetAudioSpatialFormatOk
+
+`func (o *MediaStream) GetAudioSpatialFormatOk() (*AudioSpatialFormat, bool)`
+
+GetAudioSpatialFormatOk returns a tuple with the AudioSpatialFormat field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAudioSpatialFormat
+
+`func (o *MediaStream) SetAudioSpatialFormat(v AudioSpatialFormat)`
+
+SetAudioSpatialFormat sets AudioSpatialFormat field to given value.
+
+### HasAudioSpatialFormat
+
+`func (o *MediaStream) HasAudioSpatialFormat() bool`
+
+HasAudioSpatialFormat returns a boolean if a field has been set.
+
 ### GetLocalizedUndefined
 
 `func (o *MediaStream) GetLocalizedUndefined() string`
@@ -992,6 +1000,41 @@ HasLocalizedExternal returns a boolean if a field has been set.
 `func (o *MediaStream) UnsetLocalizedExternal()`
 
 UnsetLocalizedExternal ensures that no value is present for LocalizedExternal, not even an explicit nil
+### GetLocalizedHearingImpaired
+
+`func (o *MediaStream) GetLocalizedHearingImpaired() string`
+
+GetLocalizedHearingImpaired returns the LocalizedHearingImpaired field if non-nil, zero value otherwise.
+
+### GetLocalizedHearingImpairedOk
+
+`func (o *MediaStream) GetLocalizedHearingImpairedOk() (*string, bool)`
+
+GetLocalizedHearingImpairedOk returns a tuple with the LocalizedHearingImpaired field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocalizedHearingImpaired
+
+`func (o *MediaStream) SetLocalizedHearingImpaired(v string)`
+
+SetLocalizedHearingImpaired sets LocalizedHearingImpaired field to given value.
+
+### HasLocalizedHearingImpaired
+
+`func (o *MediaStream) HasLocalizedHearingImpaired() bool`
+
+HasLocalizedHearingImpaired returns a boolean if a field has been set.
+
+### SetLocalizedHearingImpairedNil
+
+`func (o *MediaStream) SetLocalizedHearingImpairedNil(b bool)`
+
+ SetLocalizedHearingImpairedNil sets the value for LocalizedHearingImpaired to be an explicit nil
+
+### UnsetLocalizedHearingImpaired
+`func (o *MediaStream) UnsetLocalizedHearingImpaired()`
+
+UnsetLocalizedHearingImpaired ensures that no value is present for LocalizedHearingImpaired, not even an explicit nil
 ### GetDisplayTitle
 
 `func (o *MediaStream) GetDisplayTitle() string`
@@ -1416,6 +1459,31 @@ SetIsForced sets IsForced field to given value.
 `func (o *MediaStream) HasIsForced() bool`
 
 HasIsForced returns a boolean if a field has been set.
+
+### GetIsHearingImpaired
+
+`func (o *MediaStream) GetIsHearingImpaired() bool`
+
+GetIsHearingImpaired returns the IsHearingImpaired field if non-nil, zero value otherwise.
+
+### GetIsHearingImpairedOk
+
+`func (o *MediaStream) GetIsHearingImpairedOk() (*bool, bool)`
+
+GetIsHearingImpairedOk returns a tuple with the IsHearingImpaired field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsHearingImpaired
+
+`func (o *MediaStream) SetIsHearingImpaired(v bool)`
+
+SetIsHearingImpaired sets IsHearingImpaired field to given value.
+
+### HasIsHearingImpaired
+
+`func (o *MediaStream) HasIsHearingImpaired() bool`
+
+HasIsHearingImpaired returns a boolean if a field has been set.
 
 ### GetHeight
 

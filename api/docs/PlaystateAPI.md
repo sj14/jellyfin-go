@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**MarkPlayedItem**](PlaystateAPI.md#MarkPlayedItem) | **Post** /Users/{userId}/PlayedItems/{itemId} | Marks an item as played for user.
-[**MarkUnplayedItem**](PlaystateAPI.md#MarkUnplayedItem) | **Delete** /Users/{userId}/PlayedItems/{itemId} | Marks an item as unplayed for user.
-[**OnPlaybackProgress**](PlaystateAPI.md#OnPlaybackProgress) | **Post** /Users/{userId}/PlayingItems/{itemId}/Progress | Reports a user&#39;s playback progress.
-[**OnPlaybackStart**](PlaystateAPI.md#OnPlaybackStart) | **Post** /Users/{userId}/PlayingItems/{itemId} | Reports that a user has begun playing an item.
-[**OnPlaybackStopped**](PlaystateAPI.md#OnPlaybackStopped) | **Delete** /Users/{userId}/PlayingItems/{itemId} | Reports that a user has stopped playing an item.
+[**MarkPlayedItem**](PlaystateAPI.md#MarkPlayedItem) | **Post** /UserPlayedItems/{itemId} | Marks an item as played for user.
+[**MarkUnplayedItem**](PlaystateAPI.md#MarkUnplayedItem) | **Delete** /UserPlayedItems/{itemId} | Marks an item as unplayed for user.
+[**OnPlaybackProgress**](PlaystateAPI.md#OnPlaybackProgress) | **Post** /PlayingItems/{itemId}/Progress | Reports a session&#39;s playback progress.
+[**OnPlaybackStart**](PlaystateAPI.md#OnPlaybackStart) | **Post** /PlayingItems/{itemId} | Reports that a session has begun playing an item.
+[**OnPlaybackStopped**](PlaystateAPI.md#OnPlaybackStopped) | **Delete** /PlayingItems/{itemId} | Reports that a session has stopped playing an item.
 [**PingPlaybackSession**](PlaystateAPI.md#PingPlaybackSession) | **Post** /Sessions/Playing/Ping | Pings a playback session.
 [**ReportPlaybackProgress**](PlaystateAPI.md#ReportPlaybackProgress) | **Post** /Sessions/Playing/Progress | Reports playback progress within a session.
 [**ReportPlaybackStart**](PlaystateAPI.md#ReportPlaybackStart) | **Post** /Sessions/Playing | Reports playback has started within a session.
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## MarkPlayedItem
 
-> UserItemDataDto MarkPlayedItem(ctx, userId, itemId).DatePlayed(datePlayed).Execute()
+> UserItemDataDto MarkPlayedItem(ctx, itemId).UserId(userId).DatePlayed(datePlayed).Execute()
 
 Marks an item as played for user.
 
@@ -36,13 +36,13 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 	datePlayed := time.Now() // time.Time | Optional. The date the item was played. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.PlaystateAPI.MarkPlayedItem(context.Background(), userId, itemId).DatePlayed(datePlayed).Execute()
+	resp, r, err := apiClient.PlaystateAPI.MarkPlayedItem(context.Background(), itemId).UserId(userId).DatePlayed(datePlayed).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PlaystateAPI.MarkPlayedItem``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -58,7 +58,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -69,7 +68,7 @@ Other parameters are passed through a pointer to a apiMarkPlayedItemRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
  **datePlayed** | **time.Time** | Optional. The date the item was played. | 
 
 ### Return type
@@ -92,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## MarkUnplayedItem
 
-> UserItemDataDto MarkUnplayedItem(ctx, userId, itemId).Execute()
+> UserItemDataDto MarkUnplayedItem(ctx, itemId).UserId(userId).Execute()
 
 Marks an item as unplayed for user.
 
@@ -109,12 +108,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.PlaystateAPI.MarkUnplayedItem(context.Background(), userId, itemId).Execute()
+	resp, r, err := apiClient.PlaystateAPI.MarkUnplayedItem(context.Background(), itemId).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PlaystateAPI.MarkUnplayedItem``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -130,7 +129,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -141,7 +139,7 @@ Other parameters are passed through a pointer to a apiMarkUnplayedItemRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -163,9 +161,9 @@ Name | Type | Description  | Notes
 
 ## OnPlaybackProgress
 
-> OnPlaybackProgress(ctx, userId, itemId).MediaSourceId(mediaSourceId).PositionTicks(positionTicks).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).VolumeLevel(volumeLevel).PlayMethod(playMethod).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).RepeatMode(repeatMode).IsPaused(isPaused).IsMuted(isMuted).Execute()
+> OnPlaybackProgress(ctx, itemId).MediaSourceId(mediaSourceId).PositionTicks(positionTicks).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).VolumeLevel(volumeLevel).PlayMethod(playMethod).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).RepeatMode(repeatMode).IsPaused(isPaused).IsMuted(isMuted).Execute()
 
-Reports a user's playback progress.
+Reports a session's playback progress.
 
 ### Example
 
@@ -180,23 +178,22 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
 	mediaSourceId := "mediaSourceId_example" // string | The id of the MediaSource. (optional)
 	positionTicks := int64(789) // int64 | Optional. The current position, in ticks. 1 tick = 10000 ms. (optional)
 	audioStreamIndex := int32(56) // int32 | The audio stream index. (optional)
 	subtitleStreamIndex := int32(56) // int32 | The subtitle stream index. (optional)
 	volumeLevel := int32(56) // int32 | Scale of 0-100. (optional)
-	playMethod := openapiclient.PlayMethod("Transcode") // PlayMethod | The play method. (optional)
+	playMethod := "playMethod_example" // PlayMethod | The play method. (optional)
 	liveStreamId := "liveStreamId_example" // string | The live stream id. (optional)
 	playSessionId := "playSessionId_example" // string | The play session id. (optional)
-	repeatMode := openapiclient.RepeatMode("RepeatNone") // RepeatMode | The repeat mode. (optional)
+	repeatMode := "repeatMode_example" // RepeatMode | The repeat mode. (optional)
 	isPaused := true // bool | Indicates if the player is paused. (optional) (default to false)
 	isMuted := true // bool | Indicates if the player is muted. (optional) (default to false)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.PlaystateAPI.OnPlaybackProgress(context.Background(), userId, itemId).MediaSourceId(mediaSourceId).PositionTicks(positionTicks).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).VolumeLevel(volumeLevel).PlayMethod(playMethod).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).RepeatMode(repeatMode).IsPaused(isPaused).IsMuted(isMuted).Execute()
+	r, err := apiClient.PlaystateAPI.OnPlaybackProgress(context.Background(), itemId).MediaSourceId(mediaSourceId).PositionTicks(positionTicks).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).VolumeLevel(volumeLevel).PlayMethod(playMethod).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).RepeatMode(repeatMode).IsPaused(isPaused).IsMuted(isMuted).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PlaystateAPI.OnPlaybackProgress``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -210,7 +207,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -221,16 +217,15 @@ Other parameters are passed through a pointer to a apiOnPlaybackProgressRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
  **mediaSourceId** | **string** | The id of the MediaSource. | 
  **positionTicks** | **int64** | Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms. | 
  **audioStreamIndex** | **int32** | The audio stream index. | 
  **subtitleStreamIndex** | **int32** | The subtitle stream index. | 
  **volumeLevel** | **int32** | Scale of 0-100. | 
- **playMethod** | [**PlayMethod**](PlayMethod.md) | The play method. | 
+ **playMethod** | **PlayMethod** | The play method. | 
  **liveStreamId** | **string** | The live stream id. | 
  **playSessionId** | **string** | The play session id. | 
- **repeatMode** | [**RepeatMode**](RepeatMode.md) | The repeat mode. | 
+ **repeatMode** | **RepeatMode** | The repeat mode. | 
  **isPaused** | **bool** | Indicates if the player is paused. | [default to false]
  **isMuted** | **bool** | Indicates if the player is muted. | [default to false]
 
@@ -254,9 +249,9 @@ Name | Type | Description  | Notes
 
 ## OnPlaybackStart
 
-> OnPlaybackStart(ctx, userId, itemId).MediaSourceId(mediaSourceId).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).PlayMethod(playMethod).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).CanSeek(canSeek).Execute()
+> OnPlaybackStart(ctx, itemId).MediaSourceId(mediaSourceId).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).PlayMethod(playMethod).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).CanSeek(canSeek).Execute()
 
-Reports that a user has begun playing an item.
+Reports that a session has begun playing an item.
 
 ### Example
 
@@ -271,19 +266,18 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
 	mediaSourceId := "mediaSourceId_example" // string | The id of the MediaSource. (optional)
 	audioStreamIndex := int32(56) // int32 | The audio stream index. (optional)
 	subtitleStreamIndex := int32(56) // int32 | The subtitle stream index. (optional)
-	playMethod := openapiclient.PlayMethod("Transcode") // PlayMethod | The play method. (optional)
+	playMethod := "playMethod_example" // PlayMethod | The play method. (optional)
 	liveStreamId := "liveStreamId_example" // string | The live stream id. (optional)
 	playSessionId := "playSessionId_example" // string | The play session id. (optional)
 	canSeek := true // bool | Indicates if the client can seek. (optional) (default to false)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.PlaystateAPI.OnPlaybackStart(context.Background(), userId, itemId).MediaSourceId(mediaSourceId).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).PlayMethod(playMethod).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).CanSeek(canSeek).Execute()
+	r, err := apiClient.PlaystateAPI.OnPlaybackStart(context.Background(), itemId).MediaSourceId(mediaSourceId).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).PlayMethod(playMethod).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).CanSeek(canSeek).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PlaystateAPI.OnPlaybackStart``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -297,7 +291,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -308,11 +301,10 @@ Other parameters are passed through a pointer to a apiOnPlaybackStartRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
  **mediaSourceId** | **string** | The id of the MediaSource. | 
  **audioStreamIndex** | **int32** | The audio stream index. | 
  **subtitleStreamIndex** | **int32** | The subtitle stream index. | 
- **playMethod** | [**PlayMethod**](PlayMethod.md) | The play method. | 
+ **playMethod** | **PlayMethod** | The play method. | 
  **liveStreamId** | **string** | The live stream id. | 
  **playSessionId** | **string** | The play session id. | 
  **canSeek** | **bool** | Indicates if the client can seek. | [default to false]
@@ -337,9 +329,9 @@ Name | Type | Description  | Notes
 
 ## OnPlaybackStopped
 
-> OnPlaybackStopped(ctx, userId, itemId).MediaSourceId(mediaSourceId).NextMediaType(nextMediaType).PositionTicks(positionTicks).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).Execute()
+> OnPlaybackStopped(ctx, itemId).MediaSourceId(mediaSourceId).NextMediaType(nextMediaType).PositionTicks(positionTicks).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).Execute()
 
-Reports that a user has stopped playing an item.
+Reports that a session has stopped playing an item.
 
 ### Example
 
@@ -354,7 +346,6 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
 	mediaSourceId := "mediaSourceId_example" // string | The id of the MediaSource. (optional)
 	nextMediaType := "nextMediaType_example" // string | The next media type that will play. (optional)
@@ -364,7 +355,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.PlaystateAPI.OnPlaybackStopped(context.Background(), userId, itemId).MediaSourceId(mediaSourceId).NextMediaType(nextMediaType).PositionTicks(positionTicks).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).Execute()
+	r, err := apiClient.PlaystateAPI.OnPlaybackStopped(context.Background(), itemId).MediaSourceId(mediaSourceId).NextMediaType(nextMediaType).PositionTicks(positionTicks).LiveStreamId(liveStreamId).PlaySessionId(playSessionId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PlaystateAPI.OnPlaybackStopped``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -378,7 +369,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -388,7 +378,6 @@ Other parameters are passed through a pointer to a apiOnPlaybackStoppedRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
 
  **mediaSourceId** | **string** | The id of the MediaSource. | 
  **nextMediaType** | **string** | The next media type that will play. | 

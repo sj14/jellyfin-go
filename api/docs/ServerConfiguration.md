@@ -27,7 +27,9 @@ Name | Type | Description | Notes
 **MinResumeDurationSeconds** | Pointer to **int32** | Gets or sets the minimum duration that an item must have in order to be eligible for playstate updates.. | [optional] 
 **MinAudiobookResume** | Pointer to **int32** | Gets or sets the minimum minutes of a book that must be played in order for playstate to be updated. | [optional] 
 **MaxAudiobookResume** | Pointer to **int32** | Gets or sets the remaining minutes of a book that can be played while still saving playstate. If this percentage is crossed playstate will be reset to the beginning and the item will be marked watched. | [optional] 
+**InactiveSessionThreshold** | Pointer to **int32** | Gets or sets the threshold in minutes after a inactive session gets closed automatically.  If set to 0 the check for inactive sessions gets disabled. | [optional] 
 **LibraryMonitorDelay** | Pointer to **int32** | Gets or sets the delay in seconds that we will wait after a file system change to try and discover what has been added/removed  Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several  different directories and files. | [optional] 
+**LibraryUpdateDuration** | Pointer to **int32** | Gets or sets the duration in seconds that we will wait after a library updated event before executing the library changed notification. | [optional] 
 **ImageSavingConvention** | Pointer to [**ImageSavingConvention**](ImageSavingConvention.md) | Gets or sets the image saving convention. | [optional] 
 **MetadataOptions** | Pointer to [**[]MetadataOptions**](MetadataOptions.md) |  | [optional] 
 **SkipDeserializationForBasicTypes** | Pointer to **bool** |  | [optional] 
@@ -52,6 +54,11 @@ Name | Type | Description | Notes
 **LibraryMetadataRefreshConcurrency** | Pointer to **int32** | Gets or sets the how many metadata refreshes can run concurrently. | [optional] 
 **RemoveOldPlugins** | Pointer to **bool** | Gets or sets a value indicating whether older plugins should automatically be deleted from the plugin folder. | [optional] 
 **AllowClientLogUpload** | Pointer to **bool** | Gets or sets a value indicating whether clients should be allowed to upload logs. | [optional] 
+**DummyChapterDuration** | Pointer to **int32** | Gets or sets the dummy chapter duration in seconds, use 0 (zero) or less to disable generation alltogether. | [optional] 
+**ChapterImageResolution** | Pointer to [**ImageResolution**](ImageResolution.md) | Gets or sets the chapter image resolution. | [optional] 
+**ParallelImageEncodingLimit** | Pointer to **int32** | Gets or sets the limit for parallel image encoding. | [optional] 
+**CastReceiverApplications** | Pointer to [**[]CastReceiverApplication**](CastReceiverApplication.md) | Gets or sets the list of cast receiver applications. | [optional] 
+**TrickplayOptions** | Pointer to [**TrickplayOptions**](TrickplayOptions.md) | Gets or sets the trickplay options. | [optional] 
 
 ## Methods
 
@@ -677,6 +684,31 @@ SetMaxAudiobookResume sets MaxAudiobookResume field to given value.
 
 HasMaxAudiobookResume returns a boolean if a field has been set.
 
+### GetInactiveSessionThreshold
+
+`func (o *ServerConfiguration) GetInactiveSessionThreshold() int32`
+
+GetInactiveSessionThreshold returns the InactiveSessionThreshold field if non-nil, zero value otherwise.
+
+### GetInactiveSessionThresholdOk
+
+`func (o *ServerConfiguration) GetInactiveSessionThresholdOk() (*int32, bool)`
+
+GetInactiveSessionThresholdOk returns a tuple with the InactiveSessionThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInactiveSessionThreshold
+
+`func (o *ServerConfiguration) SetInactiveSessionThreshold(v int32)`
+
+SetInactiveSessionThreshold sets InactiveSessionThreshold field to given value.
+
+### HasInactiveSessionThreshold
+
+`func (o *ServerConfiguration) HasInactiveSessionThreshold() bool`
+
+HasInactiveSessionThreshold returns a boolean if a field has been set.
+
 ### GetLibraryMonitorDelay
 
 `func (o *ServerConfiguration) GetLibraryMonitorDelay() int32`
@@ -701,6 +733,31 @@ SetLibraryMonitorDelay sets LibraryMonitorDelay field to given value.
 `func (o *ServerConfiguration) HasLibraryMonitorDelay() bool`
 
 HasLibraryMonitorDelay returns a boolean if a field has been set.
+
+### GetLibraryUpdateDuration
+
+`func (o *ServerConfiguration) GetLibraryUpdateDuration() int32`
+
+GetLibraryUpdateDuration returns the LibraryUpdateDuration field if non-nil, zero value otherwise.
+
+### GetLibraryUpdateDurationOk
+
+`func (o *ServerConfiguration) GetLibraryUpdateDurationOk() (*int32, bool)`
+
+GetLibraryUpdateDurationOk returns a tuple with the LibraryUpdateDuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLibraryUpdateDuration
+
+`func (o *ServerConfiguration) SetLibraryUpdateDuration(v int32)`
+
+SetLibraryUpdateDuration sets LibraryUpdateDuration field to given value.
+
+### HasLibraryUpdateDuration
+
+`func (o *ServerConfiguration) HasLibraryUpdateDuration() bool`
+
+HasLibraryUpdateDuration returns a boolean if a field has been set.
 
 ### GetImageSavingConvention
 
@@ -1311,6 +1368,131 @@ SetAllowClientLogUpload sets AllowClientLogUpload field to given value.
 `func (o *ServerConfiguration) HasAllowClientLogUpload() bool`
 
 HasAllowClientLogUpload returns a boolean if a field has been set.
+
+### GetDummyChapterDuration
+
+`func (o *ServerConfiguration) GetDummyChapterDuration() int32`
+
+GetDummyChapterDuration returns the DummyChapterDuration field if non-nil, zero value otherwise.
+
+### GetDummyChapterDurationOk
+
+`func (o *ServerConfiguration) GetDummyChapterDurationOk() (*int32, bool)`
+
+GetDummyChapterDurationOk returns a tuple with the DummyChapterDuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDummyChapterDuration
+
+`func (o *ServerConfiguration) SetDummyChapterDuration(v int32)`
+
+SetDummyChapterDuration sets DummyChapterDuration field to given value.
+
+### HasDummyChapterDuration
+
+`func (o *ServerConfiguration) HasDummyChapterDuration() bool`
+
+HasDummyChapterDuration returns a boolean if a field has been set.
+
+### GetChapterImageResolution
+
+`func (o *ServerConfiguration) GetChapterImageResolution() ImageResolution`
+
+GetChapterImageResolution returns the ChapterImageResolution field if non-nil, zero value otherwise.
+
+### GetChapterImageResolutionOk
+
+`func (o *ServerConfiguration) GetChapterImageResolutionOk() (*ImageResolution, bool)`
+
+GetChapterImageResolutionOk returns a tuple with the ChapterImageResolution field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChapterImageResolution
+
+`func (o *ServerConfiguration) SetChapterImageResolution(v ImageResolution)`
+
+SetChapterImageResolution sets ChapterImageResolution field to given value.
+
+### HasChapterImageResolution
+
+`func (o *ServerConfiguration) HasChapterImageResolution() bool`
+
+HasChapterImageResolution returns a boolean if a field has been set.
+
+### GetParallelImageEncodingLimit
+
+`func (o *ServerConfiguration) GetParallelImageEncodingLimit() int32`
+
+GetParallelImageEncodingLimit returns the ParallelImageEncodingLimit field if non-nil, zero value otherwise.
+
+### GetParallelImageEncodingLimitOk
+
+`func (o *ServerConfiguration) GetParallelImageEncodingLimitOk() (*int32, bool)`
+
+GetParallelImageEncodingLimitOk returns a tuple with the ParallelImageEncodingLimit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetParallelImageEncodingLimit
+
+`func (o *ServerConfiguration) SetParallelImageEncodingLimit(v int32)`
+
+SetParallelImageEncodingLimit sets ParallelImageEncodingLimit field to given value.
+
+### HasParallelImageEncodingLimit
+
+`func (o *ServerConfiguration) HasParallelImageEncodingLimit() bool`
+
+HasParallelImageEncodingLimit returns a boolean if a field has been set.
+
+### GetCastReceiverApplications
+
+`func (o *ServerConfiguration) GetCastReceiverApplications() []CastReceiverApplication`
+
+GetCastReceiverApplications returns the CastReceiverApplications field if non-nil, zero value otherwise.
+
+### GetCastReceiverApplicationsOk
+
+`func (o *ServerConfiguration) GetCastReceiverApplicationsOk() (*[]CastReceiverApplication, bool)`
+
+GetCastReceiverApplicationsOk returns a tuple with the CastReceiverApplications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCastReceiverApplications
+
+`func (o *ServerConfiguration) SetCastReceiverApplications(v []CastReceiverApplication)`
+
+SetCastReceiverApplications sets CastReceiverApplications field to given value.
+
+### HasCastReceiverApplications
+
+`func (o *ServerConfiguration) HasCastReceiverApplications() bool`
+
+HasCastReceiverApplications returns a boolean if a field has been set.
+
+### GetTrickplayOptions
+
+`func (o *ServerConfiguration) GetTrickplayOptions() TrickplayOptions`
+
+GetTrickplayOptions returns the TrickplayOptions field if non-nil, zero value otherwise.
+
+### GetTrickplayOptionsOk
+
+`func (o *ServerConfiguration) GetTrickplayOptionsOk() (*TrickplayOptions, bool)`
+
+GetTrickplayOptionsOk returns a tuple with the TrickplayOptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTrickplayOptions
+
+`func (o *ServerConfiguration) SetTrickplayOptions(v TrickplayOptions)`
+
+SetTrickplayOptions sets TrickplayOptions field to given value.
+
+### HasTrickplayOptions
+
+`func (o *ServerConfiguration) HasTrickplayOptions() bool`
+
+HasTrickplayOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

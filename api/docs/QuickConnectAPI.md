@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Authorize**](QuickConnectAPI.md#Authorize) | **Post** /QuickConnect/Authorize | Authorizes a pending quick connect request.
-[**Connect**](QuickConnectAPI.md#Connect) | **Get** /QuickConnect/Connect | Attempts to retrieve authentication information.
-[**GetEnabled**](QuickConnectAPI.md#GetEnabled) | **Get** /QuickConnect/Enabled | Gets the current quick connect state.
-[**Initiate**](QuickConnectAPI.md#Initiate) | **Get** /QuickConnect/Initiate | Initiate a new quick connect request.
+[**AuthorizeQuickConnect**](QuickConnectAPI.md#AuthorizeQuickConnect) | **Post** /QuickConnect/Authorize | Authorizes a pending quick connect request.
+[**GetQuickConnectEnabled**](QuickConnectAPI.md#GetQuickConnectEnabled) | **Get** /QuickConnect/Enabled | Gets the current quick connect state.
+[**GetQuickConnectState**](QuickConnectAPI.md#GetQuickConnectState) | **Get** /QuickConnect/Connect | Attempts to retrieve authentication information.
+[**InitiateQuickConnect**](QuickConnectAPI.md#InitiateQuickConnect) | **Post** /QuickConnect/Initiate | Initiate a new quick connect request.
 
 
 
-## Authorize
+## AuthorizeQuickConnect
 
-> bool Authorize(ctx).Code(code).Execute()
+> bool AuthorizeQuickConnect(ctx).Code(code).UserId(userId).Execute()
 
 Authorizes a pending quick connect request.
 
@@ -31,16 +31,17 @@ import (
 
 func main() {
 	code := "code_example" // string | Quick connect code to authorize.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user the authorize. Access to the requested user is required. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.QuickConnectAPI.Authorize(context.Background()).Code(code).Execute()
+	resp, r, err := apiClient.QuickConnectAPI.AuthorizeQuickConnect(context.Background()).Code(code).UserId(userId).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `QuickConnectAPI.Authorize``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `QuickConnectAPI.AuthorizeQuickConnect``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `Authorize`: bool
-	fmt.Fprintf(os.Stdout, "Response from `QuickConnectAPI.Authorize`: %v\n", resp)
+	// response from `AuthorizeQuickConnect`: bool
+	fmt.Fprintf(os.Stdout, "Response from `QuickConnectAPI.AuthorizeQuickConnect`: %v\n", resp)
 }
 ```
 
@@ -50,12 +51,13 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiAuthorizeRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiAuthorizeQuickConnectRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **code** | **string** | Quick connect code to authorize. | 
+ **userId** | **string** | The user the authorize. Access to the requested user is required. | 
 
 ### Return type
 
@@ -75,9 +77,68 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## Connect
+## GetQuickConnectEnabled
 
-> QuickConnectResult Connect(ctx).Secret(secret).Execute()
+> bool GetQuickConnectEnabled(ctx).Execute()
+
+Gets the current quick connect state.
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/sj14/jellyfin-go/api"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.QuickConnectAPI.GetQuickConnectEnabled(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `QuickConnectAPI.GetQuickConnectEnabled``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetQuickConnectEnabled`: bool
+	fmt.Fprintf(os.Stdout, "Response from `QuickConnectAPI.GetQuickConnectEnabled`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetQuickConnectEnabledRequest struct via the builder pattern
+
+
+### Return type
+
+**bool**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetQuickConnectState
+
+> QuickConnectResult GetQuickConnectState(ctx).Secret(secret).Execute()
 
 Attempts to retrieve authentication information.
 
@@ -98,13 +159,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.QuickConnectAPI.Connect(context.Background()).Secret(secret).Execute()
+	resp, r, err := apiClient.QuickConnectAPI.GetQuickConnectState(context.Background()).Secret(secret).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `QuickConnectAPI.Connect``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `QuickConnectAPI.GetQuickConnectState``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `Connect`: QuickConnectResult
-	fmt.Fprintf(os.Stdout, "Response from `QuickConnectAPI.Connect`: %v\n", resp)
+	// response from `GetQuickConnectState`: QuickConnectResult
+	fmt.Fprintf(os.Stdout, "Response from `QuickConnectAPI.GetQuickConnectState`: %v\n", resp)
 }
 ```
 
@@ -114,7 +175,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiConnectRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetQuickConnectStateRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -139,68 +200,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## GetEnabled
+## InitiateQuickConnect
 
-> bool GetEnabled(ctx).Execute()
-
-Gets the current quick connect state.
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/sj14/jellyfin-go/api"
-)
-
-func main() {
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.QuickConnectAPI.GetEnabled(context.Background()).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `QuickConnectAPI.GetEnabled``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `GetEnabled`: bool
-	fmt.Fprintf(os.Stdout, "Response from `QuickConnectAPI.GetEnabled`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetEnabledRequest struct via the builder pattern
-
-
-### Return type
-
-**bool**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## Initiate
-
-> QuickConnectResult Initiate(ctx).Execute()
+> QuickConnectResult InitiateQuickConnect(ctx).Execute()
 
 Initiate a new quick connect request.
 
@@ -220,13 +222,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.QuickConnectAPI.Initiate(context.Background()).Execute()
+	resp, r, err := apiClient.QuickConnectAPI.InitiateQuickConnect(context.Background()).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `QuickConnectAPI.Initiate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `QuickConnectAPI.InitiateQuickConnect``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `Initiate`: QuickConnectResult
-	fmt.Fprintf(os.Stdout, "Response from `QuickConnectAPI.Initiate`: %v\n", resp)
+	// response from `InitiateQuickConnect`: QuickConnectResult
+	fmt.Fprintf(os.Stdout, "Response from `QuickConnectAPI.InitiateQuickConnect`: %v\n", resp)
 }
 ```
 
@@ -236,7 +238,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiInitiateRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiInitiateQuickConnectRequest struct via the builder pattern
 
 
 ### Return type

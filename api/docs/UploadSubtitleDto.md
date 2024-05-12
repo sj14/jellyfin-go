@@ -7,13 +7,14 @@ Name | Type | Description | Notes
 **Language** | **string** | Gets or sets the subtitle language. | 
 **Format** | **string** | Gets or sets the subtitle format. | 
 **IsForced** | **bool** | Gets or sets a value indicating whether the subtitle is forced. | 
+**IsHearingImpaired** | **bool** | Gets or sets a value indicating whether the subtitle is for hearing impaired. | 
 **Data** | **string** | Gets or sets the subtitle data. | 
 
 ## Methods
 
 ### NewUploadSubtitleDto
 
-`func NewUploadSubtitleDto(language string, format string, isForced bool, data string, ) *UploadSubtitleDto`
+`func NewUploadSubtitleDto(language string, format string, isForced bool, isHearingImpaired bool, data string, ) *UploadSubtitleDto`
 
 NewUploadSubtitleDto instantiates a new UploadSubtitleDto object
 This constructor will assign default values to properties that have it defined,
@@ -86,6 +87,26 @@ and a boolean to check if the value has been set.
 `func (o *UploadSubtitleDto) SetIsForced(v bool)`
 
 SetIsForced sets IsForced field to given value.
+
+
+### GetIsHearingImpaired
+
+`func (o *UploadSubtitleDto) GetIsHearingImpaired() bool`
+
+GetIsHearingImpaired returns the IsHearingImpaired field if non-nil, zero value otherwise.
+
+### GetIsHearingImpairedOk
+
+`func (o *UploadSubtitleDto) GetIsHearingImpairedOk() (*bool, bool)`
+
+GetIsHearingImpairedOk returns a tuple with the IsHearingImpaired field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsHearingImpaired
+
+`func (o *UploadSubtitleDto) SetIsHearingImpaired(v bool)`
+
+SetIsHearingImpaired sets IsHearingImpaired field to given value.
 
 
 ### GetData

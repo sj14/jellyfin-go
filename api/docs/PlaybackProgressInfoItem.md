@@ -13,16 +13,16 @@ Name | Type | Description | Notes
 **PlaylistItemId** | Pointer to **NullableString** | Gets or sets the playlist item identifier. | [optional] 
 **DateCreated** | Pointer to **NullableTime** | Gets or sets the date created. | [optional] 
 **DateLastMediaAdded** | Pointer to **NullableTime** |  | [optional] 
-**ExtraType** | Pointer to **NullableString** |  | [optional] 
+**ExtraType** | Pointer to [**NullableExtraType**](ExtraType.md) |  | [optional] 
 **AirsBeforeSeasonNumber** | Pointer to **NullableInt32** |  | [optional] 
 **AirsAfterSeasonNumber** | Pointer to **NullableInt32** |  | [optional] 
 **AirsBeforeEpisodeNumber** | Pointer to **NullableInt32** |  | [optional] 
 **CanDelete** | Pointer to **NullableBool** |  | [optional] 
 **CanDownload** | Pointer to **NullableBool** |  | [optional] 
+**HasLyrics** | Pointer to **NullableBool** |  | [optional] 
 **HasSubtitles** | Pointer to **NullableBool** |  | [optional] 
 **PreferredMetadataLanguage** | Pointer to **NullableString** |  | [optional] 
 **PreferredMetadataCountryCode** | Pointer to **NullableString** |  | [optional] 
-**SupportsSync** | Pointer to **NullableBool** | Gets or sets a value indicating whether [supports synchronize]. | [optional] 
 **Container** | Pointer to **NullableString** |  | [optional] 
 **SortName** | Pointer to **NullableString** | Gets or sets the name of the sort. | [optional] 
 **ForcedSortName** | Pointer to **NullableString** |  | [optional] 
@@ -62,8 +62,8 @@ Name | Type | Description | Notes
 **People** | Pointer to [**[]BaseItemPerson**](BaseItemPerson.md) | Gets or sets the people. | [optional] 
 **Studios** | Pointer to [**[]NameGuidPair**](NameGuidPair.md) | Gets or sets the studios. | [optional] 
 **GenreItems** | Pointer to [**[]NameGuidPair**](NameGuidPair.md) |  | [optional] 
-**ParentLogoItemId** | Pointer to **NullableString** | Gets or sets wether the item has a logo, this will hold the Id of the Parent that has one. | [optional] 
-**ParentBackdropItemId** | Pointer to **NullableString** | Gets or sets wether the item has any backdrops, this will hold the Id of the Parent that has one. | [optional] 
+**ParentLogoItemId** | Pointer to **NullableString** | Gets or sets whether the item has a logo, this will hold the Id of the Parent that has one. | [optional] 
+**ParentBackdropItemId** | Pointer to **NullableString** | Gets or sets whether the item has any backdrops, this will hold the Id of the Parent that has one. | [optional] 
 **ParentBackdropImageTags** | Pointer to **[]string** | Gets or sets the parent backdrop image tags. | [optional] 
 **LocalTrailerCount** | Pointer to **NullableInt32** | Gets or sets the local trailer count. | [optional] 
 **UserData** | Pointer to [**NullableBaseItemDtoUserData**](BaseItemDtoUserData.md) |  | [optional] 
@@ -82,7 +82,7 @@ Name | Type | Description | Notes
 **Artists** | Pointer to **[]string** | Gets or sets the artists. | [optional] 
 **ArtistItems** | Pointer to [**[]NameGuidPair**](NameGuidPair.md) | Gets or sets the artist items. | [optional] 
 **Album** | Pointer to **NullableString** | Gets or sets the album. | [optional] 
-**CollectionType** | Pointer to **NullableString** | Gets or sets the type of the collection. | [optional] 
+**CollectionType** | Pointer to [**NullableCollectionType**](CollectionType.md) | Gets or sets the type of the collection. | [optional] 
 **DisplayOrder** | Pointer to **NullableString** | Gets or sets the display order. | [optional] 
 **AlbumId** | Pointer to **NullableString** | Gets or sets the album id. | [optional] 
 **AlbumPrimaryImageTag** | Pointer to **NullableString** | Gets or sets the album image tag. | [optional] 
@@ -98,7 +98,7 @@ Name | Type | Description | Notes
 **BackdropImageTags** | Pointer to **[]string** | Gets or sets the backdrop image tags. | [optional] 
 **ScreenshotImageTags** | Pointer to **[]string** | Gets or sets the screenshot image tags. | [optional] 
 **ParentLogoImageTag** | Pointer to **NullableString** | Gets or sets the parent logo image tag. | [optional] 
-**ParentArtItemId** | Pointer to **NullableString** | Gets or sets wether the item has fan art, this will hold the Id of the Parent that has one. | [optional] 
+**ParentArtItemId** | Pointer to **NullableString** | Gets or sets whether the item has fan art, this will hold the Id of the Parent that has one. | [optional] 
 **ParentArtImageTag** | Pointer to **NullableString** | Gets or sets the parent art image tag. | [optional] 
 **SeriesThumbImageTag** | Pointer to **NullableString** | Gets or sets the series thumb image tag. | [optional] 
 **ImageBlurHashes** | Pointer to [**NullableBaseItemDtoImageBlurHashes**](BaseItemDtoImageBlurHashes.md) |  | [optional] 
@@ -108,9 +108,10 @@ Name | Type | Description | Notes
 **ParentPrimaryImageItemId** | Pointer to **NullableString** | Gets or sets the parent primary image item identifier. | [optional] 
 **ParentPrimaryImageTag** | Pointer to **NullableString** | Gets or sets the parent primary image tag. | [optional] 
 **Chapters** | Pointer to [**[]ChapterInfo**](ChapterInfo.md) | Gets or sets the chapters. | [optional] 
+**Trickplay** | Pointer to [**map[string]map[string]TrickplayInfo**](map.md) | Gets or sets the trickplay manifest. | [optional] 
 **LocationType** | Pointer to [**NullableLocationType**](LocationType.md) | Gets or sets the type of the location. | [optional] 
 **IsoType** | Pointer to [**NullableIsoType**](IsoType.md) | Gets or sets the type of the iso. | [optional] 
-**MediaType** | Pointer to **NullableString** | Gets or sets the type of the media. | [optional] 
+**MediaType** | Pointer to [**MediaType**](MediaType.md) | Gets or sets the type of the media. | [optional] 
 **EndDate** | Pointer to **NullableTime** | Gets or sets the end date. | [optional] 
 **LockedFields** | Pointer to [**[]MetadataField**](MetadataField.md) | Gets or sets the locked fields. | [optional] 
 **TrailerCount** | Pointer to **NullableInt32** | Gets or sets the trailer count. | [optional] 
@@ -154,6 +155,7 @@ Name | Type | Description | Notes
 **IsKids** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance is kids. | [optional] 
 **IsPremiere** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance is premiere. | [optional] 
 **TimerId** | Pointer to **NullableString** | Gets or sets the timer identifier. | [optional] 
+**NormalizationGain** | Pointer to **NullableFloat32** | Gets or sets the gain required for audio normalization. | [optional] 
 **CurrentProgram** | Pointer to [**NullableBaseItemDtoCurrentProgram**](BaseItemDtoCurrentProgram.md) |  | [optional] 
 
 ## Methods
@@ -482,20 +484,20 @@ HasDateLastMediaAdded returns a boolean if a field has been set.
 UnsetDateLastMediaAdded ensures that no value is present for DateLastMediaAdded, not even an explicit nil
 ### GetExtraType
 
-`func (o *PlaybackProgressInfoItem) GetExtraType() string`
+`func (o *PlaybackProgressInfoItem) GetExtraType() ExtraType`
 
 GetExtraType returns the ExtraType field if non-nil, zero value otherwise.
 
 ### GetExtraTypeOk
 
-`func (o *PlaybackProgressInfoItem) GetExtraTypeOk() (*string, bool)`
+`func (o *PlaybackProgressInfoItem) GetExtraTypeOk() (*ExtraType, bool)`
 
 GetExtraTypeOk returns a tuple with the ExtraType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtraType
 
-`func (o *PlaybackProgressInfoItem) SetExtraType(v string)`
+`func (o *PlaybackProgressInfoItem) SetExtraType(v ExtraType)`
 
 SetExtraType sets ExtraType field to given value.
 
@@ -690,6 +692,41 @@ HasCanDownload returns a boolean if a field has been set.
 `func (o *PlaybackProgressInfoItem) UnsetCanDownload()`
 
 UnsetCanDownload ensures that no value is present for CanDownload, not even an explicit nil
+### GetHasLyrics
+
+`func (o *PlaybackProgressInfoItem) GetHasLyrics() bool`
+
+GetHasLyrics returns the HasLyrics field if non-nil, zero value otherwise.
+
+### GetHasLyricsOk
+
+`func (o *PlaybackProgressInfoItem) GetHasLyricsOk() (*bool, bool)`
+
+GetHasLyricsOk returns a tuple with the HasLyrics field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasLyrics
+
+`func (o *PlaybackProgressInfoItem) SetHasLyrics(v bool)`
+
+SetHasLyrics sets HasLyrics field to given value.
+
+### HasHasLyrics
+
+`func (o *PlaybackProgressInfoItem) HasHasLyrics() bool`
+
+HasHasLyrics returns a boolean if a field has been set.
+
+### SetHasLyricsNil
+
+`func (o *PlaybackProgressInfoItem) SetHasLyricsNil(b bool)`
+
+ SetHasLyricsNil sets the value for HasLyrics to be an explicit nil
+
+### UnsetHasLyrics
+`func (o *PlaybackProgressInfoItem) UnsetHasLyrics()`
+
+UnsetHasLyrics ensures that no value is present for HasLyrics, not even an explicit nil
 ### GetHasSubtitles
 
 `func (o *PlaybackProgressInfoItem) GetHasSubtitles() bool`
@@ -795,41 +832,6 @@ HasPreferredMetadataCountryCode returns a boolean if a field has been set.
 `func (o *PlaybackProgressInfoItem) UnsetPreferredMetadataCountryCode()`
 
 UnsetPreferredMetadataCountryCode ensures that no value is present for PreferredMetadataCountryCode, not even an explicit nil
-### GetSupportsSync
-
-`func (o *PlaybackProgressInfoItem) GetSupportsSync() bool`
-
-GetSupportsSync returns the SupportsSync field if non-nil, zero value otherwise.
-
-### GetSupportsSyncOk
-
-`func (o *PlaybackProgressInfoItem) GetSupportsSyncOk() (*bool, bool)`
-
-GetSupportsSyncOk returns a tuple with the SupportsSync field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSupportsSync
-
-`func (o *PlaybackProgressInfoItem) SetSupportsSync(v bool)`
-
-SetSupportsSync sets SupportsSync field to given value.
-
-### HasSupportsSync
-
-`func (o *PlaybackProgressInfoItem) HasSupportsSync() bool`
-
-HasSupportsSync returns a boolean if a field has been set.
-
-### SetSupportsSyncNil
-
-`func (o *PlaybackProgressInfoItem) SetSupportsSyncNil(b bool)`
-
- SetSupportsSyncNil sets the value for SupportsSync to be an explicit nil
-
-### UnsetSupportsSync
-`func (o *PlaybackProgressInfoItem) UnsetSupportsSync()`
-
-UnsetSupportsSync ensures that no value is present for SupportsSync, not even an explicit nil
 ### GetContainer
 
 `func (o *PlaybackProgressInfoItem) GetContainer() string`
@@ -2887,20 +2889,20 @@ HasAlbum returns a boolean if a field has been set.
 UnsetAlbum ensures that no value is present for Album, not even an explicit nil
 ### GetCollectionType
 
-`func (o *PlaybackProgressInfoItem) GetCollectionType() string`
+`func (o *PlaybackProgressInfoItem) GetCollectionType() CollectionType`
 
 GetCollectionType returns the CollectionType field if non-nil, zero value otherwise.
 
 ### GetCollectionTypeOk
 
-`func (o *PlaybackProgressInfoItem) GetCollectionTypeOk() (*string, bool)`
+`func (o *PlaybackProgressInfoItem) GetCollectionTypeOk() (*CollectionType, bool)`
 
 GetCollectionTypeOk returns a tuple with the CollectionType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCollectionType
 
-`func (o *PlaybackProgressInfoItem) SetCollectionType(v string)`
+`func (o *PlaybackProgressInfoItem) SetCollectionType(v CollectionType)`
 
 SetCollectionType sets CollectionType field to given value.
 
@@ -3795,6 +3797,41 @@ HasChapters returns a boolean if a field has been set.
 `func (o *PlaybackProgressInfoItem) UnsetChapters()`
 
 UnsetChapters ensures that no value is present for Chapters, not even an explicit nil
+### GetTrickplay
+
+`func (o *PlaybackProgressInfoItem) GetTrickplay() map[string]map[string]TrickplayInfo`
+
+GetTrickplay returns the Trickplay field if non-nil, zero value otherwise.
+
+### GetTrickplayOk
+
+`func (o *PlaybackProgressInfoItem) GetTrickplayOk() (*map[string]map[string]TrickplayInfo, bool)`
+
+GetTrickplayOk returns a tuple with the Trickplay field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTrickplay
+
+`func (o *PlaybackProgressInfoItem) SetTrickplay(v map[string]map[string]TrickplayInfo)`
+
+SetTrickplay sets Trickplay field to given value.
+
+### HasTrickplay
+
+`func (o *PlaybackProgressInfoItem) HasTrickplay() bool`
+
+HasTrickplay returns a boolean if a field has been set.
+
+### SetTrickplayNil
+
+`func (o *PlaybackProgressInfoItem) SetTrickplayNil(b bool)`
+
+ SetTrickplayNil sets the value for Trickplay to be an explicit nil
+
+### UnsetTrickplay
+`func (o *PlaybackProgressInfoItem) UnsetTrickplay()`
+
+UnsetTrickplay ensures that no value is present for Trickplay, not even an explicit nil
 ### GetLocationType
 
 `func (o *PlaybackProgressInfoItem) GetLocationType() LocationType`
@@ -3867,20 +3904,20 @@ HasIsoType returns a boolean if a field has been set.
 UnsetIsoType ensures that no value is present for IsoType, not even an explicit nil
 ### GetMediaType
 
-`func (o *PlaybackProgressInfoItem) GetMediaType() string`
+`func (o *PlaybackProgressInfoItem) GetMediaType() MediaType`
 
 GetMediaType returns the MediaType field if non-nil, zero value otherwise.
 
 ### GetMediaTypeOk
 
-`func (o *PlaybackProgressInfoItem) GetMediaTypeOk() (*string, bool)`
+`func (o *PlaybackProgressInfoItem) GetMediaTypeOk() (*MediaType, bool)`
 
 GetMediaTypeOk returns a tuple with the MediaType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMediaType
 
-`func (o *PlaybackProgressInfoItem) SetMediaType(v string)`
+`func (o *PlaybackProgressInfoItem) SetMediaType(v MediaType)`
 
 SetMediaType sets MediaType field to given value.
 
@@ -3890,16 +3927,6 @@ SetMediaType sets MediaType field to given value.
 
 HasMediaType returns a boolean if a field has been set.
 
-### SetMediaTypeNil
-
-`func (o *PlaybackProgressInfoItem) SetMediaTypeNil(b bool)`
-
- SetMediaTypeNil sets the value for MediaType to be an explicit nil
-
-### UnsetMediaType
-`func (o *PlaybackProgressInfoItem) UnsetMediaType()`
-
-UnsetMediaType ensures that no value is present for MediaType, not even an explicit nil
 ### GetEndDate
 
 `func (o *PlaybackProgressInfoItem) GetEndDate() time.Time`
@@ -5405,6 +5432,41 @@ HasTimerId returns a boolean if a field has been set.
 `func (o *PlaybackProgressInfoItem) UnsetTimerId()`
 
 UnsetTimerId ensures that no value is present for TimerId, not even an explicit nil
+### GetNormalizationGain
+
+`func (o *PlaybackProgressInfoItem) GetNormalizationGain() float32`
+
+GetNormalizationGain returns the NormalizationGain field if non-nil, zero value otherwise.
+
+### GetNormalizationGainOk
+
+`func (o *PlaybackProgressInfoItem) GetNormalizationGainOk() (*float32, bool)`
+
+GetNormalizationGainOk returns a tuple with the NormalizationGain field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNormalizationGain
+
+`func (o *PlaybackProgressInfoItem) SetNormalizationGain(v float32)`
+
+SetNormalizationGain sets NormalizationGain field to given value.
+
+### HasNormalizationGain
+
+`func (o *PlaybackProgressInfoItem) HasNormalizationGain() bool`
+
+HasNormalizationGain returns a boolean if a field has been set.
+
+### SetNormalizationGainNil
+
+`func (o *PlaybackProgressInfoItem) SetNormalizationGainNil(b bool)`
+
+ SetNormalizationGainNil sets the value for NormalizationGain to be an explicit nil
+
+### UnsetNormalizationGain
+`func (o *PlaybackProgressInfoItem) UnsetNormalizationGain()`
+
+UnsetNormalizationGain ensures that no value is present for NormalizationGain, not even an explicit nil
 ### GetCurrentProgram
 
 `func (o *PlaybackProgressInfoItem) GetCurrentProgram() BaseItemDtoCurrentProgram`

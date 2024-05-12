@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ## GetDevices
 
-> DeviceInfoQueryResult GetDevices(ctx).SupportsSync(supportsSync).UserId(userId).Execute()
+> DeviceInfoQueryResult GetDevices(ctx).UserId(userId).Execute()
 
 Get Devices.
 
@@ -221,12 +221,11 @@ import (
 )
 
 func main() {
-	supportsSync := true // bool | Gets or sets a value indicating whether [supports synchronize]. (optional)
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Gets or sets the user identifier. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DevicesAPI.GetDevices(context.Background()).SupportsSync(supportsSync).UserId(userId).Execute()
+	resp, r, err := apiClient.DevicesAPI.GetDevices(context.Background()).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DevicesAPI.GetDevices``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -247,7 +246,6 @@ Other parameters are passed through a pointer to a apiGetDevicesRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **supportsSync** | **bool** | Gets or sets a value indicating whether [supports synchronize]. | 
  **userId** | **string** | Gets or sets the user identifier. | 
 
 ### Return type

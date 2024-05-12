@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **MediaLocationsCreated** | Pointer to **[]string** |  | [optional] 
 **RecordingPostProcessor** | Pointer to **NullableString** |  | [optional] 
 **RecordingPostProcessorArguments** | Pointer to **NullableString** |  | [optional] 
+**SaveRecordingNFO** | Pointer to **bool** |  | [optional] 
+**SaveRecordingImages** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -452,6 +454,56 @@ HasRecordingPostProcessorArguments returns a boolean if a field has been set.
 `func (o *LiveTvOptions) UnsetRecordingPostProcessorArguments()`
 
 UnsetRecordingPostProcessorArguments ensures that no value is present for RecordingPostProcessorArguments, not even an explicit nil
+### GetSaveRecordingNFO
+
+`func (o *LiveTvOptions) GetSaveRecordingNFO() bool`
+
+GetSaveRecordingNFO returns the SaveRecordingNFO field if non-nil, zero value otherwise.
+
+### GetSaveRecordingNFOOk
+
+`func (o *LiveTvOptions) GetSaveRecordingNFOOk() (*bool, bool)`
+
+GetSaveRecordingNFOOk returns a tuple with the SaveRecordingNFO field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSaveRecordingNFO
+
+`func (o *LiveTvOptions) SetSaveRecordingNFO(v bool)`
+
+SetSaveRecordingNFO sets SaveRecordingNFO field to given value.
+
+### HasSaveRecordingNFO
+
+`func (o *LiveTvOptions) HasSaveRecordingNFO() bool`
+
+HasSaveRecordingNFO returns a boolean if a field has been set.
+
+### GetSaveRecordingImages
+
+`func (o *LiveTvOptions) GetSaveRecordingImages() bool`
+
+GetSaveRecordingImages returns the SaveRecordingImages field if non-nil, zero value otherwise.
+
+### GetSaveRecordingImagesOk
+
+`func (o *LiveTvOptions) GetSaveRecordingImagesOk() (*bool, bool)`
+
+GetSaveRecordingImagesOk returns a tuple with the SaveRecordingImages field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSaveRecordingImages
+
+`func (o *LiveTvOptions) SetSaveRecordingImages(v bool)`
+
+SetSaveRecordingImages sets SaveRecordingImages field to given value.
+
+### HasSaveRecordingImages
+
+`func (o *LiveTvOptions) HasSaveRecordingImages() bool`
+
+HasSaveRecordingImages returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

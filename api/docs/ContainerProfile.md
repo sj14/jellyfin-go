@@ -77,16 +77,6 @@ SetConditions sets Conditions field to given value.
 
 HasConditions returns a boolean if a field has been set.
 
-### SetConditionsNil
-
-`func (o *ContainerProfile) SetConditionsNil(b bool)`
-
- SetConditionsNil sets the value for Conditions to be an explicit nil
-
-### UnsetConditions
-`func (o *ContainerProfile) UnsetConditions()`
-
-UnsetConditions ensures that no value is present for Conditions, not even an explicit nil
 ### GetContainer
 
 `func (o *ContainerProfile) GetContainer() string`

@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** | Gets or sets the name of the new playlist. | [optional] 
+**Name** | Pointer to **string** | Gets or sets the name of the new playlist. | [optional] 
 **Ids** | Pointer to **[]string** | Gets or sets item ids to add to the playlist. | [optional] 
 **UserId** | Pointer to **NullableString** | Gets or sets the user id. | [optional] 
-**MediaType** | Pointer to **NullableString** | Gets or sets the media type. | [optional] 
+**MediaType** | Pointer to [**NullableMediaType**](MediaType.md) | Gets or sets the media type. | [optional] 
+**Users** | Pointer to [**[]PlaylistUserPermissions**](PlaylistUserPermissions.md) | Gets or sets the playlist users. | [optional] 
+**IsPublic** | Pointer to **bool** | Gets or sets a value indicating whether the playlist is public. | [optional] 
 
 ## Methods
 
@@ -53,16 +55,6 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### SetNameNil
-
-`func (o *CreatePlaylistDto) SetNameNil(b bool)`
-
- SetNameNil sets the value for Name to be an explicit nil
-
-### UnsetName
-`func (o *CreatePlaylistDto) UnsetName()`
-
-UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetIds
 
 `func (o *CreatePlaylistDto) GetIds() []string`
@@ -125,20 +117,20 @@ HasUserId returns a boolean if a field has been set.
 UnsetUserId ensures that no value is present for UserId, not even an explicit nil
 ### GetMediaType
 
-`func (o *CreatePlaylistDto) GetMediaType() string`
+`func (o *CreatePlaylistDto) GetMediaType() MediaType`
 
 GetMediaType returns the MediaType field if non-nil, zero value otherwise.
 
 ### GetMediaTypeOk
 
-`func (o *CreatePlaylistDto) GetMediaTypeOk() (*string, bool)`
+`func (o *CreatePlaylistDto) GetMediaTypeOk() (*MediaType, bool)`
 
 GetMediaTypeOk returns a tuple with the MediaType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMediaType
 
-`func (o *CreatePlaylistDto) SetMediaType(v string)`
+`func (o *CreatePlaylistDto) SetMediaType(v MediaType)`
 
 SetMediaType sets MediaType field to given value.
 
@@ -158,6 +150,56 @@ HasMediaType returns a boolean if a field has been set.
 `func (o *CreatePlaylistDto) UnsetMediaType()`
 
 UnsetMediaType ensures that no value is present for MediaType, not even an explicit nil
+### GetUsers
+
+`func (o *CreatePlaylistDto) GetUsers() []PlaylistUserPermissions`
+
+GetUsers returns the Users field if non-nil, zero value otherwise.
+
+### GetUsersOk
+
+`func (o *CreatePlaylistDto) GetUsersOk() (*[]PlaylistUserPermissions, bool)`
+
+GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsers
+
+`func (o *CreatePlaylistDto) SetUsers(v []PlaylistUserPermissions)`
+
+SetUsers sets Users field to given value.
+
+### HasUsers
+
+`func (o *CreatePlaylistDto) HasUsers() bool`
+
+HasUsers returns a boolean if a field has been set.
+
+### GetIsPublic
+
+`func (o *CreatePlaylistDto) GetIsPublic() bool`
+
+GetIsPublic returns the IsPublic field if non-nil, zero value otherwise.
+
+### GetIsPublicOk
+
+`func (o *CreatePlaylistDto) GetIsPublicOk() (*bool, bool)`
+
+GetIsPublicOk returns a tuple with the IsPublic field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsPublic
+
+`func (o *CreatePlaylistDto) SetIsPublic(v bool)`
+
+SetIsPublic sets IsPublic field to given value.
+
+### HasIsPublic
+
+`func (o *CreatePlaylistDto) HasIsPublic() bool`
+
+HasIsPublic returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

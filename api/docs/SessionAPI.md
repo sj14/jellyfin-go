@@ -112,7 +112,7 @@ import (
 
 func main() {
 	sessionId := "sessionId_example" // string | The session Id.
-	itemType := openapiclient.BaseItemKind("AggregateFolder") // BaseItemKind | The type of item to browse to.
+	itemType := "itemType_example" // BaseItemKind | The type of item to browse to.
 	itemId := "itemId_example" // string | The Id of the item.
 	itemName := "itemName_example" // string | The name of the item.
 
@@ -142,7 +142,7 @@ Other parameters are passed through a pointer to a apiDisplayContentRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **itemType** | [**BaseItemKind**](BaseItemKind.md) | The type of item to browse to. | 
+ **itemType** | **BaseItemKind** | The type of item to browse to. | 
  **itemId** | **string** | The Id of the item. | 
  **itemName** | **string** | The name of the item. | 
 
@@ -370,7 +370,7 @@ import (
 
 func main() {
 	sessionId := "sessionId_example" // string | The session id.
-	playCommand := openapiclient.PlayCommand("PlayNow") // PlayCommand | The type of play command to issue (PlayNow, PlayNext, PlayLast). Clients who have not yet implemented play next and play last may play now.
+	playCommand := "playCommand_example" // PlayCommand | The type of play command to issue (PlayNow, PlayNext, PlayLast). Clients who have not yet implemented play next and play last may play now.
 	itemIds := []string{"Inner_example"} // []string | The ids of the items to play, comma delimited.
 	startPositionTicks := int64(789) // int64 | The starting position of the first item. (optional)
 	mediaSourceId := "mediaSourceId_example" // string | Optional. The media source id. (optional)
@@ -404,7 +404,7 @@ Other parameters are passed through a pointer to a apiPlayRequest struct via the
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **playCommand** | [**PlayCommand**](PlayCommand.md) | The type of play command to issue (PlayNow, PlayNext, PlayLast). Clients who have not yet implemented play next and play last may play now. | 
+ **playCommand** | **PlayCommand** | The type of play command to issue (PlayNow, PlayNext, PlayLast). Clients who have not yet implemented play next and play last may play now. | 
  **itemIds** | **[]string** | The ids of the items to play, comma delimited. | 
  **startPositionTicks** | **int64** | The starting position of the first item. | 
  **mediaSourceId** | **string** | Optional. The media source id. | 
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ## PostCapabilities
 
-> PostCapabilities(ctx).Id(id).PlayableMediaTypes(playableMediaTypes).SupportedCommands(supportedCommands).SupportsMediaControl(supportsMediaControl).SupportsSync(supportsSync).SupportsPersistentIdentifier(supportsPersistentIdentifier).Execute()
+> PostCapabilities(ctx).Id(id).PlayableMediaTypes(playableMediaTypes).SupportedCommands(supportedCommands).SupportsMediaControl(supportsMediaControl).SupportsPersistentIdentifier(supportsPersistentIdentifier).Execute()
 
 Updates capabilities for a device.
 
@@ -450,15 +450,14 @@ import (
 
 func main() {
 	id := "id_example" // string | The session id. (optional)
-	playableMediaTypes := []string{"Inner_example"} // []string | A list of playable media types, comma delimited. Audio, Video, Book, Photo. (optional)
+	playableMediaTypes := []openapiclient.MediaType{openapiclient.MediaType("Unknown")} // []MediaType | A list of playable media types, comma delimited. Audio, Video, Book, Photo. (optional)
 	supportedCommands := []openapiclient.GeneralCommandType{openapiclient.GeneralCommandType("MoveUp")} // []GeneralCommandType | A list of supported remote control commands, comma delimited. (optional)
 	supportsMediaControl := true // bool | Determines whether media can be played remotely.. (optional) (default to false)
-	supportsSync := true // bool | Determines whether sync is supported. (optional) (default to false)
 	supportsPersistentIdentifier := true // bool | Determines whether the device supports a unique identifier. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.SessionAPI.PostCapabilities(context.Background()).Id(id).PlayableMediaTypes(playableMediaTypes).SupportedCommands(supportedCommands).SupportsMediaControl(supportsMediaControl).SupportsSync(supportsSync).SupportsPersistentIdentifier(supportsPersistentIdentifier).Execute()
+	r, err := apiClient.SessionAPI.PostCapabilities(context.Background()).Id(id).PlayableMediaTypes(playableMediaTypes).SupportedCommands(supportedCommands).SupportsMediaControl(supportsMediaControl).SupportsPersistentIdentifier(supportsPersistentIdentifier).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SessionAPI.PostCapabilities``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -478,10 +477,9 @@ Other parameters are passed through a pointer to a apiPostCapabilitiesRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string** | The session id. | 
- **playableMediaTypes** | **[]string** | A list of playable media types, comma delimited. Audio, Video, Book, Photo. | 
+ **playableMediaTypes** | [**[]MediaType**](MediaType.md) | A list of playable media types, comma delimited. Audio, Video, Book, Photo. | 
  **supportedCommands** | [**[]GeneralCommandType**](GeneralCommandType.md) | A list of supported remote control commands, comma delimited. | 
  **supportsMediaControl** | **bool** | Determines whether media can be played remotely.. | [default to false]
- **supportsSync** | **bool** | Determines whether sync is supported. | [default to false]
  **supportsPersistentIdentifier** | **bool** | Determines whether the device supports a unique identifier. | [default to true]
 
 ### Return type
@@ -844,7 +842,7 @@ import (
 
 func main() {
 	sessionId := "sessionId_example" // string | The session id.
-	command := openapiclient.GeneralCommandType("MoveUp") // GeneralCommandType | The command to send.
+	command := "command_example" // GeneralCommandType | The command to send.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -863,7 +861,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **sessionId** | **string** | The session id. | 
-**command** | [**GeneralCommandType**](.md) | The command to send. | 
+**command** | **GeneralCommandType** | The command to send. | 
 
 ### Other Parameters
 
@@ -981,7 +979,7 @@ import (
 
 func main() {
 	sessionId := "sessionId_example" // string | The session id.
-	command := openapiclient.PlaystateCommand("Stop") // PlaystateCommand | The MediaBrowser.Model.Session.PlaystateCommand.
+	command := "command_example" // PlaystateCommand | The MediaBrowser.Model.Session.PlaystateCommand.
 	seekPositionTicks := int64(789) // int64 | The optional position ticks. (optional)
 	controllingUserId := "controllingUserId_example" // string | The optional controlling user id. (optional)
 
@@ -1002,7 +1000,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **sessionId** | **string** | The session id. | 
-**command** | [**PlaystateCommand**](.md) | The MediaBrowser.Model.Session.PlaystateCommand. | 
+**command** | **PlaystateCommand** | The MediaBrowser.Model.Session.PlaystateCommand. | 
 
 ### Other Parameters
 
@@ -1054,7 +1052,7 @@ import (
 
 func main() {
 	sessionId := "sessionId_example" // string | The session id.
-	command := openapiclient.GeneralCommandType("MoveUp") // GeneralCommandType | The command to send.
+	command := "command_example" // GeneralCommandType | The command to send.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1073,7 +1071,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **sessionId** | **string** | The session id. | 
-**command** | [**GeneralCommandType**](.md) | The command to send. | 
+**command** | **GeneralCommandType** | The command to send. | 
 
 ### Other Parameters
 

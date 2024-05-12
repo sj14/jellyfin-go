@@ -36,7 +36,7 @@ func main() {
 	season := int32(56) // int32 | Optional filter by season number. (optional)
 	seasonId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Filter by season id. (optional)
 	isMissing := true // bool | Optional. Filter by items that are missing episodes or not. (optional)
-	adjacentTo := "adjacentTo_example" // string | Optional. Return items that are siblings of a supplied item. (optional)
+	adjacentTo := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Return items that are siblings of a supplied item. (optional)
 	startItemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Skip through the list until a given item is found. (optional)
 	startIndex := int32(56) // int32 | Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
 	limit := int32(56) // int32 | Optional. The maximum number of records to return. (optional)
@@ -44,7 +44,7 @@ func main() {
 	imageTypeLimit := int32(56) // int32 | Optional, the max number of images to return, per image type. (optional)
 	enableImageTypes := []openapiclient.ImageType{openapiclient.ImageType("Primary")} // []ImageType | Optional. The image types to include in the output. (optional)
 	enableUserData := true // bool | Optional. Include user data. (optional)
-	sortBy := "sortBy_example" // string | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. (optional)
+	sortBy := "sortBy_example" // ItemSortBy | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
  **imageTypeLimit** | **int32** | Optional, the max number of images to return, per image type. | 
  **enableImageTypes** | [**[]ImageType**](ImageType.md) | Optional. The image types to include in the output. | 
  **enableUserData** | **bool** | Optional. Include user data. | 
- **sortBy** | **string** | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. | 
+ **sortBy** | **ItemSortBy** | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. | 
 
 ### Return type
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ## GetNextUp
 
-> BaseItemDtoQueryResult GetNextUp(ctx).UserId(userId).StartIndex(startIndex).Limit(limit).Fields(fields).SeriesId(seriesId).ParentId(parentId).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).EnableUserData(enableUserData).NextUpDateCutoff(nextUpDateCutoff).EnableTotalRecordCount(enableTotalRecordCount).DisableFirstEpisode(disableFirstEpisode).EnableRewatching(enableRewatching).Execute()
+> BaseItemDtoQueryResult GetNextUp(ctx).UserId(userId).StartIndex(startIndex).Limit(limit).Fields(fields).SeriesId(seriesId).ParentId(parentId).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).EnableUserData(enableUserData).NextUpDateCutoff(nextUpDateCutoff).EnableTotalRecordCount(enableTotalRecordCount).DisableFirstEpisode(disableFirstEpisode).EnableResumable(enableResumable).EnableRewatching(enableRewatching).Execute()
 
 Gets a list of next up episodes.
 
@@ -131,7 +131,7 @@ func main() {
 	startIndex := int32(56) // int32 | Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
 	limit := int32(56) // int32 | Optional. The maximum number of records to return. (optional)
 	fields := []openapiclient.ItemFields{openapiclient.ItemFields("AirTime")} // []ItemFields | Optional. Specify additional fields of information to return in the output. (optional)
-	seriesId := "seriesId_example" // string | Optional. Filter by series id. (optional)
+	seriesId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Filter by series id. (optional)
 	parentId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Specify this to localize the search to a specific item or folder. Omit to use the root. (optional)
 	enableImages := true // bool | Optional. Include image information in output. (optional)
 	imageTypeLimit := int32(56) // int32 | Optional. The max number of images to return, per image type. (optional)
@@ -140,11 +140,12 @@ func main() {
 	nextUpDateCutoff := time.Now() // time.Time | Optional. Starting date of shows to show in Next Up section. (optional)
 	enableTotalRecordCount := true // bool | Whether to enable the total records count. Defaults to true. (optional) (default to true)
 	disableFirstEpisode := true // bool | Whether to disable sending the first episode in a series as next up. (optional) (default to false)
-	enableRewatching := true // bool | Whether to include watched episode in next up results. (optional) (default to false)
+	enableResumable := true // bool | Whether to include resumable episodes in next up results. (optional) (default to true)
+	enableRewatching := true // bool | Whether to include watched episodes in next up results. (optional) (default to false)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.TvShowsAPI.GetNextUp(context.Background()).UserId(userId).StartIndex(startIndex).Limit(limit).Fields(fields).SeriesId(seriesId).ParentId(parentId).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).EnableUserData(enableUserData).NextUpDateCutoff(nextUpDateCutoff).EnableTotalRecordCount(enableTotalRecordCount).DisableFirstEpisode(disableFirstEpisode).EnableRewatching(enableRewatching).Execute()
+	resp, r, err := apiClient.TvShowsAPI.GetNextUp(context.Background()).UserId(userId).StartIndex(startIndex).Limit(limit).Fields(fields).SeriesId(seriesId).ParentId(parentId).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).EnableUserData(enableUserData).NextUpDateCutoff(nextUpDateCutoff).EnableTotalRecordCount(enableTotalRecordCount).DisableFirstEpisode(disableFirstEpisode).EnableResumable(enableResumable).EnableRewatching(enableRewatching).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TvShowsAPI.GetNextUp``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -178,7 +179,8 @@ Name | Type | Description  | Notes
  **nextUpDateCutoff** | **time.Time** | Optional. Starting date of shows to show in Next Up section. | 
  **enableTotalRecordCount** | **bool** | Whether to enable the total records count. Defaults to true. | [default to true]
  **disableFirstEpisode** | **bool** | Whether to disable sending the first episode in a series as next up. | [default to false]
- **enableRewatching** | **bool** | Whether to include watched episode in next up results. | [default to false]
+ **enableResumable** | **bool** | Whether to include resumable episodes in next up results. | [default to true]
+ **enableRewatching** | **bool** | Whether to include watched episodes in next up results. | [default to false]
 
 ### Return type
 
@@ -222,7 +224,7 @@ func main() {
 	fields := []openapiclient.ItemFields{openapiclient.ItemFields("AirTime")} // []ItemFields | Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimited. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls. (optional)
 	isSpecialSeason := true // bool | Optional. Filter by special season. (optional)
 	isMissing := true // bool | Optional. Filter by items that are missing episodes or not. (optional)
-	adjacentTo := "adjacentTo_example" // string | Optional. Return items that are siblings of a supplied item. (optional)
+	adjacentTo := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Return items that are siblings of a supplied item. (optional)
 	enableImages := true // bool | Optional. Include image information in output. (optional)
 	imageTypeLimit := int32(56) // int32 | Optional. The max number of images to return, per image type. (optional)
 	enableImageTypes := []openapiclient.ImageType{openapiclient.ImageType("Primary")} // []ImageType | Optional. The image types to include in the output. (optional)

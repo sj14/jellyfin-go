@@ -4,15 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Enabled** | Pointer to **bool** |  | [optional] 
 **EnablePhotos** | Pointer to **bool** |  | [optional] 
 **EnableRealtimeMonitor** | Pointer to **bool** |  | [optional] 
+**EnableLUFSScan** | Pointer to **bool** |  | [optional] 
 **EnableChapterImageExtraction** | Pointer to **bool** |  | [optional] 
 **ExtractChapterImagesDuringLibraryScan** | Pointer to **bool** |  | [optional] 
+**EnableTrickplayImageExtraction** | Pointer to **bool** |  | [optional] 
+**ExtractTrickplayImagesDuringLibraryScan** | Pointer to **bool** |  | [optional] 
 **PathInfos** | Pointer to [**[]MediaPathInfo**](MediaPathInfo.md) |  | [optional] 
 **SaveLocalMetadata** | Pointer to **bool** |  | [optional] 
 **EnableInternetProviders** | Pointer to **bool** |  | [optional] 
 **EnableAutomaticSeriesGrouping** | Pointer to **bool** |  | [optional] 
 **EnableEmbeddedTitles** | Pointer to **bool** |  | [optional] 
+**EnableEmbeddedExtrasTitles** | Pointer to **bool** |  | [optional] 
 **EnableEmbeddedEpisodeInfos** | Pointer to **bool** |  | [optional] 
 **AutomaticRefreshIntervalDays** | Pointer to **int32** |  | [optional] 
 **PreferredMetadataLanguage** | Pointer to **NullableString** | Gets or sets the preferred metadata language. | [optional] 
@@ -28,6 +33,7 @@ Name | Type | Description | Notes
 **SubtitleDownloadLanguages** | Pointer to **[]string** |  | [optional] 
 **RequirePerfectSubtitleMatch** | Pointer to **bool** |  | [optional] 
 **SaveSubtitlesWithMedia** | Pointer to **bool** |  | [optional] 
+**SaveLyricsWithMedia** | Pointer to **bool** |  | [optional] [default to false]
 **AutomaticallyAddToCollection** | Pointer to **bool** |  | [optional] 
 **AllowEmbeddedSubtitles** | Pointer to [**EmbeddedSubtitleOptions**](EmbeddedSubtitleOptions.md) | An enum representing the options to disable embedded subs. | [optional] 
 **TypeOptions** | Pointer to [**[]TypeOptions**](TypeOptions.md) |  | [optional] 
@@ -50,6 +56,31 @@ will change when the set of required properties is changed
 NewAddVirtualFolderDtoLibraryOptionsWithDefaults instantiates a new AddVirtualFolderDtoLibraryOptions object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetEnabled
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *AddVirtualFolderDtoLibraryOptions) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *AddVirtualFolderDtoLibraryOptions) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 ### GetEnablePhotos
 
@@ -101,6 +132,31 @@ SetEnableRealtimeMonitor sets EnableRealtimeMonitor field to given value.
 
 HasEnableRealtimeMonitor returns a boolean if a field has been set.
 
+### GetEnableLUFSScan
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetEnableLUFSScan() bool`
+
+GetEnableLUFSScan returns the EnableLUFSScan field if non-nil, zero value otherwise.
+
+### GetEnableLUFSScanOk
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetEnableLUFSScanOk() (*bool, bool)`
+
+GetEnableLUFSScanOk returns a tuple with the EnableLUFSScan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableLUFSScan
+
+`func (o *AddVirtualFolderDtoLibraryOptions) SetEnableLUFSScan(v bool)`
+
+SetEnableLUFSScan sets EnableLUFSScan field to given value.
+
+### HasEnableLUFSScan
+
+`func (o *AddVirtualFolderDtoLibraryOptions) HasEnableLUFSScan() bool`
+
+HasEnableLUFSScan returns a boolean if a field has been set.
+
 ### GetEnableChapterImageExtraction
 
 `func (o *AddVirtualFolderDtoLibraryOptions) GetEnableChapterImageExtraction() bool`
@@ -150,6 +206,56 @@ SetExtractChapterImagesDuringLibraryScan sets ExtractChapterImagesDuringLibraryS
 `func (o *AddVirtualFolderDtoLibraryOptions) HasExtractChapterImagesDuringLibraryScan() bool`
 
 HasExtractChapterImagesDuringLibraryScan returns a boolean if a field has been set.
+
+### GetEnableTrickplayImageExtraction
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetEnableTrickplayImageExtraction() bool`
+
+GetEnableTrickplayImageExtraction returns the EnableTrickplayImageExtraction field if non-nil, zero value otherwise.
+
+### GetEnableTrickplayImageExtractionOk
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetEnableTrickplayImageExtractionOk() (*bool, bool)`
+
+GetEnableTrickplayImageExtractionOk returns a tuple with the EnableTrickplayImageExtraction field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableTrickplayImageExtraction
+
+`func (o *AddVirtualFolderDtoLibraryOptions) SetEnableTrickplayImageExtraction(v bool)`
+
+SetEnableTrickplayImageExtraction sets EnableTrickplayImageExtraction field to given value.
+
+### HasEnableTrickplayImageExtraction
+
+`func (o *AddVirtualFolderDtoLibraryOptions) HasEnableTrickplayImageExtraction() bool`
+
+HasEnableTrickplayImageExtraction returns a boolean if a field has been set.
+
+### GetExtractTrickplayImagesDuringLibraryScan
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetExtractTrickplayImagesDuringLibraryScan() bool`
+
+GetExtractTrickplayImagesDuringLibraryScan returns the ExtractTrickplayImagesDuringLibraryScan field if non-nil, zero value otherwise.
+
+### GetExtractTrickplayImagesDuringLibraryScanOk
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetExtractTrickplayImagesDuringLibraryScanOk() (*bool, bool)`
+
+GetExtractTrickplayImagesDuringLibraryScanOk returns a tuple with the ExtractTrickplayImagesDuringLibraryScan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExtractTrickplayImagesDuringLibraryScan
+
+`func (o *AddVirtualFolderDtoLibraryOptions) SetExtractTrickplayImagesDuringLibraryScan(v bool)`
+
+SetExtractTrickplayImagesDuringLibraryScan sets ExtractTrickplayImagesDuringLibraryScan field to given value.
+
+### HasExtractTrickplayImagesDuringLibraryScan
+
+`func (o *AddVirtualFolderDtoLibraryOptions) HasExtractTrickplayImagesDuringLibraryScan() bool`
+
+HasExtractTrickplayImagesDuringLibraryScan returns a boolean if a field has been set.
 
 ### GetPathInfos
 
@@ -275,6 +381,31 @@ SetEnableEmbeddedTitles sets EnableEmbeddedTitles field to given value.
 `func (o *AddVirtualFolderDtoLibraryOptions) HasEnableEmbeddedTitles() bool`
 
 HasEnableEmbeddedTitles returns a boolean if a field has been set.
+
+### GetEnableEmbeddedExtrasTitles
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetEnableEmbeddedExtrasTitles() bool`
+
+GetEnableEmbeddedExtrasTitles returns the EnableEmbeddedExtrasTitles field if non-nil, zero value otherwise.
+
+### GetEnableEmbeddedExtrasTitlesOk
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetEnableEmbeddedExtrasTitlesOk() (*bool, bool)`
+
+GetEnableEmbeddedExtrasTitlesOk returns a tuple with the EnableEmbeddedExtrasTitles field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableEmbeddedExtrasTitles
+
+`func (o *AddVirtualFolderDtoLibraryOptions) SetEnableEmbeddedExtrasTitles(v bool)`
+
+SetEnableEmbeddedExtrasTitles sets EnableEmbeddedExtrasTitles field to given value.
+
+### HasEnableEmbeddedExtrasTitles
+
+`func (o *AddVirtualFolderDtoLibraryOptions) HasEnableEmbeddedExtrasTitles() bool`
+
+HasEnableEmbeddedExtrasTitles returns a boolean if a field has been set.
 
 ### GetEnableEmbeddedEpisodeInfos
 
@@ -700,6 +831,31 @@ SetSaveSubtitlesWithMedia sets SaveSubtitlesWithMedia field to given value.
 `func (o *AddVirtualFolderDtoLibraryOptions) HasSaveSubtitlesWithMedia() bool`
 
 HasSaveSubtitlesWithMedia returns a boolean if a field has been set.
+
+### GetSaveLyricsWithMedia
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetSaveLyricsWithMedia() bool`
+
+GetSaveLyricsWithMedia returns the SaveLyricsWithMedia field if non-nil, zero value otherwise.
+
+### GetSaveLyricsWithMediaOk
+
+`func (o *AddVirtualFolderDtoLibraryOptions) GetSaveLyricsWithMediaOk() (*bool, bool)`
+
+GetSaveLyricsWithMediaOk returns a tuple with the SaveLyricsWithMedia field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSaveLyricsWithMedia
+
+`func (o *AddVirtualFolderDtoLibraryOptions) SetSaveLyricsWithMedia(v bool)`
+
+SetSaveLyricsWithMedia sets SaveLyricsWithMedia field to given value.
+
+### HasSaveLyricsWithMedia
+
+`func (o *AddVirtualFolderDtoLibraryOptions) HasSaveLyricsWithMedia() bool`
+
+HasSaveLyricsWithMedia returns a boolean if a field has been set.
 
 ### GetAutomaticallyAddToCollection
 

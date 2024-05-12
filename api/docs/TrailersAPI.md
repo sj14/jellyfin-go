@@ -28,14 +28,14 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id. (optional)
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id supplied as query parameter; this is required when not using an API key. (optional)
 	maxOfficialRating := "maxOfficialRating_example" // string | Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
 	hasThemeSong := true // bool | Optional filter by items with theme songs. (optional)
 	hasThemeVideo := true // bool | Optional filter by items with theme videos. (optional)
 	hasSubtitles := true // bool | Optional filter by items with subtitles. (optional)
 	hasSpecialFeature := true // bool | Optional filter by items with special features. (optional)
 	hasTrailer := true // bool | Optional filter by items with trailers. (optional)
-	adjacentTo := "adjacentTo_example" // string | Optional. Return items that are siblings of a supplied item. (optional)
+	adjacentTo := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Return items that are siblings of a supplied item. (optional)
 	parentIndexNumber := int32(56) // int32 | Optional filter by parent index number. (optional)
 	hasParentalRating := true // bool | Optional filter by items that have or do not have a parental rating. (optional)
 	isHd := true // bool | Optional filter by items that are HD or not. (optional)
@@ -51,9 +51,9 @@ func main() {
 	minDateLastSavedForUser := time.Now() // time.Time | Optional. The minimum last saved date for the current user. Format = ISO. (optional)
 	maxPremiereDate := time.Now() // time.Time | Optional. The maximum premiere date. Format = ISO. (optional)
 	hasOverview := true // bool | Optional filter by items that have an overview or not. (optional)
-	hasImdbId := true // bool | Optional filter by items that have an imdb id or not. (optional)
-	hasTmdbId := true // bool | Optional filter by items that have a tmdb id or not. (optional)
-	hasTvdbId := true // bool | Optional filter by items that have a tvdb id or not. (optional)
+	hasImdbId := true // bool | Optional filter by items that have an IMDb id or not. (optional)
+	hasTmdbId := true // bool | Optional filter by items that have a TMDb id or not. (optional)
+	hasTvdbId := true // bool | Optional filter by items that have a TVDb id or not. (optional)
 	isMovie := true // bool | Optional filter for live tv movies. (optional)
 	isSeries := true // bool | Optional filter for live tv series. (optional)
 	isNews := true // bool | Optional filter for live tv news. (optional)
@@ -64,15 +64,15 @@ func main() {
 	limit := int32(56) // int32 | Optional. The maximum number of records to return. (optional)
 	recursive := true // bool | When searching within folders, this determines whether or not the search will be recursive. true/false. (optional)
 	searchTerm := "searchTerm_example" // string | Optional. Filter based on a search term. (optional)
-	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Sort Order - Ascending,Descending. (optional)
+	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Sort Order - Ascending, Descending. (optional)
 	parentId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Specify this to localize the search to a specific item or folder. Omit to use the root. (optional)
 	fields := []openapiclient.ItemFields{openapiclient.ItemFields("AirTime")} // []ItemFields | Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimited. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines. (optional)
 	excludeItemTypes := []openapiclient.BaseItemKind{openapiclient.BaseItemKind("AggregateFolder")} // []BaseItemKind | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. (optional)
 	filters := []openapiclient.ItemFilter{openapiclient.ItemFilter("IsFolder")} // []ItemFilter | Optional. Specify additional filters to apply. This allows multiple, comma delimited. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes. (optional)
 	isFavorite := true // bool | Optional filter by items that are marked as favorite, or not. (optional)
-	mediaTypes := []string{"Inner_example"} // []string | Optional filter by MediaType. Allows multiple, comma delimited. (optional)
+	mediaTypes := []openapiclient.MediaType{openapiclient.MediaType("Unknown")} // []MediaType | Optional filter by MediaType. Allows multiple, comma delimited. (optional)
 	imageTypes := []openapiclient.ImageType{openapiclient.ImageType("Primary")} // []ImageType | Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)
-	sortBy := []string{"Inner_example"} // []string | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. (optional)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. (optional)
 	isPlayed := true // bool | Optional filter by items that are played, or not. (optional)
 	genres := []string{"Inner_example"} // []string | Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimited. (optional)
 	officialRatings := []string{"Inner_example"} // []string | Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimited. (optional)
@@ -136,7 +136,7 @@ Other parameters are passed through a pointer to a apiGetTrailersRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **string** | The user id. | 
+ **userId** | **string** | The user id supplied as query parameter; this is required when not using an API key. | 
  **maxOfficialRating** | **string** | Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). | 
  **hasThemeSong** | **bool** | Optional filter by items with theme songs. | 
  **hasThemeVideo** | **bool** | Optional filter by items with theme videos. | 
@@ -159,9 +159,9 @@ Name | Type | Description  | Notes
  **minDateLastSavedForUser** | **time.Time** | Optional. The minimum last saved date for the current user. Format &#x3D; ISO. | 
  **maxPremiereDate** | **time.Time** | Optional. The maximum premiere date. Format &#x3D; ISO. | 
  **hasOverview** | **bool** | Optional filter by items that have an overview or not. | 
- **hasImdbId** | **bool** | Optional filter by items that have an imdb id or not. | 
- **hasTmdbId** | **bool** | Optional filter by items that have a tmdb id or not. | 
- **hasTvdbId** | **bool** | Optional filter by items that have a tvdb id or not. | 
+ **hasImdbId** | **bool** | Optional filter by items that have an IMDb id or not. | 
+ **hasTmdbId** | **bool** | Optional filter by items that have a TMDb id or not. | 
+ **hasTvdbId** | **bool** | Optional filter by items that have a TVDb id or not. | 
  **isMovie** | **bool** | Optional filter for live tv movies. | 
  **isSeries** | **bool** | Optional filter for live tv series. | 
  **isNews** | **bool** | Optional filter for live tv news. | 
@@ -172,15 +172,15 @@ Name | Type | Description  | Notes
  **limit** | **int32** | Optional. The maximum number of records to return. | 
  **recursive** | **bool** | When searching within folders, this determines whether or not the search will be recursive. true/false. | 
  **searchTerm** | **string** | Optional. Filter based on a search term. | 
- **sortOrder** | [**[]SortOrder**](SortOrder.md) | Sort Order - Ascending,Descending. | 
+ **sortOrder** | [**[]SortOrder**](SortOrder.md) | Sort Order - Ascending, Descending. | 
  **parentId** | **string** | Specify this to localize the search to a specific item or folder. Omit to use the root. | 
  **fields** | [**[]ItemFields**](ItemFields.md) | Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimited. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines. | 
  **excludeItemTypes** | [**[]BaseItemKind**](BaseItemKind.md) | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. | 
  **filters** | [**[]ItemFilter**](ItemFilter.md) | Optional. Specify additional filters to apply. This allows multiple, comma delimited. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes. | 
  **isFavorite** | **bool** | Optional filter by items that are marked as favorite, or not. | 
- **mediaTypes** | **[]string** | Optional filter by MediaType. Allows multiple, comma delimited. | 
+ **mediaTypes** | [**[]MediaType**](MediaType.md) | Optional filter by MediaType. Allows multiple, comma delimited. | 
  **imageTypes** | [**[]ImageType**](ImageType.md) | Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. | 
- **sortBy** | **[]string** | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. | 
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. | 
  **isPlayed** | **bool** | Optional filter by items that are played, or not. | 
  **genres** | **[]string** | Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimited. | 
  **officialRatings** | **[]string** | Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimited. | 

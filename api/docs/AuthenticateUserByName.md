@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Username** | Pointer to **NullableString** | Gets or sets the username. | [optional] 
 **Pw** | Pointer to **NullableString** | Gets or sets the plain text password. | [optional] 
-**Password** | Pointer to **NullableString** | Gets or sets the sha1-hashed password. | [optional] 
 
 ## Methods
 
@@ -97,41 +96,6 @@ HasPw returns a boolean if a field has been set.
 `func (o *AuthenticateUserByName) UnsetPw()`
 
 UnsetPw ensures that no value is present for Pw, not even an explicit nil
-### GetPassword
-
-`func (o *AuthenticateUserByName) GetPassword() string`
-
-GetPassword returns the Password field if non-nil, zero value otherwise.
-
-### GetPasswordOk
-
-`func (o *AuthenticateUserByName) GetPasswordOk() (*string, bool)`
-
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPassword
-
-`func (o *AuthenticateUserByName) SetPassword(v string)`
-
-SetPassword sets Password field to given value.
-
-### HasPassword
-
-`func (o *AuthenticateUserByName) HasPassword() bool`
-
-HasPassword returns a boolean if a field has been set.
-
-### SetPasswordNil
-
-`func (o *AuthenticateUserByName) SetPasswordNil(b bool)`
-
- SetPasswordNil sets the value for Password to be an explicit nil
-
-### UnsetPassword
-`func (o *AuthenticateUserByName) UnsetPassword()`
-
-UnsetPassword ensures that no value is present for Password, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

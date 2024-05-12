@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **Source** | Pointer to **NullableString** |  | [optional] 
 **TunerCount** | Pointer to **int32** |  | [optional] 
 **UserAgent** | Pointer to **NullableString** |  | [optional] 
+**IgnoreDts** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -380,6 +381,31 @@ HasUserAgent returns a boolean if a field has been set.
 `func (o *TunerHostInfo) UnsetUserAgent()`
 
 UnsetUserAgent ensures that no value is present for UserAgent, not even an explicit nil
+### GetIgnoreDts
+
+`func (o *TunerHostInfo) GetIgnoreDts() bool`
+
+GetIgnoreDts returns the IgnoreDts field if non-nil, zero value otherwise.
+
+### GetIgnoreDtsOk
+
+`func (o *TunerHostInfo) GetIgnoreDtsOk() (*bool, bool)`
+
+GetIgnoreDtsOk returns a tuple with the IgnoreDts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIgnoreDts
+
+`func (o *TunerHostInfo) SetIgnoreDts(v bool)`
+
+SetIgnoreDts sets IgnoreDts field to given value.
+
+### HasIgnoreDts
+
+`func (o *TunerHostInfo) HasIgnoreDts() bool`
+
+HasIgnoreDts returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

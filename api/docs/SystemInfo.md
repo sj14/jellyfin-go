@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **SupportsLibraryMonitor** | Pointer to **bool** | Gets or sets a value indicating whether [supports library monitor]. | [optional] 
 **WebSocketPortNumber** | Pointer to **int32** | Gets or sets the web socket port number. | [optional] 
 **CompletedInstallations** | Pointer to [**[]InstallationInfo**](InstallationInfo.md) | Gets or sets the completed installations. | [optional] 
-**CanSelfRestart** | Pointer to **bool** | Gets or sets a value indicating whether this instance can self restart. | [optional] 
-**CanLaunchWebBrowser** | Pointer to **bool** |  | [optional] 
+**CanSelfRestart** | Pointer to **bool** | Gets or sets a value indicating whether this instance can self restart. | [optional] [default to true]
+**CanLaunchWebBrowser** | Pointer to **bool** |  | [optional] [default to false]
 **ProgramDataPath** | Pointer to **NullableString** | Gets or sets the program data path. | [optional] 
 **WebPath** | Pointer to **NullableString** | Gets or sets the web UI resources path. | [optional] 
 **ItemsByNamePath** | Pointer to **NullableString** | Gets or sets the items by name path. | [optional] 
@@ -27,9 +27,10 @@ Name | Type | Description | Notes
 **LogPath** | Pointer to **NullableString** | Gets or sets the log path. | [optional] 
 **InternalMetadataPath** | Pointer to **NullableString** | Gets or sets the internal metadata path. | [optional] 
 **TranscodingTempPath** | Pointer to **NullableString** | Gets or sets the transcode path. | [optional] 
-**HasUpdateAvailable** | Pointer to **bool** | Gets or sets a value indicating whether this instance has update available. | [optional] 
-**EncoderLocation** | Pointer to [**FFmpegLocation**](FFmpegLocation.md) | Enum describing the location of the FFmpeg tool. | [optional] 
-**SystemArchitecture** | Pointer to [**Architecture**](Architecture.md) |  | [optional] 
+**CastReceiverApplications** | Pointer to [**[]CastReceiverApplication**](CastReceiverApplication.md) | Gets or sets the list of cast receiver applications. | [optional] 
+**HasUpdateAvailable** | Pointer to **bool** | Gets or sets a value indicating whether this instance has update available. | [optional] [default to false]
+**EncoderLocation** | Pointer to **NullableString** |  | [optional] [default to "System"]
+**SystemArchitecture** | Pointer to **NullableString** |  | [optional] [default to "X64"]
 
 ## Methods
 
@@ -795,6 +796,41 @@ HasTranscodingTempPath returns a boolean if a field has been set.
 `func (o *SystemInfo) UnsetTranscodingTempPath()`
 
 UnsetTranscodingTempPath ensures that no value is present for TranscodingTempPath, not even an explicit nil
+### GetCastReceiverApplications
+
+`func (o *SystemInfo) GetCastReceiverApplications() []CastReceiverApplication`
+
+GetCastReceiverApplications returns the CastReceiverApplications field if non-nil, zero value otherwise.
+
+### GetCastReceiverApplicationsOk
+
+`func (o *SystemInfo) GetCastReceiverApplicationsOk() (*[]CastReceiverApplication, bool)`
+
+GetCastReceiverApplicationsOk returns a tuple with the CastReceiverApplications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCastReceiverApplications
+
+`func (o *SystemInfo) SetCastReceiverApplications(v []CastReceiverApplication)`
+
+SetCastReceiverApplications sets CastReceiverApplications field to given value.
+
+### HasCastReceiverApplications
+
+`func (o *SystemInfo) HasCastReceiverApplications() bool`
+
+HasCastReceiverApplications returns a boolean if a field has been set.
+
+### SetCastReceiverApplicationsNil
+
+`func (o *SystemInfo) SetCastReceiverApplicationsNil(b bool)`
+
+ SetCastReceiverApplicationsNil sets the value for CastReceiverApplications to be an explicit nil
+
+### UnsetCastReceiverApplications
+`func (o *SystemInfo) UnsetCastReceiverApplications()`
+
+UnsetCastReceiverApplications ensures that no value is present for CastReceiverApplications, not even an explicit nil
 ### GetHasUpdateAvailable
 
 `func (o *SystemInfo) GetHasUpdateAvailable() bool`
@@ -822,20 +858,20 @@ HasHasUpdateAvailable returns a boolean if a field has been set.
 
 ### GetEncoderLocation
 
-`func (o *SystemInfo) GetEncoderLocation() FFmpegLocation`
+`func (o *SystemInfo) GetEncoderLocation() string`
 
 GetEncoderLocation returns the EncoderLocation field if non-nil, zero value otherwise.
 
 ### GetEncoderLocationOk
 
-`func (o *SystemInfo) GetEncoderLocationOk() (*FFmpegLocation, bool)`
+`func (o *SystemInfo) GetEncoderLocationOk() (*string, bool)`
 
 GetEncoderLocationOk returns a tuple with the EncoderLocation field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEncoderLocation
 
-`func (o *SystemInfo) SetEncoderLocation(v FFmpegLocation)`
+`func (o *SystemInfo) SetEncoderLocation(v string)`
 
 SetEncoderLocation sets EncoderLocation field to given value.
 
@@ -845,22 +881,32 @@ SetEncoderLocation sets EncoderLocation field to given value.
 
 HasEncoderLocation returns a boolean if a field has been set.
 
+### SetEncoderLocationNil
+
+`func (o *SystemInfo) SetEncoderLocationNil(b bool)`
+
+ SetEncoderLocationNil sets the value for EncoderLocation to be an explicit nil
+
+### UnsetEncoderLocation
+`func (o *SystemInfo) UnsetEncoderLocation()`
+
+UnsetEncoderLocation ensures that no value is present for EncoderLocation, not even an explicit nil
 ### GetSystemArchitecture
 
-`func (o *SystemInfo) GetSystemArchitecture() Architecture`
+`func (o *SystemInfo) GetSystemArchitecture() string`
 
 GetSystemArchitecture returns the SystemArchitecture field if non-nil, zero value otherwise.
 
 ### GetSystemArchitectureOk
 
-`func (o *SystemInfo) GetSystemArchitectureOk() (*Architecture, bool)`
+`func (o *SystemInfo) GetSystemArchitectureOk() (*string, bool)`
 
 GetSystemArchitectureOk returns a tuple with the SystemArchitecture field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSystemArchitecture
 
-`func (o *SystemInfo) SetSystemArchitecture(v Architecture)`
+`func (o *SystemInfo) SetSystemArchitecture(v string)`
 
 SetSystemArchitecture sets SystemArchitecture field to given value.
 
@@ -870,6 +916,16 @@ SetSystemArchitecture sets SystemArchitecture field to given value.
 
 HasSystemArchitecture returns a boolean if a field has been set.
 
+### SetSystemArchitectureNil
+
+`func (o *SystemInfo) SetSystemArchitectureNil(b bool)`
+
+ SetSystemArchitectureNil sets the value for SystemArchitecture to be an explicit nil
+
+### UnsetSystemArchitecture
+`func (o *SystemInfo) UnsetSystemArchitecture()`
+
+UnsetSystemArchitecture ensures that no value is present for SystemArchitecture, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

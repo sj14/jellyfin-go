@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **RememberAudioSelections** | Pointer to **bool** |  | [optional] 
 **RememberSubtitleSelections** | Pointer to **bool** |  | [optional] 
 **EnableNextEpisodeAutoPlay** | Pointer to **bool** |  | [optional] 
+**CastReceiverId** | Pointer to **NullableString** | Gets or sets the id of the selected cast receiver. | [optional] 
 
 ## Methods
 
@@ -434,6 +435,41 @@ SetEnableNextEpisodeAutoPlay sets EnableNextEpisodeAutoPlay field to given value
 
 HasEnableNextEpisodeAutoPlay returns a boolean if a field has been set.
 
+### GetCastReceiverId
+
+`func (o *UserDtoConfiguration) GetCastReceiverId() string`
+
+GetCastReceiverId returns the CastReceiverId field if non-nil, zero value otherwise.
+
+### GetCastReceiverIdOk
+
+`func (o *UserDtoConfiguration) GetCastReceiverIdOk() (*string, bool)`
+
+GetCastReceiverIdOk returns a tuple with the CastReceiverId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCastReceiverId
+
+`func (o *UserDtoConfiguration) SetCastReceiverId(v string)`
+
+SetCastReceiverId sets CastReceiverId field to given value.
+
+### HasCastReceiverId
+
+`func (o *UserDtoConfiguration) HasCastReceiverId() bool`
+
+HasCastReceiverId returns a boolean if a field has been set.
+
+### SetCastReceiverIdNil
+
+`func (o *UserDtoConfiguration) SetCastReceiverIdNil(b bool)`
+
+ SetCastReceiverIdNil sets the value for CastReceiverId to be an explicit nil
+
+### UnsetCastReceiverId
+`func (o *UserDtoConfiguration) UnsetCastReceiverId()`
+
+UnsetCastReceiverId ensures that no value is present for CastReceiverId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

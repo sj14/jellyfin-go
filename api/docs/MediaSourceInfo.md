@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 **Timestamp** | Pointer to [**NullableTransportStreamTimestamp**](TransportStreamTimestamp.md) |  | [optional] 
 **RequiredHttpHeaders** | Pointer to **map[string]string** |  | [optional] 
 **TranscodingUrl** | Pointer to **NullableString** |  | [optional] 
-**TranscodingSubProtocol** | Pointer to **NullableString** |  | [optional] 
+**TranscodingSubProtocol** | Pointer to [**MediaStreamProtocol**](MediaStreamProtocol.md) | Media streaming protocol.  Lowercase for backwards compatibility. | [optional] 
 **TranscodingContainer** | Pointer to **NullableString** |  | [optional] 
 **AnalyzeDurationMs** | Pointer to **NullableInt32** |  | [optional] 
 **DefaultAudioStreamIndex** | Pointer to **NullableInt32** |  | [optional] 
@@ -1213,20 +1213,20 @@ HasTranscodingUrl returns a boolean if a field has been set.
 UnsetTranscodingUrl ensures that no value is present for TranscodingUrl, not even an explicit nil
 ### GetTranscodingSubProtocol
 
-`func (o *MediaSourceInfo) GetTranscodingSubProtocol() string`
+`func (o *MediaSourceInfo) GetTranscodingSubProtocol() MediaStreamProtocol`
 
 GetTranscodingSubProtocol returns the TranscodingSubProtocol field if non-nil, zero value otherwise.
 
 ### GetTranscodingSubProtocolOk
 
-`func (o *MediaSourceInfo) GetTranscodingSubProtocolOk() (*string, bool)`
+`func (o *MediaSourceInfo) GetTranscodingSubProtocolOk() (*MediaStreamProtocol, bool)`
 
 GetTranscodingSubProtocolOk returns a tuple with the TranscodingSubProtocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTranscodingSubProtocol
 
-`func (o *MediaSourceInfo) SetTranscodingSubProtocol(v string)`
+`func (o *MediaSourceInfo) SetTranscodingSubProtocol(v MediaStreamProtocol)`
 
 SetTranscodingSubProtocol sets TranscodingSubProtocol field to given value.
 
@@ -1236,16 +1236,6 @@ SetTranscodingSubProtocol sets TranscodingSubProtocol field to given value.
 
 HasTranscodingSubProtocol returns a boolean if a field has been set.
 
-### SetTranscodingSubProtocolNil
-
-`func (o *MediaSourceInfo) SetTranscodingSubProtocolNil(b bool)`
-
- SetTranscodingSubProtocolNil sets the value for TranscodingSubProtocol to be an explicit nil
-
-### UnsetTranscodingSubProtocol
-`func (o *MediaSourceInfo) UnsetTranscodingSubProtocol()`
-
-UnsetTranscodingSubProtocol ensures that no value is present for TranscodingSubProtocol, not even an explicit nil
 ### GetTranscodingContainer
 
 `func (o *MediaSourceInfo) GetTranscodingContainer() string`

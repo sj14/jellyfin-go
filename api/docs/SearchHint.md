@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ItemId** | Pointer to **string** | Gets or sets the item id. | [optional] 
-**Id** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **NullableString** | Gets or sets the name. | [optional] 
-**MatchedTerm** | Pointer to **NullableString** | Gets or sets the matched term. | [optional] 
+**Id** | Pointer to **string** | Gets or sets the item id. | [optional] 
+**Name** | Pointer to **string** | Gets or sets the name. | [optional] 
+**MatchedTerm** | Pointer to **string** | Gets or sets the matched term. | [optional] 
 **IndexNumber** | Pointer to **NullableInt32** | Gets or sets the index number. | [optional] 
 **ProductionYear** | Pointer to **NullableInt32** | Gets or sets the production year. | [optional] 
 **ParentIndexNumber** | Pointer to **NullableInt32** | Gets or sets the parent index number. | [optional] 
@@ -16,21 +16,21 @@ Name | Type | Description | Notes
 **ThumbImageItemId** | Pointer to **NullableString** | Gets or sets the thumb image item identifier. | [optional] 
 **BackdropImageTag** | Pointer to **NullableString** | Gets or sets the backdrop image tag. | [optional] 
 **BackdropImageItemId** | Pointer to **NullableString** | Gets or sets the backdrop image item identifier. | [optional] 
-**Type** | Pointer to **NullableString** | Gets or sets the type. | [optional] 
-**IsFolder** | Pointer to **NullableBool** |  | [optional] 
+**Type** | Pointer to [**BaseItemKind**](BaseItemKind.md) | Gets or sets the type. | [optional] 
+**IsFolder** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance is folder. | [optional] 
 **RunTimeTicks** | Pointer to **NullableInt64** | Gets or sets the run time ticks. | [optional] 
-**MediaType** | Pointer to **NullableString** | Gets or sets the type of the media. | [optional] 
-**StartDate** | Pointer to **NullableTime** |  | [optional] 
-**EndDate** | Pointer to **NullableTime** |  | [optional] 
+**MediaType** | Pointer to [**MediaType**](MediaType.md) | Gets or sets the type of the media. | [optional] 
+**StartDate** | Pointer to **NullableTime** | Gets or sets the start date. | [optional] 
+**EndDate** | Pointer to **NullableTime** | Gets or sets the end date. | [optional] 
 **Series** | Pointer to **NullableString** | Gets or sets the series. | [optional] 
-**Status** | Pointer to **NullableString** |  | [optional] 
+**Status** | Pointer to **NullableString** | Gets or sets the status. | [optional] 
 **Album** | Pointer to **NullableString** | Gets or sets the album. | [optional] 
-**AlbumId** | Pointer to **string** |  | [optional] 
+**AlbumId** | Pointer to **NullableString** | Gets or sets the album id. | [optional] 
 **AlbumArtist** | Pointer to **NullableString** | Gets or sets the album artist. | [optional] 
 **Artists** | Pointer to **[]string** | Gets or sets the artists. | [optional] 
 **SongCount** | Pointer to **NullableInt32** | Gets or sets the song count. | [optional] 
 **EpisodeCount** | Pointer to **NullableInt32** | Gets or sets the episode count. | [optional] 
-**ChannelId** | Pointer to **string** | Gets or sets the channel identifier. | [optional] 
+**ChannelId** | Pointer to **NullableString** | Gets or sets the channel identifier. | [optional] 
 **ChannelName** | Pointer to **NullableString** | Gets or sets the name of the channel. | [optional] 
 **PrimaryImageAspectRatio** | Pointer to **NullableFloat64** | Gets or sets the primary image aspect ratio. | [optional] 
 
@@ -128,16 +128,6 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### SetNameNil
-
-`func (o *SearchHint) SetNameNil(b bool)`
-
- SetNameNil sets the value for Name to be an explicit nil
-
-### UnsetName
-`func (o *SearchHint) UnsetName()`
-
-UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetMatchedTerm
 
 `func (o *SearchHint) GetMatchedTerm() string`
@@ -163,16 +153,6 @@ SetMatchedTerm sets MatchedTerm field to given value.
 
 HasMatchedTerm returns a boolean if a field has been set.
 
-### SetMatchedTermNil
-
-`func (o *SearchHint) SetMatchedTermNil(b bool)`
-
- SetMatchedTermNil sets the value for MatchedTerm to be an explicit nil
-
-### UnsetMatchedTerm
-`func (o *SearchHint) UnsetMatchedTerm()`
-
-UnsetMatchedTerm ensures that no value is present for MatchedTerm, not even an explicit nil
 ### GetIndexNumber
 
 `func (o *SearchHint) GetIndexNumber() int32`
@@ -455,20 +435,20 @@ HasBackdropImageItemId returns a boolean if a field has been set.
 UnsetBackdropImageItemId ensures that no value is present for BackdropImageItemId, not even an explicit nil
 ### GetType
 
-`func (o *SearchHint) GetType() string`
+`func (o *SearchHint) GetType() BaseItemKind`
 
 GetType returns the Type field if non-nil, zero value otherwise.
 
 ### GetTypeOk
 
-`func (o *SearchHint) GetTypeOk() (*string, bool)`
+`func (o *SearchHint) GetTypeOk() (*BaseItemKind, bool)`
 
 GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetType
 
-`func (o *SearchHint) SetType(v string)`
+`func (o *SearchHint) SetType(v BaseItemKind)`
 
 SetType sets Type field to given value.
 
@@ -478,16 +458,6 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
-### SetTypeNil
-
-`func (o *SearchHint) SetTypeNil(b bool)`
-
- SetTypeNil sets the value for Type to be an explicit nil
-
-### UnsetType
-`func (o *SearchHint) UnsetType()`
-
-UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetIsFolder
 
 `func (o *SearchHint) GetIsFolder() bool`
@@ -560,20 +530,20 @@ HasRunTimeTicks returns a boolean if a field has been set.
 UnsetRunTimeTicks ensures that no value is present for RunTimeTicks, not even an explicit nil
 ### GetMediaType
 
-`func (o *SearchHint) GetMediaType() string`
+`func (o *SearchHint) GetMediaType() MediaType`
 
 GetMediaType returns the MediaType field if non-nil, zero value otherwise.
 
 ### GetMediaTypeOk
 
-`func (o *SearchHint) GetMediaTypeOk() (*string, bool)`
+`func (o *SearchHint) GetMediaTypeOk() (*MediaType, bool)`
 
 GetMediaTypeOk returns a tuple with the MediaType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMediaType
 
-`func (o *SearchHint) SetMediaType(v string)`
+`func (o *SearchHint) SetMediaType(v MediaType)`
 
 SetMediaType sets MediaType field to given value.
 
@@ -583,16 +553,6 @@ SetMediaType sets MediaType field to given value.
 
 HasMediaType returns a boolean if a field has been set.
 
-### SetMediaTypeNil
-
-`func (o *SearchHint) SetMediaTypeNil(b bool)`
-
- SetMediaTypeNil sets the value for MediaType to be an explicit nil
-
-### UnsetMediaType
-`func (o *SearchHint) UnsetMediaType()`
-
-UnsetMediaType ensures that no value is present for MediaType, not even an explicit nil
 ### GetStartDate
 
 `func (o *SearchHint) GetStartDate() time.Time`
@@ -793,6 +753,16 @@ SetAlbumId sets AlbumId field to given value.
 
 HasAlbumId returns a boolean if a field has been set.
 
+### SetAlbumIdNil
+
+`func (o *SearchHint) SetAlbumIdNil(b bool)`
+
+ SetAlbumIdNil sets the value for AlbumId to be an explicit nil
+
+### UnsetAlbumId
+`func (o *SearchHint) UnsetAlbumId()`
+
+UnsetAlbumId ensures that no value is present for AlbumId, not even an explicit nil
 ### GetAlbumArtist
 
 `func (o *SearchHint) GetAlbumArtist() string`
@@ -853,16 +823,6 @@ SetArtists sets Artists field to given value.
 
 HasArtists returns a boolean if a field has been set.
 
-### SetArtistsNil
-
-`func (o *SearchHint) SetArtistsNil(b bool)`
-
- SetArtistsNil sets the value for Artists to be an explicit nil
-
-### UnsetArtists
-`func (o *SearchHint) UnsetArtists()`
-
-UnsetArtists ensures that no value is present for Artists, not even an explicit nil
 ### GetSongCount
 
 `func (o *SearchHint) GetSongCount() int32`
@@ -958,6 +918,16 @@ SetChannelId sets ChannelId field to given value.
 
 HasChannelId returns a boolean if a field has been set.
 
+### SetChannelIdNil
+
+`func (o *SearchHint) SetChannelIdNil(b bool)`
+
+ SetChannelIdNil sets the value for ChannelId to be an explicit nil
+
+### UnsetChannelId
+`func (o *SearchHint) UnsetChannelId()`
+
+UnsetChannelId ensures that no value is present for ChannelId, not even an explicit nil
 ### GetChannelName
 
 `func (o *SearchHint) GetChannelName() string`

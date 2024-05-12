@@ -519,7 +519,7 @@ import (
 )
 
 func main() {
-	libraryContentType := "libraryContentType_example" // string | Library content type. (optional)
+	libraryContentType := "libraryContentType_example" // CollectionType | Library content type. (optional)
 	isNewLibrary := true // bool | Whether this is a new library. (optional) (default to false)
 
 	configuration := openapiclient.NewConfiguration()
@@ -545,7 +545,7 @@ Other parameters are passed through a pointer to a apiGetLibraryOptionsInfoReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **libraryContentType** | **string** | Library content type. | 
+ **libraryContentType** | **CollectionType** | Library content type. | 
  **isNewLibrary** | **bool** | Whether this is a new library. | [default to false]
 
 ### Return type

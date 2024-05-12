@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) |  | [optional] 
 **VideoCodec** | Pointer to **string** |  | [optional] 
 **AudioCodec** | Pointer to **string** |  | [optional] 
-**Protocol** | Pointer to **string** |  | [optional] 
+**Protocol** | Pointer to [**MediaStreamProtocol**](MediaStreamProtocol.md) | Media streaming protocol.  Lowercase for backwards compatibility. | [optional] 
 **EstimateContentLength** | Pointer to **bool** |  | [optional] [default to false]
 **EnableMpegtsM2TsMode** | Pointer to **bool** |  | [optional] [default to false]
 **TranscodeSeekInfo** | Pointer to [**TranscodeSeekInfo**](TranscodeSeekInfo.md) |  | [optional] [default to TRANSCODESEEKINFO_AUTO]
@@ -142,20 +142,20 @@ HasAudioCodec returns a boolean if a field has been set.
 
 ### GetProtocol
 
-`func (o *TranscodingProfile) GetProtocol() string`
+`func (o *TranscodingProfile) GetProtocol() MediaStreamProtocol`
 
 GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
 ### GetProtocolOk
 
-`func (o *TranscodingProfile) GetProtocolOk() (*string, bool)`
+`func (o *TranscodingProfile) GetProtocolOk() (*MediaStreamProtocol, bool)`
 
 GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProtocol
 
-`func (o *TranscodingProfile) SetProtocol(v string)`
+`func (o *TranscodingProfile) SetProtocol(v MediaStreamProtocol)`
 
 SetProtocol sets Protocol field to given value.
 

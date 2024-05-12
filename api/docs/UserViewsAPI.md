@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetGroupingOptions**](UserViewsAPI.md#GetGroupingOptions) | **Get** /Users/{userId}/GroupingOptions | Get user view grouping options.
-[**GetUserViews**](UserViewsAPI.md#GetUserViews) | **Get** /Users/{userId}/Views | Get user views.
+[**GetGroupingOptions**](UserViewsAPI.md#GetGroupingOptions) | **Get** /UserViews/GroupingOptions | Get user view grouping options.
+[**GetUserViews**](UserViewsAPI.md#GetUserViews) | **Get** /UserViews | Get user views.
 
 
 
 ## GetGroupingOptions
 
-> []SpecialViewOptionDto GetGroupingOptions(ctx, userId).Execute()
+> []SpecialViewOptionDto GetGroupingOptions(ctx).UserId(userId).Execute()
 
 Get user view grouping options.
 
@@ -28,11 +28,11 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserViewsAPI.GetGroupingOptions(context.Background(), userId).Execute()
+	resp, r, err := apiClient.UserViewsAPI.GetGroupingOptions(context.Background()).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserViewsAPI.GetGroupingOptions``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -45,10 +45,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 
 ### Other Parameters
 
@@ -57,7 +53,7 @@ Other parameters are passed through a pointer to a apiGetGroupingOptionsRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -79,7 +75,7 @@ Name | Type | Description  | Notes
 
 ## GetUserViews
 
-> BaseItemDtoQueryResult GetUserViews(ctx, userId).IncludeExternalContent(includeExternalContent).PresetViews(presetViews).IncludeHidden(includeHidden).Execute()
+> BaseItemDtoQueryResult GetUserViews(ctx).UserId(userId).IncludeExternalContent(includeExternalContent).PresetViews(presetViews).IncludeHidden(includeHidden).Execute()
 
 Get user views.
 
@@ -96,14 +92,14 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 	includeExternalContent := true // bool | Whether or not to include external views such as channels or live tv. (optional)
-	presetViews := []string{"Inner_example"} // []string | Preset views. (optional)
+	presetViews := []openapiclient.CollectionType{openapiclient.CollectionType("unknown")} // []CollectionType | Preset views. (optional)
 	includeHidden := true // bool | Whether or not to include hidden content. (optional) (default to false)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserViewsAPI.GetUserViews(context.Background(), userId).IncludeExternalContent(includeExternalContent).PresetViews(presetViews).IncludeHidden(includeHidden).Execute()
+	resp, r, err := apiClient.UserViewsAPI.GetUserViews(context.Background()).UserId(userId).IncludeExternalContent(includeExternalContent).PresetViews(presetViews).IncludeHidden(includeHidden).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserViewsAPI.GetUserViews``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -116,10 +112,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 
 ### Other Parameters
 
@@ -128,9 +120,9 @@ Other parameters are passed through a pointer to a apiGetUserViewsRequest struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
+ **userId** | **string** | User id. | 
  **includeExternalContent** | **bool** | Whether or not to include external views such as channels or live tv. | 
- **presetViews** | **[]string** | Preset views. | 
+ **presetViews** | [**[]CollectionType**](CollectionType.md) | Preset views. | 
  **includeHidden** | **bool** | Whether or not to include hidden content. | [default to false]
 
 ### Return type

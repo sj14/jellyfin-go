@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** | Gets or sets the username. | [optional] 
+**Name** | **string** | Gets or sets the username. | 
 **Password** | Pointer to **NullableString** | Gets or sets the password. | [optional] 
 
 ## Methods
 
 ### NewCreateUserByName
 
-`func NewCreateUserByName() *CreateUserByName`
+`func NewCreateUserByName(name string, ) *CreateUserByName`
 
 NewCreateUserByName instantiates a new CreateUserByName object
 This constructor will assign default values to properties that have it defined,
@@ -45,22 +45,7 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *CreateUserByName) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### SetNameNil
-
-`func (o *CreateUserByName) SetNameNil(b bool)`
-
- SetNameNil sets the value for Name to be an explicit nil
-
-### UnsetName
-`func (o *CreateUserByName) UnsetName()`
-
-UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetPassword
 
 `func (o *CreateUserByName) GetPassword() string`
