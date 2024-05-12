@@ -32,7 +32,11 @@ jobs:
           openapi-generator-cli generate -c config.yaml
           git add --all
           set +o pipefail # it should not stop on failure
-          ! git diff --cached --exit-code
+          echo "changed=$(git diff --cached --exit-code >/dev/null 2>&1 || echo $?)" >> "$GITHUB_OUTPUT"
+      - name: Create pull request
+        if: ${{ steps.generate.outputs.changed == '1' }}
+        run: |
+          set -xueo pipefail
           t=$(date +%s)
           git checkout -b $t
           git commit -am "Auto-Update"
