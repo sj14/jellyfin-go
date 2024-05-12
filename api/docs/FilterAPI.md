@@ -113,7 +113,7 @@ func main() {
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. User id. (optional)
 	parentId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Parent id. (optional)
 	includeItemTypes := []openapiclient.BaseItemKind{openapiclient.BaseItemKind("AggregateFolder")} // []BaseItemKind | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. (optional)
-	mediaTypes := []string{"Inner_example"} // []string | Optional. Filter by MediaType. Allows multiple, comma delimited. (optional)
+	mediaTypes := []openapiclient.MediaType{openapiclient.MediaType("Unknown")} // []MediaType | Optional. Filter by MediaType. Allows multiple, comma delimited. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
  **userId** | **string** | Optional. User id. | 
  **parentId** | **string** | Optional. Parent id. | 
  **includeItemTypes** | [**[]BaseItemKind**](BaseItemKind.md) | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. | 
- **mediaTypes** | **[]string** | Optional. Filter by MediaType. Allows multiple, comma delimited. | 
+ **mediaTypes** | [**[]MediaType**](MediaType.md) | Optional. Filter by MediaType. Allows multiple, comma delimited. | 
 
 ### Return type
 

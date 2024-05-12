@@ -28,8 +28,8 @@ import (
 
 func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
-	metadataRefreshMode := openapiclient.MetadataRefreshMode("None") // MetadataRefreshMode | (Optional) Specifies the metadata refresh mode. (optional) (default to "None")
-	imageRefreshMode := openapiclient.MetadataRefreshMode("None") // MetadataRefreshMode | (Optional) Specifies the image refresh mode. (optional) (default to "None")
+	metadataRefreshMode := "metadataRefreshMode_example" // MetadataRefreshMode | (Optional) Specifies the metadata refresh mode. (optional) (default to "None")
+	imageRefreshMode := "imageRefreshMode_example" // MetadataRefreshMode | (Optional) Specifies the image refresh mode. (optional) (default to "None")
 	replaceAllMetadata := true // bool | (Optional) Determines if metadata should be replaced. Only applicable if mode is FullRefresh. (optional) (default to false)
 	replaceAllImages := true // bool | (Optional) Determines if images should be replaced. Only applicable if mode is FullRefresh. (optional) (default to false)
 
@@ -59,8 +59,8 @@ Other parameters are passed through a pointer to a apiRefreshItemRequest struct 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **metadataRefreshMode** | [**MetadataRefreshMode**](MetadataRefreshMode.md) | (Optional) Specifies the metadata refresh mode. | [default to &quot;None&quot;]
- **imageRefreshMode** | [**MetadataRefreshMode**](MetadataRefreshMode.md) | (Optional) Specifies the image refresh mode. | [default to &quot;None&quot;]
+ **metadataRefreshMode** | **MetadataRefreshMode** | (Optional) Specifies the metadata refresh mode. | [default to &quot;None&quot;]
+ **imageRefreshMode** | **MetadataRefreshMode** | (Optional) Specifies the image refresh mode. | [default to &quot;None&quot;]
  **replaceAllMetadata** | **bool** | (Optional) Determines if metadata should be replaced. Only applicable if mode is FullRefresh. | [default to false]
  **replaceAllImages** | **bool** | (Optional) Determines if images should be replaced. Only applicable if mode is FullRefresh. | [default to false]
 

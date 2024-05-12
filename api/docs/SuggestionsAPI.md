@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetSuggestions**](SuggestionsAPI.md#GetSuggestions) | **Get** /Users/{userId}/Suggestions | Gets suggestions.
+[**GetSuggestions**](SuggestionsAPI.md#GetSuggestions) | **Get** /Items/Suggestions | Gets suggestions.
 
 
 
 ## GetSuggestions
 
-> BaseItemDtoQueryResult GetSuggestions(ctx, userId).MediaType(mediaType).Type_(type_).StartIndex(startIndex).Limit(limit).EnableTotalRecordCount(enableTotalRecordCount).Execute()
+> BaseItemDtoQueryResult GetSuggestions(ctx).UserId(userId).MediaType(mediaType).Type_(type_).StartIndex(startIndex).Limit(limit).EnableTotalRecordCount(enableTotalRecordCount).Execute()
 
 Gets suggestions.
 
@@ -27,8 +27,8 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id.
-	mediaType := []string{"Inner_example"} // []string | The media types. (optional)
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id. (optional)
+	mediaType := []openapiclient.MediaType{openapiclient.MediaType("Unknown")} // []MediaType | The media types. (optional)
 	type_ := []openapiclient.BaseItemKind{openapiclient.BaseItemKind("AggregateFolder")} // []BaseItemKind | The type. (optional)
 	startIndex := int32(56) // int32 | Optional. The start index. (optional)
 	limit := int32(56) // int32 | Optional. The limit. (optional)
@@ -36,7 +36,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SuggestionsAPI.GetSuggestions(context.Background(), userId).MediaType(mediaType).Type_(type_).StartIndex(startIndex).Limit(limit).EnableTotalRecordCount(enableTotalRecordCount).Execute()
+	resp, r, err := apiClient.SuggestionsAPI.GetSuggestions(context.Background()).UserId(userId).MediaType(mediaType).Type_(type_).StartIndex(startIndex).Limit(limit).EnableTotalRecordCount(enableTotalRecordCount).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SuggestionsAPI.GetSuggestions``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -49,10 +49,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The user id. | 
 
 ### Other Parameters
 
@@ -61,8 +57,8 @@ Other parameters are passed through a pointer to a apiGetSuggestionsRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
- **mediaType** | **[]string** | The media types. | 
+ **userId** | **string** | The user id. | 
+ **mediaType** | [**[]MediaType**](MediaType.md) | The media types. | 
  **type_** | [**[]BaseItemKind**](BaseItemKind.md) | The type. | 
  **startIndex** | **int32** | Optional. The start index. | 
  **limit** | **int32** | Optional. The limit. | 

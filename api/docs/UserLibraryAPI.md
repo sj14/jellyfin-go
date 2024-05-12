@@ -4,22 +4,22 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteUserItemRating**](UserLibraryAPI.md#DeleteUserItemRating) | **Delete** /Users/{userId}/Items/{itemId}/Rating | Deletes a user&#39;s saved personal rating for an item.
-[**GetIntros**](UserLibraryAPI.md#GetIntros) | **Get** /Users/{userId}/Items/{itemId}/Intros | Gets intros to play before the main media item plays.
-[**GetItem**](UserLibraryAPI.md#GetItem) | **Get** /Users/{userId}/Items/{itemId} | Gets an item from a user&#39;s library.
-[**GetLatestMedia**](UserLibraryAPI.md#GetLatestMedia) | **Get** /Users/{userId}/Items/Latest | Gets latest media.
-[**GetLocalTrailers**](UserLibraryAPI.md#GetLocalTrailers) | **Get** /Users/{userId}/Items/{itemId}/LocalTrailers | Gets local trailers for an item.
-[**GetRootFolder**](UserLibraryAPI.md#GetRootFolder) | **Get** /Users/{userId}/Items/Root | Gets the root folder from a user&#39;s library.
-[**GetSpecialFeatures**](UserLibraryAPI.md#GetSpecialFeatures) | **Get** /Users/{userId}/Items/{itemId}/SpecialFeatures | Gets special features for an item.
-[**MarkFavoriteItem**](UserLibraryAPI.md#MarkFavoriteItem) | **Post** /Users/{userId}/FavoriteItems/{itemId} | Marks an item as a favorite.
-[**UnmarkFavoriteItem**](UserLibraryAPI.md#UnmarkFavoriteItem) | **Delete** /Users/{userId}/FavoriteItems/{itemId} | Unmarks item as a favorite.
-[**UpdateUserItemRating**](UserLibraryAPI.md#UpdateUserItemRating) | **Post** /Users/{userId}/Items/{itemId}/Rating | Updates a user&#39;s rating for an item.
+[**DeleteUserItemRating**](UserLibraryAPI.md#DeleteUserItemRating) | **Delete** /UserItems/{itemId}/Rating | Deletes a user&#39;s saved personal rating for an item.
+[**GetIntros**](UserLibraryAPI.md#GetIntros) | **Get** /Items/{itemId}/Intros | Gets intros to play before the main media item plays.
+[**GetItem**](UserLibraryAPI.md#GetItem) | **Get** /Items/{itemId} | Gets an item from a user&#39;s library.
+[**GetLatestMedia**](UserLibraryAPI.md#GetLatestMedia) | **Get** /Items/Latest | Gets latest media.
+[**GetLocalTrailers**](UserLibraryAPI.md#GetLocalTrailers) | **Get** /Items/{itemId}/LocalTrailers | Gets local trailers for an item.
+[**GetRootFolder**](UserLibraryAPI.md#GetRootFolder) | **Get** /Items/Root | Gets the root folder from a user&#39;s library.
+[**GetSpecialFeatures**](UserLibraryAPI.md#GetSpecialFeatures) | **Get** /Items/{itemId}/SpecialFeatures | Gets special features for an item.
+[**MarkFavoriteItem**](UserLibraryAPI.md#MarkFavoriteItem) | **Post** /UserFavoriteItems/{itemId} | Marks an item as a favorite.
+[**UnmarkFavoriteItem**](UserLibraryAPI.md#UnmarkFavoriteItem) | **Delete** /UserFavoriteItems/{itemId} | Unmarks item as a favorite.
+[**UpdateUserItemRating**](UserLibraryAPI.md#UpdateUserItemRating) | **Post** /UserItems/{itemId}/Rating | Updates a user&#39;s rating for an item.
 
 
 
 ## DeleteUserItemRating
 
-> UserItemDataDto DeleteUserItemRating(ctx, userId, itemId).Execute()
+> UserItemDataDto DeleteUserItemRating(ctx, itemId).UserId(userId).Execute()
 
 Deletes a user's saved personal rating for an item.
 
@@ -36,12 +36,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.DeleteUserItemRating(context.Background(), userId, itemId).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.DeleteUserItemRating(context.Background(), itemId).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.DeleteUserItemRating``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -57,7 +57,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -68,7 +67,7 @@ Other parameters are passed through a pointer to a apiDeleteUserItemRatingReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -90,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## GetIntros
 
-> BaseItemDtoQueryResult GetIntros(ctx, userId, itemId).Execute()
+> BaseItemDtoQueryResult GetIntros(ctx, itemId).UserId(userId).Execute()
 
 Gets intros to play before the main media item plays.
 
@@ -107,12 +106,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.GetIntros(context.Background(), userId, itemId).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.GetIntros(context.Background(), itemId).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.GetIntros``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -128,7 +127,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -139,7 +137,7 @@ Other parameters are passed through a pointer to a apiGetIntrosRequest struct vi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -161,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetItem
 
-> BaseItemDto GetItem(ctx, userId, itemId).Execute()
+> BaseItemDto GetItem(ctx, itemId).UserId(userId).Execute()
 
 Gets an item from a user's library.
 
@@ -178,12 +176,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.GetItem(context.Background(), userId, itemId).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.GetItem(context.Background(), itemId).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.GetItem``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -199,7 +197,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -210,7 +207,7 @@ Other parameters are passed through a pointer to a apiGetItemRequest struct via 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -232,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetLatestMedia
 
-> []BaseItemDto GetLatestMedia(ctx, userId).ParentId(parentId).Fields(fields).IncludeItemTypes(includeItemTypes).IsPlayed(isPlayed).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).EnableUserData(enableUserData).Limit(limit).GroupItems(groupItems).Execute()
+> []BaseItemDto GetLatestMedia(ctx).UserId(userId).ParentId(parentId).Fields(fields).IncludeItemTypes(includeItemTypes).IsPlayed(isPlayed).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).EnableUserData(enableUserData).Limit(limit).GroupItems(groupItems).Execute()
 
 Gets latest media.
 
@@ -249,7 +246,7 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 	parentId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Specify this to localize the search to a specific item or folder. Omit to use the root. (optional)
 	fields := []openapiclient.ItemFields{openapiclient.ItemFields("AirTime")} // []ItemFields | Optional. Specify additional fields of information to return in the output. (optional)
 	includeItemTypes := []openapiclient.BaseItemKind{openapiclient.BaseItemKind("AggregateFolder")} // []BaseItemKind | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. (optional)
@@ -263,7 +260,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.GetLatestMedia(context.Background(), userId).ParentId(parentId).Fields(fields).IncludeItemTypes(includeItemTypes).IsPlayed(isPlayed).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).EnableUserData(enableUserData).Limit(limit).GroupItems(groupItems).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.GetLatestMedia(context.Background()).UserId(userId).ParentId(parentId).Fields(fields).IncludeItemTypes(includeItemTypes).IsPlayed(isPlayed).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).EnableUserData(enableUserData).Limit(limit).GroupItems(groupItems).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.GetLatestMedia``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -276,10 +273,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 
 ### Other Parameters
 
@@ -288,7 +281,7 @@ Other parameters are passed through a pointer to a apiGetLatestMediaRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
+ **userId** | **string** | User id. | 
  **parentId** | **string** | Specify this to localize the search to a specific item or folder. Omit to use the root. | 
  **fields** | [**[]ItemFields**](ItemFields.md) | Optional. Specify additional fields of information to return in the output. | 
  **includeItemTypes** | [**[]BaseItemKind**](BaseItemKind.md) | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. | 
@@ -320,7 +313,7 @@ Name | Type | Description  | Notes
 
 ## GetLocalTrailers
 
-> []BaseItemDto GetLocalTrailers(ctx, userId, itemId).Execute()
+> []BaseItemDto GetLocalTrailers(ctx, itemId).UserId(userId).Execute()
 
 Gets local trailers for an item.
 
@@ -337,12 +330,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.GetLocalTrailers(context.Background(), userId, itemId).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.GetLocalTrailers(context.Background(), itemId).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.GetLocalTrailers``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -358,7 +351,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -369,7 +361,7 @@ Other parameters are passed through a pointer to a apiGetLocalTrailersRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -391,7 +383,7 @@ Name | Type | Description  | Notes
 
 ## GetRootFolder
 
-> BaseItemDto GetRootFolder(ctx, userId).Execute()
+> BaseItemDto GetRootFolder(ctx).UserId(userId).Execute()
 
 Gets the root folder from a user's library.
 
@@ -408,11 +400,11 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.GetRootFolder(context.Background(), userId).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.GetRootFolder(context.Background()).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.GetRootFolder``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -425,10 +417,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 
 ### Other Parameters
 
@@ -437,7 +425,7 @@ Other parameters are passed through a pointer to a apiGetRootFolderRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -459,7 +447,7 @@ Name | Type | Description  | Notes
 
 ## GetSpecialFeatures
 
-> []BaseItemDto GetSpecialFeatures(ctx, userId, itemId).Execute()
+> []BaseItemDto GetSpecialFeatures(ctx, itemId).UserId(userId).Execute()
 
 Gets special features for an item.
 
@@ -476,12 +464,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.GetSpecialFeatures(context.Background(), userId, itemId).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.GetSpecialFeatures(context.Background(), itemId).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.GetSpecialFeatures``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -497,7 +485,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -508,7 +495,7 @@ Other parameters are passed through a pointer to a apiGetSpecialFeaturesRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -530,7 +517,7 @@ Name | Type | Description  | Notes
 
 ## MarkFavoriteItem
 
-> UserItemDataDto MarkFavoriteItem(ctx, userId, itemId).Execute()
+> UserItemDataDto MarkFavoriteItem(ctx, itemId).UserId(userId).Execute()
 
 Marks an item as a favorite.
 
@@ -547,12 +534,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.MarkFavoriteItem(context.Background(), userId, itemId).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.MarkFavoriteItem(context.Background(), itemId).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.MarkFavoriteItem``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -568,7 +555,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -579,7 +565,7 @@ Other parameters are passed through a pointer to a apiMarkFavoriteItemRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -601,7 +587,7 @@ Name | Type | Description  | Notes
 
 ## UnmarkFavoriteItem
 
-> UserItemDataDto UnmarkFavoriteItem(ctx, userId, itemId).Execute()
+> UserItemDataDto UnmarkFavoriteItem(ctx, itemId).UserId(userId).Execute()
 
 Unmarks item as a favorite.
 
@@ -618,12 +604,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.UnmarkFavoriteItem(context.Background(), userId, itemId).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.UnmarkFavoriteItem(context.Background(), itemId).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.UnmarkFavoriteItem``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -639,7 +625,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -650,7 +635,7 @@ Other parameters are passed through a pointer to a apiUnmarkFavoriteItemRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -672,7 +657,7 @@ Name | Type | Description  | Notes
 
 ## UpdateUserItemRating
 
-> UserItemDataDto UpdateUserItemRating(ctx, userId, itemId).Likes(likes).Execute()
+> UserItemDataDto UpdateUserItemRating(ctx, itemId).UserId(userId).Likes(likes).Execute()
 
 Updates a user's rating for an item.
 
@@ -689,13 +674,13 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item id.
-	likes := true // bool | Whether this M:Jellyfin.Api.Controllers.UserLibraryController.UpdateUserItemRating(System.Guid,System.Guid,System.Nullable{System.Boolean}) is likes. (optional)
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
+	likes := true // bool | Whether this M:Jellyfin.Api.Controllers.UserLibraryController.UpdateUserItemRating(System.Nullable{System.Guid},System.Guid,System.Nullable{System.Boolean}) is likes. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserLibraryAPI.UpdateUserItemRating(context.Background(), userId, itemId).Likes(likes).Execute()
+	resp, r, err := apiClient.UserLibraryAPI.UpdateUserItemRating(context.Background(), itemId).UserId(userId).Likes(likes).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserLibraryAPI.UpdateUserItemRating``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -711,7 +696,6 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | User id. | 
 **itemId** | **string** | Item id. | 
 
 ### Other Parameters
@@ -722,8 +706,8 @@ Other parameters are passed through a pointer to a apiUpdateUserItemRatingReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
- **likes** | **bool** | Whether this M:Jellyfin.Api.Controllers.UserLibraryController.UpdateUserItemRating(System.Guid,System.Guid,System.Nullable{System.Boolean}) is likes. | 
+ **userId** | **string** | User id. | 
+ **likes** | **bool** | Whether this M:Jellyfin.Api.Controllers.UserLibraryController.UpdateUserItemRating(System.Nullable{System.Guid},System.Guid,System.Nullable{System.Boolean}) is likes. | 
 
 ### Return type
 

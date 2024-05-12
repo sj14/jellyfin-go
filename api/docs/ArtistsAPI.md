@@ -39,7 +39,7 @@ func main() {
 	includeItemTypes := []openapiclient.BaseItemKind{openapiclient.BaseItemKind("AggregateFolder")} // []BaseItemKind | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. (optional)
 	filters := []openapiclient.ItemFilter{openapiclient.ItemFilter("IsFolder")} // []ItemFilter | Optional. Specify additional filters to apply. (optional)
 	isFavorite := true // bool | Optional filter by items that are marked as favorite, or not. (optional)
-	mediaTypes := []string{"Inner_example"} // []string | Optional filter by MediaType. Allows multiple, comma delimited. (optional)
+	mediaTypes := []openapiclient.MediaType{openapiclient.MediaType("Unknown")} // []MediaType | Optional filter by MediaType. Allows multiple, comma delimited. (optional)
 	genres := []string{"Inner_example"} // []string | Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimited. (optional)
 	genreIds := []string{"Inner_example"} // []string | Optional. If specified, results will be filtered based on genre id. This allows multiple, pipe delimited. (optional)
 	officialRatings := []string{"Inner_example"} // []string | Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimited. (optional)
@@ -57,7 +57,7 @@ func main() {
 	nameStartsWithOrGreater := "nameStartsWithOrGreater_example" // string | Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
 	nameStartsWith := "nameStartsWith_example" // string | Optional filter by items whose name is sorted equally than a given input string. (optional)
 	nameLessThan := "nameLessThan_example" // string | Optional filter by items whose name is equally or lesser than a given input string. (optional)
-	sortBy := []string{"Inner_example"} // []string | Optional. Specify one or more sort orders, comma delimited. (optional)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Specify one or more sort orders, comma delimited. (optional)
 	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Sort Order - Ascending,Descending. (optional)
 	enableImages := true // bool | Optional, include image information in output. (optional) (default to true)
 	enableTotalRecordCount := true // bool | Total record count. (optional) (default to true)
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
  **includeItemTypes** | [**[]BaseItemKind**](BaseItemKind.md) | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. | 
  **filters** | [**[]ItemFilter**](ItemFilter.md) | Optional. Specify additional filters to apply. | 
  **isFavorite** | **bool** | Optional filter by items that are marked as favorite, or not. | 
- **mediaTypes** | **[]string** | Optional filter by MediaType. Allows multiple, comma delimited. | 
+ **mediaTypes** | [**[]MediaType**](MediaType.md) | Optional filter by MediaType. Allows multiple, comma delimited. | 
  **genres** | **[]string** | Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimited. | 
  **genreIds** | **[]string** | Optional. If specified, results will be filtered based on genre id. This allows multiple, pipe delimited. | 
  **officialRatings** | **[]string** | Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimited. | 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
  **nameStartsWithOrGreater** | **string** | Optional filter by items whose name is sorted equally or greater than a given input string. | 
  **nameStartsWith** | **string** | Optional filter by items whose name is sorted equally than a given input string. | 
  **nameLessThan** | **string** | Optional filter by items whose name is equally or lesser than a given input string. | 
- **sortBy** | **[]string** | Optional. Specify one or more sort orders, comma delimited. | 
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Specify one or more sort orders, comma delimited. | 
  **sortOrder** | [**[]SortOrder**](SortOrder.md) | Sort Order - Ascending,Descending. | 
  **enableImages** | **bool** | Optional, include image information in output. | [default to true]
  **enableTotalRecordCount** | **bool** | Total record count. | [default to true]
@@ -235,7 +235,7 @@ func main() {
 	includeItemTypes := []openapiclient.BaseItemKind{openapiclient.BaseItemKind("AggregateFolder")} // []BaseItemKind | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. (optional)
 	filters := []openapiclient.ItemFilter{openapiclient.ItemFilter("IsFolder")} // []ItemFilter | Optional. Specify additional filters to apply. (optional)
 	isFavorite := true // bool | Optional filter by items that are marked as favorite, or not. (optional)
-	mediaTypes := []string{"Inner_example"} // []string | Optional filter by MediaType. Allows multiple, comma delimited. (optional)
+	mediaTypes := []openapiclient.MediaType{openapiclient.MediaType("Unknown")} // []MediaType | Optional filter by MediaType. Allows multiple, comma delimited. (optional)
 	genres := []string{"Inner_example"} // []string | Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimited. (optional)
 	genreIds := []string{"Inner_example"} // []string | Optional. If specified, results will be filtered based on genre id. This allows multiple, pipe delimited. (optional)
 	officialRatings := []string{"Inner_example"} // []string | Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimited. (optional)
@@ -253,7 +253,7 @@ func main() {
 	nameStartsWithOrGreater := "nameStartsWithOrGreater_example" // string | Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
 	nameStartsWith := "nameStartsWith_example" // string | Optional filter by items whose name is sorted equally than a given input string. (optional)
 	nameLessThan := "nameLessThan_example" // string | Optional filter by items whose name is equally or lesser than a given input string. (optional)
-	sortBy := []string{"Inner_example"} // []string | Optional. Specify one or more sort orders, comma delimited. (optional)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Specify one or more sort orders, comma delimited. (optional)
 	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Sort Order - Ascending,Descending. (optional)
 	enableImages := true // bool | Optional, include image information in output. (optional) (default to true)
 	enableTotalRecordCount := true // bool | Total record count. (optional) (default to true)
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
  **includeItemTypes** | [**[]BaseItemKind**](BaseItemKind.md) | Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited. | 
  **filters** | [**[]ItemFilter**](ItemFilter.md) | Optional. Specify additional filters to apply. | 
  **isFavorite** | **bool** | Optional filter by items that are marked as favorite, or not. | 
- **mediaTypes** | **[]string** | Optional filter by MediaType. Allows multiple, comma delimited. | 
+ **mediaTypes** | [**[]MediaType**](MediaType.md) | Optional filter by MediaType. Allows multiple, comma delimited. | 
  **genres** | **[]string** | Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimited. | 
  **genreIds** | **[]string** | Optional. If specified, results will be filtered based on genre id. This allows multiple, pipe delimited. | 
  **officialRatings** | **[]string** | Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimited. | 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
  **nameStartsWithOrGreater** | **string** | Optional filter by items whose name is sorted equally or greater than a given input string. | 
  **nameStartsWith** | **string** | Optional filter by items whose name is sorted equally than a given input string. | 
  **nameLessThan** | **string** | Optional filter by items whose name is equally or lesser than a given input string. | 
- **sortBy** | **[]string** | Optional. Specify one or more sort orders, comma delimited. | 
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Specify one or more sort orders, comma delimited. | 
  **sortOrder** | [**[]SortOrder**](SortOrder.md) | Sort Order - Ascending,Descending. | 
  **enableImages** | **bool** | Optional, include image information in output. | [default to true]
  **enableTotalRecordCount** | **bool** | Total record count. | [default to true]

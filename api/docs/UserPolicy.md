@@ -6,9 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IsAdministrator** | Pointer to **bool** | Gets or sets a value indicating whether this instance is administrator. | [optional] 
 **IsHidden** | Pointer to **bool** | Gets or sets a value indicating whether this instance is hidden. | [optional] 
+**EnableCollectionManagement** | Pointer to **bool** | Gets or sets a value indicating whether this instance can manage collections. | [optional] [default to false]
+**EnableSubtitleManagement** | Pointer to **bool** | Gets or sets a value indicating whether this instance can manage subtitles. | [optional] [default to false]
+**EnableLyricManagement** | Pointer to **bool** | Gets or sets a value indicating whether this user can manage lyrics. | [optional] [default to false]
 **IsDisabled** | Pointer to **bool** | Gets or sets a value indicating whether this instance is disabled. | [optional] 
 **MaxParentalRating** | Pointer to **NullableInt32** | Gets or sets the max parental rating. | [optional] 
 **BlockedTags** | Pointer to **[]string** |  | [optional] 
+**AllowedTags** | Pointer to **[]string** |  | [optional] 
 **EnableUserPreferenceAccess** | Pointer to **bool** |  | [optional] 
 **AccessSchedules** | Pointer to [**[]AccessSchedule**](AccessSchedule.md) |  | [optional] 
 **BlockUnratedItems** | Pointer to [**[]UnratedItem**](UnratedItem.md) |  | [optional] 
@@ -40,15 +44,15 @@ Name | Type | Description | Notes
 **BlockedMediaFolders** | Pointer to **[]string** |  | [optional] 
 **BlockedChannels** | Pointer to **[]string** |  | [optional] 
 **RemoteClientBitrateLimit** | Pointer to **int32** |  | [optional] 
-**AuthenticationProviderId** | Pointer to **NullableString** |  | [optional] 
-**PasswordResetProviderId** | Pointer to **NullableString** |  | [optional] 
+**AuthenticationProviderId** | **string** |  | 
+**PasswordResetProviderId** | **string** |  | 
 **SyncPlayAccess** | Pointer to [**SyncPlayUserAccessType**](SyncPlayUserAccessType.md) | Gets or sets a value indicating what SyncPlay features the user can access. | [optional] 
 
 ## Methods
 
 ### NewUserPolicy
 
-`func NewUserPolicy() *UserPolicy`
+`func NewUserPolicy(authenticationProviderId string, passwordResetProviderId string, ) *UserPolicy`
 
 NewUserPolicy instantiates a new UserPolicy object
 This constructor will assign default values to properties that have it defined,
@@ -112,6 +116,81 @@ SetIsHidden sets IsHidden field to given value.
 `func (o *UserPolicy) HasIsHidden() bool`
 
 HasIsHidden returns a boolean if a field has been set.
+
+### GetEnableCollectionManagement
+
+`func (o *UserPolicy) GetEnableCollectionManagement() bool`
+
+GetEnableCollectionManagement returns the EnableCollectionManagement field if non-nil, zero value otherwise.
+
+### GetEnableCollectionManagementOk
+
+`func (o *UserPolicy) GetEnableCollectionManagementOk() (*bool, bool)`
+
+GetEnableCollectionManagementOk returns a tuple with the EnableCollectionManagement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableCollectionManagement
+
+`func (o *UserPolicy) SetEnableCollectionManagement(v bool)`
+
+SetEnableCollectionManagement sets EnableCollectionManagement field to given value.
+
+### HasEnableCollectionManagement
+
+`func (o *UserPolicy) HasEnableCollectionManagement() bool`
+
+HasEnableCollectionManagement returns a boolean if a field has been set.
+
+### GetEnableSubtitleManagement
+
+`func (o *UserPolicy) GetEnableSubtitleManagement() bool`
+
+GetEnableSubtitleManagement returns the EnableSubtitleManagement field if non-nil, zero value otherwise.
+
+### GetEnableSubtitleManagementOk
+
+`func (o *UserPolicy) GetEnableSubtitleManagementOk() (*bool, bool)`
+
+GetEnableSubtitleManagementOk returns a tuple with the EnableSubtitleManagement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableSubtitleManagement
+
+`func (o *UserPolicy) SetEnableSubtitleManagement(v bool)`
+
+SetEnableSubtitleManagement sets EnableSubtitleManagement field to given value.
+
+### HasEnableSubtitleManagement
+
+`func (o *UserPolicy) HasEnableSubtitleManagement() bool`
+
+HasEnableSubtitleManagement returns a boolean if a field has been set.
+
+### GetEnableLyricManagement
+
+`func (o *UserPolicy) GetEnableLyricManagement() bool`
+
+GetEnableLyricManagement returns the EnableLyricManagement field if non-nil, zero value otherwise.
+
+### GetEnableLyricManagementOk
+
+`func (o *UserPolicy) GetEnableLyricManagementOk() (*bool, bool)`
+
+GetEnableLyricManagementOk returns a tuple with the EnableLyricManagement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableLyricManagement
+
+`func (o *UserPolicy) SetEnableLyricManagement(v bool)`
+
+SetEnableLyricManagement sets EnableLyricManagement field to given value.
+
+### HasEnableLyricManagement
+
+`func (o *UserPolicy) HasEnableLyricManagement() bool`
+
+HasEnableLyricManagement returns a boolean if a field has been set.
 
 ### GetIsDisabled
 
@@ -208,6 +287,41 @@ HasBlockedTags returns a boolean if a field has been set.
 `func (o *UserPolicy) UnsetBlockedTags()`
 
 UnsetBlockedTags ensures that no value is present for BlockedTags, not even an explicit nil
+### GetAllowedTags
+
+`func (o *UserPolicy) GetAllowedTags() []string`
+
+GetAllowedTags returns the AllowedTags field if non-nil, zero value otherwise.
+
+### GetAllowedTagsOk
+
+`func (o *UserPolicy) GetAllowedTagsOk() (*[]string, bool)`
+
+GetAllowedTagsOk returns a tuple with the AllowedTags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedTags
+
+`func (o *UserPolicy) SetAllowedTags(v []string)`
+
+SetAllowedTags sets AllowedTags field to given value.
+
+### HasAllowedTags
+
+`func (o *UserPolicy) HasAllowedTags() bool`
+
+HasAllowedTags returns a boolean if a field has been set.
+
+### SetAllowedTagsNil
+
+`func (o *UserPolicy) SetAllowedTagsNil(b bool)`
+
+ SetAllowedTagsNil sets the value for AllowedTags to be an explicit nil
+
+### UnsetAllowedTags
+`func (o *UserPolicy) UnsetAllowedTags()`
+
+UnsetAllowedTags ensures that no value is present for AllowedTags, not even an explicit nil
 ### GetEnableUserPreferenceAccess
 
 `func (o *UserPolicy) GetEnableUserPreferenceAccess() bool`
@@ -1082,22 +1196,7 @@ and a boolean to check if the value has been set.
 
 SetAuthenticationProviderId sets AuthenticationProviderId field to given value.
 
-### HasAuthenticationProviderId
 
-`func (o *UserPolicy) HasAuthenticationProviderId() bool`
-
-HasAuthenticationProviderId returns a boolean if a field has been set.
-
-### SetAuthenticationProviderIdNil
-
-`func (o *UserPolicy) SetAuthenticationProviderIdNil(b bool)`
-
- SetAuthenticationProviderIdNil sets the value for AuthenticationProviderId to be an explicit nil
-
-### UnsetAuthenticationProviderId
-`func (o *UserPolicy) UnsetAuthenticationProviderId()`
-
-UnsetAuthenticationProviderId ensures that no value is present for AuthenticationProviderId, not even an explicit nil
 ### GetPasswordResetProviderId
 
 `func (o *UserPolicy) GetPasswordResetProviderId() string`
@@ -1117,22 +1216,7 @@ and a boolean to check if the value has been set.
 
 SetPasswordResetProviderId sets PasswordResetProviderId field to given value.
 
-### HasPasswordResetProviderId
 
-`func (o *UserPolicy) HasPasswordResetProviderId() bool`
-
-HasPasswordResetProviderId returns a boolean if a field has been set.
-
-### SetPasswordResetProviderIdNil
-
-`func (o *UserPolicy) SetPasswordResetProviderIdNil(b bool)`
-
- SetPasswordResetProviderIdNil sets the value for PasswordResetProviderId to be an explicit nil
-
-### UnsetPasswordResetProviderId
-`func (o *UserPolicy) UnsetPasswordResetProviderId()`
-
-UnsetPasswordResetProviderId ensures that no value is present for PasswordResetProviderId, not even an explicit nil
 ### GetSyncPlayAccess
 
 `func (o *UserPolicy) GetSyncPlayAccess() SyncPlayUserAccessType`

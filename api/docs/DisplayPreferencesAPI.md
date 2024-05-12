@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDisplayPreferences
 
-> DisplayPreferencesDto GetDisplayPreferences(ctx, displayPreferencesId).UserId(userId).Client(client).Execute()
+> DisplayPreferencesDto GetDisplayPreferences(ctx, displayPreferencesId).Client(client).UserId(userId).Execute()
 
 Get Display Preferences.
 
@@ -29,12 +29,12 @@ import (
 
 func main() {
 	displayPreferencesId := "displayPreferencesId_example" // string | Display preferences id.
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id.
 	client := "client_example" // string | Client.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DisplayPreferencesAPI.GetDisplayPreferences(context.Background(), displayPreferencesId).UserId(userId).Client(client).Execute()
+	resp, r, err := apiClient.DisplayPreferencesAPI.GetDisplayPreferences(context.Background(), displayPreferencesId).Client(client).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DisplayPreferencesAPI.GetDisplayPreferences``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -60,8 +60,8 @@ Other parameters are passed through a pointer to a apiGetDisplayPreferencesReque
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **userId** | **string** | User id. | 
  **client** | **string** | Client. | 
+ **userId** | **string** | User id. | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDisplayPreferences
 
-> UpdateDisplayPreferences(ctx, displayPreferencesId).UserId(userId).Client(client).DisplayPreferencesDto(displayPreferencesDto).Execute()
+> UpdateDisplayPreferences(ctx, displayPreferencesId).Client(client).DisplayPreferencesDto(displayPreferencesDto).UserId(userId).Execute()
 
 Update Display Preferences.
 
@@ -101,13 +101,13 @@ import (
 
 func main() {
 	displayPreferencesId := "displayPreferencesId_example" // string | Display preferences id.
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User Id.
 	client := "client_example" // string | Client.
 	displayPreferencesDto := *openapiclient.NewDisplayPreferencesDto() // DisplayPreferencesDto | New Display Preferences object.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User Id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.DisplayPreferencesAPI.UpdateDisplayPreferences(context.Background(), displayPreferencesId).UserId(userId).Client(client).DisplayPreferencesDto(displayPreferencesDto).Execute()
+	r, err := apiClient.DisplayPreferencesAPI.UpdateDisplayPreferences(context.Background(), displayPreferencesId).Client(client).DisplayPreferencesDto(displayPreferencesDto).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DisplayPreferencesAPI.UpdateDisplayPreferences``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -131,9 +131,9 @@ Other parameters are passed through a pointer to a apiUpdateDisplayPreferencesRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **userId** | **string** | User Id. | 
  **client** | **string** | Client. | 
  **displayPreferencesDto** | [**DisplayPreferencesDto**](DisplayPreferencesDto.md) | New Display Preferences object. | 
+ **userId** | **string** | User Id. | 
 
 ### Return type
 

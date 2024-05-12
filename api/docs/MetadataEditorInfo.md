@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Countries** | Pointer to [**[]CountryInfo**](CountryInfo.md) |  | [optional] 
 **Cultures** | Pointer to [**[]CultureDto**](CultureDto.md) |  | [optional] 
 **ExternalIdInfos** | Pointer to [**[]ExternalIdInfo**](ExternalIdInfo.md) |  | [optional] 
-**ContentType** | Pointer to **NullableString** |  | [optional] 
+**ContentType** | Pointer to [**NullableCollectionType**](CollectionType.md) |  | [optional] 
 **ContentTypeOptions** | Pointer to [**[]NameValuePair**](NameValuePair.md) |  | [optional] 
 
 ## Methods
@@ -132,20 +132,20 @@ HasExternalIdInfos returns a boolean if a field has been set.
 
 ### GetContentType
 
-`func (o *MetadataEditorInfo) GetContentType() string`
+`func (o *MetadataEditorInfo) GetContentType() CollectionType`
 
 GetContentType returns the ContentType field if non-nil, zero value otherwise.
 
 ### GetContentTypeOk
 
-`func (o *MetadataEditorInfo) GetContentTypeOk() (*string, bool)`
+`func (o *MetadataEditorInfo) GetContentTypeOk() (*CollectionType, bool)`
 
 GetContentTypeOk returns a tuple with the ContentType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetContentType
 
-`func (o *MetadataEditorInfo) SetContentType(v string)`
+`func (o *MetadataEditorInfo) SetContentType(v CollectionType)`
 
 SetContentType sets ContentType field to given value.
 

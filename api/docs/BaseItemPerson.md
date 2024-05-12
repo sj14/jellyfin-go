@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **NullableString** | Gets or sets the name. | [optional] 
 **Id** | Pointer to **string** | Gets or sets the identifier. | [optional] 
 **Role** | Pointer to **NullableString** | Gets or sets the role. | [optional] 
-**Type** | Pointer to **NullableString** | Gets or sets the type. | [optional] 
+**Type** | Pointer to [**PersonKind**](PersonKind.md) | Gets or sets the type. | [optional] 
 **PrimaryImageTag** | Pointer to **NullableString** | Gets or sets the primary image tag. | [optional] 
 **ImageBlurHashes** | Pointer to [**NullableBaseItemPersonImageBlurHashes**](BaseItemPersonImageBlurHashes.md) |  | [optional] 
 
@@ -127,20 +127,20 @@ HasRole returns a boolean if a field has been set.
 UnsetRole ensures that no value is present for Role, not even an explicit nil
 ### GetType
 
-`func (o *BaseItemPerson) GetType() string`
+`func (o *BaseItemPerson) GetType() PersonKind`
 
 GetType returns the Type field if non-nil, zero value otherwise.
 
 ### GetTypeOk
 
-`func (o *BaseItemPerson) GetTypeOk() (*string, bool)`
+`func (o *BaseItemPerson) GetTypeOk() (*PersonKind, bool)`
 
 GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetType
 
-`func (o *BaseItemPerson) SetType(v string)`
+`func (o *BaseItemPerson) SetType(v PersonKind)`
 
 SetType sets Type field to given value.
 
@@ -150,16 +150,6 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
-### SetTypeNil
-
-`func (o *BaseItemPerson) SetTypeNil(b bool)`
-
- SetTypeNil sets the value for Type to be an explicit nil
-
-### UnsetType
-`func (o *BaseItemPerson) UnsetType()`
-
-UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetPrimaryImageTag
 
 `func (o *BaseItemPerson) GetPrimaryImageTag() string`

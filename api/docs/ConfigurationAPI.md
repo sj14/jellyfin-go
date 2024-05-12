@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**GetDefaultMetadataOptions**](ConfigurationAPI.md#GetDefaultMetadataOptions) | **Get** /System/Configuration/MetadataOptions/Default | Gets a default MetadataOptions object.
 [**GetNamedConfiguration**](ConfigurationAPI.md#GetNamedConfiguration) | **Get** /System/Configuration/{key} | Gets a named configuration.
 [**UpdateConfiguration**](ConfigurationAPI.md#UpdateConfiguration) | **Post** /System/Configuration | Updates application configuration.
-[**UpdateMediaEncoderPath**](ConfigurationAPI.md#UpdateMediaEncoderPath) | **Post** /System/MediaEncoder/Path | Updates the path to the media encoder.
 [**UpdateNamedConfiguration**](ConfigurationAPI.md#UpdateNamedConfiguration) | **Post** /System/Configuration/{key} | Updates named configuration.
 
 
@@ -242,68 +241,6 @@ Other parameters are passed through a pointer to a apiUpdateConfigurationRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverConfiguration** | [**ServerConfiguration**](ServerConfiguration.md) | Configuration. | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[CustomAuthentication](../README.md#CustomAuthentication)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UpdateMediaEncoderPath
-
-> UpdateMediaEncoderPath(ctx).MediaEncoderPathDto(mediaEncoderPathDto).Execute()
-
-Updates the path to the media encoder.
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/sj14/jellyfin-go/api"
-)
-
-func main() {
-	mediaEncoderPathDto := *openapiclient.NewMediaEncoderPathDto() // MediaEncoderPathDto | Media encoder path form body.
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.ConfigurationAPI.UpdateMediaEncoderPath(context.Background()).MediaEncoderPathDto(mediaEncoderPathDto).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `ConfigurationAPI.UpdateMediaEncoderPath``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUpdateMediaEncoderPathRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mediaEncoderPathDto** | [**MediaEncoderPathDto**](MediaEncoderPathDto.md) | Media encoder path form body. | 
 
 ### Return type
 

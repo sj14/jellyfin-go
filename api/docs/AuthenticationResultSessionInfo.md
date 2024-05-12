@@ -8,18 +8,18 @@ Name | Type | Description | Notes
 **AdditionalUsers** | Pointer to [**[]SessionUserInfo**](SessionUserInfo.md) |  | [optional] 
 **Capabilities** | Pointer to [**NullableClientCapabilities**](ClientCapabilities.md) |  | [optional] 
 **RemoteEndPoint** | Pointer to **NullableString** | Gets or sets the remote end point. | [optional] 
-**PlayableMediaTypes** | Pointer to **[]string** | Gets the playable media types. | [optional] [readonly] 
+**PlayableMediaTypes** | Pointer to [**[]MediaType**](MediaType.md) | Gets the playable media types. | [optional] [readonly] 
 **Id** | Pointer to **NullableString** | Gets or sets the id. | [optional] 
 **UserId** | Pointer to **string** | Gets or sets the user id. | [optional] 
 **UserName** | Pointer to **NullableString** | Gets or sets the username. | [optional] 
 **Client** | Pointer to **NullableString** | Gets or sets the type of the client. | [optional] 
 **LastActivityDate** | Pointer to **time.Time** | Gets or sets the last activity date. | [optional] 
 **LastPlaybackCheckIn** | Pointer to **time.Time** | Gets or sets the last playback check in. | [optional] 
+**LastPausedDate** | Pointer to **NullableTime** | Gets or sets the last paused date. | [optional] 
 **DeviceName** | Pointer to **NullableString** | Gets or sets the name of the device. | [optional] 
 **DeviceType** | Pointer to **NullableString** | Gets or sets the type of the device. | [optional] 
 **NowPlayingItem** | Pointer to [**NullableSessionInfoNowPlayingItem**](SessionInfoNowPlayingItem.md) |  | [optional] 
-**FullNowPlayingItem** | Pointer to [**NullableSessionInfoFullNowPlayingItem**](SessionInfoFullNowPlayingItem.md) |  | [optional] 
-**NowViewingItem** | Pointer to [**NullableSessionInfoNowViewingItem**](SessionInfoNowViewingItem.md) |  | [optional] 
+**NowViewingItem** | Pointer to [**NullableSessionInfoNowPlayingItem**](SessionInfoNowPlayingItem.md) |  | [optional] 
 **DeviceId** | Pointer to **NullableString** | Gets or sets the device id. | [optional] 
 **ApplicationVersion** | Pointer to **NullableString** | Gets or sets the application version. | [optional] 
 **TranscodingInfo** | Pointer to [**NullableTranscodingInfo**](TranscodingInfo.md) |  | [optional] 
@@ -195,20 +195,20 @@ HasRemoteEndPoint returns a boolean if a field has been set.
 UnsetRemoteEndPoint ensures that no value is present for RemoteEndPoint, not even an explicit nil
 ### GetPlayableMediaTypes
 
-`func (o *AuthenticationResultSessionInfo) GetPlayableMediaTypes() []string`
+`func (o *AuthenticationResultSessionInfo) GetPlayableMediaTypes() []MediaType`
 
 GetPlayableMediaTypes returns the PlayableMediaTypes field if non-nil, zero value otherwise.
 
 ### GetPlayableMediaTypesOk
 
-`func (o *AuthenticationResultSessionInfo) GetPlayableMediaTypesOk() (*[]string, bool)`
+`func (o *AuthenticationResultSessionInfo) GetPlayableMediaTypesOk() (*[]MediaType, bool)`
 
 GetPlayableMediaTypesOk returns a tuple with the PlayableMediaTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlayableMediaTypes
 
-`func (o *AuthenticationResultSessionInfo) SetPlayableMediaTypes(v []string)`
+`func (o *AuthenticationResultSessionInfo) SetPlayableMediaTypes(v []MediaType)`
 
 SetPlayableMediaTypes sets PlayableMediaTypes field to given value.
 
@@ -408,6 +408,41 @@ SetLastPlaybackCheckIn sets LastPlaybackCheckIn field to given value.
 
 HasLastPlaybackCheckIn returns a boolean if a field has been set.
 
+### GetLastPausedDate
+
+`func (o *AuthenticationResultSessionInfo) GetLastPausedDate() time.Time`
+
+GetLastPausedDate returns the LastPausedDate field if non-nil, zero value otherwise.
+
+### GetLastPausedDateOk
+
+`func (o *AuthenticationResultSessionInfo) GetLastPausedDateOk() (*time.Time, bool)`
+
+GetLastPausedDateOk returns a tuple with the LastPausedDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastPausedDate
+
+`func (o *AuthenticationResultSessionInfo) SetLastPausedDate(v time.Time)`
+
+SetLastPausedDate sets LastPausedDate field to given value.
+
+### HasLastPausedDate
+
+`func (o *AuthenticationResultSessionInfo) HasLastPausedDate() bool`
+
+HasLastPausedDate returns a boolean if a field has been set.
+
+### SetLastPausedDateNil
+
+`func (o *AuthenticationResultSessionInfo) SetLastPausedDateNil(b bool)`
+
+ SetLastPausedDateNil sets the value for LastPausedDate to be an explicit nil
+
+### UnsetLastPausedDate
+`func (o *AuthenticationResultSessionInfo) UnsetLastPausedDate()`
+
+UnsetLastPausedDate ensures that no value is present for LastPausedDate, not even an explicit nil
 ### GetDeviceName
 
 `func (o *AuthenticationResultSessionInfo) GetDeviceName() string`
@@ -513,57 +548,22 @@ HasNowPlayingItem returns a boolean if a field has been set.
 `func (o *AuthenticationResultSessionInfo) UnsetNowPlayingItem()`
 
 UnsetNowPlayingItem ensures that no value is present for NowPlayingItem, not even an explicit nil
-### GetFullNowPlayingItem
-
-`func (o *AuthenticationResultSessionInfo) GetFullNowPlayingItem() SessionInfoFullNowPlayingItem`
-
-GetFullNowPlayingItem returns the FullNowPlayingItem field if non-nil, zero value otherwise.
-
-### GetFullNowPlayingItemOk
-
-`func (o *AuthenticationResultSessionInfo) GetFullNowPlayingItemOk() (*SessionInfoFullNowPlayingItem, bool)`
-
-GetFullNowPlayingItemOk returns a tuple with the FullNowPlayingItem field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFullNowPlayingItem
-
-`func (o *AuthenticationResultSessionInfo) SetFullNowPlayingItem(v SessionInfoFullNowPlayingItem)`
-
-SetFullNowPlayingItem sets FullNowPlayingItem field to given value.
-
-### HasFullNowPlayingItem
-
-`func (o *AuthenticationResultSessionInfo) HasFullNowPlayingItem() bool`
-
-HasFullNowPlayingItem returns a boolean if a field has been set.
-
-### SetFullNowPlayingItemNil
-
-`func (o *AuthenticationResultSessionInfo) SetFullNowPlayingItemNil(b bool)`
-
- SetFullNowPlayingItemNil sets the value for FullNowPlayingItem to be an explicit nil
-
-### UnsetFullNowPlayingItem
-`func (o *AuthenticationResultSessionInfo) UnsetFullNowPlayingItem()`
-
-UnsetFullNowPlayingItem ensures that no value is present for FullNowPlayingItem, not even an explicit nil
 ### GetNowViewingItem
 
-`func (o *AuthenticationResultSessionInfo) GetNowViewingItem() SessionInfoNowViewingItem`
+`func (o *AuthenticationResultSessionInfo) GetNowViewingItem() SessionInfoNowPlayingItem`
 
 GetNowViewingItem returns the NowViewingItem field if non-nil, zero value otherwise.
 
 ### GetNowViewingItemOk
 
-`func (o *AuthenticationResultSessionInfo) GetNowViewingItemOk() (*SessionInfoNowViewingItem, bool)`
+`func (o *AuthenticationResultSessionInfo) GetNowViewingItemOk() (*SessionInfoNowPlayingItem, bool)`
 
 GetNowViewingItemOk returns a tuple with the NowViewingItem field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNowViewingItem
 
-`func (o *AuthenticationResultSessionInfo) SetNowViewingItem(v SessionInfoNowViewingItem)`
+`func (o *AuthenticationResultSessionInfo) SetNowViewingItem(v SessionInfoNowPlayingItem)`
 
 SetNowViewingItem sets NowViewingItem field to given value.
 

@@ -158,7 +158,7 @@ import (
 
 func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The item id.
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

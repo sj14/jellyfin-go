@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChannelIds** | Pointer to **[]string** | Gets or sets the channels to return guide information for. | [optional] 
-**UserId** | Pointer to **string** | Gets or sets optional. Filter by user id. | [optional] 
+**UserId** | Pointer to **NullableString** | Gets or sets optional. Filter by user id. | [optional] 
 **MinStartDate** | Pointer to **NullableTime** | Gets or sets the minimum premiere start date.  Optional. | [optional] 
 **HasAired** | Pointer to **NullableBool** | Gets or sets filter by programs that have completed airing, or not.  Optional. | [optional] 
 **IsAiring** | Pointer to **NullableBool** | Gets or sets filter by programs that are currently airing, or not.  Optional. | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **IsSports** | Pointer to **NullableBool** | Gets or sets filter for sports.  Optional. | [optional] 
 **StartIndex** | Pointer to **NullableInt32** | Gets or sets the record index to start at. All items with a lower index will be dropped from the results.  Optional. | [optional] 
 **Limit** | Pointer to **NullableInt32** | Gets or sets the maximum number of records to return.  Optional. | [optional] 
-**SortBy** | Pointer to **[]string** | Gets or sets specify one or more sort orders, comma delimited. Options: Name, StartDate.  Optional. | [optional] 
+**SortBy** | Pointer to [**[]ItemSortBy**](ItemSortBy.md) | Gets or sets specify one or more sort orders, comma delimited. Options: Name, StartDate.  Optional. | [optional] 
 **SortOrder** | Pointer to [**[]SortOrder**](SortOrder.md) | Gets or sets sort Order - Ascending,Descending. | [optional] 
 **Genres** | Pointer to **[]string** | Gets or sets the genres to return guide information for. | [optional] 
 **GenreIds** | Pointer to **[]string** | Gets or sets the genre ids to return guide information for. | [optional] 
@@ -101,6 +101,16 @@ SetUserId sets UserId field to given value.
 
 HasUserId returns a boolean if a field has been set.
 
+### SetUserIdNil
+
+`func (o *GetProgramsDto) SetUserIdNil(b bool)`
+
+ SetUserIdNil sets the value for UserId to be an explicit nil
+
+### UnsetUserId
+`func (o *GetProgramsDto) UnsetUserId()`
+
+UnsetUserId ensures that no value is present for UserId, not even an explicit nil
 ### GetMinStartDate
 
 `func (o *GetProgramsDto) GetMinStartDate() time.Time`
@@ -558,20 +568,20 @@ HasLimit returns a boolean if a field has been set.
 UnsetLimit ensures that no value is present for Limit, not even an explicit nil
 ### GetSortBy
 
-`func (o *GetProgramsDto) GetSortBy() []string`
+`func (o *GetProgramsDto) GetSortBy() []ItemSortBy`
 
 GetSortBy returns the SortBy field if non-nil, zero value otherwise.
 
 ### GetSortByOk
 
-`func (o *GetProgramsDto) GetSortByOk() (*[]string, bool)`
+`func (o *GetProgramsDto) GetSortByOk() (*[]ItemSortBy, bool)`
 
 GetSortByOk returns a tuple with the SortBy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSortBy
 
-`func (o *GetProgramsDto) SetSortBy(v []string)`
+`func (o *GetProgramsDto) SetSortBy(v []ItemSortBy)`
 
 SetSortBy sets SortBy field to given value.
 

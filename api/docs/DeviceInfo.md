@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **NullableString** |  | [optional] 
+**CustomName** | Pointer to **NullableString** |  | [optional] 
 **AccessToken** | Pointer to **NullableString** | Gets or sets the access token. | [optional] 
 **Id** | Pointer to **NullableString** | Gets or sets the identifier. | [optional] 
 **LastUserName** | Pointer to **NullableString** | Gets or sets the last name of the user. | [optional] 
@@ -69,6 +70,41 @@ HasName returns a boolean if a field has been set.
 `func (o *DeviceInfo) UnsetName()`
 
 UnsetName ensures that no value is present for Name, not even an explicit nil
+### GetCustomName
+
+`func (o *DeviceInfo) GetCustomName() string`
+
+GetCustomName returns the CustomName field if non-nil, zero value otherwise.
+
+### GetCustomNameOk
+
+`func (o *DeviceInfo) GetCustomNameOk() (*string, bool)`
+
+GetCustomNameOk returns a tuple with the CustomName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomName
+
+`func (o *DeviceInfo) SetCustomName(v string)`
+
+SetCustomName sets CustomName field to given value.
+
+### HasCustomName
+
+`func (o *DeviceInfo) HasCustomName() bool`
+
+HasCustomName returns a boolean if a field has been set.
+
+### SetCustomNameNil
+
+`func (o *DeviceInfo) SetCustomNameNil(b bool)`
+
+ SetCustomNameNil sets the value for CustomName to be an explicit nil
+
+### UnsetCustomName
+`func (o *DeviceInfo) UnsetCustomName()`
+
+UnsetCustomName ensures that no value is present for CustomName, not even an explicit nil
 ### GetAccessToken
 
 `func (o *DeviceInfo) GetAccessToken() string`

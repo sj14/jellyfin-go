@@ -4,44 +4,50 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EncodingThreadCount** | Pointer to **int32** |  | [optional] 
-**TranscodingTempPath** | Pointer to **NullableString** |  | [optional] 
-**FallbackFontPath** | Pointer to **NullableString** |  | [optional] 
-**EnableFallbackFont** | Pointer to **bool** |  | [optional] 
-**DownMixAudioBoost** | Pointer to **float64** |  | [optional] 
-**MaxMuxingQueueSize** | Pointer to **int32** |  | [optional] 
-**EnableThrottling** | Pointer to **bool** |  | [optional] 
-**ThrottleDelaySeconds** | Pointer to **int32** |  | [optional] 
-**HardwareAccelerationType** | Pointer to **NullableString** |  | [optional] 
+**EncodingThreadCount** | Pointer to **int32** | Gets or sets the thread count used for encoding. | [optional] 
+**TranscodingTempPath** | Pointer to **NullableString** | Gets or sets the temporary transcoding path. | [optional] 
+**FallbackFontPath** | Pointer to **NullableString** | Gets or sets the path to the fallback font. | [optional] 
+**EnableFallbackFont** | Pointer to **bool** | Gets or sets a value indicating whether to use the fallback font. | [optional] 
+**EnableAudioVbr** | Pointer to **bool** | Gets or sets a value indicating whether audio VBR is enabled. | [optional] 
+**DownMixAudioBoost** | Pointer to **float64** | Gets or sets the audio boost applied when downmixing audio. | [optional] 
+**DownMixStereoAlgorithm** | Pointer to [**DownMixStereoAlgorithms**](DownMixStereoAlgorithms.md) | Gets or sets the algorithm used for downmixing audio to stereo. | [optional] 
+**MaxMuxingQueueSize** | Pointer to **int32** | Gets or sets the maximum size of the muxing queue. | [optional] 
+**EnableThrottling** | Pointer to **bool** | Gets or sets a value indicating whether throttling is enabled. | [optional] 
+**ThrottleDelaySeconds** | Pointer to **int32** | Gets or sets the delay after which throttling happens. | [optional] 
+**EnableSegmentDeletion** | Pointer to **bool** | Gets or sets a value indicating whether segment deletion is enabled. | [optional] 
+**SegmentKeepSeconds** | Pointer to **int32** | Gets or sets seconds for which segments should be kept before being deleted. | [optional] 
+**HardwareAccelerationType** | Pointer to **NullableString** | Gets or sets the hardware acceleration type. | [optional] 
 **EncoderAppPath** | Pointer to **NullableString** | Gets or sets the FFmpeg path as set by the user via the UI. | [optional] 
 **EncoderAppPathDisplay** | Pointer to **NullableString** | Gets or sets the current FFmpeg path being used by the system and displayed on the transcode page. | [optional] 
-**VaapiDevice** | Pointer to **NullableString** |  | [optional] 
-**EnableTonemapping** | Pointer to **bool** |  | [optional] 
-**EnableVppTonemapping** | Pointer to **bool** |  | [optional] 
-**TonemappingAlgorithm** | Pointer to **NullableString** |  | [optional] 
-**TonemappingMode** | Pointer to **NullableString** |  | [optional] 
-**TonemappingRange** | Pointer to **NullableString** |  | [optional] 
-**TonemappingDesat** | Pointer to **float64** |  | [optional] 
-**TonemappingPeak** | Pointer to **float64** |  | [optional] 
-**TonemappingParam** | Pointer to **float64** |  | [optional] 
-**VppTonemappingBrightness** | Pointer to **float64** |  | [optional] 
-**VppTonemappingContrast** | Pointer to **float64** |  | [optional] 
-**H264Crf** | Pointer to **int32** |  | [optional] 
-**H265Crf** | Pointer to **int32** |  | [optional] 
-**EncoderPreset** | Pointer to **NullableString** |  | [optional] 
-**DeinterlaceDoubleRate** | Pointer to **bool** |  | [optional] 
-**DeinterlaceMethod** | Pointer to **NullableString** |  | [optional] 
-**EnableDecodingColorDepth10Hevc** | Pointer to **bool** |  | [optional] 
-**EnableDecodingColorDepth10Vp9** | Pointer to **bool** |  | [optional] 
-**EnableEnhancedNvdecDecoder** | Pointer to **bool** |  | [optional] 
-**PreferSystemNativeHwDecoder** | Pointer to **bool** |  | [optional] 
-**EnableIntelLowPowerH264HwEncoder** | Pointer to **bool** |  | [optional] 
-**EnableIntelLowPowerHevcHwEncoder** | Pointer to **bool** |  | [optional] 
-**EnableHardwareEncoding** | Pointer to **bool** |  | [optional] 
-**AllowHevcEncoding** | Pointer to **bool** |  | [optional] 
-**EnableSubtitleExtraction** | Pointer to **bool** |  | [optional] 
-**HardwareDecodingCodecs** | Pointer to **[]string** |  | [optional] 
-**AllowOnDemandMetadataBasedKeyframeExtractionForExtensions** | Pointer to **[]string** |  | [optional] 
+**VaapiDevice** | Pointer to **NullableString** | Gets or sets the VA-API device. | [optional] 
+**EnableTonemapping** | Pointer to **bool** | Gets or sets a value indicating whether tonemapping is enabled. | [optional] 
+**EnableVppTonemapping** | Pointer to **bool** | Gets or sets a value indicating whether VPP tonemapping is enabled. | [optional] 
+**EnableVideoToolboxTonemapping** | Pointer to **bool** | Gets or sets a value indicating whether videotoolbox tonemapping is enabled. | [optional] 
+**TonemappingAlgorithm** | Pointer to **NullableString** | Gets or sets the tone-mapping algorithm. | [optional] 
+**TonemappingMode** | Pointer to **NullableString** | Gets or sets the tone-mapping mode. | [optional] 
+**TonemappingRange** | Pointer to **NullableString** | Gets or sets the tone-mapping range. | [optional] 
+**TonemappingDesat** | Pointer to **float64** | Gets or sets the tone-mapping desaturation. | [optional] 
+**TonemappingPeak** | Pointer to **float64** | Gets or sets the tone-mapping peak. | [optional] 
+**TonemappingParam** | Pointer to **float64** | Gets or sets the tone-mapping parameters. | [optional] 
+**VppTonemappingBrightness** | Pointer to **float64** | Gets or sets the VPP tone-mapping brightness. | [optional] 
+**VppTonemappingContrast** | Pointer to **float64** | Gets or sets the VPP tone-mapping contrast. | [optional] 
+**H264Crf** | Pointer to **int32** | Gets or sets the H264 CRF. | [optional] 
+**H265Crf** | Pointer to **int32** | Gets or sets the H265 CRF. | [optional] 
+**EncoderPreset** | Pointer to **NullableString** | Gets or sets the encoder preset. | [optional] 
+**DeinterlaceDoubleRate** | Pointer to **bool** | Gets or sets a value indicating whether the framerate is doubled when deinterlacing. | [optional] 
+**DeinterlaceMethod** | Pointer to **NullableString** | Gets or sets the deinterlace method. | [optional] 
+**EnableDecodingColorDepth10Hevc** | Pointer to **bool** | Gets or sets a value indicating whether 10bit HEVC decoding is enabled. | [optional] 
+**EnableDecodingColorDepth10Vp9** | Pointer to **bool** | Gets or sets a value indicating whether 10bit VP9 decoding is enabled. | [optional] 
+**EnableEnhancedNvdecDecoder** | Pointer to **bool** | Gets or sets a value indicating whether the enhanced NVDEC is enabled. | [optional] 
+**PreferSystemNativeHwDecoder** | Pointer to **bool** | Gets or sets a value indicating whether the system native hardware decoder should be used. | [optional] 
+**EnableIntelLowPowerH264HwEncoder** | Pointer to **bool** | Gets or sets a value indicating whether the Intel H264 low-power hardware encoder should be used. | [optional] 
+**EnableIntelLowPowerHevcHwEncoder** | Pointer to **bool** | Gets or sets a value indicating whether the Intel HEVC low-power hardware encoder should be used. | [optional] 
+**EnableHardwareEncoding** | Pointer to **bool** | Gets or sets a value indicating whether hardware encoding is enabled. | [optional] 
+**AllowHevcEncoding** | Pointer to **bool** | Gets or sets a value indicating whether HEVC encoding is enabled. | [optional] 
+**AllowAv1Encoding** | Pointer to **bool** | Gets or sets a value indicating whether AV1 encoding is enabled. | [optional] 
+**EnableSubtitleExtraction** | Pointer to **bool** | Gets or sets a value indicating whether subtitle extraction is enabled. | [optional] 
+**HardwareDecodingCodecs** | Pointer to **[]string** | Gets or sets the codecs hardware encoding is used for. | [optional] 
+**AllowOnDemandMetadataBasedKeyframeExtractionForExtensions** | Pointer to **[]string** | Gets or sets the file extensions on-demand metadata based keyframe extraction is enabled for. | [optional] 
 
 ## Methods
 
@@ -182,6 +188,31 @@ SetEnableFallbackFont sets EnableFallbackFont field to given value.
 
 HasEnableFallbackFont returns a boolean if a field has been set.
 
+### GetEnableAudioVbr
+
+`func (o *EncodingOptions) GetEnableAudioVbr() bool`
+
+GetEnableAudioVbr returns the EnableAudioVbr field if non-nil, zero value otherwise.
+
+### GetEnableAudioVbrOk
+
+`func (o *EncodingOptions) GetEnableAudioVbrOk() (*bool, bool)`
+
+GetEnableAudioVbrOk returns a tuple with the EnableAudioVbr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableAudioVbr
+
+`func (o *EncodingOptions) SetEnableAudioVbr(v bool)`
+
+SetEnableAudioVbr sets EnableAudioVbr field to given value.
+
+### HasEnableAudioVbr
+
+`func (o *EncodingOptions) HasEnableAudioVbr() bool`
+
+HasEnableAudioVbr returns a boolean if a field has been set.
+
 ### GetDownMixAudioBoost
 
 `func (o *EncodingOptions) GetDownMixAudioBoost() float64`
@@ -206,6 +237,31 @@ SetDownMixAudioBoost sets DownMixAudioBoost field to given value.
 `func (o *EncodingOptions) HasDownMixAudioBoost() bool`
 
 HasDownMixAudioBoost returns a boolean if a field has been set.
+
+### GetDownMixStereoAlgorithm
+
+`func (o *EncodingOptions) GetDownMixStereoAlgorithm() DownMixStereoAlgorithms`
+
+GetDownMixStereoAlgorithm returns the DownMixStereoAlgorithm field if non-nil, zero value otherwise.
+
+### GetDownMixStereoAlgorithmOk
+
+`func (o *EncodingOptions) GetDownMixStereoAlgorithmOk() (*DownMixStereoAlgorithms, bool)`
+
+GetDownMixStereoAlgorithmOk returns a tuple with the DownMixStereoAlgorithm field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownMixStereoAlgorithm
+
+`func (o *EncodingOptions) SetDownMixStereoAlgorithm(v DownMixStereoAlgorithms)`
+
+SetDownMixStereoAlgorithm sets DownMixStereoAlgorithm field to given value.
+
+### HasDownMixStereoAlgorithm
+
+`func (o *EncodingOptions) HasDownMixStereoAlgorithm() bool`
+
+HasDownMixStereoAlgorithm returns a boolean if a field has been set.
 
 ### GetMaxMuxingQueueSize
 
@@ -281,6 +337,56 @@ SetThrottleDelaySeconds sets ThrottleDelaySeconds field to given value.
 `func (o *EncodingOptions) HasThrottleDelaySeconds() bool`
 
 HasThrottleDelaySeconds returns a boolean if a field has been set.
+
+### GetEnableSegmentDeletion
+
+`func (o *EncodingOptions) GetEnableSegmentDeletion() bool`
+
+GetEnableSegmentDeletion returns the EnableSegmentDeletion field if non-nil, zero value otherwise.
+
+### GetEnableSegmentDeletionOk
+
+`func (o *EncodingOptions) GetEnableSegmentDeletionOk() (*bool, bool)`
+
+GetEnableSegmentDeletionOk returns a tuple with the EnableSegmentDeletion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableSegmentDeletion
+
+`func (o *EncodingOptions) SetEnableSegmentDeletion(v bool)`
+
+SetEnableSegmentDeletion sets EnableSegmentDeletion field to given value.
+
+### HasEnableSegmentDeletion
+
+`func (o *EncodingOptions) HasEnableSegmentDeletion() bool`
+
+HasEnableSegmentDeletion returns a boolean if a field has been set.
+
+### GetSegmentKeepSeconds
+
+`func (o *EncodingOptions) GetSegmentKeepSeconds() int32`
+
+GetSegmentKeepSeconds returns the SegmentKeepSeconds field if non-nil, zero value otherwise.
+
+### GetSegmentKeepSecondsOk
+
+`func (o *EncodingOptions) GetSegmentKeepSecondsOk() (*int32, bool)`
+
+GetSegmentKeepSecondsOk returns a tuple with the SegmentKeepSeconds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSegmentKeepSeconds
+
+`func (o *EncodingOptions) SetSegmentKeepSeconds(v int32)`
+
+SetSegmentKeepSeconds sets SegmentKeepSeconds field to given value.
+
+### HasSegmentKeepSeconds
+
+`func (o *EncodingOptions) HasSegmentKeepSeconds() bool`
+
+HasSegmentKeepSeconds returns a boolean if a field has been set.
 
 ### GetHardwareAccelerationType
 
@@ -471,6 +577,31 @@ SetEnableVppTonemapping sets EnableVppTonemapping field to given value.
 `func (o *EncodingOptions) HasEnableVppTonemapping() bool`
 
 HasEnableVppTonemapping returns a boolean if a field has been set.
+
+### GetEnableVideoToolboxTonemapping
+
+`func (o *EncodingOptions) GetEnableVideoToolboxTonemapping() bool`
+
+GetEnableVideoToolboxTonemapping returns the EnableVideoToolboxTonemapping field if non-nil, zero value otherwise.
+
+### GetEnableVideoToolboxTonemappingOk
+
+`func (o *EncodingOptions) GetEnableVideoToolboxTonemappingOk() (*bool, bool)`
+
+GetEnableVideoToolboxTonemappingOk returns a tuple with the EnableVideoToolboxTonemapping field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableVideoToolboxTonemapping
+
+`func (o *EncodingOptions) SetEnableVideoToolboxTonemapping(v bool)`
+
+SetEnableVideoToolboxTonemapping sets EnableVideoToolboxTonemapping field to given value.
+
+### HasEnableVideoToolboxTonemapping
+
+`func (o *EncodingOptions) HasEnableVideoToolboxTonemapping() bool`
+
+HasEnableVideoToolboxTonemapping returns a boolean if a field has been set.
 
 ### GetTonemappingAlgorithm
 
@@ -1046,6 +1177,31 @@ SetAllowHevcEncoding sets AllowHevcEncoding field to given value.
 `func (o *EncodingOptions) HasAllowHevcEncoding() bool`
 
 HasAllowHevcEncoding returns a boolean if a field has been set.
+
+### GetAllowAv1Encoding
+
+`func (o *EncodingOptions) GetAllowAv1Encoding() bool`
+
+GetAllowAv1Encoding returns the AllowAv1Encoding field if non-nil, zero value otherwise.
+
+### GetAllowAv1EncodingOk
+
+`func (o *EncodingOptions) GetAllowAv1EncodingOk() (*bool, bool)`
+
+GetAllowAv1EncodingOk returns a tuple with the AllowAv1Encoding field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowAv1Encoding
+
+`func (o *EncodingOptions) SetAllowAv1Encoding(v bool)`
+
+SetAllowAv1Encoding sets AllowAv1Encoding field to given value.
+
+### HasAllowAv1Encoding
+
+`func (o *EncodingOptions) HasAllowAv1Encoding() bool`
+
+HasAllowAv1Encoding returns a boolean if a field has been set.
 
 ### GetEnableSubtitleExtraction
 

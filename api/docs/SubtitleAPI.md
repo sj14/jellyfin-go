@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**DownloadRemoteSubtitles**](SubtitleAPI.md#DownloadRemoteSubtitles) | **Post** /Items/{itemId}/RemoteSearch/Subtitles/{subtitleId} | Downloads a remote subtitle.
 [**GetFallbackFont**](SubtitleAPI.md#GetFallbackFont) | **Get** /FallbackFont/Fonts/{name} | Gets a fallback font file.
 [**GetFallbackFontList**](SubtitleAPI.md#GetFallbackFontList) | **Get** /FallbackFont/Fonts | Gets a list of available fallback font files.
-[**GetRemoteSubtitles**](SubtitleAPI.md#GetRemoteSubtitles) | **Get** /Providers/Subtitles/Subtitles/{id} | Gets the remote subtitles.
+[**GetRemoteSubtitles**](SubtitleAPI.md#GetRemoteSubtitles) | **Get** /Providers/Subtitles/Subtitles/{subtitleId} | Gets the remote subtitles.
 [**GetSubtitle**](SubtitleAPI.md#GetSubtitle) | **Get** /Videos/{routeItemId}/{routeMediaSourceId}/Subtitles/{routeIndex}/Stream.{routeFormat} | Gets subtitles in a specified format.
 [**GetSubtitlePlaylist**](SubtitleAPI.md#GetSubtitlePlaylist) | **Get** /Videos/{itemId}/{mediaSourceId}/Subtitles/{index}/subtitles.m3u8 | Gets an HLS subtitle playlist.
 [**GetSubtitleWithTicks**](SubtitleAPI.md#GetSubtitleWithTicks) | **Get** /Videos/{routeItemId}/{routeMediaSourceId}/Subtitles/{routeIndex}/{routeStartPositionTicks}/Stream.{routeFormat} | Gets subtitles in a specified format.
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -284,7 +284,7 @@ Other parameters are passed through a pointer to a apiGetFallbackFontListRequest
 
 ## GetRemoteSubtitles
 
-> *os.File GetRemoteSubtitles(ctx, id).Execute()
+> *os.File GetRemoteSubtitles(ctx, subtitleId).Execute()
 
 Gets the remote subtitles.
 
@@ -301,11 +301,11 @@ import (
 )
 
 func main() {
-	id := "id_example" // string | The item id.
+	subtitleId := "subtitleId_example" // string | The item id.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SubtitleAPI.GetRemoteSubtitles(context.Background(), id).Execute()
+	resp, r, err := apiClient.SubtitleAPI.GetRemoteSubtitles(context.Background(), subtitleId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SubtitleAPI.GetRemoteSubtitles``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -321,7 +321,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** | The item id. | 
+**subtitleId** | **string** | The item id. | 
 
 ### Other Parameters
 
@@ -512,7 +512,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/x-mpegURL
+- **Accept**: application/x-mpegURL, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -708,7 +708,7 @@ import (
 
 func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The item the subtitle belongs to.
-	uploadSubtitleDto := *openapiclient.NewUploadSubtitleDto("Language_example", "Format_example", false, "Data_example") // UploadSubtitleDto | The request body.
+	uploadSubtitleDto := *openapiclient.NewUploadSubtitleDto("Language_example", "Format_example", false, false, "Data_example") // UploadSubtitleDto | The request body.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

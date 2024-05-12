@@ -112,7 +112,7 @@ func main() {
 	nameStartsWithOrGreater := "nameStartsWithOrGreater_example" // string | Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
 	nameStartsWith := "nameStartsWith_example" // string | Optional filter by items whose name is sorted equally than a given input string. (optional)
 	nameLessThan := "nameLessThan_example" // string | Optional filter by items whose name is equally or lesser than a given input string. (optional)
-	sortBy := []string{"Inner_example"} // []string | Optional. Specify one or more sort orders, comma delimited. (optional)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Specify one or more sort orders, comma delimited. (optional)
 	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Sort Order - Ascending,Descending. (optional)
 	enableImages := true // bool | Optional, include image information in output. (optional) (default to true)
 	enableTotalRecordCount := true // bool | Optional. Include total record count. (optional) (default to true)
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
  **nameStartsWithOrGreater** | **string** | Optional filter by items whose name is sorted equally or greater than a given input string. | 
  **nameStartsWith** | **string** | Optional filter by items whose name is sorted equally than a given input string. | 
  **nameLessThan** | **string** | Optional filter by items whose name is equally or lesser than a given input string. | 
- **sortBy** | **[]string** | Optional. Specify one or more sort orders, comma delimited. | 
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Specify one or more sort orders, comma delimited. | 
  **sortOrder** | [**[]SortOrder**](SortOrder.md) | Sort Order - Ascending,Descending. | 
  **enableImages** | **bool** | Optional, include image information in output. | [default to true]
  **enableTotalRecordCount** | **bool** | Optional. Include total record count. | [default to true]

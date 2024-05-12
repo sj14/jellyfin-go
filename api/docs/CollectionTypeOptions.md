@@ -3,21 +3,21 @@
 ## Enum
 
 
-* `MOVIES` (value: `"Movies"`)
+* `MOVIES` (value: `"movies"`)
 
-* `TV_SHOWS` (value: `"TvShows"`)
+* `TVSHOWS` (value: `"tvshows"`)
 
-* `MUSIC` (value: `"Music"`)
+* `MUSIC` (value: `"music"`)
 
-* `MUSIC_VIDEOS` (value: `"MusicVideos"`)
+* `MUSICVIDEOS` (value: `"musicvideos"`)
 
-* `HOME_VIDEOS` (value: `"HomeVideos"`)
+* `HOMEVIDEOS` (value: `"homevideos"`)
 
-* `BOX_SETS` (value: `"BoxSets"`)
+* `BOXSETS` (value: `"boxsets"`)
 
-* `BOOKS` (value: `"Books"`)
+* `BOOKS` (value: `"books"`)
 
-* `MIXED` (value: `"Mixed"`)
+* `MIXED` (value: `"mixed"`)
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

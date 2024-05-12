@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PlayableMediaTypes** | Pointer to **[]string** | Gets or sets the list of playable media types. | [optional] 
+**PlayableMediaTypes** | Pointer to [**[]MediaType**](MediaType.md) | Gets or sets the list of playable media types. | [optional] 
 **SupportedCommands** | Pointer to [**[]GeneralCommandType**](GeneralCommandType.md) | Gets or sets the list of supported commands. | [optional] 
 **SupportsMediaControl** | Pointer to **bool** | Gets or sets a value indicating whether session supports media control. | [optional] 
-**SupportsContentUploading** | Pointer to **bool** | Gets or sets a value indicating whether session supports content uploading. | [optional] 
-**MessageCallbackUrl** | Pointer to **NullableString** | Gets or sets the message callback url. | [optional] 
 **SupportsPersistentIdentifier** | Pointer to **bool** | Gets or sets a value indicating whether session supports a persistent identifier. | [optional] 
-**SupportsSync** | Pointer to **bool** | Gets or sets a value indicating whether session supports sync. | [optional] 
 **DeviceProfile** | Pointer to [**NullableClientCapabilitiesDeviceProfile**](ClientCapabilitiesDeviceProfile.md) |  | [optional] 
 **AppStoreUrl** | Pointer to **NullableString** | Gets or sets the app store url. | [optional] 
 **IconUrl** | Pointer to **NullableString** | Gets or sets the icon url. | [optional] 
+**SupportsContentUploading** | Pointer to **NullableBool** |  | [optional] [default to false]
+**SupportsSync** | Pointer to **NullableBool** |  | [optional] [default to false]
 
 ## Methods
 
@@ -36,20 +35,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPlayableMediaTypes
 
-`func (o *ClientCapabilitiesDto) GetPlayableMediaTypes() []string`
+`func (o *ClientCapabilitiesDto) GetPlayableMediaTypes() []MediaType`
 
 GetPlayableMediaTypes returns the PlayableMediaTypes field if non-nil, zero value otherwise.
 
 ### GetPlayableMediaTypesOk
 
-`func (o *ClientCapabilitiesDto) GetPlayableMediaTypesOk() (*[]string, bool)`
+`func (o *ClientCapabilitiesDto) GetPlayableMediaTypesOk() (*[]MediaType, bool)`
 
 GetPlayableMediaTypesOk returns a tuple with the PlayableMediaTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlayableMediaTypes
 
-`func (o *ClientCapabilitiesDto) SetPlayableMediaTypes(v []string)`
+`func (o *ClientCapabilitiesDto) SetPlayableMediaTypes(v []MediaType)`
 
 SetPlayableMediaTypes sets PlayableMediaTypes field to given value.
 
@@ -109,66 +108,6 @@ SetSupportsMediaControl sets SupportsMediaControl field to given value.
 
 HasSupportsMediaControl returns a boolean if a field has been set.
 
-### GetSupportsContentUploading
-
-`func (o *ClientCapabilitiesDto) GetSupportsContentUploading() bool`
-
-GetSupportsContentUploading returns the SupportsContentUploading field if non-nil, zero value otherwise.
-
-### GetSupportsContentUploadingOk
-
-`func (o *ClientCapabilitiesDto) GetSupportsContentUploadingOk() (*bool, bool)`
-
-GetSupportsContentUploadingOk returns a tuple with the SupportsContentUploading field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSupportsContentUploading
-
-`func (o *ClientCapabilitiesDto) SetSupportsContentUploading(v bool)`
-
-SetSupportsContentUploading sets SupportsContentUploading field to given value.
-
-### HasSupportsContentUploading
-
-`func (o *ClientCapabilitiesDto) HasSupportsContentUploading() bool`
-
-HasSupportsContentUploading returns a boolean if a field has been set.
-
-### GetMessageCallbackUrl
-
-`func (o *ClientCapabilitiesDto) GetMessageCallbackUrl() string`
-
-GetMessageCallbackUrl returns the MessageCallbackUrl field if non-nil, zero value otherwise.
-
-### GetMessageCallbackUrlOk
-
-`func (o *ClientCapabilitiesDto) GetMessageCallbackUrlOk() (*string, bool)`
-
-GetMessageCallbackUrlOk returns a tuple with the MessageCallbackUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMessageCallbackUrl
-
-`func (o *ClientCapabilitiesDto) SetMessageCallbackUrl(v string)`
-
-SetMessageCallbackUrl sets MessageCallbackUrl field to given value.
-
-### HasMessageCallbackUrl
-
-`func (o *ClientCapabilitiesDto) HasMessageCallbackUrl() bool`
-
-HasMessageCallbackUrl returns a boolean if a field has been set.
-
-### SetMessageCallbackUrlNil
-
-`func (o *ClientCapabilitiesDto) SetMessageCallbackUrlNil(b bool)`
-
- SetMessageCallbackUrlNil sets the value for MessageCallbackUrl to be an explicit nil
-
-### UnsetMessageCallbackUrl
-`func (o *ClientCapabilitiesDto) UnsetMessageCallbackUrl()`
-
-UnsetMessageCallbackUrl ensures that no value is present for MessageCallbackUrl, not even an explicit nil
 ### GetSupportsPersistentIdentifier
 
 `func (o *ClientCapabilitiesDto) GetSupportsPersistentIdentifier() bool`
@@ -193,31 +132,6 @@ SetSupportsPersistentIdentifier sets SupportsPersistentIdentifier field to given
 `func (o *ClientCapabilitiesDto) HasSupportsPersistentIdentifier() bool`
 
 HasSupportsPersistentIdentifier returns a boolean if a field has been set.
-
-### GetSupportsSync
-
-`func (o *ClientCapabilitiesDto) GetSupportsSync() bool`
-
-GetSupportsSync returns the SupportsSync field if non-nil, zero value otherwise.
-
-### GetSupportsSyncOk
-
-`func (o *ClientCapabilitiesDto) GetSupportsSyncOk() (*bool, bool)`
-
-GetSupportsSyncOk returns a tuple with the SupportsSync field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSupportsSync
-
-`func (o *ClientCapabilitiesDto) SetSupportsSync(v bool)`
-
-SetSupportsSync sets SupportsSync field to given value.
-
-### HasSupportsSync
-
-`func (o *ClientCapabilitiesDto) HasSupportsSync() bool`
-
-HasSupportsSync returns a boolean if a field has been set.
 
 ### GetDeviceProfile
 
@@ -324,6 +238,76 @@ HasIconUrl returns a boolean if a field has been set.
 `func (o *ClientCapabilitiesDto) UnsetIconUrl()`
 
 UnsetIconUrl ensures that no value is present for IconUrl, not even an explicit nil
+### GetSupportsContentUploading
+
+`func (o *ClientCapabilitiesDto) GetSupportsContentUploading() bool`
+
+GetSupportsContentUploading returns the SupportsContentUploading field if non-nil, zero value otherwise.
+
+### GetSupportsContentUploadingOk
+
+`func (o *ClientCapabilitiesDto) GetSupportsContentUploadingOk() (*bool, bool)`
+
+GetSupportsContentUploadingOk returns a tuple with the SupportsContentUploading field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSupportsContentUploading
+
+`func (o *ClientCapabilitiesDto) SetSupportsContentUploading(v bool)`
+
+SetSupportsContentUploading sets SupportsContentUploading field to given value.
+
+### HasSupportsContentUploading
+
+`func (o *ClientCapabilitiesDto) HasSupportsContentUploading() bool`
+
+HasSupportsContentUploading returns a boolean if a field has been set.
+
+### SetSupportsContentUploadingNil
+
+`func (o *ClientCapabilitiesDto) SetSupportsContentUploadingNil(b bool)`
+
+ SetSupportsContentUploadingNil sets the value for SupportsContentUploading to be an explicit nil
+
+### UnsetSupportsContentUploading
+`func (o *ClientCapabilitiesDto) UnsetSupportsContentUploading()`
+
+UnsetSupportsContentUploading ensures that no value is present for SupportsContentUploading, not even an explicit nil
+### GetSupportsSync
+
+`func (o *ClientCapabilitiesDto) GetSupportsSync() bool`
+
+GetSupportsSync returns the SupportsSync field if non-nil, zero value otherwise.
+
+### GetSupportsSyncOk
+
+`func (o *ClientCapabilitiesDto) GetSupportsSyncOk() (*bool, bool)`
+
+GetSupportsSyncOk returns a tuple with the SupportsSync field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSupportsSync
+
+`func (o *ClientCapabilitiesDto) SetSupportsSync(v bool)`
+
+SetSupportsSync sets SupportsSync field to given value.
+
+### HasSupportsSync
+
+`func (o *ClientCapabilitiesDto) HasSupportsSync() bool`
+
+HasSupportsSync returns a boolean if a field has been set.
+
+### SetSupportsSyncNil
+
+`func (o *ClientCapabilitiesDto) SetSupportsSyncNil(b bool)`
+
+ SetSupportsSyncNil sets the value for SupportsSync to be an explicit nil
+
+### UnsetSupportsSync
+`func (o *ClientCapabilitiesDto) UnsetSupportsSync()`
+
+UnsetSupportsSync ensures that no value is present for SupportsSync, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

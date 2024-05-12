@@ -62,7 +62,7 @@ func main() {
 	height := int32(56) // int32 | Optional. The fixed vertical resolution of the encoded video. (optional)
 	videoBitRate := int32(56) // int32 | Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
 	subtitleStreamIndex := int32(56) // int32 | Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
-	subtitleMethod := openapiclient.SubtitleDeliveryMethod("Encode") // SubtitleDeliveryMethod | Optional. Specify the subtitle delivery method. (optional)
+	subtitleMethod := "subtitleMethod_example" // SubtitleDeliveryMethod | Optional. Specify the subtitle delivery method. (optional)
 	maxRefFrames := int32(56) // int32 | Optional. (optional)
 	maxVideoBitDepth := int32(56) // int32 | Optional. The maximum video bit depth. (optional)
 	requireAvc := true // bool | Optional. Whether to require avc. (optional)
@@ -77,7 +77,7 @@ func main() {
 	transcodeReasons := "transcodeReasons_example" // string | Optional. The transcoding reason. (optional)
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
-	context := openapiclient.EncodingContext("Streaming") // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
+	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
  **height** | **int32** | Optional. The fixed vertical resolution of the encoded video. | 
  **videoBitRate** | **int32** | Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. | 
  **subtitleStreamIndex** | **int32** | Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. | 
- **subtitleMethod** | [**SubtitleDeliveryMethod**](SubtitleDeliveryMethod.md) | Optional. Specify the subtitle delivery method. | 
+ **subtitleMethod** | **SubtitleDeliveryMethod** | Optional. Specify the subtitle delivery method. | 
  **maxRefFrames** | **int32** | Optional. | 
  **maxVideoBitDepth** | **int32** | Optional. The maximum video bit depth. | 
  **requireAvc** | **bool** | Optional. Whether to require avc. | 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
  **transcodeReasons** | **string** | Optional. The transcoding reason. | 
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
- **context** | [**EncodingContext**](EncodingContext.md) | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
+ **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
 
 ### Return type
@@ -202,7 +202,7 @@ func main() {
 	deviceProfileId := "deviceProfileId_example" // string | Optional. The dlna device profile id to utilize. (optional)
 	playSessionId := "playSessionId_example" // string | The play session id. (optional)
 	segmentContainer := "segmentContainer_example" // string | The segment container. (optional)
-	segmentLength := int32(56) // int32 | The segment lenght. (optional)
+	segmentLength := int32(56) // int32 | The segment length. (optional)
 	minSegments := int32(56) // int32 | The minimum number of segments. (optional)
 	mediaSourceId := "mediaSourceId_example" // string | The media version id, if playing an alternate version. (optional)
 	deviceId := "deviceId_example" // string | The device id of the client requesting. Used to stop encoding processes when needed. (optional)
@@ -226,7 +226,7 @@ func main() {
 	height := int32(56) // int32 | Optional. The fixed vertical resolution of the encoded video. (optional)
 	videoBitRate := int32(56) // int32 | Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
 	subtitleStreamIndex := int32(56) // int32 | Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
-	subtitleMethod := openapiclient.SubtitleDeliveryMethod("Encode") // SubtitleDeliveryMethod | Optional. Specify the subtitle delivery method. (optional)
+	subtitleMethod := "subtitleMethod_example" // SubtitleDeliveryMethod | Optional. Specify the subtitle delivery method. (optional)
 	maxRefFrames := int32(56) // int32 | Optional. (optional)
 	maxVideoBitDepth := int32(56) // int32 | Optional. The maximum video bit depth. (optional)
 	requireAvc := true // bool | Optional. Whether to require avc. (optional)
@@ -241,7 +241,7 @@ func main() {
 	transcodeReasons := "transcodeReasons_example" // string | Optional. The transcoding reason. (optional)
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
-	context := openapiclient.EncodingContext("Streaming") // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
+	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
  **deviceProfileId** | **string** | Optional. The dlna device profile id to utilize. | 
  **playSessionId** | **string** | The play session id. | 
  **segmentContainer** | **string** | The segment container. | 
- **segmentLength** | **int32** | The segment lenght. | 
+ **segmentLength** | **int32** | The segment length. | 
  **minSegments** | **int32** | The minimum number of segments. | 
  **mediaSourceId** | **string** | The media version id, if playing an alternate version. | 
  **deviceId** | **string** | The device id of the client requesting. Used to stop encoding processes when needed. | 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
  **height** | **int32** | Optional. The fixed vertical resolution of the encoded video. | 
  **videoBitRate** | **int32** | Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. | 
  **subtitleStreamIndex** | **int32** | Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. | 
- **subtitleMethod** | [**SubtitleDeliveryMethod**](SubtitleDeliveryMethod.md) | Optional. Specify the subtitle delivery method. | 
+ **subtitleMethod** | **SubtitleDeliveryMethod** | Optional. Specify the subtitle delivery method. | 
  **maxRefFrames** | **int32** | Optional. | 
  **maxVideoBitDepth** | **int32** | Optional. The maximum video bit depth. | 
  **requireAvc** | **bool** | Optional. Whether to require avc. | 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
  **transcodeReasons** | **string** | Optional. The transcoding reason. | 
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
- **context** | [**EncodingContext**](EncodingContext.md) | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
+ **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
 
 ### Return type
@@ -391,7 +391,7 @@ func main() {
 	height := int32(56) // int32 | Optional. The fixed vertical resolution of the encoded video. (optional)
 	videoBitRate := int32(56) // int32 | Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
 	subtitleStreamIndex := int32(56) // int32 | Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
-	subtitleMethod := openapiclient.SubtitleDeliveryMethod("Encode") // SubtitleDeliveryMethod | Optional. Specify the subtitle delivery method. (optional)
+	subtitleMethod := "subtitleMethod_example" // SubtitleDeliveryMethod | Optional. Specify the subtitle delivery method. (optional)
 	maxRefFrames := int32(56) // int32 | Optional. (optional)
 	maxVideoBitDepth := int32(56) // int32 | Optional. The maximum video bit depth. (optional)
 	requireAvc := true // bool | Optional. Whether to require avc. (optional)
@@ -406,7 +406,7 @@ func main() {
 	transcodeReasons := "transcodeReasons_example" // string | Optional. The transcoding reason. (optional)
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
-	context := openapiclient.EncodingContext("Streaming") // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
+	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
  **height** | **int32** | Optional. The fixed vertical resolution of the encoded video. | 
  **videoBitRate** | **int32** | Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. | 
  **subtitleStreamIndex** | **int32** | Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. | 
- **subtitleMethod** | [**SubtitleDeliveryMethod**](SubtitleDeliveryMethod.md) | Optional. Specify the subtitle delivery method. | 
+ **subtitleMethod** | **SubtitleDeliveryMethod** | Optional. Specify the subtitle delivery method. | 
  **maxRefFrames** | **int32** | Optional. | 
  **maxVideoBitDepth** | **int32** | Optional. The maximum video bit depth. | 
  **requireAvc** | **bool** | Optional. Whether to require avc. | 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
  **transcodeReasons** | **string** | Optional. The transcoding reason. | 
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
- **context** | [**EncodingContext**](EncodingContext.md) | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
+ **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
 
 ### Return type
@@ -531,7 +531,7 @@ func main() {
 	deviceProfileId := "deviceProfileId_example" // string | Optional. The dlna device profile id to utilize. (optional)
 	playSessionId := "playSessionId_example" // string | The play session id. (optional)
 	segmentContainer := "segmentContainer_example" // string | The segment container. (optional)
-	segmentLength := int32(56) // int32 | The segment lenght. (optional)
+	segmentLength := int32(56) // int32 | The segment length. (optional)
 	minSegments := int32(56) // int32 | The minimum number of segments. (optional)
 	mediaSourceId := "mediaSourceId_example" // string | The media version id, if playing an alternate version. (optional)
 	deviceId := "deviceId_example" // string | The device id of the client requesting. Used to stop encoding processes when needed. (optional)
@@ -555,7 +555,7 @@ func main() {
 	height := int32(56) // int32 | Optional. The fixed vertical resolution of the encoded video. (optional)
 	videoBitRate := int32(56) // int32 | Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
 	subtitleStreamIndex := int32(56) // int32 | Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
-	subtitleMethod := openapiclient.SubtitleDeliveryMethod("Encode") // SubtitleDeliveryMethod | Optional. Specify the subtitle delivery method. (optional)
+	subtitleMethod := "subtitleMethod_example" // SubtitleDeliveryMethod | Optional. Specify the subtitle delivery method. (optional)
 	maxRefFrames := int32(56) // int32 | Optional. (optional)
 	maxVideoBitDepth := int32(56) // int32 | Optional. The maximum video bit depth. (optional)
 	requireAvc := true // bool | Optional. Whether to require avc. (optional)
@@ -570,7 +570,7 @@ func main() {
 	transcodeReasons := "transcodeReasons_example" // string | Optional. The transcoding reason. (optional)
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
-	context := openapiclient.EncodingContext("Streaming") // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
+	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -609,7 +609,7 @@ Name | Type | Description  | Notes
  **deviceProfileId** | **string** | Optional. The dlna device profile id to utilize. | 
  **playSessionId** | **string** | The play session id. | 
  **segmentContainer** | **string** | The segment container. | 
- **segmentLength** | **int32** | The segment lenght. | 
+ **segmentLength** | **int32** | The segment length. | 
  **minSegments** | **int32** | The minimum number of segments. | 
  **mediaSourceId** | **string** | The media version id, if playing an alternate version. | 
  **deviceId** | **string** | The device id of the client requesting. Used to stop encoding processes when needed. | 
@@ -633,7 +633,7 @@ Name | Type | Description  | Notes
  **height** | **int32** | Optional. The fixed vertical resolution of the encoded video. | 
  **videoBitRate** | **int32** | Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. | 
  **subtitleStreamIndex** | **int32** | Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. | 
- **subtitleMethod** | [**SubtitleDeliveryMethod**](SubtitleDeliveryMethod.md) | Optional. Specify the subtitle delivery method. | 
+ **subtitleMethod** | **SubtitleDeliveryMethod** | Optional. Specify the subtitle delivery method. | 
  **maxRefFrames** | **int32** | Optional. | 
  **maxVideoBitDepth** | **int32** | Optional. The maximum video bit depth. | 
  **requireAvc** | **bool** | Optional. Whether to require avc. | 
@@ -648,7 +648,7 @@ Name | Type | Description  | Notes
  **transcodeReasons** | **string** | Optional. The transcoding reason. | 
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
- **context** | [**EncodingContext**](EncodingContext.md) | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
+ **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
 
 ### Return type

@@ -13,8 +13,13 @@ Name | Type | Description | Notes
 **Comment** | Pointer to **NullableString** |  | [optional] 
 **DateCreated** | Pointer to **NullableTime** |  | [optional] 
 **CommunityRating** | Pointer to **NullableFloat32** |  | [optional] 
+**FrameRate** | Pointer to **NullableFloat32** |  | [optional] 
 **DownloadCount** | Pointer to **NullableInt32** |  | [optional] 
 **IsHashMatch** | Pointer to **NullableBool** |  | [optional] 
+**AiTranslated** | Pointer to **NullableBool** |  | [optional] 
+**MachineTranslated** | Pointer to **NullableBool** |  | [optional] 
+**Forced** | Pointer to **NullableBool** |  | [optional] 
+**HearingImpaired** | Pointer to **NullableBool** |  | [optional] 
 
 ## Methods
 
@@ -350,6 +355,41 @@ HasCommunityRating returns a boolean if a field has been set.
 `func (o *RemoteSubtitleInfo) UnsetCommunityRating()`
 
 UnsetCommunityRating ensures that no value is present for CommunityRating, not even an explicit nil
+### GetFrameRate
+
+`func (o *RemoteSubtitleInfo) GetFrameRate() float32`
+
+GetFrameRate returns the FrameRate field if non-nil, zero value otherwise.
+
+### GetFrameRateOk
+
+`func (o *RemoteSubtitleInfo) GetFrameRateOk() (*float32, bool)`
+
+GetFrameRateOk returns a tuple with the FrameRate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFrameRate
+
+`func (o *RemoteSubtitleInfo) SetFrameRate(v float32)`
+
+SetFrameRate sets FrameRate field to given value.
+
+### HasFrameRate
+
+`func (o *RemoteSubtitleInfo) HasFrameRate() bool`
+
+HasFrameRate returns a boolean if a field has been set.
+
+### SetFrameRateNil
+
+`func (o *RemoteSubtitleInfo) SetFrameRateNil(b bool)`
+
+ SetFrameRateNil sets the value for FrameRate to be an explicit nil
+
+### UnsetFrameRate
+`func (o *RemoteSubtitleInfo) UnsetFrameRate()`
+
+UnsetFrameRate ensures that no value is present for FrameRate, not even an explicit nil
 ### GetDownloadCount
 
 `func (o *RemoteSubtitleInfo) GetDownloadCount() int32`
@@ -420,6 +460,146 @@ HasIsHashMatch returns a boolean if a field has been set.
 `func (o *RemoteSubtitleInfo) UnsetIsHashMatch()`
 
 UnsetIsHashMatch ensures that no value is present for IsHashMatch, not even an explicit nil
+### GetAiTranslated
+
+`func (o *RemoteSubtitleInfo) GetAiTranslated() bool`
+
+GetAiTranslated returns the AiTranslated field if non-nil, zero value otherwise.
+
+### GetAiTranslatedOk
+
+`func (o *RemoteSubtitleInfo) GetAiTranslatedOk() (*bool, bool)`
+
+GetAiTranslatedOk returns a tuple with the AiTranslated field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAiTranslated
+
+`func (o *RemoteSubtitleInfo) SetAiTranslated(v bool)`
+
+SetAiTranslated sets AiTranslated field to given value.
+
+### HasAiTranslated
+
+`func (o *RemoteSubtitleInfo) HasAiTranslated() bool`
+
+HasAiTranslated returns a boolean if a field has been set.
+
+### SetAiTranslatedNil
+
+`func (o *RemoteSubtitleInfo) SetAiTranslatedNil(b bool)`
+
+ SetAiTranslatedNil sets the value for AiTranslated to be an explicit nil
+
+### UnsetAiTranslated
+`func (o *RemoteSubtitleInfo) UnsetAiTranslated()`
+
+UnsetAiTranslated ensures that no value is present for AiTranslated, not even an explicit nil
+### GetMachineTranslated
+
+`func (o *RemoteSubtitleInfo) GetMachineTranslated() bool`
+
+GetMachineTranslated returns the MachineTranslated field if non-nil, zero value otherwise.
+
+### GetMachineTranslatedOk
+
+`func (o *RemoteSubtitleInfo) GetMachineTranslatedOk() (*bool, bool)`
+
+GetMachineTranslatedOk returns a tuple with the MachineTranslated field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMachineTranslated
+
+`func (o *RemoteSubtitleInfo) SetMachineTranslated(v bool)`
+
+SetMachineTranslated sets MachineTranslated field to given value.
+
+### HasMachineTranslated
+
+`func (o *RemoteSubtitleInfo) HasMachineTranslated() bool`
+
+HasMachineTranslated returns a boolean if a field has been set.
+
+### SetMachineTranslatedNil
+
+`func (o *RemoteSubtitleInfo) SetMachineTranslatedNil(b bool)`
+
+ SetMachineTranslatedNil sets the value for MachineTranslated to be an explicit nil
+
+### UnsetMachineTranslated
+`func (o *RemoteSubtitleInfo) UnsetMachineTranslated()`
+
+UnsetMachineTranslated ensures that no value is present for MachineTranslated, not even an explicit nil
+### GetForced
+
+`func (o *RemoteSubtitleInfo) GetForced() bool`
+
+GetForced returns the Forced field if non-nil, zero value otherwise.
+
+### GetForcedOk
+
+`func (o *RemoteSubtitleInfo) GetForcedOk() (*bool, bool)`
+
+GetForcedOk returns a tuple with the Forced field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetForced
+
+`func (o *RemoteSubtitleInfo) SetForced(v bool)`
+
+SetForced sets Forced field to given value.
+
+### HasForced
+
+`func (o *RemoteSubtitleInfo) HasForced() bool`
+
+HasForced returns a boolean if a field has been set.
+
+### SetForcedNil
+
+`func (o *RemoteSubtitleInfo) SetForcedNil(b bool)`
+
+ SetForcedNil sets the value for Forced to be an explicit nil
+
+### UnsetForced
+`func (o *RemoteSubtitleInfo) UnsetForced()`
+
+UnsetForced ensures that no value is present for Forced, not even an explicit nil
+### GetHearingImpaired
+
+`func (o *RemoteSubtitleInfo) GetHearingImpaired() bool`
+
+GetHearingImpaired returns the HearingImpaired field if non-nil, zero value otherwise.
+
+### GetHearingImpairedOk
+
+`func (o *RemoteSubtitleInfo) GetHearingImpairedOk() (*bool, bool)`
+
+GetHearingImpairedOk returns a tuple with the HearingImpaired field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHearingImpaired
+
+`func (o *RemoteSubtitleInfo) SetHearingImpaired(v bool)`
+
+SetHearingImpaired sets HearingImpaired field to given value.
+
+### HasHearingImpaired
+
+`func (o *RemoteSubtitleInfo) HasHearingImpaired() bool`
+
+HasHearingImpaired returns a boolean if a field has been set.
+
+### SetHearingImpairedNil
+
+`func (o *RemoteSubtitleInfo) SetHearingImpairedNil(b bool)`
+
+ SetHearingImpairedNil sets the value for HearingImpaired to be an explicit nil
+
+### UnsetHearingImpaired
+`func (o *RemoteSubtitleInfo) UnsetHearingImpaired()`
+
+UnsetHearingImpaired ensures that no value is present for HearingImpaired, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

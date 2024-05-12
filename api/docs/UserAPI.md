@@ -4,7 +4,6 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AuthenticateUser**](UserAPI.md#AuthenticateUser) | **Post** /Users/{userId}/Authenticate | Authenticates a user.
 [**AuthenticateUserByName**](UserAPI.md#AuthenticateUserByName) | **Post** /Users/AuthenticateByName | Authenticates a user by name.
 [**AuthenticateWithQuickConnect**](UserAPI.md#AuthenticateWithQuickConnect) | **Post** /Users/AuthenticateWithQuickConnect | Authenticates a user with quick connect.
 [**CreateUserByName**](UserAPI.md#CreateUserByName) | **Post** /Users/New | Creates a user.
@@ -15,84 +14,11 @@ Method | HTTP request | Description
 [**GetPublicUsers**](UserAPI.md#GetPublicUsers) | **Get** /Users/Public | Gets a list of publicly visible users for display on a login screen.
 [**GetUserById**](UserAPI.md#GetUserById) | **Get** /Users/{userId} | Gets a user by Id.
 [**GetUsers**](UserAPI.md#GetUsers) | **Get** /Users | Gets a list of users.
-[**UpdateUser**](UserAPI.md#UpdateUser) | **Post** /Users/{userId} | Updates a user.
-[**UpdateUserConfiguration**](UserAPI.md#UpdateUserConfiguration) | **Post** /Users/{userId}/Configuration | Updates a user configuration.
-[**UpdateUserEasyPassword**](UserAPI.md#UpdateUserEasyPassword) | **Post** /Users/{userId}/EasyPassword | Updates a user&#39;s easy password.
-[**UpdateUserPassword**](UserAPI.md#UpdateUserPassword) | **Post** /Users/{userId}/Password | Updates a user&#39;s password.
+[**UpdateUser**](UserAPI.md#UpdateUser) | **Post** /Users | Updates a user.
+[**UpdateUserConfiguration**](UserAPI.md#UpdateUserConfiguration) | **Post** /Users/Configuration | Updates a user configuration.
+[**UpdateUserPassword**](UserAPI.md#UpdateUserPassword) | **Post** /Users/Password | Updates a user&#39;s password.
 [**UpdateUserPolicy**](UserAPI.md#UpdateUserPolicy) | **Post** /Users/{userId}/Policy | Updates a user policy.
 
-
-
-## AuthenticateUser
-
-> AuthenticationResult AuthenticateUser(ctx, userId).Pw(pw).Password(password).Execute()
-
-Authenticates a user.
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/sj14/jellyfin-go/api"
-)
-
-func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id.
-	pw := "pw_example" // string | The password as plain text.
-	password := "password_example" // string | The password sha1-hash. (optional)
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserAPI.AuthenticateUser(context.Background(), userId).Pw(pw).Password(password).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.AuthenticateUser``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `AuthenticateUser`: AuthenticationResult
-	fmt.Fprintf(os.Stdout, "Response from `UserAPI.AuthenticateUser`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The user id. | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiAuthenticateUserRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **pw** | **string** | The password as plain text. | 
- **password** | **string** | The password sha1-hash. | 
-
-### Return type
-
-[**AuthenticationResult**](AuthenticationResult.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## AuthenticateUserByName
@@ -242,7 +168,7 @@ import (
 )
 
 func main() {
-	createUserByName := *openapiclient.NewCreateUserByName() // CreateUserByName | The create user by name request body.
+	createUserByName := *openapiclient.NewCreateUserByName("Name_example") // CreateUserByName | The create user by name request body.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -735,7 +661,7 @@ Name | Type | Description  | Notes
 
 ## UpdateUser
 
-> UpdateUser(ctx, userId).UserDto(userDto).Execute()
+> UpdateUser(ctx).UserDto(userDto).UserId(userId).Execute()
 
 Updates a user.
 
@@ -752,12 +678,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id.
 	userDto := *openapiclient.NewUserDto() // UserDto | The updated user model.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.UserAPI.UpdateUser(context.Background(), userId).UserDto(userDto).Execute()
+	r, err := apiClient.UserAPI.UpdateUser(context.Background()).UserDto(userDto).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.UpdateUser``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -768,10 +694,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The user id. | 
 
 ### Other Parameters
 
@@ -780,8 +702,8 @@ Other parameters are passed through a pointer to a apiUpdateUserRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **userDto** | [**UserDto**](UserDto.md) | The updated user model. | 
+ **userId** | **string** | The user id. | 
 
 ### Return type
 
@@ -803,7 +725,7 @@ Name | Type | Description  | Notes
 
 ## UpdateUserConfiguration
 
-> UpdateUserConfiguration(ctx, userId).UserConfiguration(userConfiguration).Execute()
+> UpdateUserConfiguration(ctx).UserConfiguration(userConfiguration).UserId(userId).Execute()
 
 Updates a user configuration.
 
@@ -820,12 +742,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id.
 	userConfiguration := *openapiclient.NewUserConfiguration() // UserConfiguration | The new user configuration.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.UserAPI.UpdateUserConfiguration(context.Background(), userId).UserConfiguration(userConfiguration).Execute()
+	r, err := apiClient.UserAPI.UpdateUserConfiguration(context.Background()).UserConfiguration(userConfiguration).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.UpdateUserConfiguration``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -836,10 +758,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The user id. | 
 
 ### Other Parameters
 
@@ -848,76 +766,8 @@ Other parameters are passed through a pointer to a apiUpdateUserConfigurationReq
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **userConfiguration** | [**UserConfiguration**](UserConfiguration.md) | The new user configuration. | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[CustomAuthentication](../README.md#CustomAuthentication)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UpdateUserEasyPassword
-
-> UpdateUserEasyPassword(ctx, userId).UpdateUserEasyPassword(updateUserEasyPassword).Execute()
-
-Updates a user's easy password.
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/sj14/jellyfin-go/api"
-)
-
-func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id.
-	updateUserEasyPassword := *openapiclient.NewUpdateUserEasyPassword() // UpdateUserEasyPassword | The M:Jellyfin.Api.Controllers.UserController.UpdateUserEasyPassword(System.Guid,Jellyfin.Api.Models.UserDtos.UpdateUserEasyPassword) request.
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.UserAPI.UpdateUserEasyPassword(context.Background(), userId).UpdateUserEasyPassword(updateUserEasyPassword).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.UpdateUserEasyPassword``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The user id. | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUpdateUserEasyPasswordRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **updateUserEasyPassword** | [**UpdateUserEasyPassword**](UpdateUserEasyPassword.md) | The M:Jellyfin.Api.Controllers.UserController.UpdateUserEasyPassword(System.Guid,Jellyfin.Api.Models.UserDtos.UpdateUserEasyPassword) request. | 
+ **userId** | **string** | The user id. | 
 
 ### Return type
 
@@ -939,7 +789,7 @@ Name | Type | Description  | Notes
 
 ## UpdateUserPassword
 
-> UpdateUserPassword(ctx, userId).UpdateUserPassword(updateUserPassword).Execute()
+> UpdateUserPassword(ctx).UpdateUserPassword(updateUserPassword).UserId(userId).Execute()
 
 Updates a user's password.
 
@@ -956,12 +806,12 @@ import (
 )
 
 func main() {
-	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id.
-	updateUserPassword := *openapiclient.NewUpdateUserPassword() // UpdateUserPassword | The M:Jellyfin.Api.Controllers.UserController.UpdateUserPassword(System.Guid,Jellyfin.Api.Models.UserDtos.UpdateUserPassword) request.
+	updateUserPassword := *openapiclient.NewUpdateUserPassword() // UpdateUserPassword | The M:Jellyfin.Api.Controllers.UserController.UpdateUserPassword(System.Nullable{System.Guid},Jellyfin.Api.Models.UserDtos.UpdateUserPassword) request.
+	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.UserAPI.UpdateUserPassword(context.Background(), userId).UpdateUserPassword(updateUserPassword).Execute()
+	r, err := apiClient.UserAPI.UpdateUserPassword(context.Background()).UpdateUserPassword(updateUserPassword).UserId(userId).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.UpdateUserPassword``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -972,10 +822,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The user id. | 
 
 ### Other Parameters
 
@@ -984,8 +830,8 @@ Other parameters are passed through a pointer to a apiUpdateUserPasswordRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
- **updateUserPassword** | [**UpdateUserPassword**](UpdateUserPassword.md) | The M:Jellyfin.Api.Controllers.UserController.UpdateUserPassword(System.Guid,Jellyfin.Api.Models.UserDtos.UpdateUserPassword) request. | 
+ **updateUserPassword** | [**UpdateUserPassword**](UpdateUserPassword.md) | The M:Jellyfin.Api.Controllers.UserController.UpdateUserPassword(System.Nullable{System.Guid},Jellyfin.Api.Models.UserDtos.UpdateUserPassword) request. | 
+ **userId** | **string** | The user id. | 
 
 ### Return type
 
@@ -1025,7 +871,7 @@ import (
 
 func main() {
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The user id.
-	userPolicy := *openapiclient.NewUserPolicy() // UserPolicy | The new user policy.
+	userPolicy := *openapiclient.NewUserPolicy("AuthenticationProviderId_example", "PasswordResetProviderId_example") // UserPolicy | The new user policy.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

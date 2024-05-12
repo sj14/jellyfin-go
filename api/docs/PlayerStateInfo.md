@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **MediaSourceId** | Pointer to **NullableString** | Gets or sets the now playing media version identifier. | [optional] 
 **PlayMethod** | Pointer to [**NullablePlayMethod**](PlayMethod.md) | Gets or sets the play method. | [optional] 
 **RepeatMode** | Pointer to [**RepeatMode**](RepeatMode.md) | Gets or sets the repeat mode. | [optional] 
+**PlaybackOrder** | Pointer to [**PlaybackOrder**](PlaybackOrder.md) | Gets or sets the playback order. | [optional] 
 **LiveStreamId** | Pointer to **NullableString** | Gets or sets the now playing live stream identifier. | [optional] 
 
 ## Methods
@@ -344,6 +345,31 @@ SetRepeatMode sets RepeatMode field to given value.
 `func (o *PlayerStateInfo) HasRepeatMode() bool`
 
 HasRepeatMode returns a boolean if a field has been set.
+
+### GetPlaybackOrder
+
+`func (o *PlayerStateInfo) GetPlaybackOrder() PlaybackOrder`
+
+GetPlaybackOrder returns the PlaybackOrder field if non-nil, zero value otherwise.
+
+### GetPlaybackOrderOk
+
+`func (o *PlayerStateInfo) GetPlaybackOrderOk() (*PlaybackOrder, bool)`
+
+GetPlaybackOrderOk returns a tuple with the PlaybackOrder field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlaybackOrder
+
+`func (o *PlayerStateInfo) SetPlaybackOrder(v PlaybackOrder)`
+
+SetPlaybackOrder sets PlaybackOrder field to given value.
+
+### HasPlaybackOrder
+
+`func (o *PlayerStateInfo) HasPlaybackOrder() bool`
+
+HasPlaybackOrder returns a boolean if a field has been set.
 
 ### GetLiveStreamId
 

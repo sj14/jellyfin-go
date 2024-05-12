@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PlaylistItemIds** | Pointer to **[]string** | Gets or sets the playlist identifiers ot the items. Ignored when clearing the playlist. | [optional] 
+**PlaylistItemIds** | Pointer to **[]string** | Gets or sets the playlist identifiers of the items. Ignored when clearing the playlist. | [optional] 
 **ClearPlaylist** | Pointer to **bool** | Gets or sets a value indicating whether the entire playlist should be cleared. | [optional] 
 **ClearPlayingItem** | Pointer to **bool** | Gets or sets a value indicating whether the playing item should be removed as well. Used only when clearing the playlist. | [optional] 
 

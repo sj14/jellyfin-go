@@ -1300,7 +1300,7 @@ import (
 )
 
 func main() {
-	type_ := openapiclient.ChannelType("TV") // ChannelType | Optional. Filter by channel type. (optional)
+	type_ := "type__example" // ChannelType | Optional. Filter by channel type. (optional)
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Filter by user and attach user data. (optional)
 	startIndex := int32(56) // int32 | Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
 	isMovie := true // bool | Optional. Filter for movies. (optional)
@@ -1317,8 +1317,8 @@ func main() {
 	enableImageTypes := []openapiclient.ImageType{openapiclient.ImageType("Primary")} // []ImageType | \"Optional. The image types to include in the output. (optional)
 	fields := []openapiclient.ItemFields{openapiclient.ItemFields("AirTime")} // []ItemFields | Optional. Specify additional fields of information to return in the output. (optional)
 	enableUserData := true // bool | Optional. Include user data. (optional)
-	sortBy := []string{"Inner_example"} // []string | Optional. Key to sort by. (optional)
-	sortOrder := openapiclient.SortOrder("Ascending") // SortOrder | Optional. Sort order. (optional)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Key to sort by. (optional)
+	sortOrder := "sortOrder_example" // SortOrder | Optional. Sort order. (optional)
 	enableFavoriteSorting := true // bool | Optional. Incorporate favorite and like status into channel sorting. (optional) (default to false)
 	addCurrentProgram := true // bool | Optional. Adds current program info to each channel. (optional) (default to true)
 
@@ -1345,7 +1345,7 @@ Other parameters are passed through a pointer to a apiGetLiveTvChannelsRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_** | [**ChannelType**](ChannelType.md) | Optional. Filter by channel type. | 
+ **type_** | **ChannelType** | Optional. Filter by channel type. | 
  **userId** | **string** | Optional. Filter by user and attach user data. | 
  **startIndex** | **int32** | Optional. The record index to start at. All items with a lower index will be dropped from the results. | 
  **isMovie** | **bool** | Optional. Filter for movies. | 
@@ -1362,8 +1362,8 @@ Name | Type | Description  | Notes
  **enableImageTypes** | [**[]ImageType**](ImageType.md) | \&quot;Optional. The image types to include in the output. | 
  **fields** | [**[]ItemFields**](ItemFields.md) | Optional. Specify additional fields of information to return in the output. | 
  **enableUserData** | **bool** | Optional. Include user data. | 
- **sortBy** | **[]string** | Optional. Key to sort by. | 
- **sortOrder** | [**SortOrder**](SortOrder.md) | Optional. Sort order. | 
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Key to sort by. | 
+ **sortOrder** | **SortOrder** | Optional. Sort order. | 
  **enableFavoriteSorting** | **bool** | Optional. Incorporate favorite and like status into channel sorting. | [default to false]
  **addCurrentProgram** | **bool** | Optional. Adds current program info to each channel. | [default to true]
 
@@ -1479,7 +1479,7 @@ func main() {
 	isSports := true // bool | Optional. Filter for sports. (optional)
 	startIndex := int32(56) // int32 | Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
 	limit := int32(56) // int32 | Optional. The maximum number of records to return. (optional)
-	sortBy := []string{"Inner_example"} // []string | Optional. Specify one or more sort orders, comma delimited. Options: Name, StartDate. (optional)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Specify one or more sort orders, comma delimited. Options: Name, StartDate. (optional)
 	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Sort Order - Ascending,Descending. (optional)
 	genres := []string{"Inner_example"} // []string | The genres to return guide information for. (optional)
 	genreIds := []string{"Inner_example"} // []string | The genre ids to return guide information for. (optional)
@@ -1530,7 +1530,7 @@ Name | Type | Description  | Notes
  **isSports** | **bool** | Optional. Filter for sports. | 
  **startIndex** | **int32** | Optional. The record index to start at. All items with a lower index will be dropped from the results. | 
  **limit** | **int32** | Optional. The maximum number of records to return. | 
- **sortBy** | **[]string** | Optional. Specify one or more sort orders, comma delimited. Options: Name, StartDate. | 
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Specify one or more sort orders, comma delimited. Options: Name, StartDate. | 
  **sortOrder** | [**[]SortOrder**](SortOrder.md) | Sort Order - Ascending,Descending. | 
  **genres** | **[]string** | The genres to return guide information for. | 
  **genreIds** | **[]string** | The genre ids to return guide information for. | 
@@ -2076,7 +2076,7 @@ func main() {
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Filter by user and attach user data. (optional)
 	startIndex := int32(56) // int32 | Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
 	limit := int32(56) // int32 | Optional. The maximum number of records to return. (optional)
-	status := openapiclient.RecordingStatus("New") // RecordingStatus | Optional. Filter by recording status. (optional)
+	status := "status_example" // RecordingStatus | Optional. Filter by recording status. (optional)
 	isInProgress := true // bool | Optional. Filter by recordings that are in progress, or not. (optional)
 	seriesTimerId := "seriesTimerId_example" // string | Optional. Filter by recordings belonging to a series timer. (optional)
 	enableImages := true // bool | Optional. Include image information in output. (optional)
@@ -2119,7 +2119,7 @@ Name | Type | Description  | Notes
  **userId** | **string** | Optional. Filter by user and attach user data. | 
  **startIndex** | **int32** | Optional. The record index to start at. All items with a lower index will be dropped from the results. | 
  **limit** | **int32** | Optional. The maximum number of records to return. | 
- **status** | [**RecordingStatus**](RecordingStatus.md) | Optional. Filter by recording status. | 
+ **status** | **RecordingStatus** | Optional. Filter by recording status. | 
  **isInProgress** | **bool** | Optional. Filter by recordings that are in progress, or not. | 
  **seriesTimerId** | **string** | Optional. Filter by recordings belonging to a series timer. | 
  **enableImages** | **bool** | Optional. Include image information in output. | 
@@ -2177,7 +2177,7 @@ func main() {
 	groupId := "groupId_example" // string | Optional. Filter by recording group. (optional)
 	startIndex := int32(56) // int32 | Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
 	limit := int32(56) // int32 | Optional. The maximum number of records to return. (optional)
-	status := openapiclient.RecordingStatus("New") // RecordingStatus | Optional. Filter by recording status. (optional)
+	status := "status_example" // RecordingStatus | Optional. Filter by recording status. (optional)
 	isInProgress := true // bool | Optional. Filter by recordings that are in progress, or not. (optional)
 	seriesTimerId := "seriesTimerId_example" // string | Optional. Filter by recordings belonging to a series timer. (optional)
 	enableImages := true // bool | Optional. Include image information in output. (optional)
@@ -2215,7 +2215,7 @@ Name | Type | Description  | Notes
  **groupId** | **string** | Optional. Filter by recording group. | 
  **startIndex** | **int32** | Optional. The record index to start at. All items with a lower index will be dropped from the results. | 
  **limit** | **int32** | Optional. The maximum number of records to return. | 
- **status** | [**RecordingStatus**](RecordingStatus.md) | Optional. Filter by recording status. | 
+ **status** | **RecordingStatus** | Optional. Filter by recording status. | 
  **isInProgress** | **bool** | Optional. Filter by recordings that are in progress, or not. | 
  **seriesTimerId** | **string** | Optional. Filter by recordings belonging to a series timer. | 
  **enableImages** | **bool** | Optional. Include image information in output. | 
@@ -2390,7 +2390,7 @@ import (
 
 func main() {
 	sortBy := "sortBy_example" // string | Optional. Sort by SortName or Priority. (optional)
-	sortOrder := openapiclient.SortOrder("Ascending") // SortOrder | Optional. Sort in Ascending or Descending order. (optional)
+	sortOrder := "sortOrder_example" // SortOrder | Optional. Sort in Ascending or Descending order. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2416,7 +2416,7 @@ Other parameters are passed through a pointer to a apiGetSeriesTimersRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sortBy** | **string** | Optional. Sort by SortName or Priority. | 
- **sortOrder** | [**SortOrder**](SortOrder.md) | Optional. Sort in Ascending or Descending order. | 
+ **sortOrder** | **SortOrder** | Optional. Sort in Ascending or Descending order. | 
 
 ### Return type
 

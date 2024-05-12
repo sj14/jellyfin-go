@@ -30,7 +30,7 @@ import (
 
 func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item Id.
-	type_ := openapiclient.ImageType("Primary") // ImageType | The image type.
+	type_ := "type__example" // ImageType | The image type.
 	imageUrl := "imageUrl_example" // string | The image url. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -59,7 +59,7 @@ Other parameters are passed through a pointer to a apiDownloadRemoteImageRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **type_** | [**ImageType**](ImageType.md) | The image type. | 
+ **type_** | **ImageType** | The image type. | 
  **imageUrl** | **string** | The image url. | 
 
 ### Return type
@@ -168,7 +168,7 @@ import (
 
 func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Item Id.
-	type_ := openapiclient.ImageType("Primary") // ImageType | The image type. (optional)
+	type_ := "type__example" // ImageType | The image type. (optional)
 	startIndex := int32(56) // int32 | Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
 	limit := int32(56) // int32 | Optional. The maximum number of records to return. (optional)
 	providerName := "providerName_example" // string | Optional. The image provider to use. (optional)
@@ -202,7 +202,7 @@ Other parameters are passed through a pointer to a apiGetRemoteImagesRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **type_** | [**ImageType**](ImageType.md) | The image type. | 
+ **type_** | **ImageType** | The image type. | 
  **startIndex** | **int32** | Optional. The record index to start at. All items with a lower index will be dropped from the results. | 
  **limit** | **int32** | Optional. The maximum number of records to return. | 
  **providerName** | **string** | Optional. The image provider to use. | 
