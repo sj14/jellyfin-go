@@ -1,6 +1,6 @@
 # Jellyfin API Go Client
 
-Auto-generated Go client package for [Jellyfin](https://jellyfin.org/). See the [API Documentation](/api/README.md).
+Auto-generated Go client package for [Jellyfin](https://jellyfin.org/). See the [API Documentation](/api/README.md). I mainly built it for usage in [jellyctl](https://github.com/sj14/jellyctl).
 
 ## Example
 
