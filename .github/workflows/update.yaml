@@ -28,7 +28,7 @@ jobs:
         run: |
           set -xue
           npm install @openapitools/openapi-generator-cli -g
-          make load
+          make load clear
           openapi-generator-cli generate -c config.yaml
           git add --all
           set +o pipefail # it should not stop on failure
