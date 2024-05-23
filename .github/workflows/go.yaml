@@ -1,0 +1,22 @@
+---
+name: Go
+on:
+  push:
+    paths:
+      - go.mod
+      - go.sum
+      - "**.go"
+      - ".github/workflows/go.yaml"
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - name: Build Example
+        run: go build example/main.go
