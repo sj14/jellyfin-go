@@ -7,7 +7,7 @@ load:
 
 .PHONY: generate
 generate: clear
-	openapi-generator generate -c config.yaml
+	openapi-generator-cli generate -c config.yaml
 
 .PHONY: clear
 clear:

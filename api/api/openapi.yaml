@@ -36230,8 +36230,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -36244,8 +36244,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 0
             ChannelName: ChannelName
@@ -37836,8 +37836,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -37850,8 +37850,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 0
             ChannelName: ChannelName
@@ -39447,8 +39447,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -39461,8 +39461,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 0
             ChannelName: ChannelName
@@ -41053,8 +41053,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -41067,8 +41067,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 0
             ChannelName: ChannelName
@@ -42664,8 +42664,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -42678,8 +42678,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 0
             ChannelName: ChannelName
@@ -44270,8 +44270,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -44284,8 +44284,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 0
             ChannelName: ChannelName
@@ -45518,8 +45518,8 @@ components:
             IsHidden: true
             EnableLiveTvManagement: true
             BlockUnratedItems:
-            - null
-            - null
+            - Movie
+            - Movie
             EnableMediaPlayback: true
             EnableVideoPlaybackTranscoding: true
             EnableAllChannels: true
@@ -45578,8 +45578,8 @@ components:
         SessionInfo:
           ApplicationVersion: ApplicationVersion
           SupportedCommands:
-          - null
-          - null
+          - MoveUp
+          - MoveUp
           DeviceId: DeviceId
           IsActive: true
           NowPlayingQueue:
@@ -46229,8 +46229,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -46243,8 +46243,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 0
             ChannelName: ChannelName
@@ -47835,8 +47835,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -47849,8 +47849,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 0
             ChannelName: ChannelName
@@ -48812,8 +48812,8 @@ components:
           UserPrimaryImageTag: UserPrimaryImageTag
           DeviceType: DeviceType
           PlayableMediaTypes:
-          - null
-          - null
+          - Unknown
+          - Unknown
           LastPlaybackCheckIn: 2000-01-23T04:56:07.000+00:00
           NowPlayingItem:
             SeasonName: SeasonName
@@ -49450,8 +49450,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -49464,8 +49464,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 7
             ChannelName: ChannelName
@@ -51068,8 +51068,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -51082,8 +51082,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 6
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 7
             ChannelName: ChannelName
@@ -52693,8 +52693,8 @@ components:
         - Genres
         SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         LockedFields:
-        - null
-        - null
+        - Cast
+        - Cast
         ParentPrimaryImageTag: ParentPrimaryImageTag
         ProviderIds:
           key: ProviderIds
@@ -52707,8 +52707,8 @@ components:
         CustomRating: CustomRating
         AirsAfterSeasonNumber: 6
         AirDays:
-        - null
-        - null
+        - Sunday
+        - Sunday
         ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         PartCount: 0
         ChannelName: ChannelName
@@ -55117,8 +55117,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -55131,8 +55131,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -56723,8 +56723,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -56737,8 +56737,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -58063,16 +58063,16 @@ components:
         SupportsContentDownloading: true
         SupportsLatestMedia: true
         ContentTypes:
-        - null
-        - null
+        - Clip
+        - Clip
         Id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         SupportsSortOrderToggle: true
         MediaTypes:
-        - null
-        - null
+        - Audio
+        - Audio
         DefaultSortFields:
-        - null
-        - null
+        - Name
+        - Name
         CanFilter: true
         Name: Name
         CanSearch: true
@@ -58419,11 +58419,11 @@ components:
             Method: Encode
           Name: Name
         PlayableMediaTypes:
-        - null
-        - null
+        - Unknown
+        - Unknown
         SupportedCommands:
-        - null
-        - null
+        - MoveUp
+        - MoveUp
         SupportsMediaControl: true
         SupportsPersistentIdentifier: true
         SupportsContentUploading: false
@@ -59000,11 +59000,11 @@ components:
               Method: Encode
             Name: Name
           PlayableMediaTypes:
-          - null
-          - null
+          - Unknown
+          - Unknown
           SupportedCommands:
-          - null
-          - null
+          - MoveUp
+          - MoveUp
           SupportsMediaControl: true
           SupportsPersistentIdentifier: true
           SupportsContentUploading: false
@@ -59212,11 +59212,11 @@ components:
                 Method: Encode
               Name: Name
             PlayableMediaTypes:
-            - null
-            - null
+            - Unknown
+            - Unknown
             SupportedCommands:
-            - null
-            - null
+            - MoveUp
+            - MoveUp
             SupportsMediaControl: true
             SupportsPersistentIdentifier: true
             SupportsContentUploading: false
@@ -59377,11 +59377,11 @@ components:
                 Method: Encode
               Name: Name
             PlayableMediaTypes:
-            - null
-            - null
+            - Unknown
+            - Unknown
             SupportedCommands:
-            - null
-            - null
+            - MoveUp
+            - MoveUp
             SupportsMediaControl: true
             SupportsPersistentIdentifier: true
             SupportsContentUploading: false
@@ -60312,8 +60312,8 @@ components:
       example:
         EnableUserData: true
         SortBy:
-        - null
-        - null
+        - Default
+        - Default
         EnableTotalRecordCount: true
         LibrarySeriesId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         IsAiring: true
@@ -60321,8 +60321,8 @@ components:
         ImageTypeLimit: 1
         MaxStartDate: 2000-01-23T04:56:07.000+00:00
         EnableImageTypes:
-        - null
-        - null
+        - Primary
+        - Primary
         IsMovie: true
         MinStartDate: 2000-01-23T04:56:07.000+00:00
         MinEndDate: 2000-01-23T04:56:07.000+00:00
@@ -60337,15 +60337,15 @@ components:
         - 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         IsSeries: true
         SortOrder:
-        - null
-        - null
+        - Ascending
+        - Ascending
         ChannelIds:
         - 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         - 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         MaxEndDate: 2000-01-23T04:56:07.000+00:00
         Fields:
-        - null
-        - null
+        - AirTime
+        - AirTime
         UserId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         IsNews: true
         Limit: 6
@@ -60876,8 +60876,8 @@ components:
       description: Class ImageProviderInfo.
       example:
         SupportedImages:
-        - null
-        - null
+        - Primary
+        - Primary
         Name: Name
       properties:
         Name:
@@ -61488,8 +61488,8 @@ components:
             MinWidth: 6
           Type: Type
           SupportedImageTypes:
-          - null
-          - null
+          - Primary
+          - Primary
           ImageFetchers:
           - DefaultEnabled: true
             Name: Name
@@ -61509,8 +61509,8 @@ components:
             MinWidth: 6
           Type: Type
           SupportedImageTypes:
-          - null
-          - null
+          - Primary
+          - Primary
           ImageFetchers:
           - DefaultEnabled: true
             Name: Name
@@ -61571,8 +61571,8 @@ components:
           MinWidth: 6
         Type: Type
         SupportedImageTypes:
-        - null
-        - null
+        - Primary
+        - Primary
         ImageFetchers:
         - DefaultEnabled: true
           Name: Name
@@ -63479,8 +63479,8 @@ components:
       description: Open live stream dto.
       example:
         DirectPlayProtocols:
-        - null
-        - null
+        - File
+        - File
         EnableDirectStream: true
         SubtitleStreamIndex: 5
         MaxAudioChannels: 5
@@ -65322,8 +65322,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -65336,8 +65336,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 7
           ChannelName: ChannelName
@@ -67076,8 +67076,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -67090,8 +67090,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 7
           ChannelName: ChannelName
@@ -68796,8 +68796,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -68810,8 +68810,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 7
           ChannelName: ChannelName
@@ -71598,8 +71598,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -71612,8 +71612,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -73204,8 +73204,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -73218,8 +73218,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -75442,8 +75442,8 @@ components:
         ServerId: ServerId
         ParentBackdropItemId: ParentBackdropItemId
         Days:
-        - null
-        - null
+        - Sunday
+        - Sunday
         DayPattern: Daily
         ParentPrimaryImageTag: ParentPrimaryImageTag
         IsPrePaddingRequired: true
@@ -75640,8 +75640,8 @@ components:
           ServerId: ServerId
           ParentBackdropItemId: ParentBackdropItemId
           Days:
-          - null
-          - null
+          - Sunday
+          - Sunday
           DayPattern: Daily
           ParentPrimaryImageTag: ParentPrimaryImageTag
           IsPrePaddingRequired: true
@@ -75680,8 +75680,8 @@ components:
           ServerId: ServerId
           ParentBackdropItemId: ParentBackdropItemId
           Days:
-          - null
-          - null
+          - Sunday
+          - Sunday
           DayPattern: Daily
           ParentPrimaryImageTag: ParentPrimaryImageTag
           IsPrePaddingRequired: true
@@ -76210,8 +76210,8 @@ components:
       example:
         ApplicationVersion: ApplicationVersion
         SupportedCommands:
-        - null
-        - null
+        - MoveUp
+        - MoveUp
         DeviceId: DeviceId
         IsActive: true
         NowPlayingQueue:
@@ -76861,8 +76861,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -76875,8 +76875,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -78467,8 +78467,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -78481,8 +78481,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -79444,8 +79444,8 @@ components:
         UserPrimaryImageTag: UserPrimaryImageTag
         DeviceType: DeviceType
         PlayableMediaTypes:
-        - null
-        - null
+        - Unknown
+        - Unknown
         LastPlaybackCheckIn: 2000-01-23T04:56:07.000+00:00
         NowPlayingItem:
           SeasonName: SeasonName
@@ -80082,8 +80082,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -80096,8 +80096,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 7
           ChannelName: ChannelName
@@ -81700,8 +81700,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -81714,8 +81714,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 7
           ChannelName: ChannelName
@@ -84492,8 +84492,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -84506,8 +84506,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -86098,8 +86098,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -86112,8 +86112,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -87855,8 +87855,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -87869,8 +87869,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 2
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 9
           ChannelName: ChannelName
@@ -89625,8 +89625,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -89639,8 +89639,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 2
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 9
             ChannelName: ChannelName
@@ -91261,8 +91261,8 @@ components:
             - Genres
             SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             LockedFields:
-            - null
-            - null
+            - Cast
+            - Cast
             ParentPrimaryImageTag: ParentPrimaryImageTag
             ProviderIds:
               key: ProviderIds
@@ -91275,8 +91275,8 @@ components:
             CustomRating: CustomRating
             AirsAfterSeasonNumber: 2
             AirDays:
-            - null
-            - null
+            - Sunday
+            - Sunday
             ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             PartCount: 9
             ChannelName: ChannelName
@@ -93387,8 +93387,8 @@ components:
           IsHidden: true
           EnableLiveTvManagement: true
           BlockUnratedItems:
-          - null
-          - null
+          - Movie
+          - Movie
           EnableMediaPlayback: true
           EnableVideoPlaybackTranscoding: true
           EnableAllChannels: true
@@ -93621,8 +93621,8 @@ components:
         IsHidden: true
         EnableLiveTvManagement: true
         BlockUnratedItems:
-        - null
-        - null
+        - Movie
+        - Movie
         EnableMediaPlayback: true
         EnableVideoPlaybackTranscoding: true
         EnableAllChannels: true
@@ -94803,8 +94803,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -94817,8 +94817,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -96409,8 +96409,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -96423,8 +96423,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -97441,8 +97441,8 @@ components:
           IsHidden: true
           EnableLiveTvManagement: true
           BlockUnratedItems:
-          - null
-          - null
+          - Movie
+          - Movie
           EnableMediaPlayback: true
           EnableVideoPlaybackTranscoding: true
           EnableAllChannels: true
@@ -97504,8 +97504,8 @@ components:
       example:
         ApplicationVersion: ApplicationVersion
         SupportedCommands:
-        - null
-        - null
+        - MoveUp
+        - MoveUp
         DeviceId: DeviceId
         IsActive: true
         NowPlayingQueue:
@@ -98155,8 +98155,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -98169,8 +98169,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -99761,8 +99761,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -99775,8 +99775,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 0
           ChannelName: ChannelName
@@ -100738,8 +100738,8 @@ components:
         UserPrimaryImageTag: UserPrimaryImageTag
         DeviceType: DeviceType
         PlayableMediaTypes:
-        - null
-        - null
+        - Unknown
+        - Unknown
         LastPlaybackCheckIn: 2000-01-23T04:56:07.000+00:00
         NowPlayingItem:
           SeasonName: SeasonName
@@ -101376,8 +101376,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -101390,8 +101390,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 7
           ChannelName: ChannelName
@@ -102994,8 +102994,8 @@ components:
           - Genres
           SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           LockedFields:
-          - null
-          - null
+          - Cast
+          - Cast
           ParentPrimaryImageTag: ParentPrimaryImageTag
           ProviderIds:
             key: ProviderIds
@@ -103008,8 +103008,8 @@ components:
           CustomRating: CustomRating
           AirsAfterSeasonNumber: 6
           AirDays:
-          - null
-          - null
+          - Sunday
+          - Sunday
           ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           PartCount: 7
           ChannelName: ChannelName
@@ -105267,11 +105267,11 @@ components:
             Method: Encode
           Name: Name
         PlayableMediaTypes:
-        - null
-        - null
+        - Unknown
+        - Unknown
         SupportedCommands:
-        - null
-        - null
+        - MoveUp
+        - MoveUp
         SupportsMediaControl: true
         SupportsPersistentIdentifier: true
         SupportsContentUploading: false
@@ -105967,8 +105967,8 @@ components:
         - Genres
         SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         LockedFields:
-        - null
-        - null
+        - Cast
+        - Cast
         ParentPrimaryImageTag: ParentPrimaryImageTag
         ProviderIds:
           key: ProviderIds
@@ -105981,8 +105981,8 @@ components:
         CustomRating: CustomRating
         AirsAfterSeasonNumber: 6
         AirDays:
-        - null
-        - null
+        - Sunday
+        - Sunday
         ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         PartCount: 7
         ChannelName: ChannelName
@@ -107612,8 +107612,8 @@ components:
         - Genres
         SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         LockedFields:
-        - null
-        - null
+        - Cast
+        - Cast
         ParentPrimaryImageTag: ParentPrimaryImageTag
         ProviderIds:
           key: ProviderIds
@@ -107626,8 +107626,8 @@ components:
         CustomRating: CustomRating
         AirsAfterSeasonNumber: 6
         AirDays:
-        - null
-        - null
+        - Sunday
+        - Sunday
         ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         PartCount: 7
         ChannelName: ChannelName
@@ -109248,8 +109248,8 @@ components:
         - Genres
         SeasonId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         LockedFields:
-        - null
-        - null
+        - Cast
+        - Cast
         ParentPrimaryImageTag: ParentPrimaryImageTag
         ProviderIds:
           key: ProviderIds
@@ -109262,8 +109262,8 @@ components:
         CustomRating: CustomRating
         AirsAfterSeasonNumber: 2
         AirDays:
-        - null
-        - null
+        - Sunday
+        - Sunday
         ParentLogoItemId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         PartCount: 9
         ChannelName: ChannelName
@@ -110314,8 +110314,8 @@ components:
         IsHidden: true
         EnableLiveTvManagement: true
         BlockUnratedItems:
-        - null
-        - null
+        - Movie
+        - Movie
         EnableMediaPlayback: true
         EnableVideoPlaybackTranscoding: true
         EnableAllChannels: true

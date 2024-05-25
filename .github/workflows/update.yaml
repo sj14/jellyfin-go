@@ -28,8 +28,8 @@ jobs:
         run: |
           set -xue
           npm install @openapitools/openapi-generator-cli -g
-          make load clear
-          openapi-generator-cli generate -c config.yaml
+          make load
+          make generate
           git add --all
           set +o pipefail # it should not stop on failure
           echo "changed=$(git diff --cached --exit-code >/dev/null 2>&1 || echo $?)" >> "$GITHUB_OUTPUT"
