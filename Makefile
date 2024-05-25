@@ -7,6 +7,7 @@ load:
 
 .PHONY: generate
 generate: clear
+	openapi-generator-cli version-manager set latest
 	openapi-generator-cli generate -c config.yaml
 
 .PHONY: clear
