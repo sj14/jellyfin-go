@@ -114,6 +114,7 @@ docs/ChapterInfo.md
 docs/ClientCapabilities.md
 docs/ClientCapabilitiesDeviceProfile.md
 docs/ClientCapabilitiesDto.md
+docs/ClientCapabilitiesDtoDeviceProfile.md
 docs/ClientLogAPI.md
 docs/ClientLogDocumentResponseDto.md
 docs/CodecProfile.md
@@ -381,6 +382,7 @@ docs/ServerShuttingDownMessage.md
 docs/SessionAPI.md
 docs/SessionInfo.md
 docs/SessionInfoNowPlayingItem.md
+docs/SessionInfoNowViewingItem.md
 docs/SessionMessageType.md
 docs/SessionUserInfo.md
 docs/SessionsMessage.md
@@ -467,6 +469,7 @@ docs/UserItemDataDto.md
 docs/UserLibraryAPI.md
 docs/UserPolicy.md
 docs/UserUpdatedMessage.md
+docs/UserUpdatedMessageData.md
 docs/UserViewsAPI.md
 docs/UtcTimeResponse.md
 docs/ValidatePathDto.md
@@ -529,6 +532,7 @@ model_chapter_info.go
 model_client_capabilities.go
 model_client_capabilities_device_profile.go
 model_client_capabilities_dto.go
+model_client_capabilities_dto_device_profile.go
 model_client_log_document_response_dto.go
 model_codec_profile.go
 model_codec_type.go
@@ -761,6 +765,7 @@ model_server_restarting_message.go
 model_server_shutting_down_message.go
 model_session_info.go
 model_session_info_now_playing_item.go
+model_session_info_now_viewing_item.go
 model_session_message_type.go
 model_session_user_info.go
 model_sessions_message.go
@@ -833,6 +838,7 @@ model_user_dto_policy.go
 model_user_item_data_dto.go
 model_user_policy.go
 model_user_updated_message.go
+model_user_updated_message_data.go
 model_utc_time_response.go
 model_validate_path_dto.go
 model_version_info.go
