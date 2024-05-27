@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **SupportedCommands** | Pointer to [**[]GeneralCommandType**](GeneralCommandType.md) | Gets or sets the list of supported commands. | [optional] 
 **SupportsMediaControl** | Pointer to **bool** | Gets or sets a value indicating whether session supports media control. | [optional] 
 **SupportsPersistentIdentifier** | Pointer to **bool** | Gets or sets a value indicating whether session supports a persistent identifier. | [optional] 
-**DeviceProfile** | Pointer to [**NullableClientCapabilitiesDeviceProfile**](ClientCapabilitiesDeviceProfile.md) |  | [optional] 
+**DeviceProfile** | Pointer to [**NullableClientCapabilitiesDtoDeviceProfile**](ClientCapabilitiesDtoDeviceProfile.md) |  | [optional] 
 **AppStoreUrl** | Pointer to **NullableString** | Gets or sets the app store url. | [optional] 
 **IconUrl** | Pointer to **NullableString** | Gets or sets the icon url. | [optional] 
 **SupportsContentUploading** | Pointer to **NullableBool** |  | [optional] [default to false]
@@ -135,20 +135,20 @@ HasSupportsPersistentIdentifier returns a boolean if a field has been set.
 
 ### GetDeviceProfile
 
-`func (o *ClientCapabilitiesDto) GetDeviceProfile() ClientCapabilitiesDeviceProfile`
+`func (o *ClientCapabilitiesDto) GetDeviceProfile() ClientCapabilitiesDtoDeviceProfile`
 
 GetDeviceProfile returns the DeviceProfile field if non-nil, zero value otherwise.
 
 ### GetDeviceProfileOk
 
-`func (o *ClientCapabilitiesDto) GetDeviceProfileOk() (*ClientCapabilitiesDeviceProfile, bool)`
+`func (o *ClientCapabilitiesDto) GetDeviceProfileOk() (*ClientCapabilitiesDtoDeviceProfile, bool)`
 
 GetDeviceProfileOk returns a tuple with the DeviceProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeviceProfile
 
-`func (o *ClientCapabilitiesDto) SetDeviceProfile(v ClientCapabilitiesDeviceProfile)`
+`func (o *ClientCapabilitiesDto) SetDeviceProfile(v ClientCapabilitiesDtoDeviceProfile)`
 
 SetDeviceProfile sets DeviceProfile field to given value.
 

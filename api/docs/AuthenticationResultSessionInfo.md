@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **DeviceName** | Pointer to **NullableString** | Gets or sets the name of the device. | [optional] 
 **DeviceType** | Pointer to **NullableString** | Gets or sets the type of the device. | [optional] 
 **NowPlayingItem** | Pointer to [**NullableSessionInfoNowPlayingItem**](SessionInfoNowPlayingItem.md) |  | [optional] 
-**NowViewingItem** | Pointer to [**NullableSessionInfoNowPlayingItem**](SessionInfoNowPlayingItem.md) |  | [optional] 
+**NowViewingItem** | Pointer to [**NullableSessionInfoNowViewingItem**](SessionInfoNowViewingItem.md) |  | [optional] 
 **DeviceId** | Pointer to **NullableString** | Gets or sets the device id. | [optional] 
 **ApplicationVersion** | Pointer to **NullableString** | Gets or sets the application version. | [optional] 
 **TranscodingInfo** | Pointer to [**NullableTranscodingInfo**](TranscodingInfo.md) |  | [optional] 
@@ -550,20 +550,20 @@ HasNowPlayingItem returns a boolean if a field has been set.
 UnsetNowPlayingItem ensures that no value is present for NowPlayingItem, not even an explicit nil
 ### GetNowViewingItem
 
-`func (o *AuthenticationResultSessionInfo) GetNowViewingItem() SessionInfoNowPlayingItem`
+`func (o *AuthenticationResultSessionInfo) GetNowViewingItem() SessionInfoNowViewingItem`
 
 GetNowViewingItem returns the NowViewingItem field if non-nil, zero value otherwise.
 
 ### GetNowViewingItemOk
 
-`func (o *AuthenticationResultSessionInfo) GetNowViewingItemOk() (*SessionInfoNowPlayingItem, bool)`
+`func (o *AuthenticationResultSessionInfo) GetNowViewingItemOk() (*SessionInfoNowViewingItem, bool)`
 
 GetNowViewingItemOk returns a tuple with the NowViewingItem field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNowViewingItem
 
-`func (o *AuthenticationResultSessionInfo) SetNowViewingItem(v SessionInfoNowPlayingItem)`
+`func (o *AuthenticationResultSessionInfo) SetNowViewingItem(v SessionInfoNowViewingItem)`
 
 SetNowViewingItem sets NowViewingItem field to given value.
 

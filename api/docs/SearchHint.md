@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ItemId** | Pointer to **string** | Gets or sets the item id. | [optional] 
 **Id** | Pointer to **string** | Gets or sets the item id. | [optional] 
 **Name** | Pointer to **string** | Gets or sets the name. | [optional] 
-**MatchedTerm** | Pointer to **string** | Gets or sets the matched term. | [optional] 
+**MatchedTerm** | Pointer to **NullableString** | Gets or sets the matched term. | [optional] 
 **IndexNumber** | Pointer to **NullableInt32** | Gets or sets the index number. | [optional] 
 **ProductionYear** | Pointer to **NullableInt32** | Gets or sets the production year. | [optional] 
 **ParentIndexNumber** | Pointer to **NullableInt32** | Gets or sets the parent index number. | [optional] 
@@ -16,10 +16,10 @@ Name | Type | Description | Notes
 **ThumbImageItemId** | Pointer to **NullableString** | Gets or sets the thumb image item identifier. | [optional] 
 **BackdropImageTag** | Pointer to **NullableString** | Gets or sets the backdrop image tag. | [optional] 
 **BackdropImageItemId** | Pointer to **NullableString** | Gets or sets the backdrop image item identifier. | [optional] 
-**Type** | Pointer to [**BaseItemKind**](BaseItemKind.md) | Gets or sets the type. | [optional] 
+**Type** | Pointer to [**BaseItemKind**](BaseItemKind.md) | The base item kind. | [optional] 
 **IsFolder** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance is folder. | [optional] 
 **RunTimeTicks** | Pointer to **NullableInt64** | Gets or sets the run time ticks. | [optional] 
-**MediaType** | Pointer to [**MediaType**](MediaType.md) | Gets or sets the type of the media. | [optional] 
+**MediaType** | Pointer to [**MediaType**](MediaType.md) | Media types. | [optional] 
 **StartDate** | Pointer to **NullableTime** | Gets or sets the start date. | [optional] 
 **EndDate** | Pointer to **NullableTime** | Gets or sets the end date. | [optional] 
 **Series** | Pointer to **NullableString** | Gets or sets the series. | [optional] 
@@ -153,6 +153,16 @@ SetMatchedTerm sets MatchedTerm field to given value.
 
 HasMatchedTerm returns a boolean if a field has been set.
 
+### SetMatchedTermNil
+
+`func (o *SearchHint) SetMatchedTermNil(b bool)`
+
+ SetMatchedTermNil sets the value for MatchedTerm to be an explicit nil
+
+### UnsetMatchedTerm
+`func (o *SearchHint) UnsetMatchedTerm()`
+
+UnsetMatchedTerm ensures that no value is present for MatchedTerm, not even an explicit nil
 ### GetIndexNumber
 
 `func (o *SearchHint) GetIndexNumber() int32`
