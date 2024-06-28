@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **ItemId** | Pointer to **NullableString** | Gets or sets the item id. | [optional] 
 **EnableDirectPlay** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable direct play. | [optional] 
 **EnableDirectStream** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enale direct stream. | [optional] 
-**DeviceProfile** | Pointer to [**NullableClientCapabilitiesDtoDeviceProfile**](ClientCapabilitiesDtoDeviceProfile.md) |  | [optional] 
+**DeviceProfile** | Pointer to [**NullableClientCapabilitiesDeviceProfile**](ClientCapabilitiesDeviceProfile.md) |  | [optional] 
 **DirectPlayProtocols** | Pointer to [**[]MediaProtocol**](MediaProtocol.md) | Gets or sets the device play protocols. | [optional] 
 
 ## Methods
@@ -424,20 +424,20 @@ HasEnableDirectStream returns a boolean if a field has been set.
 UnsetEnableDirectStream ensures that no value is present for EnableDirectStream, not even an explicit nil
 ### GetDeviceProfile
 
-`func (o *OpenLiveStreamDto) GetDeviceProfile() ClientCapabilitiesDtoDeviceProfile`
+`func (o *OpenLiveStreamDto) GetDeviceProfile() ClientCapabilitiesDeviceProfile`
 
 GetDeviceProfile returns the DeviceProfile field if non-nil, zero value otherwise.
 
 ### GetDeviceProfileOk
 
-`func (o *OpenLiveStreamDto) GetDeviceProfileOk() (*ClientCapabilitiesDtoDeviceProfile, bool)`
+`func (o *OpenLiveStreamDto) GetDeviceProfileOk() (*ClientCapabilitiesDeviceProfile, bool)`
 
 GetDeviceProfileOk returns a tuple with the DeviceProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeviceProfile
 
-`func (o *OpenLiveStreamDto) SetDeviceProfile(v ClientCapabilitiesDtoDeviceProfile)`
+`func (o *OpenLiveStreamDto) SetDeviceProfile(v ClientCapabilitiesDeviceProfile)`
 
 SetDeviceProfile sets DeviceProfile field to given value.
 

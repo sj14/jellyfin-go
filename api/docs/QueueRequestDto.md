@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ItemIds** | Pointer to **[]string** | Gets or sets the items to enqueue. | [optional] 
-**Mode** | Pointer to [**GroupQueueMode**](GroupQueueMode.md) | Gets or sets the mode in which to add the new items. | [optional] 
+**Mode** | Pointer to [**GroupQueueMode**](GroupQueueMode.md) | Enum GroupQueueMode. | [optional] 
 
 ## Methods
 
