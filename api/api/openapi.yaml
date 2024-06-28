@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Jellyfin API
-  version: 10.9.6
-  x-jellyfin-version: 10.9.6
+  version: 10.9.7
+  x-jellyfin-version: 10.9.7
 servers:
 - url: http://localhost
 paths:
@@ -53927,7 +53927,7 @@ components:
         Type:
           allOf:
           - $ref: '#/components/schemas/BaseItemKind'
-          description: The base item kind.
+          description: Gets or sets the type.
           enum:
           - AggregateFolder
           - Audio
@@ -54256,7 +54256,7 @@ components:
         MediaType:
           allOf:
           - $ref: '#/components/schemas/MediaType'
-          description: Media types.
+          description: Gets or sets the type of the media.
           enum:
           - Unknown
           - Video
@@ -57805,7 +57805,7 @@ components:
         Type:
           allOf:
           - $ref: '#/components/schemas/PersonKind'
-          description: The person kind.
+          description: Gets or sets the type.
           enum:
           - Unknown
           - Actor
@@ -58277,7 +58277,7 @@ components:
       example:
         IconUrl: IconUrl
         DeviceProfile:
-          MaxStaticBitrate: 7
+          MaxStaticBitrate: 6
           CodecProfiles:
           - Type: Video
             Codec: Codec
@@ -58321,7 +58321,7 @@ components:
               IsRequired: true
               Value: Value
               Property: AudioChannels
-          MusicStreamingTranscodingBitrate: 9
+          MusicStreamingTranscodingBitrate: 1
           TranscodingProfiles:
           - Context: Streaming
             BreakOnNonKeyFrames: false
@@ -58371,7 +58371,7 @@ components:
             TranscodeSeekInfo: Auto
             Protocol: http
             AudioCodec: AudioCodec
-          MaxStaticMusicBitrate: 3
+          MaxStaticMusicBitrate: 5
           DirectPlayProfiles:
           - Container: Container
             Type: Audio
@@ -58405,7 +58405,7 @@ components:
               Value: Value
               Property: AudioChannels
           Id: Id
-          MaxStreamingBitrate: 2
+          MaxStreamingBitrate: 0
           SubtitleProfiles:
           - Container: Container
             Format: Format
@@ -58449,7 +58449,7 @@ components:
             persistent identifier.
           type: boolean
         DeviceProfile:
-          $ref: '#/components/schemas/ClientCapabilitiesDto_DeviceProfile'
+          $ref: '#/components/schemas/ClientCapabilities_DeviceProfile'
         AppStoreUrl:
           description: Gets or sets the app store url.
           nullable: true
@@ -59603,7 +59603,7 @@ components:
         ScrollDirection:
           allOf:
           - $ref: '#/components/schemas/ScrollDirection'
-          description: An enum representing the axis that should be scrolled.
+          description: Gets or sets the scroll direction.
           enum:
           - Horizontal
           - Vertical
@@ -59618,7 +59618,7 @@ components:
         SortOrder:
           allOf:
           - $ref: '#/components/schemas/SortOrder'
-          description: An enum representing the sorting order.
+          description: Gets or sets the sort order.
           enum:
           - Ascending
           - Descending
@@ -62664,7 +62664,7 @@ components:
         VideoRange:
           allOf:
           - $ref: '#/components/schemas/VideoRange'
-          description: An enum representing video ranges.
+          description: Gets the video range.
           enum:
           - Unknown
           - SDR
@@ -62674,7 +62674,7 @@ components:
         VideoRangeType:
           allOf:
           - $ref: '#/components/schemas/VideoRangeType'
-          description: An enum representing types of video ranges.
+          description: Gets the video range type.
           enum:
           - Unknown
           - SDR
@@ -62696,7 +62696,7 @@ components:
           allOf:
           - $ref: '#/components/schemas/AudioSpatialFormat'
           default: None
-          description: An enum representing formats of spatial audio.
+          description: Gets the audio spatial format.
           enum:
           - None
           - DolbyAtmos
@@ -63489,7 +63489,7 @@ components:
         OpenToken: OpenToken
         StartTimeTicks: 6
         DeviceProfile:
-          MaxStaticBitrate: 7
+          MaxStaticBitrate: 6
           CodecProfiles:
           - Type: Video
             Codec: Codec
@@ -63533,7 +63533,7 @@ components:
               IsRequired: true
               Value: Value
               Property: AudioChannels
-          MusicStreamingTranscodingBitrate: 9
+          MusicStreamingTranscodingBitrate: 1
           TranscodingProfiles:
           - Context: Streaming
             BreakOnNonKeyFrames: false
@@ -63583,7 +63583,7 @@ components:
             TranscodeSeekInfo: Auto
             Protocol: http
             AudioCodec: AudioCodec
-          MaxStaticMusicBitrate: 3
+          MaxStaticMusicBitrate: 5
           DirectPlayProfiles:
           - Container: Container
             Type: Audio
@@ -63617,7 +63617,7 @@ components:
               Value: Value
               Property: AudioChannels
           Id: Id
-          MaxStreamingBitrate: 2
+          MaxStreamingBitrate: 0
           SubtitleProfiles:
           - Container: Container
             Format: Format
@@ -63687,7 +63687,7 @@ components:
           nullable: true
           type: boolean
         DeviceProfile:
-          $ref: '#/components/schemas/ClientCapabilitiesDto_DeviceProfile'
+          $ref: '#/components/schemas/ClientCapabilities_DeviceProfile'
         DirectPlayProtocols:
           description: Gets or sets the device play protocols.
           items:
@@ -64058,7 +64058,7 @@ components:
         AllowVideoStreamCopy: true
         StartTimeTicks: 6
         DeviceProfile:
-          MaxStaticBitrate: 7
+          MaxStaticBitrate: 6
           CodecProfiles:
           - Type: Video
             Codec: Codec
@@ -64102,7 +64102,7 @@ components:
               IsRequired: true
               Value: Value
               Property: AudioChannels
-          MusicStreamingTranscodingBitrate: 9
+          MusicStreamingTranscodingBitrate: 1
           TranscodingProfiles:
           - Context: Streaming
             BreakOnNonKeyFrames: false
@@ -64152,7 +64152,7 @@ components:
             TranscodeSeekInfo: Auto
             Protocol: http
             AudioCodec: AudioCodec
-          MaxStaticMusicBitrate: 3
+          MaxStaticMusicBitrate: 5
           DirectPlayProfiles:
           - Container: Container
             Type: Audio
@@ -64186,7 +64186,7 @@ components:
               Value: Value
               Property: AudioChannels
           Id: Id
-          MaxStreamingBitrate: 2
+          MaxStreamingBitrate: 0
           SubtitleProfiles:
           - Container: Container
             Format: Format
@@ -64245,7 +64245,7 @@ components:
           nullable: true
           type: string
         DeviceProfile:
-          $ref: '#/components/schemas/ClientCapabilitiesDto_DeviceProfile'
+          $ref: '#/components/schemas/ClientCapabilities_DeviceProfile'
         EnableDirectPlay:
           description: Gets or sets a value indicating whether to enable direct play.
           nullable: true
@@ -70867,7 +70867,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupQueueMode'
-          description: Gets or sets the mode in which to add the new items.
+          description: Enum GroupQueueMode.
           enum:
           - Queue
           - QueueNext
@@ -74979,7 +74979,7 @@ components:
         Type:
           allOf:
           - $ref: '#/components/schemas/BaseItemKind'
-          description: The base item kind.
+          description: Gets or sets the type.
           enum:
           - AggregateFolder
           - Audio
@@ -75031,7 +75031,7 @@ components:
         MediaType:
           allOf:
           - $ref: '#/components/schemas/MediaType'
-          description: Media types.
+          description: Gets or sets the type of the media.
           enum:
           - Unknown
           - Video
@@ -83047,7 +83047,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupRepeatMode'
-          description: Gets or sets the repeat mode.
+          description: Enum GroupRepeatMode.
           enum:
           - RepeatOne
           - RepeatAll
@@ -83063,7 +83063,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupShuffleMode'
-          description: Gets or sets the shuffle mode.
+          description: Enum GroupShuffleMode.
           enum:
           - Sorted
           - Shuffle
@@ -93782,7 +93782,8 @@ components:
         SyncPlayAccess:
           allOf:
           - $ref: '#/components/schemas/SyncPlayUserAccessType'
-          description: Enum SyncPlayUserAccessType.
+          description: Gets or sets a value indicating what SyncPlay features the
+            user can access.
           enum:
           - CreateAndJoinGroups
           - JoinGroups
@@ -105105,153 +105106,6 @@ components:
             Property: AudioChannels
         Id: Id
         MaxStreamingBitrate: 0
-        SubtitleProfiles:
-        - Container: Container
-          Format: Format
-          Language: Language
-          DidlMode: DidlMode
-          Method: Encode
-        - Container: Container
-          Format: Format
-          Language: Language
-          DidlMode: DidlMode
-          Method: Encode
-        Name: Name
-      nullable: true
-    ClientCapabilitiesDto_DeviceProfile:
-      allOf:
-      - $ref: '#/components/schemas/DeviceProfile'
-      description: Gets or sets the device profile.
-      example:
-        MaxStaticBitrate: 7
-        CodecProfiles:
-        - Type: Video
-          Codec: Codec
-          Container: Container
-          ApplyConditions:
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          Conditions:
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-        - Type: Video
-          Codec: Codec
-          Container: Container
-          ApplyConditions:
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          Conditions:
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-        MusicStreamingTranscodingBitrate: 9
-        TranscodingProfiles:
-        - Context: Streaming
-          BreakOnNonKeyFrames: false
-          EnableSubtitlesInManifest: false
-          CopyTimestamps: false
-          MinSegments: 5
-          EnableMpegtsM2TsMode: false
-          MaxAudioChannels: MaxAudioChannels
-          VideoCodec: VideoCodec
-          Conditions:
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          Container: Container
-          Type: Audio
-          EstimateContentLength: false
-          SegmentLength: 2
-          TranscodeSeekInfo: Auto
-          Protocol: http
-          AudioCodec: AudioCodec
-        - Context: Streaming
-          BreakOnNonKeyFrames: false
-          EnableSubtitlesInManifest: false
-          CopyTimestamps: false
-          MinSegments: 5
-          EnableMpegtsM2TsMode: false
-          MaxAudioChannels: MaxAudioChannels
-          VideoCodec: VideoCodec
-          Conditions:
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          Container: Container
-          Type: Audio
-          EstimateContentLength: false
-          SegmentLength: 2
-          TranscodeSeekInfo: Auto
-          Protocol: http
-          AudioCodec: AudioCodec
-        MaxStaticMusicBitrate: 3
-        DirectPlayProfiles:
-        - Container: Container
-          Type: Audio
-          VideoCodec: VideoCodec
-          AudioCodec: AudioCodec
-        - Container: Container
-          Type: Audio
-          VideoCodec: VideoCodec
-          AudioCodec: AudioCodec
-        ContainerProfiles:
-        - Type: Audio
-          Container: Container
-          Conditions:
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-        - Type: Audio
-          Container: Container
-          Conditions:
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-          - Condition: Equals
-            IsRequired: true
-            Value: Value
-            Property: AudioChannels
-        Id: Id
-        MaxStreamingBitrate: 2
         SubtitleProfiles:
         - Container: Container
           Format: Format

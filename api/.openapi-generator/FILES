@@ -114,7 +114,6 @@ docs/ChapterInfo.md
 docs/ClientCapabilities.md
 docs/ClientCapabilitiesDeviceProfile.md
 docs/ClientCapabilitiesDto.md
-docs/ClientCapabilitiesDtoDeviceProfile.md
 docs/ClientLogAPI.md
 docs/ClientLogDocumentResponseDto.md
 docs/CodecProfile.md
@@ -532,7 +531,6 @@ model_chapter_info.go
 model_client_capabilities.go
 model_client_capabilities_device_profile.go
 model_client_capabilities_dto.go
-model_client_capabilities_dto_device_profile.go
 model_client_log_document_response_dto.go
 model_codec_profile.go
 model_codec_type.go
