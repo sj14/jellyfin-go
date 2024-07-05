@@ -21,7 +21,8 @@ var _ MappedNullable = &UpdateLibraryOptionsDto{}
 type UpdateLibraryOptionsDto struct {
 	// Gets or sets the library item id.
 	Id *string `json:"Id,omitempty"`
-	LibraryOptions NullableAddVirtualFolderDtoLibraryOptions `json:"LibraryOptions,omitempty"`
+	// Gets or sets library options.
+	LibraryOptions NullableLibraryOptions `json:"LibraryOptions,omitempty"`
 }
 
 // NewUpdateLibraryOptionsDto instantiates a new UpdateLibraryOptionsDto object
@@ -74,9 +75,9 @@ func (o *UpdateLibraryOptionsDto) SetId(v string) {
 }
 
 // GetLibraryOptions returns the LibraryOptions field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *UpdateLibraryOptionsDto) GetLibraryOptions() AddVirtualFolderDtoLibraryOptions {
+func (o *UpdateLibraryOptionsDto) GetLibraryOptions() LibraryOptions {
 	if o == nil || IsNil(o.LibraryOptions.Get()) {
-		var ret AddVirtualFolderDtoLibraryOptions
+		var ret LibraryOptions
 		return ret
 	}
 	return *o.LibraryOptions.Get()
@@ -85,7 +86,7 @@ func (o *UpdateLibraryOptionsDto) GetLibraryOptions() AddVirtualFolderDtoLibrary
 // GetLibraryOptionsOk returns a tuple with the LibraryOptions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *UpdateLibraryOptionsDto) GetLibraryOptionsOk() (*AddVirtualFolderDtoLibraryOptions, bool) {
+func (o *UpdateLibraryOptionsDto) GetLibraryOptionsOk() (*LibraryOptions, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -101,8 +102,8 @@ func (o *UpdateLibraryOptionsDto) HasLibraryOptions() bool {
 	return false
 }
 
-// SetLibraryOptions gets a reference to the given NullableAddVirtualFolderDtoLibraryOptions and assigns it to the LibraryOptions field.
-func (o *UpdateLibraryOptionsDto) SetLibraryOptions(v AddVirtualFolderDtoLibraryOptions) {
+// SetLibraryOptions gets a reference to the given NullableLibraryOptions and assigns it to the LibraryOptions field.
+func (o *UpdateLibraryOptionsDto) SetLibraryOptions(v LibraryOptions) {
 	o.LibraryOptions.Set(&v)
 }
 // SetLibraryOptionsNil sets the value for LibraryOptions to be an explicit nil

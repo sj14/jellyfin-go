@@ -12,6 +12,7 @@ package api
 
 import (
 	"encoding/json"
+	"gopkg.in/validator.v2"
 	"fmt"
 )
 
@@ -255,7 +256,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonActivityLogEntryMessage) == "{}" { // empty struct
 			dst.ActivityLogEntryMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ActivityLogEntryMessage); err != nil {
+				dst.ActivityLogEntryMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ActivityLogEntryMessage = nil
@@ -268,7 +273,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonForceKeepAliveMessage) == "{}" { // empty struct
 			dst.ForceKeepAliveMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ForceKeepAliveMessage); err != nil {
+				dst.ForceKeepAliveMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ForceKeepAliveMessage = nil
@@ -281,7 +290,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonGeneralCommandMessage) == "{}" { // empty struct
 			dst.GeneralCommandMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.GeneralCommandMessage); err != nil {
+				dst.GeneralCommandMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.GeneralCommandMessage = nil
@@ -294,7 +307,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonLibraryChangedMessage) == "{}" { // empty struct
 			dst.LibraryChangedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.LibraryChangedMessage); err != nil {
+				dst.LibraryChangedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.LibraryChangedMessage = nil
@@ -307,7 +324,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonOutboundKeepAliveMessage) == "{}" { // empty struct
 			dst.OutboundKeepAliveMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.OutboundKeepAliveMessage); err != nil {
+				dst.OutboundKeepAliveMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.OutboundKeepAliveMessage = nil
@@ -320,7 +341,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonPlayMessage) == "{}" { // empty struct
 			dst.PlayMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.PlayMessage); err != nil {
+				dst.PlayMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.PlayMessage = nil
@@ -333,7 +358,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonPlaystateMessage) == "{}" { // empty struct
 			dst.PlaystateMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.PlaystateMessage); err != nil {
+				dst.PlaystateMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.PlaystateMessage = nil
@@ -346,7 +375,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonPluginInstallationCancelledMessage) == "{}" { // empty struct
 			dst.PluginInstallationCancelledMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.PluginInstallationCancelledMessage); err != nil {
+				dst.PluginInstallationCancelledMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.PluginInstallationCancelledMessage = nil
@@ -359,7 +392,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonPluginInstallationCompletedMessage) == "{}" { // empty struct
 			dst.PluginInstallationCompletedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.PluginInstallationCompletedMessage); err != nil {
+				dst.PluginInstallationCompletedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.PluginInstallationCompletedMessage = nil
@@ -372,7 +409,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonPluginInstallationFailedMessage) == "{}" { // empty struct
 			dst.PluginInstallationFailedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.PluginInstallationFailedMessage); err != nil {
+				dst.PluginInstallationFailedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.PluginInstallationFailedMessage = nil
@@ -385,7 +426,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonPluginInstallingMessage) == "{}" { // empty struct
 			dst.PluginInstallingMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.PluginInstallingMessage); err != nil {
+				dst.PluginInstallingMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.PluginInstallingMessage = nil
@@ -398,7 +443,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonPluginUninstalledMessage) == "{}" { // empty struct
 			dst.PluginUninstalledMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.PluginUninstalledMessage); err != nil {
+				dst.PluginUninstalledMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.PluginUninstalledMessage = nil
@@ -411,7 +460,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonRefreshProgressMessage) == "{}" { // empty struct
 			dst.RefreshProgressMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.RefreshProgressMessage); err != nil {
+				dst.RefreshProgressMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.RefreshProgressMessage = nil
@@ -424,7 +477,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonRestartRequiredMessage) == "{}" { // empty struct
 			dst.RestartRequiredMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.RestartRequiredMessage); err != nil {
+				dst.RestartRequiredMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.RestartRequiredMessage = nil
@@ -437,7 +494,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonScheduledTaskEndedMessage) == "{}" { // empty struct
 			dst.ScheduledTaskEndedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ScheduledTaskEndedMessage); err != nil {
+				dst.ScheduledTaskEndedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ScheduledTaskEndedMessage = nil
@@ -450,7 +511,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonScheduledTasksInfoMessage) == "{}" { // empty struct
 			dst.ScheduledTasksInfoMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ScheduledTasksInfoMessage); err != nil {
+				dst.ScheduledTasksInfoMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ScheduledTasksInfoMessage = nil
@@ -463,7 +528,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonSeriesTimerCancelledMessage) == "{}" { // empty struct
 			dst.SeriesTimerCancelledMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.SeriesTimerCancelledMessage); err != nil {
+				dst.SeriesTimerCancelledMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.SeriesTimerCancelledMessage = nil
@@ -476,7 +545,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonSeriesTimerCreatedMessage) == "{}" { // empty struct
 			dst.SeriesTimerCreatedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.SeriesTimerCreatedMessage); err != nil {
+				dst.SeriesTimerCreatedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.SeriesTimerCreatedMessage = nil
@@ -489,7 +562,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonServerRestartingMessage) == "{}" { // empty struct
 			dst.ServerRestartingMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ServerRestartingMessage); err != nil {
+				dst.ServerRestartingMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ServerRestartingMessage = nil
@@ -502,7 +579,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonServerShuttingDownMessage) == "{}" { // empty struct
 			dst.ServerShuttingDownMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ServerShuttingDownMessage); err != nil {
+				dst.ServerShuttingDownMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ServerShuttingDownMessage = nil
@@ -515,7 +596,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonSessionsMessage) == "{}" { // empty struct
 			dst.SessionsMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.SessionsMessage); err != nil {
+				dst.SessionsMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.SessionsMessage = nil
@@ -528,7 +613,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonSyncPlayCommandMessage) == "{}" { // empty struct
 			dst.SyncPlayCommandMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.SyncPlayCommandMessage); err != nil {
+				dst.SyncPlayCommandMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.SyncPlayCommandMessage = nil
@@ -541,7 +630,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonSyncPlayGroupUpdateCommandMessage) == "{}" { // empty struct
 			dst.SyncPlayGroupUpdateCommandMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.SyncPlayGroupUpdateCommandMessage); err != nil {
+				dst.SyncPlayGroupUpdateCommandMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.SyncPlayGroupUpdateCommandMessage = nil
@@ -554,7 +647,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonTimerCancelledMessage) == "{}" { // empty struct
 			dst.TimerCancelledMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.TimerCancelledMessage); err != nil {
+				dst.TimerCancelledMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.TimerCancelledMessage = nil
@@ -567,7 +664,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonTimerCreatedMessage) == "{}" { // empty struct
 			dst.TimerCreatedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.TimerCreatedMessage); err != nil {
+				dst.TimerCreatedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.TimerCreatedMessage = nil
@@ -580,7 +681,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonUserDataChangedMessage) == "{}" { // empty struct
 			dst.UserDataChangedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.UserDataChangedMessage); err != nil {
+				dst.UserDataChangedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.UserDataChangedMessage = nil
@@ -593,7 +698,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonUserDeletedMessage) == "{}" { // empty struct
 			dst.UserDeletedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.UserDeletedMessage); err != nil {
+				dst.UserDeletedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.UserDeletedMessage = nil
@@ -606,7 +715,11 @@ func (dst *OutboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonUserUpdatedMessage) == "{}" { // empty struct
 			dst.UserUpdatedMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.UserUpdatedMessage); err != nil {
+				dst.UserUpdatedMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.UserUpdatedMessage = nil

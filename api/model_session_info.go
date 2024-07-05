@@ -45,8 +45,10 @@ type SessionInfo struct {
 	DeviceName NullableString `json:"DeviceName,omitempty"`
 	// Gets or sets the type of the device.
 	DeviceType NullableString `json:"DeviceType,omitempty"`
-	NowPlayingItem NullableSessionInfoNowPlayingItem `json:"NowPlayingItem,omitempty"`
-	NowViewingItem NullableSessionInfoNowViewingItem `json:"NowViewingItem,omitempty"`
+	// Gets or sets the now playing item.
+	NowPlayingItem NullableBaseItemDto `json:"NowPlayingItem,omitempty"`
+	// This is strictly used as a data transfer object from the api layer.  This holds information about a BaseItem in a format that is convenient for the client.
+	NowViewingItem NullableBaseItemDto `json:"NowViewingItem,omitempty"`
 	// Gets or sets the device id.
 	DeviceId NullableString `json:"DeviceId,omitempty"`
 	// Gets or sets the application version.
@@ -624,9 +626,9 @@ func (o *SessionInfo) UnsetDeviceType() {
 }
 
 // GetNowPlayingItem returns the NowPlayingItem field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *SessionInfo) GetNowPlayingItem() SessionInfoNowPlayingItem {
+func (o *SessionInfo) GetNowPlayingItem() BaseItemDto {
 	if o == nil || IsNil(o.NowPlayingItem.Get()) {
-		var ret SessionInfoNowPlayingItem
+		var ret BaseItemDto
 		return ret
 	}
 	return *o.NowPlayingItem.Get()
@@ -635,7 +637,7 @@ func (o *SessionInfo) GetNowPlayingItem() SessionInfoNowPlayingItem {
 // GetNowPlayingItemOk returns a tuple with the NowPlayingItem field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *SessionInfo) GetNowPlayingItemOk() (*SessionInfoNowPlayingItem, bool) {
+func (o *SessionInfo) GetNowPlayingItemOk() (*BaseItemDto, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -651,8 +653,8 @@ func (o *SessionInfo) HasNowPlayingItem() bool {
 	return false
 }
 
-// SetNowPlayingItem gets a reference to the given NullableSessionInfoNowPlayingItem and assigns it to the NowPlayingItem field.
-func (o *SessionInfo) SetNowPlayingItem(v SessionInfoNowPlayingItem) {
+// SetNowPlayingItem gets a reference to the given NullableBaseItemDto and assigns it to the NowPlayingItem field.
+func (o *SessionInfo) SetNowPlayingItem(v BaseItemDto) {
 	o.NowPlayingItem.Set(&v)
 }
 // SetNowPlayingItemNil sets the value for NowPlayingItem to be an explicit nil
@@ -666,9 +668,9 @@ func (o *SessionInfo) UnsetNowPlayingItem() {
 }
 
 // GetNowViewingItem returns the NowViewingItem field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *SessionInfo) GetNowViewingItem() SessionInfoNowViewingItem {
+func (o *SessionInfo) GetNowViewingItem() BaseItemDto {
 	if o == nil || IsNil(o.NowViewingItem.Get()) {
-		var ret SessionInfoNowViewingItem
+		var ret BaseItemDto
 		return ret
 	}
 	return *o.NowViewingItem.Get()
@@ -677,7 +679,7 @@ func (o *SessionInfo) GetNowViewingItem() SessionInfoNowViewingItem {
 // GetNowViewingItemOk returns a tuple with the NowViewingItem field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *SessionInfo) GetNowViewingItemOk() (*SessionInfoNowViewingItem, bool) {
+func (o *SessionInfo) GetNowViewingItemOk() (*BaseItemDto, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -693,8 +695,8 @@ func (o *SessionInfo) HasNowViewingItem() bool {
 	return false
 }
 
-// SetNowViewingItem gets a reference to the given NullableSessionInfoNowViewingItem and assigns it to the NowViewingItem field.
-func (o *SessionInfo) SetNowViewingItem(v SessionInfoNowViewingItem) {
+// SetNowViewingItem gets a reference to the given NullableBaseItemDto and assigns it to the NowViewingItem field.
+func (o *SessionInfo) SetNowViewingItem(v BaseItemDto) {
 	o.NowViewingItem.Set(&v)
 }
 // SetNowViewingItemNil sets the value for NowViewingItem to be an explicit nil

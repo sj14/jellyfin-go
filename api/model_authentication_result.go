@@ -19,8 +19,10 @@ var _ MappedNullable = &AuthenticationResult{}
 
 // AuthenticationResult struct for AuthenticationResult
 type AuthenticationResult struct {
-	User NullableAuthenticationResultUser `json:"User,omitempty"`
-	SessionInfo NullableAuthenticationResultSessionInfo `json:"SessionInfo,omitempty"`
+	// Class UserDto.
+	User NullableUserDto `json:"User,omitempty"`
+	// Class SessionInfo.
+	SessionInfo NullableSessionInfo `json:"SessionInfo,omitempty"`
 	AccessToken NullableString `json:"AccessToken,omitempty"`
 	ServerId NullableString `json:"ServerId,omitempty"`
 }
@@ -43,9 +45,9 @@ func NewAuthenticationResultWithDefaults() *AuthenticationResult {
 }
 
 // GetUser returns the User field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *AuthenticationResult) GetUser() AuthenticationResultUser {
+func (o *AuthenticationResult) GetUser() UserDto {
 	if o == nil || IsNil(o.User.Get()) {
-		var ret AuthenticationResultUser
+		var ret UserDto
 		return ret
 	}
 	return *o.User.Get()
@@ -54,7 +56,7 @@ func (o *AuthenticationResult) GetUser() AuthenticationResultUser {
 // GetUserOk returns a tuple with the User field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *AuthenticationResult) GetUserOk() (*AuthenticationResultUser, bool) {
+func (o *AuthenticationResult) GetUserOk() (*UserDto, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -70,8 +72,8 @@ func (o *AuthenticationResult) HasUser() bool {
 	return false
 }
 
-// SetUser gets a reference to the given NullableAuthenticationResultUser and assigns it to the User field.
-func (o *AuthenticationResult) SetUser(v AuthenticationResultUser) {
+// SetUser gets a reference to the given NullableUserDto and assigns it to the User field.
+func (o *AuthenticationResult) SetUser(v UserDto) {
 	o.User.Set(&v)
 }
 // SetUserNil sets the value for User to be an explicit nil
@@ -85,9 +87,9 @@ func (o *AuthenticationResult) UnsetUser() {
 }
 
 // GetSessionInfo returns the SessionInfo field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *AuthenticationResult) GetSessionInfo() AuthenticationResultSessionInfo {
+func (o *AuthenticationResult) GetSessionInfo() SessionInfo {
 	if o == nil || IsNil(o.SessionInfo.Get()) {
-		var ret AuthenticationResultSessionInfo
+		var ret SessionInfo
 		return ret
 	}
 	return *o.SessionInfo.Get()
@@ -96,7 +98,7 @@ func (o *AuthenticationResult) GetSessionInfo() AuthenticationResultSessionInfo 
 // GetSessionInfoOk returns a tuple with the SessionInfo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *AuthenticationResult) GetSessionInfoOk() (*AuthenticationResultSessionInfo, bool) {
+func (o *AuthenticationResult) GetSessionInfoOk() (*SessionInfo, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -112,8 +114,8 @@ func (o *AuthenticationResult) HasSessionInfo() bool {
 	return false
 }
 
-// SetSessionInfo gets a reference to the given NullableAuthenticationResultSessionInfo and assigns it to the SessionInfo field.
-func (o *AuthenticationResult) SetSessionInfo(v AuthenticationResultSessionInfo) {
+// SetSessionInfo gets a reference to the given NullableSessionInfo and assigns it to the SessionInfo field.
+func (o *AuthenticationResult) SetSessionInfo(v SessionInfo) {
 	o.SessionInfo.Set(&v)
 }
 // SetSessionInfoNil sets the value for SessionInfo to be an explicit nil

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **State** | Pointer to [**TaskState**](TaskState.md) | Gets or sets the state of the task. | [optional] 
 **CurrentProgressPercentage** | Pointer to **NullableFloat64** | Gets or sets the progress. | [optional] 
 **Id** | Pointer to **NullableString** | Gets or sets the id. | [optional] 
-**LastExecutionResult** | Pointer to [**NullableTaskInfoLastExecutionResult**](TaskInfoLastExecutionResult.md) |  | [optional] 
+**LastExecutionResult** | Pointer to [**NullableTaskResult**](TaskResult.md) | Gets or sets the last execution result. | [optional] 
 **Triggers** | Pointer to [**[]TaskTriggerInfo**](TaskTriggerInfo.md) | Gets or sets the triggers. | [optional] 
 **Description** | Pointer to **NullableString** | Gets or sets the description. | [optional] 
 **Category** | Pointer to **NullableString** | Gets or sets the category. | [optional] 
@@ -166,20 +166,20 @@ HasId returns a boolean if a field has been set.
 UnsetId ensures that no value is present for Id, not even an explicit nil
 ### GetLastExecutionResult
 
-`func (o *TaskInfo) GetLastExecutionResult() TaskInfoLastExecutionResult`
+`func (o *TaskInfo) GetLastExecutionResult() TaskResult`
 
 GetLastExecutionResult returns the LastExecutionResult field if non-nil, zero value otherwise.
 
 ### GetLastExecutionResultOk
 
-`func (o *TaskInfo) GetLastExecutionResultOk() (*TaskInfoLastExecutionResult, bool)`
+`func (o *TaskInfo) GetLastExecutionResultOk() (*TaskResult, bool)`
 
 GetLastExecutionResultOk returns a tuple with the LastExecutionResult field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastExecutionResult
 
-`func (o *TaskInfo) SetLastExecutionResult(v TaskInfoLastExecutionResult)`
+`func (o *TaskInfo) SetLastExecutionResult(v TaskResult)`
 
 SetLastExecutionResult sets LastExecutionResult field to given value.
 

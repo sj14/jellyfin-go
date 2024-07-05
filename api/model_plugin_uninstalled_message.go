@@ -19,7 +19,8 @@ var _ MappedNullable = &PluginUninstalledMessage{}
 
 // PluginUninstalledMessage Plugin uninstalled message.
 type PluginUninstalledMessage struct {
-	Data NullablePluginUninstalledMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullablePluginInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewPluginUninstalledMessageWithDefaults() *PluginUninstalledMessage {
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PluginUninstalledMessage) GetData() PluginUninstalledMessageData {
+func (o *PluginUninstalledMessage) GetData() PluginInfo {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret PluginUninstalledMessageData
+		var ret PluginInfo
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *PluginUninstalledMessage) GetData() PluginUninstalledMessageData {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PluginUninstalledMessage) GetDataOk() (*PluginUninstalledMessageData, bool) {
+func (o *PluginUninstalledMessage) GetDataOk() (*PluginInfo, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *PluginUninstalledMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullablePluginUninstalledMessageData and assigns it to the Data field.
-func (o *PluginUninstalledMessage) SetData(v PluginUninstalledMessageData) {
+// SetData gets a reference to the given NullablePluginInfo and assigns it to the Data field.
+func (o *PluginUninstalledMessage) SetData(v PluginInfo) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil

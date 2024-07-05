@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | Pointer to [**NullablePluginInstallationCancelledMessageData**](PluginInstallationCancelledMessageData.md) |  | [optional] 
+**Data** | Pointer to [**NullableInstallationInfo**](InstallationInfo.md) | Gets or sets the data. | [optional] 
 **MessageId** | Pointer to **string** | Gets or sets the message id. | [optional] 
 **MessageType** | Pointer to [**SessionMessageType**](SessionMessageType.md) | The different kinds of messages that are used in the WebSocket api. | [optional] [readonly] [default to SESSIONMESSAGETYPE_PACKAGE_INSTALLATION_FAILED]
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetData
 
-`func (o *PluginInstallationFailedMessage) GetData() PluginInstallationCancelledMessageData`
+`func (o *PluginInstallationFailedMessage) GetData() InstallationInfo`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *PluginInstallationFailedMessage) GetDataOk() (*PluginInstallationCancelledMessageData, bool)`
+`func (o *PluginInstallationFailedMessage) GetDataOk() (*InstallationInfo, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *PluginInstallationFailedMessage) SetData(v PluginInstallationCancelledMessageData)`
+`func (o *PluginInstallationFailedMessage) SetData(v InstallationInfo)`
 
 SetData sets Data field to given value.
 

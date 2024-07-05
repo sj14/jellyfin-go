@@ -19,9 +19,12 @@ var _ MappedNullable = &AllThemeMediaResult{}
 
 // AllThemeMediaResult struct for AllThemeMediaResult
 type AllThemeMediaResult struct {
-	ThemeVideosResult NullableAllThemeMediaResultThemeVideosResult `json:"ThemeVideosResult,omitempty"`
-	ThemeSongsResult NullableAllThemeMediaResultThemeVideosResult `json:"ThemeSongsResult,omitempty"`
-	SoundtrackSongsResult NullableAllThemeMediaResultThemeVideosResult `json:"SoundtrackSongsResult,omitempty"`
+	// Class ThemeMediaResult.
+	ThemeVideosResult NullableThemeMediaResult `json:"ThemeVideosResult,omitempty"`
+	// Class ThemeMediaResult.
+	ThemeSongsResult NullableThemeMediaResult `json:"ThemeSongsResult,omitempty"`
+	// Class ThemeMediaResult.
+	SoundtrackSongsResult NullableThemeMediaResult `json:"SoundtrackSongsResult,omitempty"`
 }
 
 // NewAllThemeMediaResult instantiates a new AllThemeMediaResult object
@@ -42,9 +45,9 @@ func NewAllThemeMediaResultWithDefaults() *AllThemeMediaResult {
 }
 
 // GetThemeVideosResult returns the ThemeVideosResult field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *AllThemeMediaResult) GetThemeVideosResult() AllThemeMediaResultThemeVideosResult {
+func (o *AllThemeMediaResult) GetThemeVideosResult() ThemeMediaResult {
 	if o == nil || IsNil(o.ThemeVideosResult.Get()) {
-		var ret AllThemeMediaResultThemeVideosResult
+		var ret ThemeMediaResult
 		return ret
 	}
 	return *o.ThemeVideosResult.Get()
@@ -53,7 +56,7 @@ func (o *AllThemeMediaResult) GetThemeVideosResult() AllThemeMediaResultThemeVid
 // GetThemeVideosResultOk returns a tuple with the ThemeVideosResult field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *AllThemeMediaResult) GetThemeVideosResultOk() (*AllThemeMediaResultThemeVideosResult, bool) {
+func (o *AllThemeMediaResult) GetThemeVideosResultOk() (*ThemeMediaResult, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -69,8 +72,8 @@ func (o *AllThemeMediaResult) HasThemeVideosResult() bool {
 	return false
 }
 
-// SetThemeVideosResult gets a reference to the given NullableAllThemeMediaResultThemeVideosResult and assigns it to the ThemeVideosResult field.
-func (o *AllThemeMediaResult) SetThemeVideosResult(v AllThemeMediaResultThemeVideosResult) {
+// SetThemeVideosResult gets a reference to the given NullableThemeMediaResult and assigns it to the ThemeVideosResult field.
+func (o *AllThemeMediaResult) SetThemeVideosResult(v ThemeMediaResult) {
 	o.ThemeVideosResult.Set(&v)
 }
 // SetThemeVideosResultNil sets the value for ThemeVideosResult to be an explicit nil
@@ -84,9 +87,9 @@ func (o *AllThemeMediaResult) UnsetThemeVideosResult() {
 }
 
 // GetThemeSongsResult returns the ThemeSongsResult field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *AllThemeMediaResult) GetThemeSongsResult() AllThemeMediaResultThemeVideosResult {
+func (o *AllThemeMediaResult) GetThemeSongsResult() ThemeMediaResult {
 	if o == nil || IsNil(o.ThemeSongsResult.Get()) {
-		var ret AllThemeMediaResultThemeVideosResult
+		var ret ThemeMediaResult
 		return ret
 	}
 	return *o.ThemeSongsResult.Get()
@@ -95,7 +98,7 @@ func (o *AllThemeMediaResult) GetThemeSongsResult() AllThemeMediaResultThemeVide
 // GetThemeSongsResultOk returns a tuple with the ThemeSongsResult field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *AllThemeMediaResult) GetThemeSongsResultOk() (*AllThemeMediaResultThemeVideosResult, bool) {
+func (o *AllThemeMediaResult) GetThemeSongsResultOk() (*ThemeMediaResult, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -111,8 +114,8 @@ func (o *AllThemeMediaResult) HasThemeSongsResult() bool {
 	return false
 }
 
-// SetThemeSongsResult gets a reference to the given NullableAllThemeMediaResultThemeVideosResult and assigns it to the ThemeSongsResult field.
-func (o *AllThemeMediaResult) SetThemeSongsResult(v AllThemeMediaResultThemeVideosResult) {
+// SetThemeSongsResult gets a reference to the given NullableThemeMediaResult and assigns it to the ThemeSongsResult field.
+func (o *AllThemeMediaResult) SetThemeSongsResult(v ThemeMediaResult) {
 	o.ThemeSongsResult.Set(&v)
 }
 // SetThemeSongsResultNil sets the value for ThemeSongsResult to be an explicit nil
@@ -126,9 +129,9 @@ func (o *AllThemeMediaResult) UnsetThemeSongsResult() {
 }
 
 // GetSoundtrackSongsResult returns the SoundtrackSongsResult field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *AllThemeMediaResult) GetSoundtrackSongsResult() AllThemeMediaResultThemeVideosResult {
+func (o *AllThemeMediaResult) GetSoundtrackSongsResult() ThemeMediaResult {
 	if o == nil || IsNil(o.SoundtrackSongsResult.Get()) {
-		var ret AllThemeMediaResultThemeVideosResult
+		var ret ThemeMediaResult
 		return ret
 	}
 	return *o.SoundtrackSongsResult.Get()
@@ -137,7 +140,7 @@ func (o *AllThemeMediaResult) GetSoundtrackSongsResult() AllThemeMediaResultThem
 // GetSoundtrackSongsResultOk returns a tuple with the SoundtrackSongsResult field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *AllThemeMediaResult) GetSoundtrackSongsResultOk() (*AllThemeMediaResultThemeVideosResult, bool) {
+func (o *AllThemeMediaResult) GetSoundtrackSongsResultOk() (*ThemeMediaResult, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -153,8 +156,8 @@ func (o *AllThemeMediaResult) HasSoundtrackSongsResult() bool {
 	return false
 }
 
-// SetSoundtrackSongsResult gets a reference to the given NullableAllThemeMediaResultThemeVideosResult and assigns it to the SoundtrackSongsResult field.
-func (o *AllThemeMediaResult) SetSoundtrackSongsResult(v AllThemeMediaResultThemeVideosResult) {
+// SetSoundtrackSongsResult gets a reference to the given NullableThemeMediaResult and assigns it to the SoundtrackSongsResult field.
+func (o *AllThemeMediaResult) SetSoundtrackSongsResult(v ThemeMediaResult) {
 	o.SoundtrackSongsResult.Set(&v)
 }
 // SetSoundtrackSongsResultNil sets the value for SoundtrackSongsResult to be an explicit nil

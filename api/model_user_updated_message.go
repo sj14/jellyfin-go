@@ -19,7 +19,8 @@ var _ MappedNullable = &UserUpdatedMessage{}
 
 // UserUpdatedMessage User updated message.
 type UserUpdatedMessage struct {
-	Data NullableUserUpdatedMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullableUserDto `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewUserUpdatedMessageWithDefaults() *UserUpdatedMessage {
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *UserUpdatedMessage) GetData() UserUpdatedMessageData {
+func (o *UserUpdatedMessage) GetData() UserDto {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret UserUpdatedMessageData
+		var ret UserDto
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *UserUpdatedMessage) GetData() UserUpdatedMessageData {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *UserUpdatedMessage) GetDataOk() (*UserUpdatedMessageData, bool) {
+func (o *UserUpdatedMessage) GetDataOk() (*UserDto, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *UserUpdatedMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullableUserUpdatedMessageData and assigns it to the Data field.
-func (o *UserUpdatedMessage) SetData(v UserUpdatedMessageData) {
+// SetData gets a reference to the given NullableUserDto and assigns it to the Data field.
+func (o *UserUpdatedMessage) SetData(v UserDto) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil

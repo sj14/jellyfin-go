@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ThemeVideosResult** | Pointer to [**NullableAllThemeMediaResultThemeVideosResult**](AllThemeMediaResultThemeVideosResult.md) |  | [optional] 
-**ThemeSongsResult** | Pointer to [**NullableAllThemeMediaResultThemeVideosResult**](AllThemeMediaResultThemeVideosResult.md) |  | [optional] 
-**SoundtrackSongsResult** | Pointer to [**NullableAllThemeMediaResultThemeVideosResult**](AllThemeMediaResultThemeVideosResult.md) |  | [optional] 
+**ThemeVideosResult** | Pointer to [**NullableThemeMediaResult**](ThemeMediaResult.md) | Class ThemeMediaResult. | [optional] 
+**ThemeSongsResult** | Pointer to [**NullableThemeMediaResult**](ThemeMediaResult.md) | Class ThemeMediaResult. | [optional] 
+**SoundtrackSongsResult** | Pointer to [**NullableThemeMediaResult**](ThemeMediaResult.md) | Class ThemeMediaResult. | [optional] 
 
 ## Methods
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetThemeVideosResult
 
-`func (o *AllThemeMediaResult) GetThemeVideosResult() AllThemeMediaResultThemeVideosResult`
+`func (o *AllThemeMediaResult) GetThemeVideosResult() ThemeMediaResult`
 
 GetThemeVideosResult returns the ThemeVideosResult field if non-nil, zero value otherwise.
 
 ### GetThemeVideosResultOk
 
-`func (o *AllThemeMediaResult) GetThemeVideosResultOk() (*AllThemeMediaResultThemeVideosResult, bool)`
+`func (o *AllThemeMediaResult) GetThemeVideosResultOk() (*ThemeMediaResult, bool)`
 
 GetThemeVideosResultOk returns a tuple with the ThemeVideosResult field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetThemeVideosResult
 
-`func (o *AllThemeMediaResult) SetThemeVideosResult(v AllThemeMediaResultThemeVideosResult)`
+`func (o *AllThemeMediaResult) SetThemeVideosResult(v ThemeMediaResult)`
 
 SetThemeVideosResult sets ThemeVideosResult field to given value.
 
@@ -64,20 +64,20 @@ HasThemeVideosResult returns a boolean if a field has been set.
 UnsetThemeVideosResult ensures that no value is present for ThemeVideosResult, not even an explicit nil
 ### GetThemeSongsResult
 
-`func (o *AllThemeMediaResult) GetThemeSongsResult() AllThemeMediaResultThemeVideosResult`
+`func (o *AllThemeMediaResult) GetThemeSongsResult() ThemeMediaResult`
 
 GetThemeSongsResult returns the ThemeSongsResult field if non-nil, zero value otherwise.
 
 ### GetThemeSongsResultOk
 
-`func (o *AllThemeMediaResult) GetThemeSongsResultOk() (*AllThemeMediaResultThemeVideosResult, bool)`
+`func (o *AllThemeMediaResult) GetThemeSongsResultOk() (*ThemeMediaResult, bool)`
 
 GetThemeSongsResultOk returns a tuple with the ThemeSongsResult field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetThemeSongsResult
 
-`func (o *AllThemeMediaResult) SetThemeSongsResult(v AllThemeMediaResultThemeVideosResult)`
+`func (o *AllThemeMediaResult) SetThemeSongsResult(v ThemeMediaResult)`
 
 SetThemeSongsResult sets ThemeSongsResult field to given value.
 
@@ -99,20 +99,20 @@ HasThemeSongsResult returns a boolean if a field has been set.
 UnsetThemeSongsResult ensures that no value is present for ThemeSongsResult, not even an explicit nil
 ### GetSoundtrackSongsResult
 
-`func (o *AllThemeMediaResult) GetSoundtrackSongsResult() AllThemeMediaResultThemeVideosResult`
+`func (o *AllThemeMediaResult) GetSoundtrackSongsResult() ThemeMediaResult`
 
 GetSoundtrackSongsResult returns the SoundtrackSongsResult field if non-nil, zero value otherwise.
 
 ### GetSoundtrackSongsResultOk
 
-`func (o *AllThemeMediaResult) GetSoundtrackSongsResultOk() (*AllThemeMediaResultThemeVideosResult, bool)`
+`func (o *AllThemeMediaResult) GetSoundtrackSongsResultOk() (*ThemeMediaResult, bool)`
 
 GetSoundtrackSongsResultOk returns a tuple with the SoundtrackSongsResult field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSoundtrackSongsResult
 
-`func (o *AllThemeMediaResult) SetSoundtrackSongsResult(v AllThemeMediaResultThemeVideosResult)`
+`func (o *AllThemeMediaResult) SetSoundtrackSongsResult(v ThemeMediaResult)`
 
 SetSoundtrackSongsResult sets SoundtrackSongsResult field to given value.
 

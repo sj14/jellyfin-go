@@ -21,7 +21,8 @@ var _ MappedNullable = &PlaybackProgressInfo{}
 type PlaybackProgressInfo struct {
 	// Gets or sets a value indicating whether this instance can seek.
 	CanSeek *bool `json:"CanSeek,omitempty"`
-	Item NullablePlaybackProgressInfoItem `json:"Item,omitempty"`
+	// Gets or sets the item.
+	Item NullableBaseItemDto `json:"Item,omitempty"`
 	// Gets or sets the item identifier.
 	ItemId *string `json:"ItemId,omitempty"`
 	// Gets or sets the session id.
@@ -107,9 +108,9 @@ func (o *PlaybackProgressInfo) SetCanSeek(v bool) {
 }
 
 // GetItem returns the Item field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PlaybackProgressInfo) GetItem() PlaybackProgressInfoItem {
+func (o *PlaybackProgressInfo) GetItem() BaseItemDto {
 	if o == nil || IsNil(o.Item.Get()) {
-		var ret PlaybackProgressInfoItem
+		var ret BaseItemDto
 		return ret
 	}
 	return *o.Item.Get()
@@ -118,7 +119,7 @@ func (o *PlaybackProgressInfo) GetItem() PlaybackProgressInfoItem {
 // GetItemOk returns a tuple with the Item field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PlaybackProgressInfo) GetItemOk() (*PlaybackProgressInfoItem, bool) {
+func (o *PlaybackProgressInfo) GetItemOk() (*BaseItemDto, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -134,8 +135,8 @@ func (o *PlaybackProgressInfo) HasItem() bool {
 	return false
 }
 
-// SetItem gets a reference to the given NullablePlaybackProgressInfoItem and assigns it to the Item field.
-func (o *PlaybackProgressInfo) SetItem(v PlaybackProgressInfoItem) {
+// SetItem gets a reference to the given NullableBaseItemDto and assigns it to the Item field.
+func (o *PlaybackProgressInfo) SetItem(v BaseItemDto) {
 	o.Item.Set(&v)
 }
 // SetItemNil sets the value for Item to be an explicit nil

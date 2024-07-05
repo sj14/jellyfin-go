@@ -19,7 +19,8 @@ var _ MappedNullable = &PluginInstallingMessage{}
 
 // PluginInstallingMessage Package installing message.
 type PluginInstallingMessage struct {
-	Data NullablePluginInstallationCancelledMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullableInstallationInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewPluginInstallingMessageWithDefaults() *PluginInstallingMessage {
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PluginInstallingMessage) GetData() PluginInstallationCancelledMessageData {
+func (o *PluginInstallingMessage) GetData() InstallationInfo {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret PluginInstallationCancelledMessageData
+		var ret InstallationInfo
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *PluginInstallingMessage) GetData() PluginInstallationCancelledMessageDa
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PluginInstallingMessage) GetDataOk() (*PluginInstallationCancelledMessageData, bool) {
+func (o *PluginInstallingMessage) GetDataOk() (*InstallationInfo, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *PluginInstallingMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullablePluginInstallationCancelledMessageData and assigns it to the Data field.
-func (o *PluginInstallingMessage) SetData(v PluginInstallationCancelledMessageData) {
+// SetData gets a reference to the given NullableInstallationInfo and assigns it to the Data field.
+func (o *PluginInstallingMessage) SetData(v InstallationInfo) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil

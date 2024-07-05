@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **ItemId** | Pointer to **NullableString** | Gets or sets the item id. | [optional] 
 **EnableDirectPlay** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable direct play. | [optional] 
 **EnableDirectStream** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enale direct stream. | [optional] 
-**DeviceProfile** | Pointer to [**NullableClientCapabilitiesDeviceProfile**](ClientCapabilitiesDeviceProfile.md) |  | [optional] 
+**DeviceProfile** | Pointer to [**NullableDeviceProfile**](DeviceProfile.md) | A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.  &lt;br /&gt;  Specifically, it defines the supported &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\&quot;&gt;containers&lt;/see&gt; and  &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\&quot;&gt;codecs&lt;/see&gt; (video and/or audio, including codec profiles and levels)  the device is able to direct play (without transcoding or remuxing),  as well as which &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\&quot;&gt;containers/codecs to transcode to&lt;/see&gt; in case it isn&#39;t. | [optional] 
 **DirectPlayProtocols** | Pointer to [**[]MediaProtocol**](MediaProtocol.md) | Gets or sets the device play protocols. | [optional] 
 
 ## Methods
@@ -424,20 +424,20 @@ HasEnableDirectStream returns a boolean if a field has been set.
 UnsetEnableDirectStream ensures that no value is present for EnableDirectStream, not even an explicit nil
 ### GetDeviceProfile
 
-`func (o *OpenLiveStreamDto) GetDeviceProfile() ClientCapabilitiesDeviceProfile`
+`func (o *OpenLiveStreamDto) GetDeviceProfile() DeviceProfile`
 
 GetDeviceProfile returns the DeviceProfile field if non-nil, zero value otherwise.
 
 ### GetDeviceProfileOk
 
-`func (o *OpenLiveStreamDto) GetDeviceProfileOk() (*ClientCapabilitiesDeviceProfile, bool)`
+`func (o *OpenLiveStreamDto) GetDeviceProfileOk() (*DeviceProfile, bool)`
 
 GetDeviceProfileOk returns a tuple with the DeviceProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeviceProfile
 
-`func (o *OpenLiveStreamDto) SetDeviceProfile(v ClientCapabilitiesDeviceProfile)`
+`func (o *OpenLiveStreamDto) SetDeviceProfile(v DeviceProfile)`
 
 SetDeviceProfile sets DeviceProfile field to given value.
 

@@ -125,7 +125,8 @@ type BaseItemDto struct {
 	ParentBackdropImageTags []string `json:"ParentBackdropImageTags,omitempty"`
 	// Gets or sets the local trailer count.
 	LocalTrailerCount NullableInt32 `json:"LocalTrailerCount,omitempty"`
-	UserData NullableBaseItemDtoUserData `json:"UserData,omitempty"`
+	// Gets or sets the user data for this item based on the user it's being requested for.
+	UserData NullableUserItemDataDto `json:"UserData,omitempty"`
 	// Gets or sets the recursive item count.
 	RecursiveItemCount NullableInt32 `json:"RecursiveItemCount,omitempty"`
 	// Gets or sets the child count.
@@ -286,7 +287,8 @@ type BaseItemDto struct {
 	TimerId NullableString `json:"TimerId,omitempty"`
 	// Gets or sets the gain required for audio normalization.
 	NormalizationGain NullableFloat32 `json:"NormalizationGain,omitempty"`
-	CurrentProgram NullableBaseItemDtoCurrentProgram `json:"CurrentProgram,omitempty"`
+	// Gets or sets the current program.
+	CurrentProgram NullableBaseItemDto `json:"CurrentProgram,omitempty"`
 }
 
 // NewBaseItemDto instantiates a new BaseItemDto object
@@ -2792,9 +2794,9 @@ func (o *BaseItemDto) UnsetLocalTrailerCount() {
 }
 
 // GetUserData returns the UserData field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *BaseItemDto) GetUserData() BaseItemDtoUserData {
+func (o *BaseItemDto) GetUserData() UserItemDataDto {
 	if o == nil || IsNil(o.UserData.Get()) {
-		var ret BaseItemDtoUserData
+		var ret UserItemDataDto
 		return ret
 	}
 	return *o.UserData.Get()
@@ -2803,7 +2805,7 @@ func (o *BaseItemDto) GetUserData() BaseItemDtoUserData {
 // GetUserDataOk returns a tuple with the UserData field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BaseItemDto) GetUserDataOk() (*BaseItemDtoUserData, bool) {
+func (o *BaseItemDto) GetUserDataOk() (*UserItemDataDto, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -2819,8 +2821,8 @@ func (o *BaseItemDto) HasUserData() bool {
 	return false
 }
 
-// SetUserData gets a reference to the given NullableBaseItemDtoUserData and assigns it to the UserData field.
-func (o *BaseItemDto) SetUserData(v BaseItemDtoUserData) {
+// SetUserData gets a reference to the given NullableUserItemDataDto and assigns it to the UserData field.
+func (o *BaseItemDto) SetUserData(v UserItemDataDto) {
 	o.UserData.Set(&v)
 }
 // SetUserDataNil sets the value for UserData to be an explicit nil
@@ -6454,9 +6456,9 @@ func (o *BaseItemDto) UnsetNormalizationGain() {
 }
 
 // GetCurrentProgram returns the CurrentProgram field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *BaseItemDto) GetCurrentProgram() BaseItemDtoCurrentProgram {
+func (o *BaseItemDto) GetCurrentProgram() BaseItemDto {
 	if o == nil || IsNil(o.CurrentProgram.Get()) {
-		var ret BaseItemDtoCurrentProgram
+		var ret BaseItemDto
 		return ret
 	}
 	return *o.CurrentProgram.Get()
@@ -6465,7 +6467,7 @@ func (o *BaseItemDto) GetCurrentProgram() BaseItemDtoCurrentProgram {
 // GetCurrentProgramOk returns a tuple with the CurrentProgram field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BaseItemDto) GetCurrentProgramOk() (*BaseItemDtoCurrentProgram, bool) {
+func (o *BaseItemDto) GetCurrentProgramOk() (*BaseItemDto, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -6481,8 +6483,8 @@ func (o *BaseItemDto) HasCurrentProgram() bool {
 	return false
 }
 
-// SetCurrentProgram gets a reference to the given NullableBaseItemDtoCurrentProgram and assigns it to the CurrentProgram field.
-func (o *BaseItemDto) SetCurrentProgram(v BaseItemDtoCurrentProgram) {
+// SetCurrentProgram gets a reference to the given NullableBaseItemDto and assigns it to the CurrentProgram field.
+func (o *BaseItemDto) SetCurrentProgram(v BaseItemDto) {
 	o.CurrentProgram.Set(&v)
 }
 // SetCurrentProgramNil sets the value for CurrentProgram to be an explicit nil

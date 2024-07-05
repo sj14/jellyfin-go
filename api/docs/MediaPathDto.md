@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | Gets or sets the name of the library. | 
 **Path** | Pointer to **NullableString** | Gets or sets the path to add. | [optional] 
-**PathInfo** | Pointer to [**NullableMediaPathDtoPathInfo**](MediaPathDtoPathInfo.md) |  | [optional] 
+**PathInfo** | Pointer to [**NullableMediaPathInfo**](MediaPathInfo.md) | Gets or sets the path info. | [optional] 
 
 ## Methods
 
@@ -84,20 +84,20 @@ HasPath returns a boolean if a field has been set.
 UnsetPath ensures that no value is present for Path, not even an explicit nil
 ### GetPathInfo
 
-`func (o *MediaPathDto) GetPathInfo() MediaPathDtoPathInfo`
+`func (o *MediaPathDto) GetPathInfo() MediaPathInfo`
 
 GetPathInfo returns the PathInfo field if non-nil, zero value otherwise.
 
 ### GetPathInfoOk
 
-`func (o *MediaPathDto) GetPathInfoOk() (*MediaPathDtoPathInfo, bool)`
+`func (o *MediaPathDto) GetPathInfoOk() (*MediaPathInfo, bool)`
 
 GetPathInfoOk returns a tuple with the PathInfo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPathInfo
 
-`func (o *MediaPathDto) SetPathInfo(v MediaPathDtoPathInfo)`
+`func (o *MediaPathDto) SetPathInfo(v MediaPathInfo)`
 
 SetPathInfo sets PathInfo field to given value.
 

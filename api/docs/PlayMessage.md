@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | Pointer to [**NullablePlayMessageData**](PlayMessageData.md) |  | [optional] 
+**Data** | Pointer to [**NullablePlayRequest**](PlayRequest.md) | Gets or sets the data. | [optional] 
 **MessageId** | Pointer to **string** | Gets or sets the message id. | [optional] 
 **MessageType** | Pointer to [**SessionMessageType**](SessionMessageType.md) | The different kinds of messages that are used in the WebSocket api. | [optional] [readonly] [default to SESSIONMESSAGETYPE_PLAY]
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetData
 
-`func (o *PlayMessage) GetData() PlayMessageData`
+`func (o *PlayMessage) GetData() PlayRequest`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *PlayMessage) GetDataOk() (*PlayMessageData, bool)`
+`func (o *PlayMessage) GetDataOk() (*PlayRequest, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *PlayMessage) SetData(v PlayMessageData)`
+`func (o *PlayMessage) SetData(v PlayRequest)`
 
 SetData sets Data field to given value.
 

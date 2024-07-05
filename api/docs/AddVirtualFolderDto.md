@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LibraryOptions** | Pointer to [**NullableAddVirtualFolderDtoLibraryOptions**](AddVirtualFolderDtoLibraryOptions.md) |  | [optional] 
+**LibraryOptions** | Pointer to [**NullableLibraryOptions**](LibraryOptions.md) | Gets or sets library options. | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetLibraryOptions
 
-`func (o *AddVirtualFolderDto) GetLibraryOptions() AddVirtualFolderDtoLibraryOptions`
+`func (o *AddVirtualFolderDto) GetLibraryOptions() LibraryOptions`
 
 GetLibraryOptions returns the LibraryOptions field if non-nil, zero value otherwise.
 
 ### GetLibraryOptionsOk
 
-`func (o *AddVirtualFolderDto) GetLibraryOptionsOk() (*AddVirtualFolderDtoLibraryOptions, bool)`
+`func (o *AddVirtualFolderDto) GetLibraryOptionsOk() (*LibraryOptions, bool)`
 
 GetLibraryOptionsOk returns a tuple with the LibraryOptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLibraryOptions
 
-`func (o *AddVirtualFolderDto) SetLibraryOptions(v AddVirtualFolderDtoLibraryOptions)`
+`func (o *AddVirtualFolderDto) SetLibraryOptions(v LibraryOptions)`
 
 SetLibraryOptions sets LibraryOptions field to given value.
 

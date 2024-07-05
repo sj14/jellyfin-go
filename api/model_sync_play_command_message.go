@@ -19,7 +19,8 @@ var _ MappedNullable = &SyncPlayCommandMessage{}
 
 // SyncPlayCommandMessage Sync play command.
 type SyncPlayCommandMessage struct {
-	Data NullableSyncPlayCommandMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullableSendCommand `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewSyncPlayCommandMessageWithDefaults() *SyncPlayCommandMessage {
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *SyncPlayCommandMessage) GetData() SyncPlayCommandMessageData {
+func (o *SyncPlayCommandMessage) GetData() SendCommand {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret SyncPlayCommandMessageData
+		var ret SendCommand
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *SyncPlayCommandMessage) GetData() SyncPlayCommandMessageData {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *SyncPlayCommandMessage) GetDataOk() (*SyncPlayCommandMessageData, bool) {
+func (o *SyncPlayCommandMessage) GetDataOk() (*SendCommand, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *SyncPlayCommandMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullableSyncPlayCommandMessageData and assigns it to the Data field.
-func (o *SyncPlayCommandMessage) SetData(v SyncPlayCommandMessageData) {
+// SetData gets a reference to the given NullableSendCommand and assigns it to the Data field.
+func (o *SyncPlayCommandMessage) SetData(v SendCommand) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **AppVersion** | Pointer to **NullableString** | Gets or sets the application version. | [optional] 
 **LastUserId** | Pointer to **string** | Gets or sets the last user identifier. | [optional] 
 **DateLastActivity** | Pointer to **time.Time** | Gets or sets the date last modified. | [optional] 
-**Capabilities** | Pointer to [**NullableDeviceInfoCapabilities**](DeviceInfoCapabilities.md) |  | [optional] 
+**Capabilities** | Pointer to [**NullableClientCapabilities**](ClientCapabilities.md) | Gets or sets the capabilities. | [optional] 
 **IconUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
@@ -332,20 +332,20 @@ HasDateLastActivity returns a boolean if a field has been set.
 
 ### GetCapabilities
 
-`func (o *DeviceInfo) GetCapabilities() DeviceInfoCapabilities`
+`func (o *DeviceInfo) GetCapabilities() ClientCapabilities`
 
 GetCapabilities returns the Capabilities field if non-nil, zero value otherwise.
 
 ### GetCapabilitiesOk
 
-`func (o *DeviceInfo) GetCapabilitiesOk() (*DeviceInfoCapabilities, bool)`
+`func (o *DeviceInfo) GetCapabilitiesOk() (*ClientCapabilities, bool)`
 
 GetCapabilitiesOk returns a tuple with the Capabilities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCapabilities
 
-`func (o *DeviceInfo) SetCapabilities(v DeviceInfoCapabilities)`
+`func (o *DeviceInfo) SetCapabilities(v ClientCapabilities)`
 
 SetCapabilities sets Capabilities field to given value.
 

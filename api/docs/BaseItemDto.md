@@ -66,7 +66,7 @@ Name | Type | Description | Notes
 **ParentBackdropItemId** | Pointer to **NullableString** | Gets or sets whether the item has any backdrops, this will hold the Id of the Parent that has one. | [optional] 
 **ParentBackdropImageTags** | Pointer to **[]string** | Gets or sets the parent backdrop image tags. | [optional] 
 **LocalTrailerCount** | Pointer to **NullableInt32** | Gets or sets the local trailer count. | [optional] 
-**UserData** | Pointer to [**NullableBaseItemDtoUserData**](BaseItemDtoUserData.md) |  | [optional] 
+**UserData** | Pointer to [**NullableUserItemDataDto**](UserItemDataDto.md) | Gets or sets the user data for this item based on the user it&#39;s being requested for. | [optional] 
 **RecursiveItemCount** | Pointer to **NullableInt32** | Gets or sets the recursive item count. | [optional] 
 **ChildCount** | Pointer to **NullableInt32** | Gets or sets the child count. | [optional] 
 **SeriesName** | Pointer to **NullableString** | Gets or sets the name of the series. | [optional] 
@@ -156,7 +156,7 @@ Name | Type | Description | Notes
 **IsPremiere** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance is premiere. | [optional] 
 **TimerId** | Pointer to **NullableString** | Gets or sets the timer identifier. | [optional] 
 **NormalizationGain** | Pointer to **NullableFloat32** | Gets or sets the gain required for audio normalization. | [optional] 
-**CurrentProgram** | Pointer to [**NullableBaseItemDtoCurrentProgram**](BaseItemDtoCurrentProgram.md) |  | [optional] 
+**CurrentProgram** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | Gets or sets the current program. | [optional] 
 
 ## Methods
 
@@ -2329,20 +2329,20 @@ HasLocalTrailerCount returns a boolean if a field has been set.
 UnsetLocalTrailerCount ensures that no value is present for LocalTrailerCount, not even an explicit nil
 ### GetUserData
 
-`func (o *BaseItemDto) GetUserData() BaseItemDtoUserData`
+`func (o *BaseItemDto) GetUserData() UserItemDataDto`
 
 GetUserData returns the UserData field if non-nil, zero value otherwise.
 
 ### GetUserDataOk
 
-`func (o *BaseItemDto) GetUserDataOk() (*BaseItemDtoUserData, bool)`
+`func (o *BaseItemDto) GetUserDataOk() (*UserItemDataDto, bool)`
 
 GetUserDataOk returns a tuple with the UserData field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUserData
 
-`func (o *BaseItemDto) SetUserData(v BaseItemDtoUserData)`
+`func (o *BaseItemDto) SetUserData(v UserItemDataDto)`
 
 SetUserData sets UserData field to given value.
 
@@ -5469,20 +5469,20 @@ HasNormalizationGain returns a boolean if a field has been set.
 UnsetNormalizationGain ensures that no value is present for NormalizationGain, not even an explicit nil
 ### GetCurrentProgram
 
-`func (o *BaseItemDto) GetCurrentProgram() BaseItemDtoCurrentProgram`
+`func (o *BaseItemDto) GetCurrentProgram() BaseItemDto`
 
 GetCurrentProgram returns the CurrentProgram field if non-nil, zero value otherwise.
 
 ### GetCurrentProgramOk
 
-`func (o *BaseItemDto) GetCurrentProgramOk() (*BaseItemDtoCurrentProgram, bool)`
+`func (o *BaseItemDto) GetCurrentProgramOk() (*BaseItemDto, bool)`
 
 GetCurrentProgramOk returns a tuple with the CurrentProgram field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCurrentProgram
 
-`func (o *BaseItemDto) SetCurrentProgram(v BaseItemDtoCurrentProgram)`
+`func (o *BaseItemDto) SetCurrentProgram(v BaseItemDto)`
 
 SetCurrentProgram sets CurrentProgram field to given value.
 

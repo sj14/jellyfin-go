@@ -19,7 +19,8 @@ var _ MappedNullable = &SyncPlayGroupUpdateCommandMessage{}
 
 // SyncPlayGroupUpdateCommandMessage Untyped sync play command.
 type SyncPlayGroupUpdateCommandMessage struct {
-	Data NullableSyncPlayGroupUpdateCommandMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullableGroupUpdate `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewSyncPlayGroupUpdateCommandMessageWithDefaults() *SyncPlayGroupUpdateComm
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *SyncPlayGroupUpdateCommandMessage) GetData() SyncPlayGroupUpdateCommandMessageData {
+func (o *SyncPlayGroupUpdateCommandMessage) GetData() GroupUpdate {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret SyncPlayGroupUpdateCommandMessageData
+		var ret GroupUpdate
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *SyncPlayGroupUpdateCommandMessage) GetData() SyncPlayGroupUpdateCommand
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *SyncPlayGroupUpdateCommandMessage) GetDataOk() (*SyncPlayGroupUpdateCommandMessageData, bool) {
+func (o *SyncPlayGroupUpdateCommandMessage) GetDataOk() (*GroupUpdate, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *SyncPlayGroupUpdateCommandMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullableSyncPlayGroupUpdateCommandMessageData and assigns it to the Data field.
-func (o *SyncPlayGroupUpdateCommandMessage) SetData(v SyncPlayGroupUpdateCommandMessageData) {
+// SetData gets a reference to the given NullableGroupUpdate and assigns it to the Data field.
+func (o *SyncPlayGroupUpdateCommandMessage) SetData(v GroupUpdate) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil

@@ -41,7 +41,8 @@ type OpenLiveStreamDto struct {
 	EnableDirectPlay NullableBool `json:"EnableDirectPlay,omitempty"`
 	// Gets or sets a value indicating whether to enale direct stream.
 	EnableDirectStream NullableBool `json:"EnableDirectStream,omitempty"`
-	DeviceProfile NullableClientCapabilitiesDeviceProfile `json:"DeviceProfile,omitempty"`
+	// A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.  <br />  Specifically, it defines the supported <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see> and  <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\">codecs</see> (video and/or audio, including codec profiles and levels)  the device is able to direct play (without transcoding or remuxing),  as well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\">containers/codecs to transcode to</see> in case it isn't.
+	DeviceProfile NullableDeviceProfile `json:"DeviceProfile,omitempty"`
 	// Gets or sets the device play protocols.
 	DirectPlayProtocols []MediaProtocol `json:"DirectPlayProtocols,omitempty"`
 }
@@ -526,9 +527,9 @@ func (o *OpenLiveStreamDto) UnsetEnableDirectStream() {
 }
 
 // GetDeviceProfile returns the DeviceProfile field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *OpenLiveStreamDto) GetDeviceProfile() ClientCapabilitiesDeviceProfile {
+func (o *OpenLiveStreamDto) GetDeviceProfile() DeviceProfile {
 	if o == nil || IsNil(o.DeviceProfile.Get()) {
-		var ret ClientCapabilitiesDeviceProfile
+		var ret DeviceProfile
 		return ret
 	}
 	return *o.DeviceProfile.Get()
@@ -537,7 +538,7 @@ func (o *OpenLiveStreamDto) GetDeviceProfile() ClientCapabilitiesDeviceProfile {
 // GetDeviceProfileOk returns a tuple with the DeviceProfile field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *OpenLiveStreamDto) GetDeviceProfileOk() (*ClientCapabilitiesDeviceProfile, bool) {
+func (o *OpenLiveStreamDto) GetDeviceProfileOk() (*DeviceProfile, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -553,8 +554,8 @@ func (o *OpenLiveStreamDto) HasDeviceProfile() bool {
 	return false
 }
 
-// SetDeviceProfile gets a reference to the given NullableClientCapabilitiesDeviceProfile and assigns it to the DeviceProfile field.
-func (o *OpenLiveStreamDto) SetDeviceProfile(v ClientCapabilitiesDeviceProfile) {
+// SetDeviceProfile gets a reference to the given NullableDeviceProfile and assigns it to the DeviceProfile field.
+func (o *OpenLiveStreamDto) SetDeviceProfile(v DeviceProfile) {
 	o.DeviceProfile.Set(&v)
 }
 // SetDeviceProfileNil sets the value for DeviceProfile to be an explicit nil

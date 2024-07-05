@@ -12,6 +12,7 @@ package api
 
 import (
 	"encoding/json"
+	"gopkg.in/validator.v2"
 	"fmt"
 )
 
@@ -47,7 +48,11 @@ func (dst *WebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonInboundWebSocketMessage) == "{}" { // empty struct
 			dst.InboundWebSocketMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.InboundWebSocketMessage); err != nil {
+				dst.InboundWebSocketMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.InboundWebSocketMessage = nil
@@ -60,7 +65,11 @@ func (dst *WebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonOutboundWebSocketMessage) == "{}" { // empty struct
 			dst.OutboundWebSocketMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.OutboundWebSocketMessage); err != nil {
+				dst.OutboundWebSocketMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.OutboundWebSocketMessage = nil

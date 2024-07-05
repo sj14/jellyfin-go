@@ -36,7 +36,8 @@ type DeviceInfo struct {
 	LastUserId *string `json:"LastUserId,omitempty"`
 	// Gets or sets the date last modified.
 	DateLastActivity *time.Time `json:"DateLastActivity,omitempty"`
-	Capabilities NullableDeviceInfoCapabilities `json:"Capabilities,omitempty"`
+	// Gets or sets the capabilities.
+	Capabilities NullableClientCapabilities `json:"Capabilities,omitempty"`
 	IconUrl NullableString `json:"IconUrl,omitempty"`
 }
 
@@ -416,9 +417,9 @@ func (o *DeviceInfo) SetDateLastActivity(v time.Time) {
 }
 
 // GetCapabilities returns the Capabilities field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *DeviceInfo) GetCapabilities() DeviceInfoCapabilities {
+func (o *DeviceInfo) GetCapabilities() ClientCapabilities {
 	if o == nil || IsNil(o.Capabilities.Get()) {
-		var ret DeviceInfoCapabilities
+		var ret ClientCapabilities
 		return ret
 	}
 	return *o.Capabilities.Get()
@@ -427,7 +428,7 @@ func (o *DeviceInfo) GetCapabilities() DeviceInfoCapabilities {
 // GetCapabilitiesOk returns a tuple with the Capabilities field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *DeviceInfo) GetCapabilitiesOk() (*DeviceInfoCapabilities, bool) {
+func (o *DeviceInfo) GetCapabilitiesOk() (*ClientCapabilities, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -443,8 +444,8 @@ func (o *DeviceInfo) HasCapabilities() bool {
 	return false
 }
 
-// SetCapabilities gets a reference to the given NullableDeviceInfoCapabilities and assigns it to the Capabilities field.
-func (o *DeviceInfo) SetCapabilities(v DeviceInfoCapabilities) {
+// SetCapabilities gets a reference to the given NullableClientCapabilities and assigns it to the Capabilities field.
+func (o *DeviceInfo) SetCapabilities(v ClientCapabilities) {
 	o.Capabilities.Set(&v)
 }
 // SetCapabilitiesNil sets the value for Capabilities to be an explicit nil
