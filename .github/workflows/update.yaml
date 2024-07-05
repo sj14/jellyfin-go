@@ -33,6 +33,12 @@ jobs:
           git add --all
           set +o pipefail # it should not stop on failure
           echo "changed=$(git diff --cached --exit-code >/dev/null 2>&1 || echo $?)" >> "$GITHUB_OUTPUT"
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - name: Go mod tidy
+        run: go mod tidy
       - name: Create pull request
         if: ${{ steps.generate.outputs.changed == '1' }}
         run: |
