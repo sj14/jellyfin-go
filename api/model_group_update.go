@@ -12,6 +12,7 @@ package api
 
 import (
 	"encoding/json"
+	"gopkg.in/validator.v2"
 	"fmt"
 )
 
@@ -63,7 +64,11 @@ func (dst *GroupUpdate) UnmarshalJSON(data []byte) error {
 		if string(jsonGroupInfoDtoGroupUpdate) == "{}" { // empty struct
 			dst.GroupInfoDtoGroupUpdate = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.GroupInfoDtoGroupUpdate); err != nil {
+				dst.GroupInfoDtoGroupUpdate = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.GroupInfoDtoGroupUpdate = nil
@@ -76,7 +81,11 @@ func (dst *GroupUpdate) UnmarshalJSON(data []byte) error {
 		if string(jsonGroupStateUpdateGroupUpdate) == "{}" { // empty struct
 			dst.GroupStateUpdateGroupUpdate = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.GroupStateUpdateGroupUpdate); err != nil {
+				dst.GroupStateUpdateGroupUpdate = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.GroupStateUpdateGroupUpdate = nil
@@ -89,7 +98,11 @@ func (dst *GroupUpdate) UnmarshalJSON(data []byte) error {
 		if string(jsonPlayQueueUpdateGroupUpdate) == "{}" { // empty struct
 			dst.PlayQueueUpdateGroupUpdate = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.PlayQueueUpdateGroupUpdate); err != nil {
+				dst.PlayQueueUpdateGroupUpdate = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.PlayQueueUpdateGroupUpdate = nil
@@ -102,7 +115,11 @@ func (dst *GroupUpdate) UnmarshalJSON(data []byte) error {
 		if string(jsonStringGroupUpdate) == "{}" { // empty struct
 			dst.StringGroupUpdate = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.StringGroupUpdate); err != nil {
+				dst.StringGroupUpdate = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.StringGroupUpdate = nil

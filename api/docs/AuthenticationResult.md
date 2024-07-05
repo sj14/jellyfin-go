@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**User** | Pointer to [**NullableAuthenticationResultUser**](AuthenticationResultUser.md) |  | [optional] 
-**SessionInfo** | Pointer to [**NullableAuthenticationResultSessionInfo**](AuthenticationResultSessionInfo.md) |  | [optional] 
+**User** | Pointer to [**NullableUserDto**](UserDto.md) | Class UserDto. | [optional] 
+**SessionInfo** | Pointer to [**NullableSessionInfo**](SessionInfo.md) | Class SessionInfo. | [optional] 
 **AccessToken** | Pointer to **NullableString** |  | [optional] 
 **ServerId** | Pointer to **NullableString** |  | [optional] 
 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetUser
 
-`func (o *AuthenticationResult) GetUser() AuthenticationResultUser`
+`func (o *AuthenticationResult) GetUser() UserDto`
 
 GetUser returns the User field if non-nil, zero value otherwise.
 
 ### GetUserOk
 
-`func (o *AuthenticationResult) GetUserOk() (*AuthenticationResultUser, bool)`
+`func (o *AuthenticationResult) GetUserOk() (*UserDto, bool)`
 
 GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUser
 
-`func (o *AuthenticationResult) SetUser(v AuthenticationResultUser)`
+`func (o *AuthenticationResult) SetUser(v UserDto)`
 
 SetUser sets User field to given value.
 
@@ -65,20 +65,20 @@ HasUser returns a boolean if a field has been set.
 UnsetUser ensures that no value is present for User, not even an explicit nil
 ### GetSessionInfo
 
-`func (o *AuthenticationResult) GetSessionInfo() AuthenticationResultSessionInfo`
+`func (o *AuthenticationResult) GetSessionInfo() SessionInfo`
 
 GetSessionInfo returns the SessionInfo field if non-nil, zero value otherwise.
 
 ### GetSessionInfoOk
 
-`func (o *AuthenticationResult) GetSessionInfoOk() (*AuthenticationResultSessionInfo, bool)`
+`func (o *AuthenticationResult) GetSessionInfoOk() (*SessionInfo, bool)`
 
 GetSessionInfoOk returns a tuple with the SessionInfo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSessionInfo
 
-`func (o *AuthenticationResult) SetSessionInfo(v AuthenticationResultSessionInfo)`
+`func (o *AuthenticationResult) SetSessionInfo(v SessionInfo)`
 
 SetSessionInfo sets SessionInfo field to given value.
 

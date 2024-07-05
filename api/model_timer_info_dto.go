@@ -71,7 +71,8 @@ type TimerInfoDto struct {
 	ExternalSeriesTimerId NullableString `json:"ExternalSeriesTimerId,omitempty"`
 	// Gets or sets the run time ticks.
 	RunTimeTicks NullableInt64 `json:"RunTimeTicks,omitempty"`
-	ProgramInfo NullableTimerInfoDtoProgramInfo `json:"ProgramInfo,omitempty"`
+	// Gets or sets the program information.
+	ProgramInfo NullableBaseItemDto `json:"ProgramInfo,omitempty"`
 }
 
 // NewTimerInfoDto instantiates a new TimerInfoDto object
@@ -1117,9 +1118,9 @@ func (o *TimerInfoDto) UnsetRunTimeTicks() {
 }
 
 // GetProgramInfo returns the ProgramInfo field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *TimerInfoDto) GetProgramInfo() TimerInfoDtoProgramInfo {
+func (o *TimerInfoDto) GetProgramInfo() BaseItemDto {
 	if o == nil || IsNil(o.ProgramInfo.Get()) {
-		var ret TimerInfoDtoProgramInfo
+		var ret BaseItemDto
 		return ret
 	}
 	return *o.ProgramInfo.Get()
@@ -1128,7 +1129,7 @@ func (o *TimerInfoDto) GetProgramInfo() TimerInfoDtoProgramInfo {
 // GetProgramInfoOk returns a tuple with the ProgramInfo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TimerInfoDto) GetProgramInfoOk() (*TimerInfoDtoProgramInfo, bool) {
+func (o *TimerInfoDto) GetProgramInfoOk() (*BaseItemDto, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1144,8 +1145,8 @@ func (o *TimerInfoDto) HasProgramInfo() bool {
 	return false
 }
 
-// SetProgramInfo gets a reference to the given NullableTimerInfoDtoProgramInfo and assigns it to the ProgramInfo field.
-func (o *TimerInfoDto) SetProgramInfo(v TimerInfoDtoProgramInfo) {
+// SetProgramInfo gets a reference to the given NullableBaseItemDto and assigns it to the ProgramInfo field.
+func (o *TimerInfoDto) SetProgramInfo(v BaseItemDto) {
 	o.ProgramInfo.Set(&v)
 }
 // SetProgramInfoNil sets the value for ProgramInfo to be an explicit nil

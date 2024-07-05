@@ -19,7 +19,8 @@ var _ MappedNullable = &AddVirtualFolderDto{}
 
 // AddVirtualFolderDto Add virtual folder dto.
 type AddVirtualFolderDto struct {
-	LibraryOptions NullableAddVirtualFolderDtoLibraryOptions `json:"LibraryOptions,omitempty"`
+	// Gets or sets library options.
+	LibraryOptions NullableLibraryOptions `json:"LibraryOptions,omitempty"`
 }
 
 // NewAddVirtualFolderDto instantiates a new AddVirtualFolderDto object
@@ -40,9 +41,9 @@ func NewAddVirtualFolderDtoWithDefaults() *AddVirtualFolderDto {
 }
 
 // GetLibraryOptions returns the LibraryOptions field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *AddVirtualFolderDto) GetLibraryOptions() AddVirtualFolderDtoLibraryOptions {
+func (o *AddVirtualFolderDto) GetLibraryOptions() LibraryOptions {
 	if o == nil || IsNil(o.LibraryOptions.Get()) {
-		var ret AddVirtualFolderDtoLibraryOptions
+		var ret LibraryOptions
 		return ret
 	}
 	return *o.LibraryOptions.Get()
@@ -51,7 +52,7 @@ func (o *AddVirtualFolderDto) GetLibraryOptions() AddVirtualFolderDtoLibraryOpti
 // GetLibraryOptionsOk returns a tuple with the LibraryOptions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *AddVirtualFolderDto) GetLibraryOptionsOk() (*AddVirtualFolderDtoLibraryOptions, bool) {
+func (o *AddVirtualFolderDto) GetLibraryOptionsOk() (*LibraryOptions, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -67,8 +68,8 @@ func (o *AddVirtualFolderDto) HasLibraryOptions() bool {
 	return false
 }
 
-// SetLibraryOptions gets a reference to the given NullableAddVirtualFolderDtoLibraryOptions and assigns it to the LibraryOptions field.
-func (o *AddVirtualFolderDto) SetLibraryOptions(v AddVirtualFolderDtoLibraryOptions) {
+// SetLibraryOptions gets a reference to the given NullableLibraryOptions and assigns it to the LibraryOptions field.
+func (o *AddVirtualFolderDto) SetLibraryOptions(v LibraryOptions) {
 	o.LibraryOptions.Set(&v)
 }
 // SetLibraryOptionsNil sets the value for LibraryOptions to be an explicit nil

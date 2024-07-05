@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Changelog** | Pointer to **NullableString** | Gets or sets the changelog for this version. | [optional] 
 **SourceUrl** | Pointer to **NullableString** | Gets or sets the source URL. | [optional] 
 **Checksum** | Pointer to **NullableString** | Gets or sets a checksum for the binary. | [optional] 
-**PackageInfo** | Pointer to [**NullableInstallationInfoPackageInfo**](InstallationInfoPackageInfo.md) |  | [optional] 
+**PackageInfo** | Pointer to [**NullablePackageInfo**](PackageInfo.md) | Gets or sets package information for the installation. | [optional] 
 
 ## Methods
 
@@ -233,20 +233,20 @@ HasChecksum returns a boolean if a field has been set.
 UnsetChecksum ensures that no value is present for Checksum, not even an explicit nil
 ### GetPackageInfo
 
-`func (o *InstallationInfo) GetPackageInfo() InstallationInfoPackageInfo`
+`func (o *InstallationInfo) GetPackageInfo() PackageInfo`
 
 GetPackageInfo returns the PackageInfo field if non-nil, zero value otherwise.
 
 ### GetPackageInfoOk
 
-`func (o *InstallationInfo) GetPackageInfoOk() (*InstallationInfoPackageInfo, bool)`
+`func (o *InstallationInfo) GetPackageInfoOk() (*PackageInfo, bool)`
 
 GetPackageInfoOk returns a tuple with the PackageInfo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPackageInfo
 
-`func (o *InstallationInfo) SetPackageInfo(v InstallationInfoPackageInfo)`
+`func (o *InstallationInfo) SetPackageInfo(v PackageInfo)`
 
 SetPackageInfo sets PackageInfo field to given value.
 

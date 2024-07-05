@@ -12,6 +12,7 @@ package api
 
 import (
 	"encoding/json"
+	"gopkg.in/validator.v2"
 	"fmt"
 )
 
@@ -87,7 +88,11 @@ func (dst *InboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonActivityLogEntryStartMessage) == "{}" { // empty struct
 			dst.ActivityLogEntryStartMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ActivityLogEntryStartMessage); err != nil {
+				dst.ActivityLogEntryStartMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ActivityLogEntryStartMessage = nil
@@ -100,7 +105,11 @@ func (dst *InboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonActivityLogEntryStopMessage) == "{}" { // empty struct
 			dst.ActivityLogEntryStopMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ActivityLogEntryStopMessage); err != nil {
+				dst.ActivityLogEntryStopMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ActivityLogEntryStopMessage = nil
@@ -113,7 +122,11 @@ func (dst *InboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonInboundKeepAliveMessage) == "{}" { // empty struct
 			dst.InboundKeepAliveMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.InboundKeepAliveMessage); err != nil {
+				dst.InboundKeepAliveMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.InboundKeepAliveMessage = nil
@@ -126,7 +139,11 @@ func (dst *InboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonScheduledTasksInfoStartMessage) == "{}" { // empty struct
 			dst.ScheduledTasksInfoStartMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ScheduledTasksInfoStartMessage); err != nil {
+				dst.ScheduledTasksInfoStartMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ScheduledTasksInfoStartMessage = nil
@@ -139,7 +156,11 @@ func (dst *InboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonScheduledTasksInfoStopMessage) == "{}" { // empty struct
 			dst.ScheduledTasksInfoStopMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.ScheduledTasksInfoStopMessage); err != nil {
+				dst.ScheduledTasksInfoStopMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.ScheduledTasksInfoStopMessage = nil
@@ -152,7 +173,11 @@ func (dst *InboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonSessionsStartMessage) == "{}" { // empty struct
 			dst.SessionsStartMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.SessionsStartMessage); err != nil {
+				dst.SessionsStartMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.SessionsStartMessage = nil
@@ -165,7 +190,11 @@ func (dst *InboundWebSocketMessage) UnmarshalJSON(data []byte) error {
 		if string(jsonSessionsStopMessage) == "{}" { // empty struct
 			dst.SessionsStopMessage = nil
 		} else {
-			match++
+			if err = validator.Validate(dst.SessionsStopMessage); err != nil {
+				dst.SessionsStopMessage = nil
+			} else {
+				match++
+			}
 		}
 	} else {
 		dst.SessionsStopMessage = nil

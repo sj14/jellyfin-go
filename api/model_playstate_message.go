@@ -19,7 +19,8 @@ var _ MappedNullable = &PlaystateMessage{}
 
 // PlaystateMessage Playstate message.
 type PlaystateMessage struct {
-	Data NullablePlaystateMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullablePlaystateRequest `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewPlaystateMessageWithDefaults() *PlaystateMessage {
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PlaystateMessage) GetData() PlaystateMessageData {
+func (o *PlaystateMessage) GetData() PlaystateRequest {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret PlaystateMessageData
+		var ret PlaystateRequest
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *PlaystateMessage) GetData() PlaystateMessageData {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PlaystateMessage) GetDataOk() (*PlaystateMessageData, bool) {
+func (o *PlaystateMessage) GetDataOk() (*PlaystateRequest, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *PlaystateMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullablePlaystateMessageData and assigns it to the Data field.
-func (o *PlaystateMessage) SetData(v PlaystateMessageData) {
+// SetData gets a reference to the given NullablePlaystateRequest and assigns it to the Data field.
+func (o *PlaystateMessage) SetData(v PlaystateRequest) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil

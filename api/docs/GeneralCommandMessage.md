@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | Pointer to [**NullableGeneralCommandMessageData**](GeneralCommandMessageData.md) |  | [optional] 
+**Data** | Pointer to [**NullableGeneralCommand**](GeneralCommand.md) | Gets or sets the data. | [optional] 
 **MessageId** | Pointer to **string** | Gets or sets the message id. | [optional] 
 **MessageType** | Pointer to [**SessionMessageType**](SessionMessageType.md) | The different kinds of messages that are used in the WebSocket api. | [optional] [readonly] [default to SESSIONMESSAGETYPE_GENERAL_COMMAND]
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetData
 
-`func (o *GeneralCommandMessage) GetData() GeneralCommandMessageData`
+`func (o *GeneralCommandMessage) GetData() GeneralCommand`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GeneralCommandMessage) GetDataOk() (*GeneralCommandMessageData, bool)`
+`func (o *GeneralCommandMessage) GetDataOk() (*GeneralCommand, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GeneralCommandMessage) SetData(v GeneralCommandMessageData)`
+`func (o *GeneralCommandMessage) SetData(v GeneralCommand)`
 
 SetData sets Data field to given value.
 

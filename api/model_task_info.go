@@ -27,7 +27,8 @@ type TaskInfo struct {
 	CurrentProgressPercentage NullableFloat64 `json:"CurrentProgressPercentage,omitempty"`
 	// Gets or sets the id.
 	Id NullableString `json:"Id,omitempty"`
-	LastExecutionResult NullableTaskInfoLastExecutionResult `json:"LastExecutionResult,omitempty"`
+	// Gets or sets the last execution result.
+	LastExecutionResult NullableTaskResult `json:"LastExecutionResult,omitempty"`
 	// Gets or sets the triggers.
 	Triggers []TaskTriggerInfo `json:"Triggers,omitempty"`
 	// Gets or sets the description.
@@ -216,9 +217,9 @@ func (o *TaskInfo) UnsetId() {
 }
 
 // GetLastExecutionResult returns the LastExecutionResult field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *TaskInfo) GetLastExecutionResult() TaskInfoLastExecutionResult {
+func (o *TaskInfo) GetLastExecutionResult() TaskResult {
 	if o == nil || IsNil(o.LastExecutionResult.Get()) {
-		var ret TaskInfoLastExecutionResult
+		var ret TaskResult
 		return ret
 	}
 	return *o.LastExecutionResult.Get()
@@ -227,7 +228,7 @@ func (o *TaskInfo) GetLastExecutionResult() TaskInfoLastExecutionResult {
 // GetLastExecutionResultOk returns a tuple with the LastExecutionResult field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TaskInfo) GetLastExecutionResultOk() (*TaskInfoLastExecutionResult, bool) {
+func (o *TaskInfo) GetLastExecutionResultOk() (*TaskResult, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -243,8 +244,8 @@ func (o *TaskInfo) HasLastExecutionResult() bool {
 	return false
 }
 
-// SetLastExecutionResult gets a reference to the given NullableTaskInfoLastExecutionResult and assigns it to the LastExecutionResult field.
-func (o *TaskInfo) SetLastExecutionResult(v TaskInfoLastExecutionResult) {
+// SetLastExecutionResult gets a reference to the given NullableTaskResult and assigns it to the LastExecutionResult field.
+func (o *TaskInfo) SetLastExecutionResult(v TaskResult) {
 	o.LastExecutionResult.Set(&v)
 }
 // SetLastExecutionResultNil sets the value for LastExecutionResult to be an explicit nil

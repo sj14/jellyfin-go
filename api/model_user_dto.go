@@ -43,8 +43,10 @@ type UserDto struct {
 	LastLoginDate NullableTime `json:"LastLoginDate,omitempty"`
 	// Gets or sets the last activity date.
 	LastActivityDate NullableTime `json:"LastActivityDate,omitempty"`
-	Configuration NullableUserDtoConfiguration `json:"Configuration,omitempty"`
-	Policy NullableUserDtoPolicy `json:"Policy,omitempty"`
+	// Gets or sets the configuration.
+	Configuration NullableUserConfiguration `json:"Configuration,omitempty"`
+	// Gets or sets the policy.
+	Policy NullableUserPolicy `json:"Policy,omitempty"`
 	// Gets or sets the primary image aspect ratio.
 	PrimaryImageAspectRatio NullableFloat64 `json:"PrimaryImageAspectRatio,omitempty"`
 }
@@ -492,9 +494,9 @@ func (o *UserDto) UnsetLastActivityDate() {
 }
 
 // GetConfiguration returns the Configuration field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *UserDto) GetConfiguration() UserDtoConfiguration {
+func (o *UserDto) GetConfiguration() UserConfiguration {
 	if o == nil || IsNil(o.Configuration.Get()) {
-		var ret UserDtoConfiguration
+		var ret UserConfiguration
 		return ret
 	}
 	return *o.Configuration.Get()
@@ -503,7 +505,7 @@ func (o *UserDto) GetConfiguration() UserDtoConfiguration {
 // GetConfigurationOk returns a tuple with the Configuration field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *UserDto) GetConfigurationOk() (*UserDtoConfiguration, bool) {
+func (o *UserDto) GetConfigurationOk() (*UserConfiguration, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -519,8 +521,8 @@ func (o *UserDto) HasConfiguration() bool {
 	return false
 }
 
-// SetConfiguration gets a reference to the given NullableUserDtoConfiguration and assigns it to the Configuration field.
-func (o *UserDto) SetConfiguration(v UserDtoConfiguration) {
+// SetConfiguration gets a reference to the given NullableUserConfiguration and assigns it to the Configuration field.
+func (o *UserDto) SetConfiguration(v UserConfiguration) {
 	o.Configuration.Set(&v)
 }
 // SetConfigurationNil sets the value for Configuration to be an explicit nil
@@ -534,9 +536,9 @@ func (o *UserDto) UnsetConfiguration() {
 }
 
 // GetPolicy returns the Policy field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *UserDto) GetPolicy() UserDtoPolicy {
+func (o *UserDto) GetPolicy() UserPolicy {
 	if o == nil || IsNil(o.Policy.Get()) {
-		var ret UserDtoPolicy
+		var ret UserPolicy
 		return ret
 	}
 	return *o.Policy.Get()
@@ -545,7 +547,7 @@ func (o *UserDto) GetPolicy() UserDtoPolicy {
 // GetPolicyOk returns a tuple with the Policy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *UserDto) GetPolicyOk() (*UserDtoPolicy, bool) {
+func (o *UserDto) GetPolicyOk() (*UserPolicy, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -561,8 +563,8 @@ func (o *UserDto) HasPolicy() bool {
 	return false
 }
 
-// SetPolicy gets a reference to the given NullableUserDtoPolicy and assigns it to the Policy field.
-func (o *UserDto) SetPolicy(v UserDtoPolicy) {
+// SetPolicy gets a reference to the given NullableUserPolicy and assigns it to the Policy field.
+func (o *UserDto) SetPolicy(v UserPolicy) {
 	o.Policy.Set(&v)
 }
 // SetPolicyNil sets the value for Policy to be an explicit nil

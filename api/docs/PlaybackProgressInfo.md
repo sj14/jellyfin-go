@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CanSeek** | Pointer to **bool** | Gets or sets a value indicating whether this instance can seek. | [optional] 
-**Item** | Pointer to [**NullablePlaybackProgressInfoItem**](PlaybackProgressInfoItem.md) |  | [optional] 
+**Item** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | Gets or sets the item. | [optional] 
 **ItemId** | Pointer to **string** | Gets or sets the item identifier. | [optional] 
 **SessionId** | Pointer to **NullableString** | Gets or sets the session id. | [optional] 
 **MediaSourceId** | Pointer to **NullableString** | Gets or sets the media version identifier. | [optional] 
@@ -72,20 +72,20 @@ HasCanSeek returns a boolean if a field has been set.
 
 ### GetItem
 
-`func (o *PlaybackProgressInfo) GetItem() PlaybackProgressInfoItem`
+`func (o *PlaybackProgressInfo) GetItem() BaseItemDto`
 
 GetItem returns the Item field if non-nil, zero value otherwise.
 
 ### GetItemOk
 
-`func (o *PlaybackProgressInfo) GetItemOk() (*PlaybackProgressInfoItem, bool)`
+`func (o *PlaybackProgressInfo) GetItemOk() (*BaseItemDto, bool)`
 
 GetItemOk returns a tuple with the Item field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItem
 
-`func (o *PlaybackProgressInfo) SetItem(v PlaybackProgressInfoItem)`
+`func (o *PlaybackProgressInfo) SetItem(v BaseItemDto)`
 
 SetItem sets Item field to given value.
 

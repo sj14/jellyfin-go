@@ -31,7 +31,8 @@ type InstallationInfo struct {
 	SourceUrl NullableString `json:"SourceUrl,omitempty"`
 	// Gets or sets a checksum for the binary.
 	Checksum NullableString `json:"Checksum,omitempty"`
-	PackageInfo NullableInstallationInfoPackageInfo `json:"PackageInfo,omitempty"`
+	// Gets or sets package information for the installation.
+	PackageInfo NullablePackageInfo `json:"PackageInfo,omitempty"`
 }
 
 // NewInstallationInfo instantiates a new InstallationInfo object
@@ -294,9 +295,9 @@ func (o *InstallationInfo) UnsetChecksum() {
 }
 
 // GetPackageInfo returns the PackageInfo field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *InstallationInfo) GetPackageInfo() InstallationInfoPackageInfo {
+func (o *InstallationInfo) GetPackageInfo() PackageInfo {
 	if o == nil || IsNil(o.PackageInfo.Get()) {
-		var ret InstallationInfoPackageInfo
+		var ret PackageInfo
 		return ret
 	}
 	return *o.PackageInfo.Get()
@@ -305,7 +306,7 @@ func (o *InstallationInfo) GetPackageInfo() InstallationInfoPackageInfo {
 // GetPackageInfoOk returns a tuple with the PackageInfo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *InstallationInfo) GetPackageInfoOk() (*InstallationInfoPackageInfo, bool) {
+func (o *InstallationInfo) GetPackageInfoOk() (*PackageInfo, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -321,8 +322,8 @@ func (o *InstallationInfo) HasPackageInfo() bool {
 	return false
 }
 
-// SetPackageInfo gets a reference to the given NullableInstallationInfoPackageInfo and assigns it to the PackageInfo field.
-func (o *InstallationInfo) SetPackageInfo(v InstallationInfoPackageInfo) {
+// SetPackageInfo gets a reference to the given NullablePackageInfo and assigns it to the PackageInfo field.
+func (o *InstallationInfo) SetPackageInfo(v PackageInfo) {
 	o.PackageInfo.Set(&v)
 }
 // SetPackageInfoNil sets the value for PackageInfo to be an explicit nil

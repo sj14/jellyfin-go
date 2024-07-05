@@ -25,7 +25,8 @@ type MediaPathDto struct {
 	Name string `json:"Name"`
 	// Gets or sets the path to add.
 	Path NullableString `json:"Path,omitempty"`
-	PathInfo NullableMediaPathDtoPathInfo `json:"PathInfo,omitempty"`
+	// Gets or sets the path info.
+	PathInfo NullableMediaPathInfo `json:"PathInfo,omitempty"`
 }
 
 type _MediaPathDto MediaPathDto
@@ -115,9 +116,9 @@ func (o *MediaPathDto) UnsetPath() {
 }
 
 // GetPathInfo returns the PathInfo field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *MediaPathDto) GetPathInfo() MediaPathDtoPathInfo {
+func (o *MediaPathDto) GetPathInfo() MediaPathInfo {
 	if o == nil || IsNil(o.PathInfo.Get()) {
-		var ret MediaPathDtoPathInfo
+		var ret MediaPathInfo
 		return ret
 	}
 	return *o.PathInfo.Get()
@@ -126,7 +127,7 @@ func (o *MediaPathDto) GetPathInfo() MediaPathDtoPathInfo {
 // GetPathInfoOk returns a tuple with the PathInfo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *MediaPathDto) GetPathInfoOk() (*MediaPathDtoPathInfo, bool) {
+func (o *MediaPathDto) GetPathInfoOk() (*MediaPathInfo, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -142,8 +143,8 @@ func (o *MediaPathDto) HasPathInfo() bool {
 	return false
 }
 
-// SetPathInfo gets a reference to the given NullableMediaPathDtoPathInfo and assigns it to the PathInfo field.
-func (o *MediaPathDto) SetPathInfo(v MediaPathDtoPathInfo) {
+// SetPathInfo gets a reference to the given NullableMediaPathInfo and assigns it to the PathInfo field.
+func (o *MediaPathDto) SetPathInfo(v MediaPathInfo) {
 	o.PathInfo.Set(&v)
 }
 // SetPathInfoNil sets the value for PathInfo to be an explicit nil

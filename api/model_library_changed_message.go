@@ -19,7 +19,8 @@ var _ MappedNullable = &LibraryChangedMessage{}
 
 // LibraryChangedMessage Library changed message.
 type LibraryChangedMessage struct {
-	Data NullableLibraryChangedMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullableLibraryUpdateInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewLibraryChangedMessageWithDefaults() *LibraryChangedMessage {
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *LibraryChangedMessage) GetData() LibraryChangedMessageData {
+func (o *LibraryChangedMessage) GetData() LibraryUpdateInfo {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret LibraryChangedMessageData
+		var ret LibraryUpdateInfo
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *LibraryChangedMessage) GetData() LibraryChangedMessageData {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *LibraryChangedMessage) GetDataOk() (*LibraryChangedMessageData, bool) {
+func (o *LibraryChangedMessage) GetDataOk() (*LibraryUpdateInfo, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *LibraryChangedMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullableLibraryChangedMessageData and assigns it to the Data field.
-func (o *LibraryChangedMessage) SetData(v LibraryChangedMessageData) {
+// SetData gets a reference to the given NullableLibraryUpdateInfo and assigns it to the Data field.
+func (o *LibraryChangedMessage) SetData(v LibraryUpdateInfo) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil

@@ -19,7 +19,8 @@ var _ MappedNullable = &PluginInstallationFailedMessage{}
 
 // PluginInstallationFailedMessage Plugin installation failed message.
 type PluginInstallationFailedMessage struct {
-	Data NullablePluginInstallationCancelledMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullableInstallationInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewPluginInstallationFailedMessageWithDefaults() *PluginInstallationFailedM
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *PluginInstallationFailedMessage) GetData() PluginInstallationCancelledMessageData {
+func (o *PluginInstallationFailedMessage) GetData() InstallationInfo {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret PluginInstallationCancelledMessageData
+		var ret InstallationInfo
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *PluginInstallationFailedMessage) GetData() PluginInstallationCancelledM
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *PluginInstallationFailedMessage) GetDataOk() (*PluginInstallationCancelledMessageData, bool) {
+func (o *PluginInstallationFailedMessage) GetDataOk() (*InstallationInfo, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *PluginInstallationFailedMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullablePluginInstallationCancelledMessageData and assigns it to the Data field.
-func (o *PluginInstallationFailedMessage) SetData(v PluginInstallationCancelledMessageData) {
+// SetData gets a reference to the given NullableInstallationInfo and assigns it to the Data field.
+func (o *PluginInstallationFailedMessage) SetData(v InstallationInfo) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil

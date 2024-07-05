@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **SeriesTimerId** | Pointer to **NullableString** | Gets or sets the series timer identifier. | [optional] 
 **ExternalSeriesTimerId** | Pointer to **NullableString** | Gets or sets the external series timer identifier. | [optional] 
 **RunTimeTicks** | Pointer to **NullableInt64** | Gets or sets the run time ticks. | [optional] 
-**ProgramInfo** | Pointer to [**NullableTimerInfoDtoProgramInfo**](TimerInfoDtoProgramInfo.md) |  | [optional] 
+**ProgramInfo** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | Gets or sets the program information. | [optional] 
 
 ## Methods
 
@@ -899,20 +899,20 @@ HasRunTimeTicks returns a boolean if a field has been set.
 UnsetRunTimeTicks ensures that no value is present for RunTimeTicks, not even an explicit nil
 ### GetProgramInfo
 
-`func (o *TimerInfoDto) GetProgramInfo() TimerInfoDtoProgramInfo`
+`func (o *TimerInfoDto) GetProgramInfo() BaseItemDto`
 
 GetProgramInfo returns the ProgramInfo field if non-nil, zero value otherwise.
 
 ### GetProgramInfoOk
 
-`func (o *TimerInfoDto) GetProgramInfoOk() (*TimerInfoDtoProgramInfo, bool)`
+`func (o *TimerInfoDto) GetProgramInfoOk() (*BaseItemDto, bool)`
 
 GetProgramInfoOk returns a tuple with the ProgramInfo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProgramInfo
 
-`func (o *TimerInfoDto) SetProgramInfo(v TimerInfoDtoProgramInfo)`
+`func (o *TimerInfoDto) SetProgramInfo(v BaseItemDto)`
 
 SetProgramInfo sets ProgramInfo field to given value.
 

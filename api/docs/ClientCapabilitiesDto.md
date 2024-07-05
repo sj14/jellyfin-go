@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **SupportedCommands** | Pointer to [**[]GeneralCommandType**](GeneralCommandType.md) | Gets or sets the list of supported commands. | [optional] 
 **SupportsMediaControl** | Pointer to **bool** | Gets or sets a value indicating whether session supports media control. | [optional] 
 **SupportsPersistentIdentifier** | Pointer to **bool** | Gets or sets a value indicating whether session supports a persistent identifier. | [optional] 
-**DeviceProfile** | Pointer to [**NullableClientCapabilitiesDeviceProfile**](ClientCapabilitiesDeviceProfile.md) |  | [optional] 
+**DeviceProfile** | Pointer to [**NullableDeviceProfile**](DeviceProfile.md) | A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.  &lt;br /&gt;  Specifically, it defines the supported &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\&quot;&gt;containers&lt;/see&gt; and  &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\&quot;&gt;codecs&lt;/see&gt; (video and/or audio, including codec profiles and levels)  the device is able to direct play (without transcoding or remuxing),  as well as which &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\&quot;&gt;containers/codecs to transcode to&lt;/see&gt; in case it isn&#39;t. | [optional] 
 **AppStoreUrl** | Pointer to **NullableString** | Gets or sets the app store url. | [optional] 
 **IconUrl** | Pointer to **NullableString** | Gets or sets the icon url. | [optional] 
 **SupportsContentUploading** | Pointer to **NullableBool** |  | [optional] [default to false]
@@ -135,20 +135,20 @@ HasSupportsPersistentIdentifier returns a boolean if a field has been set.
 
 ### GetDeviceProfile
 
-`func (o *ClientCapabilitiesDto) GetDeviceProfile() ClientCapabilitiesDeviceProfile`
+`func (o *ClientCapabilitiesDto) GetDeviceProfile() DeviceProfile`
 
 GetDeviceProfile returns the DeviceProfile field if non-nil, zero value otherwise.
 
 ### GetDeviceProfileOk
 
-`func (o *ClientCapabilitiesDto) GetDeviceProfileOk() (*ClientCapabilitiesDeviceProfile, bool)`
+`func (o *ClientCapabilitiesDto) GetDeviceProfileOk() (*DeviceProfile, bool)`
 
 GetDeviceProfileOk returns a tuple with the DeviceProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeviceProfile
 
-`func (o *ClientCapabilitiesDto) SetDeviceProfile(v ClientCapabilitiesDeviceProfile)`
+`func (o *ClientCapabilitiesDto) SetDeviceProfile(v DeviceProfile)`
 
 SetDeviceProfile sets DeviceProfile field to given value.
 

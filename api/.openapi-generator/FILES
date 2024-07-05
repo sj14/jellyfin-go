@@ -70,11 +70,9 @@ docs/ActivityLogEntryQueryResult.md
 docs/ActivityLogEntryStartMessage.md
 docs/ActivityLogEntryStopMessage.md
 docs/AddVirtualFolderDto.md
-docs/AddVirtualFolderDtoLibraryOptions.md
 docs/AlbumInfo.md
 docs/AlbumInfoRemoteSearchQuery.md
 docs/AllThemeMediaResult.md
-docs/AllThemeMediaResultThemeVideosResult.md
 docs/ApiKeyAPI.md
 docs/ArtistInfo.md
 docs/ArtistInfoRemoteSearchQuery.md
@@ -85,13 +83,9 @@ docs/AuthenticateUserByName.md
 docs/AuthenticationInfo.md
 docs/AuthenticationInfoQueryResult.md
 docs/AuthenticationResult.md
-docs/AuthenticationResultSessionInfo.md
-docs/AuthenticationResultUser.md
 docs/BaseItemDto.md
-docs/BaseItemDtoCurrentProgram.md
 docs/BaseItemDtoImageBlurHashes.md
 docs/BaseItemDtoQueryResult.md
-docs/BaseItemDtoUserData.md
 docs/BaseItemKind.md
 docs/BaseItemPerson.md
 docs/BaseItemPersonImageBlurHashes.md
@@ -112,7 +106,6 @@ docs/ChannelType.md
 docs/ChannelsAPI.md
 docs/ChapterInfo.md
 docs/ClientCapabilities.md
-docs/ClientCapabilitiesDeviceProfile.md
 docs/ClientCapabilitiesDto.md
 docs/ClientLogAPI.md
 docs/ClientLogDocumentResponseDto.md
@@ -135,7 +128,6 @@ docs/DayOfWeek.md
 docs/DayPattern.md
 docs/DefaultDirectoryBrowserInfoDto.md
 docs/DeviceInfo.md
-docs/DeviceInfoCapabilities.md
 docs/DeviceInfoQueryResult.md
 docs/DeviceOptions.md
 docs/DeviceOptionsDto.md
@@ -168,7 +160,6 @@ docs/ForgotPasswordPinDto.md
 docs/ForgotPasswordResult.md
 docs/GeneralCommand.md
 docs/GeneralCommandMessage.md
-docs/GeneralCommandMessageData.md
 docs/GeneralCommandType.md
 docs/GenresAPI.md
 docs/GetProgramsDto.md
@@ -199,7 +190,6 @@ docs/ImageType.md
 docs/InboundKeepAliveMessage.md
 docs/InboundWebSocketMessage.md
 docs/InstallationInfo.md
-docs/InstallationInfoPackageInfo.md
 docs/InstantMixAPI.md
 docs/IsoType.md
 docs/ItemCounts.md
@@ -214,7 +204,6 @@ docs/JoinGroupRequestDto.md
 docs/KeepUntil.md
 docs/LibraryAPI.md
 docs/LibraryChangedMessage.md
-docs/LibraryChangedMessageData.md
 docs/LibraryOptionInfoDto.md
 docs/LibraryOptions.md
 docs/LibraryOptionsResultDto.md
@@ -240,7 +229,6 @@ docs/LyricsAPI.md
 docs/MediaAttachment.md
 docs/MediaInfoAPI.md
 docs/MediaPathDto.md
-docs/MediaPathDtoPathInfo.md
 docs/MediaPathInfo.md
 docs/MediaProtocol.md
 docs/MediaSourceInfo.md
@@ -287,7 +275,6 @@ docs/PingRequestDto.md
 docs/PlayAccess.md
 docs/PlayCommand.md
 docs/PlayMessage.md
-docs/PlayMessageData.md
 docs/PlayMethod.md
 docs/PlayQueueUpdate.md
 docs/PlayQueueUpdateGroupUpdate.md
@@ -299,7 +286,6 @@ docs/PlaybackInfoDto.md
 docs/PlaybackInfoResponse.md
 docs/PlaybackOrder.md
 docs/PlaybackProgressInfo.md
-docs/PlaybackProgressInfoItem.md
 docs/PlaybackRequestType.md
 docs/PlaybackStartInfo.md
 docs/PlaybackStopInfo.md
@@ -310,17 +296,14 @@ docs/PlaylistsAPI.md
 docs/PlaystateAPI.md
 docs/PlaystateCommand.md
 docs/PlaystateMessage.md
-docs/PlaystateMessageData.md
 docs/PlaystateRequest.md
 docs/PluginInfo.md
 docs/PluginInstallationCancelledMessage.md
-docs/PluginInstallationCancelledMessageData.md
 docs/PluginInstallationCompletedMessage.md
 docs/PluginInstallationFailedMessage.md
 docs/PluginInstallingMessage.md
 docs/PluginStatus.md
 docs/PluginUninstalledMessage.md
-docs/PluginUninstalledMessageData.md
 docs/PluginsAPI.md
 docs/PreviousItemRequestDto.md
 docs/ProblemDetails.md
@@ -354,7 +337,6 @@ docs/RepeatMode.md
 docs/RepositoryInfo.md
 docs/RestartRequiredMessage.md
 docs/ScheduledTaskEndedMessage.md
-docs/ScheduledTaskEndedMessageData.md
 docs/ScheduledTasksAPI.md
 docs/ScheduledTasksInfoMessage.md
 docs/ScheduledTasksInfoStartMessage.md
@@ -370,7 +352,6 @@ docs/SeriesInfo.md
 docs/SeriesInfoRemoteSearchQuery.md
 docs/SeriesStatus.md
 docs/SeriesTimerCancelledMessage.md
-docs/SeriesTimerCancelledMessageData.md
 docs/SeriesTimerCreatedMessage.md
 docs/SeriesTimerInfoDto.md
 docs/SeriesTimerInfoDtoQueryResult.md
@@ -380,8 +361,6 @@ docs/ServerRestartingMessage.md
 docs/ServerShuttingDownMessage.md
 docs/SessionAPI.md
 docs/SessionInfo.md
-docs/SessionInfoNowPlayingItem.md
-docs/SessionInfoNowViewingItem.md
 docs/SessionMessageType.md
 docs/SessionUserInfo.md
 docs/SessionsMessage.md
@@ -408,16 +387,13 @@ docs/SubtitleProfile.md
 docs/SuggestionsAPI.md
 docs/SyncPlayAPI.md
 docs/SyncPlayCommandMessage.md
-docs/SyncPlayCommandMessageData.md
 docs/SyncPlayGroupUpdateCommandMessage.md
-docs/SyncPlayGroupUpdateCommandMessageData.md
 docs/SyncPlayQueueItem.md
 docs/SyncPlayUserAccessType.md
 docs/SystemAPI.md
 docs/SystemInfo.md
 docs/TaskCompletionStatus.md
 docs/TaskInfo.md
-docs/TaskInfoLastExecutionResult.md
 docs/TaskResult.md
 docs/TaskState.md
 docs/TaskTriggerInfo.md
@@ -427,7 +403,6 @@ docs/TimerCancelledMessage.md
 docs/TimerCreatedMessage.md
 docs/TimerEventInfo.md
 docs/TimerInfoDto.md
-docs/TimerInfoDtoProgramInfo.md
 docs/TimerInfoDtoQueryResult.md
 docs/TmdbAPI.md
 docs/TrailerInfo.md
@@ -459,16 +434,12 @@ docs/UserAPI.md
 docs/UserConfiguration.md
 docs/UserDataChangeInfo.md
 docs/UserDataChangedMessage.md
-docs/UserDataChangedMessageData.md
 docs/UserDeletedMessage.md
 docs/UserDto.md
-docs/UserDtoConfiguration.md
-docs/UserDtoPolicy.md
 docs/UserItemDataDto.md
 docs/UserLibraryAPI.md
 docs/UserPolicy.md
 docs/UserUpdatedMessage.md
-docs/UserUpdatedMessageData.md
 docs/UserViewsAPI.md
 docs/UtcTimeResponse.md
 docs/ValidatePathDto.md
@@ -492,11 +463,9 @@ model_activity_log_entry_query_result.go
 model_activity_log_entry_start_message.go
 model_activity_log_entry_stop_message.go
 model_add_virtual_folder_dto.go
-model_add_virtual_folder_dto_library_options.go
 model_album_info.go
 model_album_info_remote_search_query.go
 model_all_theme_media_result.go
-model_all_theme_media_result_theme_videos_result.go
 model_artist_info.go
 model_artist_info_remote_search_query.go
 model_audio_spatial_format.go
@@ -504,13 +473,9 @@ model_authenticate_user_by_name.go
 model_authentication_info.go
 model_authentication_info_query_result.go
 model_authentication_result.go
-model_authentication_result_session_info.go
-model_authentication_result_user.go
 model_base_item_dto.go
-model_base_item_dto_current_program.go
 model_base_item_dto_image_blur_hashes.go
 model_base_item_dto_query_result.go
-model_base_item_dto_user_data.go
 model_base_item_kind.go
 model_base_item_person.go
 model_base_item_person_image_blur_hashes.go
@@ -529,7 +494,6 @@ model_channel_media_type.go
 model_channel_type.go
 model_chapter_info.go
 model_client_capabilities.go
-model_client_capabilities_device_profile.go
 model_client_capabilities_dto.go
 model_client_log_document_response_dto.go
 model_codec_profile.go
@@ -548,7 +512,6 @@ model_day_of_week.go
 model_day_pattern.go
 model_default_directory_browser_info_dto.go
 model_device_info.go
-model_device_info_capabilities.go
 model_device_info_query_result.go
 model_device_options.go
 model_device_options_dto.go
@@ -576,7 +539,6 @@ model_forgot_password_pin_dto.go
 model_forgot_password_result.go
 model_general_command.go
 model_general_command_message.go
-model_general_command_message_data.go
 model_general_command_type.go
 model_get_programs_dto.go
 model_group_info_dto.go
@@ -604,7 +566,6 @@ model_image_type.go
 model_inbound_keep_alive_message.go
 model_inbound_web_socket_message.go
 model_installation_info.go
-model_installation_info_package_info.go
 model_iso_type.go
 model_item_counts.go
 model_item_fields.go
@@ -613,7 +574,6 @@ model_item_sort_by.go
 model_join_group_request_dto.go
 model_keep_until.go
 model_library_changed_message.go
-model_library_changed_message_data.go
 model_library_option_info_dto.go
 model_library_options.go
 model_library_options_result_dto.go
@@ -634,7 +594,6 @@ model_lyric_line.go
 model_lyric_metadata.go
 model_media_attachment.go
 model_media_path_dto.go
-model_media_path_dto_path_info.go
 model_media_path_info.go
 model_media_protocol.go
 model_media_source_info.go
@@ -677,7 +636,6 @@ model_ping_request_dto.go
 model_play_access.go
 model_play_command.go
 model_play_message.go
-model_play_message_data.go
 model_play_method.go
 model_play_queue_update.go
 model_play_queue_update_group_update.go
@@ -689,7 +647,6 @@ model_playback_info_dto.go
 model_playback_info_response.go
 model_playback_order.go
 model_playback_progress_info.go
-model_playback_progress_info_item.go
 model_playback_request_type.go
 model_playback_start_info.go
 model_playback_stop_info.go
@@ -698,17 +655,14 @@ model_playlist_creation_result.go
 model_playlist_user_permissions.go
 model_playstate_command.go
 model_playstate_message.go
-model_playstate_message_data.go
 model_playstate_request.go
 model_plugin_info.go
 model_plugin_installation_cancelled_message.go
-model_plugin_installation_cancelled_message_data.go
 model_plugin_installation_completed_message.go
 model_plugin_installation_failed_message.go
 model_plugin_installing_message.go
 model_plugin_status.go
 model_plugin_uninstalled_message.go
-model_plugin_uninstalled_message_data.go
 model_previous_item_request_dto.go
 model_problem_details.go
 model_process_priority_class.go
@@ -739,7 +693,6 @@ model_repeat_mode.go
 model_repository_info.go
 model_restart_required_message.go
 model_scheduled_task_ended_message.go
-model_scheduled_task_ended_message_data.go
 model_scheduled_tasks_info_message.go
 model_scheduled_tasks_info_start_message.go
 model_scheduled_tasks_info_stop_message.go
@@ -753,7 +706,6 @@ model_series_info.go
 model_series_info_remote_search_query.go
 model_series_status.go
 model_series_timer_cancelled_message.go
-model_series_timer_cancelled_message_data.go
 model_series_timer_created_message.go
 model_series_timer_info_dto.go
 model_series_timer_info_dto_query_result.go
@@ -762,8 +714,6 @@ model_server_discovery_info.go
 model_server_restarting_message.go
 model_server_shutting_down_message.go
 model_session_info.go
-model_session_info_now_playing_item.go
-model_session_info_now_viewing_item.go
 model_session_message_type.go
 model_session_user_info.go
 model_sessions_message.go
@@ -785,15 +735,12 @@ model_subtitle_options.go
 model_subtitle_playback_mode.go
 model_subtitle_profile.go
 model_sync_play_command_message.go
-model_sync_play_command_message_data.go
 model_sync_play_group_update_command_message.go
-model_sync_play_group_update_command_message_data.go
 model_sync_play_queue_item.go
 model_sync_play_user_access_type.go
 model_system_info.go
 model_task_completion_status.go
 model_task_info.go
-model_task_info_last_execution_result.go
 model_task_result.go
 model_task_state.go
 model_task_trigger_info.go
@@ -802,7 +749,6 @@ model_timer_cancelled_message.go
 model_timer_created_message.go
 model_timer_event_info.go
 model_timer_info_dto.go
-model_timer_info_dto_program_info.go
 model_timer_info_dto_query_result.go
 model_trailer_info.go
 model_trailer_info_remote_search_query.go
@@ -828,15 +774,11 @@ model_upload_subtitle_dto.go
 model_user_configuration.go
 model_user_data_change_info.go
 model_user_data_changed_message.go
-model_user_data_changed_message_data.go
 model_user_deleted_message.go
 model_user_dto.go
-model_user_dto_configuration.go
-model_user_dto_policy.go
 model_user_item_data_dto.go
 model_user_policy.go
 model_user_updated_message.go
-model_user_updated_message_data.go
 model_utc_time_response.go
 model_validate_path_dto.go
 model_version_info.go

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | Pointer to [**NullableUserUpdatedMessageData**](UserUpdatedMessageData.md) |  | [optional] 
+**Data** | Pointer to [**NullableUserDto**](UserDto.md) | Gets or sets the data. | [optional] 
 **MessageId** | Pointer to **string** | Gets or sets the message id. | [optional] 
 **MessageType** | Pointer to [**SessionMessageType**](SessionMessageType.md) | The different kinds of messages that are used in the WebSocket api. | [optional] [readonly] [default to SESSIONMESSAGETYPE_USER_UPDATED]
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetData
 
-`func (o *UserUpdatedMessage) GetData() UserUpdatedMessageData`
+`func (o *UserUpdatedMessage) GetData() UserDto`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *UserUpdatedMessage) GetDataOk() (*UserUpdatedMessageData, bool)`
+`func (o *UserUpdatedMessage) GetDataOk() (*UserDto, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *UserUpdatedMessage) SetData(v UserUpdatedMessageData)`
+`func (o *UserUpdatedMessage) SetData(v UserDto)`
 
 SetData sets Data field to given value.
 

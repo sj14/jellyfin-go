@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **EnableAutoLogin** | Pointer to **NullableBool** | Gets or sets whether async login is enabled or not. | [optional] 
 **LastLoginDate** | Pointer to **NullableTime** | Gets or sets the last login date. | [optional] 
 **LastActivityDate** | Pointer to **NullableTime** | Gets or sets the last activity date. | [optional] 
-**Configuration** | Pointer to [**NullableUserDtoConfiguration**](UserDtoConfiguration.md) |  | [optional] 
-**Policy** | Pointer to [**NullableUserDtoPolicy**](UserDtoPolicy.md) |  | [optional] 
+**Configuration** | Pointer to [**NullableUserConfiguration**](UserConfiguration.md) | Gets or sets the configuration. | [optional] 
+**Policy** | Pointer to [**NullableUserPolicy**](UserPolicy.md) | Gets or sets the policy. | [optional] 
 **PrimaryImageAspectRatio** | Pointer to **NullableFloat64** | Gets or sets the primary image aspect ratio. | [optional] 
 
 ## Methods
@@ -385,20 +385,20 @@ HasLastActivityDate returns a boolean if a field has been set.
 UnsetLastActivityDate ensures that no value is present for LastActivityDate, not even an explicit nil
 ### GetConfiguration
 
-`func (o *UserDto) GetConfiguration() UserDtoConfiguration`
+`func (o *UserDto) GetConfiguration() UserConfiguration`
 
 GetConfiguration returns the Configuration field if non-nil, zero value otherwise.
 
 ### GetConfigurationOk
 
-`func (o *UserDto) GetConfigurationOk() (*UserDtoConfiguration, bool)`
+`func (o *UserDto) GetConfigurationOk() (*UserConfiguration, bool)`
 
 GetConfigurationOk returns a tuple with the Configuration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConfiguration
 
-`func (o *UserDto) SetConfiguration(v UserDtoConfiguration)`
+`func (o *UserDto) SetConfiguration(v UserConfiguration)`
 
 SetConfiguration sets Configuration field to given value.
 
@@ -420,20 +420,20 @@ HasConfiguration returns a boolean if a field has been set.
 UnsetConfiguration ensures that no value is present for Configuration, not even an explicit nil
 ### GetPolicy
 
-`func (o *UserDto) GetPolicy() UserDtoPolicy`
+`func (o *UserDto) GetPolicy() UserPolicy`
 
 GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
 ### GetPolicyOk
 
-`func (o *UserDto) GetPolicyOk() (*UserDtoPolicy, bool)`
+`func (o *UserDto) GetPolicyOk() (*UserPolicy, bool)`
 
 GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPolicy
 
-`func (o *UserDto) SetPolicy(v UserDtoPolicy)`
+`func (o *UserDto) SetPolicy(v UserPolicy)`
 
 SetPolicy sets Policy field to given value.
 

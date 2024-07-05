@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **LastPausedDate** | Pointer to **NullableTime** | Gets or sets the last paused date. | [optional] 
 **DeviceName** | Pointer to **NullableString** | Gets or sets the name of the device. | [optional] 
 **DeviceType** | Pointer to **NullableString** | Gets or sets the type of the device. | [optional] 
-**NowPlayingItem** | Pointer to [**NullableSessionInfoNowPlayingItem**](SessionInfoNowPlayingItem.md) |  | [optional] 
-**NowViewingItem** | Pointer to [**NullableSessionInfoNowViewingItem**](SessionInfoNowViewingItem.md) |  | [optional] 
+**NowPlayingItem** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | Gets or sets the now playing item. | [optional] 
+**NowViewingItem** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | This is strictly used as a data transfer object from the api layer.  This holds information about a BaseItem in a format that is convenient for the client. | [optional] 
 **DeviceId** | Pointer to **NullableString** | Gets or sets the device id. | [optional] 
 **ApplicationVersion** | Pointer to **NullableString** | Gets or sets the application version. | [optional] 
 **TranscodingInfo** | Pointer to [**NullableTranscodingInfo**](TranscodingInfo.md) |  | [optional] 
@@ -515,20 +515,20 @@ HasDeviceType returns a boolean if a field has been set.
 UnsetDeviceType ensures that no value is present for DeviceType, not even an explicit nil
 ### GetNowPlayingItem
 
-`func (o *SessionInfo) GetNowPlayingItem() SessionInfoNowPlayingItem`
+`func (o *SessionInfo) GetNowPlayingItem() BaseItemDto`
 
 GetNowPlayingItem returns the NowPlayingItem field if non-nil, zero value otherwise.
 
 ### GetNowPlayingItemOk
 
-`func (o *SessionInfo) GetNowPlayingItemOk() (*SessionInfoNowPlayingItem, bool)`
+`func (o *SessionInfo) GetNowPlayingItemOk() (*BaseItemDto, bool)`
 
 GetNowPlayingItemOk returns a tuple with the NowPlayingItem field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNowPlayingItem
 
-`func (o *SessionInfo) SetNowPlayingItem(v SessionInfoNowPlayingItem)`
+`func (o *SessionInfo) SetNowPlayingItem(v BaseItemDto)`
 
 SetNowPlayingItem sets NowPlayingItem field to given value.
 
@@ -550,20 +550,20 @@ HasNowPlayingItem returns a boolean if a field has been set.
 UnsetNowPlayingItem ensures that no value is present for NowPlayingItem, not even an explicit nil
 ### GetNowViewingItem
 
-`func (o *SessionInfo) GetNowViewingItem() SessionInfoNowViewingItem`
+`func (o *SessionInfo) GetNowViewingItem() BaseItemDto`
 
 GetNowViewingItem returns the NowViewingItem field if non-nil, zero value otherwise.
 
 ### GetNowViewingItemOk
 
-`func (o *SessionInfo) GetNowViewingItemOk() (*SessionInfoNowViewingItem, bool)`
+`func (o *SessionInfo) GetNowViewingItemOk() (*BaseItemDto, bool)`
 
 GetNowViewingItemOk returns a tuple with the NowViewingItem field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNowViewingItem
 
-`func (o *SessionInfo) SetNowViewingItem(v SessionInfoNowViewingItem)`
+`func (o *SessionInfo) SetNowViewingItem(v BaseItemDto)`
 
 SetNowViewingItem sets NowViewingItem field to given value.
 

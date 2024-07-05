@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | Pointer to [**NullableSeriesTimerCancelledMessageData**](SeriesTimerCancelledMessageData.md) |  | [optional] 
+**Data** | Pointer to [**NullableTimerEventInfo**](TimerEventInfo.md) | Gets or sets the data. | [optional] 
 **MessageId** | Pointer to **string** | Gets or sets the message id. | [optional] 
 **MessageType** | Pointer to [**SessionMessageType**](SessionMessageType.md) | The different kinds of messages that are used in the WebSocket api. | [optional] [readonly] [default to SESSIONMESSAGETYPE_SERIES_TIMER_CREATED]
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetData
 
-`func (o *SeriesTimerCreatedMessage) GetData() SeriesTimerCancelledMessageData`
+`func (o *SeriesTimerCreatedMessage) GetData() TimerEventInfo`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *SeriesTimerCreatedMessage) GetDataOk() (*SeriesTimerCancelledMessageData, bool)`
+`func (o *SeriesTimerCreatedMessage) GetDataOk() (*TimerEventInfo, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *SeriesTimerCreatedMessage) SetData(v SeriesTimerCancelledMessageData)`
+`func (o *SeriesTimerCreatedMessage) SetData(v TimerEventInfo)`
 
 SetData sets Data field to given value.
 

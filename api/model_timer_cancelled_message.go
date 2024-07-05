@@ -19,7 +19,8 @@ var _ MappedNullable = &TimerCancelledMessage{}
 
 // TimerCancelledMessage Timer cancelled message.
 type TimerCancelledMessage struct {
-	Data NullableSeriesTimerCancelledMessageData `json:"Data,omitempty"`
+	// Gets or sets the data.
+	Data NullableTimerEventInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +45,9 @@ func NewTimerCancelledMessageWithDefaults() *TimerCancelledMessage {
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *TimerCancelledMessage) GetData() SeriesTimerCancelledMessageData {
+func (o *TimerCancelledMessage) GetData() TimerEventInfo {
 	if o == nil || IsNil(o.Data.Get()) {
-		var ret SeriesTimerCancelledMessageData
+		var ret TimerEventInfo
 		return ret
 	}
 	return *o.Data.Get()
@@ -55,7 +56,7 @@ func (o *TimerCancelledMessage) GetData() SeriesTimerCancelledMessageData {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *TimerCancelledMessage) GetDataOk() (*SeriesTimerCancelledMessageData, bool) {
+func (o *TimerCancelledMessage) GetDataOk() (*TimerEventInfo, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,8 +72,8 @@ func (o *TimerCancelledMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given NullableSeriesTimerCancelledMessageData and assigns it to the Data field.
-func (o *TimerCancelledMessage) SetData(v SeriesTimerCancelledMessageData) {
+// SetData gets a reference to the given NullableTimerEventInfo and assigns it to the Data field.
+func (o *TimerCancelledMessage) SetData(v TimerEventInfo) {
 	o.Data.Set(&v)
 }
 // SetDataNil sets the value for Data to be an explicit nil
