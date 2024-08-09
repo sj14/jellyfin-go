@@ -2,8 +2,8 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Jellyfin API",
-    "version": "10.9.8",
-    "x-jellyfin-version": "10.9.8"
+    "version": "10.9.9",
+    "x-jellyfin-version": "10.9.9"
   },
   "servers": [
     {
@@ -44568,7 +44568,7 @@
                 "$ref": "#/components/schemas/BaseItemKind"
               }
             ],
-            "description": "The base item kind."
+            "description": "Gets or sets the type."
           },
           "People": {
             "type": "array",
@@ -45034,7 +45034,7 @@
                 "$ref": "#/components/schemas/MediaType"
               }
             ],
-            "description": "Media types."
+            "description": "Gets or sets the type of the media."
           },
           "EndDate": {
             "type": "string",
@@ -45431,7 +45431,7 @@
                 "$ref": "#/components/schemas/PersonKind"
               }
             ],
-            "description": "The person kind."
+            "description": "Gets or sets the type."
           },
           "PrimaryImageTag": {
             "type": "string",
@@ -46737,7 +46737,7 @@
                 "$ref": "#/components/schemas/ScrollDirection"
               }
             ],
-            "description": "An enum representing the axis that should be scrolled."
+            "description": "Gets or sets the scroll direction."
           },
           "ShowBackdrop": {
             "type": "boolean",
@@ -46757,7 +46757,7 @@
                 "$ref": "#/components/schemas/SortOrder"
               }
             ],
-            "description": "An enum representing the sorting order."
+            "description": "Gets or sets the sort order."
           },
           "ShowSidebar": {
             "type": "boolean",
@@ -49886,7 +49886,7 @@
                 "$ref": "#/components/schemas/VideoRange"
               }
             ],
-            "description": "An enum representing video ranges.",
+            "description": "Gets the video range.",
             "readOnly": true
           },
           "VideoRangeType": {
@@ -49906,7 +49906,7 @@
                 "$ref": "#/components/schemas/VideoRangeType"
               }
             ],
-            "description": "An enum representing types of video ranges.",
+            "description": "Gets the video range type.",
             "readOnly": true
           },
           "VideoDoViTitle": {
@@ -49926,7 +49926,7 @@
                 "$ref": "#/components/schemas/AudioSpatialFormat"
               }
             ],
-            "description": "An enum representing formats of spatial audio.",
+            "description": "Gets the audio spatial format.",
             "default": "None",
             "readOnly": true
           },
@@ -54004,7 +54004,7 @@
                 "$ref": "#/components/schemas/BaseItemKind"
               }
             ],
-            "description": "The base item kind."
+            "description": "Gets or sets the type."
           },
           "IsFolder": {
             "type": "boolean",
@@ -54030,7 +54030,7 @@
                 "$ref": "#/components/schemas/MediaType"
               }
             ],
-            "description": "Media types."
+            "description": "Gets or sets the type of the media."
           },
           "StartDate": {
             "type": "string",
@@ -58167,7 +58167,7 @@
                 "$ref": "#/components/schemas/SyncPlayUserAccessType"
               }
             ],
-            "description": "Enum SyncPlayUserAccessType."
+            "description": "Gets or sets a value indicating what SyncPlay features the user can access."
           }
         },
         "additionalProperties": false
