@@ -112,25 +112,25 @@ func (a *ItemRefreshAPIService) RefreshItemExecute(r ApiRefreshItemRequest) (*ht
 	localVarFormParams := url.Values{}
 
 	if r.metadataRefreshMode != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "metadataRefreshMode", r.metadataRefreshMode, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "metadataRefreshMode", r.metadataRefreshMode, "form", "")
 	} else {
 		var defaultValue MetadataRefreshMode = "None"
 		r.metadataRefreshMode = &defaultValue
 	}
 	if r.imageRefreshMode != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageRefreshMode", r.imageRefreshMode, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageRefreshMode", r.imageRefreshMode, "form", "")
 	} else {
 		var defaultValue MetadataRefreshMode = "None"
 		r.imageRefreshMode = &defaultValue
 	}
 	if r.replaceAllMetadata != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllMetadata", r.replaceAllMetadata, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllMetadata", r.replaceAllMetadata, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.replaceAllMetadata = &defaultValue
 	}
 	if r.replaceAllImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", r.replaceAllImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", r.replaceAllImages, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.replaceAllImages = &defaultValue

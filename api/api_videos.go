@@ -288,7 +288,7 @@ func (a *VideosAPIService) GetAdditionalPartExecute(r ApiGetAdditionalPartReques
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -757,154 +757,154 @@ func (a *VideosAPIService) GetVideoStreamExecute(r ApiGetVideoStreamRequest) (*o
 	localVarFormParams := url.Values{}
 
 	if r.container != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "container", r.container, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "container", r.container, "form", "")
 	}
 	if r.static != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "static", r.static, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "static", r.static, "form", "")
 	}
 	if r.params != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "params", r.params, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "params", r.params, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.deviceProfileId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceProfileId", r.deviceProfileId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceProfileId", r.deviceProfileId, "form", "")
 	}
 	if r.playSessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	}
 	if r.segmentContainer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentContainer", r.segmentContainer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentContainer", r.segmentContainer, "form", "")
 	}
 	if r.segmentLength != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "form", "")
 	}
 	if r.minSegments != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minSegments", r.minSegments, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minSegments", r.minSegments, "form", "")
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	}
 	if r.audioCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "form", "")
 	}
 	if r.enableAutoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAutoStreamCopy", r.enableAutoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAutoStreamCopy", r.enableAutoStreamCopy, "form", "")
 	}
 	if r.allowVideoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "form", "")
 	}
 	if r.allowAudioStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "form", "")
 	}
 	if r.breakOnNonKeyFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "form", "")
 	}
 	if r.audioSampleRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioSampleRate", r.audioSampleRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioSampleRate", r.audioSampleRate, "form", "")
 	}
 	if r.maxAudioBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "form", "")
 	}
 	if r.audioBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "form", "")
 	}
 	if r.audioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioChannels", r.audioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioChannels", r.audioChannels, "form", "")
 	}
 	if r.maxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "form", "")
 	}
 	if r.profile != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "profile", r.profile, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "profile", r.profile, "form", "")
 	}
 	if r.level != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "level", r.level, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "level", r.level, "form", "")
 	}
 	if r.framerate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "framerate", r.framerate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "framerate", r.framerate, "form", "")
 	}
 	if r.maxFramerate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxFramerate", r.maxFramerate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxFramerate", r.maxFramerate, "form", "")
 	}
 	if r.copyTimestamps != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "form", "")
 	}
 	if r.startTimeTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.videoBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoBitRate", r.videoBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoBitRate", r.videoBitRate, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.subtitleMethod != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleMethod", r.subtitleMethod, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleMethod", r.subtitleMethod, "form", "")
 	}
 	if r.maxRefFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxRefFrames", r.maxRefFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxRefFrames", r.maxRefFrames, "form", "")
 	}
 	if r.maxVideoBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxVideoBitDepth", r.maxVideoBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxVideoBitDepth", r.maxVideoBitDepth, "form", "")
 	}
 	if r.requireAvc != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "requireAvc", r.requireAvc, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "requireAvc", r.requireAvc, "form", "")
 	}
 	if r.deInterlace != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deInterlace", r.deInterlace, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deInterlace", r.deInterlace, "form", "")
 	}
 	if r.requireNonAnamorphic != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "requireNonAnamorphic", r.requireNonAnamorphic, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "requireNonAnamorphic", r.requireNonAnamorphic, "form", "")
 	}
 	if r.transcodingMaxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingMaxAudioChannels", r.transcodingMaxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingMaxAudioChannels", r.transcodingMaxAudioChannels, "form", "")
 	}
 	if r.cpuCoreLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cpuCoreLimit", r.cpuCoreLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cpuCoreLimit", r.cpuCoreLimit, "form", "")
 	}
 	if r.liveStreamId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	}
 	if r.enableMpegtsM2TsMode != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableMpegtsM2TsMode", r.enableMpegtsM2TsMode, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableMpegtsM2TsMode", r.enableMpegtsM2TsMode, "form", "")
 	}
 	if r.videoCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoCodec", r.videoCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoCodec", r.videoCodec, "form", "")
 	}
 	if r.subtitleCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleCodec", r.subtitleCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleCodec", r.subtitleCodec, "form", "")
 	}
 	if r.transcodeReasons != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodeReasons", r.transcodeReasons, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodeReasons", r.transcodeReasons, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.videoStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoStreamIndex", r.videoStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoStreamIndex", r.videoStreamIndex, "form", "")
 	}
 	if r.context != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "context", r.context, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "context", r.context, "form", "")
 	}
 	if r.streamOptions != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "streamOptions", r.streamOptions, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "streamOptions", r.streamOptions, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1355,151 +1355,151 @@ func (a *VideosAPIService) GetVideoStreamByContainerExecute(r ApiGetVideoStreamB
 	localVarFormParams := url.Values{}
 
 	if r.static != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "static", r.static, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "static", r.static, "form", "")
 	}
 	if r.params != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "params", r.params, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "params", r.params, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.deviceProfileId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceProfileId", r.deviceProfileId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceProfileId", r.deviceProfileId, "form", "")
 	}
 	if r.playSessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	}
 	if r.segmentContainer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentContainer", r.segmentContainer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentContainer", r.segmentContainer, "form", "")
 	}
 	if r.segmentLength != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "form", "")
 	}
 	if r.minSegments != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minSegments", r.minSegments, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minSegments", r.minSegments, "form", "")
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	}
 	if r.audioCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "form", "")
 	}
 	if r.enableAutoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAutoStreamCopy", r.enableAutoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAutoStreamCopy", r.enableAutoStreamCopy, "form", "")
 	}
 	if r.allowVideoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "form", "")
 	}
 	if r.allowAudioStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "form", "")
 	}
 	if r.breakOnNonKeyFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "form", "")
 	}
 	if r.audioSampleRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioSampleRate", r.audioSampleRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioSampleRate", r.audioSampleRate, "form", "")
 	}
 	if r.maxAudioBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "form", "")
 	}
 	if r.audioBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "form", "")
 	}
 	if r.audioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioChannels", r.audioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioChannels", r.audioChannels, "form", "")
 	}
 	if r.maxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "form", "")
 	}
 	if r.profile != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "profile", r.profile, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "profile", r.profile, "form", "")
 	}
 	if r.level != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "level", r.level, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "level", r.level, "form", "")
 	}
 	if r.framerate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "framerate", r.framerate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "framerate", r.framerate, "form", "")
 	}
 	if r.maxFramerate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxFramerate", r.maxFramerate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxFramerate", r.maxFramerate, "form", "")
 	}
 	if r.copyTimestamps != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "form", "")
 	}
 	if r.startTimeTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.videoBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoBitRate", r.videoBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoBitRate", r.videoBitRate, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.subtitleMethod != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleMethod", r.subtitleMethod, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleMethod", r.subtitleMethod, "form", "")
 	}
 	if r.maxRefFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxRefFrames", r.maxRefFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxRefFrames", r.maxRefFrames, "form", "")
 	}
 	if r.maxVideoBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxVideoBitDepth", r.maxVideoBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxVideoBitDepth", r.maxVideoBitDepth, "form", "")
 	}
 	if r.requireAvc != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "requireAvc", r.requireAvc, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "requireAvc", r.requireAvc, "form", "")
 	}
 	if r.deInterlace != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deInterlace", r.deInterlace, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deInterlace", r.deInterlace, "form", "")
 	}
 	if r.requireNonAnamorphic != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "requireNonAnamorphic", r.requireNonAnamorphic, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "requireNonAnamorphic", r.requireNonAnamorphic, "form", "")
 	}
 	if r.transcodingMaxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingMaxAudioChannels", r.transcodingMaxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingMaxAudioChannels", r.transcodingMaxAudioChannels, "form", "")
 	}
 	if r.cpuCoreLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cpuCoreLimit", r.cpuCoreLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cpuCoreLimit", r.cpuCoreLimit, "form", "")
 	}
 	if r.liveStreamId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	}
 	if r.enableMpegtsM2TsMode != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableMpegtsM2TsMode", r.enableMpegtsM2TsMode, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableMpegtsM2TsMode", r.enableMpegtsM2TsMode, "form", "")
 	}
 	if r.videoCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoCodec", r.videoCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoCodec", r.videoCodec, "form", "")
 	}
 	if r.subtitleCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleCodec", r.subtitleCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleCodec", r.subtitleCodec, "form", "")
 	}
 	if r.transcodeReasons != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodeReasons", r.transcodeReasons, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodeReasons", r.transcodeReasons, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.videoStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoStreamIndex", r.videoStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoStreamIndex", r.videoStreamIndex, "form", "")
 	}
 	if r.context != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "context", r.context, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "context", r.context, "form", "")
 	}
 	if r.streamOptions != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "streamOptions", r.streamOptions, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "streamOptions", r.streamOptions, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1954,154 +1954,154 @@ func (a *VideosAPIService) HeadVideoStreamExecute(r ApiHeadVideoStreamRequest) (
 	localVarFormParams := url.Values{}
 
 	if r.container != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "container", r.container, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "container", r.container, "form", "")
 	}
 	if r.static != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "static", r.static, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "static", r.static, "form", "")
 	}
 	if r.params != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "params", r.params, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "params", r.params, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.deviceProfileId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceProfileId", r.deviceProfileId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceProfileId", r.deviceProfileId, "form", "")
 	}
 	if r.playSessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	}
 	if r.segmentContainer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentContainer", r.segmentContainer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentContainer", r.segmentContainer, "form", "")
 	}
 	if r.segmentLength != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "form", "")
 	}
 	if r.minSegments != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minSegments", r.minSegments, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minSegments", r.minSegments, "form", "")
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	}
 	if r.audioCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "form", "")
 	}
 	if r.enableAutoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAutoStreamCopy", r.enableAutoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAutoStreamCopy", r.enableAutoStreamCopy, "form", "")
 	}
 	if r.allowVideoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "form", "")
 	}
 	if r.allowAudioStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "form", "")
 	}
 	if r.breakOnNonKeyFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "form", "")
 	}
 	if r.audioSampleRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioSampleRate", r.audioSampleRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioSampleRate", r.audioSampleRate, "form", "")
 	}
 	if r.maxAudioBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "form", "")
 	}
 	if r.audioBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "form", "")
 	}
 	if r.audioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioChannels", r.audioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioChannels", r.audioChannels, "form", "")
 	}
 	if r.maxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "form", "")
 	}
 	if r.profile != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "profile", r.profile, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "profile", r.profile, "form", "")
 	}
 	if r.level != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "level", r.level, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "level", r.level, "form", "")
 	}
 	if r.framerate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "framerate", r.framerate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "framerate", r.framerate, "form", "")
 	}
 	if r.maxFramerate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxFramerate", r.maxFramerate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxFramerate", r.maxFramerate, "form", "")
 	}
 	if r.copyTimestamps != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "form", "")
 	}
 	if r.startTimeTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.videoBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoBitRate", r.videoBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoBitRate", r.videoBitRate, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.subtitleMethod != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleMethod", r.subtitleMethod, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleMethod", r.subtitleMethod, "form", "")
 	}
 	if r.maxRefFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxRefFrames", r.maxRefFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxRefFrames", r.maxRefFrames, "form", "")
 	}
 	if r.maxVideoBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxVideoBitDepth", r.maxVideoBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxVideoBitDepth", r.maxVideoBitDepth, "form", "")
 	}
 	if r.requireAvc != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "requireAvc", r.requireAvc, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "requireAvc", r.requireAvc, "form", "")
 	}
 	if r.deInterlace != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deInterlace", r.deInterlace, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deInterlace", r.deInterlace, "form", "")
 	}
 	if r.requireNonAnamorphic != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "requireNonAnamorphic", r.requireNonAnamorphic, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "requireNonAnamorphic", r.requireNonAnamorphic, "form", "")
 	}
 	if r.transcodingMaxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingMaxAudioChannels", r.transcodingMaxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingMaxAudioChannels", r.transcodingMaxAudioChannels, "form", "")
 	}
 	if r.cpuCoreLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cpuCoreLimit", r.cpuCoreLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cpuCoreLimit", r.cpuCoreLimit, "form", "")
 	}
 	if r.liveStreamId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	}
 	if r.enableMpegtsM2TsMode != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableMpegtsM2TsMode", r.enableMpegtsM2TsMode, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableMpegtsM2TsMode", r.enableMpegtsM2TsMode, "form", "")
 	}
 	if r.videoCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoCodec", r.videoCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoCodec", r.videoCodec, "form", "")
 	}
 	if r.subtitleCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleCodec", r.subtitleCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleCodec", r.subtitleCodec, "form", "")
 	}
 	if r.transcodeReasons != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodeReasons", r.transcodeReasons, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodeReasons", r.transcodeReasons, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.videoStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoStreamIndex", r.videoStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoStreamIndex", r.videoStreamIndex, "form", "")
 	}
 	if r.context != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "context", r.context, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "context", r.context, "form", "")
 	}
 	if r.streamOptions != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "streamOptions", r.streamOptions, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "streamOptions", r.streamOptions, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2552,151 +2552,151 @@ func (a *VideosAPIService) HeadVideoStreamByContainerExecute(r ApiHeadVideoStrea
 	localVarFormParams := url.Values{}
 
 	if r.static != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "static", r.static, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "static", r.static, "form", "")
 	}
 	if r.params != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "params", r.params, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "params", r.params, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.deviceProfileId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceProfileId", r.deviceProfileId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceProfileId", r.deviceProfileId, "form", "")
 	}
 	if r.playSessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	}
 	if r.segmentContainer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentContainer", r.segmentContainer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentContainer", r.segmentContainer, "form", "")
 	}
 	if r.segmentLength != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "form", "")
 	}
 	if r.minSegments != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minSegments", r.minSegments, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minSegments", r.minSegments, "form", "")
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	}
 	if r.audioCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "form", "")
 	}
 	if r.enableAutoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAutoStreamCopy", r.enableAutoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAutoStreamCopy", r.enableAutoStreamCopy, "form", "")
 	}
 	if r.allowVideoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "form", "")
 	}
 	if r.allowAudioStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "form", "")
 	}
 	if r.breakOnNonKeyFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "form", "")
 	}
 	if r.audioSampleRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioSampleRate", r.audioSampleRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioSampleRate", r.audioSampleRate, "form", "")
 	}
 	if r.maxAudioBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "form", "")
 	}
 	if r.audioBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "form", "")
 	}
 	if r.audioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioChannels", r.audioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioChannels", r.audioChannels, "form", "")
 	}
 	if r.maxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "form", "")
 	}
 	if r.profile != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "profile", r.profile, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "profile", r.profile, "form", "")
 	}
 	if r.level != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "level", r.level, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "level", r.level, "form", "")
 	}
 	if r.framerate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "framerate", r.framerate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "framerate", r.framerate, "form", "")
 	}
 	if r.maxFramerate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxFramerate", r.maxFramerate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxFramerate", r.maxFramerate, "form", "")
 	}
 	if r.copyTimestamps != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "form", "")
 	}
 	if r.startTimeTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.videoBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoBitRate", r.videoBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoBitRate", r.videoBitRate, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.subtitleMethod != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleMethod", r.subtitleMethod, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleMethod", r.subtitleMethod, "form", "")
 	}
 	if r.maxRefFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxRefFrames", r.maxRefFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxRefFrames", r.maxRefFrames, "form", "")
 	}
 	if r.maxVideoBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxVideoBitDepth", r.maxVideoBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxVideoBitDepth", r.maxVideoBitDepth, "form", "")
 	}
 	if r.requireAvc != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "requireAvc", r.requireAvc, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "requireAvc", r.requireAvc, "form", "")
 	}
 	if r.deInterlace != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deInterlace", r.deInterlace, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deInterlace", r.deInterlace, "form", "")
 	}
 	if r.requireNonAnamorphic != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "requireNonAnamorphic", r.requireNonAnamorphic, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "requireNonAnamorphic", r.requireNonAnamorphic, "form", "")
 	}
 	if r.transcodingMaxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingMaxAudioChannels", r.transcodingMaxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingMaxAudioChannels", r.transcodingMaxAudioChannels, "form", "")
 	}
 	if r.cpuCoreLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "cpuCoreLimit", r.cpuCoreLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "cpuCoreLimit", r.cpuCoreLimit, "form", "")
 	}
 	if r.liveStreamId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	}
 	if r.enableMpegtsM2TsMode != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableMpegtsM2TsMode", r.enableMpegtsM2TsMode, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableMpegtsM2TsMode", r.enableMpegtsM2TsMode, "form", "")
 	}
 	if r.videoCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoCodec", r.videoCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoCodec", r.videoCodec, "form", "")
 	}
 	if r.subtitleCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleCodec", r.subtitleCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleCodec", r.subtitleCodec, "form", "")
 	}
 	if r.transcodeReasons != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodeReasons", r.transcodeReasons, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodeReasons", r.transcodeReasons, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.videoStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "videoStreamIndex", r.videoStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "videoStreamIndex", r.videoStreamIndex, "form", "")
 	}
 	if r.context != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "context", r.context, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "context", r.context, "form", "")
 	}
 	if r.streamOptions != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "streamOptions", r.streamOptions, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "streamOptions", r.streamOptions, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2808,10 +2808,10 @@ func (a *VideosAPIService) MergeVersionsExecute(r ApiMergeVersionsRequest) (*htt
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "ids", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "ids", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "ids", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "ids", t, "form", "multi")
 		}
 	}
 	// to determine the Content-Type header

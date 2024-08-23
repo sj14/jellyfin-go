@@ -133,9 +133,9 @@ func (a *QuickConnectAPIService) AuthorizeQuickConnectExecute(r ApiAuthorizeQuic
 		return localVarReturnValue, nil, reportError("code is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "code", r.code, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "code", r.code, "form", "")
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -366,7 +366,7 @@ func (a *QuickConnectAPIService) GetQuickConnectStateExecute(r ApiGetQuickConnec
 		return localVarReturnValue, nil, reportError("secret is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "secret", r.secret, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "secret", r.secret, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

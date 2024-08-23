@@ -164,42 +164,42 @@ func (a *FilterAPIService) GetQueryFiltersExecute(r ApiGetQueryFiltersRequest) (
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.parentId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
 	}
 	if r.includeItemTypes != nil {
 		t := *r.includeItemTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.isAiring != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isAiring", r.isAiring, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isAiring", r.isAiring, "form", "")
 	}
 	if r.isMovie != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "form", "")
 	}
 	if r.isSports != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "form", "")
 	}
 	if r.isKids != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "form", "")
 	}
 	if r.isNews != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "form", "")
 	}
 	if r.isSeries != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "form", "")
 	}
 	if r.recursive != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "recursive", r.recursive, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "recursive", r.recursive, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -341,20 +341,20 @@ func (a *FilterAPIService) GetQueryFiltersLegacyExecute(r ApiGetQueryFiltersLega
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.parentId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
 	}
 	if r.includeItemTypes != nil {
 		t := *r.includeItemTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.mediaTypes != nil {
@@ -362,10 +362,10 @@ func (a *FilterAPIService) GetQueryFiltersLegacyExecute(r ApiGetQueryFiltersLega
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "form", "multi")
 		}
 	}
 	// to determine the Content-Type header

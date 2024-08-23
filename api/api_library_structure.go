@@ -174,7 +174,7 @@ func (a *LibraryStructureAPIService) AddMediaPathExecute(r ApiAddMediaPathReques
 	}
 
 	if r.refreshLibrary != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.refreshLibrary = &defaultValue
@@ -317,24 +317,24 @@ func (a *LibraryStructureAPIService) AddVirtualFolderExecute(r ApiAddVirtualFold
 	localVarFormParams := url.Values{}
 
 	if r.name != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
 	}
 	if r.collectionType != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "collectionType", r.collectionType, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "collectionType", r.collectionType, "form", "")
 	}
 	if r.paths != nil {
 		t := *r.paths
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "paths", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "paths", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "paths", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "paths", t, "form", "multi")
 		}
 	}
 	if r.refreshLibrary != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.refreshLibrary = &defaultValue
@@ -574,13 +574,13 @@ func (a *LibraryStructureAPIService) RemoveMediaPathExecute(r ApiRemoveMediaPath
 	localVarFormParams := url.Values{}
 
 	if r.name != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
 	}
 	if r.path != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "path", r.path, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "path", r.path, "form", "")
 	}
 	if r.refreshLibrary != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.refreshLibrary = &defaultValue
@@ -700,10 +700,10 @@ func (a *LibraryStructureAPIService) RemoveVirtualFolderExecute(r ApiRemoveVirtu
 	localVarFormParams := url.Values{}
 
 	if r.name != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
 	}
 	if r.refreshLibrary != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.refreshLibrary = &defaultValue
@@ -830,13 +830,13 @@ func (a *LibraryStructureAPIService) RenameVirtualFolderExecute(r ApiRenameVirtu
 	localVarFormParams := url.Values{}
 
 	if r.name != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
 	}
 	if r.newName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "newName", r.newName, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "newName", r.newName, "form", "")
 	}
 	if r.refreshLibrary != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.refreshLibrary = &defaultValue

@@ -332,29 +332,29 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 	localVarFormParams := url.Values{}
 
 	if r.minCommunityRating != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minCommunityRating", r.minCommunityRating, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minCommunityRating", r.minCommunityRating, "form", "")
 	}
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.searchTerm != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "form", "")
 	}
 	if r.parentId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
 	}
 	if r.fields != nil {
 		t := *r.fields
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.excludeItemTypes != nil {
@@ -362,10 +362,10 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.includeItemTypes != nil {
@@ -373,10 +373,10 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.filters != nil {
@@ -384,24 +384,24 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "filters", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "filters", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "filters", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "filters", t, "form", "multi")
 		}
 	}
 	if r.isFavorite != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "form", "")
 	}
 	if r.mediaTypes != nil {
 		t := *r.mediaTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "form", "multi")
 		}
 	}
 	if r.genres != nil {
@@ -409,10 +409,10 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "genres", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genres", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "genres", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genres", t, "form", "multi")
 		}
 	}
 	if r.genreIds != nil {
@@ -420,10 +420,10 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "form", "multi")
 		}
 	}
 	if r.officialRatings != nil {
@@ -431,10 +431,10 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", t, "form", "multi")
 		}
 	}
 	if r.tags != nil {
@@ -442,10 +442,10 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "tags", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "tags", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "tags", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "tags", t, "form", "multi")
 		}
 	}
 	if r.years != nil {
@@ -453,41 +453,41 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "years", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "years", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "years", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "years", t, "form", "multi")
 		}
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.person != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "person", r.person, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "person", r.person, "form", "")
 	}
 	if r.personIds != nil {
 		t := *r.personIds
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", t, "form", "multi")
 		}
 	}
 	if r.personTypes != nil {
@@ -495,10 +495,10 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", t, "form", "multi")
 		}
 	}
 	if r.studios != nil {
@@ -506,10 +506,10 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "studios", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "studios", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "studios", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "studios", t, "form", "multi")
 		}
 	}
 	if r.studioIds != nil {
@@ -517,33 +517,33 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", t, "form", "multi")
 		}
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.nameStartsWithOrGreater != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWithOrGreater", r.nameStartsWithOrGreater, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWithOrGreater", r.nameStartsWithOrGreater, "form", "")
 	}
 	if r.nameStartsWith != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWith", r.nameStartsWith, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWith", r.nameStartsWith, "form", "")
 	}
 	if r.nameLessThan != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "nameLessThan", r.nameLessThan, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameLessThan", r.nameLessThan, "form", "")
 	}
 	if r.sortBy != nil {
 		t := *r.sortBy
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "form", "multi")
 		}
 	}
 	if r.sortOrder != nil {
@@ -551,20 +551,20 @@ func (a *ArtistsAPIService) GetAlbumArtistsExecute(r ApiGetAlbumArtistsRequest) 
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "form", "multi")
 		}
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableImages = &defaultValue
 	}
 	if r.enableTotalRecordCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableTotalRecordCount = &defaultValue
@@ -692,7 +692,7 @@ func (a *ArtistsAPIService) GetArtistByNameExecute(r ApiGetArtistByNameRequest) 
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1030,29 +1030,29 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 	localVarFormParams := url.Values{}
 
 	if r.minCommunityRating != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minCommunityRating", r.minCommunityRating, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minCommunityRating", r.minCommunityRating, "form", "")
 	}
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.searchTerm != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "form", "")
 	}
 	if r.parentId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
 	}
 	if r.fields != nil {
 		t := *r.fields
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.excludeItemTypes != nil {
@@ -1060,10 +1060,10 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.includeItemTypes != nil {
@@ -1071,10 +1071,10 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.filters != nil {
@@ -1082,24 +1082,24 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "filters", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "filters", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "filters", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "filters", t, "form", "multi")
 		}
 	}
 	if r.isFavorite != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "form", "")
 	}
 	if r.mediaTypes != nil {
 		t := *r.mediaTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "form", "multi")
 		}
 	}
 	if r.genres != nil {
@@ -1107,10 +1107,10 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "genres", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genres", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "genres", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genres", t, "form", "multi")
 		}
 	}
 	if r.genreIds != nil {
@@ -1118,10 +1118,10 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "form", "multi")
 		}
 	}
 	if r.officialRatings != nil {
@@ -1129,10 +1129,10 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", t, "form", "multi")
 		}
 	}
 	if r.tags != nil {
@@ -1140,10 +1140,10 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "tags", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "tags", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "tags", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "tags", t, "form", "multi")
 		}
 	}
 	if r.years != nil {
@@ -1151,41 +1151,41 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "years", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "years", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "years", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "years", t, "form", "multi")
 		}
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.person != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "person", r.person, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "person", r.person, "form", "")
 	}
 	if r.personIds != nil {
 		t := *r.personIds
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", t, "form", "multi")
 		}
 	}
 	if r.personTypes != nil {
@@ -1193,10 +1193,10 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", t, "form", "multi")
 		}
 	}
 	if r.studios != nil {
@@ -1204,10 +1204,10 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "studios", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "studios", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "studios", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "studios", t, "form", "multi")
 		}
 	}
 	if r.studioIds != nil {
@@ -1215,33 +1215,33 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", t, "form", "multi")
 		}
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.nameStartsWithOrGreater != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWithOrGreater", r.nameStartsWithOrGreater, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWithOrGreater", r.nameStartsWithOrGreater, "form", "")
 	}
 	if r.nameStartsWith != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWith", r.nameStartsWith, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWith", r.nameStartsWith, "form", "")
 	}
 	if r.nameLessThan != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "nameLessThan", r.nameLessThan, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameLessThan", r.nameLessThan, "form", "")
 	}
 	if r.sortBy != nil {
 		t := *r.sortBy
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "form", "multi")
 		}
 	}
 	if r.sortOrder != nil {
@@ -1249,20 +1249,20 @@ func (a *ArtistsAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "form", "multi")
 		}
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableImages = &defaultValue
 	}
 	if r.enableTotalRecordCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableTotalRecordCount = &defaultValue

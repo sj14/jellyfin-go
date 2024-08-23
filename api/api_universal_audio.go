@@ -225,62 +225,62 @@ func (a *UniversalAudioAPIService) GetUniversalAudioStreamExecute(r ApiGetUniver
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "container", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "container", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "container", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "container", t, "form", "multi")
 		}
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.audioCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "form", "")
 	}
 	if r.maxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "form", "")
 	}
 	if r.transcodingAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingAudioChannels", r.transcodingAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingAudioChannels", r.transcodingAudioChannels, "form", "")
 	}
 	if r.maxStreamingBitrate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStreamingBitrate", r.maxStreamingBitrate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStreamingBitrate", r.maxStreamingBitrate, "form", "")
 	}
 	if r.audioBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "form", "")
 	}
 	if r.startTimeTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "form", "")
 	}
 	if r.transcodingContainer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingContainer", r.transcodingContainer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingContainer", r.transcodingContainer, "form", "")
 	}
 	if r.transcodingProtocol != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingProtocol", r.transcodingProtocol, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingProtocol", r.transcodingProtocol, "form", "")
 	}
 	if r.maxAudioSampleRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioSampleRate", r.maxAudioSampleRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioSampleRate", r.maxAudioSampleRate, "form", "")
 	}
 	if r.maxAudioBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "form", "")
 	}
 	if r.enableRemoteMedia != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRemoteMedia", r.enableRemoteMedia, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRemoteMedia", r.enableRemoteMedia, "form", "")
 	}
 	if r.breakOnNonKeyFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.breakOnNonKeyFrames = &defaultValue
 	}
 	if r.enableRedirection != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRedirection", r.enableRedirection, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRedirection", r.enableRedirection, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableRedirection = &defaultValue
@@ -535,62 +535,62 @@ func (a *UniversalAudioAPIService) HeadUniversalAudioStreamExecute(r ApiHeadUniv
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "container", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "container", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "container", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "container", t, "form", "multi")
 		}
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.audioCodec != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioCodec", r.audioCodec, "form", "")
 	}
 	if r.maxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "form", "")
 	}
 	if r.transcodingAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingAudioChannels", r.transcodingAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingAudioChannels", r.transcodingAudioChannels, "form", "")
 	}
 	if r.maxStreamingBitrate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStreamingBitrate", r.maxStreamingBitrate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStreamingBitrate", r.maxStreamingBitrate, "form", "")
 	}
 	if r.audioBitRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioBitRate", r.audioBitRate, "form", "")
 	}
 	if r.startTimeTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "form", "")
 	}
 	if r.transcodingContainer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingContainer", r.transcodingContainer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingContainer", r.transcodingContainer, "form", "")
 	}
 	if r.transcodingProtocol != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingProtocol", r.transcodingProtocol, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "transcodingProtocol", r.transcodingProtocol, "form", "")
 	}
 	if r.maxAudioSampleRate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioSampleRate", r.maxAudioSampleRate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioSampleRate", r.maxAudioSampleRate, "form", "")
 	}
 	if r.maxAudioBitDepth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioBitDepth", r.maxAudioBitDepth, "form", "")
 	}
 	if r.enableRemoteMedia != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRemoteMedia", r.enableRemoteMedia, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRemoteMedia", r.enableRemoteMedia, "form", "")
 	}
 	if r.breakOnNonKeyFrames != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.breakOnNonKeyFrames = &defaultValue
 	}
 	if r.enableRedirection != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRedirection", r.enableRedirection, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRedirection", r.enableRedirection, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableRedirection = &defaultValue

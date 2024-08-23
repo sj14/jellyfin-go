@@ -1269,10 +1269,10 @@ func (a *UserAPIService) GetUsersExecute(r ApiGetUsersRequest) ([]UserDto, *http
 	localVarFormParams := url.Values{}
 
 	if r.isHidden != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isHidden", r.isHidden, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isHidden", r.isHidden, "form", "")
 	}
 	if r.isDisabled != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isDisabled", r.isDisabled, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isDisabled", r.isDisabled, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1401,7 +1401,7 @@ func (a *UserAPIService) UpdateUserExecute(r ApiUpdateUserRequest) (*http.Respon
 	}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
@@ -1545,7 +1545,7 @@ func (a *UserAPIService) UpdateUserConfigurationExecute(r ApiUpdateUserConfigura
 	}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
@@ -1678,7 +1678,7 @@ func (a *UserAPIService) UpdateUserPasswordExecute(r ApiUpdateUserPasswordReques
 	}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}

@@ -369,7 +369,7 @@ func (a *ItemUpdateAPIService) UpdateItemContentTypeExecute(r ApiUpdateItemConte
 	localVarFormParams := url.Values{}
 
 	if r.contentType != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "contentType", r.contentType, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "contentType", r.contentType, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

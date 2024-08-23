@@ -101,7 +101,7 @@ func (a *UserViewsAPIService) GetGroupingOptionsExecute(r ApiGetGroupingOptionsR
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -254,24 +254,24 @@ func (a *UserViewsAPIService) GetUserViewsExecute(r ApiGetUserViewsRequest) (*Ba
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.includeExternalContent != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeExternalContent", r.includeExternalContent, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeExternalContent", r.includeExternalContent, "form", "")
 	}
 	if r.presetViews != nil {
 		t := *r.presetViews
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "presetViews", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "presetViews", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "presetViews", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "presetViews", t, "form", "multi")
 		}
 	}
 	if r.includeHidden != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeHidden", r.includeHidden, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeHidden", r.includeHidden, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.includeHidden = &defaultValue

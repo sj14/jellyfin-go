@@ -271,10 +271,10 @@ func (a *ScheduledTasksAPIService) GetTasksExecute(r ApiGetTasksRequest) ([]Task
 	localVarFormParams := url.Values{}
 
 	if r.isHidden != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isHidden", r.isHidden, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isHidden", r.isHidden, "form", "")
 	}
 	if r.isEnabled != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isEnabled", r.isEnabled, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isEnabled", r.isEnabled, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

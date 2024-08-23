@@ -110,16 +110,16 @@ func (a *ActivityLogAPIService) GetLogEntriesExecute(r ApiGetLogEntriesRequest) 
 	localVarFormParams := url.Values{}
 
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.minDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minDate", r.minDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minDate", r.minDate, "form", "")
 	}
 	if r.hasUserId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "hasUserId", r.hasUserId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasUserId", r.hasUserId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

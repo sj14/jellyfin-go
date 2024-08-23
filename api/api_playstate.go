@@ -195,10 +195,10 @@ func (a *PlaystateAPIService) MarkPlayedItemExecute(r ApiMarkPlayedItemRequest) 
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.datePlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "datePlayed", r.datePlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "datePlayed", r.datePlayed, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -334,7 +334,7 @@ func (a *PlaystateAPIService) MarkUnplayedItemExecute(r ApiMarkUnplayedItemReque
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -538,40 +538,40 @@ func (a *PlaystateAPIService) OnPlaybackProgressExecute(r ApiOnPlaybackProgressR
 	localVarFormParams := url.Values{}
 
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.positionTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "positionTicks", r.positionTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "positionTicks", r.positionTicks, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.volumeLevel != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "volumeLevel", r.volumeLevel, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "volumeLevel", r.volumeLevel, "form", "")
 	}
 	if r.playMethod != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playMethod", r.playMethod, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playMethod", r.playMethod, "form", "")
 	}
 	if r.liveStreamId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	}
 	if r.playSessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	}
 	if r.repeatMode != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "repeatMode", r.repeatMode, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "repeatMode", r.repeatMode, "form", "")
 	}
 	if r.isPaused != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isPaused", r.isPaused, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isPaused", r.isPaused, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.isPaused = &defaultValue
 	}
 	if r.isMuted != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isMuted", r.isMuted, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMuted", r.isMuted, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.isMuted = &defaultValue
@@ -730,25 +730,25 @@ func (a *PlaystateAPIService) OnPlaybackStartExecute(r ApiOnPlaybackStartRequest
 	localVarFormParams := url.Values{}
 
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.playMethod != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playMethod", r.playMethod, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playMethod", r.playMethod, "form", "")
 	}
 	if r.liveStreamId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	}
 	if r.playSessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	}
 	if r.canSeek != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "canSeek", r.canSeek, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "canSeek", r.canSeek, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.canSeek = &defaultValue
@@ -893,19 +893,19 @@ func (a *PlaystateAPIService) OnPlaybackStoppedExecute(r ApiOnPlaybackStoppedReq
 	localVarFormParams := url.Values{}
 
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.nextMediaType != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "nextMediaType", r.nextMediaType, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nextMediaType", r.nextMediaType, "form", "")
 	}
 	if r.positionTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "positionTicks", r.positionTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "positionTicks", r.positionTicks, "form", "")
 	}
 	if r.liveStreamId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	}
 	if r.playSessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1017,7 +1017,7 @@ func (a *PlaystateAPIService) PingPlaybackSessionExecute(r ApiPingPlaybackSessio
 		return nil, reportError("playSessionId is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

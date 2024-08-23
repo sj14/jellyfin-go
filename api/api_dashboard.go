@@ -101,7 +101,7 @@ func (a *DashboardAPIService) GetConfigurationPagesExecute(r ApiGetConfiguration
 	localVarFormParams := url.Values{}
 
 	if r.enableInMainMenu != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableInMainMenu", r.enableInMainMenu, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableInMainMenu", r.enableInMainMenu, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -233,7 +233,7 @@ func (a *DashboardAPIService) GetDashboardConfigurationPageExecute(r ApiGetDashb
 	localVarFormParams := url.Values{}
 
 	if r.name != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
