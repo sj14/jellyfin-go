@@ -107,7 +107,7 @@ func (a *PersonsAPIService) GetPersonExecute(r ApiGetPersonRequest) (*BaseItemDt
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -323,20 +323,20 @@ func (a *PersonsAPIService) GetPersonsExecute(r ApiGetPersonsRequest) (*BaseItem
 	localVarFormParams := url.Values{}
 
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.searchTerm != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "form", "")
 	}
 	if r.fields != nil {
 		t := *r.fields
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.filters != nil {
@@ -344,30 +344,30 @@ func (a *PersonsAPIService) GetPersonsExecute(r ApiGetPersonsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "filters", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "filters", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "filters", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "filters", t, "form", "multi")
 		}
 	}
 	if r.isFavorite != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "form", "")
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.excludePersonTypes != nil {
@@ -375,10 +375,10 @@ func (a *PersonsAPIService) GetPersonsExecute(r ApiGetPersonsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "excludePersonTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludePersonTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "excludePersonTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludePersonTypes", t, "form", "multi")
 		}
 	}
 	if r.personTypes != nil {
@@ -386,20 +386,20 @@ func (a *PersonsAPIService) GetPersonsExecute(r ApiGetPersonsRequest) (*BaseItem
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", t, "form", "multi")
 		}
 	}
 	if r.appearsInItemId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "appearsInItemId", r.appearsInItemId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "appearsInItemId", r.appearsInItemId, "form", "")
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableImages = &defaultValue

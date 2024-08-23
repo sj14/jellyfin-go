@@ -609,8 +609,8 @@ func (a *HlsSegmentAPIService) StopEncodingProcessExecute(r ApiStopEncodingProce
 		return nil, reportError("playSessionId is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "")
-	parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

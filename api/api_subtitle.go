@@ -864,34 +864,34 @@ func (a *SubtitleAPIService) GetSubtitleExecute(r ApiGetSubtitleRequest) (*os.Fi
 	localVarFormParams := url.Values{}
 
 	if r.itemId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "form", "")
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.index != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "index", r.index, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "index", r.index, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.endPositionTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "endPositionTicks", r.endPositionTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endPositionTicks", r.endPositionTicks, "form", "")
 	}
 	if r.copyTimestamps != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.copyTimestamps = &defaultValue
 	}
 	if r.addVttTimeMap != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "addVttTimeMap", r.addVttTimeMap, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "addVttTimeMap", r.addVttTimeMap, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.addVttTimeMap = &defaultValue
 	}
 	if r.startPositionTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startPositionTicks", r.startPositionTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startPositionTicks", r.startPositionTicks, "form", "")
 	} else {
 		var defaultValue int64 = 0
 		r.startPositionTicks = &defaultValue
@@ -1015,7 +1015,7 @@ func (a *SubtitleAPIService) GetSubtitlePlaylistExecute(r ApiGetSubtitlePlaylist
 		return localVarReturnValue, nil, reportError("segmentLength is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "segmentLength", r.segmentLength, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -1220,31 +1220,31 @@ func (a *SubtitleAPIService) GetSubtitleWithTicksExecute(r ApiGetSubtitleWithTic
 	localVarFormParams := url.Values{}
 
 	if r.itemId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "form", "")
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.index != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "index", r.index, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "index", r.index, "form", "")
 	}
 	if r.startPositionTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startPositionTicks", r.startPositionTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startPositionTicks", r.startPositionTicks, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.endPositionTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "endPositionTicks", r.endPositionTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "endPositionTicks", r.endPositionTicks, "form", "")
 	}
 	if r.copyTimestamps != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.copyTimestamps = &defaultValue
 	}
 	if r.addVttTimeMap != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "addVttTimeMap", r.addVttTimeMap, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "addVttTimeMap", r.addVttTimeMap, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.addVttTimeMap = &defaultValue
@@ -1362,7 +1362,7 @@ func (a *SubtitleAPIService) SearchRemoteSubtitlesExecute(r ApiSearchRemoteSubti
 	localVarFormParams := url.Values{}
 
 	if r.isPerfectMatch != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isPerfectMatch", r.isPerfectMatch, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isPerfectMatch", r.isPerfectMatch, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -211,24 +211,24 @@ func (a *SearchAPIService) GetSearchHintsExecute(r ApiGetSearchHintsRequest) (*S
 	}
 
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
-	parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "form", "")
 	if r.includeItemTypes != nil {
 		t := *r.includeItemTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.excludeItemTypes != nil {
@@ -236,10 +236,10 @@ func (a *SearchAPIService) GetSearchHintsExecute(r ApiGetSearchHintsRequest) (*S
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.mediaTypes != nil {
@@ -247,56 +247,56 @@ func (a *SearchAPIService) GetSearchHintsExecute(r ApiGetSearchHintsRequest) (*S
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "form", "multi")
 		}
 	}
 	if r.parentId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
 	}
 	if r.isMovie != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "form", "")
 	}
 	if r.isSeries != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "form", "")
 	}
 	if r.isNews != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "form", "")
 	}
 	if r.isKids != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "form", "")
 	}
 	if r.isSports != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "form", "")
 	}
 	if r.includePeople != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includePeople", r.includePeople, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includePeople", r.includePeople, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.includePeople = &defaultValue
 	}
 	if r.includeMedia != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeMedia", r.includeMedia, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeMedia", r.includeMedia, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.includeMedia = &defaultValue
 	}
 	if r.includeGenres != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeGenres", r.includeGenres, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeGenres", r.includeGenres, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.includeGenres = &defaultValue
 	}
 	if r.includeStudios != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeStudios", r.includeStudios, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeStudios", r.includeStudios, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.includeStudios = &defaultValue
 	}
 	if r.includeArtists != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeArtists", r.includeArtists, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeArtists", r.includeArtists, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.includeArtists = &defaultValue

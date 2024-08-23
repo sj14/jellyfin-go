@@ -257,7 +257,7 @@ func (a *PackageAPIService) GetPackageInfoExecute(r ApiGetPackageInfoRequest) (*
 	localVarFormParams := url.Values{}
 
 	if r.assemblyGuid != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "assemblyGuid", r.assemblyGuid, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "assemblyGuid", r.assemblyGuid, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -616,13 +616,13 @@ func (a *PackageAPIService) InstallPackageExecute(r ApiInstallPackageRequest) (*
 	localVarFormParams := url.Values{}
 
 	if r.assemblyGuid != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "assemblyGuid", r.assemblyGuid, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "assemblyGuid", r.assemblyGuid, "form", "")
 	}
 	if r.version != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "version", r.version, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "version", r.version, "form", "")
 	}
 	if r.repositoryUrl != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "repositoryUrl", r.repositoryUrl, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "repositoryUrl", r.repositoryUrl, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -126,9 +126,9 @@ func (a *RemoteImageAPIService) DownloadRemoteImageExecute(r ApiDownloadRemoteIm
 		return nil, reportError("type_ is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "form", "")
 	if r.imageUrl != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageUrl", r.imageUrl, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageUrl", r.imageUrl, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -409,19 +409,19 @@ func (a *RemoteImageAPIService) GetRemoteImagesExecute(r ApiGetRemoteImagesReque
 	localVarFormParams := url.Values{}
 
 	if r.type_ != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "form", "")
 	}
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.providerName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "providerName", r.providerName, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "providerName", r.providerName, "form", "")
 	}
 	if r.includeAllLanguages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeAllLanguages", r.includeAllLanguages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeAllLanguages", r.includeAllLanguages, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.includeAllLanguages = &defaultValue

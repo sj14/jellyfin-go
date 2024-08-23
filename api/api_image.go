@@ -707,7 +707,7 @@ func (a *ImageAPIService) DeleteItemImageExecute(r ApiDeleteItemImageRequest) (*
 	localVarFormParams := url.Values{}
 
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -951,7 +951,7 @@ func (a *ImageAPIService) DeleteUserImageExecute(r ApiDeleteUserImageRequest) (*
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1177,46 +1177,46 @@ func (a *ImageAPIService) GetArtistImageExecute(r ApiGetArtistImageRequest) (*os
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1439,49 +1439,49 @@ func (a *ImageAPIService) GetGenreImageExecute(r ApiGetGenreImageRequest) (*os.F
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1701,46 +1701,46 @@ func (a *ImageAPIService) GetGenreImageByIndexExecute(r ApiGetGenreImageByIndexR
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1963,49 +1963,49 @@ func (a *ImageAPIService) GetItemImageExecute(r ApiGetItemImageRequest) (*os.Fil
 	localVarFormParams := url.Values{}
 
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2207,28 +2207,28 @@ func (a *ImageAPIService) GetItemImage2Execute(r ApiGetItemImage2Request) (*os.F
 	localVarFormParams := url.Values{}
 
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2448,46 +2448,46 @@ func (a *ImageAPIService) GetItemImageByIndexExecute(r ApiGetItemImageByIndexReq
 	localVarFormParams := url.Values{}
 
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2836,49 +2836,49 @@ func (a *ImageAPIService) GetMusicGenreImageExecute(r ApiGetMusicGenreImageReque
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3098,46 +3098,46 @@ func (a *ImageAPIService) GetMusicGenreImageByIndexExecute(r ApiGetMusicGenreIma
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3360,49 +3360,49 @@ func (a *ImageAPIService) GetPersonImageExecute(r ApiGetPersonImageRequest) (*os
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3622,46 +3622,46 @@ func (a *ImageAPIService) GetPersonImageByIndexExecute(r ApiGetPersonImageByInde
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3855,40 +3855,40 @@ func (a *ImageAPIService) GetSplashscreenExecute(r ApiGetSplashscreenRequest) (*
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	} else {
 		var defaultValue int32 = 90
 		r.quality = &defaultValue
@@ -4104,49 +4104,49 @@ func (a *ImageAPIService) GetStudioImageExecute(r ApiGetStudioImageRequest) (*os
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4366,46 +4366,46 @@ func (a *ImageAPIService) GetStudioImageByIndexExecute(r ApiGetStudioImageByInde
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4627,52 +4627,52 @@ func (a *ImageAPIService) GetUserImageExecute(r ApiGetUserImageRequest) (*os.Fil
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4903,46 +4903,46 @@ func (a *ImageAPIService) HeadArtistImageExecute(r ApiHeadArtistImageRequest) (*
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5165,49 +5165,49 @@ func (a *ImageAPIService) HeadGenreImageExecute(r ApiHeadGenreImageRequest) (*os
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5427,46 +5427,46 @@ func (a *ImageAPIService) HeadGenreImageByIndexExecute(r ApiHeadGenreImageByInde
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5689,49 +5689,49 @@ func (a *ImageAPIService) HeadItemImageExecute(r ApiHeadItemImageRequest) (*os.F
 	localVarFormParams := url.Values{}
 
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5933,28 +5933,28 @@ func (a *ImageAPIService) HeadItemImage2Execute(r ApiHeadItemImage2Request) (*os
 	localVarFormParams := url.Values{}
 
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6174,46 +6174,46 @@ func (a *ImageAPIService) HeadItemImageByIndexExecute(r ApiHeadItemImageByIndexR
 	localVarFormParams := url.Values{}
 
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6436,49 +6436,49 @@ func (a *ImageAPIService) HeadMusicGenreImageExecute(r ApiHeadMusicGenreImageReq
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6698,46 +6698,46 @@ func (a *ImageAPIService) HeadMusicGenreImageByIndexExecute(r ApiHeadMusicGenreI
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6960,49 +6960,49 @@ func (a *ImageAPIService) HeadPersonImageExecute(r ApiHeadPersonImageRequest) (*
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -7222,46 +7222,46 @@ func (a *ImageAPIService) HeadPersonImageByIndexExecute(r ApiHeadPersonImageByIn
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -7484,49 +7484,49 @@ func (a *ImageAPIService) HeadStudioImageExecute(r ApiHeadStudioImageRequest) (*
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -7746,46 +7746,46 @@ func (a *ImageAPIService) HeadStudioImageByIndexExecute(r ApiHeadStudioImageByIn
 	localVarFormParams := url.Values{}
 
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -8007,52 +8007,52 @@ func (a *ImageAPIService) HeadUserImageExecute(r ApiHeadUserImageRequest) (*os.F
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.tag != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "tag", r.tag, "form", "")
 	}
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
 	}
 	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
 	}
 	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
 	}
 	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
 	}
 	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
 	}
 	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
 	}
 	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
 	}
 	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
 	}
 	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
 	}
 	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
 	}
 	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
 	}
 	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
 	}
 	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -8184,7 +8184,7 @@ func (a *ImageAPIService) PostUserImageExecute(r ApiPostUserImageRequest) (*http
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"image/*"}
@@ -8623,7 +8623,7 @@ func (a *ImageAPIService) UpdateItemImageIndexExecute(r ApiUpdateItemImageIndexR
 		return nil, reportError("newIndex is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "newIndex", r.newIndex, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "newIndex", r.newIndex, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

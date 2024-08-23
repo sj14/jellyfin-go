@@ -791,7 +791,7 @@ func (a *LyricsAPIService) UploadLyricsExecute(r ApiUploadLyricsRequest) (*Lyric
 		return localVarReturnValue, nil, reportError("fileName is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "fileName", r.fileName, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "fileName", r.fileName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"text/plain"}
 

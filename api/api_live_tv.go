@@ -606,16 +606,16 @@ func (a *LiveTvAPIService) AddListingProviderExecute(r ApiAddListingProviderRequ
 	localVarFormParams := url.Values{}
 
 	if r.pw != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "pw", r.pw, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pw", r.pw, "form", "")
 	}
 	if r.validateListings != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "validateListings", r.validateListings, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "validateListings", r.validateListings, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.validateListings = &defaultValue
 	}
 	if r.validateLogin != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "validateLogin", r.validateLogin, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "validateLogin", r.validateLogin, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.validateLogin = &defaultValue
@@ -1285,7 +1285,7 @@ func (a *LiveTvAPIService) DeleteListingProviderExecute(r ApiDeleteListingProvid
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1510,7 +1510,7 @@ func (a *LiveTvAPIService) DeleteTunerHostExecute(r ApiDeleteTunerHostRequest) (
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1622,7 +1622,7 @@ func (a *LiveTvAPIService) DiscoverTunersExecute(r ApiDiscoverTunersRequest) ([]
 	localVarFormParams := url.Values{}
 
 	if r.newDevicesOnly != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "newDevicesOnly", r.newDevicesOnly, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "newDevicesOnly", r.newDevicesOnly, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.newDevicesOnly = &defaultValue
@@ -1746,7 +1746,7 @@ func (a *LiveTvAPIService) DiscvoverTunersExecute(r ApiDiscvoverTunersRequest) (
 	localVarFormParams := url.Values{}
 
 	if r.newDevicesOnly != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "newDevicesOnly", r.newDevicesOnly, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "newDevicesOnly", r.newDevicesOnly, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.newDevicesOnly = &defaultValue
@@ -1874,7 +1874,7 @@ func (a *LiveTvAPIService) GetChannelExecute(r ApiGetChannelRequest) (*BaseItemD
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2006,7 +2006,7 @@ func (a *LiveTvAPIService) GetChannelMappingOptionsExecute(r ApiGetChannelMappin
 	localVarFormParams := url.Values{}
 
 	if r.providerId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "providerId", r.providerId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "providerId", r.providerId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2238,7 +2238,7 @@ func (a *LiveTvAPIService) GetDefaultTimerExecute(r ApiGetDefaultTimerRequest) (
 	localVarFormParams := url.Values{}
 
 	if r.programId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "programId", r.programId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "programId", r.programId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2491,16 +2491,16 @@ func (a *LiveTvAPIService) GetLineupsExecute(r ApiGetLineupsRequest) ([]NameIdPa
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "form", "")
 	}
 	if r.type_ != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "form", "")
 	}
 	if r.location != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "location", r.location, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "location", r.location, "form", "")
 	}
 	if r.country != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "country", r.country, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "country", r.country, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2987,56 +2987,56 @@ func (a *LiveTvAPIService) GetLiveTvChannelsExecute(r ApiGetLiveTvChannelsReques
 	localVarFormParams := url.Values{}
 
 	if r.type_ != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "form", "")
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.isMovie != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "form", "")
 	}
 	if r.isSeries != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "form", "")
 	}
 	if r.isNews != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "form", "")
 	}
 	if r.isKids != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "form", "")
 	}
 	if r.isSports != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.isFavorite != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "form", "")
 	}
 	if r.isLiked != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isLiked", r.isLiked, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isLiked", r.isLiked, "form", "")
 	}
 	if r.isDisliked != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isDisliked", r.isDisliked, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isDisliked", r.isDisliked, "form", "")
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.fields != nil {
@@ -3044,37 +3044,37 @@ func (a *LiveTvAPIService) GetLiveTvChannelsExecute(r ApiGetLiveTvChannelsReques
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.sortBy != nil {
 		t := *r.sortBy
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "form", "multi")
 		}
 	}
 	if r.sortOrder != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", r.sortOrder, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", r.sortOrder, "form", "")
 	}
 	if r.enableFavoriteSorting != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableFavoriteSorting", r.enableFavoriteSorting, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableFavoriteSorting", r.enableFavoriteSorting, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.enableFavoriteSorting = &defaultValue
 	}
 	if r.addCurrentProgram != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "addCurrentProgram", r.addCurrentProgram, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "addCurrentProgram", r.addCurrentProgram, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.addCurrentProgram = &defaultValue
@@ -3495,63 +3495,63 @@ func (a *LiveTvAPIService) GetLiveTvProgramsExecute(r ApiGetLiveTvProgramsReques
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "channelIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "channelIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "channelIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "channelIds", t, "form", "multi")
 		}
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.minStartDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minStartDate", r.minStartDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minStartDate", r.minStartDate, "form", "")
 	}
 	if r.hasAired != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "hasAired", r.hasAired, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasAired", r.hasAired, "form", "")
 	}
 	if r.isAiring != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isAiring", r.isAiring, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isAiring", r.isAiring, "form", "")
 	}
 	if r.maxStartDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStartDate", r.maxStartDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStartDate", r.maxStartDate, "form", "")
 	}
 	if r.minEndDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "minEndDate", r.minEndDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minEndDate", r.minEndDate, "form", "")
 	}
 	if r.maxEndDate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxEndDate", r.maxEndDate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxEndDate", r.maxEndDate, "form", "")
 	}
 	if r.isMovie != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "form", "")
 	}
 	if r.isSeries != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "form", "")
 	}
 	if r.isNews != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "form", "")
 	}
 	if r.isKids != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "form", "")
 	}
 	if r.isSports != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "form", "")
 	}
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.sortBy != nil {
 		t := *r.sortBy
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "form", "multi")
 		}
 	}
 	if r.sortOrder != nil {
@@ -3559,10 +3559,10 @@ func (a *LiveTvAPIService) GetLiveTvProgramsExecute(r ApiGetLiveTvProgramsReques
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "form", "multi")
 		}
 	}
 	if r.genres != nil {
@@ -3570,10 +3570,10 @@ func (a *LiveTvAPIService) GetLiveTvProgramsExecute(r ApiGetLiveTvProgramsReques
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "genres", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genres", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "genres", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genres", t, "form", "multi")
 		}
 	}
 	if r.genreIds != nil {
@@ -3581,51 +3581,51 @@ func (a *LiveTvAPIService) GetLiveTvProgramsExecute(r ApiGetLiveTvProgramsReques
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "form", "multi")
 		}
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.seriesTimerId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "seriesTimerId", r.seriesTimerId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "seriesTimerId", r.seriesTimerId, "form", "")
 	}
 	if r.librarySeriesId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "librarySeriesId", r.librarySeriesId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "librarySeriesId", r.librarySeriesId, "form", "")
 	}
 	if r.fields != nil {
 		t := *r.fields
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.enableTotalRecordCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableTotalRecordCount = &defaultValue
@@ -3753,7 +3753,7 @@ func (a *LiveTvAPIService) GetProgramExecute(r ApiGetProgramRequest) (*BaseItemD
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4099,47 +4099,47 @@ func (a *LiveTvAPIService) GetRecommendedProgramsExecute(r ApiGetRecommendedProg
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.isAiring != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isAiring", r.isAiring, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isAiring", r.isAiring, "form", "")
 	}
 	if r.hasAired != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "hasAired", r.hasAired, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasAired", r.hasAired, "form", "")
 	}
 	if r.isSeries != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "form", "")
 	}
 	if r.isMovie != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "form", "")
 	}
 	if r.isNews != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "form", "")
 	}
 	if r.isKids != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "form", "")
 	}
 	if r.isSports != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "form", "")
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.genreIds != nil {
@@ -4147,10 +4147,10 @@ func (a *LiveTvAPIService) GetRecommendedProgramsExecute(r ApiGetRecommendedProg
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "form", "multi")
 		}
 	}
 	if r.fields != nil {
@@ -4158,17 +4158,17 @@ func (a *LiveTvAPIService) GetRecommendedProgramsExecute(r ApiGetRecommendedProg
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.enableTotalRecordCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableTotalRecordCount = &defaultValue
@@ -4296,7 +4296,7 @@ func (a *LiveTvAPIService) GetRecordingExecute(r ApiGetRecordingRequest) (*BaseI
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4428,7 +4428,7 @@ func (a *LiveTvAPIService) GetRecordingFoldersExecute(r ApiGetRecordingFoldersRe
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4670,7 +4670,7 @@ func (a *LiveTvAPIService) GetRecordingGroupsExecute(r ApiGetRecordingGroupsRequ
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4917,41 +4917,41 @@ func (a *LiveTvAPIService) GetRecordingsExecute(r ApiGetRecordingsRequest) (*Bas
 	localVarFormParams := url.Values{}
 
 	if r.channelId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "channelId", r.channelId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "channelId", r.channelId, "form", "")
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.status != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "status", r.status, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "status", r.status, "form", "")
 	}
 	if r.isInProgress != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isInProgress", r.isInProgress, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isInProgress", r.isInProgress, "form", "")
 	}
 	if r.seriesTimerId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "seriesTimerId", r.seriesTimerId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "seriesTimerId", r.seriesTimerId, "form", "")
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.fields != nil {
@@ -4959,35 +4959,35 @@ func (a *LiveTvAPIService) GetRecordingsExecute(r ApiGetRecordingsRequest) (*Bas
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.isMovie != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "form", "")
 	}
 	if r.isSeries != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "form", "")
 	}
 	if r.isKids != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "form", "")
 	}
 	if r.isSports != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "form", "")
 	}
 	if r.isNews != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "form", "")
 	}
 	if r.isLibraryItem != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isLibraryItem", r.isLibraryItem, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isLibraryItem", r.isLibraryItem, "form", "")
 	}
 	if r.enableTotalRecordCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableTotalRecordCount = &defaultValue
@@ -5205,44 +5205,44 @@ func (a *LiveTvAPIService) GetRecordingsSeriesExecute(r ApiGetRecordingsSeriesRe
 	localVarFormParams := url.Values{}
 
 	if r.channelId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "channelId", r.channelId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "channelId", r.channelId, "form", "")
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.groupId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "groupId", r.groupId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "groupId", r.groupId, "form", "")
 	}
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.status != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "status", r.status, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "status", r.status, "form", "")
 	}
 	if r.isInProgress != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isInProgress", r.isInProgress, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isInProgress", r.isInProgress, "form", "")
 	}
 	if r.seriesTimerId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "seriesTimerId", r.seriesTimerId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "seriesTimerId", r.seriesTimerId, "form", "")
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.fields != nil {
@@ -5250,17 +5250,17 @@ func (a *LiveTvAPIService) GetRecordingsSeriesExecute(r ApiGetRecordingsSeriesRe
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.enableTotalRecordCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableTotalRecordCount = &defaultValue
@@ -5628,10 +5628,10 @@ func (a *LiveTvAPIService) GetSeriesTimersExecute(r ApiGetSeriesTimersRequest) (
 	localVarFormParams := url.Values{}
 
 	if r.sortBy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", r.sortBy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", r.sortBy, "form", "")
 	}
 	if r.sortOrder != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", r.sortOrder, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", r.sortOrder, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5888,16 +5888,16 @@ func (a *LiveTvAPIService) GetTimersExecute(r ApiGetTimersRequest) (*TimerInfoDt
 	localVarFormParams := url.Values{}
 
 	if r.channelId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "channelId", r.channelId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "channelId", r.channelId, "form", "")
 	}
 	if r.seriesTimerId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "seriesTimerId", r.seriesTimerId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "seriesTimerId", r.seriesTimerId, "form", "")
 	}
 	if r.isActive != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isActive", r.isActive, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isActive", r.isActive, "form", "")
 	}
 	if r.isScheduled != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "isScheduled", r.isScheduled, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isScheduled", r.isScheduled, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

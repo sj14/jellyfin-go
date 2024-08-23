@@ -142,7 +142,7 @@ func (a *MediaInfoAPIService) CloseLiveStreamExecute(r ApiCloseLiveStreamRequest
 		return nil, reportError("liveStreamId is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -253,7 +253,7 @@ func (a *MediaInfoAPIService) GetBitrateTestBytesExecute(r ApiGetBitrateTestByte
 	localVarFormParams := url.Values{}
 
 	if r.size != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "size", r.size, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "size", r.size, "form", "")
 	} else {
 		var defaultValue int32 = 102400
 		r.size = &defaultValue
@@ -381,7 +381,7 @@ func (a *MediaInfoAPIService) GetPlaybackInfoExecute(r ApiGetPlaybackInfoRequest
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -632,46 +632,46 @@ func (a *MediaInfoAPIService) GetPostedPlaybackInfoExecute(r ApiGetPostedPlaybac
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.maxStreamingBitrate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStreamingBitrate", r.maxStreamingBitrate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStreamingBitrate", r.maxStreamingBitrate, "form", "")
 	}
 	if r.startTimeTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.maxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "form", "")
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.liveStreamId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "liveStreamId", r.liveStreamId, "form", "")
 	}
 	if r.autoOpenLiveStream != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "autoOpenLiveStream", r.autoOpenLiveStream, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "autoOpenLiveStream", r.autoOpenLiveStream, "form", "")
 	}
 	if r.enableDirectPlay != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableDirectPlay", r.enableDirectPlay, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableDirectPlay", r.enableDirectPlay, "form", "")
 	}
 	if r.enableDirectStream != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableDirectStream", r.enableDirectStream, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableDirectStream", r.enableDirectStream, "form", "")
 	}
 	if r.enableTranscoding != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTranscoding", r.enableTranscoding, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTranscoding", r.enableTranscoding, "form", "")
 	}
 	if r.allowVideoStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowVideoStreamCopy", r.allowVideoStreamCopy, "form", "")
 	}
 	if r.allowAudioStreamCopy != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "allowAudioStreamCopy", r.allowAudioStreamCopy, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
@@ -882,37 +882,37 @@ func (a *MediaInfoAPIService) OpenLiveStreamExecute(r ApiOpenLiveStreamRequest) 
 	localVarFormParams := url.Values{}
 
 	if r.openToken != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "openToken", r.openToken, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "openToken", r.openToken, "form", "")
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.playSessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
 	}
 	if r.maxStreamingBitrate != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStreamingBitrate", r.maxStreamingBitrate, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxStreamingBitrate", r.maxStreamingBitrate, "form", "")
 	}
 	if r.startTimeTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startTimeTicks", r.startTimeTicks, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.maxAudioChannels != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxAudioChannels", r.maxAudioChannels, "form", "")
 	}
 	if r.itemId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "form", "")
 	}
 	if r.enableDirectPlay != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableDirectPlay", r.enableDirectPlay, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableDirectPlay", r.enableDirectPlay, "form", "")
 	}
 	if r.enableDirectStream != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableDirectStream", r.enableDirectStream, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableDirectStream", r.enableDirectStream, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}

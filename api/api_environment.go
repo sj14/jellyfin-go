@@ -277,15 +277,15 @@ func (a *EnvironmentAPIService) GetDirectoryContentsExecute(r ApiGetDirectoryCon
 		return localVarReturnValue, nil, reportError("path is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "path", r.path, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "path", r.path, "form", "")
 	if r.includeFiles != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeFiles", r.includeFiles, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeFiles", r.includeFiles, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.includeFiles = &defaultValue
 	}
 	if r.includeDirectories != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "includeDirectories", r.includeDirectories, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "includeDirectories", r.includeDirectories, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.includeDirectories = &defaultValue
@@ -636,7 +636,7 @@ func (a *EnvironmentAPIService) GetParentPathExecute(r ApiGetParentPathRequest) 
 		return localVarReturnValue, nil, reportError("path is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "path", r.path, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "path", r.path, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

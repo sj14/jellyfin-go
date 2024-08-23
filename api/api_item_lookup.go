@@ -222,7 +222,7 @@ func (a *ItemLookupAPIService) ApplySearchCriteriaExecute(r ApiApplySearchCriter
 	}
 
 	if r.replaceAllImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", r.replaceAllImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", r.replaceAllImages, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.replaceAllImages = &defaultValue

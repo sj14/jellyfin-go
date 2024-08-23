@@ -117,30 +117,30 @@ func (a *MoviesAPIService) GetMovieRecommendationsExecute(r ApiGetMovieRecommend
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.parentId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
 	}
 	if r.fields != nil {
 		t := *r.fields
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.categoryLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "categoryLimit", r.categoryLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "categoryLimit", r.categoryLimit, "form", "")
 	} else {
 		var defaultValue int32 = 5
 		r.categoryLimit = &defaultValue
 	}
 	if r.itemLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "itemLimit", r.itemLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "itemLimit", r.itemLimit, "form", "")
 	} else {
 		var defaultValue int32 = 8
 		r.itemLimit = &defaultValue

@@ -115,7 +115,7 @@ func (a *TrickplayAPIService) GetTrickplayHlsPlaylistExecute(r ApiGetTrickplayHl
 	localVarFormParams := url.Values{}
 
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -259,7 +259,7 @@ func (a *TrickplayAPIService) GetTrickplayTileImageExecute(r ApiGetTrickplayTile
 	localVarFormParams := url.Values{}
 
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

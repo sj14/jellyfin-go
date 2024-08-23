@@ -107,7 +107,7 @@ func (a *YearsAPIService) GetYearExecute(r ApiGetYearRequest) (*BaseItemDto, *ht
 	localVarFormParams := url.Values{}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -337,34 +337,34 @@ func (a *YearsAPIService) GetYearsExecute(r ApiGetYearsRequest) (*BaseItemDtoQue
 	localVarFormParams := url.Values{}
 
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	if r.limit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	}
 	if r.sortOrder != nil {
 		t := *r.sortOrder
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "form", "multi")
 		}
 	}
 	if r.parentId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
 	}
 	if r.fields != nil {
 		t := *r.fields
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
 	}
 	if r.excludeItemTypes != nil {
@@ -372,10 +372,10 @@ func (a *YearsAPIService) GetYearsExecute(r ApiGetYearsRequest) (*BaseItemDtoQue
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.includeItemTypes != nil {
@@ -383,10 +383,10 @@ func (a *YearsAPIService) GetYearsExecute(r ApiGetYearsRequest) (*BaseItemDtoQue
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
 		}
 	}
 	if r.mediaTypes != nil {
@@ -394,10 +394,10 @@ func (a *YearsAPIService) GetYearsExecute(r ApiGetYearsRequest) (*BaseItemDtoQue
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "form", "multi")
 		}
 	}
 	if r.sortBy != nil {
@@ -405,40 +405,40 @@ func (a *YearsAPIService) GetYearsExecute(r ApiGetYearsRequest) (*BaseItemDtoQue
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "form", "multi")
 		}
 	}
 	if r.enableUserData != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
 	}
 	if r.imageTypeLimit != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
 	}
 	if r.enableImageTypes != nil {
 		t := *r.enableImageTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
 		}
 	}
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	if r.recursive != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "recursive", r.recursive, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "recursive", r.recursive, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.recursive = &defaultValue
 	}
 	if r.enableImages != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.enableImages = &defaultValue

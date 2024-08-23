@@ -322,7 +322,7 @@ func (a *SystemAPIService) GetLogFileExecute(r ApiGetLogFileRequest) (*os.File, 
 		return localVarReturnValue, nil, reportError("name is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

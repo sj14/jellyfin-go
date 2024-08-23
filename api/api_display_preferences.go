@@ -116,9 +116,9 @@ func (a *DisplayPreferencesAPIService) GetDisplayPreferencesExecute(r ApiGetDisp
 	}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
-	parameterAddToHeaderOrQuery(localVarQueryParams, "client", r.client, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "client", r.client, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -260,9 +260,9 @@ func (a *DisplayPreferencesAPIService) UpdateDisplayPreferencesExecute(r ApiUpda
 	}
 
 	if r.userId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
-	parameterAddToHeaderOrQuery(localVarQueryParams, "client", r.client, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "client", r.client, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
 

@@ -403,9 +403,9 @@ func (a *SessionAPIService) DisplayContentExecute(r ApiDisplayContentRequest) (*
 		return nil, reportError("itemName is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "itemType", r.itemType, "")
-	parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "")
-	parameterAddToHeaderOrQuery(localVarQueryParams, "itemName", r.itemName, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "itemType", r.itemType, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "itemName", r.itemName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -752,13 +752,13 @@ func (a *SessionAPIService) GetSessionsExecute(r ApiGetSessionsRequest) ([]Sessi
 	localVarFormParams := url.Values{}
 
 	if r.controllableByUserId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "controllableByUserId", r.controllableByUserId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "controllableByUserId", r.controllableByUserId, "form", "")
 	}
 	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	}
 	if r.activeWithinSeconds != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "activeWithinSeconds", r.activeWithinSeconds, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "activeWithinSeconds", r.activeWithinSeconds, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -928,32 +928,32 @@ func (a *SessionAPIService) PlayExecute(r ApiPlayRequest) (*http.Response, error
 		return nil, reportError("itemIds is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "playCommand", r.playCommand, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "playCommand", r.playCommand, "form", "")
 	{
 		t := *r.itemIds
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "itemIds", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "itemIds", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "itemIds", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "itemIds", t, "form", "multi")
 		}
 	}
 	if r.startPositionTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startPositionTicks", r.startPositionTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startPositionTicks", r.startPositionTicks, "form", "")
 	}
 	if r.mediaSourceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "mediaSourceId", r.mediaSourceId, "form", "")
 	}
 	if r.audioStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "audioStreamIndex", r.audioStreamIndex, "form", "")
 	}
 	if r.subtitleStreamIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleStreamIndex", r.subtitleStreamIndex, "form", "")
 	}
 	if r.startIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1091,17 +1091,17 @@ func (a *SessionAPIService) PostCapabilitiesExecute(r ApiPostCapabilitiesRequest
 	localVarFormParams := url.Values{}
 
 	if r.id != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "form", "")
 	}
 	if r.playableMediaTypes != nil {
 		t := *r.playableMediaTypes
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "playableMediaTypes", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "playableMediaTypes", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "playableMediaTypes", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "playableMediaTypes", t, "form", "multi")
 		}
 	}
 	if r.supportedCommands != nil {
@@ -1109,20 +1109,20 @@ func (a *SessionAPIService) PostCapabilitiesExecute(r ApiPostCapabilitiesRequest
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
 			for i := 0; i < s.Len(); i++ {
-				parameterAddToHeaderOrQuery(localVarQueryParams, "supportedCommands", s.Index(i).Interface(), "multi")
+				parameterAddToHeaderOrQuery(localVarQueryParams, "supportedCommands", s.Index(i).Interface(), "form", "multi")
 			}
 		} else {
-			parameterAddToHeaderOrQuery(localVarQueryParams, "supportedCommands", t, "multi")
+			parameterAddToHeaderOrQuery(localVarQueryParams, "supportedCommands", t, "form", "multi")
 		}
 	}
 	if r.supportsMediaControl != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "supportsMediaControl", r.supportsMediaControl, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "supportsMediaControl", r.supportsMediaControl, "form", "")
 	} else {
 		var defaultValue bool = false
 		r.supportsMediaControl = &defaultValue
 	}
 	if r.supportsPersistentIdentifier != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "supportsPersistentIdentifier", r.supportsPersistentIdentifier, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "supportsPersistentIdentifier", r.supportsPersistentIdentifier, "form", "")
 	} else {
 		var defaultValue bool = true
 		r.supportsPersistentIdentifier = &defaultValue
@@ -1245,7 +1245,7 @@ func (a *SessionAPIService) PostFullCapabilitiesExecute(r ApiPostFullCapabilitie
 	}
 
 	if r.id != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "id", r.id, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
@@ -1575,9 +1575,9 @@ func (a *SessionAPIService) ReportViewingExecute(r ApiReportViewingRequest) (*ht
 	}
 
 	if r.sessionId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sessionId", r.sessionId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "sessionId", r.sessionId, "form", "")
 	}
-	parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -2041,10 +2041,10 @@ func (a *SessionAPIService) SendPlaystateCommandExecute(r ApiSendPlaystateComman
 	localVarFormParams := url.Values{}
 
 	if r.seekPositionTicks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "seekPositionTicks", r.seekPositionTicks, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "seekPositionTicks", r.seekPositionTicks, "form", "")
 	}
 	if r.controllingUserId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "controllingUserId", r.controllingUserId, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "controllingUserId", r.controllingUserId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

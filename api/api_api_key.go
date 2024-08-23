@@ -112,7 +112,7 @@ func (a *ApiKeyAPIService) CreateKeyExecute(r ApiCreateKeyRequest) (*http.Respon
 		return nil, reportError("app is required and must be specified")
 	}
 
-	parameterAddToHeaderOrQuery(localVarQueryParams, "app", r.app, "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "app", r.app, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
