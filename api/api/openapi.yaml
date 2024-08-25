@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Jellyfin API
-  version: 10.9.9
-  x-jellyfin-version: 10.9.9
+  version: 10.9.10
+  x-jellyfin-version: 10.9.10
 servers:
 - url: http://localhost
 paths:
@@ -39593,15 +39593,7 @@ components:
         DeviceProfile:
           allOf:
           - $ref: '#/components/schemas/DeviceProfile'
-          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
-            \ metadata which determines which content a certain device is able to\
-            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
-            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
-            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
-            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
-            \nthe device is able to direct play (without transcoding or remuxing),\r\
-            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
-            >containers/codecs to transcode to</see> in case it isn't."
+          description: Gets or sets the device profile.
           nullable: true
         AppStoreUrl:
           description: Gets or sets the app store url.
@@ -44184,15 +44176,7 @@ components:
         DeviceProfile:
           allOf:
           - $ref: '#/components/schemas/DeviceProfile'
-          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
-            \ metadata which determines which content a certain device is able to\
-            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
-            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
-            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
-            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
-            \nthe device is able to direct play (without transcoding or remuxing),\r\
-            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
-            >containers/codecs to transcode to</see> in case it isn't."
+          description: Gets or sets the device profile.
           nullable: true
         DirectPlayProtocols:
           description: Gets or sets the device play protocols.
@@ -44612,15 +44596,7 @@ components:
         DeviceProfile:
           allOf:
           - $ref: '#/components/schemas/DeviceProfile'
-          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
-            \ metadata which determines which content a certain device is able to\
-            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
-            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
-            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
-            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
-            \nthe device is able to direct play (without transcoding or remuxing),\r\
-            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
-            >containers/codecs to transcode to</see> in case it isn't."
+          description: Gets or sets the device profile.
           nullable: true
         EnableDirectPlay:
           description: Gets or sets a value indicating whether to enable direct play.
@@ -46450,7 +46426,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupQueueMode'
-          description: Enum GroupQueueMode.
+          description: Gets or sets the mode in which to add the new items.
           enum:
           - Queue
           - QueueNext
@@ -52179,7 +52155,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupRepeatMode'
-          description: Enum GroupRepeatMode.
+          description: Gets or sets the repeat mode.
           enum:
           - RepeatOne
           - RepeatAll
@@ -52195,7 +52171,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupShuffleMode'
-          description: Enum GroupShuffleMode.
+          description: Gets or sets the shuffle mode.
           enum:
           - Sorted
           - Shuffle
