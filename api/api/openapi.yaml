@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Jellyfin API
-  version: 10.9.10
-  x-jellyfin-version: 10.9.10
+  version: 10.9.11
+  x-jellyfin-version: 10.9.11
 servers:
 - url: http://localhost
 paths:
@@ -39593,7 +39593,15 @@ components:
         DeviceProfile:
           allOf:
           - $ref: '#/components/schemas/DeviceProfile'
-          description: Gets or sets the device profile.
+          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
+            \ metadata which determines which content a certain device is able to\
+            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
+            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
+            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
+            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
+            \nthe device is able to direct play (without transcoding or remuxing),\r\
+            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
+            >containers/codecs to transcode to</see> in case it isn't."
           nullable: true
         AppStoreUrl:
           description: Gets or sets the app store url.
@@ -41935,7 +41943,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/LibraryUpdateInfo'
-          description: Gets or sets the data.
+          description: Class LibraryUpdateInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -44176,7 +44184,15 @@ components:
         DeviceProfile:
           allOf:
           - $ref: '#/components/schemas/DeviceProfile'
-          description: Gets or sets the device profile.
+          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
+            \ metadata which determines which content a certain device is able to\
+            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
+            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
+            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
+            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
+            \nthe device is able to direct play (without transcoding or remuxing),\r\
+            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
+            >containers/codecs to transcode to</see> in case it isn't."
           nullable: true
         DirectPlayProtocols:
           description: Gets or sets the device play protocols.
@@ -44596,7 +44612,15 @@ components:
         DeviceProfile:
           allOf:
           - $ref: '#/components/schemas/DeviceProfile'
-          description: Gets or sets the device profile.
+          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
+            \ metadata which determines which content a certain device is able to\
+            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
+            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
+            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
+            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
+            \nthe device is able to direct play (without transcoding or remuxing),\r\
+            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
+            >containers/codecs to transcode to</see> in case it isn't."
           nullable: true
         EnableDirectPlay:
           description: Gets or sets a value indicating whether to enable direct play.
@@ -45476,7 +45500,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/PlayRequest'
-          description: Gets or sets the data.
+          description: Class PlayRequest.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -45864,7 +45888,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/InstallationInfo'
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -45921,7 +45945,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/InstallationInfo'
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -45978,7 +46002,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/InstallationInfo'
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46035,7 +46059,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/InstallationInfo'
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46103,7 +46127,8 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/PluginInfo'
-          description: Gets or sets the data.
+          description: This is a serializable stub class that is used by the api to
+            provide information about installed plugins.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46426,7 +46451,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupQueueMode'
-          description: Gets or sets the mode in which to add the new items.
+          description: Enum GroupQueueMode.
           enum:
           - Queue
           - QueueNext
@@ -48608,7 +48633,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/TaskResult'
-          description: Gets or sets the data.
+          description: Class TaskExecutionInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -51839,7 +51864,9 @@ components:
         NowPlayingItem:
           allOf:
           - $ref: '#/components/schemas/BaseItemDto'
-          description: Gets or sets the now playing item.
+          description: "This is strictly used as a data transfer object from the api\
+            \ layer.\r\nThis holds information about a BaseItem in a format that is\
+            \ convenient for the client."
           nullable: true
         NowViewingItem:
           allOf:
@@ -52155,7 +52182,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupRepeatMode'
-          description: Gets or sets the repeat mode.
+          description: Enum GroupRepeatMode.
           enum:
           - RepeatOne
           - RepeatAll
@@ -52171,7 +52198,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupShuffleMode'
-          description: Gets or sets the shuffle mode.
+          description: Enum GroupShuffleMode.
           enum:
           - Sorted
           - Shuffle
@@ -52427,7 +52454,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/SendCommand'
-          description: Gets or sets the data.
+          description: Class SendCommand.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -52484,7 +52511,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/GroupUpdate'
-          description: Gets or sets the data.
+          description: Group update without data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -55694,7 +55721,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/UserDataChangeInfo'
-          description: Gets or sets the data.
+          description: Class UserDataChangeInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -56196,7 +56223,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/UserDto'
-          description: Gets or sets the data.
+          description: Class UserDto.
           nullable: true
         MessageId:
           description: Gets or sets the message id.

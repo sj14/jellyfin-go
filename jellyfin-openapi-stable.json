@@ -2,8 +2,8 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Jellyfin API",
-    "version": "10.9.10",
-    "x-jellyfin-version": "10.9.10"
+    "version": "10.9.11",
+    "x-jellyfin-version": "10.9.11"
   },
   "servers": [
     {
@@ -46038,7 +46038,7 @@
                 "$ref": "#/components/schemas/DeviceProfile"
               }
             ],
-            "description": "Gets or sets the device profile.",
+            "description": "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see> and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\">codecs</see> (video and/or audio, including codec profiles and levels)\r\nthe device is able to direct play (without transcoding or remuxing),\r\nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\">containers/codecs to transcode to</see> in case it isn't.",
             "nullable": true
           },
           "AppStoreUrl": {
@@ -48630,7 +48630,7 @@
                 "$ref": "#/components/schemas/LibraryUpdateInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class LibraryUpdateInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -50853,7 +50853,7 @@
                 "$ref": "#/components/schemas/DeviceProfile"
               }
             ],
-            "description": "Gets or sets the device profile.",
+            "description": "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see> and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\">codecs</see> (video and/or audio, including codec profiles and levels)\r\nthe device is able to direct play (without transcoding or remuxing),\r\nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\">containers/codecs to transcode to</see> in case it isn't.",
             "nullable": true
           },
           "DirectPlayProtocols": {
@@ -51346,7 +51346,7 @@
                 "$ref": "#/components/schemas/DeviceProfile"
               }
             ],
-            "description": "Gets or sets the device profile.",
+            "description": "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see> and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\">codecs</see> (video and/or audio, including codec profiles and levels)\r\nthe device is able to direct play (without transcoding or remuxing),\r\nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\">containers/codecs to transcode to</see> in case it isn't.",
             "nullable": true
           },
           "EnableDirectPlay": {
@@ -51929,7 +51929,7 @@
                 "$ref": "#/components/schemas/PlayRequest"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class PlayRequest.",
             "nullable": true
           },
           "MessageId": {
@@ -52397,7 +52397,7 @@
                 "$ref": "#/components/schemas/InstallationInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class InstallationInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -52464,7 +52464,7 @@
                 "$ref": "#/components/schemas/InstallationInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class InstallationInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -52531,7 +52531,7 @@
                 "$ref": "#/components/schemas/InstallationInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class InstallationInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -52598,7 +52598,7 @@
                 "$ref": "#/components/schemas/InstallationInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class InstallationInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -52678,7 +52678,7 @@
                 "$ref": "#/components/schemas/PluginInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "This is a serializable stub class that is used by the api to provide information about installed plugins.",
             "nullable": true
           },
           "MessageId": {
@@ -53028,7 +53028,7 @@
                 "$ref": "#/components/schemas/GroupQueueMode"
               }
             ],
-            "description": "Gets or sets the mode in which to add the new items."
+            "description": "Enum GroupQueueMode."
           }
         },
         "additionalProperties": false,
@@ -53650,7 +53650,7 @@
                 "$ref": "#/components/schemas/TaskResult"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class TaskExecutionInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -55173,7 +55173,7 @@
                 "$ref": "#/components/schemas/BaseItemDto"
               }
             ],
-            "description": "Gets or sets the now playing item.",
+            "description": "This is strictly used as a data transfer object from the api layer.\r\nThis holds information about a BaseItem in a format that is convenient for the client.",
             "nullable": true
           },
           "NowViewingItem": {
@@ -55542,7 +55542,7 @@
                 "$ref": "#/components/schemas/GroupRepeatMode"
               }
             ],
-            "description": "Gets or sets the repeat mode."
+            "description": "Enum GroupRepeatMode."
           }
         },
         "additionalProperties": false,
@@ -55561,7 +55561,7 @@
                 "$ref": "#/components/schemas/GroupShuffleMode"
               }
             ],
-            "description": "Gets or sets the shuffle mode."
+            "description": "Enum GroupShuffleMode."
           }
         },
         "additionalProperties": false,
@@ -55877,7 +55877,7 @@
                 "$ref": "#/components/schemas/SendCommand"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class SendCommand.",
             "nullable": true
           },
           "MessageId": {
@@ -55944,7 +55944,7 @@
                 "$ref": "#/components/schemas/GroupUpdate"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Group update without data.",
             "nullable": true
           },
           "MessageId": {
@@ -57671,7 +57671,7 @@
                 "$ref": "#/components/schemas/UserDataChangeInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class UserDataChangeInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -58181,7 +58181,7 @@
                 "$ref": "#/components/schemas/UserDto"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class UserDto.",
             "nullable": true
           },
           "MessageId": {
