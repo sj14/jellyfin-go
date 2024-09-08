@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **LastPausedDate** | Pointer to **NullableTime** | Gets or sets the last paused date. | [optional] 
 **DeviceName** | Pointer to **NullableString** | Gets or sets the name of the device. | [optional] 
 **DeviceType** | Pointer to **NullableString** | Gets or sets the type of the device. | [optional] 
-**NowPlayingItem** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | Gets or sets the now playing item. | [optional] 
+**NowPlayingItem** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | This is strictly used as a data transfer object from the api layer.  This holds information about a BaseItem in a format that is convenient for the client. | [optional] 
 **NowViewingItem** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | This is strictly used as a data transfer object from the api layer.  This holds information about a BaseItem in a format that is convenient for the client. | [optional] 
 **DeviceId** | Pointer to **NullableString** | Gets or sets the device id. | [optional] 
 **ApplicationVersion** | Pointer to **NullableString** | Gets or sets the application version. | [optional] 
