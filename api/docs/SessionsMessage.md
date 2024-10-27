@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | Pointer to [**[]SessionInfo**](SessionInfo.md) | Gets or sets the data. | [optional] 
+**Data** | Pointer to [**[]SessionInfoDto**](SessionInfoDto.md) | Gets or sets the data. | [optional] 
 **MessageId** | Pointer to **string** | Gets or sets the message id. | [optional] 
 **MessageType** | Pointer to [**SessionMessageType**](SessionMessageType.md) | The different kinds of messages that are used in the WebSocket api. | [optional] [readonly] [default to SESSIONMESSAGETYPE_SESSIONS]
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetData
 
-`func (o *SessionsMessage) GetData() []SessionInfo`
+`func (o *SessionsMessage) GetData() []SessionInfoDto`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *SessionsMessage) GetDataOk() (*[]SessionInfo, bool)`
+`func (o *SessionsMessage) GetDataOk() (*[]SessionInfoDto, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *SessionsMessage) SetData(v []SessionInfo)`
+`func (o *SessionsMessage) SetData(v []SessionInfoDto)`
 
 SetData sets Data field to given value.
 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EnableHwAcceleration** | Pointer to **bool** | Gets or sets a value indicating whether or not to use HW acceleration. | [optional] 
 **EnableHwEncoding** | Pointer to **bool** | Gets or sets a value indicating whether or not to use HW accelerated MJPEG encoding. | [optional] 
+**EnableKeyFrameOnlyExtraction** | Pointer to **bool** | Gets or sets a value indicating whether to only extract key frames.  Significantly faster, but is not compatible with all decoders and/or video files. | [optional] 
 **ScanBehavior** | Pointer to [**TrickplayScanBehavior**](TrickplayScanBehavior.md) | Gets or sets the behavior used by trickplay provider on library scan/update. | [optional] 
 **ProcessPriority** | Pointer to [**ProcessPriorityClass**](ProcessPriorityClass.md) | Gets or sets the process priority for the ffmpeg process. | [optional] 
 **Interval** | Pointer to **int32** | Gets or sets the interval, in ms, between each new trickplay image. | [optional] 
@@ -84,6 +85,31 @@ SetEnableHwEncoding sets EnableHwEncoding field to given value.
 `func (o *TrickplayOptions) HasEnableHwEncoding() bool`
 
 HasEnableHwEncoding returns a boolean if a field has been set.
+
+### GetEnableKeyFrameOnlyExtraction
+
+`func (o *TrickplayOptions) GetEnableKeyFrameOnlyExtraction() bool`
+
+GetEnableKeyFrameOnlyExtraction returns the EnableKeyFrameOnlyExtraction field if non-nil, zero value otherwise.
+
+### GetEnableKeyFrameOnlyExtractionOk
+
+`func (o *TrickplayOptions) GetEnableKeyFrameOnlyExtractionOk() (*bool, bool)`
+
+GetEnableKeyFrameOnlyExtractionOk returns a tuple with the EnableKeyFrameOnlyExtraction field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableKeyFrameOnlyExtraction
+
+`func (o *TrickplayOptions) SetEnableKeyFrameOnlyExtraction(v bool)`
+
+SetEnableKeyFrameOnlyExtraction sets EnableKeyFrameOnlyExtraction field to given value.
+
+### HasEnableKeyFrameOnlyExtraction
+
+`func (o *TrickplayOptions) HasEnableKeyFrameOnlyExtraction() bool`
+
+HasEnableKeyFrameOnlyExtraction returns a boolean if a field has been set.
 
 ### GetScanBehavior
 

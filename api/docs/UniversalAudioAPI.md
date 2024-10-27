@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetUniversalAudioStream
 
-> *os.File GetUniversalAudioStream(ctx, itemId).Container(container).MediaSourceId(mediaSourceId).DeviceId(deviceId).UserId(userId).AudioCodec(audioCodec).MaxAudioChannels(maxAudioChannels).TranscodingAudioChannels(transcodingAudioChannels).MaxStreamingBitrate(maxStreamingBitrate).AudioBitRate(audioBitRate).StartTimeTicks(startTimeTicks).TranscodingContainer(transcodingContainer).TranscodingProtocol(transcodingProtocol).MaxAudioSampleRate(maxAudioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).EnableRemoteMedia(enableRemoteMedia).BreakOnNonKeyFrames(breakOnNonKeyFrames).EnableRedirection(enableRedirection).Execute()
+> *os.File GetUniversalAudioStream(ctx, itemId).Container(container).MediaSourceId(mediaSourceId).DeviceId(deviceId).UserId(userId).AudioCodec(audioCodec).MaxAudioChannels(maxAudioChannels).TranscodingAudioChannels(transcodingAudioChannels).MaxStreamingBitrate(maxStreamingBitrate).AudioBitRate(audioBitRate).StartTimeTicks(startTimeTicks).TranscodingContainer(transcodingContainer).TranscodingProtocol(transcodingProtocol).MaxAudioSampleRate(maxAudioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).EnableRemoteMedia(enableRemoteMedia).EnableAudioVbrEncoding(enableAudioVbrEncoding).BreakOnNonKeyFrames(breakOnNonKeyFrames).EnableRedirection(enableRedirection).Execute()
 
 Gets an audio stream.
 
@@ -44,12 +44,13 @@ func main() {
 	maxAudioSampleRate := int32(56) // int32 | Optional. The maximum audio sample rate. (optional)
 	maxAudioBitDepth := int32(56) // int32 | Optional. The maximum audio bit depth. (optional)
 	enableRemoteMedia := true // bool | Optional. Whether to enable remote media. (optional)
+	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 	breakOnNonKeyFrames := true // bool | Optional. Whether to break on non key frames. (optional) (default to false)
 	enableRedirection := true // bool | Whether to enable redirection. Defaults to true. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UniversalAudioAPI.GetUniversalAudioStream(context.Background(), itemId).Container(container).MediaSourceId(mediaSourceId).DeviceId(deviceId).UserId(userId).AudioCodec(audioCodec).MaxAudioChannels(maxAudioChannels).TranscodingAudioChannels(transcodingAudioChannels).MaxStreamingBitrate(maxStreamingBitrate).AudioBitRate(audioBitRate).StartTimeTicks(startTimeTicks).TranscodingContainer(transcodingContainer).TranscodingProtocol(transcodingProtocol).MaxAudioSampleRate(maxAudioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).EnableRemoteMedia(enableRemoteMedia).BreakOnNonKeyFrames(breakOnNonKeyFrames).EnableRedirection(enableRedirection).Execute()
+	resp, r, err := apiClient.UniversalAudioAPI.GetUniversalAudioStream(context.Background(), itemId).Container(container).MediaSourceId(mediaSourceId).DeviceId(deviceId).UserId(userId).AudioCodec(audioCodec).MaxAudioChannels(maxAudioChannels).TranscodingAudioChannels(transcodingAudioChannels).MaxStreamingBitrate(maxStreamingBitrate).AudioBitRate(audioBitRate).StartTimeTicks(startTimeTicks).TranscodingContainer(transcodingContainer).TranscodingProtocol(transcodingProtocol).MaxAudioSampleRate(maxAudioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).EnableRemoteMedia(enableRemoteMedia).EnableAudioVbrEncoding(enableAudioVbrEncoding).BreakOnNonKeyFrames(breakOnNonKeyFrames).EnableRedirection(enableRedirection).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UniversalAudioAPI.GetUniversalAudioStream``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -90,6 +91,7 @@ Name | Type | Description  | Notes
  **maxAudioSampleRate** | **int32** | Optional. The maximum audio sample rate. | 
  **maxAudioBitDepth** | **int32** | Optional. The maximum audio bit depth. | 
  **enableRemoteMedia** | **bool** | Optional. Whether to enable remote media. | 
+ **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
  **breakOnNonKeyFrames** | **bool** | Optional. Whether to break on non key frames. | [default to false]
  **enableRedirection** | **bool** | Whether to enable redirection. Defaults to true. | [default to true]
 
@@ -113,7 +115,7 @@ Name | Type | Description  | Notes
 
 ## HeadUniversalAudioStream
 
-> *os.File HeadUniversalAudioStream(ctx, itemId).Container(container).MediaSourceId(mediaSourceId).DeviceId(deviceId).UserId(userId).AudioCodec(audioCodec).MaxAudioChannels(maxAudioChannels).TranscodingAudioChannels(transcodingAudioChannels).MaxStreamingBitrate(maxStreamingBitrate).AudioBitRate(audioBitRate).StartTimeTicks(startTimeTicks).TranscodingContainer(transcodingContainer).TranscodingProtocol(transcodingProtocol).MaxAudioSampleRate(maxAudioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).EnableRemoteMedia(enableRemoteMedia).BreakOnNonKeyFrames(breakOnNonKeyFrames).EnableRedirection(enableRedirection).Execute()
+> *os.File HeadUniversalAudioStream(ctx, itemId).Container(container).MediaSourceId(mediaSourceId).DeviceId(deviceId).UserId(userId).AudioCodec(audioCodec).MaxAudioChannels(maxAudioChannels).TranscodingAudioChannels(transcodingAudioChannels).MaxStreamingBitrate(maxStreamingBitrate).AudioBitRate(audioBitRate).StartTimeTicks(startTimeTicks).TranscodingContainer(transcodingContainer).TranscodingProtocol(transcodingProtocol).MaxAudioSampleRate(maxAudioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).EnableRemoteMedia(enableRemoteMedia).EnableAudioVbrEncoding(enableAudioVbrEncoding).BreakOnNonKeyFrames(breakOnNonKeyFrames).EnableRedirection(enableRedirection).Execute()
 
 Gets an audio stream.
 
@@ -146,12 +148,13 @@ func main() {
 	maxAudioSampleRate := int32(56) // int32 | Optional. The maximum audio sample rate. (optional)
 	maxAudioBitDepth := int32(56) // int32 | Optional. The maximum audio bit depth. (optional)
 	enableRemoteMedia := true // bool | Optional. Whether to enable remote media. (optional)
+	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 	breakOnNonKeyFrames := true // bool | Optional. Whether to break on non key frames. (optional) (default to false)
 	enableRedirection := true // bool | Whether to enable redirection. Defaults to true. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UniversalAudioAPI.HeadUniversalAudioStream(context.Background(), itemId).Container(container).MediaSourceId(mediaSourceId).DeviceId(deviceId).UserId(userId).AudioCodec(audioCodec).MaxAudioChannels(maxAudioChannels).TranscodingAudioChannels(transcodingAudioChannels).MaxStreamingBitrate(maxStreamingBitrate).AudioBitRate(audioBitRate).StartTimeTicks(startTimeTicks).TranscodingContainer(transcodingContainer).TranscodingProtocol(transcodingProtocol).MaxAudioSampleRate(maxAudioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).EnableRemoteMedia(enableRemoteMedia).BreakOnNonKeyFrames(breakOnNonKeyFrames).EnableRedirection(enableRedirection).Execute()
+	resp, r, err := apiClient.UniversalAudioAPI.HeadUniversalAudioStream(context.Background(), itemId).Container(container).MediaSourceId(mediaSourceId).DeviceId(deviceId).UserId(userId).AudioCodec(audioCodec).MaxAudioChannels(maxAudioChannels).TranscodingAudioChannels(transcodingAudioChannels).MaxStreamingBitrate(maxStreamingBitrate).AudioBitRate(audioBitRate).StartTimeTicks(startTimeTicks).TranscodingContainer(transcodingContainer).TranscodingProtocol(transcodingProtocol).MaxAudioSampleRate(maxAudioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).EnableRemoteMedia(enableRemoteMedia).EnableAudioVbrEncoding(enableAudioVbrEncoding).BreakOnNonKeyFrames(breakOnNonKeyFrames).EnableRedirection(enableRedirection).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UniversalAudioAPI.HeadUniversalAudioStream``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -192,6 +195,7 @@ Name | Type | Description  | Notes
  **maxAudioSampleRate** | **int32** | Optional. The maximum audio sample rate. | 
  **maxAudioBitDepth** | **int32** | Optional. The maximum audio bit depth. | 
  **enableRemoteMedia** | **bool** | Optional. Whether to enable remote media. | 
+ **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
  **breakOnNonKeyFrames** | **bool** | Optional. Whether to break on non key frames. | [default to false]
  **enableRedirection** | **bool** | Whether to enable redirection. Defaults to true. | [default to true]
 

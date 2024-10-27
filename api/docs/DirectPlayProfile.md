@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Container** | Pointer to **NullableString** |  | [optional] 
-**AudioCodec** | Pointer to **NullableString** |  | [optional] 
-**VideoCodec** | Pointer to **NullableString** |  | [optional] 
-**Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) |  | [optional] 
+**Container** | Pointer to **string** | Gets or sets the container. | [optional] 
+**AudioCodec** | Pointer to **NullableString** | Gets or sets the audio codec. | [optional] 
+**VideoCodec** | Pointer to **NullableString** | Gets or sets the video codec. | [optional] 
+**Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) | Gets or sets the Dlna profile type. | [optional] 
 
 ## Methods
 
@@ -53,16 +53,6 @@ SetContainer sets Container field to given value.
 
 HasContainer returns a boolean if a field has been set.
 
-### SetContainerNil
-
-`func (o *DirectPlayProfile) SetContainerNil(b bool)`
-
- SetContainerNil sets the value for Container to be an explicit nil
-
-### UnsetContainer
-`func (o *DirectPlayProfile) UnsetContainer()`
-
-UnsetContainer ensures that no value is present for Container, not even an explicit nil
 ### GetAudioCodec
 
 `func (o *DirectPlayProfile) GetAudioCodec() string`

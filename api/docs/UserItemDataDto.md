@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **Likes** | Pointer to **NullableBool** | Gets or sets a value indicating whether this MediaBrowser.Model.Dto.UserItemDataDto is likes. | [optional] 
 **LastPlayedDate** | Pointer to **NullableTime** | Gets or sets the last played date. | [optional] 
 **Played** | Pointer to **bool** | Gets or sets a value indicating whether this MediaBrowser.Model.Dto.UserItemDataDto is played. | [optional] 
-**Key** | Pointer to **NullableString** | Gets or sets the key. | [optional] 
-**ItemId** | Pointer to **NullableString** | Gets or sets the item identifier. | [optional] 
+**Key** | Pointer to **string** | Gets or sets the key. | [optional] 
+**ItemId** | Pointer to **string** | Gets or sets the item identifier. | [optional] 
 
 ## Methods
 
@@ -335,16 +335,6 @@ SetKey sets Key field to given value.
 
 HasKey returns a boolean if a field has been set.
 
-### SetKeyNil
-
-`func (o *UserItemDataDto) SetKeyNil(b bool)`
-
- SetKeyNil sets the value for Key to be an explicit nil
-
-### UnsetKey
-`func (o *UserItemDataDto) UnsetKey()`
-
-UnsetKey ensures that no value is present for Key, not even an explicit nil
 ### GetItemId
 
 `func (o *UserItemDataDto) GetItemId() string`
@@ -370,16 +360,6 @@ SetItemId sets ItemId field to given value.
 
 HasItemId returns a boolean if a field has been set.
 
-### SetItemIdNil
-
-`func (o *UserItemDataDto) SetItemIdNil(b bool)`
-
- SetItemIdNil sets the value for ItemId to be an explicit nil
-
-### UnsetItemId
-`func (o *UserItemDataDto) UnsetItemId()`
-
-UnsetItemId ensures that no value is present for ItemId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

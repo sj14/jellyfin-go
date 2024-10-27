@@ -53,6 +53,8 @@
 
 * `VIDEO_RANGE_TYPE_NOT_SUPPORTED` (value: `"VideoRangeTypeNotSupported"`)
 
+* `VIDEO_CODEC_TAG_NOT_SUPPORTED` (value: `"VideoCodecTagNotSupported"`)
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

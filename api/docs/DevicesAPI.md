@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceInfo
 
-> DeviceInfo GetDeviceInfo(ctx).Id(id).Execute()
+> DeviceInfoDto GetDeviceInfo(ctx).Id(id).Execute()
 
 Get info for a device.
 
@@ -102,7 +102,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DevicesAPI.GetDeviceInfo``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetDeviceInfo`: DeviceInfo
+	// response from `GetDeviceInfo`: DeviceInfoDto
 	fmt.Fprintf(os.Stdout, "Response from `DevicesAPI.GetDeviceInfo`: %v\n", resp)
 }
 ```
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInfo**](DeviceInfo.md)
+[**DeviceInfoDto**](DeviceInfoDto.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceOptions
 
-> DeviceOptions GetDeviceOptions(ctx).Id(id).Execute()
+> DeviceOptionsDto GetDeviceOptions(ctx).Id(id).Execute()
 
 Get options for a device.
 
@@ -166,7 +166,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DevicesAPI.GetDeviceOptions``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetDeviceOptions`: DeviceOptions
+	// response from `GetDeviceOptions`: DeviceOptionsDto
 	fmt.Fprintf(os.Stdout, "Response from `DevicesAPI.GetDeviceOptions`: %v\n", resp)
 }
 ```
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceOptions**](DeviceOptions.md)
+[**DeviceOptionsDto**](DeviceOptionsDto.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ## GetDevices
 
-> DeviceInfoQueryResult GetDevices(ctx).UserId(userId).Execute()
+> DeviceInfoDtoQueryResult GetDevices(ctx).UserId(userId).Execute()
 
 Get Devices.
 
@@ -230,7 +230,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DevicesAPI.GetDevices``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetDevices`: DeviceInfoQueryResult
+	// response from `GetDevices`: DeviceInfoDtoQueryResult
 	fmt.Fprintf(os.Stdout, "Response from `DevicesAPI.GetDevices`: %v\n", resp)
 }
 ```
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceInfoQueryResult**](DeviceInfoQueryResult.md)
+[**DeviceInfoDtoQueryResult**](DeviceInfoDtoQueryResult.md)
 
 ### Authorization
 

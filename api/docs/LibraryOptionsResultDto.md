@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **MetadataSavers** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the metadata savers. | [optional] 
 **MetadataReaders** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the metadata readers. | [optional] 
 **SubtitleFetchers** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the subtitle fetchers. | [optional] 
+**LyricFetchers** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the list of lyric fetchers. | [optional] 
 **TypeOptions** | Pointer to [**[]LibraryTypeOptionsDto**](LibraryTypeOptionsDto.md) | Gets or sets the type options. | [optional] 
 
 ## Methods
@@ -102,6 +103,31 @@ SetSubtitleFetchers sets SubtitleFetchers field to given value.
 `func (o *LibraryOptionsResultDto) HasSubtitleFetchers() bool`
 
 HasSubtitleFetchers returns a boolean if a field has been set.
+
+### GetLyricFetchers
+
+`func (o *LibraryOptionsResultDto) GetLyricFetchers() []LibraryOptionInfoDto`
+
+GetLyricFetchers returns the LyricFetchers field if non-nil, zero value otherwise.
+
+### GetLyricFetchersOk
+
+`func (o *LibraryOptionsResultDto) GetLyricFetchersOk() (*[]LibraryOptionInfoDto, bool)`
+
+GetLyricFetchersOk returns a tuple with the LyricFetchers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLyricFetchers
+
+`func (o *LibraryOptionsResultDto) SetLyricFetchers(v []LibraryOptionInfoDto)`
+
+SetLyricFetchers sets LyricFetchers field to given value.
+
+### HasLyricFetchers
+
+`func (o *LibraryOptionsResultDto) HasLyricFetchers() bool`
+
+HasLyricFetchers returns a boolean if a field has been set.
 
 ### GetTypeOptions
 

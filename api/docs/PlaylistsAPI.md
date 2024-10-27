@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AddItemToPlaylist**](PlaylistsAPI.md#AddItemToPlaylist) | **Post** /Playlists/{playlistId}/Items | Adds items to a playlist.
 [**CreatePlaylist**](PlaylistsAPI.md#CreatePlaylist) | **Post** /Playlists | Creates a new playlist.
+[**GetPlaylist**](PlaylistsAPI.md#GetPlaylist) | **Get** /Playlists/{playlistId} | Get a playlist.
 [**GetPlaylistItems**](PlaylistsAPI.md#GetPlaylistItems) | **Get** /Playlists/{playlistId}/Items | Gets the original items of a playlist.
 [**GetPlaylistUser**](PlaylistsAPI.md#GetPlaylistUser) | **Get** /Playlists/{playlistId}/Users/{userId} | Get a playlist user.
 [**GetPlaylistUsers**](PlaylistsAPI.md#GetPlaylistUsers) | **Get** /Playlists/{playlistId}/Users | Get a playlist&#39;s users.
@@ -154,6 +155,74 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetPlaylist
+
+> PlaylistDto GetPlaylist(ctx, playlistId).Execute()
+
+Get a playlist.
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/sj14/jellyfin-go/api"
+)
+
+func main() {
+	playlistId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The playlist id.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.PlaylistsAPI.GetPlaylist(context.Background(), playlistId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `PlaylistsAPI.GetPlaylist``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetPlaylist`: PlaylistDto
+	fmt.Fprintf(os.Stdout, "Response from `PlaylistsAPI.GetPlaylist`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**playlistId** | **string** | The playlist id. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetPlaylistRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**PlaylistDto**](PlaylistDto.md)
+
+### Authorization
+
+[CustomAuthentication](../README.md#CustomAuthentication)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)

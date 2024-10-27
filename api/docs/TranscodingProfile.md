@@ -4,22 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Container** | Pointer to **string** |  | [optional] 
-**Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) |  | [optional] 
-**VideoCodec** | Pointer to **string** |  | [optional] 
-**AudioCodec** | Pointer to **string** |  | [optional] 
+**Container** | Pointer to **string** | Gets or sets the container. | [optional] 
+**Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) | Gets or sets the DLNA profile type. | [optional] 
+**VideoCodec** | Pointer to **string** | Gets or sets the video codec. | [optional] 
+**AudioCodec** | Pointer to **string** | Gets or sets the audio codec. | [optional] 
 **Protocol** | Pointer to [**MediaStreamProtocol**](MediaStreamProtocol.md) | Media streaming protocol.  Lowercase for backwards compatibility. | [optional] 
-**EstimateContentLength** | Pointer to **bool** |  | [optional] [default to false]
-**EnableMpegtsM2TsMode** | Pointer to **bool** |  | [optional] [default to false]
-**TranscodeSeekInfo** | Pointer to [**TranscodeSeekInfo**](TranscodeSeekInfo.md) |  | [optional] [default to TRANSCODESEEKINFO_AUTO]
-**CopyTimestamps** | Pointer to **bool** |  | [optional] [default to false]
-**Context** | Pointer to [**EncodingContext**](EncodingContext.md) |  | [optional] [default to ENCODINGCONTEXT_STREAMING]
-**EnableSubtitlesInManifest** | Pointer to **bool** |  | [optional] [default to false]
-**MaxAudioChannels** | Pointer to **NullableString** |  | [optional] 
-**MinSegments** | Pointer to **int32** |  | [optional] [default to 0]
-**SegmentLength** | Pointer to **int32** |  | [optional] [default to 0]
-**BreakOnNonKeyFrames** | Pointer to **bool** |  | [optional] [default to false]
-**Conditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) |  | [optional] 
+**EstimateContentLength** | Pointer to **bool** | Gets or sets a value indicating whether the content length should be estimated. | [optional] [default to false]
+**EnableMpegtsM2TsMode** | Pointer to **bool** | Gets or sets a value indicating whether M2TS mode is enabled. | [optional] [default to false]
+**TranscodeSeekInfo** | Pointer to [**TranscodeSeekInfo**](TranscodeSeekInfo.md) | Gets or sets the transcoding seek info mode. | [optional] [default to TRANSCODESEEKINFO_AUTO]
+**CopyTimestamps** | Pointer to **bool** | Gets or sets a value indicating whether timestamps should be copied. | [optional] [default to false]
+**Context** | Pointer to [**EncodingContext**](EncodingContext.md) | Gets or sets the encoding context. | [optional] [default to ENCODINGCONTEXT_STREAMING]
+**EnableSubtitlesInManifest** | Pointer to **bool** | Gets or sets a value indicating whether subtitles are allowed in the manifest. | [optional] [default to false]
+**MaxAudioChannels** | Pointer to **NullableString** | Gets or sets the maximum audio channels. | [optional] 
+**MinSegments** | Pointer to **int32** | Gets or sets the minimum amount of segments. | [optional] [default to 0]
+**SegmentLength** | Pointer to **int32** | Gets or sets the segment length. | [optional] [default to 0]
+**BreakOnNonKeyFrames** | Pointer to **bool** | Gets or sets a value indicating whether breaking the video stream on non-keyframes is supported. | [optional] [default to false]
+**Conditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) | Gets or sets the profile conditions. | [optional] 
+**EnableAudioVbrEncoding** | Pointer to **bool** | Gets or sets a value indicating whether variable bitrate encoding is supported. | [optional] [default to true]
 
 ## Methods
 
@@ -449,6 +450,31 @@ SetConditions sets Conditions field to given value.
 `func (o *TranscodingProfile) HasConditions() bool`
 
 HasConditions returns a boolean if a field has been set.
+
+### GetEnableAudioVbrEncoding
+
+`func (o *TranscodingProfile) GetEnableAudioVbrEncoding() bool`
+
+GetEnableAudioVbrEncoding returns the EnableAudioVbrEncoding field if non-nil, zero value otherwise.
+
+### GetEnableAudioVbrEncodingOk
+
+`func (o *TranscodingProfile) GetEnableAudioVbrEncodingOk() (*bool, bool)`
+
+GetEnableAudioVbrEncodingOk returns a tuple with the EnableAudioVbrEncoding field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableAudioVbrEncoding
+
+`func (o *TranscodingProfile) SetEnableAudioVbrEncoding(v bool)`
+
+SetEnableAudioVbrEncoding sets EnableAudioVbrEncoding field to given value.
+
+### HasEnableAudioVbrEncoding
+
+`func (o *TranscodingProfile) HasEnableAudioVbrEncoding() bool`
+
+HasEnableAudioVbrEncoding returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

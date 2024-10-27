@@ -1,403 +1,413 @@
-# DeviceInfo
+# DeviceInfoDto
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**CustomName** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** | Gets or sets the name. | [optional] 
+**CustomName** | Pointer to **NullableString** | Gets or sets the custom name. | [optional] 
 **AccessToken** | Pointer to **NullableString** | Gets or sets the access token. | [optional] 
 **Id** | Pointer to **NullableString** | Gets or sets the identifier. | [optional] 
 **LastUserName** | Pointer to **NullableString** | Gets or sets the last name of the user. | [optional] 
 **AppName** | Pointer to **NullableString** | Gets or sets the name of the application. | [optional] 
 **AppVersion** | Pointer to **NullableString** | Gets or sets the application version. | [optional] 
-**LastUserId** | Pointer to **string** | Gets or sets the last user identifier. | [optional] 
-**DateLastActivity** | Pointer to **time.Time** | Gets or sets the date last modified. | [optional] 
-**Capabilities** | Pointer to [**NullableClientCapabilities**](ClientCapabilities.md) | Gets or sets the capabilities. | [optional] 
-**IconUrl** | Pointer to **NullableString** |  | [optional] 
+**LastUserId** | Pointer to **NullableString** | Gets or sets the last user identifier. | [optional] 
+**DateLastActivity** | Pointer to **NullableTime** | Gets or sets the date last modified. | [optional] 
+**Capabilities** | Pointer to [**ClientCapabilitiesDto**](ClientCapabilitiesDto.md) | Gets or sets the capabilities. | [optional] 
+**IconUrl** | Pointer to **NullableString** | Gets or sets the icon URL. | [optional] 
 
 ## Methods
 
-### NewDeviceInfo
+### NewDeviceInfoDto
 
-`func NewDeviceInfo() *DeviceInfo`
+`func NewDeviceInfoDto() *DeviceInfoDto`
 
-NewDeviceInfo instantiates a new DeviceInfo object
+NewDeviceInfoDto instantiates a new DeviceInfoDto object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewDeviceInfoWithDefaults
+### NewDeviceInfoDtoWithDefaults
 
-`func NewDeviceInfoWithDefaults() *DeviceInfo`
+`func NewDeviceInfoDtoWithDefaults() *DeviceInfoDto`
 
-NewDeviceInfoWithDefaults instantiates a new DeviceInfo object
+NewDeviceInfoDtoWithDefaults instantiates a new DeviceInfoDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetName
 
-`func (o *DeviceInfo) GetName() string`
+`func (o *DeviceInfoDto) GetName() string`
 
 GetName returns the Name field if non-nil, zero value otherwise.
 
 ### GetNameOk
 
-`func (o *DeviceInfo) GetNameOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetNameOk() (*string, bool)`
 
 GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetName
 
-`func (o *DeviceInfo) SetName(v string)`
+`func (o *DeviceInfoDto) SetName(v string)`
 
 SetName sets Name field to given value.
 
 ### HasName
 
-`func (o *DeviceInfo) HasName() bool`
+`func (o *DeviceInfoDto) HasName() bool`
 
 HasName returns a boolean if a field has been set.
 
 ### SetNameNil
 
-`func (o *DeviceInfo) SetNameNil(b bool)`
+`func (o *DeviceInfoDto) SetNameNil(b bool)`
 
  SetNameNil sets the value for Name to be an explicit nil
 
 ### UnsetName
-`func (o *DeviceInfo) UnsetName()`
+`func (o *DeviceInfoDto) UnsetName()`
 
 UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetCustomName
 
-`func (o *DeviceInfo) GetCustomName() string`
+`func (o *DeviceInfoDto) GetCustomName() string`
 
 GetCustomName returns the CustomName field if non-nil, zero value otherwise.
 
 ### GetCustomNameOk
 
-`func (o *DeviceInfo) GetCustomNameOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetCustomNameOk() (*string, bool)`
 
 GetCustomNameOk returns a tuple with the CustomName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomName
 
-`func (o *DeviceInfo) SetCustomName(v string)`
+`func (o *DeviceInfoDto) SetCustomName(v string)`
 
 SetCustomName sets CustomName field to given value.
 
 ### HasCustomName
 
-`func (o *DeviceInfo) HasCustomName() bool`
+`func (o *DeviceInfoDto) HasCustomName() bool`
 
 HasCustomName returns a boolean if a field has been set.
 
 ### SetCustomNameNil
 
-`func (o *DeviceInfo) SetCustomNameNil(b bool)`
+`func (o *DeviceInfoDto) SetCustomNameNil(b bool)`
 
  SetCustomNameNil sets the value for CustomName to be an explicit nil
 
 ### UnsetCustomName
-`func (o *DeviceInfo) UnsetCustomName()`
+`func (o *DeviceInfoDto) UnsetCustomName()`
 
 UnsetCustomName ensures that no value is present for CustomName, not even an explicit nil
 ### GetAccessToken
 
-`func (o *DeviceInfo) GetAccessToken() string`
+`func (o *DeviceInfoDto) GetAccessToken() string`
 
 GetAccessToken returns the AccessToken field if non-nil, zero value otherwise.
 
 ### GetAccessTokenOk
 
-`func (o *DeviceInfo) GetAccessTokenOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetAccessTokenOk() (*string, bool)`
 
 GetAccessTokenOk returns a tuple with the AccessToken field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAccessToken
 
-`func (o *DeviceInfo) SetAccessToken(v string)`
+`func (o *DeviceInfoDto) SetAccessToken(v string)`
 
 SetAccessToken sets AccessToken field to given value.
 
 ### HasAccessToken
 
-`func (o *DeviceInfo) HasAccessToken() bool`
+`func (o *DeviceInfoDto) HasAccessToken() bool`
 
 HasAccessToken returns a boolean if a field has been set.
 
 ### SetAccessTokenNil
 
-`func (o *DeviceInfo) SetAccessTokenNil(b bool)`
+`func (o *DeviceInfoDto) SetAccessTokenNil(b bool)`
 
  SetAccessTokenNil sets the value for AccessToken to be an explicit nil
 
 ### UnsetAccessToken
-`func (o *DeviceInfo) UnsetAccessToken()`
+`func (o *DeviceInfoDto) UnsetAccessToken()`
 
 UnsetAccessToken ensures that no value is present for AccessToken, not even an explicit nil
 ### GetId
 
-`func (o *DeviceInfo) GetId() string`
+`func (o *DeviceInfoDto) GetId() string`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *DeviceInfo) GetIdOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetIdOk() (*string, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *DeviceInfo) SetId(v string)`
+`func (o *DeviceInfoDto) SetId(v string)`
 
 SetId sets Id field to given value.
 
 ### HasId
 
-`func (o *DeviceInfo) HasId() bool`
+`func (o *DeviceInfoDto) HasId() bool`
 
 HasId returns a boolean if a field has been set.
 
 ### SetIdNil
 
-`func (o *DeviceInfo) SetIdNil(b bool)`
+`func (o *DeviceInfoDto) SetIdNil(b bool)`
 
  SetIdNil sets the value for Id to be an explicit nil
 
 ### UnsetId
-`func (o *DeviceInfo) UnsetId()`
+`func (o *DeviceInfoDto) UnsetId()`
 
 UnsetId ensures that no value is present for Id, not even an explicit nil
 ### GetLastUserName
 
-`func (o *DeviceInfo) GetLastUserName() string`
+`func (o *DeviceInfoDto) GetLastUserName() string`
 
 GetLastUserName returns the LastUserName field if non-nil, zero value otherwise.
 
 ### GetLastUserNameOk
 
-`func (o *DeviceInfo) GetLastUserNameOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetLastUserNameOk() (*string, bool)`
 
 GetLastUserNameOk returns a tuple with the LastUserName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastUserName
 
-`func (o *DeviceInfo) SetLastUserName(v string)`
+`func (o *DeviceInfoDto) SetLastUserName(v string)`
 
 SetLastUserName sets LastUserName field to given value.
 
 ### HasLastUserName
 
-`func (o *DeviceInfo) HasLastUserName() bool`
+`func (o *DeviceInfoDto) HasLastUserName() bool`
 
 HasLastUserName returns a boolean if a field has been set.
 
 ### SetLastUserNameNil
 
-`func (o *DeviceInfo) SetLastUserNameNil(b bool)`
+`func (o *DeviceInfoDto) SetLastUserNameNil(b bool)`
 
  SetLastUserNameNil sets the value for LastUserName to be an explicit nil
 
 ### UnsetLastUserName
-`func (o *DeviceInfo) UnsetLastUserName()`
+`func (o *DeviceInfoDto) UnsetLastUserName()`
 
 UnsetLastUserName ensures that no value is present for LastUserName, not even an explicit nil
 ### GetAppName
 
-`func (o *DeviceInfo) GetAppName() string`
+`func (o *DeviceInfoDto) GetAppName() string`
 
 GetAppName returns the AppName field if non-nil, zero value otherwise.
 
 ### GetAppNameOk
 
-`func (o *DeviceInfo) GetAppNameOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetAppNameOk() (*string, bool)`
 
 GetAppNameOk returns a tuple with the AppName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAppName
 
-`func (o *DeviceInfo) SetAppName(v string)`
+`func (o *DeviceInfoDto) SetAppName(v string)`
 
 SetAppName sets AppName field to given value.
 
 ### HasAppName
 
-`func (o *DeviceInfo) HasAppName() bool`
+`func (o *DeviceInfoDto) HasAppName() bool`
 
 HasAppName returns a boolean if a field has been set.
 
 ### SetAppNameNil
 
-`func (o *DeviceInfo) SetAppNameNil(b bool)`
+`func (o *DeviceInfoDto) SetAppNameNil(b bool)`
 
  SetAppNameNil sets the value for AppName to be an explicit nil
 
 ### UnsetAppName
-`func (o *DeviceInfo) UnsetAppName()`
+`func (o *DeviceInfoDto) UnsetAppName()`
 
 UnsetAppName ensures that no value is present for AppName, not even an explicit nil
 ### GetAppVersion
 
-`func (o *DeviceInfo) GetAppVersion() string`
+`func (o *DeviceInfoDto) GetAppVersion() string`
 
 GetAppVersion returns the AppVersion field if non-nil, zero value otherwise.
 
 ### GetAppVersionOk
 
-`func (o *DeviceInfo) GetAppVersionOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetAppVersionOk() (*string, bool)`
 
 GetAppVersionOk returns a tuple with the AppVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAppVersion
 
-`func (o *DeviceInfo) SetAppVersion(v string)`
+`func (o *DeviceInfoDto) SetAppVersion(v string)`
 
 SetAppVersion sets AppVersion field to given value.
 
 ### HasAppVersion
 
-`func (o *DeviceInfo) HasAppVersion() bool`
+`func (o *DeviceInfoDto) HasAppVersion() bool`
 
 HasAppVersion returns a boolean if a field has been set.
 
 ### SetAppVersionNil
 
-`func (o *DeviceInfo) SetAppVersionNil(b bool)`
+`func (o *DeviceInfoDto) SetAppVersionNil(b bool)`
 
  SetAppVersionNil sets the value for AppVersion to be an explicit nil
 
 ### UnsetAppVersion
-`func (o *DeviceInfo) UnsetAppVersion()`
+`func (o *DeviceInfoDto) UnsetAppVersion()`
 
 UnsetAppVersion ensures that no value is present for AppVersion, not even an explicit nil
 ### GetLastUserId
 
-`func (o *DeviceInfo) GetLastUserId() string`
+`func (o *DeviceInfoDto) GetLastUserId() string`
 
 GetLastUserId returns the LastUserId field if non-nil, zero value otherwise.
 
 ### GetLastUserIdOk
 
-`func (o *DeviceInfo) GetLastUserIdOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetLastUserIdOk() (*string, bool)`
 
 GetLastUserIdOk returns a tuple with the LastUserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastUserId
 
-`func (o *DeviceInfo) SetLastUserId(v string)`
+`func (o *DeviceInfoDto) SetLastUserId(v string)`
 
 SetLastUserId sets LastUserId field to given value.
 
 ### HasLastUserId
 
-`func (o *DeviceInfo) HasLastUserId() bool`
+`func (o *DeviceInfoDto) HasLastUserId() bool`
 
 HasLastUserId returns a boolean if a field has been set.
 
+### SetLastUserIdNil
+
+`func (o *DeviceInfoDto) SetLastUserIdNil(b bool)`
+
+ SetLastUserIdNil sets the value for LastUserId to be an explicit nil
+
+### UnsetLastUserId
+`func (o *DeviceInfoDto) UnsetLastUserId()`
+
+UnsetLastUserId ensures that no value is present for LastUserId, not even an explicit nil
 ### GetDateLastActivity
 
-`func (o *DeviceInfo) GetDateLastActivity() time.Time`
+`func (o *DeviceInfoDto) GetDateLastActivity() time.Time`
 
 GetDateLastActivity returns the DateLastActivity field if non-nil, zero value otherwise.
 
 ### GetDateLastActivityOk
 
-`func (o *DeviceInfo) GetDateLastActivityOk() (*time.Time, bool)`
+`func (o *DeviceInfoDto) GetDateLastActivityOk() (*time.Time, bool)`
 
 GetDateLastActivityOk returns a tuple with the DateLastActivity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDateLastActivity
 
-`func (o *DeviceInfo) SetDateLastActivity(v time.Time)`
+`func (o *DeviceInfoDto) SetDateLastActivity(v time.Time)`
 
 SetDateLastActivity sets DateLastActivity field to given value.
 
 ### HasDateLastActivity
 
-`func (o *DeviceInfo) HasDateLastActivity() bool`
+`func (o *DeviceInfoDto) HasDateLastActivity() bool`
 
 HasDateLastActivity returns a boolean if a field has been set.
 
+### SetDateLastActivityNil
+
+`func (o *DeviceInfoDto) SetDateLastActivityNil(b bool)`
+
+ SetDateLastActivityNil sets the value for DateLastActivity to be an explicit nil
+
+### UnsetDateLastActivity
+`func (o *DeviceInfoDto) UnsetDateLastActivity()`
+
+UnsetDateLastActivity ensures that no value is present for DateLastActivity, not even an explicit nil
 ### GetCapabilities
 
-`func (o *DeviceInfo) GetCapabilities() ClientCapabilities`
+`func (o *DeviceInfoDto) GetCapabilities() ClientCapabilitiesDto`
 
 GetCapabilities returns the Capabilities field if non-nil, zero value otherwise.
 
 ### GetCapabilitiesOk
 
-`func (o *DeviceInfo) GetCapabilitiesOk() (*ClientCapabilities, bool)`
+`func (o *DeviceInfoDto) GetCapabilitiesOk() (*ClientCapabilitiesDto, bool)`
 
 GetCapabilitiesOk returns a tuple with the Capabilities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCapabilities
 
-`func (o *DeviceInfo) SetCapabilities(v ClientCapabilities)`
+`func (o *DeviceInfoDto) SetCapabilities(v ClientCapabilitiesDto)`
 
 SetCapabilities sets Capabilities field to given value.
 
 ### HasCapabilities
 
-`func (o *DeviceInfo) HasCapabilities() bool`
+`func (o *DeviceInfoDto) HasCapabilities() bool`
 
 HasCapabilities returns a boolean if a field has been set.
 
-### SetCapabilitiesNil
-
-`func (o *DeviceInfo) SetCapabilitiesNil(b bool)`
-
- SetCapabilitiesNil sets the value for Capabilities to be an explicit nil
-
-### UnsetCapabilities
-`func (o *DeviceInfo) UnsetCapabilities()`
-
-UnsetCapabilities ensures that no value is present for Capabilities, not even an explicit nil
 ### GetIconUrl
 
-`func (o *DeviceInfo) GetIconUrl() string`
+`func (o *DeviceInfoDto) GetIconUrl() string`
 
 GetIconUrl returns the IconUrl field if non-nil, zero value otherwise.
 
 ### GetIconUrlOk
 
-`func (o *DeviceInfo) GetIconUrlOk() (*string, bool)`
+`func (o *DeviceInfoDto) GetIconUrlOk() (*string, bool)`
 
 GetIconUrlOk returns a tuple with the IconUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIconUrl
 
-`func (o *DeviceInfo) SetIconUrl(v string)`
+`func (o *DeviceInfoDto) SetIconUrl(v string)`
 
 SetIconUrl sets IconUrl field to given value.
 
 ### HasIconUrl
 
-`func (o *DeviceInfo) HasIconUrl() bool`
+`func (o *DeviceInfoDto) HasIconUrl() bool`
 
 HasIconUrl returns a boolean if a field has been set.
 
 ### SetIconUrlNil
 
-`func (o *DeviceInfo) SetIconUrlNil(b bool)`
+`func (o *DeviceInfoDto) SetIconUrlNil(b bool)`
 
  SetIconUrlNil sets the value for IconUrl to be an explicit nil
 
 ### UnsetIconUrl
-`func (o *DeviceInfo) UnsetIconUrl()`
+`func (o *DeviceInfoDto) UnsetIconUrl()`
 
 UnsetIconUrl ensures that no value is present for IconUrl, not even an explicit nil
 

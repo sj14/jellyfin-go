@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AudioCodec** | Pointer to **NullableString** |  | [optional] 
-**VideoCodec** | Pointer to **NullableString** |  | [optional] 
-**Container** | Pointer to **NullableString** |  | [optional] 
-**IsVideoDirect** | Pointer to **bool** |  | [optional] 
-**IsAudioDirect** | Pointer to **bool** |  | [optional] 
-**Bitrate** | Pointer to **NullableInt32** |  | [optional] 
-**Framerate** | Pointer to **NullableFloat32** |  | [optional] 
-**CompletionPercentage** | Pointer to **NullableFloat64** |  | [optional] 
-**Width** | Pointer to **NullableInt32** |  | [optional] 
-**Height** | Pointer to **NullableInt32** |  | [optional] 
-**AudioChannels** | Pointer to **NullableInt32** |  | [optional] 
-**HardwareAccelerationType** | Pointer to [**NullableHardwareEncodingType**](HardwareEncodingType.md) |  | [optional] 
-**TranscodeReasons** | Pointer to [**[]TranscodeReason**](TranscodeReason.md) |  | [optional] 
+**AudioCodec** | Pointer to **NullableString** | Gets or sets the thread count used for encoding. | [optional] 
+**VideoCodec** | Pointer to **NullableString** | Gets or sets the thread count used for encoding. | [optional] 
+**Container** | Pointer to **NullableString** | Gets or sets the thread count used for encoding. | [optional] 
+**IsVideoDirect** | Pointer to **bool** | Gets or sets a value indicating whether the video is passed through. | [optional] 
+**IsAudioDirect** | Pointer to **bool** | Gets or sets a value indicating whether the audio is passed through. | [optional] 
+**Bitrate** | Pointer to **NullableInt32** | Gets or sets the bitrate. | [optional] 
+**Framerate** | Pointer to **NullableFloat32** | Gets or sets the framerate. | [optional] 
+**CompletionPercentage** | Pointer to **NullableFloat64** | Gets or sets the completion percentage. | [optional] 
+**Width** | Pointer to **NullableInt32** | Gets or sets the video width. | [optional] 
+**Height** | Pointer to **NullableInt32** | Gets or sets the video height. | [optional] 
+**AudioChannels** | Pointer to **NullableInt32** | Gets or sets the audio channels. | [optional] 
+**HardwareAccelerationType** | Pointer to [**NullableHardwareAccelerationType**](HardwareAccelerationType.md) | Gets or sets the hardware acceleration type. | [optional] 
+**TranscodeReasons** | Pointer to [**[]TranscodeReason**](TranscodeReason.md) | Gets or sets the transcode reasons. | [optional] 
 
 ## Methods
 
@@ -404,20 +404,20 @@ HasAudioChannels returns a boolean if a field has been set.
 UnsetAudioChannels ensures that no value is present for AudioChannels, not even an explicit nil
 ### GetHardwareAccelerationType
 
-`func (o *TranscodingInfo) GetHardwareAccelerationType() HardwareEncodingType`
+`func (o *TranscodingInfo) GetHardwareAccelerationType() HardwareAccelerationType`
 
 GetHardwareAccelerationType returns the HardwareAccelerationType field if non-nil, zero value otherwise.
 
 ### GetHardwareAccelerationTypeOk
 
-`func (o *TranscodingInfo) GetHardwareAccelerationTypeOk() (*HardwareEncodingType, bool)`
+`func (o *TranscodingInfo) GetHardwareAccelerationTypeOk() (*HardwareAccelerationType, bool)`
 
 GetHardwareAccelerationTypeOk returns a tuple with the HardwareAccelerationType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHardwareAccelerationType
 
-`func (o *TranscodingInfo) SetHardwareAccelerationType(v HardwareEncodingType)`
+`func (o *TranscodingInfo) SetHardwareAccelerationType(v HardwareAccelerationType)`
 
 SetHardwareAccelerationType sets HardwareAccelerationType field to given value.
 

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Format** | Pointer to **NullableString** |  | [optional] 
-**Method** | Pointer to [**SubtitleDeliveryMethod**](SubtitleDeliveryMethod.md) | Delivery method to use during playback of a specific subtitle format. | [optional] 
-**DidlMode** | Pointer to **NullableString** |  | [optional] 
-**Language** | Pointer to **NullableString** |  | [optional] 
-**Container** | Pointer to **NullableString** |  | [optional] 
+**Format** | Pointer to **NullableString** | Gets or sets the format. | [optional] 
+**Method** | Pointer to [**SubtitleDeliveryMethod**](SubtitleDeliveryMethod.md) | Gets or sets the delivery method. | [optional] 
+**DidlMode** | Pointer to **NullableString** | Gets or sets the DIDL mode. | [optional] 
+**Language** | Pointer to **NullableString** | Gets or sets the language. | [optional] 
+**Container** | Pointer to **NullableString** | Gets or sets the container. | [optional] 
 
 ## Methods
 

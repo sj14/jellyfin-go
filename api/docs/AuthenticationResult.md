@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **User** | Pointer to [**NullableUserDto**](UserDto.md) | Class UserDto. | [optional] 
-**SessionInfo** | Pointer to [**NullableSessionInfo**](SessionInfo.md) | Class SessionInfo. | [optional] 
-**AccessToken** | Pointer to **NullableString** |  | [optional] 
-**ServerId** | Pointer to **NullableString** |  | [optional] 
+**SessionInfo** | Pointer to [**NullableSessionInfoDto**](SessionInfoDto.md) | Session info DTO. | [optional] 
+**AccessToken** | Pointer to **NullableString** | Gets or sets the access token. | [optional] 
+**ServerId** | Pointer to **NullableString** | Gets or sets the server id. | [optional] 
 
 ## Methods
 
@@ -65,20 +65,20 @@ HasUser returns a boolean if a field has been set.
 UnsetUser ensures that no value is present for User, not even an explicit nil
 ### GetSessionInfo
 
-`func (o *AuthenticationResult) GetSessionInfo() SessionInfo`
+`func (o *AuthenticationResult) GetSessionInfo() SessionInfoDto`
 
 GetSessionInfo returns the SessionInfo field if non-nil, zero value otherwise.
 
 ### GetSessionInfoOk
 
-`func (o *AuthenticationResult) GetSessionInfoOk() (*SessionInfo, bool)`
+`func (o *AuthenticationResult) GetSessionInfoOk() (*SessionInfoDto, bool)`
 
 GetSessionInfoOk returns a tuple with the SessionInfo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSessionInfo
 
-`func (o *AuthenticationResult) SetSessionInfo(v SessionInfo)`
+`func (o *AuthenticationResult) SetSessionInfo(v SessionInfoDto)`
 
 SetSessionInfo sets SessionInfo field to given value.
 

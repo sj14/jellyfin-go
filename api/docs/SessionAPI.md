@@ -284,7 +284,7 @@ Other parameters are passed through a pointer to a apiGetPasswordResetProvidersR
 
 ## GetSessions
 
-> []SessionInfo GetSessions(ctx).ControllableByUserId(controllableByUserId).DeviceId(deviceId).ActiveWithinSeconds(activeWithinSeconds).Execute()
+> []SessionInfoDto GetSessions(ctx).ControllableByUserId(controllableByUserId).DeviceId(deviceId).ActiveWithinSeconds(activeWithinSeconds).Execute()
 
 Gets a list of sessions.
 
@@ -312,7 +312,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `SessionAPI.GetSessions``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetSessions`: []SessionInfo
+	// response from `GetSessions`: []SessionInfoDto
 	fmt.Fprintf(os.Stdout, "Response from `SessionAPI.GetSessions`: %v\n", resp)
 }
 ```
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]SessionInfo**](SessionInfo.md)
+[**[]SessionInfoDto**](SessionInfoDto.md)
 
 ### Authorization
 
