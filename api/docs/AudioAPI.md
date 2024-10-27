@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## GetAudioStream
 
-> *os.File GetAudioStream(ctx, itemId).Container(container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).Execute()
+> *os.File GetAudioStream(ctx, itemId).Container(container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).EnableAudioVbrEncoding(enableAudioVbrEncoding).Execute()
 
 Gets an audio stream.
 
@@ -42,7 +42,7 @@ func main() {
 	minSegments := int32(56) // int32 | The minimum number of segments. (optional)
 	mediaSourceId := "mediaSourceId_example" // string | The media version id, if playing an alternate version. (optional)
 	deviceId := "deviceId_example" // string | The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-	audioCodec := "audioCodec_example" // string | Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma. (optional)
+	audioCodec := "audioCodec_example" // string | Optional. Specify an audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. (optional)
 	enableAutoStreamCopy := true // bool | Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)
 	allowVideoStreamCopy := true // bool | Whether or not to allow copying of the video stream url. (optional)
 	allowAudioStreamCopy := true // bool | Whether or not to allow copying of the audio stream url. (optional)
@@ -72,17 +72,18 @@ func main() {
 	cpuCoreLimit := int32(56) // int32 | Optional. The limit of how many cpu cores to use. (optional)
 	liveStreamId := "liveStreamId_example" // string | The live stream id. (optional)
 	enableMpegtsM2TsMode := true // bool | Optional. Whether to enable the MpegtsM2Ts mode. (optional)
-	videoCodec := "videoCodec_example" // string | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h265, h264, mpeg4, theora, vp8, vp9, vpx (deprecated), wmv. (optional)
+	videoCodec := "videoCodec_example" // string | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. (optional)
 	subtitleCodec := "subtitleCodec_example" // string | Optional. Specify a subtitle codec to encode to. (optional)
 	transcodeReasons := "transcodeReasons_example" // string | Optional. The transcoding reason. (optional)
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
+	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AudioAPI.GetAudioStream(context.Background(), itemId).Container(container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).Execute()
+	resp, r, err := apiClient.AudioAPI.GetAudioStream(context.Background(), itemId).Container(container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).EnableAudioVbrEncoding(enableAudioVbrEncoding).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AudioAPI.GetAudioStream``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -119,7 +120,7 @@ Name | Type | Description  | Notes
  **minSegments** | **int32** | The minimum number of segments. | 
  **mediaSourceId** | **string** | The media version id, if playing an alternate version. | 
  **deviceId** | **string** | The device id of the client requesting. Used to stop encoding processes when needed. | 
- **audioCodec** | **string** | Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#39;s extension. Options: aac, mp3, vorbis, wma. | 
+ **audioCodec** | **string** | Optional. Specify an audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#39;s extension. | 
  **enableAutoStreamCopy** | **bool** | Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. | 
  **allowVideoStreamCopy** | **bool** | Whether or not to allow copying of the video stream url. | 
  **allowAudioStreamCopy** | **bool** | Whether or not to allow copying of the audio stream url. | 
@@ -149,13 +150,14 @@ Name | Type | Description  | Notes
  **cpuCoreLimit** | **int32** | Optional. The limit of how many cpu cores to use. | 
  **liveStreamId** | **string** | The live stream id. | 
  **enableMpegtsM2TsMode** | **bool** | Optional. Whether to enable the MpegtsM2Ts mode. | 
- **videoCodec** | **string** | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#39;s extension. Options: h265, h264, mpeg4, theora, vp8, vp9, vpx (deprecated), wmv. | 
+ **videoCodec** | **string** | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#39;s extension. | 
  **subtitleCodec** | **string** | Optional. Specify a subtitle codec to encode to. | 
  **transcodeReasons** | **string** | Optional. The transcoding reason. | 
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
+ **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
 
@@ -177,7 +179,7 @@ No authorization required
 
 ## GetAudioStreamByContainer
 
-> *os.File GetAudioStreamByContainer(ctx, itemId, container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).Execute()
+> *os.File GetAudioStreamByContainer(ctx, itemId, container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).EnableAudioVbrEncoding(enableAudioVbrEncoding).Execute()
 
 Gets an audio stream.
 
@@ -206,7 +208,7 @@ func main() {
 	minSegments := int32(56) // int32 | The minimum number of segments. (optional)
 	mediaSourceId := "mediaSourceId_example" // string | The media version id, if playing an alternate version. (optional)
 	deviceId := "deviceId_example" // string | The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-	audioCodec := "audioCodec_example" // string | Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma. (optional)
+	audioCodec := "audioCodec_example" // string | Optional. Specify an audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. (optional)
 	enableAutoStreamCopy := true // bool | Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)
 	allowVideoStreamCopy := true // bool | Whether or not to allow copying of the video stream url. (optional)
 	allowAudioStreamCopy := true // bool | Whether or not to allow copying of the audio stream url. (optional)
@@ -236,17 +238,18 @@ func main() {
 	cpuCoreLimit := int32(56) // int32 | Optional. The limit of how many cpu cores to use. (optional)
 	liveStreamId := "liveStreamId_example" // string | The live stream id. (optional)
 	enableMpegtsM2TsMode := true // bool | Optional. Whether to enable the MpegtsM2Ts mode. (optional)
-	videoCodec := "videoCodec_example" // string | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h265, h264, mpeg4, theora, vp8, vp9, vpx (deprecated), wmv. (optional)
+	videoCodec := "videoCodec_example" // string | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. (optional)
 	subtitleCodec := "subtitleCodec_example" // string | Optional. Specify a subtitle codec to encode to. (optional)
 	transcodeReasons := "transcodeReasons_example" // string | Optional. The transcoding reason. (optional)
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
+	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AudioAPI.GetAudioStreamByContainer(context.Background(), itemId, container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).Execute()
+	resp, r, err := apiClient.AudioAPI.GetAudioStreamByContainer(context.Background(), itemId, container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).EnableAudioVbrEncoding(enableAudioVbrEncoding).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AudioAPI.GetAudioStreamByContainer``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -284,7 +287,7 @@ Name | Type | Description  | Notes
  **minSegments** | **int32** | The minimum number of segments. | 
  **mediaSourceId** | **string** | The media version id, if playing an alternate version. | 
  **deviceId** | **string** | The device id of the client requesting. Used to stop encoding processes when needed. | 
- **audioCodec** | **string** | Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#39;s extension. Options: aac, mp3, vorbis, wma. | 
+ **audioCodec** | **string** | Optional. Specify an audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#39;s extension. | 
  **enableAutoStreamCopy** | **bool** | Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. | 
  **allowVideoStreamCopy** | **bool** | Whether or not to allow copying of the video stream url. | 
  **allowAudioStreamCopy** | **bool** | Whether or not to allow copying of the audio stream url. | 
@@ -314,13 +317,14 @@ Name | Type | Description  | Notes
  **cpuCoreLimit** | **int32** | Optional. The limit of how many cpu cores to use. | 
  **liveStreamId** | **string** | The live stream id. | 
  **enableMpegtsM2TsMode** | **bool** | Optional. Whether to enable the MpegtsM2Ts mode. | 
- **videoCodec** | **string** | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#39;s extension. Options: h265, h264, mpeg4, theora, vp8, vp9, vpx (deprecated), wmv. | 
+ **videoCodec** | **string** | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#39;s extension. | 
  **subtitleCodec** | **string** | Optional. Specify a subtitle codec to encode to. | 
  **transcodeReasons** | **string** | Optional. The transcoding reason. | 
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
+ **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
 
@@ -342,7 +346,7 @@ No authorization required
 
 ## HeadAudioStream
 
-> *os.File HeadAudioStream(ctx, itemId).Container(container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).Execute()
+> *os.File HeadAudioStream(ctx, itemId).Container(container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).EnableAudioVbrEncoding(enableAudioVbrEncoding).Execute()
 
 Gets an audio stream.
 
@@ -371,7 +375,7 @@ func main() {
 	minSegments := int32(56) // int32 | The minimum number of segments. (optional)
 	mediaSourceId := "mediaSourceId_example" // string | The media version id, if playing an alternate version. (optional)
 	deviceId := "deviceId_example" // string | The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-	audioCodec := "audioCodec_example" // string | Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma. (optional)
+	audioCodec := "audioCodec_example" // string | Optional. Specify an audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. (optional)
 	enableAutoStreamCopy := true // bool | Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)
 	allowVideoStreamCopy := true // bool | Whether or not to allow copying of the video stream url. (optional)
 	allowAudioStreamCopy := true // bool | Whether or not to allow copying of the audio stream url. (optional)
@@ -401,17 +405,18 @@ func main() {
 	cpuCoreLimit := int32(56) // int32 | Optional. The limit of how many cpu cores to use. (optional)
 	liveStreamId := "liveStreamId_example" // string | The live stream id. (optional)
 	enableMpegtsM2TsMode := true // bool | Optional. Whether to enable the MpegtsM2Ts mode. (optional)
-	videoCodec := "videoCodec_example" // string | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h265, h264, mpeg4, theora, vp8, vp9, vpx (deprecated), wmv. (optional)
+	videoCodec := "videoCodec_example" // string | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. (optional)
 	subtitleCodec := "subtitleCodec_example" // string | Optional. Specify a subtitle codec to encode to. (optional)
 	transcodeReasons := "transcodeReasons_example" // string | Optional. The transcoding reason. (optional)
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
+	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AudioAPI.HeadAudioStream(context.Background(), itemId).Container(container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).Execute()
+	resp, r, err := apiClient.AudioAPI.HeadAudioStream(context.Background(), itemId).Container(container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).EnableAudioVbrEncoding(enableAudioVbrEncoding).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AudioAPI.HeadAudioStream``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -448,7 +453,7 @@ Name | Type | Description  | Notes
  **minSegments** | **int32** | The minimum number of segments. | 
  **mediaSourceId** | **string** | The media version id, if playing an alternate version. | 
  **deviceId** | **string** | The device id of the client requesting. Used to stop encoding processes when needed. | 
- **audioCodec** | **string** | Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#39;s extension. Options: aac, mp3, vorbis, wma. | 
+ **audioCodec** | **string** | Optional. Specify an audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#39;s extension. | 
  **enableAutoStreamCopy** | **bool** | Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. | 
  **allowVideoStreamCopy** | **bool** | Whether or not to allow copying of the video stream url. | 
  **allowAudioStreamCopy** | **bool** | Whether or not to allow copying of the audio stream url. | 
@@ -478,13 +483,14 @@ Name | Type | Description  | Notes
  **cpuCoreLimit** | **int32** | Optional. The limit of how many cpu cores to use. | 
  **liveStreamId** | **string** | The live stream id. | 
  **enableMpegtsM2TsMode** | **bool** | Optional. Whether to enable the MpegtsM2Ts mode. | 
- **videoCodec** | **string** | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#39;s extension. Options: h265, h264, mpeg4, theora, vp8, vp9, vpx (deprecated), wmv. | 
+ **videoCodec** | **string** | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#39;s extension. | 
  **subtitleCodec** | **string** | Optional. Specify a subtitle codec to encode to. | 
  **transcodeReasons** | **string** | Optional. The transcoding reason. | 
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
+ **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
 
@@ -506,7 +512,7 @@ No authorization required
 
 ## HeadAudioStreamByContainer
 
-> *os.File HeadAudioStreamByContainer(ctx, itemId, container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).Execute()
+> *os.File HeadAudioStreamByContainer(ctx, itemId, container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).EnableAudioVbrEncoding(enableAudioVbrEncoding).Execute()
 
 Gets an audio stream.
 
@@ -535,7 +541,7 @@ func main() {
 	minSegments := int32(56) // int32 | The minimum number of segments. (optional)
 	mediaSourceId := "mediaSourceId_example" // string | The media version id, if playing an alternate version. (optional)
 	deviceId := "deviceId_example" // string | The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-	audioCodec := "audioCodec_example" // string | Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma. (optional)
+	audioCodec := "audioCodec_example" // string | Optional. Specify an audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. (optional)
 	enableAutoStreamCopy := true // bool | Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)
 	allowVideoStreamCopy := true // bool | Whether or not to allow copying of the video stream url. (optional)
 	allowAudioStreamCopy := true // bool | Whether or not to allow copying of the audio stream url. (optional)
@@ -565,17 +571,18 @@ func main() {
 	cpuCoreLimit := int32(56) // int32 | Optional. The limit of how many cpu cores to use. (optional)
 	liveStreamId := "liveStreamId_example" // string | The live stream id. (optional)
 	enableMpegtsM2TsMode := true // bool | Optional. Whether to enable the MpegtsM2Ts mode. (optional)
-	videoCodec := "videoCodec_example" // string | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h265, h264, mpeg4, theora, vp8, vp9, vpx (deprecated), wmv. (optional)
+	videoCodec := "videoCodec_example" // string | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. (optional)
 	subtitleCodec := "subtitleCodec_example" // string | Optional. Specify a subtitle codec to encode to. (optional)
 	transcodeReasons := "transcodeReasons_example" // string | Optional. The transcoding reason. (optional)
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
+	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AudioAPI.HeadAudioStreamByContainer(context.Background(), itemId, container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).Execute()
+	resp, r, err := apiClient.AudioAPI.HeadAudioStreamByContainer(context.Background(), itemId, container).Static(static).Params(params).Tag(tag).DeviceProfileId(deviceProfileId).PlaySessionId(playSessionId).SegmentContainer(segmentContainer).SegmentLength(segmentLength).MinSegments(minSegments).MediaSourceId(mediaSourceId).DeviceId(deviceId).AudioCodec(audioCodec).EnableAutoStreamCopy(enableAutoStreamCopy).AllowVideoStreamCopy(allowVideoStreamCopy).AllowAudioStreamCopy(allowAudioStreamCopy).BreakOnNonKeyFrames(breakOnNonKeyFrames).AudioSampleRate(audioSampleRate).MaxAudioBitDepth(maxAudioBitDepth).AudioBitRate(audioBitRate).AudioChannels(audioChannels).MaxAudioChannels(maxAudioChannels).Profile(profile).Level(level).Framerate(framerate).MaxFramerate(maxFramerate).CopyTimestamps(copyTimestamps).StartTimeTicks(startTimeTicks).Width(width).Height(height).VideoBitRate(videoBitRate).SubtitleStreamIndex(subtitleStreamIndex).SubtitleMethod(subtitleMethod).MaxRefFrames(maxRefFrames).MaxVideoBitDepth(maxVideoBitDepth).RequireAvc(requireAvc).DeInterlace(deInterlace).RequireNonAnamorphic(requireNonAnamorphic).TranscodingMaxAudioChannels(transcodingMaxAudioChannels).CpuCoreLimit(cpuCoreLimit).LiveStreamId(liveStreamId).EnableMpegtsM2TsMode(enableMpegtsM2TsMode).VideoCodec(videoCodec).SubtitleCodec(subtitleCodec).TranscodeReasons(transcodeReasons).AudioStreamIndex(audioStreamIndex).VideoStreamIndex(videoStreamIndex).Context(context).StreamOptions(streamOptions).EnableAudioVbrEncoding(enableAudioVbrEncoding).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AudioAPI.HeadAudioStreamByContainer``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -613,7 +620,7 @@ Name | Type | Description  | Notes
  **minSegments** | **int32** | The minimum number of segments. | 
  **mediaSourceId** | **string** | The media version id, if playing an alternate version. | 
  **deviceId** | **string** | The device id of the client requesting. Used to stop encoding processes when needed. | 
- **audioCodec** | **string** | Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#39;s extension. Options: aac, mp3, vorbis, wma. | 
+ **audioCodec** | **string** | Optional. Specify an audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#39;s extension. | 
  **enableAutoStreamCopy** | **bool** | Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. | 
  **allowVideoStreamCopy** | **bool** | Whether or not to allow copying of the video stream url. | 
  **allowAudioStreamCopy** | **bool** | Whether or not to allow copying of the audio stream url. | 
@@ -643,13 +650,14 @@ Name | Type | Description  | Notes
  **cpuCoreLimit** | **int32** | Optional. The limit of how many cpu cores to use. | 
  **liveStreamId** | **string** | The live stream id. | 
  **enableMpegtsM2TsMode** | **bool** | Optional. Whether to enable the MpegtsM2Ts mode. | 
- **videoCodec** | **string** | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#39;s extension. Options: h265, h264, mpeg4, theora, vp8, vp9, vpx (deprecated), wmv. | 
+ **videoCodec** | **string** | Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#39;s extension. | 
  **subtitleCodec** | **string** | Optional. Specify a subtitle codec to encode to. | 
  **transcodeReasons** | **string** | Optional. The transcoding reason. | 
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
+ **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
 

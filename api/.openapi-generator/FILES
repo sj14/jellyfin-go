@@ -31,6 +31,7 @@ api_live_tv.go
 api_localization.go
 api_lyrics.go
 api_media_info.go
+api_media_segments.go
 api_movies.go
 api_music_genres.go
 api_package.go
@@ -105,7 +106,6 @@ docs/ChannelMediaType.md
 docs/ChannelType.md
 docs/ChannelsAPI.md
 docs/ChapterInfo.md
-docs/ClientCapabilities.md
 docs/ClientCapabilitiesDto.md
 docs/ClientLogAPI.md
 docs/ClientLogDocumentResponseDto.md
@@ -127,9 +127,9 @@ docs/DashboardAPI.md
 docs/DayOfWeek.md
 docs/DayPattern.md
 docs/DefaultDirectoryBrowserInfoDto.md
-docs/DeviceInfo.md
-docs/DeviceInfoQueryResult.md
-docs/DeviceOptions.md
+docs/DeinterlaceMethod.md
+docs/DeviceInfoDto.md
+docs/DeviceInfoDtoQueryResult.md
 docs/DeviceOptionsDto.md
 docs/DeviceProfile.md
 docs/DevicesAPI.md
@@ -141,6 +141,7 @@ docs/DownMixStereoAlgorithms.md
 docs/DynamicDayOfWeek.md
 docs/DynamicHlsAPI.md
 docs/EmbeddedSubtitleOptions.md
+docs/EncoderPreset.md
 docs/EncodingContext.md
 docs/EncodingOptions.md
 docs/EndPointInfo.md
@@ -174,7 +175,7 @@ docs/GroupStateUpdateGroupUpdate.md
 docs/GroupUpdate.md
 docs/GroupUpdateType.md
 docs/GuideInfo.md
-docs/HardwareEncodingType.md
+docs/HardwareAccelerationType.md
 docs/HlsSegmentAPI.md
 docs/IPlugin.md
 docs/IgnoreWaitRequestDto.md
@@ -231,6 +232,10 @@ docs/MediaInfoAPI.md
 docs/MediaPathDto.md
 docs/MediaPathInfo.md
 docs/MediaProtocol.md
+docs/MediaSegmentDto.md
+docs/MediaSegmentDtoQueryResult.md
+docs/MediaSegmentType.md
+docs/MediaSegmentsAPI.md
 docs/MediaSourceInfo.md
 docs/MediaSourceType.md
 docs/MediaStream.md
@@ -291,6 +296,7 @@ docs/PlaybackStartInfo.md
 docs/PlaybackStopInfo.md
 docs/PlayerStateInfo.md
 docs/PlaylistCreationResult.md
+docs/PlaylistDto.md
 docs/PlaylistUserPermissions.md
 docs/PlaylistsAPI.md
 docs/PlaystateAPI.md
@@ -360,7 +366,7 @@ docs/ServerDiscoveryInfo.md
 docs/ServerRestartingMessage.md
 docs/ServerShuttingDownMessage.md
 docs/SessionAPI.md
-docs/SessionInfo.md
+docs/SessionInfoDto.md
 docs/SessionMessageType.md
 docs/SessionUserInfo.md
 docs/SessionsMessage.md
@@ -405,6 +411,9 @@ docs/TimerEventInfo.md
 docs/TimerInfoDto.md
 docs/TimerInfoDtoQueryResult.md
 docs/TmdbAPI.md
+docs/TonemappingAlgorithm.md
+docs/TonemappingMode.md
+docs/TonemappingRange.md
 docs/TrailerInfo.md
 docs/TrailerInfoRemoteSearchQuery.md
 docs/TrailersAPI.md
@@ -493,7 +502,6 @@ model_channel_media_content_type.go
 model_channel_media_type.go
 model_channel_type.go
 model_chapter_info.go
-model_client_capabilities.go
 model_client_capabilities_dto.go
 model_client_log_document_response_dto.go
 model_codec_profile.go
@@ -511,9 +519,9 @@ model_culture_dto.go
 model_day_of_week.go
 model_day_pattern.go
 model_default_directory_browser_info_dto.go
-model_device_info.go
-model_device_info_query_result.go
-model_device_options.go
+model_deinterlace_method.go
+model_device_info_dto.go
+model_device_info_dto_query_result.go
 model_device_options_dto.go
 model_device_profile.go
 model_direct_play_profile.go
@@ -522,6 +530,7 @@ model_dlna_profile_type.go
 model_down_mix_stereo_algorithms.go
 model_dynamic_day_of_week.go
 model_embedded_subtitle_options.go
+model_encoder_preset.go
 model_encoding_context.go
 model_encoding_options.go
 model_end_point_info.go
@@ -552,7 +561,7 @@ model_group_state_update_group_update.go
 model_group_update.go
 model_group_update_type.go
 model_guide_info.go
-model_hardware_encoding_type.go
+model_hardware_acceleration_type.go
 model_i_plugin.go
 model_ignore_wait_request_dto.go
 model_image_format.go
@@ -596,6 +605,9 @@ model_media_attachment.go
 model_media_path_dto.go
 model_media_path_info.go
 model_media_protocol.go
+model_media_segment_dto.go
+model_media_segment_dto_query_result.go
+model_media_segment_type.go
 model_media_source_info.go
 model_media_source_type.go
 model_media_stream.go
@@ -652,6 +664,7 @@ model_playback_start_info.go
 model_playback_stop_info.go
 model_player_state_info.go
 model_playlist_creation_result.go
+model_playlist_dto.go
 model_playlist_user_permissions.go
 model_playstate_command.go
 model_playstate_message.go
@@ -713,7 +726,7 @@ model_server_configuration.go
 model_server_discovery_info.go
 model_server_restarting_message.go
 model_server_shutting_down_message.go
-model_session_info.go
+model_session_info_dto.go
 model_session_message_type.go
 model_session_user_info.go
 model_sessions_message.go
@@ -750,6 +763,9 @@ model_timer_created_message.go
 model_timer_event_info.go
 model_timer_info_dto.go
 model_timer_info_dto_query_result.go
+model_tonemapping_algorithm.go
+model_tonemapping_mode.go
+model_tonemapping_range.go
 model_trailer_info.go
 model_trailer_info_remote_search_query.go
 model_transcode_reason.go

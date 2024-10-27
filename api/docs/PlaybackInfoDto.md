@@ -12,13 +12,14 @@ Name | Type | Description | Notes
 **MaxAudioChannels** | Pointer to **NullableInt32** | Gets or sets the max audio channels. | [optional] 
 **MediaSourceId** | Pointer to **NullableString** | Gets or sets the media source id. | [optional] 
 **LiveStreamId** | Pointer to **NullableString** | Gets or sets the live stream id. | [optional] 
-**DeviceProfile** | Pointer to [**NullableDeviceProfile**](DeviceProfile.md) | A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.  &lt;br /&gt;  Specifically, it defines the supported &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\&quot;&gt;containers&lt;/see&gt; and  &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\&quot;&gt;codecs&lt;/see&gt; (video and/or audio, including codec profiles and levels)  the device is able to direct play (without transcoding or remuxing),  as well as which &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\&quot;&gt;containers/codecs to transcode to&lt;/see&gt; in case it isn&#39;t. | [optional] 
+**DeviceProfile** | Pointer to [**NullableDeviceProfile**](DeviceProfile.md) | Gets or sets the device profile. | [optional] 
 **EnableDirectPlay** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable direct play. | [optional] 
 **EnableDirectStream** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable direct stream. | [optional] 
 **EnableTranscoding** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable transcoding. | [optional] 
 **AllowVideoStreamCopy** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable video stream copy. | [optional] 
 **AllowAudioStreamCopy** | Pointer to **NullableBool** | Gets or sets a value indicating whether to allow audio stream copy. | [optional] 
 **AutoOpenLiveStream** | Pointer to **NullableBool** | Gets or sets a value indicating whether to auto open the live stream. | [optional] 
+**AlwaysBurnInSubtitleWhenTranscoding** | Pointer to **NullableBool** | Gets or sets a value indicating whether always burn in subtitles when transcoding. | [optional] 
 
 ## Methods
 
@@ -564,6 +565,41 @@ HasAutoOpenLiveStream returns a boolean if a field has been set.
 `func (o *PlaybackInfoDto) UnsetAutoOpenLiveStream()`
 
 UnsetAutoOpenLiveStream ensures that no value is present for AutoOpenLiveStream, not even an explicit nil
+### GetAlwaysBurnInSubtitleWhenTranscoding
+
+`func (o *PlaybackInfoDto) GetAlwaysBurnInSubtitleWhenTranscoding() bool`
+
+GetAlwaysBurnInSubtitleWhenTranscoding returns the AlwaysBurnInSubtitleWhenTranscoding field if non-nil, zero value otherwise.
+
+### GetAlwaysBurnInSubtitleWhenTranscodingOk
+
+`func (o *PlaybackInfoDto) GetAlwaysBurnInSubtitleWhenTranscodingOk() (*bool, bool)`
+
+GetAlwaysBurnInSubtitleWhenTranscodingOk returns a tuple with the AlwaysBurnInSubtitleWhenTranscoding field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlwaysBurnInSubtitleWhenTranscoding
+
+`func (o *PlaybackInfoDto) SetAlwaysBurnInSubtitleWhenTranscoding(v bool)`
+
+SetAlwaysBurnInSubtitleWhenTranscoding sets AlwaysBurnInSubtitleWhenTranscoding field to given value.
+
+### HasAlwaysBurnInSubtitleWhenTranscoding
+
+`func (o *PlaybackInfoDto) HasAlwaysBurnInSubtitleWhenTranscoding() bool`
+
+HasAlwaysBurnInSubtitleWhenTranscoding returns a boolean if a field has been set.
+
+### SetAlwaysBurnInSubtitleWhenTranscodingNil
+
+`func (o *PlaybackInfoDto) SetAlwaysBurnInSubtitleWhenTranscodingNil(b bool)`
+
+ SetAlwaysBurnInSubtitleWhenTranscodingNil sets the value for AlwaysBurnInSubtitleWhenTranscoding to be an explicit nil
+
+### UnsetAlwaysBurnInSubtitleWhenTranscoding
+`func (o *PlaybackInfoDto) UnsetAlwaysBurnInSubtitleWhenTranscoding()`
+
+UnsetAlwaysBurnInSubtitleWhenTranscoding ensures that no value is present for AlwaysBurnInSubtitleWhenTranscoding, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

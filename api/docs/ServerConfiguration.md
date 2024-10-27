@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **EnableCaseSensitiveItemIds** | Pointer to **bool** | Gets or sets a value indicating whether [enable case sensitive item ids]. | [optional] 
 **DisableLiveTvChannelUserDataName** | Pointer to **bool** |  | [optional] 
 **MetadataPath** | Pointer to **string** | Gets or sets the metadata path. | [optional] 
-**MetadataNetworkPath** | Pointer to **string** |  | [optional] 
 **PreferredMetadataLanguage** | Pointer to **string** | Gets or sets the preferred metadata language. | [optional] 
 **MetadataCountryCode** | Pointer to **string** | Gets or sets the metadata country code. | [optional] 
 **SortReplaceCharacters** | Pointer to **[]string** | Gets or sets characters to be replaced with a &#39; &#39; in strings to create a sort name. | [optional] 
@@ -408,31 +407,6 @@ SetMetadataPath sets MetadataPath field to given value.
 `func (o *ServerConfiguration) HasMetadataPath() bool`
 
 HasMetadataPath returns a boolean if a field has been set.
-
-### GetMetadataNetworkPath
-
-`func (o *ServerConfiguration) GetMetadataNetworkPath() string`
-
-GetMetadataNetworkPath returns the MetadataNetworkPath field if non-nil, zero value otherwise.
-
-### GetMetadataNetworkPathOk
-
-`func (o *ServerConfiguration) GetMetadataNetworkPathOk() (*string, bool)`
-
-GetMetadataNetworkPathOk returns a tuple with the MetadataNetworkPath field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMetadataNetworkPath
-
-`func (o *ServerConfiguration) SetMetadataNetworkPath(v string)`
-
-SetMetadataNetworkPath sets MetadataNetworkPath field to given value.
-
-### HasMetadataNetworkPath
-
-`func (o *ServerConfiguration) HasMetadataNetworkPath() bool`
-
-HasMetadataNetworkPath returns a boolean if a field has been set.
 
 ### GetPreferredMetadataLanguage
 

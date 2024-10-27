@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) |  | [optional] 
-**Conditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) |  | [optional] 
-**Container** | Pointer to **string** |  | [optional] 
+**Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) | Gets or sets the MediaBrowser.Model.Dlna.DlnaProfileType which this container must meet. | [optional] 
+**Conditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) | Gets or sets the list of MediaBrowser.Model.Dlna.ProfileCondition which this container will be applied to. | [optional] 
+**Container** | Pointer to **NullableString** | Gets or sets the container(s) which this container must meet. | [optional] 
+**SubContainer** | Pointer to **NullableString** | Gets or sets the sub container(s) which this container must meet. | [optional] 
 
 ## Methods
 
@@ -102,6 +103,51 @@ SetContainer sets Container field to given value.
 
 HasContainer returns a boolean if a field has been set.
 
+### SetContainerNil
+
+`func (o *ContainerProfile) SetContainerNil(b bool)`
+
+ SetContainerNil sets the value for Container to be an explicit nil
+
+### UnsetContainer
+`func (o *ContainerProfile) UnsetContainer()`
+
+UnsetContainer ensures that no value is present for Container, not even an explicit nil
+### GetSubContainer
+
+`func (o *ContainerProfile) GetSubContainer() string`
+
+GetSubContainer returns the SubContainer field if non-nil, zero value otherwise.
+
+### GetSubContainerOk
+
+`func (o *ContainerProfile) GetSubContainerOk() (*string, bool)`
+
+GetSubContainerOk returns a tuple with the SubContainer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubContainer
+
+`func (o *ContainerProfile) SetSubContainer(v string)`
+
+SetSubContainer sets SubContainer field to given value.
+
+### HasSubContainer
+
+`func (o *ContainerProfile) HasSubContainer() bool`
+
+HasSubContainer returns a boolean if a field has been set.
+
+### SetSubContainerNil
+
+`func (o *ContainerProfile) SetSubContainerNil(b bool)`
+
+ SetSubContainerNil sets the value for SubContainer to be an explicit nil
+
+### UnsetSubContainer
+`func (o *ContainerProfile) UnsetSubContainer()`
+
+UnsetSubContainer ensures that no value is present for SubContainer, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

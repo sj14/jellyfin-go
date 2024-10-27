@@ -6,31 +6,31 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChannelIds** | Pointer to **[]string** | Gets or sets the channels to return guide information for. | [optional] 
 **UserId** | Pointer to **NullableString** | Gets or sets optional. Filter by user id. | [optional] 
-**MinStartDate** | Pointer to **NullableTime** | Gets or sets the minimum premiere start date.  Optional. | [optional] 
-**HasAired** | Pointer to **NullableBool** | Gets or sets filter by programs that have completed airing, or not.  Optional. | [optional] 
-**IsAiring** | Pointer to **NullableBool** | Gets or sets filter by programs that are currently airing, or not.  Optional. | [optional] 
-**MaxStartDate** | Pointer to **NullableTime** | Gets or sets the maximum premiere start date.  Optional. | [optional] 
-**MinEndDate** | Pointer to **NullableTime** | Gets or sets the minimum premiere end date.  Optional. | [optional] 
-**MaxEndDate** | Pointer to **NullableTime** | Gets or sets the maximum premiere end date.  Optional. | [optional] 
-**IsMovie** | Pointer to **NullableBool** | Gets or sets filter for movies.  Optional. | [optional] 
-**IsSeries** | Pointer to **NullableBool** | Gets or sets filter for series.  Optional. | [optional] 
-**IsNews** | Pointer to **NullableBool** | Gets or sets filter for news.  Optional. | [optional] 
-**IsKids** | Pointer to **NullableBool** | Gets or sets filter for kids.  Optional. | [optional] 
-**IsSports** | Pointer to **NullableBool** | Gets or sets filter for sports.  Optional. | [optional] 
-**StartIndex** | Pointer to **NullableInt32** | Gets or sets the record index to start at. All items with a lower index will be dropped from the results.  Optional. | [optional] 
-**Limit** | Pointer to **NullableInt32** | Gets or sets the maximum number of records to return.  Optional. | [optional] 
-**SortBy** | Pointer to [**[]ItemSortBy**](ItemSortBy.md) | Gets or sets specify one or more sort orders, comma delimited. Options: Name, StartDate.  Optional. | [optional] 
-**SortOrder** | Pointer to [**[]SortOrder**](SortOrder.md) | Gets or sets sort Order - Ascending,Descending. | [optional] 
+**MinStartDate** | Pointer to **NullableTime** | Gets or sets the minimum premiere start date. | [optional] 
+**HasAired** | Pointer to **NullableBool** | Gets or sets filter by programs that have completed airing, or not. | [optional] 
+**IsAiring** | Pointer to **NullableBool** | Gets or sets filter by programs that are currently airing, or not. | [optional] 
+**MaxStartDate** | Pointer to **NullableTime** | Gets or sets the maximum premiere start date. | [optional] 
+**MinEndDate** | Pointer to **NullableTime** | Gets or sets the minimum premiere end date. | [optional] 
+**MaxEndDate** | Pointer to **NullableTime** | Gets or sets the maximum premiere end date. | [optional] 
+**IsMovie** | Pointer to **NullableBool** | Gets or sets filter for movies. | [optional] 
+**IsSeries** | Pointer to **NullableBool** | Gets or sets filter for series. | [optional] 
+**IsNews** | Pointer to **NullableBool** | Gets or sets filter for news. | [optional] 
+**IsKids** | Pointer to **NullableBool** | Gets or sets filter for kids. | [optional] 
+**IsSports** | Pointer to **NullableBool** | Gets or sets filter for sports. | [optional] 
+**StartIndex** | Pointer to **NullableInt32** | Gets or sets the record index to start at. All items with a lower index will be dropped from the results. | [optional] 
+**Limit** | Pointer to **NullableInt32** | Gets or sets the maximum number of records to return. | [optional] 
+**SortBy** | Pointer to [**[]ItemSortBy**](ItemSortBy.md) | Gets or sets specify one or more sort orders, comma delimited. Options: Name, StartDate. | [optional] 
+**SortOrder** | Pointer to [**[]SortOrder**](SortOrder.md) | Gets or sets sort order. | [optional] 
 **Genres** | Pointer to **[]string** | Gets or sets the genres to return guide information for. | [optional] 
 **GenreIds** | Pointer to **[]string** | Gets or sets the genre ids to return guide information for. | [optional] 
-**EnableImages** | Pointer to **NullableBool** | Gets or sets include image information in output.  Optional. | [optional] 
-**EnableTotalRecordCount** | Pointer to **bool** | Gets or sets a value indicating whether retrieve total record count. | [optional] 
-**ImageTypeLimit** | Pointer to **NullableInt32** | Gets or sets the max number of images to return, per image type.  Optional. | [optional] 
-**EnableImageTypes** | Pointer to [**[]ImageType**](ImageType.md) | Gets or sets the image types to include in the output.  Optional. | [optional] 
-**EnableUserData** | Pointer to **NullableBool** | Gets or sets include user data.  Optional. | [optional] 
-**SeriesTimerId** | Pointer to **NullableString** | Gets or sets filter by series timer id.  Optional. | [optional] 
-**LibrarySeriesId** | Pointer to **string** | Gets or sets filter by library series id.  Optional. | [optional] 
-**Fields** | Pointer to [**[]ItemFields**](ItemFields.md) | Gets or sets specify additional fields of information to return in the output. This allows multiple, comma delimited. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines.  Optional. | [optional] 
+**EnableImages** | Pointer to **NullableBool** | Gets or sets include image information in output. | [optional] 
+**EnableTotalRecordCount** | Pointer to **bool** | Gets or sets a value indicating whether retrieve total record count. | [optional] [default to true]
+**ImageTypeLimit** | Pointer to **NullableInt32** | Gets or sets the max number of images to return, per image type. | [optional] 
+**EnableImageTypes** | Pointer to [**[]ImageType**](ImageType.md) | Gets or sets the image types to include in the output. | [optional] 
+**EnableUserData** | Pointer to **NullableBool** | Gets or sets include user data. | [optional] 
+**SeriesTimerId** | Pointer to **NullableString** | Gets or sets filter by series timer id. | [optional] 
+**LibrarySeriesId** | Pointer to **NullableString** | Gets or sets filter by library series id. | [optional] 
+**Fields** | Pointer to [**[]ItemFields**](ItemFields.md) | Gets or sets specify additional fields of information to return in the output. | [optional] 
 
 ## Methods
 
@@ -76,6 +76,16 @@ SetChannelIds sets ChannelIds field to given value.
 
 HasChannelIds returns a boolean if a field has been set.
 
+### SetChannelIdsNil
+
+`func (o *GetProgramsDto) SetChannelIdsNil(b bool)`
+
+ SetChannelIdsNil sets the value for ChannelIds to be an explicit nil
+
+### UnsetChannelIds
+`func (o *GetProgramsDto) UnsetChannelIds()`
+
+UnsetChannelIds ensures that no value is present for ChannelIds, not even an explicit nil
 ### GetUserId
 
 `func (o *GetProgramsDto) GetUserId() string`
@@ -591,6 +601,16 @@ SetSortBy sets SortBy field to given value.
 
 HasSortBy returns a boolean if a field has been set.
 
+### SetSortByNil
+
+`func (o *GetProgramsDto) SetSortByNil(b bool)`
+
+ SetSortByNil sets the value for SortBy to be an explicit nil
+
+### UnsetSortBy
+`func (o *GetProgramsDto) UnsetSortBy()`
+
+UnsetSortBy ensures that no value is present for SortBy, not even an explicit nil
 ### GetSortOrder
 
 `func (o *GetProgramsDto) GetSortOrder() []SortOrder`
@@ -616,6 +636,16 @@ SetSortOrder sets SortOrder field to given value.
 
 HasSortOrder returns a boolean if a field has been set.
 
+### SetSortOrderNil
+
+`func (o *GetProgramsDto) SetSortOrderNil(b bool)`
+
+ SetSortOrderNil sets the value for SortOrder to be an explicit nil
+
+### UnsetSortOrder
+`func (o *GetProgramsDto) UnsetSortOrder()`
+
+UnsetSortOrder ensures that no value is present for SortOrder, not even an explicit nil
 ### GetGenres
 
 `func (o *GetProgramsDto) GetGenres() []string`
@@ -641,6 +671,16 @@ SetGenres sets Genres field to given value.
 
 HasGenres returns a boolean if a field has been set.
 
+### SetGenresNil
+
+`func (o *GetProgramsDto) SetGenresNil(b bool)`
+
+ SetGenresNil sets the value for Genres to be an explicit nil
+
+### UnsetGenres
+`func (o *GetProgramsDto) UnsetGenres()`
+
+UnsetGenres ensures that no value is present for Genres, not even an explicit nil
 ### GetGenreIds
 
 `func (o *GetProgramsDto) GetGenreIds() []string`
@@ -666,6 +706,16 @@ SetGenreIds sets GenreIds field to given value.
 
 HasGenreIds returns a boolean if a field has been set.
 
+### SetGenreIdsNil
+
+`func (o *GetProgramsDto) SetGenreIdsNil(b bool)`
+
+ SetGenreIdsNil sets the value for GenreIds to be an explicit nil
+
+### UnsetGenreIds
+`func (o *GetProgramsDto) UnsetGenreIds()`
+
+UnsetGenreIds ensures that no value is present for GenreIds, not even an explicit nil
 ### GetEnableImages
 
 `func (o *GetProgramsDto) GetEnableImages() bool`
@@ -786,6 +836,16 @@ SetEnableImageTypes sets EnableImageTypes field to given value.
 
 HasEnableImageTypes returns a boolean if a field has been set.
 
+### SetEnableImageTypesNil
+
+`func (o *GetProgramsDto) SetEnableImageTypesNil(b bool)`
+
+ SetEnableImageTypesNil sets the value for EnableImageTypes to be an explicit nil
+
+### UnsetEnableImageTypes
+`func (o *GetProgramsDto) UnsetEnableImageTypes()`
+
+UnsetEnableImageTypes ensures that no value is present for EnableImageTypes, not even an explicit nil
 ### GetEnableUserData
 
 `func (o *GetProgramsDto) GetEnableUserData() bool`
@@ -881,6 +941,16 @@ SetLibrarySeriesId sets LibrarySeriesId field to given value.
 
 HasLibrarySeriesId returns a boolean if a field has been set.
 
+### SetLibrarySeriesIdNil
+
+`func (o *GetProgramsDto) SetLibrarySeriesIdNil(b bool)`
+
+ SetLibrarySeriesIdNil sets the value for LibrarySeriesId to be an explicit nil
+
+### UnsetLibrarySeriesId
+`func (o *GetProgramsDto) UnsetLibrarySeriesId()`
+
+UnsetLibrarySeriesId ensures that no value is present for LibrarySeriesId, not even an explicit nil
 ### GetFields
 
 `func (o *GetProgramsDto) GetFields() []ItemFields`
@@ -906,6 +976,16 @@ SetFields sets Fields field to given value.
 
 HasFields returns a boolean if a field has been set.
 
+### SetFieldsNil
+
+`func (o *GetProgramsDto) SetFieldsNil(b bool)`
+
+ SetFieldsNil sets the value for Fields to be an explicit nil
+
+### UnsetFields
+`func (o *GetProgramsDto) UnsetFields()`
+
+UnsetFields ensures that no value is present for Fields, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

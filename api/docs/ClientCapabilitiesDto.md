@@ -8,11 +8,9 @@ Name | Type | Description | Notes
 **SupportedCommands** | Pointer to [**[]GeneralCommandType**](GeneralCommandType.md) | Gets or sets the list of supported commands. | [optional] 
 **SupportsMediaControl** | Pointer to **bool** | Gets or sets a value indicating whether session supports media control. | [optional] 
 **SupportsPersistentIdentifier** | Pointer to **bool** | Gets or sets a value indicating whether session supports a persistent identifier. | [optional] 
-**DeviceProfile** | Pointer to [**NullableDeviceProfile**](DeviceProfile.md) | A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.  &lt;br /&gt;  Specifically, it defines the supported &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\&quot;&gt;containers&lt;/see&gt; and  &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\&quot;&gt;codecs&lt;/see&gt; (video and/or audio, including codec profiles and levels)  the device is able to direct play (without transcoding or remuxing),  as well as which &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\&quot;&gt;containers/codecs to transcode to&lt;/see&gt; in case it isn&#39;t. | [optional] 
+**DeviceProfile** | Pointer to [**NullableDeviceProfile**](DeviceProfile.md) | Gets or sets the device profile. | [optional] 
 **AppStoreUrl** | Pointer to **NullableString** | Gets or sets the app store url. | [optional] 
 **IconUrl** | Pointer to **NullableString** | Gets or sets the icon url. | [optional] 
-**SupportsContentUploading** | Pointer to **NullableBool** |  | [optional] [default to false]
-**SupportsSync** | Pointer to **NullableBool** |  | [optional] [default to false]
 
 ## Methods
 
@@ -238,76 +236,6 @@ HasIconUrl returns a boolean if a field has been set.
 `func (o *ClientCapabilitiesDto) UnsetIconUrl()`
 
 UnsetIconUrl ensures that no value is present for IconUrl, not even an explicit nil
-### GetSupportsContentUploading
-
-`func (o *ClientCapabilitiesDto) GetSupportsContentUploading() bool`
-
-GetSupportsContentUploading returns the SupportsContentUploading field if non-nil, zero value otherwise.
-
-### GetSupportsContentUploadingOk
-
-`func (o *ClientCapabilitiesDto) GetSupportsContentUploadingOk() (*bool, bool)`
-
-GetSupportsContentUploadingOk returns a tuple with the SupportsContentUploading field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSupportsContentUploading
-
-`func (o *ClientCapabilitiesDto) SetSupportsContentUploading(v bool)`
-
-SetSupportsContentUploading sets SupportsContentUploading field to given value.
-
-### HasSupportsContentUploading
-
-`func (o *ClientCapabilitiesDto) HasSupportsContentUploading() bool`
-
-HasSupportsContentUploading returns a boolean if a field has been set.
-
-### SetSupportsContentUploadingNil
-
-`func (o *ClientCapabilitiesDto) SetSupportsContentUploadingNil(b bool)`
-
- SetSupportsContentUploadingNil sets the value for SupportsContentUploading to be an explicit nil
-
-### UnsetSupportsContentUploading
-`func (o *ClientCapabilitiesDto) UnsetSupportsContentUploading()`
-
-UnsetSupportsContentUploading ensures that no value is present for SupportsContentUploading, not even an explicit nil
-### GetSupportsSync
-
-`func (o *ClientCapabilitiesDto) GetSupportsSync() bool`
-
-GetSupportsSync returns the SupportsSync field if non-nil, zero value otherwise.
-
-### GetSupportsSyncOk
-
-`func (o *ClientCapabilitiesDto) GetSupportsSyncOk() (*bool, bool)`
-
-GetSupportsSyncOk returns a tuple with the SupportsSync field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSupportsSync
-
-`func (o *ClientCapabilitiesDto) SetSupportsSync(v bool)`
-
-SetSupportsSync sets SupportsSync field to given value.
-
-### HasSupportsSync
-
-`func (o *ClientCapabilitiesDto) HasSupportsSync() bool`
-
-HasSupportsSync returns a boolean if a field has been set.
-
-### SetSupportsSyncNil
-
-`func (o *ClientCapabilitiesDto) SetSupportsSyncNil(b bool)`
-
- SetSupportsSyncNil sets the value for SupportsSync to be an explicit nil
-
-### UnsetSupportsSync
-`func (o *ClientCapabilitiesDto) UnsetSupportsSync()`
-
-UnsetSupportsSync ensures that no value is present for SupportsSync, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -11,6 +11,9 @@ Name | Type | Description | Notes
 **FriendlyName** | Pointer to **NullableString** |  | [optional] 
 **ImportFavoritesOnly** | Pointer to **bool** |  | [optional] 
 **AllowHWTranscoding** | Pointer to **bool** |  | [optional] 
+**AllowFmp4TranscodingContainer** | Pointer to **bool** |  | [optional] 
+**AllowStreamSharing** | Pointer to **bool** |  | [optional] 
+**FallbackMaxStreamingBitrate** | Pointer to **int32** |  | [optional] 
 **EnableStreamLooping** | Pointer to **bool** |  | [optional] 
 **Source** | Pointer to **NullableString** |  | [optional] 
 **TunerCount** | Pointer to **int32** |  | [optional] 
@@ -260,6 +263,81 @@ SetAllowHWTranscoding sets AllowHWTranscoding field to given value.
 `func (o *TunerHostInfo) HasAllowHWTranscoding() bool`
 
 HasAllowHWTranscoding returns a boolean if a field has been set.
+
+### GetAllowFmp4TranscodingContainer
+
+`func (o *TunerHostInfo) GetAllowFmp4TranscodingContainer() bool`
+
+GetAllowFmp4TranscodingContainer returns the AllowFmp4TranscodingContainer field if non-nil, zero value otherwise.
+
+### GetAllowFmp4TranscodingContainerOk
+
+`func (o *TunerHostInfo) GetAllowFmp4TranscodingContainerOk() (*bool, bool)`
+
+GetAllowFmp4TranscodingContainerOk returns a tuple with the AllowFmp4TranscodingContainer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowFmp4TranscodingContainer
+
+`func (o *TunerHostInfo) SetAllowFmp4TranscodingContainer(v bool)`
+
+SetAllowFmp4TranscodingContainer sets AllowFmp4TranscodingContainer field to given value.
+
+### HasAllowFmp4TranscodingContainer
+
+`func (o *TunerHostInfo) HasAllowFmp4TranscodingContainer() bool`
+
+HasAllowFmp4TranscodingContainer returns a boolean if a field has been set.
+
+### GetAllowStreamSharing
+
+`func (o *TunerHostInfo) GetAllowStreamSharing() bool`
+
+GetAllowStreamSharing returns the AllowStreamSharing field if non-nil, zero value otherwise.
+
+### GetAllowStreamSharingOk
+
+`func (o *TunerHostInfo) GetAllowStreamSharingOk() (*bool, bool)`
+
+GetAllowStreamSharingOk returns a tuple with the AllowStreamSharing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowStreamSharing
+
+`func (o *TunerHostInfo) SetAllowStreamSharing(v bool)`
+
+SetAllowStreamSharing sets AllowStreamSharing field to given value.
+
+### HasAllowStreamSharing
+
+`func (o *TunerHostInfo) HasAllowStreamSharing() bool`
+
+HasAllowStreamSharing returns a boolean if a field has been set.
+
+### GetFallbackMaxStreamingBitrate
+
+`func (o *TunerHostInfo) GetFallbackMaxStreamingBitrate() int32`
+
+GetFallbackMaxStreamingBitrate returns the FallbackMaxStreamingBitrate field if non-nil, zero value otherwise.
+
+### GetFallbackMaxStreamingBitrateOk
+
+`func (o *TunerHostInfo) GetFallbackMaxStreamingBitrateOk() (*int32, bool)`
+
+GetFallbackMaxStreamingBitrateOk returns a tuple with the FallbackMaxStreamingBitrate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFallbackMaxStreamingBitrate
+
+`func (o *TunerHostInfo) SetFallbackMaxStreamingBitrate(v int32)`
+
+SetFallbackMaxStreamingBitrate sets FallbackMaxStreamingBitrate field to given value.
+
+### HasFallbackMaxStreamingBitrate
+
+`func (o *TunerHostInfo) HasFallbackMaxStreamingBitrate() bool`
+
+HasFallbackMaxStreamingBitrate returns a boolean if a field has been set.
 
 ### GetEnableStreamLooping
 

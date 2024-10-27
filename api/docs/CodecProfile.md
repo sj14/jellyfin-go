@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to [**CodecType**](CodecType.md) |  | [optional] 
-**Conditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) |  | [optional] 
-**ApplyConditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) |  | [optional] 
-**Codec** | Pointer to **NullableString** |  | [optional] 
-**Container** | Pointer to **NullableString** |  | [optional] 
+**Type** | Pointer to [**CodecType**](CodecType.md) | Gets or sets the MediaBrowser.Model.Dlna.CodecType which this container must meet. | [optional] 
+**Conditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) | Gets or sets the list of MediaBrowser.Model.Dlna.ProfileCondition which this profile must meet. | [optional] 
+**ApplyConditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) | Gets or sets the list of MediaBrowser.Model.Dlna.ProfileCondition to apply if this profile is met. | [optional] 
+**Codec** | Pointer to **NullableString** | Gets or sets the codec(s) that this profile applies to. | [optional] 
+**Container** | Pointer to **NullableString** | Gets or sets the container(s) which this profile will be applied to. | [optional] 
+**SubContainer** | Pointer to **NullableString** | Gets or sets the sub-container(s) which this profile will be applied to. | [optional] 
 
 ## Methods
 
@@ -79,16 +80,6 @@ SetConditions sets Conditions field to given value.
 
 HasConditions returns a boolean if a field has been set.
 
-### SetConditionsNil
-
-`func (o *CodecProfile) SetConditionsNil(b bool)`
-
- SetConditionsNil sets the value for Conditions to be an explicit nil
-
-### UnsetConditions
-`func (o *CodecProfile) UnsetConditions()`
-
-UnsetConditions ensures that no value is present for Conditions, not even an explicit nil
 ### GetApplyConditions
 
 `func (o *CodecProfile) GetApplyConditions() []ProfileCondition`
@@ -114,16 +105,6 @@ SetApplyConditions sets ApplyConditions field to given value.
 
 HasApplyConditions returns a boolean if a field has been set.
 
-### SetApplyConditionsNil
-
-`func (o *CodecProfile) SetApplyConditionsNil(b bool)`
-
- SetApplyConditionsNil sets the value for ApplyConditions to be an explicit nil
-
-### UnsetApplyConditions
-`func (o *CodecProfile) UnsetApplyConditions()`
-
-UnsetApplyConditions ensures that no value is present for ApplyConditions, not even an explicit nil
 ### GetCodec
 
 `func (o *CodecProfile) GetCodec() string`
@@ -194,6 +175,41 @@ HasContainer returns a boolean if a field has been set.
 `func (o *CodecProfile) UnsetContainer()`
 
 UnsetContainer ensures that no value is present for Container, not even an explicit nil
+### GetSubContainer
+
+`func (o *CodecProfile) GetSubContainer() string`
+
+GetSubContainer returns the SubContainer field if non-nil, zero value otherwise.
+
+### GetSubContainerOk
+
+`func (o *CodecProfile) GetSubContainerOk() (*string, bool)`
+
+GetSubContainerOk returns a tuple with the SubContainer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubContainer
+
+`func (o *CodecProfile) SetSubContainer(v string)`
+
+SetSubContainer sets SubContainer field to given value.
+
+### HasSubContainer
+
+`func (o *CodecProfile) HasSubContainer() bool`
+
+HasSubContainer returns a boolean if a field has been set.
+
+### SetSubContainerNil
+
+`func (o *CodecProfile) SetSubContainerNil(b bool)`
+
+ SetSubContainerNil sets the value for SubContainer to be an explicit nil
+
+### UnsetSubContainer
+`func (o *CodecProfile) UnsetSubContainer()`
+
+UnsetSubContainer ensures that no value is present for SubContainer, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1147,7 +1147,7 @@ Name | Type | Description  | Notes
 
 ## GetThemeMedia
 
-> AllThemeMediaResult GetThemeMedia(ctx, itemId).UserId(userId).InheritFromParent(inheritFromParent).Execute()
+> AllThemeMediaResult GetThemeMedia(ctx, itemId).UserId(userId).InheritFromParent(inheritFromParent).SortBy(sortBy).SortOrder(sortOrder).Execute()
 
 Get theme songs and videos for an item.
 
@@ -1167,10 +1167,12 @@ func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The item id.
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Filter by user id, and attach user data. (optional)
 	inheritFromParent := true // bool | Optional. Determines whether or not parent items should be searched for theme media. (optional) (default to false)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. (optional)
+	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Optional. Sort Order - Ascending, Descending. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.LibraryAPI.GetThemeMedia(context.Background(), itemId).UserId(userId).InheritFromParent(inheritFromParent).Execute()
+	resp, r, err := apiClient.LibraryAPI.GetThemeMedia(context.Background(), itemId).UserId(userId).InheritFromParent(inheritFromParent).SortBy(sortBy).SortOrder(sortOrder).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `LibraryAPI.GetThemeMedia``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1198,6 +1200,8 @@ Name | Type | Description  | Notes
 
  **userId** | **string** | Optional. Filter by user id, and attach user data. | 
  **inheritFromParent** | **bool** | Optional. Determines whether or not parent items should be searched for theme media. | [default to false]
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. | 
+ **sortOrder** | [**[]SortOrder**](SortOrder.md) | Optional. Sort Order - Ascending, Descending. | 
 
 ### Return type
 
@@ -1219,7 +1223,7 @@ Name | Type | Description  | Notes
 
 ## GetThemeSongs
 
-> ThemeMediaResult GetThemeSongs(ctx, itemId).UserId(userId).InheritFromParent(inheritFromParent).Execute()
+> ThemeMediaResult GetThemeSongs(ctx, itemId).UserId(userId).InheritFromParent(inheritFromParent).SortBy(sortBy).SortOrder(sortOrder).Execute()
 
 Get theme songs for an item.
 
@@ -1239,10 +1243,12 @@ func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The item id.
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Filter by user id, and attach user data. (optional)
 	inheritFromParent := true // bool | Optional. Determines whether or not parent items should be searched for theme media. (optional) (default to false)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. (optional)
+	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Optional. Sort Order - Ascending, Descending. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.LibraryAPI.GetThemeSongs(context.Background(), itemId).UserId(userId).InheritFromParent(inheritFromParent).Execute()
+	resp, r, err := apiClient.LibraryAPI.GetThemeSongs(context.Background(), itemId).UserId(userId).InheritFromParent(inheritFromParent).SortBy(sortBy).SortOrder(sortOrder).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `LibraryAPI.GetThemeSongs``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1270,6 +1276,8 @@ Name | Type | Description  | Notes
 
  **userId** | **string** | Optional. Filter by user id, and attach user data. | 
  **inheritFromParent** | **bool** | Optional. Determines whether or not parent items should be searched for theme media. | [default to false]
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. | 
+ **sortOrder** | [**[]SortOrder**](SortOrder.md) | Optional. Sort Order - Ascending, Descending. | 
 
 ### Return type
 
@@ -1291,7 +1299,7 @@ Name | Type | Description  | Notes
 
 ## GetThemeVideos
 
-> ThemeMediaResult GetThemeVideos(ctx, itemId).UserId(userId).InheritFromParent(inheritFromParent).Execute()
+> ThemeMediaResult GetThemeVideos(ctx, itemId).UserId(userId).InheritFromParent(inheritFromParent).SortBy(sortBy).SortOrder(sortOrder).Execute()
 
 Get theme videos for an item.
 
@@ -1311,10 +1319,12 @@ func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The item id.
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. Filter by user id, and attach user data. (optional)
 	inheritFromParent := true // bool | Optional. Determines whether or not parent items should be searched for theme media. (optional) (default to false)
+	sortBy := []openapiclient.ItemSortBy{openapiclient.ItemSortBy("Default")} // []ItemSortBy | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. (optional)
+	sortOrder := []openapiclient.SortOrder{openapiclient.SortOrder("Ascending")} // []SortOrder | Optional. Sort Order - Ascending, Descending. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.LibraryAPI.GetThemeVideos(context.Background(), itemId).UserId(userId).InheritFromParent(inheritFromParent).Execute()
+	resp, r, err := apiClient.LibraryAPI.GetThemeVideos(context.Background(), itemId).UserId(userId).InheritFromParent(inheritFromParent).SortBy(sortBy).SortOrder(sortOrder).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `LibraryAPI.GetThemeVideos``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1342,6 +1352,8 @@ Name | Type | Description  | Notes
 
  **userId** | **string** | Optional. Filter by user id, and attach user data. | 
  **inheritFromParent** | **bool** | Optional. Determines whether or not parent items should be searched for theme media. | [default to false]
+ **sortBy** | [**[]ItemSortBy**](ItemSortBy.md) | Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime. | 
+ **sortOrder** | [**[]SortOrder**](SortOrder.md) | Optional. Sort Order - Ascending, Descending. | 
 
 ### Return type
 

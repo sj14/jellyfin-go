@@ -28,12 +28,21 @@ Name | Type | Description | Notes
 **LocalMetadataReaderOrder** | Pointer to **[]string** |  | [optional] 
 **DisabledSubtitleFetchers** | Pointer to **[]string** |  | [optional] 
 **SubtitleFetcherOrder** | Pointer to **[]string** |  | [optional] 
+**DisabledMediaSegmentProviders** | Pointer to **[]string** |  | [optional] 
+**MediaSegmentProvideOrder** | Pointer to **[]string** |  | [optional] 
 **SkipSubtitlesIfEmbeddedSubtitlesPresent** | Pointer to **bool** |  | [optional] 
 **SkipSubtitlesIfAudioTrackMatches** | Pointer to **bool** |  | [optional] 
 **SubtitleDownloadLanguages** | Pointer to **[]string** |  | [optional] 
 **RequirePerfectSubtitleMatch** | Pointer to **bool** |  | [optional] 
 **SaveSubtitlesWithMedia** | Pointer to **bool** |  | [optional] 
 **SaveLyricsWithMedia** | Pointer to **bool** |  | [optional] [default to false]
+**SaveTrickplayWithMedia** | Pointer to **bool** |  | [optional] [default to false]
+**DisabledLyricFetchers** | Pointer to **[]string** |  | [optional] 
+**LyricFetcherOrder** | Pointer to **[]string** |  | [optional] 
+**PreferNonstandardArtistsTag** | Pointer to **bool** |  | [optional] [default to false]
+**UseCustomTagDelimiters** | Pointer to **bool** |  | [optional] [default to false]
+**CustomTagDelimiters** | Pointer to **[]string** |  | [optional] 
+**DelimiterWhitelist** | Pointer to **[]string** |  | [optional] 
 **AutomaticallyAddToCollection** | Pointer to **bool** |  | [optional] 
 **AllowEmbeddedSubtitles** | Pointer to [**EmbeddedSubtitleOptions**](EmbeddedSubtitleOptions.md) | An enum representing the options to disable embedded subs. | [optional] 
 **TypeOptions** | Pointer to [**[]TypeOptions**](TypeOptions.md) |  | [optional] 
@@ -697,6 +706,56 @@ SetSubtitleFetcherOrder sets SubtitleFetcherOrder field to given value.
 
 HasSubtitleFetcherOrder returns a boolean if a field has been set.
 
+### GetDisabledMediaSegmentProviders
+
+`func (o *LibraryOptions) GetDisabledMediaSegmentProviders() []string`
+
+GetDisabledMediaSegmentProviders returns the DisabledMediaSegmentProviders field if non-nil, zero value otherwise.
+
+### GetDisabledMediaSegmentProvidersOk
+
+`func (o *LibraryOptions) GetDisabledMediaSegmentProvidersOk() (*[]string, bool)`
+
+GetDisabledMediaSegmentProvidersOk returns a tuple with the DisabledMediaSegmentProviders field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDisabledMediaSegmentProviders
+
+`func (o *LibraryOptions) SetDisabledMediaSegmentProviders(v []string)`
+
+SetDisabledMediaSegmentProviders sets DisabledMediaSegmentProviders field to given value.
+
+### HasDisabledMediaSegmentProviders
+
+`func (o *LibraryOptions) HasDisabledMediaSegmentProviders() bool`
+
+HasDisabledMediaSegmentProviders returns a boolean if a field has been set.
+
+### GetMediaSegmentProvideOrder
+
+`func (o *LibraryOptions) GetMediaSegmentProvideOrder() []string`
+
+GetMediaSegmentProvideOrder returns the MediaSegmentProvideOrder field if non-nil, zero value otherwise.
+
+### GetMediaSegmentProvideOrderOk
+
+`func (o *LibraryOptions) GetMediaSegmentProvideOrderOk() (*[]string, bool)`
+
+GetMediaSegmentProvideOrderOk returns a tuple with the MediaSegmentProvideOrder field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMediaSegmentProvideOrder
+
+`func (o *LibraryOptions) SetMediaSegmentProvideOrder(v []string)`
+
+SetMediaSegmentProvideOrder sets MediaSegmentProvideOrder field to given value.
+
+### HasMediaSegmentProvideOrder
+
+`func (o *LibraryOptions) HasMediaSegmentProvideOrder() bool`
+
+HasMediaSegmentProvideOrder returns a boolean if a field has been set.
+
 ### GetSkipSubtitlesIfEmbeddedSubtitlesPresent
 
 `func (o *LibraryOptions) GetSkipSubtitlesIfEmbeddedSubtitlesPresent() bool`
@@ -856,6 +915,181 @@ SetSaveLyricsWithMedia sets SaveLyricsWithMedia field to given value.
 `func (o *LibraryOptions) HasSaveLyricsWithMedia() bool`
 
 HasSaveLyricsWithMedia returns a boolean if a field has been set.
+
+### GetSaveTrickplayWithMedia
+
+`func (o *LibraryOptions) GetSaveTrickplayWithMedia() bool`
+
+GetSaveTrickplayWithMedia returns the SaveTrickplayWithMedia field if non-nil, zero value otherwise.
+
+### GetSaveTrickplayWithMediaOk
+
+`func (o *LibraryOptions) GetSaveTrickplayWithMediaOk() (*bool, bool)`
+
+GetSaveTrickplayWithMediaOk returns a tuple with the SaveTrickplayWithMedia field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSaveTrickplayWithMedia
+
+`func (o *LibraryOptions) SetSaveTrickplayWithMedia(v bool)`
+
+SetSaveTrickplayWithMedia sets SaveTrickplayWithMedia field to given value.
+
+### HasSaveTrickplayWithMedia
+
+`func (o *LibraryOptions) HasSaveTrickplayWithMedia() bool`
+
+HasSaveTrickplayWithMedia returns a boolean if a field has been set.
+
+### GetDisabledLyricFetchers
+
+`func (o *LibraryOptions) GetDisabledLyricFetchers() []string`
+
+GetDisabledLyricFetchers returns the DisabledLyricFetchers field if non-nil, zero value otherwise.
+
+### GetDisabledLyricFetchersOk
+
+`func (o *LibraryOptions) GetDisabledLyricFetchersOk() (*[]string, bool)`
+
+GetDisabledLyricFetchersOk returns a tuple with the DisabledLyricFetchers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDisabledLyricFetchers
+
+`func (o *LibraryOptions) SetDisabledLyricFetchers(v []string)`
+
+SetDisabledLyricFetchers sets DisabledLyricFetchers field to given value.
+
+### HasDisabledLyricFetchers
+
+`func (o *LibraryOptions) HasDisabledLyricFetchers() bool`
+
+HasDisabledLyricFetchers returns a boolean if a field has been set.
+
+### GetLyricFetcherOrder
+
+`func (o *LibraryOptions) GetLyricFetcherOrder() []string`
+
+GetLyricFetcherOrder returns the LyricFetcherOrder field if non-nil, zero value otherwise.
+
+### GetLyricFetcherOrderOk
+
+`func (o *LibraryOptions) GetLyricFetcherOrderOk() (*[]string, bool)`
+
+GetLyricFetcherOrderOk returns a tuple with the LyricFetcherOrder field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLyricFetcherOrder
+
+`func (o *LibraryOptions) SetLyricFetcherOrder(v []string)`
+
+SetLyricFetcherOrder sets LyricFetcherOrder field to given value.
+
+### HasLyricFetcherOrder
+
+`func (o *LibraryOptions) HasLyricFetcherOrder() bool`
+
+HasLyricFetcherOrder returns a boolean if a field has been set.
+
+### GetPreferNonstandardArtistsTag
+
+`func (o *LibraryOptions) GetPreferNonstandardArtistsTag() bool`
+
+GetPreferNonstandardArtistsTag returns the PreferNonstandardArtistsTag field if non-nil, zero value otherwise.
+
+### GetPreferNonstandardArtistsTagOk
+
+`func (o *LibraryOptions) GetPreferNonstandardArtistsTagOk() (*bool, bool)`
+
+GetPreferNonstandardArtistsTagOk returns a tuple with the PreferNonstandardArtistsTag field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferNonstandardArtistsTag
+
+`func (o *LibraryOptions) SetPreferNonstandardArtistsTag(v bool)`
+
+SetPreferNonstandardArtistsTag sets PreferNonstandardArtistsTag field to given value.
+
+### HasPreferNonstandardArtistsTag
+
+`func (o *LibraryOptions) HasPreferNonstandardArtistsTag() bool`
+
+HasPreferNonstandardArtistsTag returns a boolean if a field has been set.
+
+### GetUseCustomTagDelimiters
+
+`func (o *LibraryOptions) GetUseCustomTagDelimiters() bool`
+
+GetUseCustomTagDelimiters returns the UseCustomTagDelimiters field if non-nil, zero value otherwise.
+
+### GetUseCustomTagDelimitersOk
+
+`func (o *LibraryOptions) GetUseCustomTagDelimitersOk() (*bool, bool)`
+
+GetUseCustomTagDelimitersOk returns a tuple with the UseCustomTagDelimiters field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUseCustomTagDelimiters
+
+`func (o *LibraryOptions) SetUseCustomTagDelimiters(v bool)`
+
+SetUseCustomTagDelimiters sets UseCustomTagDelimiters field to given value.
+
+### HasUseCustomTagDelimiters
+
+`func (o *LibraryOptions) HasUseCustomTagDelimiters() bool`
+
+HasUseCustomTagDelimiters returns a boolean if a field has been set.
+
+### GetCustomTagDelimiters
+
+`func (o *LibraryOptions) GetCustomTagDelimiters() []string`
+
+GetCustomTagDelimiters returns the CustomTagDelimiters field if non-nil, zero value otherwise.
+
+### GetCustomTagDelimitersOk
+
+`func (o *LibraryOptions) GetCustomTagDelimitersOk() (*[]string, bool)`
+
+GetCustomTagDelimitersOk returns a tuple with the CustomTagDelimiters field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomTagDelimiters
+
+`func (o *LibraryOptions) SetCustomTagDelimiters(v []string)`
+
+SetCustomTagDelimiters sets CustomTagDelimiters field to given value.
+
+### HasCustomTagDelimiters
+
+`func (o *LibraryOptions) HasCustomTagDelimiters() bool`
+
+HasCustomTagDelimiters returns a boolean if a field has been set.
+
+### GetDelimiterWhitelist
+
+`func (o *LibraryOptions) GetDelimiterWhitelist() []string`
+
+GetDelimiterWhitelist returns the DelimiterWhitelist field if non-nil, zero value otherwise.
+
+### GetDelimiterWhitelistOk
+
+`func (o *LibraryOptions) GetDelimiterWhitelistOk() (*[]string, bool)`
+
+GetDelimiterWhitelistOk returns a tuple with the DelimiterWhitelist field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDelimiterWhitelist
+
+`func (o *LibraryOptions) SetDelimiterWhitelist(v []string)`
+
+SetDelimiterWhitelist sets DelimiterWhitelist field to given value.
+
+### HasDelimiterWhitelist
+
+`func (o *LibraryOptions) HasDelimiterWhitelist() bool`
+
+HasDelimiterWhitelist returns a boolean if a field has been set.
 
 ### GetAutomaticallyAddToCollection
 

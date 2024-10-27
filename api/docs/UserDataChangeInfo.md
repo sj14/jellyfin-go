@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserId** | Pointer to **NullableString** | Gets or sets the user id. | [optional] 
+**UserId** | Pointer to **string** | Gets or sets the user id. | [optional] 
 **UserDataList** | Pointer to [**[]UserItemDataDto**](UserItemDataDto.md) | Gets or sets the user data list. | [optional] 
 
 ## Methods
@@ -51,16 +51,6 @@ SetUserId sets UserId field to given value.
 
 HasUserId returns a boolean if a field has been set.
 
-### SetUserIdNil
-
-`func (o *UserDataChangeInfo) SetUserIdNil(b bool)`
-
- SetUserIdNil sets the value for UserId to be an explicit nil
-
-### UnsetUserId
-`func (o *UserDataChangeInfo) UnsetUserId()`
-
-UnsetUserId ensures that no value is present for UserId, not even an explicit nil
 ### GetUserDataList
 
 `func (o *UserDataChangeInfo) GetUserDataList() []UserItemDataDto`
@@ -86,16 +76,6 @@ SetUserDataList sets UserDataList field to given value.
 
 HasUserDataList returns a boolean if a field has been set.
 
-### SetUserDataListNil
-
-`func (o *UserDataChangeInfo) SetUserDataListNil(b bool)`
-
- SetUserDataListNil sets the value for UserDataList to be an explicit nil
-
-### UnsetUserDataList
-`func (o *UserDataChangeInfo) UnsetUserDataList()`
-
-UnsetUserDataList ensures that no value is present for UserDataList, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

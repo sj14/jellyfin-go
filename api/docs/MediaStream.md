@@ -19,14 +19,15 @@ Name | Type | Description | Notes
 **ElPresentFlag** | Pointer to **NullableInt32** | Gets or sets the Dolby Vision el present flag. | [optional] 
 **BlPresentFlag** | Pointer to **NullableInt32** | Gets or sets the Dolby Vision bl present flag. | [optional] 
 **DvBlSignalCompatibilityId** | Pointer to **NullableInt32** | Gets or sets the Dolby Vision bl signal compatibility id. | [optional] 
+**Rotation** | Pointer to **NullableInt32** | Gets or sets the Rotation in degrees. | [optional] 
 **Comment** | Pointer to **NullableString** | Gets or sets the comment. | [optional] 
 **TimeBase** | Pointer to **NullableString** | Gets or sets the time base. | [optional] 
 **CodecTimeBase** | Pointer to **NullableString** | Gets or sets the codec time base. | [optional] 
 **Title** | Pointer to **NullableString** | Gets or sets the title. | [optional] 
-**VideoRange** | Pointer to [**VideoRange**](VideoRange.md) | Gets the video range. | [optional] [readonly] 
-**VideoRangeType** | Pointer to [**VideoRangeType**](VideoRangeType.md) | Gets the video range type. | [optional] [readonly] 
+**VideoRange** | Pointer to [**VideoRange**](VideoRange.md) | An enum representing video ranges. | [optional] [readonly] 
+**VideoRangeType** | Pointer to [**VideoRangeType**](VideoRangeType.md) | An enum representing types of video ranges. | [optional] [readonly] 
 **VideoDoViTitle** | Pointer to **NullableString** | Gets the video dovi title. | [optional] [readonly] 
-**AudioSpatialFormat** | Pointer to [**AudioSpatialFormat**](AudioSpatialFormat.md) | Gets the audio spatial format. | [optional] [readonly] [default to AUDIOSPATIALFORMAT_NONE]
+**AudioSpatialFormat** | Pointer to [**AudioSpatialFormat**](AudioSpatialFormat.md) | An enum representing formats of spatial audio. | [optional] [readonly] [default to AUDIOSPATIALFORMAT_NONE]
 **LocalizedUndefined** | Pointer to **NullableString** |  | [optional] 
 **LocalizedDefault** | Pointer to **NullableString** |  | [optional] 
 **LocalizedForced** | Pointer to **NullableString** |  | [optional] 
@@ -50,6 +51,7 @@ Name | Type | Description | Notes
 **Width** | Pointer to **NullableInt32** | Gets or sets the width. | [optional] 
 **AverageFrameRate** | Pointer to **NullableFloat32** | Gets or sets the average frame rate. | [optional] 
 **RealFrameRate** | Pointer to **NullableFloat32** | Gets or sets the real frame rate. | [optional] 
+**ReferenceFrameRate** | Pointer to **NullableFloat32** | Gets the framerate used as reference.  Prefer AverageFrameRate, if that is null or an unrealistic value  then fallback to RealFrameRate. | [optional] [readonly] 
 **Profile** | Pointer to **NullableString** | Gets or sets the profile. | [optional] 
 **Type** | Pointer to [**MediaStreamType**](MediaStreamType.md) | Gets or sets the type. | [optional] 
 **AspectRatio** | Pointer to **NullableString** | Gets or sets the aspect ratio. | [optional] 
@@ -610,6 +612,41 @@ HasDvBlSignalCompatibilityId returns a boolean if a field has been set.
 `func (o *MediaStream) UnsetDvBlSignalCompatibilityId()`
 
 UnsetDvBlSignalCompatibilityId ensures that no value is present for DvBlSignalCompatibilityId, not even an explicit nil
+### GetRotation
+
+`func (o *MediaStream) GetRotation() int32`
+
+GetRotation returns the Rotation field if non-nil, zero value otherwise.
+
+### GetRotationOk
+
+`func (o *MediaStream) GetRotationOk() (*int32, bool)`
+
+GetRotationOk returns a tuple with the Rotation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRotation
+
+`func (o *MediaStream) SetRotation(v int32)`
+
+SetRotation sets Rotation field to given value.
+
+### HasRotation
+
+`func (o *MediaStream) HasRotation() bool`
+
+HasRotation returns a boolean if a field has been set.
+
+### SetRotationNil
+
+`func (o *MediaStream) SetRotationNil(b bool)`
+
+ SetRotationNil sets the value for Rotation to be an explicit nil
+
+### UnsetRotation
+`func (o *MediaStream) UnsetRotation()`
+
+UnsetRotation ensures that no value is present for Rotation, not even an explicit nil
 ### GetComment
 
 `func (o *MediaStream) GetComment() string`
@@ -1625,6 +1662,41 @@ HasRealFrameRate returns a boolean if a field has been set.
 `func (o *MediaStream) UnsetRealFrameRate()`
 
 UnsetRealFrameRate ensures that no value is present for RealFrameRate, not even an explicit nil
+### GetReferenceFrameRate
+
+`func (o *MediaStream) GetReferenceFrameRate() float32`
+
+GetReferenceFrameRate returns the ReferenceFrameRate field if non-nil, zero value otherwise.
+
+### GetReferenceFrameRateOk
+
+`func (o *MediaStream) GetReferenceFrameRateOk() (*float32, bool)`
+
+GetReferenceFrameRateOk returns a tuple with the ReferenceFrameRate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReferenceFrameRate
+
+`func (o *MediaStream) SetReferenceFrameRate(v float32)`
+
+SetReferenceFrameRate sets ReferenceFrameRate field to given value.
+
+### HasReferenceFrameRate
+
+`func (o *MediaStream) HasReferenceFrameRate() bool`
+
+HasReferenceFrameRate returns a boolean if a field has been set.
+
+### SetReferenceFrameRateNil
+
+`func (o *MediaStream) SetReferenceFrameRateNil(b bool)`
+
+ SetReferenceFrameRateNil sets the value for ReferenceFrameRate to be an explicit nil
+
+### UnsetReferenceFrameRate
+`func (o *MediaStream) UnsetReferenceFrameRate()`
+
+UnsetReferenceFrameRate ensures that no value is present for ReferenceFrameRate, not even an explicit nil
 ### GetProfile
 
 `func (o *MediaStream) GetProfile() string`

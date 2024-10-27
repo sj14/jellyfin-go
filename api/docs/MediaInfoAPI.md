@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## OpenLiveStream
 
-> LiveStreamResponse OpenLiveStream(ctx).OpenToken(openToken).UserId(userId).PlaySessionId(playSessionId).MaxStreamingBitrate(maxStreamingBitrate).StartTimeTicks(startTimeTicks).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).MaxAudioChannels(maxAudioChannels).ItemId(itemId).EnableDirectPlay(enableDirectPlay).EnableDirectStream(enableDirectStream).OpenLiveStreamDto(openLiveStreamDto).Execute()
+> LiveStreamResponse OpenLiveStream(ctx).OpenToken(openToken).UserId(userId).PlaySessionId(playSessionId).MaxStreamingBitrate(maxStreamingBitrate).StartTimeTicks(startTimeTicks).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).MaxAudioChannels(maxAudioChannels).ItemId(itemId).EnableDirectPlay(enableDirectPlay).EnableDirectStream(enableDirectStream).AlwaysBurnInSubtitleWhenTranscoding(alwaysBurnInSubtitleWhenTranscoding).OpenLiveStreamDto(openLiveStreamDto).Execute()
 
 Opens a media source.
 
@@ -338,11 +338,12 @@ func main() {
 	itemId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | The item id. (optional)
 	enableDirectPlay := true // bool | Whether to enable direct play. Default: true. (optional)
 	enableDirectStream := true // bool | Whether to enable direct stream. Default: true. (optional)
+	alwaysBurnInSubtitleWhenTranscoding := true // bool | Always burn-in subtitle when transcoding. (optional)
 	openLiveStreamDto := *openapiclient.NewOpenLiveStreamDto() // OpenLiveStreamDto | The open live stream dto. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.MediaInfoAPI.OpenLiveStream(context.Background()).OpenToken(openToken).UserId(userId).PlaySessionId(playSessionId).MaxStreamingBitrate(maxStreamingBitrate).StartTimeTicks(startTimeTicks).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).MaxAudioChannels(maxAudioChannels).ItemId(itemId).EnableDirectPlay(enableDirectPlay).EnableDirectStream(enableDirectStream).OpenLiveStreamDto(openLiveStreamDto).Execute()
+	resp, r, err := apiClient.MediaInfoAPI.OpenLiveStream(context.Background()).OpenToken(openToken).UserId(userId).PlaySessionId(playSessionId).MaxStreamingBitrate(maxStreamingBitrate).StartTimeTicks(startTimeTicks).AudioStreamIndex(audioStreamIndex).SubtitleStreamIndex(subtitleStreamIndex).MaxAudioChannels(maxAudioChannels).ItemId(itemId).EnableDirectPlay(enableDirectPlay).EnableDirectStream(enableDirectStream).AlwaysBurnInSubtitleWhenTranscoding(alwaysBurnInSubtitleWhenTranscoding).OpenLiveStreamDto(openLiveStreamDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MediaInfoAPI.OpenLiveStream``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -374,6 +375,7 @@ Name | Type | Description  | Notes
  **itemId** | **string** | The item id. | 
  **enableDirectPlay** | **bool** | Whether to enable direct play. Default: true. | 
  **enableDirectStream** | **bool** | Whether to enable direct stream. Default: true. | 
+ **alwaysBurnInSubtitleWhenTranscoding** | **bool** | Always burn-in subtitle when transcoding. | 
  **openLiveStreamDto** | [**OpenLiveStreamDto**](OpenLiveStreamDto.md) | The open live stream dto. | 
 
 ### Return type

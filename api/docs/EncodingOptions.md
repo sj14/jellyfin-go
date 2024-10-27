@@ -16,16 +16,17 @@ Name | Type | Description | Notes
 **ThrottleDelaySeconds** | Pointer to **int32** | Gets or sets the delay after which throttling happens. | [optional] 
 **EnableSegmentDeletion** | Pointer to **bool** | Gets or sets a value indicating whether segment deletion is enabled. | [optional] 
 **SegmentKeepSeconds** | Pointer to **int32** | Gets or sets seconds for which segments should be kept before being deleted. | [optional] 
-**HardwareAccelerationType** | Pointer to **NullableString** | Gets or sets the hardware acceleration type. | [optional] 
+**HardwareAccelerationType** | Pointer to [**HardwareAccelerationType**](HardwareAccelerationType.md) | Gets or sets the hardware acceleration type. | [optional] 
 **EncoderAppPath** | Pointer to **NullableString** | Gets or sets the FFmpeg path as set by the user via the UI. | [optional] 
 **EncoderAppPathDisplay** | Pointer to **NullableString** | Gets or sets the current FFmpeg path being used by the system and displayed on the transcode page. | [optional] 
 **VaapiDevice** | Pointer to **NullableString** | Gets or sets the VA-API device. | [optional] 
+**QsvDevice** | Pointer to **NullableString** | Gets or sets the QSV device. | [optional] 
 **EnableTonemapping** | Pointer to **bool** | Gets or sets a value indicating whether tonemapping is enabled. | [optional] 
 **EnableVppTonemapping** | Pointer to **bool** | Gets or sets a value indicating whether VPP tonemapping is enabled. | [optional] 
 **EnableVideoToolboxTonemapping** | Pointer to **bool** | Gets or sets a value indicating whether videotoolbox tonemapping is enabled. | [optional] 
-**TonemappingAlgorithm** | Pointer to **NullableString** | Gets or sets the tone-mapping algorithm. | [optional] 
-**TonemappingMode** | Pointer to **NullableString** | Gets or sets the tone-mapping mode. | [optional] 
-**TonemappingRange** | Pointer to **NullableString** | Gets or sets the tone-mapping range. | [optional] 
+**TonemappingAlgorithm** | Pointer to [**TonemappingAlgorithm**](TonemappingAlgorithm.md) | Gets or sets the tone-mapping algorithm. | [optional] 
+**TonemappingMode** | Pointer to [**TonemappingMode**](TonemappingMode.md) | Gets or sets the tone-mapping mode. | [optional] 
+**TonemappingRange** | Pointer to [**TonemappingRange**](TonemappingRange.md) | Gets or sets the tone-mapping range. | [optional] 
 **TonemappingDesat** | Pointer to **float64** | Gets or sets the tone-mapping desaturation. | [optional] 
 **TonemappingPeak** | Pointer to **float64** | Gets or sets the tone-mapping peak. | [optional] 
 **TonemappingParam** | Pointer to **float64** | Gets or sets the tone-mapping parameters. | [optional] 
@@ -33,11 +34,13 @@ Name | Type | Description | Notes
 **VppTonemappingContrast** | Pointer to **float64** | Gets or sets the VPP tone-mapping contrast. | [optional] 
 **H264Crf** | Pointer to **int32** | Gets or sets the H264 CRF. | [optional] 
 **H265Crf** | Pointer to **int32** | Gets or sets the H265 CRF. | [optional] 
-**EncoderPreset** | Pointer to **NullableString** | Gets or sets the encoder preset. | [optional] 
+**EncoderPreset** | Pointer to [**NullableEncoderPreset**](EncoderPreset.md) | Gets or sets the encoder preset. | [optional] 
 **DeinterlaceDoubleRate** | Pointer to **bool** | Gets or sets a value indicating whether the framerate is doubled when deinterlacing. | [optional] 
-**DeinterlaceMethod** | Pointer to **NullableString** | Gets or sets the deinterlace method. | [optional] 
+**DeinterlaceMethod** | Pointer to [**DeinterlaceMethod**](DeinterlaceMethod.md) | Gets or sets the deinterlace method. | [optional] 
 **EnableDecodingColorDepth10Hevc** | Pointer to **bool** | Gets or sets a value indicating whether 10bit HEVC decoding is enabled. | [optional] 
 **EnableDecodingColorDepth10Vp9** | Pointer to **bool** | Gets or sets a value indicating whether 10bit VP9 decoding is enabled. | [optional] 
+**EnableDecodingColorDepth10HevcRext** | Pointer to **bool** | Gets or sets a value indicating whether 8/10bit HEVC RExt decoding is enabled. | [optional] 
+**EnableDecodingColorDepth12HevcRext** | Pointer to **bool** | Gets or sets a value indicating whether 12bit HEVC RExt decoding is enabled. | [optional] 
 **EnableEnhancedNvdecDecoder** | Pointer to **bool** | Gets or sets a value indicating whether the enhanced NVDEC is enabled. | [optional] 
 **PreferSystemNativeHwDecoder** | Pointer to **bool** | Gets or sets a value indicating whether the system native hardware decoder should be used. | [optional] 
 **EnableIntelLowPowerH264HwEncoder** | Pointer to **bool** | Gets or sets a value indicating whether the Intel H264 low-power hardware encoder should be used. | [optional] 
@@ -390,20 +393,20 @@ HasSegmentKeepSeconds returns a boolean if a field has been set.
 
 ### GetHardwareAccelerationType
 
-`func (o *EncodingOptions) GetHardwareAccelerationType() string`
+`func (o *EncodingOptions) GetHardwareAccelerationType() HardwareAccelerationType`
 
 GetHardwareAccelerationType returns the HardwareAccelerationType field if non-nil, zero value otherwise.
 
 ### GetHardwareAccelerationTypeOk
 
-`func (o *EncodingOptions) GetHardwareAccelerationTypeOk() (*string, bool)`
+`func (o *EncodingOptions) GetHardwareAccelerationTypeOk() (*HardwareAccelerationType, bool)`
 
 GetHardwareAccelerationTypeOk returns a tuple with the HardwareAccelerationType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHardwareAccelerationType
 
-`func (o *EncodingOptions) SetHardwareAccelerationType(v string)`
+`func (o *EncodingOptions) SetHardwareAccelerationType(v HardwareAccelerationType)`
 
 SetHardwareAccelerationType sets HardwareAccelerationType field to given value.
 
@@ -413,16 +416,6 @@ SetHardwareAccelerationType sets HardwareAccelerationType field to given value.
 
 HasHardwareAccelerationType returns a boolean if a field has been set.
 
-### SetHardwareAccelerationTypeNil
-
-`func (o *EncodingOptions) SetHardwareAccelerationTypeNil(b bool)`
-
- SetHardwareAccelerationTypeNil sets the value for HardwareAccelerationType to be an explicit nil
-
-### UnsetHardwareAccelerationType
-`func (o *EncodingOptions) UnsetHardwareAccelerationType()`
-
-UnsetHardwareAccelerationType ensures that no value is present for HardwareAccelerationType, not even an explicit nil
 ### GetEncoderAppPath
 
 `func (o *EncodingOptions) GetEncoderAppPath() string`
@@ -528,6 +521,41 @@ HasVaapiDevice returns a boolean if a field has been set.
 `func (o *EncodingOptions) UnsetVaapiDevice()`
 
 UnsetVaapiDevice ensures that no value is present for VaapiDevice, not even an explicit nil
+### GetQsvDevice
+
+`func (o *EncodingOptions) GetQsvDevice() string`
+
+GetQsvDevice returns the QsvDevice field if non-nil, zero value otherwise.
+
+### GetQsvDeviceOk
+
+`func (o *EncodingOptions) GetQsvDeviceOk() (*string, bool)`
+
+GetQsvDeviceOk returns a tuple with the QsvDevice field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQsvDevice
+
+`func (o *EncodingOptions) SetQsvDevice(v string)`
+
+SetQsvDevice sets QsvDevice field to given value.
+
+### HasQsvDevice
+
+`func (o *EncodingOptions) HasQsvDevice() bool`
+
+HasQsvDevice returns a boolean if a field has been set.
+
+### SetQsvDeviceNil
+
+`func (o *EncodingOptions) SetQsvDeviceNil(b bool)`
+
+ SetQsvDeviceNil sets the value for QsvDevice to be an explicit nil
+
+### UnsetQsvDevice
+`func (o *EncodingOptions) UnsetQsvDevice()`
+
+UnsetQsvDevice ensures that no value is present for QsvDevice, not even an explicit nil
 ### GetEnableTonemapping
 
 `func (o *EncodingOptions) GetEnableTonemapping() bool`
@@ -605,20 +633,20 @@ HasEnableVideoToolboxTonemapping returns a boolean if a field has been set.
 
 ### GetTonemappingAlgorithm
 
-`func (o *EncodingOptions) GetTonemappingAlgorithm() string`
+`func (o *EncodingOptions) GetTonemappingAlgorithm() TonemappingAlgorithm`
 
 GetTonemappingAlgorithm returns the TonemappingAlgorithm field if non-nil, zero value otherwise.
 
 ### GetTonemappingAlgorithmOk
 
-`func (o *EncodingOptions) GetTonemappingAlgorithmOk() (*string, bool)`
+`func (o *EncodingOptions) GetTonemappingAlgorithmOk() (*TonemappingAlgorithm, bool)`
 
 GetTonemappingAlgorithmOk returns a tuple with the TonemappingAlgorithm field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTonemappingAlgorithm
 
-`func (o *EncodingOptions) SetTonemappingAlgorithm(v string)`
+`func (o *EncodingOptions) SetTonemappingAlgorithm(v TonemappingAlgorithm)`
 
 SetTonemappingAlgorithm sets TonemappingAlgorithm field to given value.
 
@@ -628,32 +656,22 @@ SetTonemappingAlgorithm sets TonemappingAlgorithm field to given value.
 
 HasTonemappingAlgorithm returns a boolean if a field has been set.
 
-### SetTonemappingAlgorithmNil
-
-`func (o *EncodingOptions) SetTonemappingAlgorithmNil(b bool)`
-
- SetTonemappingAlgorithmNil sets the value for TonemappingAlgorithm to be an explicit nil
-
-### UnsetTonemappingAlgorithm
-`func (o *EncodingOptions) UnsetTonemappingAlgorithm()`
-
-UnsetTonemappingAlgorithm ensures that no value is present for TonemappingAlgorithm, not even an explicit nil
 ### GetTonemappingMode
 
-`func (o *EncodingOptions) GetTonemappingMode() string`
+`func (o *EncodingOptions) GetTonemappingMode() TonemappingMode`
 
 GetTonemappingMode returns the TonemappingMode field if non-nil, zero value otherwise.
 
 ### GetTonemappingModeOk
 
-`func (o *EncodingOptions) GetTonemappingModeOk() (*string, bool)`
+`func (o *EncodingOptions) GetTonemappingModeOk() (*TonemappingMode, bool)`
 
 GetTonemappingModeOk returns a tuple with the TonemappingMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTonemappingMode
 
-`func (o *EncodingOptions) SetTonemappingMode(v string)`
+`func (o *EncodingOptions) SetTonemappingMode(v TonemappingMode)`
 
 SetTonemappingMode sets TonemappingMode field to given value.
 
@@ -663,32 +681,22 @@ SetTonemappingMode sets TonemappingMode field to given value.
 
 HasTonemappingMode returns a boolean if a field has been set.
 
-### SetTonemappingModeNil
-
-`func (o *EncodingOptions) SetTonemappingModeNil(b bool)`
-
- SetTonemappingModeNil sets the value for TonemappingMode to be an explicit nil
-
-### UnsetTonemappingMode
-`func (o *EncodingOptions) UnsetTonemappingMode()`
-
-UnsetTonemappingMode ensures that no value is present for TonemappingMode, not even an explicit nil
 ### GetTonemappingRange
 
-`func (o *EncodingOptions) GetTonemappingRange() string`
+`func (o *EncodingOptions) GetTonemappingRange() TonemappingRange`
 
 GetTonemappingRange returns the TonemappingRange field if non-nil, zero value otherwise.
 
 ### GetTonemappingRangeOk
 
-`func (o *EncodingOptions) GetTonemappingRangeOk() (*string, bool)`
+`func (o *EncodingOptions) GetTonemappingRangeOk() (*TonemappingRange, bool)`
 
 GetTonemappingRangeOk returns a tuple with the TonemappingRange field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTonemappingRange
 
-`func (o *EncodingOptions) SetTonemappingRange(v string)`
+`func (o *EncodingOptions) SetTonemappingRange(v TonemappingRange)`
 
 SetTonemappingRange sets TonemappingRange field to given value.
 
@@ -698,16 +706,6 @@ SetTonemappingRange sets TonemappingRange field to given value.
 
 HasTonemappingRange returns a boolean if a field has been set.
 
-### SetTonemappingRangeNil
-
-`func (o *EncodingOptions) SetTonemappingRangeNil(b bool)`
-
- SetTonemappingRangeNil sets the value for TonemappingRange to be an explicit nil
-
-### UnsetTonemappingRange
-`func (o *EncodingOptions) UnsetTonemappingRange()`
-
-UnsetTonemappingRange ensures that no value is present for TonemappingRange, not even an explicit nil
 ### GetTonemappingDesat
 
 `func (o *EncodingOptions) GetTonemappingDesat() float64`
@@ -885,20 +883,20 @@ HasH265Crf returns a boolean if a field has been set.
 
 ### GetEncoderPreset
 
-`func (o *EncodingOptions) GetEncoderPreset() string`
+`func (o *EncodingOptions) GetEncoderPreset() EncoderPreset`
 
 GetEncoderPreset returns the EncoderPreset field if non-nil, zero value otherwise.
 
 ### GetEncoderPresetOk
 
-`func (o *EncodingOptions) GetEncoderPresetOk() (*string, bool)`
+`func (o *EncodingOptions) GetEncoderPresetOk() (*EncoderPreset, bool)`
 
 GetEncoderPresetOk returns a tuple with the EncoderPreset field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEncoderPreset
 
-`func (o *EncodingOptions) SetEncoderPreset(v string)`
+`func (o *EncodingOptions) SetEncoderPreset(v EncoderPreset)`
 
 SetEncoderPreset sets EncoderPreset field to given value.
 
@@ -945,20 +943,20 @@ HasDeinterlaceDoubleRate returns a boolean if a field has been set.
 
 ### GetDeinterlaceMethod
 
-`func (o *EncodingOptions) GetDeinterlaceMethod() string`
+`func (o *EncodingOptions) GetDeinterlaceMethod() DeinterlaceMethod`
 
 GetDeinterlaceMethod returns the DeinterlaceMethod field if non-nil, zero value otherwise.
 
 ### GetDeinterlaceMethodOk
 
-`func (o *EncodingOptions) GetDeinterlaceMethodOk() (*string, bool)`
+`func (o *EncodingOptions) GetDeinterlaceMethodOk() (*DeinterlaceMethod, bool)`
 
 GetDeinterlaceMethodOk returns a tuple with the DeinterlaceMethod field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeinterlaceMethod
 
-`func (o *EncodingOptions) SetDeinterlaceMethod(v string)`
+`func (o *EncodingOptions) SetDeinterlaceMethod(v DeinterlaceMethod)`
 
 SetDeinterlaceMethod sets DeinterlaceMethod field to given value.
 
@@ -968,16 +966,6 @@ SetDeinterlaceMethod sets DeinterlaceMethod field to given value.
 
 HasDeinterlaceMethod returns a boolean if a field has been set.
 
-### SetDeinterlaceMethodNil
-
-`func (o *EncodingOptions) SetDeinterlaceMethodNil(b bool)`
-
- SetDeinterlaceMethodNil sets the value for DeinterlaceMethod to be an explicit nil
-
-### UnsetDeinterlaceMethod
-`func (o *EncodingOptions) UnsetDeinterlaceMethod()`
-
-UnsetDeinterlaceMethod ensures that no value is present for DeinterlaceMethod, not even an explicit nil
 ### GetEnableDecodingColorDepth10Hevc
 
 `func (o *EncodingOptions) GetEnableDecodingColorDepth10Hevc() bool`
@@ -1027,6 +1015,56 @@ SetEnableDecodingColorDepth10Vp9 sets EnableDecodingColorDepth10Vp9 field to giv
 `func (o *EncodingOptions) HasEnableDecodingColorDepth10Vp9() bool`
 
 HasEnableDecodingColorDepth10Vp9 returns a boolean if a field has been set.
+
+### GetEnableDecodingColorDepth10HevcRext
+
+`func (o *EncodingOptions) GetEnableDecodingColorDepth10HevcRext() bool`
+
+GetEnableDecodingColorDepth10HevcRext returns the EnableDecodingColorDepth10HevcRext field if non-nil, zero value otherwise.
+
+### GetEnableDecodingColorDepth10HevcRextOk
+
+`func (o *EncodingOptions) GetEnableDecodingColorDepth10HevcRextOk() (*bool, bool)`
+
+GetEnableDecodingColorDepth10HevcRextOk returns a tuple with the EnableDecodingColorDepth10HevcRext field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableDecodingColorDepth10HevcRext
+
+`func (o *EncodingOptions) SetEnableDecodingColorDepth10HevcRext(v bool)`
+
+SetEnableDecodingColorDepth10HevcRext sets EnableDecodingColorDepth10HevcRext field to given value.
+
+### HasEnableDecodingColorDepth10HevcRext
+
+`func (o *EncodingOptions) HasEnableDecodingColorDepth10HevcRext() bool`
+
+HasEnableDecodingColorDepth10HevcRext returns a boolean if a field has been set.
+
+### GetEnableDecodingColorDepth12HevcRext
+
+`func (o *EncodingOptions) GetEnableDecodingColorDepth12HevcRext() bool`
+
+GetEnableDecodingColorDepth12HevcRext returns the EnableDecodingColorDepth12HevcRext field if non-nil, zero value otherwise.
+
+### GetEnableDecodingColorDepth12HevcRextOk
+
+`func (o *EncodingOptions) GetEnableDecodingColorDepth12HevcRextOk() (*bool, bool)`
+
+GetEnableDecodingColorDepth12HevcRextOk returns a tuple with the EnableDecodingColorDepth12HevcRext field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableDecodingColorDepth12HevcRext
+
+`func (o *EncodingOptions) SetEnableDecodingColorDepth12HevcRext(v bool)`
+
+SetEnableDecodingColorDepth12HevcRext sets EnableDecodingColorDepth12HevcRext field to given value.
+
+### HasEnableDecodingColorDepth12HevcRext
+
+`func (o *EncodingOptions) HasEnableDecodingColorDepth12HevcRext() bool`
+
+HasEnableDecodingColorDepth12HevcRext returns a boolean if a field has been set.
 
 ### GetEnableEnhancedNvdecDecoder
 

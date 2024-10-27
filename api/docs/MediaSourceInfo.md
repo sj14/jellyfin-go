@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **SupportsDirectStream** | Pointer to **bool** |  | [optional] 
 **SupportsDirectPlay** | Pointer to **bool** |  | [optional] 
 **IsInfiniteStream** | Pointer to **bool** |  | [optional] 
+**UseMostCompatibleTranscodingProfile** | Pointer to **bool** |  | [optional] [default to false]
 **RequiresOpening** | Pointer to **bool** |  | [optional] 
 **OpenToken** | Pointer to **NullableString** |  | [optional] 
 **RequiresClosing** | Pointer to **bool** |  | [optional] 
@@ -38,6 +39,7 @@ Name | Type | Description | Notes
 **MediaAttachments** | Pointer to [**[]MediaAttachment**](MediaAttachment.md) |  | [optional] 
 **Formats** | Pointer to **[]string** |  | [optional] 
 **Bitrate** | Pointer to **NullableInt32** |  | [optional] 
+**FallbackMaxStreamingBitrate** | Pointer to **NullableInt32** |  | [optional] 
 **Timestamp** | Pointer to [**NullableTransportStreamTimestamp**](TransportStreamTimestamp.md) |  | [optional] 
 **RequiredHttpHeaders** | Pointer to **map[string]string** |  | [optional] 
 **TranscodingUrl** | Pointer to **NullableString** |  | [optional] 
@@ -46,6 +48,7 @@ Name | Type | Description | Notes
 **AnalyzeDurationMs** | Pointer to **NullableInt32** |  | [optional] 
 **DefaultAudioStreamIndex** | Pointer to **NullableInt32** |  | [optional] 
 **DefaultSubtitleStreamIndex** | Pointer to **NullableInt32** |  | [optional] 
+**HasSegments** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -656,6 +659,31 @@ SetIsInfiniteStream sets IsInfiniteStream field to given value.
 
 HasIsInfiniteStream returns a boolean if a field has been set.
 
+### GetUseMostCompatibleTranscodingProfile
+
+`func (o *MediaSourceInfo) GetUseMostCompatibleTranscodingProfile() bool`
+
+GetUseMostCompatibleTranscodingProfile returns the UseMostCompatibleTranscodingProfile field if non-nil, zero value otherwise.
+
+### GetUseMostCompatibleTranscodingProfileOk
+
+`func (o *MediaSourceInfo) GetUseMostCompatibleTranscodingProfileOk() (*bool, bool)`
+
+GetUseMostCompatibleTranscodingProfileOk returns a tuple with the UseMostCompatibleTranscodingProfile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUseMostCompatibleTranscodingProfile
+
+`func (o *MediaSourceInfo) SetUseMostCompatibleTranscodingProfile(v bool)`
+
+SetUseMostCompatibleTranscodingProfile sets UseMostCompatibleTranscodingProfile field to given value.
+
+### HasUseMostCompatibleTranscodingProfile
+
+`func (o *MediaSourceInfo) HasUseMostCompatibleTranscodingProfile() bool`
+
+HasUseMostCompatibleTranscodingProfile returns a boolean if a field has been set.
+
 ### GetRequiresOpening
 
 `func (o *MediaSourceInfo) GetRequiresOpening() bool`
@@ -1106,6 +1134,41 @@ HasBitrate returns a boolean if a field has been set.
 `func (o *MediaSourceInfo) UnsetBitrate()`
 
 UnsetBitrate ensures that no value is present for Bitrate, not even an explicit nil
+### GetFallbackMaxStreamingBitrate
+
+`func (o *MediaSourceInfo) GetFallbackMaxStreamingBitrate() int32`
+
+GetFallbackMaxStreamingBitrate returns the FallbackMaxStreamingBitrate field if non-nil, zero value otherwise.
+
+### GetFallbackMaxStreamingBitrateOk
+
+`func (o *MediaSourceInfo) GetFallbackMaxStreamingBitrateOk() (*int32, bool)`
+
+GetFallbackMaxStreamingBitrateOk returns a tuple with the FallbackMaxStreamingBitrate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFallbackMaxStreamingBitrate
+
+`func (o *MediaSourceInfo) SetFallbackMaxStreamingBitrate(v int32)`
+
+SetFallbackMaxStreamingBitrate sets FallbackMaxStreamingBitrate field to given value.
+
+### HasFallbackMaxStreamingBitrate
+
+`func (o *MediaSourceInfo) HasFallbackMaxStreamingBitrate() bool`
+
+HasFallbackMaxStreamingBitrate returns a boolean if a field has been set.
+
+### SetFallbackMaxStreamingBitrateNil
+
+`func (o *MediaSourceInfo) SetFallbackMaxStreamingBitrateNil(b bool)`
+
+ SetFallbackMaxStreamingBitrateNil sets the value for FallbackMaxStreamingBitrate to be an explicit nil
+
+### UnsetFallbackMaxStreamingBitrate
+`func (o *MediaSourceInfo) UnsetFallbackMaxStreamingBitrate()`
+
+UnsetFallbackMaxStreamingBitrate ensures that no value is present for FallbackMaxStreamingBitrate, not even an explicit nil
 ### GetTimestamp
 
 `func (o *MediaSourceInfo) GetTimestamp() TransportStreamTimestamp`
@@ -1376,6 +1439,31 @@ HasDefaultSubtitleStreamIndex returns a boolean if a field has been set.
 `func (o *MediaSourceInfo) UnsetDefaultSubtitleStreamIndex()`
 
 UnsetDefaultSubtitleStreamIndex ensures that no value is present for DefaultSubtitleStreamIndex, not even an explicit nil
+### GetHasSegments
+
+`func (o *MediaSourceInfo) GetHasSegments() bool`
+
+GetHasSegments returns the HasSegments field if non-nil, zero value otherwise.
+
+### GetHasSegmentsOk
+
+`func (o *MediaSourceInfo) GetHasSegmentsOk() (*bool, bool)`
+
+GetHasSegmentsOk returns a tuple with the HasSegments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasSegments
+
+`func (o *MediaSourceInfo) SetHasSegments(v bool)`
+
+SetHasSegments sets HasSegments field to given value.
+
+### HasHasSegments
+
+`func (o *MediaSourceInfo) HasHasSegments() bool`
+
+HasHasSegments returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
