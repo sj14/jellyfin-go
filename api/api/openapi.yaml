@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Jellyfin API
-  version: 10.10.1
-  x-jellyfin-version: 10.10.1
+  version: 10.10.3
+  x-jellyfin-version: 10.10.3
 servers:
 - url: http://localhost
 paths:
@@ -16894,6 +16894,16 @@ paths:
         explode: true
         in: query
         name: replaceAllImages
+        required: false
+        schema:
+          default: false
+          type: boolean
+        style: form
+      - description: (Optional) Determines if trickplay images should be replaced.
+          Only applicable if mode is FullRefresh.
+        explode: true
+        in: query
+        name: regenerateTrickplay
         required: false
         schema:
           default: false

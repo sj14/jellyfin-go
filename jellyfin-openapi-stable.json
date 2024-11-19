@@ -2,8 +2,8 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Jellyfin API",
-    "version": "10.10.1",
-    "x-jellyfin-version": "10.10.1"
+    "version": "10.10.3",
+    "x-jellyfin-version": "10.10.3"
   },
   "servers": [
     {
@@ -19426,6 +19426,15 @@
             "name": "replaceAllImages",
             "in": "query",
             "description": "(Optional) Determines if images should be replaced. Only applicable if mode is FullRefresh.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "regenerateTrickplay",
+            "in": "query",
+            "description": "(Optional) Determines if trickplay images should be replaced. Only applicable if mode is FullRefresh.",
             "schema": {
               "type": "boolean",
               "default": false
