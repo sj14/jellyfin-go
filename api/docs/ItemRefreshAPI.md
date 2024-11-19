@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## RefreshItem
 
-> RefreshItem(ctx, itemId).MetadataRefreshMode(metadataRefreshMode).ImageRefreshMode(imageRefreshMode).ReplaceAllMetadata(replaceAllMetadata).ReplaceAllImages(replaceAllImages).Execute()
+> RefreshItem(ctx, itemId).MetadataRefreshMode(metadataRefreshMode).ImageRefreshMode(imageRefreshMode).ReplaceAllMetadata(replaceAllMetadata).ReplaceAllImages(replaceAllImages).RegenerateTrickplay(regenerateTrickplay).Execute()
 
 Refreshes metadata for an item.
 
@@ -32,10 +32,11 @@ func main() {
 	imageRefreshMode := "imageRefreshMode_example" // MetadataRefreshMode | (Optional) Specifies the image refresh mode. (optional) (default to "None")
 	replaceAllMetadata := true // bool | (Optional) Determines if metadata should be replaced. Only applicable if mode is FullRefresh. (optional) (default to false)
 	replaceAllImages := true // bool | (Optional) Determines if images should be replaced. Only applicable if mode is FullRefresh. (optional) (default to false)
+	regenerateTrickplay := true // bool | (Optional) Determines if trickplay images should be replaced. Only applicable if mode is FullRefresh. (optional) (default to false)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.ItemRefreshAPI.RefreshItem(context.Background(), itemId).MetadataRefreshMode(metadataRefreshMode).ImageRefreshMode(imageRefreshMode).ReplaceAllMetadata(replaceAllMetadata).ReplaceAllImages(replaceAllImages).Execute()
+	r, err := apiClient.ItemRefreshAPI.RefreshItem(context.Background(), itemId).MetadataRefreshMode(metadataRefreshMode).ImageRefreshMode(imageRefreshMode).ReplaceAllMetadata(replaceAllMetadata).ReplaceAllImages(replaceAllImages).RegenerateTrickplay(regenerateTrickplay).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ItemRefreshAPI.RefreshItem``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -63,6 +64,7 @@ Name | Type | Description  | Notes
  **imageRefreshMode** | **MetadataRefreshMode** | (Optional) Specifies the image refresh mode. | [default to &quot;None&quot;]
  **replaceAllMetadata** | **bool** | (Optional) Determines if metadata should be replaced. Only applicable if mode is FullRefresh. | [default to false]
  **replaceAllImages** | **bool** | (Optional) Determines if images should be replaced. Only applicable if mode is FullRefresh. | [default to false]
+ **regenerateTrickplay** | **bool** | (Optional) Determines if trickplay images should be replaced. Only applicable if mode is FullRefresh. | [default to false]
 
 ### Return type
 
