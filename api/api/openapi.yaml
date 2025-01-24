@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Jellyfin API
-  version: 10.10.3
-  x-jellyfin-version: 10.10.3
+  version: 10.10.4
+  x-jellyfin-version: 10.10.4
 servers:
 - url: http://localhost
 paths:
@@ -36112,12 +36112,12 @@ components:
         User:
           allOf:
           - $ref: '#/components/schemas/UserDto'
-          description: Class UserDto.
+          description: Gets or sets the user.
           nullable: true
         SessionInfo:
           allOf:
           - $ref: '#/components/schemas/SessionInfoDto'
-          description: Session info DTO.
+          description: Gets or sets the session info.
           nullable: true
         AccessToken:
           description: Gets or sets the access token.
@@ -42407,7 +42407,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/LibraryUpdateInfo'
-          description: Class LibraryUpdateInfo.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46157,7 +46157,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/PlayRequest'
-          description: Class PlayRequest.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46545,7 +46545,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/InstallationInfo'
-          description: Class InstallationInfo.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46602,7 +46602,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/InstallationInfo'
-          description: Class InstallationInfo.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46659,7 +46659,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/InstallationInfo'
-          description: Class InstallationInfo.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46716,7 +46716,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/InstallationInfo'
-          description: Class InstallationInfo.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -46784,8 +46784,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/PluginInfo'
-          description: This is a serializable stub class that is used by the api to
-            provide information about installed plugins.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -49326,7 +49325,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/TaskResult'
-          description: Class TaskExecutionInfo.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -53188,7 +53187,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/SendCommand'
-          description: Class SendCommand.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -53245,7 +53244,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/GroupUpdate'
-          description: Group update without data.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -55920,7 +55919,9 @@ components:
       type: object
     TranscodingProfile:
       additionalProperties: false
-      description: A class for transcoding profile information.
+      description: "A class for transcoding profile information.\r\nNote for client\
+        \ developers: Conditions defined in MediaBrowser.Model.Dlna.CodecProfile has\
+        \ higher priority and can override values defined here."
       properties:
         Container:
           description: Gets or sets the container.
@@ -56577,7 +56578,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/UserDataChangeInfo'
-          description: Class UserDataChangeInfo.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -57076,7 +57077,7 @@ components:
         Data:
           allOf:
           - $ref: '#/components/schemas/UserDto'
-          description: Class UserDto.
+          description: Gets or sets the data.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
