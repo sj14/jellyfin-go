@@ -12,8 +12,8 @@ package api
 
 import (
 	"encoding/json"
-	"gopkg.in/validator.v2"
 	"fmt"
+	"gopkg.in/validator.v2"
 )
 
 // OutboundWebSocketMessage - Represents the list of possible outbound websocket types
@@ -996,6 +996,124 @@ func (obj *OutboundWebSocketMessage) GetActualInstance() (interface{}) {
 
 	if obj.UserUpdatedMessage != nil {
 		return obj.UserUpdatedMessage
+	}
+
+	// all schemas are nil
+	return nil
+}
+
+// Get the actual instance value
+func (obj OutboundWebSocketMessage) GetActualInstanceValue() (interface{}) {
+	if obj.ActivityLogEntryMessage != nil {
+		return *obj.ActivityLogEntryMessage
+	}
+
+	if obj.ForceKeepAliveMessage != nil {
+		return *obj.ForceKeepAliveMessage
+	}
+
+	if obj.GeneralCommandMessage != nil {
+		return *obj.GeneralCommandMessage
+	}
+
+	if obj.LibraryChangedMessage != nil {
+		return *obj.LibraryChangedMessage
+	}
+
+	if obj.OutboundKeepAliveMessage != nil {
+		return *obj.OutboundKeepAliveMessage
+	}
+
+	if obj.PlayMessage != nil {
+		return *obj.PlayMessage
+	}
+
+	if obj.PlaystateMessage != nil {
+		return *obj.PlaystateMessage
+	}
+
+	if obj.PluginInstallationCancelledMessage != nil {
+		return *obj.PluginInstallationCancelledMessage
+	}
+
+	if obj.PluginInstallationCompletedMessage != nil {
+		return *obj.PluginInstallationCompletedMessage
+	}
+
+	if obj.PluginInstallationFailedMessage != nil {
+		return *obj.PluginInstallationFailedMessage
+	}
+
+	if obj.PluginInstallingMessage != nil {
+		return *obj.PluginInstallingMessage
+	}
+
+	if obj.PluginUninstalledMessage != nil {
+		return *obj.PluginUninstalledMessage
+	}
+
+	if obj.RefreshProgressMessage != nil {
+		return *obj.RefreshProgressMessage
+	}
+
+	if obj.RestartRequiredMessage != nil {
+		return *obj.RestartRequiredMessage
+	}
+
+	if obj.ScheduledTaskEndedMessage != nil {
+		return *obj.ScheduledTaskEndedMessage
+	}
+
+	if obj.ScheduledTasksInfoMessage != nil {
+		return *obj.ScheduledTasksInfoMessage
+	}
+
+	if obj.SeriesTimerCancelledMessage != nil {
+		return *obj.SeriesTimerCancelledMessage
+	}
+
+	if obj.SeriesTimerCreatedMessage != nil {
+		return *obj.SeriesTimerCreatedMessage
+	}
+
+	if obj.ServerRestartingMessage != nil {
+		return *obj.ServerRestartingMessage
+	}
+
+	if obj.ServerShuttingDownMessage != nil {
+		return *obj.ServerShuttingDownMessage
+	}
+
+	if obj.SessionsMessage != nil {
+		return *obj.SessionsMessage
+	}
+
+	if obj.SyncPlayCommandMessage != nil {
+		return *obj.SyncPlayCommandMessage
+	}
+
+	if obj.SyncPlayGroupUpdateCommandMessage != nil {
+		return *obj.SyncPlayGroupUpdateCommandMessage
+	}
+
+	if obj.TimerCancelledMessage != nil {
+		return *obj.TimerCancelledMessage
+	}
+
+	if obj.TimerCreatedMessage != nil {
+		return *obj.TimerCreatedMessage
+	}
+
+	if obj.UserDataChangedMessage != nil {
+		return *obj.UserDataChangedMessage
+	}
+
+	if obj.UserDeletedMessage != nil {
+		return *obj.UserDeletedMessage
+	}
+
+	if obj.UserUpdatedMessage != nil {
+		return *obj.UserUpdatedMessage
 	}
 
 	// all schemas are nil
