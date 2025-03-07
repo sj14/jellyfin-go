@@ -12,8 +12,8 @@ package api
 
 import (
 	"encoding/json"
-	"gopkg.in/validator.v2"
 	"fmt"
+	"gopkg.in/validator.v2"
 )
 
 // GroupUpdate - Group update without data.
@@ -180,6 +180,28 @@ func (obj *GroupUpdate) GetActualInstance() (interface{}) {
 
 	if obj.StringGroupUpdate != nil {
 		return obj.StringGroupUpdate
+	}
+
+	// all schemas are nil
+	return nil
+}
+
+// Get the actual instance value
+func (obj GroupUpdate) GetActualInstanceValue() (interface{}) {
+	if obj.GroupInfoDtoGroupUpdate != nil {
+		return *obj.GroupInfoDtoGroupUpdate
+	}
+
+	if obj.GroupStateUpdateGroupUpdate != nil {
+		return *obj.GroupStateUpdateGroupUpdate
+	}
+
+	if obj.PlayQueueUpdateGroupUpdate != nil {
+		return *obj.PlayQueueUpdateGroupUpdate
+	}
+
+	if obj.StringGroupUpdate != nil {
+		return *obj.StringGroupUpdate
 	}
 
 	// all schemas are nil

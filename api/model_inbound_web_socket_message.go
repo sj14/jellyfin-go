@@ -12,8 +12,8 @@ package api
 
 import (
 	"encoding/json"
-	"gopkg.in/validator.v2"
 	"fmt"
+	"gopkg.in/validator.v2"
 )
 
 // InboundWebSocketMessage - Represents the list of possible inbound websocket types
@@ -282,6 +282,40 @@ func (obj *InboundWebSocketMessage) GetActualInstance() (interface{}) {
 
 	if obj.SessionsStopMessage != nil {
 		return obj.SessionsStopMessage
+	}
+
+	// all schemas are nil
+	return nil
+}
+
+// Get the actual instance value
+func (obj InboundWebSocketMessage) GetActualInstanceValue() (interface{}) {
+	if obj.ActivityLogEntryStartMessage != nil {
+		return *obj.ActivityLogEntryStartMessage
+	}
+
+	if obj.ActivityLogEntryStopMessage != nil {
+		return *obj.ActivityLogEntryStopMessage
+	}
+
+	if obj.InboundKeepAliveMessage != nil {
+		return *obj.InboundKeepAliveMessage
+	}
+
+	if obj.ScheduledTasksInfoStartMessage != nil {
+		return *obj.ScheduledTasksInfoStartMessage
+	}
+
+	if obj.ScheduledTasksInfoStopMessage != nil {
+		return *obj.ScheduledTasksInfoStopMessage
+	}
+
+	if obj.SessionsStartMessage != nil {
+		return *obj.SessionsStartMessage
+	}
+
+	if obj.SessionsStopMessage != nil {
+		return *obj.SessionsStopMessage
 	}
 
 	// all schemas are nil

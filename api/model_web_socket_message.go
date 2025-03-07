@@ -12,8 +12,8 @@ package api
 
 import (
 	"encoding/json"
-	"gopkg.in/validator.v2"
 	"fmt"
+	"gopkg.in/validator.v2"
 )
 
 // WebSocketMessage - Represents the possible websocket types
@@ -112,6 +112,20 @@ func (obj *WebSocketMessage) GetActualInstance() (interface{}) {
 
 	if obj.OutboundWebSocketMessage != nil {
 		return obj.OutboundWebSocketMessage
+	}
+
+	// all schemas are nil
+	return nil
+}
+
+// Get the actual instance value
+func (obj WebSocketMessage) GetActualInstanceValue() (interface{}) {
+	if obj.InboundWebSocketMessage != nil {
+		return *obj.InboundWebSocketMessage
+	}
+
+	if obj.OutboundWebSocketMessage != nil {
+		return *obj.OutboundWebSocketMessage
 	}
 
 	// all schemas are nil
