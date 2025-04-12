@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) | Gets or sets the DLNA profile type. | [optional] 
 **VideoCodec** | Pointer to **string** | Gets or sets the video codec. | [optional] 
 **AudioCodec** | Pointer to **string** | Gets or sets the audio codec. | [optional] 
-**Protocol** | Pointer to [**MediaStreamProtocol**](MediaStreamProtocol.md) | Media streaming protocol.  Lowercase for backwards compatibility. | [optional] 
+**Protocol** | Pointer to [**MediaStreamProtocol**](MediaStreamProtocol.md) | Gets or sets the protocol. | [optional] 
 **EstimateContentLength** | Pointer to **bool** | Gets or sets a value indicating whether the content length should be estimated. | [optional] [default to false]
 **EnableMpegtsM2TsMode** | Pointer to **bool** | Gets or sets a value indicating whether M2TS mode is enabled. | [optional] [default to false]
 **TranscodeSeekInfo** | Pointer to [**TranscodeSeekInfo**](TranscodeSeekInfo.md) | Gets or sets the transcoding seek info mode. | [optional] [default to TRANSCODESEEKINFO_AUTO]

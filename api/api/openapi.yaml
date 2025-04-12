@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Jellyfin API
-  version: 10.10.6
-  x-jellyfin-version: 10.10.6
+  version: 10.10.7
+  x-jellyfin-version: 10.10.7
 servers:
 - url: http://localhost
 paths:
@@ -1100,6 +1100,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -1578,6 +1579,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -1860,6 +1862,7 @@ paths:
         name: container
         required: true
         schema:
+          pattern: "^[a-zA-Z0-9\\-\\._,|]{0,40}$"
           type: string
         style: simple
       - description: "Optional. If true, the original file will be streamed statically\
@@ -2056,6 +2059,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -2337,6 +2341,7 @@ paths:
         name: container
         required: true
         schema:
+          pattern: "^[a-zA-Z0-9\\-\\._,|]{0,40}$"
           type: string
         style: simple
       - description: "Optional. If true, the original file will be streamed statically\
@@ -2533,6 +2538,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -4014,6 +4020,7 @@ paths:
         name: container
         required: true
         schema:
+          pattern: "^[a-zA-Z0-9\\-\\._,|]{0,40}$"
           type: string
         style: simple
       - description: The position of the requested segment in ticks.
@@ -4236,6 +4243,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -4720,6 +4728,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -5204,6 +5213,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -5696,6 +5706,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -6011,6 +6022,7 @@ paths:
         name: container
         required: true
         schema:
+          pattern: "^[a-zA-Z0-9\\-\\._,|]{0,40}$"
           type: string
         style: simple
       - description: The position of the requested segment in ticks.
@@ -6224,6 +6236,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -6735,6 +6748,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -7245,6 +7259,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -7747,6 +7762,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -8266,6 +8282,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -20722,6 +20739,7 @@ paths:
         name: container
         required: true
         schema:
+          pattern: "^[a-zA-Z0-9\\-\\._,|]{0,40}$"
           type: string
         style: simple
       responses:
@@ -33413,6 +33431,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -33910,6 +33929,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -34211,6 +34231,7 @@ paths:
         name: container
         required: true
         schema:
+          pattern: "^[a-zA-Z0-9\\-\\._,|]{0,40}$"
           type: string
         style: simple
       - description: "Optional. If true, the original file will be streamed statically\
@@ -34406,6 +34427,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -34706,6 +34728,7 @@ paths:
         name: container
         required: true
         schema:
+          pattern: "^[a-zA-Z0-9\\-\\._,|]{0,40}$"
           type: string
         style: simple
       - description: "Optional. If true, the original file will be streamed statically\
@@ -34901,6 +34924,7 @@ paths:
         name: level
         required: false
         schema:
+          pattern: "-?[0-9]+(?:\\.[0-9]+)?"
           type: string
         style: form
       - description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
@@ -37206,7 +37230,7 @@ components:
         Type:
           allOf:
           - $ref: '#/components/schemas/BaseItemKind'
-          description: The base item kind.
+          description: Gets or sets the type.
           enum:
           - AggregateFolder
           - Audio
@@ -37539,7 +37563,8 @@ components:
         MediaType:
           allOf:
           - $ref: '#/components/schemas/MediaType'
-          description: Media types.
+          default: Unknown
+          description: Gets or sets the type of the media.
           enum:
           - Unknown
           - Video
@@ -39499,7 +39524,8 @@ components:
         Type:
           allOf:
           - $ref: '#/components/schemas/PersonKind'
-          description: The person kind.
+          default: Unknown
+          description: Gets or sets the type.
           enum:
           - Unknown
           - Actor
@@ -40635,7 +40661,7 @@ components:
         ScrollDirection:
           allOf:
           - $ref: '#/components/schemas/ScrollDirection'
-          description: An enum representing the axis that should be scrolled.
+          description: Gets or sets the scroll direction.
           enum:
           - Horizontal
           - Vertical
@@ -40650,7 +40676,7 @@ components:
         SortOrder:
           allOf:
           - $ref: '#/components/schemas/SortOrder'
-          description: An enum representing the sorting order.
+          description: Gets or sets the sort order.
           enum:
           - Ascending
           - Descending
@@ -43294,8 +43320,8 @@ components:
         Type:
           allOf:
           - $ref: '#/components/schemas/MediaSegmentType'
-          description: Defines the types of content an individual Jellyfin.Data.Entities.MediaSegment
-            represents.
+          default: Unknown
+          description: Gets or sets the type of content this segment defines.
           enum:
           - Unknown
           - Commercial
@@ -43910,7 +43936,8 @@ components:
         VideoRange:
           allOf:
           - $ref: '#/components/schemas/VideoRange'
-          description: An enum representing video ranges.
+          default: Unknown
+          description: Gets the video range.
           enum:
           - Unknown
           - SDR
@@ -43920,7 +43947,8 @@ components:
         VideoRangeType:
           allOf:
           - $ref: '#/components/schemas/VideoRangeType'
-          description: An enum representing types of video ranges.
+          default: Unknown
+          description: Gets the video range type.
           enum:
           - Unknown
           - SDR
@@ -43942,7 +43970,7 @@ components:
           allOf:
           - $ref: '#/components/schemas/AudioSpatialFormat'
           default: None
-          description: An enum representing formats of spatial audio.
+          description: Gets the audio spatial format.
           enum:
           - None
           - DolbyAtmos
@@ -44807,7 +44835,15 @@ components:
         DeviceProfile:
           allOf:
           - $ref: '#/components/schemas/DeviceProfile'
-          description: Gets or sets the device profile.
+          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
+            \ metadata which determines which content a certain device is able to\
+            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
+            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
+            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
+            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
+            \nthe device is able to direct play (without transcoding or remuxing),\r\
+            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
+            >containers/codecs to transcode to</see> in case it isn't."
           nullable: true
         DirectPlayProtocols:
           description: Gets or sets the device play protocols.
@@ -45228,7 +45264,15 @@ components:
         DeviceProfile:
           allOf:
           - $ref: '#/components/schemas/DeviceProfile'
-          description: Gets or sets the device profile.
+          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
+            \ metadata which determines which content a certain device is able to\
+            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
+            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
+            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
+            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
+            \nthe device is able to direct play (without transcoding or remuxing),\r\
+            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
+            >containers/codecs to transcode to</see> in case it isn't."
           nullable: true
         EnableDirectPlay:
           description: Gets or sets a value indicating whether to enable direct play.
@@ -47107,7 +47151,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupQueueMode'
-          description: Gets or sets the mode in which to add the new items.
+          description: Enum GroupQueueMode.
           enum:
           - Queue
           - QueueNext
@@ -49630,7 +49674,7 @@ components:
         Type:
           allOf:
           - $ref: '#/components/schemas/BaseItemKind'
-          description: The base item kind.
+          description: Gets or sets the type.
           enum:
           - AggregateFolder
           - Audio
@@ -49682,7 +49726,8 @@ components:
         MediaType:
           allOf:
           - $ref: '#/components/schemas/MediaType'
-          description: Media types.
+          default: Unknown
+          description: Gets or sets the type of the media.
           enum:
           - Unknown
           - Video
@@ -52911,7 +52956,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupRepeatMode'
-          description: Gets or sets the repeat mode.
+          description: Enum GroupRepeatMode.
           enum:
           - RepeatOne
           - RepeatAll
@@ -52927,7 +52972,7 @@ components:
         Mode:
           allOf:
           - $ref: '#/components/schemas/GroupShuffleMode'
-          description: Gets or sets the shuffle mode.
+          description: Enum GroupShuffleMode.
           enum:
           - Sorted
           - Shuffle
@@ -55946,7 +55991,7 @@ components:
         Protocol:
           allOf:
           - $ref: '#/components/schemas/MediaStreamProtocol'
-          description: "Media streaming protocol.\r\nLowercase for backwards compatibility."
+          description: Gets or sets the protocol.
           enum:
           - http
           - hls
@@ -57060,7 +57105,8 @@ components:
         SyncPlayAccess:
           allOf:
           - $ref: '#/components/schemas/SyncPlayUserAccessType'
-          description: Enum SyncPlayUserAccessType.
+          description: Gets or sets a value indicating what SyncPlay features the
+            user can access.
           enum:
           - CreateAndJoinGroups
           - JoinGroups

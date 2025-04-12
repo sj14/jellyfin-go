@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | Gets or sets the id of the media segment. | [optional] 
 **ItemId** | Pointer to **string** | Gets or sets the id of the associated item. | [optional] 
-**Type** | Pointer to [**MediaSegmentType**](MediaSegmentType.md) | Defines the types of content an individual Jellyfin.Data.Entities.MediaSegment represents. | [optional] 
+**Type** | Pointer to [**MediaSegmentType**](MediaSegmentType.md) | Gets or sets the type of content this segment defines. | [optional] [default to MEDIASEGMENTTYPE_UNKNOWN]
 **StartTicks** | Pointer to **int64** | Gets or sets the start of the segment. | [optional] 
 **EndTicks** | Pointer to **int64** | Gets or sets the end of the segment. | [optional] 
 
