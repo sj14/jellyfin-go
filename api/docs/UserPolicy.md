@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **EnableLyricManagement** | Pointer to **bool** | Gets or sets a value indicating whether this user can manage lyrics. | [optional] [default to false]
 **IsDisabled** | Pointer to **bool** | Gets or sets a value indicating whether this instance is disabled. | [optional] 
 **MaxParentalRating** | Pointer to **NullableInt32** | Gets or sets the max parental rating. | [optional] 
+**MaxParentalSubRating** | Pointer to **NullableInt32** |  | [optional] 
 **BlockedTags** | Pointer to **[]string** |  | [optional] 
 **AllowedTags** | Pointer to **[]string** |  | [optional] 
 **EnableUserPreferenceAccess** | Pointer to **bool** |  | [optional] 
@@ -252,6 +253,41 @@ HasMaxParentalRating returns a boolean if a field has been set.
 `func (o *UserPolicy) UnsetMaxParentalRating()`
 
 UnsetMaxParentalRating ensures that no value is present for MaxParentalRating, not even an explicit nil
+### GetMaxParentalSubRating
+
+`func (o *UserPolicy) GetMaxParentalSubRating() int32`
+
+GetMaxParentalSubRating returns the MaxParentalSubRating field if non-nil, zero value otherwise.
+
+### GetMaxParentalSubRatingOk
+
+`func (o *UserPolicy) GetMaxParentalSubRatingOk() (*int32, bool)`
+
+GetMaxParentalSubRatingOk returns a tuple with the MaxParentalSubRating field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxParentalSubRating
+
+`func (o *UserPolicy) SetMaxParentalSubRating(v int32)`
+
+SetMaxParentalSubRating sets MaxParentalSubRating field to given value.
+
+### HasMaxParentalSubRating
+
+`func (o *UserPolicy) HasMaxParentalSubRating() bool`
+
+HasMaxParentalSubRating returns a boolean if a field has been set.
+
+### SetMaxParentalSubRatingNil
+
+`func (o *UserPolicy) SetMaxParentalSubRatingNil(b bool)`
+
+ SetMaxParentalSubRatingNil sets the value for MaxParentalSubRating to be an explicit nil
+
+### UnsetMaxParentalSubRating
+`func (o *UserPolicy) UnsetMaxParentalSubRating()`
+
+UnsetMaxParentalSubRating ensures that no value is present for MaxParentalSubRating, not even an explicit nil
 ### GetBlockedTags
 
 `func (o *UserPolicy) GetBlockedTags() []string`

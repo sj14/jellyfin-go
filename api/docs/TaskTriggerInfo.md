@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **NullableString** | Gets or sets the type. | [optional] 
+**Type** | Pointer to [**TaskTriggerInfoType**](TaskTriggerInfoType.md) | Gets or sets the type. | [optional] 
 **TimeOfDayTicks** | Pointer to **NullableInt64** | Gets or sets the time of day. | [optional] 
 **IntervalTicks** | Pointer to **NullableInt64** | Gets or sets the interval. | [optional] 
 **DayOfWeek** | Pointer to [**NullableDayOfWeek**](DayOfWeek.md) | Gets or sets the day of week. | [optional] 
@@ -31,20 +31,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetType
 
-`func (o *TaskTriggerInfo) GetType() string`
+`func (o *TaskTriggerInfo) GetType() TaskTriggerInfoType`
 
 GetType returns the Type field if non-nil, zero value otherwise.
 
 ### GetTypeOk
 
-`func (o *TaskTriggerInfo) GetTypeOk() (*string, bool)`
+`func (o *TaskTriggerInfo) GetTypeOk() (*TaskTriggerInfoType, bool)`
 
 GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetType
 
-`func (o *TaskTriggerInfo) SetType(v string)`
+`func (o *TaskTriggerInfo) SetType(v TaskTriggerInfoType)`
 
 SetType sets Type field to given value.
 
@@ -54,16 +54,6 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
-### SetTypeNil
-
-`func (o *TaskTriggerInfo) SetTypeNil(b bool)`
-
- SetTypeNil sets the value for Type to be an explicit nil
-
-### UnsetType
-`func (o *TaskTriggerInfo) UnsetType()`
-
-UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetTimeOfDayTicks
 
 `func (o *TaskTriggerInfo) GetTimeOfDayTicks() int64`

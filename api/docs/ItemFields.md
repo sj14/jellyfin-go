@@ -33,8 +33,6 @@
 
 * `GENRES` (value: `"Genres"`)
 
-* `HOME_PAGE_URL` (value: `"HomePageUrl"`)
-
 * `ITEM_COUNTS` (value: `"ItemCounts"`)
 
 * `MEDIA_SOURCE_COUNT` (value: `"MediaSourceCount"`)
@@ -63,10 +61,6 @@
 
 * `SETTINGS` (value: `"Settings"`)
 
-* `SCREENSHOT_IMAGE_TAGS` (value: `"ScreenshotImageTags"`)
-
-* `SERIES_PRIMARY_IMAGE` (value: `"SeriesPrimaryImage"`)
-
 * `SERIES_STUDIO` (value: `"SeriesStudio"`)
 
 * `SORT_NAME` (value: `"SortName"`)
@@ -84,22 +78,6 @@
 * `MEDIA_STREAMS` (value: `"MediaStreams"`)
 
 * `SEASON_USER_DATA` (value: `"SeasonUserData"`)
-
-* `SERVICE_NAME` (value: `"ServiceName"`)
-
-* `THEME_SONG_IDS` (value: `"ThemeSongIds"`)
-
-* `THEME_VIDEO_IDS` (value: `"ThemeVideoIds"`)
-
-* `EXTERNAL_ETAG` (value: `"ExternalEtag"`)
-
-* `PRESENTATION_UNIQUE_KEY` (value: `"PresentationUniqueKey"`)
-
-* `INHERITED_PARENTAL_RATING_VALUE` (value: `"InheritedParentalRatingValue"`)
-
-* `EXTERNAL_SERIES_ID` (value: `"ExternalSeriesId"`)
-
-* `SERIES_PRESENTATION_UNIQUE_KEY` (value: `"SeriesPresentationUniqueKey"`)
 
 * `DATE_LAST_REFRESHED` (value: `"DateLastRefreshed"`)
 

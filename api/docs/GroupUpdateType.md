@@ -19,10 +19,6 @@
 
 * `GROUP_DOES_NOT_EXIST` (value: `"GroupDoesNotExist"`)
 
-* `CREATE_GROUP_DENIED` (value: `"CreateGroupDenied"`)
-
-* `JOIN_GROUP_DENIED` (value: `"JoinGroupDenied"`)
-
 * `LIBRARY_ACCESS_DENIED` (value: `"LibraryAccessDenied"`)
 
 

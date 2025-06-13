@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ParentalRatingOptions** | Pointer to [**[]ParentalRating**](ParentalRating.md) |  | [optional] 
-**Countries** | Pointer to [**[]CountryInfo**](CountryInfo.md) |  | [optional] 
-**Cultures** | Pointer to [**[]CultureDto**](CultureDto.md) |  | [optional] 
-**ExternalIdInfos** | Pointer to [**[]ExternalIdInfo**](ExternalIdInfo.md) |  | [optional] 
-**ContentType** | Pointer to [**NullableCollectionType**](CollectionType.md) |  | [optional] 
-**ContentTypeOptions** | Pointer to [**[]NameValuePair**](NameValuePair.md) |  | [optional] 
+**ParentalRatingOptions** | Pointer to [**[]ParentalRating**](ParentalRating.md) | Gets or sets the parental rating options. | [optional] 
+**Countries** | Pointer to [**[]CountryInfo**](CountryInfo.md) | Gets or sets the countries. | [optional] 
+**Cultures** | Pointer to [**[]CultureDto**](CultureDto.md) | Gets or sets the cultures. | [optional] 
+**ExternalIdInfos** | Pointer to [**[]ExternalIdInfo**](ExternalIdInfo.md) | Gets or sets the external id infos. | [optional] 
+**ContentType** | Pointer to [**NullableCollectionType**](CollectionType.md) | Gets or sets the content type. | [optional] 
+**ContentTypeOptions** | Pointer to [**[]NameValuePair**](NameValuePair.md) | Gets or sets the content type options. | [optional] 
 
 ## Methods
 

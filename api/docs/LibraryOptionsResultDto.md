@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **MetadataReaders** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the metadata readers. | [optional] 
 **SubtitleFetchers** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the subtitle fetchers. | [optional] 
 **LyricFetchers** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the list of lyric fetchers. | [optional] 
+**MediaSegmentProviders** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the list of MediaSegment Providers. | [optional] 
 **TypeOptions** | Pointer to [**[]LibraryTypeOptionsDto**](LibraryTypeOptionsDto.md) | Gets or sets the type options. | [optional] 
 
 ## Methods
@@ -128,6 +129,31 @@ SetLyricFetchers sets LyricFetchers field to given value.
 `func (o *LibraryOptionsResultDto) HasLyricFetchers() bool`
 
 HasLyricFetchers returns a boolean if a field has been set.
+
+### GetMediaSegmentProviders
+
+`func (o *LibraryOptionsResultDto) GetMediaSegmentProviders() []LibraryOptionInfoDto`
+
+GetMediaSegmentProviders returns the MediaSegmentProviders field if non-nil, zero value otherwise.
+
+### GetMediaSegmentProvidersOk
+
+`func (o *LibraryOptionsResultDto) GetMediaSegmentProvidersOk() (*[]LibraryOptionInfoDto, bool)`
+
+GetMediaSegmentProvidersOk returns a tuple with the MediaSegmentProviders field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMediaSegmentProviders
+
+`func (o *LibraryOptionsResultDto) SetMediaSegmentProviders(v []LibraryOptionInfoDto)`
+
+SetMediaSegmentProviders sets MediaSegmentProviders field to given value.
+
+### HasMediaSegmentProviders
+
+`func (o *LibraryOptionsResultDto) HasMediaSegmentProviders() bool`
+
+HasMediaSegmentProviders returns a boolean if a field has been set.
 
 ### GetTypeOptions
 

@@ -1,4 +1,4 @@
-# BrandingOptions
+# BrandingOptionsDto
 
 ## Properties
 
@@ -10,115 +10,115 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewBrandingOptions
+### NewBrandingOptionsDto
 
-`func NewBrandingOptions() *BrandingOptions`
+`func NewBrandingOptionsDto() *BrandingOptionsDto`
 
-NewBrandingOptions instantiates a new BrandingOptions object
+NewBrandingOptionsDto instantiates a new BrandingOptionsDto object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewBrandingOptionsWithDefaults
+### NewBrandingOptionsDtoWithDefaults
 
-`func NewBrandingOptionsWithDefaults() *BrandingOptions`
+`func NewBrandingOptionsDtoWithDefaults() *BrandingOptionsDto`
 
-NewBrandingOptionsWithDefaults instantiates a new BrandingOptions object
+NewBrandingOptionsDtoWithDefaults instantiates a new BrandingOptionsDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetLoginDisclaimer
 
-`func (o *BrandingOptions) GetLoginDisclaimer() string`
+`func (o *BrandingOptionsDto) GetLoginDisclaimer() string`
 
 GetLoginDisclaimer returns the LoginDisclaimer field if non-nil, zero value otherwise.
 
 ### GetLoginDisclaimerOk
 
-`func (o *BrandingOptions) GetLoginDisclaimerOk() (*string, bool)`
+`func (o *BrandingOptionsDto) GetLoginDisclaimerOk() (*string, bool)`
 
 GetLoginDisclaimerOk returns a tuple with the LoginDisclaimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLoginDisclaimer
 
-`func (o *BrandingOptions) SetLoginDisclaimer(v string)`
+`func (o *BrandingOptionsDto) SetLoginDisclaimer(v string)`
 
 SetLoginDisclaimer sets LoginDisclaimer field to given value.
 
 ### HasLoginDisclaimer
 
-`func (o *BrandingOptions) HasLoginDisclaimer() bool`
+`func (o *BrandingOptionsDto) HasLoginDisclaimer() bool`
 
 HasLoginDisclaimer returns a boolean if a field has been set.
 
 ### SetLoginDisclaimerNil
 
-`func (o *BrandingOptions) SetLoginDisclaimerNil(b bool)`
+`func (o *BrandingOptionsDto) SetLoginDisclaimerNil(b bool)`
 
  SetLoginDisclaimerNil sets the value for LoginDisclaimer to be an explicit nil
 
 ### UnsetLoginDisclaimer
-`func (o *BrandingOptions) UnsetLoginDisclaimer()`
+`func (o *BrandingOptionsDto) UnsetLoginDisclaimer()`
 
 UnsetLoginDisclaimer ensures that no value is present for LoginDisclaimer, not even an explicit nil
 ### GetCustomCss
 
-`func (o *BrandingOptions) GetCustomCss() string`
+`func (o *BrandingOptionsDto) GetCustomCss() string`
 
 GetCustomCss returns the CustomCss field if non-nil, zero value otherwise.
 
 ### GetCustomCssOk
 
-`func (o *BrandingOptions) GetCustomCssOk() (*string, bool)`
+`func (o *BrandingOptionsDto) GetCustomCssOk() (*string, bool)`
 
 GetCustomCssOk returns a tuple with the CustomCss field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomCss
 
-`func (o *BrandingOptions) SetCustomCss(v string)`
+`func (o *BrandingOptionsDto) SetCustomCss(v string)`
 
 SetCustomCss sets CustomCss field to given value.
 
 ### HasCustomCss
 
-`func (o *BrandingOptions) HasCustomCss() bool`
+`func (o *BrandingOptionsDto) HasCustomCss() bool`
 
 HasCustomCss returns a boolean if a field has been set.
 
 ### SetCustomCssNil
 
-`func (o *BrandingOptions) SetCustomCssNil(b bool)`
+`func (o *BrandingOptionsDto) SetCustomCssNil(b bool)`
 
  SetCustomCssNil sets the value for CustomCss to be an explicit nil
 
 ### UnsetCustomCss
-`func (o *BrandingOptions) UnsetCustomCss()`
+`func (o *BrandingOptionsDto) UnsetCustomCss()`
 
 UnsetCustomCss ensures that no value is present for CustomCss, not even an explicit nil
 ### GetSplashscreenEnabled
 
-`func (o *BrandingOptions) GetSplashscreenEnabled() bool`
+`func (o *BrandingOptionsDto) GetSplashscreenEnabled() bool`
 
 GetSplashscreenEnabled returns the SplashscreenEnabled field if non-nil, zero value otherwise.
 
 ### GetSplashscreenEnabledOk
 
-`func (o *BrandingOptions) GetSplashscreenEnabledOk() (*bool, bool)`
+`func (o *BrandingOptionsDto) GetSplashscreenEnabledOk() (*bool, bool)`
 
 GetSplashscreenEnabledOk returns a tuple with the SplashscreenEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSplashscreenEnabled
 
-`func (o *BrandingOptions) SetSplashscreenEnabled(v bool)`
+`func (o *BrandingOptionsDto) SetSplashscreenEnabled(v bool)`
 
 SetSplashscreenEnabled sets SplashscreenEnabled field to given value.
 
 ### HasSplashscreenEnabled
 
-`func (o *BrandingOptions) HasSplashscreenEnabled() bool`
+`func (o *BrandingOptionsDto) HasSplashscreenEnabled() bool`
 
 HasSplashscreenEnabled returns a boolean if a field has been set.
 

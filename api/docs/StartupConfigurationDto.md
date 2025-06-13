@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ServerName** | Pointer to **NullableString** | Gets or sets the server name. | [optional] 
 **UICulture** | Pointer to **NullableString** | Gets or sets UI language culture. | [optional] 
 **MetadataCountryCode** | Pointer to **NullableString** | Gets or sets the metadata country code. | [optional] 
 **PreferredMetadataLanguage** | Pointer to **NullableString** | Gets or sets the preferred language for the metadata. | [optional] 
@@ -27,6 +28,41 @@ NewStartupConfigurationDtoWithDefaults instantiates a new StartupConfigurationDt
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetServerName
+
+`func (o *StartupConfigurationDto) GetServerName() string`
+
+GetServerName returns the ServerName field if non-nil, zero value otherwise.
+
+### GetServerNameOk
+
+`func (o *StartupConfigurationDto) GetServerNameOk() (*string, bool)`
+
+GetServerNameOk returns a tuple with the ServerName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServerName
+
+`func (o *StartupConfigurationDto) SetServerName(v string)`
+
+SetServerName sets ServerName field to given value.
+
+### HasServerName
+
+`func (o *StartupConfigurationDto) HasServerName() bool`
+
+HasServerName returns a boolean if a field has been set.
+
+### SetServerNameNil
+
+`func (o *StartupConfigurationDto) SetServerNameNil(b bool)`
+
+ SetServerNameNil sets the value for ServerName to be an explicit nil
+
+### UnsetServerName
+`func (o *StartupConfigurationDto) UnsetServerName()`
+
+UnsetServerName ensures that no value is present for ServerName, not even an explicit nil
 ### GetUICulture
 
 `func (o *StartupConfigurationDto) GetUICulture() string`

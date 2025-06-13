@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ItemId** | Pointer to **string** | Gets or sets the id of the associated item. | [optional] 
 **Width** | Pointer to **int32** | Gets or sets width of an individual thumbnail. | [optional] 
 **Height** | Pointer to **int32** | Gets or sets height of an individual thumbnail. | [optional] 
 **TileWidth** | Pointer to **int32** | Gets or sets amount of thumbnails per row. | [optional] 
 **TileHeight** | Pointer to **int32** | Gets or sets amount of thumbnails per column. | [optional] 
 **ThumbnailCount** | Pointer to **int32** | Gets or sets total amount of non-black thumbnails. | [optional] 
 **Interval** | Pointer to **int32** | Gets or sets interval in milliseconds between each trickplay thumbnail. | [optional] 
-**Bandwidth** | Pointer to **int32** | Gets or sets peak bandwith usage in bits per second. | [optional] 
+**Bandwidth** | Pointer to **int32** | Gets or sets peak bandwidth usage in bits per second. | [optional] 
 
 ## Methods
 
@@ -30,6 +31,31 @@ will change when the set of required properties is changed
 NewTrickplayInfoWithDefaults instantiates a new TrickplayInfo object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetItemId
+
+`func (o *TrickplayInfo) GetItemId() string`
+
+GetItemId returns the ItemId field if non-nil, zero value otherwise.
+
+### GetItemIdOk
+
+`func (o *TrickplayInfo) GetItemIdOk() (*string, bool)`
+
+GetItemIdOk returns a tuple with the ItemId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItemId
+
+`func (o *TrickplayInfo) SetItemId(v string)`
+
+SetItemId sets ItemId field to given value.
+
+### HasItemId
+
+`func (o *TrickplayInfo) HasItemId() bool`
+
+HasItemId returns a boolean if a field has been set.
 
 ### GetWidth
 

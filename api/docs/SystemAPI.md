@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**GetPublicSystemInfo**](SystemAPI.md#GetPublicSystemInfo) | **Get** /System/Info/Public | Gets public information about the server.
 [**GetServerLogs**](SystemAPI.md#GetServerLogs) | **Get** /System/Logs | Gets a list of available server log files.
 [**GetSystemInfo**](SystemAPI.md#GetSystemInfo) | **Get** /System/Info | Gets information about the server.
-[**GetWakeOnLanInfo**](SystemAPI.md#GetWakeOnLanInfo) | **Get** /System/WakeOnLanInfo | Gets wake on lan information.
+[**GetSystemStorage**](SystemAPI.md#GetSystemStorage) | **Get** /System/Info/Storage | Gets information about the server.
 [**PostPingSystem**](SystemAPI.md#PostPingSystem) | **Post** /System/Ping | Pings the system.
 [**RestartApplication**](SystemAPI.md#RestartApplication) | **Post** /System/Restart | Restarts the application.
 [**ShutdownApplication**](SystemAPI.md#ShutdownApplication) | **Post** /System/Shutdown | Shuts down the application.
@@ -69,7 +69,7 @@ Other parameters are passed through a pointer to a apiGetEndpointInfoRequest str
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: text/plain, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -192,7 +192,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -251,7 +251,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -310,7 +310,7 @@ Other parameters are passed through a pointer to a apiGetServerLogsRequest struc
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -369,18 +369,18 @@ Other parameters are passed through a pointer to a apiGetSystemInfoRequest struc
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
 
-## GetWakeOnLanInfo
+## GetSystemStorage
 
-> []WakeOnLanInfo GetWakeOnLanInfo(ctx).Execute()
+> SystemStorageDto GetSystemStorage(ctx).Execute()
 
-Gets wake on lan information.
+Gets information about the server.
 
 ### Example
 
@@ -398,13 +398,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SystemAPI.GetWakeOnLanInfo(context.Background()).Execute()
+	resp, r, err := apiClient.SystemAPI.GetSystemStorage(context.Background()).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SystemAPI.GetWakeOnLanInfo``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `SystemAPI.GetSystemStorage``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetWakeOnLanInfo`: []WakeOnLanInfo
-	fmt.Fprintf(os.Stdout, "Response from `SystemAPI.GetWakeOnLanInfo`: %v\n", resp)
+	// response from `GetSystemStorage`: SystemStorageDto
+	fmt.Fprintf(os.Stdout, "Response from `SystemAPI.GetSystemStorage`: %v\n", resp)
 }
 ```
 
@@ -414,12 +414,12 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiGetWakeOnLanInfoRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetSystemStorageRequest struct via the builder pattern
 
 
 ### Return type
 
-[**[]WakeOnLanInfo**](WakeOnLanInfo.md)
+[**SystemStorageDto**](SystemStorageDto.md)
 
 ### Authorization
 
@@ -428,7 +428,7 @@ Other parameters are passed through a pointer to a apiGetWakeOnLanInfoRequest st
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -487,7 +487,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -544,7 +544,7 @@ Other parameters are passed through a pointer to a apiRestartApplicationRequest 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -601,7 +601,7 @@ Other parameters are passed through a pointer to a apiShutdownApplicationRequest
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

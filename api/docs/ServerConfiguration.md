@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **EnableNormalizedItemByNameIds** | Pointer to **bool** |  | [optional] 
 **IsPortAuthorized** | Pointer to **bool** | Gets or sets a value indicating whether this instance is port authorized. | [optional] 
 **QuickConnectAvailable** | Pointer to **bool** | Gets or sets a value indicating whether quick connect is available for use on this server. | [optional] 
-**EnableCaseSensitiveItemIds** | Pointer to **bool** | Gets or sets a value indicating whether [enable case sensitive item ids]. | [optional] 
+**EnableCaseSensitiveItemIds** | Pointer to **bool** | Gets or sets a value indicating whether [enable case-sensitive item ids]. | [optional] 
 **DisableLiveTvChannelUserDataName** | Pointer to **bool** |  | [optional] 
 **MetadataPath** | Pointer to **string** | Gets or sets the metadata path. | [optional] 
 **PreferredMetadataLanguage** | Pointer to **string** | Gets or sets the preferred metadata language. | [optional] 
@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **InactiveSessionThreshold** | Pointer to **int32** | Gets or sets the threshold in minutes after a inactive session gets closed automatically.  If set to 0 the check for inactive sessions gets disabled. | [optional] 
 **LibraryMonitorDelay** | Pointer to **int32** | Gets or sets the delay in seconds that we will wait after a file system change to try and discover what has been added/removed  Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several  different directories and files. | [optional] 
 **LibraryUpdateDuration** | Pointer to **int32** | Gets or sets the duration in seconds that we will wait after a library updated event before executing the library changed notification. | [optional] 
+**CacheSize** | Pointer to **int32** | Gets or sets the maximum amount of items to cache. | [optional] 
 **ImageSavingConvention** | Pointer to [**ImageSavingConvention**](ImageSavingConvention.md) | Gets or sets the image saving convention. | [optional] 
 **MetadataOptions** | Pointer to [**[]MetadataOptions**](MetadataOptions.md) |  | [optional] 
 **SkipDeserializationForBasicTypes** | Pointer to **bool** |  | [optional] 
@@ -38,7 +39,8 @@ Name | Type | Description | Notes
 **ContentTypes** | Pointer to [**[]NameValuePair**](NameValuePair.md) |  | [optional] 
 **RemoteClientBitrateLimit** | Pointer to **int32** |  | [optional] 
 **EnableFolderView** | Pointer to **bool** |  | [optional] 
-**EnableGroupingIntoCollections** | Pointer to **bool** |  | [optional] 
+**EnableGroupingMoviesIntoCollections** | Pointer to **bool** |  | [optional] 
+**EnableGroupingShowsIntoCollections** | Pointer to **bool** |  | [optional] 
 **DisplaySpecialsWithinSeasons** | Pointer to **bool** |  | [optional] 
 **CodecsUsed** | Pointer to **[]string** |  | [optional] 
 **PluginRepositories** | Pointer to [**[]RepositoryInfo**](RepositoryInfo.md) |  | [optional] 
@@ -51,13 +53,13 @@ Name | Type | Description | Notes
 **ActivityLogRetentionDays** | Pointer to **NullableInt32** | Gets or sets the number of days we should retain activity logs. | [optional] 
 **LibraryScanFanoutConcurrency** | Pointer to **int32** | Gets or sets the how the library scan fans out. | [optional] 
 **LibraryMetadataRefreshConcurrency** | Pointer to **int32** | Gets or sets the how many metadata refreshes can run concurrently. | [optional] 
-**RemoveOldPlugins** | Pointer to **bool** | Gets or sets a value indicating whether older plugins should automatically be deleted from the plugin folder. | [optional] 
 **AllowClientLogUpload** | Pointer to **bool** | Gets or sets a value indicating whether clients should be allowed to upload logs. | [optional] 
-**DummyChapterDuration** | Pointer to **int32** | Gets or sets the dummy chapter duration in seconds, use 0 (zero) or less to disable generation alltogether. | [optional] 
+**DummyChapterDuration** | Pointer to **int32** | Gets or sets the dummy chapter duration in seconds, use 0 (zero) or less to disable generation altogether. | [optional] 
 **ChapterImageResolution** | Pointer to [**ImageResolution**](ImageResolution.md) | Gets or sets the chapter image resolution. | [optional] 
 **ParallelImageEncodingLimit** | Pointer to **int32** | Gets or sets the limit for parallel image encoding. | [optional] 
 **CastReceiverApplications** | Pointer to [**[]CastReceiverApplication**](CastReceiverApplication.md) | Gets or sets the list of cast receiver applications. | [optional] 
 **TrickplayOptions** | Pointer to [**TrickplayOptions**](TrickplayOptions.md) | Gets or sets the trickplay options. | [optional] 
+**EnableLegacyAuthorization** | Pointer to **bool** | Gets or sets a value indicating whether old authorization methods are allowed. | [optional] 
 
 ## Methods
 
@@ -733,6 +735,31 @@ SetLibraryUpdateDuration sets LibraryUpdateDuration field to given value.
 
 HasLibraryUpdateDuration returns a boolean if a field has been set.
 
+### GetCacheSize
+
+`func (o *ServerConfiguration) GetCacheSize() int32`
+
+GetCacheSize returns the CacheSize field if non-nil, zero value otherwise.
+
+### GetCacheSizeOk
+
+`func (o *ServerConfiguration) GetCacheSizeOk() (*int32, bool)`
+
+GetCacheSizeOk returns a tuple with the CacheSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCacheSize
+
+`func (o *ServerConfiguration) SetCacheSize(v int32)`
+
+SetCacheSize sets CacheSize field to given value.
+
+### HasCacheSize
+
+`func (o *ServerConfiguration) HasCacheSize() bool`
+
+HasCacheSize returns a boolean if a field has been set.
+
 ### GetImageSavingConvention
 
 `func (o *ServerConfiguration) GetImageSavingConvention() ImageSavingConvention`
@@ -958,30 +985,55 @@ SetEnableFolderView sets EnableFolderView field to given value.
 
 HasEnableFolderView returns a boolean if a field has been set.
 
-### GetEnableGroupingIntoCollections
+### GetEnableGroupingMoviesIntoCollections
 
-`func (o *ServerConfiguration) GetEnableGroupingIntoCollections() bool`
+`func (o *ServerConfiguration) GetEnableGroupingMoviesIntoCollections() bool`
 
-GetEnableGroupingIntoCollections returns the EnableGroupingIntoCollections field if non-nil, zero value otherwise.
+GetEnableGroupingMoviesIntoCollections returns the EnableGroupingMoviesIntoCollections field if non-nil, zero value otherwise.
 
-### GetEnableGroupingIntoCollectionsOk
+### GetEnableGroupingMoviesIntoCollectionsOk
 
-`func (o *ServerConfiguration) GetEnableGroupingIntoCollectionsOk() (*bool, bool)`
+`func (o *ServerConfiguration) GetEnableGroupingMoviesIntoCollectionsOk() (*bool, bool)`
 
-GetEnableGroupingIntoCollectionsOk returns a tuple with the EnableGroupingIntoCollections field if it's non-nil, zero value otherwise
+GetEnableGroupingMoviesIntoCollectionsOk returns a tuple with the EnableGroupingMoviesIntoCollections field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnableGroupingIntoCollections
+### SetEnableGroupingMoviesIntoCollections
 
-`func (o *ServerConfiguration) SetEnableGroupingIntoCollections(v bool)`
+`func (o *ServerConfiguration) SetEnableGroupingMoviesIntoCollections(v bool)`
 
-SetEnableGroupingIntoCollections sets EnableGroupingIntoCollections field to given value.
+SetEnableGroupingMoviesIntoCollections sets EnableGroupingMoviesIntoCollections field to given value.
 
-### HasEnableGroupingIntoCollections
+### HasEnableGroupingMoviesIntoCollections
 
-`func (o *ServerConfiguration) HasEnableGroupingIntoCollections() bool`
+`func (o *ServerConfiguration) HasEnableGroupingMoviesIntoCollections() bool`
 
-HasEnableGroupingIntoCollections returns a boolean if a field has been set.
+HasEnableGroupingMoviesIntoCollections returns a boolean if a field has been set.
+
+### GetEnableGroupingShowsIntoCollections
+
+`func (o *ServerConfiguration) GetEnableGroupingShowsIntoCollections() bool`
+
+GetEnableGroupingShowsIntoCollections returns the EnableGroupingShowsIntoCollections field if non-nil, zero value otherwise.
+
+### GetEnableGroupingShowsIntoCollectionsOk
+
+`func (o *ServerConfiguration) GetEnableGroupingShowsIntoCollectionsOk() (*bool, bool)`
+
+GetEnableGroupingShowsIntoCollectionsOk returns a tuple with the EnableGroupingShowsIntoCollections field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableGroupingShowsIntoCollections
+
+`func (o *ServerConfiguration) SetEnableGroupingShowsIntoCollections(v bool)`
+
+SetEnableGroupingShowsIntoCollections sets EnableGroupingShowsIntoCollections field to given value.
+
+### HasEnableGroupingShowsIntoCollections
+
+`func (o *ServerConfiguration) HasEnableGroupingShowsIntoCollections() bool`
+
+HasEnableGroupingShowsIntoCollections returns a boolean if a field has been set.
 
 ### GetDisplaySpecialsWithinSeasons
 
@@ -1293,31 +1345,6 @@ SetLibraryMetadataRefreshConcurrency sets LibraryMetadataRefreshConcurrency fiel
 
 HasLibraryMetadataRefreshConcurrency returns a boolean if a field has been set.
 
-### GetRemoveOldPlugins
-
-`func (o *ServerConfiguration) GetRemoveOldPlugins() bool`
-
-GetRemoveOldPlugins returns the RemoveOldPlugins field if non-nil, zero value otherwise.
-
-### GetRemoveOldPluginsOk
-
-`func (o *ServerConfiguration) GetRemoveOldPluginsOk() (*bool, bool)`
-
-GetRemoveOldPluginsOk returns a tuple with the RemoveOldPlugins field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRemoveOldPlugins
-
-`func (o *ServerConfiguration) SetRemoveOldPlugins(v bool)`
-
-SetRemoveOldPlugins sets RemoveOldPlugins field to given value.
-
-### HasRemoveOldPlugins
-
-`func (o *ServerConfiguration) HasRemoveOldPlugins() bool`
-
-HasRemoveOldPlugins returns a boolean if a field has been set.
-
 ### GetAllowClientLogUpload
 
 `func (o *ServerConfiguration) GetAllowClientLogUpload() bool`
@@ -1467,6 +1494,31 @@ SetTrickplayOptions sets TrickplayOptions field to given value.
 `func (o *ServerConfiguration) HasTrickplayOptions() bool`
 
 HasTrickplayOptions returns a boolean if a field has been set.
+
+### GetEnableLegacyAuthorization
+
+`func (o *ServerConfiguration) GetEnableLegacyAuthorization() bool`
+
+GetEnableLegacyAuthorization returns the EnableLegacyAuthorization field if non-nil, zero value otherwise.
+
+### GetEnableLegacyAuthorizationOk
+
+`func (o *ServerConfiguration) GetEnableLegacyAuthorizationOk() (*bool, bool)`
+
+GetEnableLegacyAuthorizationOk returns a tuple with the EnableLegacyAuthorization field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableLegacyAuthorization
+
+`func (o *ServerConfiguration) SetEnableLegacyAuthorization(v bool)`
+
+SetEnableLegacyAuthorization sets EnableLegacyAuthorization field to given value.
+
+### HasEnableLegacyAuthorization
+
+`func (o *ServerConfiguration) HasEnableLegacyAuthorization() bool`
+
+HasEnableLegacyAuthorization returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

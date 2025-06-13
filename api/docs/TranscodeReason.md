@@ -55,6 +55,8 @@
 
 * `VIDEO_CODEC_TAG_NOT_SUPPORTED` (value: `"VideoCodecTagNotSupported"`)
 
+* `STREAM_COUNT_EXCEEDS_LIMIT` (value: `"StreamCountExceedsLimit"`)
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Text** | Pointer to **string** | Gets the text of this lyric line. | [optional] 
 **Start** | Pointer to **NullableInt64** | Gets the start time in ticks. | [optional] 
+**Cues** | Pointer to [**[]LyricLineCue**](LyricLineCue.md) | Gets the time-aligned cues for the song&#39;s lyrics. | [optional] 
 
 ## Methods
 
@@ -86,6 +87,41 @@ HasStart returns a boolean if a field has been set.
 `func (o *LyricLine) UnsetStart()`
 
 UnsetStart ensures that no value is present for Start, not even an explicit nil
+### GetCues
+
+`func (o *LyricLine) GetCues() []LyricLineCue`
+
+GetCues returns the Cues field if non-nil, zero value otherwise.
+
+### GetCuesOk
+
+`func (o *LyricLine) GetCuesOk() (*[]LyricLineCue, bool)`
+
+GetCuesOk returns a tuple with the Cues field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCues
+
+`func (o *LyricLine) SetCues(v []LyricLineCue)`
+
+SetCues sets Cues field to given value.
+
+### HasCues
+
+`func (o *LyricLine) HasCues() bool`
+
+HasCues returns a boolean if a field has been set.
+
+### SetCuesNil
+
+`func (o *LyricLine) SetCuesNil(b bool)`
+
+ SetCuesNil sets the value for Cues to be an explicit nil
+
+### UnsetCues
+`func (o *LyricLine) UnsetCues()`
+
+UnsetCues ensures that no value is present for Cues, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
