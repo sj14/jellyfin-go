@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: audio/*
+- **Accept**: audio/*, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: video/*
+- **Accept**: video/*, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -545,7 +545,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/x-mpegURL
+- **Accept**: application/x-mpegURL, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -620,7 +620,7 @@ func main() {
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
-	enableAdaptiveBitrateStreaming := true // bool | Enable adaptive bitrate streaming. (optional) (default to true)
+	enableAdaptiveBitrateStreaming := true // bool | Enable adaptive bitrate streaming. (optional) (default to false)
 	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
@@ -699,7 +699,7 @@ Name | Type | Description  | Notes
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
- **enableAdaptiveBitrateStreaming** | **bool** | Enable adaptive bitrate streaming. | [default to true]
+ **enableAdaptiveBitrateStreaming** | **bool** | Enable adaptive bitrate streaming. | [default to false]
  **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
@@ -713,7 +713,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/x-mpegURL
+- **Accept**: application/x-mpegURL, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -789,7 +789,7 @@ func main() {
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
-	enableAdaptiveBitrateStreaming := true // bool | Enable adaptive bitrate streaming. (optional) (default to true)
+	enableAdaptiveBitrateStreaming := true // bool | Enable adaptive bitrate streaming. (optional) (default to false)
 	enableTrickplay := true // bool | Enable trickplay image playlists being added to master playlist. (optional) (default to true)
 	enableAudioVbrEncoding := true // bool | Whether to enable Audio Encoding. (optional) (default to true)
 	alwaysBurnInSubtitleWhenTranscoding := true // bool | Whether to always burn in subtitles when transcoding. (optional) (default to false)
@@ -871,7 +871,7 @@ Name | Type | Description  | Notes
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
- **enableAdaptiveBitrateStreaming** | **bool** | Enable adaptive bitrate streaming. | [default to true]
+ **enableAdaptiveBitrateStreaming** | **bool** | Enable adaptive bitrate streaming. | [default to false]
  **enableTrickplay** | **bool** | Enable trickplay image playlists being added to master playlist. | [default to true]
  **enableAudioVbrEncoding** | **bool** | Whether to enable Audio Encoding. | [default to true]
  **alwaysBurnInSubtitleWhenTranscoding** | **bool** | Whether to always burn in subtitles when transcoding. | [default to false]
@@ -887,7 +887,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/x-mpegURL
+- **Accept**: application/x-mpegURL, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1053,7 +1053,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/x-mpegURL
+- **Accept**: application/x-mpegURL, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1223,7 +1223,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/x-mpegURL
+- **Accept**: application/x-mpegURL, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1298,7 +1298,7 @@ func main() {
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
-	enableAdaptiveBitrateStreaming := true // bool | Enable adaptive bitrate streaming. (optional) (default to true)
+	enableAdaptiveBitrateStreaming := true // bool | Enable adaptive bitrate streaming. (optional) (default to false)
 	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1377,7 +1377,7 @@ Name | Type | Description  | Notes
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
- **enableAdaptiveBitrateStreaming** | **bool** | Enable adaptive bitrate streaming. | [default to true]
+ **enableAdaptiveBitrateStreaming** | **bool** | Enable adaptive bitrate streaming. | [default to false]
  **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
@@ -1391,7 +1391,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/x-mpegURL
+- **Accept**: application/x-mpegURL, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1467,7 +1467,7 @@ func main() {
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
 	streamOptions := map[string]string{"key": "Inner_example"} // map[string]string | Optional. The streaming options. (optional)
-	enableAdaptiveBitrateStreaming := true // bool | Enable adaptive bitrate streaming. (optional) (default to true)
+	enableAdaptiveBitrateStreaming := true // bool | Enable adaptive bitrate streaming. (optional) (default to false)
 	enableTrickplay := true // bool | Enable trickplay image playlists being added to master playlist. (optional) (default to true)
 	enableAudioVbrEncoding := true // bool | Whether to enable Audio Encoding. (optional) (default to true)
 	alwaysBurnInSubtitleWhenTranscoding := true // bool | Whether to always burn in subtitles when transcoding. (optional) (default to false)
@@ -1549,7 +1549,7 @@ Name | Type | Description  | Notes
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
  **streamOptions** | **map[string]string** | Optional. The streaming options. | 
- **enableAdaptiveBitrateStreaming** | **bool** | Enable adaptive bitrate streaming. | [default to true]
+ **enableAdaptiveBitrateStreaming** | **bool** | Enable adaptive bitrate streaming. | [default to false]
  **enableTrickplay** | **bool** | Enable trickplay image playlists being added to master playlist. | [default to true]
  **enableAudioVbrEncoding** | **bool** | Whether to enable Audio Encoding. | [default to true]
  **alwaysBurnInSubtitleWhenTranscoding** | **bool** | Whether to always burn in subtitles when transcoding. | [default to false]
@@ -1565,7 +1565,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/x-mpegURL
+- **Accept**: application/x-mpegURL, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

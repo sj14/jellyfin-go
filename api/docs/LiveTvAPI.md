@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**GetChannelMappingOptions**](LiveTvAPI.md#GetChannelMappingOptions) | **Get** /LiveTv/ChannelMappingOptions | Get channel mapping options.
 [**GetDefaultListingProvider**](LiveTvAPI.md#GetDefaultListingProvider) | **Get** /LiveTv/ListingProviders/Default | Gets default listings provider info.
 [**GetDefaultTimer**](LiveTvAPI.md#GetDefaultTimer) | **Get** /LiveTv/Timers/Defaults | Gets the default values for a new timer.
-[**GetGuideInfo**](LiveTvAPI.md#GetGuideInfo) | **Get** /LiveTv/GuideInfo | Get guid info.
+[**GetGuideInfo**](LiveTvAPI.md#GetGuideInfo) | **Get** /LiveTv/GuideInfo | Get guide info.
 [**GetLineups**](LiveTvAPI.md#GetLineups) | **Get** /LiveTv/ListingProviders/Lineups | Gets available lineups.
 [**GetLiveRecordingFile**](LiveTvAPI.md#GetLiveRecordingFile) | **Get** /LiveTv/LiveRecordings/{recordingId}/stream | Gets a live tv recording stream.
 [**GetLiveStreamFile**](LiveTvAPI.md#GetLiveStreamFile) | **Get** /LiveTv/LiveStreamFiles/{streamId}/stream.{container} | Gets a live tv channel stream.
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -559,7 +559,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -621,7 +621,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -685,7 +685,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -819,7 +819,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -883,7 +883,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -942,7 +942,7 @@ Other parameters are passed through a pointer to a apiGetDefaultListingProviderR
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1006,7 +1006,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1017,7 +1017,7 @@ Name | Type | Description  | Notes
 
 > GuideInfo GetGuideInfo(ctx).Execute()
 
-Get guid info.
+Get guide info.
 
 ### Example
 
@@ -1065,7 +1065,7 @@ Other parameters are passed through a pointer to a apiGetGuideInfoRequest struct
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1135,7 +1135,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1203,7 +1203,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: video/*, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: video/*, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1274,7 +1274,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: video/*, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: video/*, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1378,7 +1378,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1437,7 +1437,7 @@ Other parameters are passed through a pointer to a apiGetLiveTvInfoRequest struc
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1554,7 +1554,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1624,7 +1624,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1688,7 +1688,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1697,7 +1697,7 @@ Name | Type | Description  | Notes
 
 ## GetRecommendedPrograms
 
-> BaseItemDtoQueryResult GetRecommendedPrograms(ctx).UserId(userId).Limit(limit).IsAiring(isAiring).HasAired(hasAired).IsSeries(isSeries).IsMovie(isMovie).IsNews(isNews).IsKids(isKids).IsSports(isSports).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).GenreIds(genreIds).Fields(fields).EnableUserData(enableUserData).EnableTotalRecordCount(enableTotalRecordCount).Execute()
+> BaseItemDtoQueryResult GetRecommendedPrograms(ctx).UserId(userId).StartIndex(startIndex).Limit(limit).IsAiring(isAiring).HasAired(hasAired).IsSeries(isSeries).IsMovie(isMovie).IsNews(isNews).IsKids(isKids).IsSports(isSports).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).GenreIds(genreIds).Fields(fields).EnableUserData(enableUserData).EnableTotalRecordCount(enableTotalRecordCount).Execute()
 
 Gets recommended live tv epgs.
 
@@ -1715,6 +1715,7 @@ import (
 
 func main() {
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | Optional. filter by user id. (optional)
+	startIndex := int32(56) // int32 | Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
 	limit := int32(56) // int32 | Optional. The maximum number of records to return. (optional)
 	isAiring := true // bool | Optional. Filter by programs that are currently airing, or not. (optional)
 	hasAired := true // bool | Optional. Filter by programs that have completed airing, or not. (optional)
@@ -1733,7 +1734,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.LiveTvAPI.GetRecommendedPrograms(context.Background()).UserId(userId).Limit(limit).IsAiring(isAiring).HasAired(hasAired).IsSeries(isSeries).IsMovie(isMovie).IsNews(isNews).IsKids(isKids).IsSports(isSports).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).GenreIds(genreIds).Fields(fields).EnableUserData(enableUserData).EnableTotalRecordCount(enableTotalRecordCount).Execute()
+	resp, r, err := apiClient.LiveTvAPI.GetRecommendedPrograms(context.Background()).UserId(userId).StartIndex(startIndex).Limit(limit).IsAiring(isAiring).HasAired(hasAired).IsSeries(isSeries).IsMovie(isMovie).IsNews(isNews).IsKids(isKids).IsSports(isSports).EnableImages(enableImages).ImageTypeLimit(imageTypeLimit).EnableImageTypes(enableImageTypes).GenreIds(genreIds).Fields(fields).EnableUserData(enableUserData).EnableTotalRecordCount(enableTotalRecordCount).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `LiveTvAPI.GetRecommendedPrograms``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1755,6 +1756,7 @@ Other parameters are passed through a pointer to a apiGetRecommendedProgramsRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **string** | Optional. filter by user id. | 
+ **startIndex** | **int32** | Optional. The record index to start at. All items with a lower index will be dropped from the results. | 
  **limit** | **int32** | Optional. The maximum number of records to return. | 
  **isAiring** | **bool** | Optional. Filter by programs that are currently airing, or not. | 
  **hasAired** | **bool** | Optional. Filter by programs that have completed airing, or not. | 
@@ -1782,7 +1784,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1852,7 +1854,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1916,7 +1918,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1982,7 +1984,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2046,7 +2048,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2146,7 +2148,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2236,7 +2238,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2295,7 +2297,7 @@ Other parameters are passed through a pointer to a apiGetSchedulesDirectCountrie
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2363,7 +2365,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2429,7 +2431,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2497,7 +2499,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2567,7 +2569,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2626,7 +2628,7 @@ Other parameters are passed through a pointer to a apiGetTunerHostTypesRequest s
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2692,7 +2694,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2756,7 +2758,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2824,7 +2826,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -2892,7 +2894,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

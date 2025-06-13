@@ -62,7 +62,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/css, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: text/css, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -121,7 +121,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/css, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: text/css, application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -130,7 +130,7 @@ No authorization required
 
 ## GetBrandingOptions
 
-> BrandingOptions GetBrandingOptions(ctx).Execute()
+> BrandingOptionsDto GetBrandingOptions(ctx).Execute()
 
 Gets branding configuration.
 
@@ -155,7 +155,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `BrandingAPI.GetBrandingOptions``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetBrandingOptions`: BrandingOptions
+	// response from `GetBrandingOptions`: BrandingOptionsDto
 	fmt.Fprintf(os.Stdout, "Response from `BrandingAPI.GetBrandingOptions`: %v\n", resp)
 }
 ```
@@ -171,7 +171,7 @@ Other parameters are passed through a pointer to a apiGetBrandingOptionsRequest 
 
 ### Return type
 
-[**BrandingOptions**](BrandingOptions.md)
+[**BrandingOptionsDto**](BrandingOptionsDto.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

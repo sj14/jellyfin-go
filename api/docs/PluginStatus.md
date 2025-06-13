@@ -9,6 +9,8 @@
 
 * `DELETED` (value: `"Deleted"`)
 
+* `SUPERSEDED` (value: `"Superseded"`)
+
 * `SUPERCEDED` (value: `"Superceded"`)
 
 * `MALFUNCTIONED` (value: `"Malfunctioned"`)

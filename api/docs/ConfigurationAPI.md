@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**GetConfiguration**](ConfigurationAPI.md#GetConfiguration) | **Get** /System/Configuration | Gets application configuration.
 [**GetDefaultMetadataOptions**](ConfigurationAPI.md#GetDefaultMetadataOptions) | **Get** /System/Configuration/MetadataOptions/Default | Gets a default MetadataOptions object.
 [**GetNamedConfiguration**](ConfigurationAPI.md#GetNamedConfiguration) | **Get** /System/Configuration/{key} | Gets a named configuration.
+[**UpdateBrandingConfiguration**](ConfigurationAPI.md#UpdateBrandingConfiguration) | **Post** /System/Configuration/Branding | Updates branding configuration.
 [**UpdateConfiguration**](ConfigurationAPI.md#UpdateConfiguration) | **Post** /System/Configuration | Updates application configuration.
 [**UpdateNamedConfiguration**](ConfigurationAPI.md#UpdateNamedConfiguration) | **Post** /System/Configuration/{key} | Updates named configuration.
 
@@ -64,7 +65,7 @@ Other parameters are passed through a pointer to a apiGetConfigurationRequest st
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -123,7 +124,7 @@ Other parameters are passed through a pointer to a apiGetDefaultMetadataOptionsR
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase
+- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -191,7 +192,69 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json, text/html
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateBrandingConfiguration
+
+> UpdateBrandingConfiguration(ctx).BrandingOptionsDto(brandingOptionsDto).Execute()
+
+Updates branding configuration.
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/sj14/jellyfin-go/api"
+)
+
+func main() {
+	brandingOptionsDto := *openapiclient.NewBrandingOptionsDto() // BrandingOptionsDto | Branding configuration.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.ConfigurationAPI.UpdateBrandingConfiguration(context.Background()).BrandingOptionsDto(brandingOptionsDto).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ConfigurationAPI.UpdateBrandingConfiguration``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateBrandingConfigurationRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **brandingOptionsDto** | [**BrandingOptionsDto**](BrandingOptionsDto.md) | Branding configuration. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[CustomAuthentication](../README.md#CustomAuthentication)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -253,7 +316,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -321,7 +384,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

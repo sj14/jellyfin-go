@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **DisabledSubtitleFetchers** | Pointer to **[]string** |  | [optional] 
 **SubtitleFetcherOrder** | Pointer to **[]string** |  | [optional] 
 **DisabledMediaSegmentProviders** | Pointer to **[]string** |  | [optional] 
-**MediaSegmentProvideOrder** | Pointer to **[]string** |  | [optional] 
+**MediaSegmentProviderOrder** | Pointer to **[]string** |  | [optional] 
 **SkipSubtitlesIfEmbeddedSubtitlesPresent** | Pointer to **bool** |  | [optional] 
 **SkipSubtitlesIfAudioTrackMatches** | Pointer to **bool** |  | [optional] 
 **SubtitleDownloadLanguages** | Pointer to **[]string** |  | [optional] 
@@ -731,30 +731,30 @@ SetDisabledMediaSegmentProviders sets DisabledMediaSegmentProviders field to giv
 
 HasDisabledMediaSegmentProviders returns a boolean if a field has been set.
 
-### GetMediaSegmentProvideOrder
+### GetMediaSegmentProviderOrder
 
-`func (o *LibraryOptions) GetMediaSegmentProvideOrder() []string`
+`func (o *LibraryOptions) GetMediaSegmentProviderOrder() []string`
 
-GetMediaSegmentProvideOrder returns the MediaSegmentProvideOrder field if non-nil, zero value otherwise.
+GetMediaSegmentProviderOrder returns the MediaSegmentProviderOrder field if non-nil, zero value otherwise.
 
-### GetMediaSegmentProvideOrderOk
+### GetMediaSegmentProviderOrderOk
 
-`func (o *LibraryOptions) GetMediaSegmentProvideOrderOk() (*[]string, bool)`
+`func (o *LibraryOptions) GetMediaSegmentProviderOrderOk() (*[]string, bool)`
 
-GetMediaSegmentProvideOrderOk returns a tuple with the MediaSegmentProvideOrder field if it's non-nil, zero value otherwise
+GetMediaSegmentProviderOrderOk returns a tuple with the MediaSegmentProviderOrder field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMediaSegmentProvideOrder
+### SetMediaSegmentProviderOrder
 
-`func (o *LibraryOptions) SetMediaSegmentProvideOrder(v []string)`
+`func (o *LibraryOptions) SetMediaSegmentProviderOrder(v []string)`
 
-SetMediaSegmentProvideOrder sets MediaSegmentProvideOrder field to given value.
+SetMediaSegmentProviderOrder sets MediaSegmentProviderOrder field to given value.
 
-### HasMediaSegmentProvideOrder
+### HasMediaSegmentProviderOrder
 
-`func (o *LibraryOptions) HasMediaSegmentProvideOrder() bool`
+`func (o *LibraryOptions) HasMediaSegmentProviderOrder() bool`
 
-HasMediaSegmentProvideOrder returns a boolean if a field has been set.
+HasMediaSegmentProviderOrder returns a boolean if a field has been set.
 
 ### GetSkipSubtitlesIfEmbeddedSubtitlesPresent
 

@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GroupId** | Pointer to **string** | Gets the group identifier. | [optional] [readonly] 
-**Type** | Pointer to [**GroupUpdateType**](GroupUpdateType.md) | Gets the update type. | [optional] 
-**Data** | Pointer to [**PlayQueueUpdate**](PlayQueueUpdate.md) | Gets the update data. | [optional] 
+**Data** | Pointer to **string** | Gets the update data. | [optional] [readonly] 
+**Type** | Pointer to [**GroupUpdateType**](GroupUpdateType.md) | Enum GroupUpdateType. | [optional] [readonly] [default to GROUPUPDATETYPE_USER_LEFT]
 
 ## Methods
 
@@ -52,6 +52,31 @@ SetGroupId sets GroupId field to given value.
 
 HasGroupId returns a boolean if a field has been set.
 
+### GetData
+
+`func (o *GroupUpdate) GetData() string`
+
+GetData returns the Data field if non-nil, zero value otherwise.
+
+### GetDataOk
+
+`func (o *GroupUpdate) GetDataOk() (*string, bool)`
+
+GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetData
+
+`func (o *GroupUpdate) SetData(v string)`
+
+SetData sets Data field to given value.
+
+### HasData
+
+`func (o *GroupUpdate) HasData() bool`
+
+HasData returns a boolean if a field has been set.
+
 ### GetType
 
 `func (o *GroupUpdate) GetType() GroupUpdateType`
@@ -76,31 +101,6 @@ SetType sets Type field to given value.
 `func (o *GroupUpdate) HasType() bool`
 
 HasType returns a boolean if a field has been set.
-
-### GetData
-
-`func (o *GroupUpdate) GetData() PlayQueueUpdate`
-
-GetData returns the Data field if non-nil, zero value otherwise.
-
-### GetDataOk
-
-`func (o *GroupUpdate) GetDataOk() (*PlayQueueUpdate, bool)`
-
-GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetData
-
-`func (o *GroupUpdate) SetData(v PlayQueueUpdate)`
-
-SetData sets Data field to given value.
-
-### HasData
-
-`func (o *GroupUpdate) HasData() bool`
-
-HasData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

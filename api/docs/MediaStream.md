@@ -24,10 +24,11 @@ Name | Type | Description | Notes
 **TimeBase** | Pointer to **NullableString** | Gets or sets the time base. | [optional] 
 **CodecTimeBase** | Pointer to **NullableString** | Gets or sets the codec time base. | [optional] 
 **Title** | Pointer to **NullableString** | Gets or sets the title. | [optional] 
-**VideoRange** | Pointer to [**VideoRange**](VideoRange.md) | Gets the video range. | [optional] [readonly] [default to VIDEORANGE_UNKNOWN]
-**VideoRangeType** | Pointer to [**VideoRangeType**](VideoRangeType.md) | Gets the video range type. | [optional] [readonly] [default to VIDEORANGETYPE_UNKNOWN]
+**Hdr10PlusPresentFlag** | Pointer to **NullableBool** |  | [optional] 
+**VideoRange** | Pointer to [**VideoRange**](VideoRange.md) | An enum representing video ranges. | [optional] [readonly] [default to VIDEORANGE_UNKNOWN]
+**VideoRangeType** | Pointer to [**VideoRangeType**](VideoRangeType.md) | An enum representing types of video ranges. | [optional] [readonly] [default to VIDEORANGETYPE_UNKNOWN]
 **VideoDoViTitle** | Pointer to **NullableString** | Gets the video dovi title. | [optional] [readonly] 
-**AudioSpatialFormat** | Pointer to [**AudioSpatialFormat**](AudioSpatialFormat.md) | Gets the audio spatial format. | [optional] [readonly] [default to AUDIOSPATIALFORMAT_NONE]
+**AudioSpatialFormat** | Pointer to [**AudioSpatialFormat**](AudioSpatialFormat.md) | An enum representing formats of spatial audio. | [optional] [readonly] [default to AUDIOSPATIALFORMAT_NONE]
 **LocalizedUndefined** | Pointer to **NullableString** |  | [optional] 
 **LocalizedDefault** | Pointer to **NullableString** |  | [optional] 
 **LocalizedForced** | Pointer to **NullableString** |  | [optional] 
@@ -787,6 +788,41 @@ HasTitle returns a boolean if a field has been set.
 `func (o *MediaStream) UnsetTitle()`
 
 UnsetTitle ensures that no value is present for Title, not even an explicit nil
+### GetHdr10PlusPresentFlag
+
+`func (o *MediaStream) GetHdr10PlusPresentFlag() bool`
+
+GetHdr10PlusPresentFlag returns the Hdr10PlusPresentFlag field if non-nil, zero value otherwise.
+
+### GetHdr10PlusPresentFlagOk
+
+`func (o *MediaStream) GetHdr10PlusPresentFlagOk() (*bool, bool)`
+
+GetHdr10PlusPresentFlagOk returns a tuple with the Hdr10PlusPresentFlag field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHdr10PlusPresentFlag
+
+`func (o *MediaStream) SetHdr10PlusPresentFlag(v bool)`
+
+SetHdr10PlusPresentFlag sets Hdr10PlusPresentFlag field to given value.
+
+### HasHdr10PlusPresentFlag
+
+`func (o *MediaStream) HasHdr10PlusPresentFlag() bool`
+
+HasHdr10PlusPresentFlag returns a boolean if a field has been set.
+
+### SetHdr10PlusPresentFlagNil
+
+`func (o *MediaStream) SetHdr10PlusPresentFlagNil(b bool)`
+
+ SetHdr10PlusPresentFlagNil sets the value for Hdr10PlusPresentFlag to be an explicit nil
+
+### UnsetHdr10PlusPresentFlag
+`func (o *MediaStream) UnsetHdr10PlusPresentFlag()`
+
+UnsetHdr10PlusPresentFlag ensures that no value is present for Hdr10PlusPresentFlag, not even an explicit nil
 ### GetVideoRange
 
 `func (o *MediaStream) GetVideoRange() VideoRange`

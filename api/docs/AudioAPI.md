@@ -170,7 +170,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: audio/*
+- **Accept**: audio/*, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -233,7 +233,7 @@ func main() {
 	maxVideoBitDepth := int32(56) // int32 | Optional. The maximum video bit depth. (optional)
 	requireAvc := true // bool | Optional. Whether to require avc. (optional)
 	deInterlace := true // bool | Optional. Whether to deinterlace the video. (optional)
-	requireNonAnamorphic := true // bool | Optional. Whether to require a non anamporphic stream. (optional)
+	requireNonAnamorphic := true // bool | Optional. Whether to require a non anamorphic stream. (optional)
 	transcodingMaxAudioChannels := int32(56) // int32 | Optional. The maximum number of audio channels to transcode. (optional)
 	cpuCoreLimit := int32(56) // int32 | Optional. The limit of how many cpu cores to use. (optional)
 	liveStreamId := "liveStreamId_example" // string | The live stream id. (optional)
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
  **maxVideoBitDepth** | **int32** | Optional. The maximum video bit depth. | 
  **requireAvc** | **bool** | Optional. Whether to require avc. | 
  **deInterlace** | **bool** | Optional. Whether to deinterlace the video. | 
- **requireNonAnamorphic** | **bool** | Optional. Whether to require a non anamporphic stream. | 
+ **requireNonAnamorphic** | **bool** | Optional. Whether to require a non anamorphic stream. | 
  **transcodingMaxAudioChannels** | **int32** | Optional. The maximum number of audio channels to transcode. | 
  **cpuCoreLimit** | **int32** | Optional. The limit of how many cpu cores to use. | 
  **liveStreamId** | **string** | The live stream id. | 
@@ -337,7 +337,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: audio/*
+- **Accept**: audio/*, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -503,7 +503,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: audio/*
+- **Accept**: audio/*, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -566,7 +566,7 @@ func main() {
 	maxVideoBitDepth := int32(56) // int32 | Optional. The maximum video bit depth. (optional)
 	requireAvc := true // bool | Optional. Whether to require avc. (optional)
 	deInterlace := true // bool | Optional. Whether to deinterlace the video. (optional)
-	requireNonAnamorphic := true // bool | Optional. Whether to require a non anamporphic stream. (optional)
+	requireNonAnamorphic := true // bool | Optional. Whether to require a non anamorphic stream. (optional)
 	transcodingMaxAudioChannels := int32(56) // int32 | Optional. The maximum number of audio channels to transcode. (optional)
 	cpuCoreLimit := int32(56) // int32 | Optional. The limit of how many cpu cores to use. (optional)
 	liveStreamId := "liveStreamId_example" // string | The live stream id. (optional)
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
  **maxVideoBitDepth** | **int32** | Optional. The maximum video bit depth. | 
  **requireAvc** | **bool** | Optional. Whether to require avc. | 
  **deInterlace** | **bool** | Optional. Whether to deinterlace the video. | 
- **requireNonAnamorphic** | **bool** | Optional. Whether to require a non anamporphic stream. | 
+ **requireNonAnamorphic** | **bool** | Optional. Whether to require a non anamorphic stream. | 
  **transcodingMaxAudioChannels** | **int32** | Optional. The maximum number of audio channels to transcode. | 
  **cpuCoreLimit** | **int32** | Optional. The limit of how many cpu cores to use. | 
  **liveStreamId** | **string** | The live stream id. | 
@@ -670,7 +670,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: audio/*
+- **Accept**: audio/*, text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
