@@ -54085,7 +54085,7 @@
                 "$ref": "#/components/schemas/ScrollDirection"
               }
             ],
-            "description": "Gets or sets the scroll direction."
+            "description": "An enum representing the axis that should be scrolled."
           },
           "ShowBackdrop": {
             "type": "boolean",
@@ -54105,7 +54105,7 @@
                 "$ref": "#/components/schemas/SortOrder"
               }
             ],
-            "description": "Gets or sets the sort order."
+            "description": "An enum representing the sorting order."
           },
           "ShowSidebar": {
             "type": "boolean",
@@ -57013,7 +57013,7 @@
                 "$ref": "#/components/schemas/MediaSegmentType"
               }
             ],
-            "description": "Gets or sets the type of content this segment defines.",
+            "description": "Defines the types of content an individual Jellyfin.Database.Implementations.Entities.MediaSegment represents.",
             "default": "Unknown"
           },
           "StartTicks": {
@@ -66332,7 +66332,7 @@
                 "$ref": "#/components/schemas/SyncPlayUserAccessType"
               }
             ],
-            "description": "Gets or sets a value indicating what SyncPlay features the user can access."
+            "description": "Enum SyncPlayUserAccessType."
           }
         },
         "additionalProperties": false

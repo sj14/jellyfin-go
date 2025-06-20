@@ -35,13 +35,13 @@ type DisplayPreferencesDto struct {
 	PrimaryImageWidth *int32 `json:"PrimaryImageWidth,omitempty"`
 	// Gets or sets the custom prefs.
 	CustomPrefs *map[string]string `json:"CustomPrefs,omitempty"`
-	// Gets or sets the scroll direction.
+	// An enum representing the axis that should be scrolled.
 	ScrollDirection *ScrollDirection `json:"ScrollDirection,omitempty"`
 	// Gets or sets a value indicating whether to show backdrops on this item.
 	ShowBackdrop *bool `json:"ShowBackdrop,omitempty"`
 	// Gets or sets a value indicating whether [remember sorting].
 	RememberSorting *bool `json:"RememberSorting,omitempty"`
-	// Gets or sets the sort order.
+	// An enum representing the sorting order.
 	SortOrder *SortOrder `json:"SortOrder,omitempty"`
 	// Gets or sets a value indicating whether [show sidebar].
 	ShowSidebar *bool `json:"ShowSidebar,omitempty"`
