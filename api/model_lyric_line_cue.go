@@ -19,8 +19,10 @@ var _ MappedNullable = &LyricLineCue{}
 
 // LyricLineCue LyricLineCue model, holds information about the timing of words within a LyricLine.
 type LyricLineCue struct {
-	// Gets the character index of the lyric.
+	// Gets the start character index of the cue.
 	Position *int32 `json:"Position,omitempty"`
+	// Gets the end character index of the cue.
+	EndPosition *int32 `json:"EndPosition,omitempty"`
 	// Gets the timestamp the lyric is synced to in ticks.
 	Start *int64 `json:"Start,omitempty"`
 	// Gets the end timestamp the lyric is synced to in ticks.
@@ -74,6 +76,38 @@ func (o *LyricLineCue) HasPosition() bool {
 // SetPosition gets a reference to the given int32 and assigns it to the Position field.
 func (o *LyricLineCue) SetPosition(v int32) {
 	o.Position = &v
+}
+
+// GetEndPosition returns the EndPosition field value if set, zero value otherwise.
+func (o *LyricLineCue) GetEndPosition() int32 {
+	if o == nil || IsNil(o.EndPosition) {
+		var ret int32
+		return ret
+	}
+	return *o.EndPosition
+}
+
+// GetEndPositionOk returns a tuple with the EndPosition field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *LyricLineCue) GetEndPositionOk() (*int32, bool) {
+	if o == nil || IsNil(o.EndPosition) {
+		return nil, false
+	}
+	return o.EndPosition, true
+}
+
+// HasEndPosition returns a boolean if a field has been set.
+func (o *LyricLineCue) HasEndPosition() bool {
+	if o != nil && !IsNil(o.EndPosition) {
+		return true
+	}
+
+	return false
+}
+
+// SetEndPosition gets a reference to the given int32 and assigns it to the EndPosition field.
+func (o *LyricLineCue) SetEndPosition(v int32) {
+	o.EndPosition = &v
 }
 
 // GetStart returns the Start field value if set, zero value otherwise.
@@ -162,6 +196,9 @@ func (o LyricLineCue) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Position) {
 		toSerialize["Position"] = o.Position
+	}
+	if !IsNil(o.EndPosition) {
+		toSerialize["EndPosition"] = o.EndPosition
 	}
 	if !IsNil(o.Start) {
 		toSerialize["Start"] = o.Start

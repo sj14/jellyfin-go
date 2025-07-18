@@ -108,7 +108,7 @@ Name | Type | Description | Notes
 **ParentPrimaryImageItemId** | Pointer to **NullableString** | Gets or sets the parent primary image item identifier. | [optional] 
 **ParentPrimaryImageTag** | Pointer to **NullableString** | Gets or sets the parent primary image tag. | [optional] 
 **Chapters** | Pointer to [**[]ChapterInfo**](ChapterInfo.md) | Gets or sets the chapters. | [optional] 
-**Trickplay** | Pointer to [**map[string]map[string]TrickplayInfo**](map.md) | Gets or sets the trickplay manifest. | [optional] 
+**Trickplay** | Pointer to [**map[string]map[string]TrickplayInfoDto**](map.md) | Gets or sets the trickplay manifest. | [optional] 
 **LocationType** | Pointer to [**NullableLocationType**](LocationType.md) | Gets or sets the type of the location. | [optional] 
 **IsoType** | Pointer to [**NullableIsoType**](IsoType.md) | Gets or sets the type of the iso. | [optional] 
 **MediaType** | Pointer to [**MediaType**](MediaType.md) | Media types. | [optional] [default to MEDIATYPE_UNKNOWN]
@@ -3799,20 +3799,20 @@ HasChapters returns a boolean if a field has been set.
 UnsetChapters ensures that no value is present for Chapters, not even an explicit nil
 ### GetTrickplay
 
-`func (o *BaseItemDto) GetTrickplay() map[string]map[string]TrickplayInfo`
+`func (o *BaseItemDto) GetTrickplay() map[string]map[string]TrickplayInfoDto`
 
 GetTrickplay returns the Trickplay field if non-nil, zero value otherwise.
 
 ### GetTrickplayOk
 
-`func (o *BaseItemDto) GetTrickplayOk() (*map[string]map[string]TrickplayInfo, bool)`
+`func (o *BaseItemDto) GetTrickplayOk() (*map[string]map[string]TrickplayInfoDto, bool)`
 
 GetTrickplayOk returns a tuple with the Trickplay field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTrickplay
 
-`func (o *BaseItemDto) SetTrickplay(v map[string]map[string]TrickplayInfo)`
+`func (o *BaseItemDto) SetTrickplay(v map[string]map[string]TrickplayInfoDto)`
 
 SetTrickplay sets Trickplay field to given value.
 

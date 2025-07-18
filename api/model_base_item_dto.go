@@ -208,7 +208,7 @@ type BaseItemDto struct {
 	// Gets or sets the chapters.
 	Chapters []ChapterInfo `json:"Chapters,omitempty"`
 	// Gets or sets the trickplay manifest.
-	Trickplay map[string]map[string]TrickplayInfo `json:"Trickplay,omitempty"`
+	Trickplay map[string]map[string]TrickplayInfoDto `json:"Trickplay,omitempty"`
 	// Gets or sets the type of the location.
 	LocationType NullableLocationType `json:"LocationType,omitempty"`
 	// Gets or sets the type of the iso.
@@ -4472,9 +4472,9 @@ func (o *BaseItemDto) SetChapters(v []ChapterInfo) {
 }
 
 // GetTrickplay returns the Trickplay field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *BaseItemDto) GetTrickplay() map[string]map[string]TrickplayInfo {
+func (o *BaseItemDto) GetTrickplay() map[string]map[string]TrickplayInfoDto {
 	if o == nil {
-		var ret map[string]map[string]TrickplayInfo
+		var ret map[string]map[string]TrickplayInfoDto
 		return ret
 	}
 	return o.Trickplay
@@ -4483,7 +4483,7 @@ func (o *BaseItemDto) GetTrickplay() map[string]map[string]TrickplayInfo {
 // GetTrickplayOk returns a tuple with the Trickplay field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BaseItemDto) GetTrickplayOk() (*map[string]map[string]TrickplayInfo, bool) {
+func (o *BaseItemDto) GetTrickplayOk() (*map[string]map[string]TrickplayInfoDto, bool) {
 	if o == nil || IsNil(o.Trickplay) {
 		return nil, false
 	}
@@ -4499,8 +4499,8 @@ func (o *BaseItemDto) HasTrickplay() bool {
 	return false
 }
 
-// SetTrickplay gets a reference to the given map[string]map[string]TrickplayInfo and assigns it to the Trickplay field.
-func (o *BaseItemDto) SetTrickplay(v map[string]map[string]TrickplayInfo) {
+// SetTrickplay gets a reference to the given map[string]map[string]TrickplayInfoDto and assigns it to the Trickplay field.
+func (o *BaseItemDto) SetTrickplay(v map[string]map[string]TrickplayInfoDto) {
 	o.Trickplay = v
 }
 

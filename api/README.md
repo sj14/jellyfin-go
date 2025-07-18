@@ -796,7 +796,7 @@ Class | Method | HTTP request | Description
  - [TranscodingInfo](docs/TranscodingInfo.md)
  - [TranscodingProfile](docs/TranscodingProfile.md)
  - [TransportStreamTimestamp](docs/TransportStreamTimestamp.md)
- - [TrickplayInfo](docs/TrickplayInfo.md)
+ - [TrickplayInfoDto](docs/TrickplayInfoDto.md)
  - [TrickplayOptions](docs/TrickplayOptions.md)
  - [TrickplayScanBehavior](docs/TrickplayScanBehavior.md)
  - [TunerChannelMapping](docs/TunerChannelMapping.md)

@@ -23,7 +23,7 @@ type MediaSegmentDto struct {
 	Id *string `json:"Id,omitempty"`
 	// Gets or sets the id of the associated item.
 	ItemId *string `json:"ItemId,omitempty"`
-	// Defines the types of content an individual Jellyfin.Database.Implementations.Entities.MediaSegment represents.
+	// Gets or sets the type of content this segment defines.
 	Type *MediaSegmentType `json:"Type,omitempty"`
 	// Gets or sets the start of the segment.
 	StartTicks *int64 `json:"StartTicks,omitempty"`

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Position** | Pointer to **int32** | Gets the character index of the lyric. | [optional] 
+**Position** | Pointer to **int32** | Gets the start character index of the cue. | [optional] 
+**EndPosition** | Pointer to **int32** | Gets the end character index of the cue. | [optional] 
 **Start** | Pointer to **int64** | Gets the timestamp the lyric is synced to in ticks. | [optional] 
 **End** | Pointer to **NullableInt64** | Gets the end timestamp the lyric is synced to in ticks. | [optional] 
 
@@ -51,6 +52,31 @@ SetPosition sets Position field to given value.
 `func (o *LyricLineCue) HasPosition() bool`
 
 HasPosition returns a boolean if a field has been set.
+
+### GetEndPosition
+
+`func (o *LyricLineCue) GetEndPosition() int32`
+
+GetEndPosition returns the EndPosition field if non-nil, zero value otherwise.
+
+### GetEndPositionOk
+
+`func (o *LyricLineCue) GetEndPositionOk() (*int32, bool)`
+
+GetEndPositionOk returns a tuple with the EndPosition field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEndPosition
+
+`func (o *LyricLineCue) SetEndPosition(v int32)`
+
+SetEndPosition sets EndPosition field to given value.
+
+### HasEndPosition
+
+`func (o *LyricLineCue) HasEndPosition() bool`
+
+HasEndPosition returns a boolean if a field has been set.
 
 ### GetStart
 

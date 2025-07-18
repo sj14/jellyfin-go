@@ -72,7 +72,7 @@ type UserPolicy struct {
 	RemoteClientBitrateLimit *int32 `json:"RemoteClientBitrateLimit,omitempty"`
 	AuthenticationProviderId string `json:"AuthenticationProviderId"`
 	PasswordResetProviderId string `json:"PasswordResetProviderId"`
-	// Enum SyncPlayUserAccessType.
+	// Gets or sets a value indicating what SyncPlay features the user can access.
 	SyncPlayAccess *SyncPlayUserAccessType `json:"SyncPlayAccess,omitempty"`
 }
 
