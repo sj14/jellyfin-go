@@ -19,7 +19,7 @@ var _ MappedNullable = &PluginUninstalledMessage{}
 
 // PluginUninstalledMessage Plugin uninstalled message.
 type PluginUninstalledMessage struct {
-	// Gets or sets the data.
+	// This is a serializable stub class that is used by the api to provide information about installed plugins.
 	Data NullablePluginInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`

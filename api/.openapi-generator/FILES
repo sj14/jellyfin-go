@@ -443,7 +443,7 @@ docs/TranscodingInfo.md
 docs/TranscodingProfile.md
 docs/TransportStreamTimestamp.md
 docs/TrickplayAPI.md
-docs/TrickplayInfo.md
+docs/TrickplayInfoDto.md
 docs/TrickplayOptions.md
 docs/TrickplayScanBehavior.md
 docs/TunerChannelMapping.md
@@ -810,7 +810,7 @@ model_transcode_seek_info.go
 model_transcoding_info.go
 model_transcoding_profile.go
 model_transport_stream_timestamp.go
-model_trickplay_info.go
+model_trickplay_info_dto.go
 model_trickplay_options.go
 model_trickplay_scan_behavior.go
 model_tuner_channel_mapping.go

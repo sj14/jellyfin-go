@@ -77,7 +77,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -137,7 +137,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -189,7 +189,7 @@
             "description": "Api key created."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -243,7 +243,7 @@
             "description": "Api key deleted."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -624,7 +624,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -704,7 +704,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -1085,7 +1085,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -1591,7 +1591,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -2082,7 +2082,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -2576,7 +2576,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3068,7 +3068,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3144,7 +3144,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3256,7 +3256,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3367,7 +3367,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3483,7 +3483,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3540,7 +3540,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3595,7 +3595,7 @@
             "description": "No branding css configured."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3650,7 +3650,7 @@
             "description": "No branding css configured."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3750,7 +3750,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3822,7 +3822,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -3974,7 +3974,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4043,7 +4043,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4166,7 +4166,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4276,7 +4276,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4372,7 +4372,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4441,7 +4441,7 @@
             "description": "Items added to collection."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4508,7 +4508,7 @@
             "description": "Items removed from collection."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4569,7 +4569,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4646,7 +4646,7 @@
             "description": "Configuration updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4709,7 +4709,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4776,7 +4776,7 @@
             "description": "Named configuration updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4856,7 +4856,7 @@
             "description": "Branding configuration updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -4917,7 +4917,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5005,7 +5005,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5091,7 +5091,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5162,7 +5162,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5234,7 +5234,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5325,7 +5325,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5416,7 +5416,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5504,7 +5504,7 @@
             "description": "Device options updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5593,7 +5593,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -5699,7 +5699,7 @@
             "description": "Display preferences updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -6254,7 +6254,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -6760,7 +6760,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -7276,7 +7276,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -7790,7 +7790,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -8363,7 +8363,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -8904,7 +8904,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -9428,7 +9428,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -9971,7 +9971,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -10512,7 +10512,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -10572,7 +10572,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -10671,7 +10671,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -10741,7 +10741,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -10811,7 +10811,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -10884,7 +10884,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -10984,7 +10984,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11087,7 +11087,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11234,7 +11234,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11465,7 +11465,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11545,7 +11545,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11616,7 +11616,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11674,7 +11674,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11770,7 +11770,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11828,7 +11828,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -11891,7 +11891,7 @@
             "description": "Encoding stopped successfully."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -12146,7 +12146,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -12386,7 +12386,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -12545,7 +12545,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -12623,7 +12623,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -12664,7 +12664,7 @@
             "description": "User does not have permission to delete splashscreen.."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -12915,7 +12915,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -13154,7 +13154,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -13396,7 +13396,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -13636,7 +13636,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -13724,7 +13724,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -13837,7 +13837,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -13969,7 +13969,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -14222,7 +14222,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -14462,7 +14462,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -14563,7 +14563,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -14705,7 +14705,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -14959,7 +14959,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -15200,7 +15200,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -15450,7 +15450,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -15698,7 +15698,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -15809,7 +15809,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -16063,7 +16063,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -16302,7 +16302,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -16544,7 +16544,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -16784,7 +16784,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -17025,7 +17025,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -17264,7 +17264,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -17506,7 +17506,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -17746,7 +17746,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -17987,7 +17987,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -18226,7 +18226,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -18468,7 +18468,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -18708,7 +18708,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -18819,7 +18819,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -18888,7 +18888,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -19128,7 +19128,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -19358,7 +19358,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -19502,7 +19502,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -19659,7 +19659,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -19816,7 +19816,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -19974,7 +19974,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -20110,7 +20110,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -20267,7 +20267,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -20424,7 +20424,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -20581,7 +20581,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -20682,7 +20682,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -20800,7 +20800,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -20903,7 +20903,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21005,7 +21005,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21107,7 +21107,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21209,7 +21209,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21311,7 +21311,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21413,7 +21413,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21515,7 +21515,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21618,7 +21618,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21720,7 +21720,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -21860,7 +21860,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -22734,7 +22734,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -22829,7 +22829,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -22927,7 +22927,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23062,7 +23062,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23267,7 +23267,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23378,7 +23378,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23471,7 +23471,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23547,7 +23547,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23630,7 +23630,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23722,7 +23722,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23835,7 +23835,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -23948,7 +23948,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24058,7 +24058,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24128,7 +24128,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24218,7 +24218,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24308,7 +24308,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24421,7 +24421,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24536,7 +24536,7 @@
             "description": "Item not found."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24668,7 +24668,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24800,7 +24800,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24879,7 +24879,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -24977,7 +24977,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25057,7 +25057,7 @@
             "description": "Report success."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25127,7 +25127,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25188,7 +25188,7 @@
             "description": "Report success."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25249,7 +25249,7 @@
             "description": "Report success."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25318,7 +25318,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25361,7 +25361,7 @@
             "description": "Library scan started."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25414,7 +25414,7 @@
             "description": "Report success."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25467,7 +25467,7 @@
             "description": "Report success."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25580,7 +25580,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25693,7 +25693,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25806,7 +25806,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -25875,7 +25875,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26004,7 +26004,7 @@
             "description": "Folder added."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26068,7 +26068,7 @@
             "description": "Folder not found."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26167,7 +26167,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26278,7 +26278,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26369,7 +26369,7 @@
             "description": "Media path added."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26438,7 +26438,7 @@
             "description": "Media path removed."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26518,7 +26518,7 @@
             "description": "Media path updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26589,7 +26589,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26686,7 +26686,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -26948,7 +26948,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27050,7 +27050,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27111,7 +27111,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27172,7 +27172,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27293,7 +27293,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27345,7 +27345,7 @@
             "description": "Listing provider deleted."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27406,7 +27406,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27510,7 +27510,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27562,7 +27562,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27645,7 +27645,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -27724,7 +27724,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28022,7 +28022,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28116,7 +28116,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28197,7 +28197,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28411,7 +28411,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28650,7 +28650,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28752,7 +28752,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28826,7 +28826,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28898,7 +28898,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -28970,7 +28970,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29044,7 +29044,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29244,7 +29244,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29332,7 +29332,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29409,7 +29409,7 @@
             "description": "Series timer info created."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29501,7 +29501,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29554,7 +29554,7 @@
             "description": "Timer cancelled."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29642,7 +29642,7 @@
             "description": "Series timer updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29737,7 +29737,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29811,7 +29811,7 @@
             "description": "Timer created."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29883,7 +29883,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -29936,7 +29936,7 @@
             "description": "Timer deleted."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30021,7 +30021,7 @@
             "description": "Timer updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30092,7 +30092,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30185,7 +30185,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30237,7 +30237,7 @@
             "description": "Tuner host deleted."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30307,7 +30307,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30362,7 +30362,7 @@
             "description": "Tuner reset."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30443,7 +30443,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30524,7 +30524,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30594,7 +30594,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30664,7 +30664,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30734,7 +30734,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30804,7 +30804,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -30897,7 +30897,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -31026,7 +31026,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -31100,7 +31100,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -31202,7 +31202,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -31304,7 +31304,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -31396,7 +31396,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -31498,7 +31498,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -31756,7 +31756,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -31810,7 +31810,7 @@
             "description": "Livestream closed."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32010,7 +32010,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32075,7 +32075,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32178,7 +32178,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32298,7 +32298,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32529,7 +32529,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32610,7 +32610,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32679,7 +32679,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32759,7 +32759,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32858,7 +32858,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32913,7 +32913,7 @@
             "description": "Installation cancelled."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -32982,7 +32982,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -33053,7 +33053,7 @@
             "description": "Package repositories saved."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -33239,7 +33239,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -33339,7 +33339,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -33489,7 +33489,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -33620,7 +33620,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -33707,7 +33707,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -33823,7 +33823,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -33923,7 +33923,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -34104,7 +34104,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -34214,7 +34214,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -34332,7 +34332,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -34451,7 +34451,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -34587,7 +34587,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -34690,7 +34690,7 @@
             "description": "Unauthorized access."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -34807,7 +34807,7 @@
             "description": "Play start recorded."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -34902,7 +34902,7 @@
             "description": "Playback stop recorded."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35070,7 +35070,7 @@
             "description": "Play progress recorded."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35149,7 +35149,7 @@
             "description": "Playback start recorded."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35203,7 +35203,7 @@
             "description": "Playback session pinged."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35281,7 +35281,7 @@
             "description": "Playback progress recorded."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35359,7 +35359,7 @@
             "description": "Playback stop recorded."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35469,7 +35469,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35568,7 +35568,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35637,7 +35637,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35712,7 +35712,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35797,7 +35797,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35881,7 +35881,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -35965,7 +35965,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36057,7 +36057,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36149,7 +36149,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36223,7 +36223,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36298,7 +36298,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36398,7 +36398,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36486,7 +36486,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36533,7 +36533,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36583,7 +36583,7 @@
             "description": "Quick connect is not active on this server."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36724,7 +36724,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36836,7 +36836,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -36937,7 +36937,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37024,7 +37024,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37115,7 +37115,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37219,7 +37219,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37293,7 +37293,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37365,7 +37365,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37590,7 +37590,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37659,7 +37659,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37728,7 +37728,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37825,7 +37825,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -37912,7 +37912,7 @@
             "description": "Full general command sent to session."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38025,7 +38025,7 @@
             "description": "General command sent to session."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38112,7 +38112,7 @@
             "description": "Message sent."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38244,7 +38244,7 @@
             "description": "Instruction sent to session."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38340,7 +38340,7 @@
             "description": "Playstate command sent to session."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38453,7 +38453,7 @@
             "description": "System command sent to session."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38517,7 +38517,7 @@
             "description": "User added to session."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38579,7 +38579,7 @@
             "description": "User removed from session."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38704,7 +38704,7 @@
             "description": "Instruction sent to session."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38797,7 +38797,7 @@
             "description": "Capabilities posted."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38886,7 +38886,7 @@
             "description": "Capabilities updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38929,7 +38929,7 @@
             "description": "Session end reported to server."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -38991,7 +38991,7 @@
             "description": "Session reported to server."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39034,7 +39034,7 @@
             "description": "Startup wizard completed."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39095,7 +39095,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39173,7 +39173,7 @@
             "description": "Configuration saved."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39234,7 +39234,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39314,7 +39314,7 @@
             "description": "Configuration saved."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39375,7 +39375,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39452,7 +39452,7 @@
             "description": "Updated user name and password."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39670,7 +39670,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39750,7 +39750,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39819,7 +39819,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39881,7 +39881,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -39999,7 +39999,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40084,7 +40084,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40147,7 +40147,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40260,7 +40260,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40371,7 +40371,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40457,7 +40457,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40633,7 +40633,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40786,7 +40786,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40893,7 +40893,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -40985,7 +40985,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41066,7 +41066,7 @@
             "description": "Group state update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41147,7 +41147,7 @@
             "description": "Group join successful."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41192,7 +41192,7 @@
             "description": "Group leave successful."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41263,7 +41263,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41344,7 +41344,7 @@
             "description": "Queue update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41445,7 +41445,7 @@
             "description": "New group created."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41526,7 +41526,7 @@
             "description": "Next item update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41571,7 +41571,7 @@
             "description": "Pause update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41652,7 +41652,7 @@
             "description": "Ping updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41732,7 +41732,7 @@
             "description": "Previous item update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41813,7 +41813,7 @@
             "description": "Queue update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41894,7 +41894,7 @@
             "description": "Group state update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -41975,7 +41975,7 @@
             "description": "Queue update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42056,7 +42056,7 @@
             "description": "Seek update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42137,7 +42137,7 @@
             "description": "Member state updated."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42218,7 +42218,7 @@
             "description": "Queue update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42299,7 +42299,7 @@
             "description": "Queue update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42380,7 +42380,7 @@
             "description": "Play queue update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42461,7 +42461,7 @@
             "description": "Play queue update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42506,7 +42506,7 @@
             "description": "Stop update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42551,7 +42551,7 @@
             "description": "Unpause update sent to all group members."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42633,7 +42633,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42710,7 +42710,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42768,7 +42768,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42835,7 +42835,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -42921,7 +42921,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -43020,7 +43020,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -43077,7 +43077,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -43122,7 +43122,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -43172,7 +43172,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -43232,7 +43232,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -43289,7 +43289,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -43326,7 +43326,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -44180,7 +44180,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -44292,7 +44292,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -44394,7 +44394,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -44648,7 +44648,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -44821,7 +44821,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -45021,7 +45021,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -45166,7 +45166,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -45420,7 +45420,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -45672,7 +45672,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -45759,7 +45759,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -45887,7 +45887,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -45976,7 +45976,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46050,7 +46050,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46178,7 +46178,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46271,7 +46271,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46357,7 +46357,7 @@
             "description": "Missing token."
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46454,7 +46454,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46547,7 +46547,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46630,7 +46630,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46697,7 +46697,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46793,7 +46793,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46923,7 +46923,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -46989,7 +46989,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47057,7 +47057,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47147,7 +47147,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47237,7 +47237,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47411,7 +47411,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47482,7 +47482,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47563,7 +47563,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47642,7 +47642,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47723,7 +47723,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47810,7 +47810,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -47909,7 +47909,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -48009,7 +48009,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -48111,7 +48111,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -48179,7 +48179,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -48254,7 +48254,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -48778,7 +48778,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -49287,7 +49287,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -49798,7 +49798,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -50307,7 +50307,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -50372,7 +50372,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -50582,7 +50582,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -50683,7 +50683,7 @@
             }
           },
           "503": {
-            "description": "The server is currently starting or is temporarly not available.",
+            "description": "The server is currently starting or is temporarily not available.",
             "headers": {
               "Retry-After": {
                 "description": "A hint for when to retry the operation in full seconds.",
@@ -51415,7 +51415,7 @@
                 "$ref": "#/components/schemas/UserDto"
               }
             ],
-            "description": "Gets or sets the user.",
+            "description": "Class UserDto.",
             "nullable": true
           },
           "SessionInfo": {
@@ -51424,7 +51424,7 @@
                 "$ref": "#/components/schemas/SessionInfoDto"
               }
             ],
-            "description": "Gets or sets the session info.",
+            "description": "Session info DTO.",
             "nullable": true
           },
           "AccessToken": {
@@ -52302,7 +52302,7 @@
             "additionalProperties": {
               "type": "object",
               "additionalProperties": {
-                "$ref": "#/components/schemas/TrickplayInfo"
+                "$ref": "#/components/schemas/TrickplayInfoDto"
               }
             },
             "description": "Gets or sets the trickplay manifest.",
@@ -54085,7 +54085,7 @@
                 "$ref": "#/components/schemas/ScrollDirection"
               }
             ],
-            "description": "An enum representing the axis that should be scrolled."
+            "description": "Gets or sets the scroll direction."
           },
           "ShowBackdrop": {
             "type": "boolean",
@@ -54105,7 +54105,7 @@
                 "$ref": "#/components/schemas/SortOrder"
               }
             ],
-            "description": "An enum representing the sorting order."
+            "description": "Gets or sets the sort order."
           },
           "ShowSidebar": {
             "type": "boolean",
@@ -56004,7 +56004,7 @@
                 "$ref": "#/components/schemas/LibraryUpdateInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class LibraryUpdateInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -56818,7 +56818,12 @@
         "properties": {
           "Position": {
             "type": "integer",
-            "description": "Gets the character index of the lyric.",
+            "description": "Gets the start character index of the cue.",
+            "format": "int32"
+          },
+          "EndPosition": {
+            "type": "integer",
+            "description": "Gets the end character index of the cue.",
             "format": "int32"
           },
           "Start": {
@@ -57013,7 +57018,7 @@
                 "$ref": "#/components/schemas/MediaSegmentType"
               }
             ],
-            "description": "Defines the types of content an individual Jellyfin.Database.Implementations.Entities.MediaSegment represents.",
+            "description": "Gets or sets the type of content this segment defines.",
             "default": "Unknown"
           },
           "StartTicks": {
@@ -58467,7 +58472,7 @@
                 "$ref": "#/components/schemas/DeviceProfile"
               }
             ],
-            "description": "Gets or sets the device profile.",
+            "description": "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see> and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\">codecs</see> (video and/or audio, including codec profiles and levels)\r\nthe device is able to direct play (without transcoding or remuxing),\r\nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\">containers/codecs to transcode to</see> in case it isn't.",
             "nullable": true
           },
           "DirectPlayProtocols": {
@@ -58986,7 +58991,7 @@
                 "$ref": "#/components/schemas/DeviceProfile"
               }
             ],
-            "description": "Gets or sets the device profile.",
+            "description": "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see> and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\">codecs</see> (video and/or audio, including codec profiles and levels)\r\nthe device is able to direct play (without transcoding or remuxing),\r\nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\">containers/codecs to transcode to</see> in case it isn't.",
             "nullable": true
           },
           "EnableDirectPlay": {
@@ -59600,7 +59605,7 @@
                 "$ref": "#/components/schemas/PlayRequest"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class PlayRequest.",
             "nullable": true
           },
           "MessageId": {
@@ -60027,7 +60032,7 @@
                 "$ref": "#/components/schemas/InstallationInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class InstallationInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -60094,7 +60099,7 @@
                 "$ref": "#/components/schemas/InstallationInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class InstallationInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -60161,7 +60166,7 @@
                 "$ref": "#/components/schemas/InstallationInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class InstallationInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -60228,7 +60233,7 @@
                 "$ref": "#/components/schemas/InstallationInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class InstallationInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -60309,7 +60314,7 @@
                 "$ref": "#/components/schemas/PluginInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "This is a serializable stub class that is used by the api to provide information about installed plugins.",
             "nullable": true
           },
           "MessageId": {
@@ -60661,7 +60666,7 @@
                 "$ref": "#/components/schemas/GroupQueueMode"
               }
             ],
-            "description": "Gets or sets the mode in which to add the new items."
+            "description": "Enum GroupQueueMode."
           }
         },
         "additionalProperties": false,
@@ -61283,7 +61288,7 @@
                 "$ref": "#/components/schemas/TaskResult"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class TaskExecutionInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -63187,7 +63192,7 @@
                 "$ref": "#/components/schemas/GroupRepeatMode"
               }
             ],
-            "description": "Gets or sets the repeat mode."
+            "description": "Enum GroupRepeatMode."
           }
         },
         "additionalProperties": false,
@@ -63206,7 +63211,7 @@
                 "$ref": "#/components/schemas/GroupShuffleMode"
               }
             ],
-            "description": "Gets or sets the shuffle mode."
+            "description": "Enum GroupShuffleMode."
           }
         },
         "additionalProperties": false,
@@ -63495,7 +63500,7 @@
                 "$ref": "#/components/schemas/SendCommand"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class SendCommand.",
             "nullable": true
           },
           "MessageId": {
@@ -65231,52 +65236,47 @@
         ],
         "type": "string"
       },
-      "TrickplayInfo": {
+      "TrickplayInfoDto": {
         "type": "object",
         "properties": {
-          "ItemId": {
-            "type": "string",
-            "description": "Gets or sets the id of the associated item.",
-            "format": "uuid"
-          },
           "Width": {
             "type": "integer",
-            "description": "Gets or sets width of an individual thumbnail.",
+            "description": "Gets the width of an individual thumbnail.",
             "format": "int32"
           },
           "Height": {
             "type": "integer",
-            "description": "Gets or sets height of an individual thumbnail.",
+            "description": "Gets the height of an individual thumbnail.",
             "format": "int32"
           },
           "TileWidth": {
             "type": "integer",
-            "description": "Gets or sets amount of thumbnails per row.",
+            "description": "Gets the amount of thumbnails per row.",
             "format": "int32"
           },
           "TileHeight": {
             "type": "integer",
-            "description": "Gets or sets amount of thumbnails per column.",
+            "description": "Gets the amount of thumbnails per column.",
             "format": "int32"
           },
           "ThumbnailCount": {
             "type": "integer",
-            "description": "Gets or sets total amount of non-black thumbnails.",
+            "description": "Gets the total amount of non-black thumbnails.",
             "format": "int32"
           },
           "Interval": {
             "type": "integer",
-            "description": "Gets or sets interval in milliseconds between each trickplay thumbnail.",
+            "description": "Gets the interval in milliseconds between each trickplay thumbnail.",
             "format": "int32"
           },
           "Bandwidth": {
             "type": "integer",
-            "description": "Gets or sets peak bandwidth usage in bits per second.",
+            "description": "Gets the peak bandwidth usage in bits per second.",
             "format": "int32"
           }
         },
         "additionalProperties": false,
-        "description": "An entity representing the metadata for a group of trickplay tiles."
+        "description": "The trickplay api model."
       },
       "TrickplayOptions": {
         "type": "object",
@@ -65833,7 +65833,7 @@
                 "$ref": "#/components/schemas/UserDataChangeInfo"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class UserDataChangeInfo.",
             "nullable": true
           },
           "MessageId": {
@@ -66332,7 +66332,7 @@
                 "$ref": "#/components/schemas/SyncPlayUserAccessType"
               }
             ],
-            "description": "Enum SyncPlayUserAccessType."
+            "description": "Gets or sets a value indicating what SyncPlay features the user can access."
           }
         },
         "additionalProperties": false
@@ -66346,7 +66346,7 @@
                 "$ref": "#/components/schemas/UserDto"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "Class UserDto.",
             "nullable": true
           },
           "MessageId": {

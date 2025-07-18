@@ -1,234 +1,208 @@
-# TrickplayInfo
+# TrickplayInfoDto
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ItemId** | Pointer to **string** | Gets or sets the id of the associated item. | [optional] 
-**Width** | Pointer to **int32** | Gets or sets width of an individual thumbnail. | [optional] 
-**Height** | Pointer to **int32** | Gets or sets height of an individual thumbnail. | [optional] 
-**TileWidth** | Pointer to **int32** | Gets or sets amount of thumbnails per row. | [optional] 
-**TileHeight** | Pointer to **int32** | Gets or sets amount of thumbnails per column. | [optional] 
-**ThumbnailCount** | Pointer to **int32** | Gets or sets total amount of non-black thumbnails. | [optional] 
-**Interval** | Pointer to **int32** | Gets or sets interval in milliseconds between each trickplay thumbnail. | [optional] 
-**Bandwidth** | Pointer to **int32** | Gets or sets peak bandwidth usage in bits per second. | [optional] 
+**Width** | Pointer to **int32** | Gets the width of an individual thumbnail. | [optional] 
+**Height** | Pointer to **int32** | Gets the height of an individual thumbnail. | [optional] 
+**TileWidth** | Pointer to **int32** | Gets the amount of thumbnails per row. | [optional] 
+**TileHeight** | Pointer to **int32** | Gets the amount of thumbnails per column. | [optional] 
+**ThumbnailCount** | Pointer to **int32** | Gets the total amount of non-black thumbnails. | [optional] 
+**Interval** | Pointer to **int32** | Gets the interval in milliseconds between each trickplay thumbnail. | [optional] 
+**Bandwidth** | Pointer to **int32** | Gets the peak bandwidth usage in bits per second. | [optional] 
 
 ## Methods
 
-### NewTrickplayInfo
+### NewTrickplayInfoDto
 
-`func NewTrickplayInfo() *TrickplayInfo`
+`func NewTrickplayInfoDto() *TrickplayInfoDto`
 
-NewTrickplayInfo instantiates a new TrickplayInfo object
+NewTrickplayInfoDto instantiates a new TrickplayInfoDto object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewTrickplayInfoWithDefaults
+### NewTrickplayInfoDtoWithDefaults
 
-`func NewTrickplayInfoWithDefaults() *TrickplayInfo`
+`func NewTrickplayInfoDtoWithDefaults() *TrickplayInfoDto`
 
-NewTrickplayInfoWithDefaults instantiates a new TrickplayInfo object
+NewTrickplayInfoDtoWithDefaults instantiates a new TrickplayInfoDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItemId
-
-`func (o *TrickplayInfo) GetItemId() string`
-
-GetItemId returns the ItemId field if non-nil, zero value otherwise.
-
-### GetItemIdOk
-
-`func (o *TrickplayInfo) GetItemIdOk() (*string, bool)`
-
-GetItemIdOk returns a tuple with the ItemId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetItemId
-
-`func (o *TrickplayInfo) SetItemId(v string)`
-
-SetItemId sets ItemId field to given value.
-
-### HasItemId
-
-`func (o *TrickplayInfo) HasItemId() bool`
-
-HasItemId returns a boolean if a field has been set.
-
 ### GetWidth
 
-`func (o *TrickplayInfo) GetWidth() int32`
+`func (o *TrickplayInfoDto) GetWidth() int32`
 
 GetWidth returns the Width field if non-nil, zero value otherwise.
 
 ### GetWidthOk
 
-`func (o *TrickplayInfo) GetWidthOk() (*int32, bool)`
+`func (o *TrickplayInfoDto) GetWidthOk() (*int32, bool)`
 
 GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWidth
 
-`func (o *TrickplayInfo) SetWidth(v int32)`
+`func (o *TrickplayInfoDto) SetWidth(v int32)`
 
 SetWidth sets Width field to given value.
 
 ### HasWidth
 
-`func (o *TrickplayInfo) HasWidth() bool`
+`func (o *TrickplayInfoDto) HasWidth() bool`
 
 HasWidth returns a boolean if a field has been set.
 
 ### GetHeight
 
-`func (o *TrickplayInfo) GetHeight() int32`
+`func (o *TrickplayInfoDto) GetHeight() int32`
 
 GetHeight returns the Height field if non-nil, zero value otherwise.
 
 ### GetHeightOk
 
-`func (o *TrickplayInfo) GetHeightOk() (*int32, bool)`
+`func (o *TrickplayInfoDto) GetHeightOk() (*int32, bool)`
 
 GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHeight
 
-`func (o *TrickplayInfo) SetHeight(v int32)`
+`func (o *TrickplayInfoDto) SetHeight(v int32)`
 
 SetHeight sets Height field to given value.
 
 ### HasHeight
 
-`func (o *TrickplayInfo) HasHeight() bool`
+`func (o *TrickplayInfoDto) HasHeight() bool`
 
 HasHeight returns a boolean if a field has been set.
 
 ### GetTileWidth
 
-`func (o *TrickplayInfo) GetTileWidth() int32`
+`func (o *TrickplayInfoDto) GetTileWidth() int32`
 
 GetTileWidth returns the TileWidth field if non-nil, zero value otherwise.
 
 ### GetTileWidthOk
 
-`func (o *TrickplayInfo) GetTileWidthOk() (*int32, bool)`
+`func (o *TrickplayInfoDto) GetTileWidthOk() (*int32, bool)`
 
 GetTileWidthOk returns a tuple with the TileWidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTileWidth
 
-`func (o *TrickplayInfo) SetTileWidth(v int32)`
+`func (o *TrickplayInfoDto) SetTileWidth(v int32)`
 
 SetTileWidth sets TileWidth field to given value.
 
 ### HasTileWidth
 
-`func (o *TrickplayInfo) HasTileWidth() bool`
+`func (o *TrickplayInfoDto) HasTileWidth() bool`
 
 HasTileWidth returns a boolean if a field has been set.
 
 ### GetTileHeight
 
-`func (o *TrickplayInfo) GetTileHeight() int32`
+`func (o *TrickplayInfoDto) GetTileHeight() int32`
 
 GetTileHeight returns the TileHeight field if non-nil, zero value otherwise.
 
 ### GetTileHeightOk
 
-`func (o *TrickplayInfo) GetTileHeightOk() (*int32, bool)`
+`func (o *TrickplayInfoDto) GetTileHeightOk() (*int32, bool)`
 
 GetTileHeightOk returns a tuple with the TileHeight field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTileHeight
 
-`func (o *TrickplayInfo) SetTileHeight(v int32)`
+`func (o *TrickplayInfoDto) SetTileHeight(v int32)`
 
 SetTileHeight sets TileHeight field to given value.
 
 ### HasTileHeight
 
-`func (o *TrickplayInfo) HasTileHeight() bool`
+`func (o *TrickplayInfoDto) HasTileHeight() bool`
 
 HasTileHeight returns a boolean if a field has been set.
 
 ### GetThumbnailCount
 
-`func (o *TrickplayInfo) GetThumbnailCount() int32`
+`func (o *TrickplayInfoDto) GetThumbnailCount() int32`
 
 GetThumbnailCount returns the ThumbnailCount field if non-nil, zero value otherwise.
 
 ### GetThumbnailCountOk
 
-`func (o *TrickplayInfo) GetThumbnailCountOk() (*int32, bool)`
+`func (o *TrickplayInfoDto) GetThumbnailCountOk() (*int32, bool)`
 
 GetThumbnailCountOk returns a tuple with the ThumbnailCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetThumbnailCount
 
-`func (o *TrickplayInfo) SetThumbnailCount(v int32)`
+`func (o *TrickplayInfoDto) SetThumbnailCount(v int32)`
 
 SetThumbnailCount sets ThumbnailCount field to given value.
 
 ### HasThumbnailCount
 
-`func (o *TrickplayInfo) HasThumbnailCount() bool`
+`func (o *TrickplayInfoDto) HasThumbnailCount() bool`
 
 HasThumbnailCount returns a boolean if a field has been set.
 
 ### GetInterval
 
-`func (o *TrickplayInfo) GetInterval() int32`
+`func (o *TrickplayInfoDto) GetInterval() int32`
 
 GetInterval returns the Interval field if non-nil, zero value otherwise.
 
 ### GetIntervalOk
 
-`func (o *TrickplayInfo) GetIntervalOk() (*int32, bool)`
+`func (o *TrickplayInfoDto) GetIntervalOk() (*int32, bool)`
 
 GetIntervalOk returns a tuple with the Interval field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterval
 
-`func (o *TrickplayInfo) SetInterval(v int32)`
+`func (o *TrickplayInfoDto) SetInterval(v int32)`
 
 SetInterval sets Interval field to given value.
 
 ### HasInterval
 
-`func (o *TrickplayInfo) HasInterval() bool`
+`func (o *TrickplayInfoDto) HasInterval() bool`
 
 HasInterval returns a boolean if a field has been set.
 
 ### GetBandwidth
 
-`func (o *TrickplayInfo) GetBandwidth() int32`
+`func (o *TrickplayInfoDto) GetBandwidth() int32`
 
 GetBandwidth returns the Bandwidth field if non-nil, zero value otherwise.
 
 ### GetBandwidthOk
 
-`func (o *TrickplayInfo) GetBandwidthOk() (*int32, bool)`
+`func (o *TrickplayInfoDto) GetBandwidthOk() (*int32, bool)`
 
 GetBandwidthOk returns a tuple with the Bandwidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBandwidth
 
-`func (o *TrickplayInfo) SetBandwidth(v int32)`
+`func (o *TrickplayInfoDto) SetBandwidth(v int32)`
 
 SetBandwidth sets Bandwidth field to given value.
 
 ### HasBandwidth
 
-`func (o *TrickplayInfo) HasBandwidth() bool`
+`func (o *TrickplayInfoDto) HasBandwidth() bool`
 
 HasBandwidth returns a boolean if a field has been set.
 

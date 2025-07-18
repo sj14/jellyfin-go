@@ -19,9 +19,9 @@ var _ MappedNullable = &AuthenticationResult{}
 
 // AuthenticationResult A class representing an authentication result.
 type AuthenticationResult struct {
-	// Gets or sets the user.
+	// Class UserDto.
 	User NullableUserDto `json:"User,omitempty"`
-	// Gets or sets the session info.
+	// Session info DTO.
 	SessionInfo NullableSessionInfoDto `json:"SessionInfo,omitempty"`
 	// Gets or sets the access token.
 	AccessToken NullableString `json:"AccessToken,omitempty"`
