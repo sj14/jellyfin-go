@@ -19,7 +19,7 @@ var _ MappedNullable = &SetRepeatModeRequestDto{}
 
 // SetRepeatModeRequestDto Class SetRepeatModeRequestDto.
 type SetRepeatModeRequestDto struct {
-	// Enum GroupRepeatMode.
+	// Gets or sets the repeat mode.
 	Mode *GroupRepeatMode `json:"Mode,omitempty"`
 }
 
