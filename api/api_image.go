@@ -3742,16 +3742,6 @@ type ApiGetSplashscreenRequest struct {
 	ApiService ImageAPI
 	tag *string
 	format *ImageFormat
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	fillWidth *int32
-	fillHeight *int32
-	blur *int32
-	backgroundColor *string
-	foregroundLayer *string
-	quality *int32
 }
 
 // Supply the cache tag from the item object to receive strong caching headers.
@@ -3763,66 +3753,6 @@ func (r ApiGetSplashscreenRequest) Tag(tag string) ApiGetSplashscreenRequest {
 // Determines the output format of the image - original,gif,jpg,png.
 func (r ApiGetSplashscreenRequest) Format(format ImageFormat) ApiGetSplashscreenRequest {
 	r.format = &format
-	return r
-}
-
-// The maximum image width to return.
-func (r ApiGetSplashscreenRequest) MaxWidth(maxWidth int32) ApiGetSplashscreenRequest {
-	r.maxWidth = &maxWidth
-	return r
-}
-
-// The maximum image height to return.
-func (r ApiGetSplashscreenRequest) MaxHeight(maxHeight int32) ApiGetSplashscreenRequest {
-	r.maxHeight = &maxHeight
-	return r
-}
-
-// The fixed image width to return.
-func (r ApiGetSplashscreenRequest) Width(width int32) ApiGetSplashscreenRequest {
-	r.width = &width
-	return r
-}
-
-// The fixed image height to return.
-func (r ApiGetSplashscreenRequest) Height(height int32) ApiGetSplashscreenRequest {
-	r.height = &height
-	return r
-}
-
-// Width of box to fill.
-func (r ApiGetSplashscreenRequest) FillWidth(fillWidth int32) ApiGetSplashscreenRequest {
-	r.fillWidth = &fillWidth
-	return r
-}
-
-// Height of box to fill.
-func (r ApiGetSplashscreenRequest) FillHeight(fillHeight int32) ApiGetSplashscreenRequest {
-	r.fillHeight = &fillHeight
-	return r
-}
-
-// Blur image.
-func (r ApiGetSplashscreenRequest) Blur(blur int32) ApiGetSplashscreenRequest {
-	r.blur = &blur
-	return r
-}
-
-// Apply a background color for transparent images.
-func (r ApiGetSplashscreenRequest) BackgroundColor(backgroundColor string) ApiGetSplashscreenRequest {
-	r.backgroundColor = &backgroundColor
-	return r
-}
-
-// Apply a foreground layer on top of the image.
-func (r ApiGetSplashscreenRequest) ForegroundLayer(foregroundLayer string) ApiGetSplashscreenRequest {
-	r.foregroundLayer = &foregroundLayer
-	return r
-}
-
-// Quality setting, from 0-100.
-func (r ApiGetSplashscreenRequest) Quality(quality int32) ApiGetSplashscreenRequest {
-	r.quality = &quality
 	return r
 }
 
@@ -3869,39 +3799,6 @@ func (a *ImageAPIService) GetSplashscreenExecute(r ApiGetSplashscreenRequest) (*
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	}
-	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
-	}
-	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
-	}
-	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
-	}
-	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
-	}
-	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
-	}
-	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
-	}
-	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
-	}
-	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
-	}
-	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
-	}
-	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
-	} else {
-		var defaultValue int32 = 90
-		r.quality = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4489,19 +4386,6 @@ type ApiGetUserImageRequest struct {
 	userId *string
 	tag *string
 	format *ImageFormat
-	maxWidth *int32
-	maxHeight *int32
-	percentPlayed *float64
-	unplayedCount *int32
-	width *int32
-	height *int32
-	quality *int32
-	fillWidth *int32
-	fillHeight *int32
-	blur *int32
-	backgroundColor *string
-	foregroundLayer *string
-	imageIndex *int32
 }
 
 // User id.
@@ -4519,84 +4403,6 @@ func (r ApiGetUserImageRequest) Tag(tag string) ApiGetUserImageRequest {
 // Determines the output format of the image - original,gif,jpg,png.
 func (r ApiGetUserImageRequest) Format(format ImageFormat) ApiGetUserImageRequest {
 	r.format = &format
-	return r
-}
-
-// The maximum image width to return.
-func (r ApiGetUserImageRequest) MaxWidth(maxWidth int32) ApiGetUserImageRequest {
-	r.maxWidth = &maxWidth
-	return r
-}
-
-// The maximum image height to return.
-func (r ApiGetUserImageRequest) MaxHeight(maxHeight int32) ApiGetUserImageRequest {
-	r.maxHeight = &maxHeight
-	return r
-}
-
-// Optional. Percent to render for the percent played overlay.
-func (r ApiGetUserImageRequest) PercentPlayed(percentPlayed float64) ApiGetUserImageRequest {
-	r.percentPlayed = &percentPlayed
-	return r
-}
-
-// Optional. Unplayed count overlay to render.
-func (r ApiGetUserImageRequest) UnplayedCount(unplayedCount int32) ApiGetUserImageRequest {
-	r.unplayedCount = &unplayedCount
-	return r
-}
-
-// The fixed image width to return.
-func (r ApiGetUserImageRequest) Width(width int32) ApiGetUserImageRequest {
-	r.width = &width
-	return r
-}
-
-// The fixed image height to return.
-func (r ApiGetUserImageRequest) Height(height int32) ApiGetUserImageRequest {
-	r.height = &height
-	return r
-}
-
-// Optional. Quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
-func (r ApiGetUserImageRequest) Quality(quality int32) ApiGetUserImageRequest {
-	r.quality = &quality
-	return r
-}
-
-// Width of box to fill.
-func (r ApiGetUserImageRequest) FillWidth(fillWidth int32) ApiGetUserImageRequest {
-	r.fillWidth = &fillWidth
-	return r
-}
-
-// Height of box to fill.
-func (r ApiGetUserImageRequest) FillHeight(fillHeight int32) ApiGetUserImageRequest {
-	r.fillHeight = &fillHeight
-	return r
-}
-
-// Optional. Blur image.
-func (r ApiGetUserImageRequest) Blur(blur int32) ApiGetUserImageRequest {
-	r.blur = &blur
-	return r
-}
-
-// Optional. Apply a background color for transparent images.
-func (r ApiGetUserImageRequest) BackgroundColor(backgroundColor string) ApiGetUserImageRequest {
-	r.backgroundColor = &backgroundColor
-	return r
-}
-
-// Optional. Apply a foreground layer on top of the image.
-func (r ApiGetUserImageRequest) ForegroundLayer(foregroundLayer string) ApiGetUserImageRequest {
-	r.foregroundLayer = &foregroundLayer
-	return r
-}
-
-// Image index.
-func (r ApiGetUserImageRequest) ImageIndex(imageIndex int32) ApiGetUserImageRequest {
-	r.imageIndex = &imageIndex
 	return r
 }
 
@@ -4646,45 +4452,6 @@ func (a *ImageAPIService) GetUserImageExecute(r ApiGetUserImageRequest) (*os.Fil
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	}
-	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
-	}
-	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
-	}
-	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
-	}
-	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
-	}
-	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
-	}
-	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
-	}
-	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
-	}
-	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
-	}
-	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
-	}
-	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
-	}
-	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
-	}
-	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
-	}
-	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -7882,19 +7649,6 @@ type ApiHeadUserImageRequest struct {
 	userId *string
 	tag *string
 	format *ImageFormat
-	maxWidth *int32
-	maxHeight *int32
-	percentPlayed *float64
-	unplayedCount *int32
-	width *int32
-	height *int32
-	quality *int32
-	fillWidth *int32
-	fillHeight *int32
-	blur *int32
-	backgroundColor *string
-	foregroundLayer *string
-	imageIndex *int32
 }
 
 // User id.
@@ -7912,84 +7666,6 @@ func (r ApiHeadUserImageRequest) Tag(tag string) ApiHeadUserImageRequest {
 // Determines the output format of the image - original,gif,jpg,png.
 func (r ApiHeadUserImageRequest) Format(format ImageFormat) ApiHeadUserImageRequest {
 	r.format = &format
-	return r
-}
-
-// The maximum image width to return.
-func (r ApiHeadUserImageRequest) MaxWidth(maxWidth int32) ApiHeadUserImageRequest {
-	r.maxWidth = &maxWidth
-	return r
-}
-
-// The maximum image height to return.
-func (r ApiHeadUserImageRequest) MaxHeight(maxHeight int32) ApiHeadUserImageRequest {
-	r.maxHeight = &maxHeight
-	return r
-}
-
-// Optional. Percent to render for the percent played overlay.
-func (r ApiHeadUserImageRequest) PercentPlayed(percentPlayed float64) ApiHeadUserImageRequest {
-	r.percentPlayed = &percentPlayed
-	return r
-}
-
-// Optional. Unplayed count overlay to render.
-func (r ApiHeadUserImageRequest) UnplayedCount(unplayedCount int32) ApiHeadUserImageRequest {
-	r.unplayedCount = &unplayedCount
-	return r
-}
-
-// The fixed image width to return.
-func (r ApiHeadUserImageRequest) Width(width int32) ApiHeadUserImageRequest {
-	r.width = &width
-	return r
-}
-
-// The fixed image height to return.
-func (r ApiHeadUserImageRequest) Height(height int32) ApiHeadUserImageRequest {
-	r.height = &height
-	return r
-}
-
-// Optional. Quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
-func (r ApiHeadUserImageRequest) Quality(quality int32) ApiHeadUserImageRequest {
-	r.quality = &quality
-	return r
-}
-
-// Width of box to fill.
-func (r ApiHeadUserImageRequest) FillWidth(fillWidth int32) ApiHeadUserImageRequest {
-	r.fillWidth = &fillWidth
-	return r
-}
-
-// Height of box to fill.
-func (r ApiHeadUserImageRequest) FillHeight(fillHeight int32) ApiHeadUserImageRequest {
-	r.fillHeight = &fillHeight
-	return r
-}
-
-// Optional. Blur image.
-func (r ApiHeadUserImageRequest) Blur(blur int32) ApiHeadUserImageRequest {
-	r.blur = &blur
-	return r
-}
-
-// Optional. Apply a background color for transparent images.
-func (r ApiHeadUserImageRequest) BackgroundColor(backgroundColor string) ApiHeadUserImageRequest {
-	r.backgroundColor = &backgroundColor
-	return r
-}
-
-// Optional. Apply a foreground layer on top of the image.
-func (r ApiHeadUserImageRequest) ForegroundLayer(foregroundLayer string) ApiHeadUserImageRequest {
-	r.foregroundLayer = &foregroundLayer
-	return r
-}
-
-// Image index.
-func (r ApiHeadUserImageRequest) ImageIndex(imageIndex int32) ApiHeadUserImageRequest {
-	r.imageIndex = &imageIndex
 	return r
 }
 
@@ -8039,45 +7715,6 @@ func (a *ImageAPIService) HeadUserImageExecute(r ApiHeadUserImageRequest) (*os.F
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	}
-	if r.maxWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
-	}
-	if r.maxHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
-	}
-	if r.percentPlayed != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percentPlayed", r.percentPlayed, "form", "")
-	}
-	if r.unplayedCount != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "unplayedCount", r.unplayedCount, "form", "")
-	}
-	if r.width != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "width", r.width, "form", "")
-	}
-	if r.height != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "height", r.height, "form", "")
-	}
-	if r.quality != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "quality", r.quality, "form", "")
-	}
-	if r.fillWidth != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillWidth", r.fillWidth, "form", "")
-	}
-	if r.fillHeight != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fillHeight", r.fillHeight, "form", "")
-	}
-	if r.blur != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "blur", r.blur, "form", "")
-	}
-	if r.backgroundColor != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "backgroundColor", r.backgroundColor, "form", "")
-	}
-	if r.foregroundLayer != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "foregroundLayer", r.foregroundLayer, "form", "")
-	}
-	if r.imageIndex != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "imageIndex", r.imageIndex, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

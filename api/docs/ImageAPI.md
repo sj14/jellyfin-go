@@ -1398,7 +1398,7 @@ No authorization required
 
 ## GetSplashscreen
 
-> *os.File GetSplashscreen(ctx).Tag(tag).Format(format).MaxWidth(maxWidth).MaxHeight(maxHeight).Width(width).Height(height).FillWidth(fillWidth).FillHeight(fillHeight).Blur(blur).BackgroundColor(backgroundColor).ForegroundLayer(foregroundLayer).Quality(quality).Execute()
+> *os.File GetSplashscreen(ctx).Tag(tag).Format(format).Execute()
 
 Generates or gets the splashscreen.
 
@@ -1417,20 +1417,10 @@ import (
 func main() {
 	tag := "tag_example" // string | Supply the cache tag from the item object to receive strong caching headers. (optional)
 	format := "format_example" // ImageFormat | Determines the output format of the image - original,gif,jpg,png. (optional)
-	maxWidth := int32(56) // int32 | The maximum image width to return. (optional)
-	maxHeight := int32(56) // int32 | The maximum image height to return. (optional)
-	width := int32(56) // int32 | The fixed image width to return. (optional)
-	height := int32(56) // int32 | The fixed image height to return. (optional)
-	fillWidth := int32(56) // int32 | Width of box to fill. (optional)
-	fillHeight := int32(56) // int32 | Height of box to fill. (optional)
-	blur := int32(56) // int32 | Blur image. (optional)
-	backgroundColor := "backgroundColor_example" // string | Apply a background color for transparent images. (optional)
-	foregroundLayer := "foregroundLayer_example" // string | Apply a foreground layer on top of the image. (optional)
-	quality := int32(56) // int32 | Quality setting, from 0-100. (optional) (default to 90)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ImageAPI.GetSplashscreen(context.Background()).Tag(tag).Format(format).MaxWidth(maxWidth).MaxHeight(maxHeight).Width(width).Height(height).FillWidth(fillWidth).FillHeight(fillHeight).Blur(blur).BackgroundColor(backgroundColor).ForegroundLayer(foregroundLayer).Quality(quality).Execute()
+	resp, r, err := apiClient.ImageAPI.GetSplashscreen(context.Background()).Tag(tag).Format(format).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ImageAPI.GetSplashscreen``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1453,16 +1443,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tag** | **string** | Supply the cache tag from the item object to receive strong caching headers. | 
  **format** | **ImageFormat** | Determines the output format of the image - original,gif,jpg,png. | 
- **maxWidth** | **int32** | The maximum image width to return. | 
- **maxHeight** | **int32** | The maximum image height to return. | 
- **width** | **int32** | The fixed image width to return. | 
- **height** | **int32** | The fixed image height to return. | 
- **fillWidth** | **int32** | Width of box to fill. | 
- **fillHeight** | **int32** | Height of box to fill. | 
- **blur** | **int32** | Blur image. | 
- **backgroundColor** | **string** | Apply a background color for transparent images. | 
- **foregroundLayer** | **string** | Apply a foreground layer on top of the image. | 
- **quality** | **int32** | Quality setting, from 0-100. | [default to 90]
 
 ### Return type
 
@@ -1687,7 +1667,7 @@ No authorization required
 
 ## GetUserImage
 
-> *os.File GetUserImage(ctx).UserId(userId).Tag(tag).Format(format).MaxWidth(maxWidth).MaxHeight(maxHeight).PercentPlayed(percentPlayed).UnplayedCount(unplayedCount).Width(width).Height(height).Quality(quality).FillWidth(fillWidth).FillHeight(fillHeight).Blur(blur).BackgroundColor(backgroundColor).ForegroundLayer(foregroundLayer).ImageIndex(imageIndex).Execute()
+> *os.File GetUserImage(ctx).UserId(userId).Tag(tag).Format(format).Execute()
 
 Get user profile image.
 
@@ -1707,23 +1687,10 @@ func main() {
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 	tag := "tag_example" // string | Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)
 	format := "format_example" // ImageFormat | Determines the output format of the image - original,gif,jpg,png. (optional)
-	maxWidth := int32(56) // int32 | The maximum image width to return. (optional)
-	maxHeight := int32(56) // int32 | The maximum image height to return. (optional)
-	percentPlayed := float64(1.2) // float64 | Optional. Percent to render for the percent played overlay. (optional)
-	unplayedCount := int32(56) // int32 | Optional. Unplayed count overlay to render. (optional)
-	width := int32(56) // int32 | The fixed image width to return. (optional)
-	height := int32(56) // int32 | The fixed image height to return. (optional)
-	quality := int32(56) // int32 | Optional. Quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
-	fillWidth := int32(56) // int32 | Width of box to fill. (optional)
-	fillHeight := int32(56) // int32 | Height of box to fill. (optional)
-	blur := int32(56) // int32 | Optional. Blur image. (optional)
-	backgroundColor := "backgroundColor_example" // string | Optional. Apply a background color for transparent images. (optional)
-	foregroundLayer := "foregroundLayer_example" // string | Optional. Apply a foreground layer on top of the image. (optional)
-	imageIndex := int32(56) // int32 | Image index. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ImageAPI.GetUserImage(context.Background()).UserId(userId).Tag(tag).Format(format).MaxWidth(maxWidth).MaxHeight(maxHeight).PercentPlayed(percentPlayed).UnplayedCount(unplayedCount).Width(width).Height(height).Quality(quality).FillWidth(fillWidth).FillHeight(fillHeight).Blur(blur).BackgroundColor(backgroundColor).ForegroundLayer(foregroundLayer).ImageIndex(imageIndex).Execute()
+	resp, r, err := apiClient.ImageAPI.GetUserImage(context.Background()).UserId(userId).Tag(tag).Format(format).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ImageAPI.GetUserImage``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1747,19 +1714,6 @@ Name | Type | Description  | Notes
  **userId** | **string** | User id. | 
  **tag** | **string** | Optional. Supply the cache tag from the item object to receive strong caching headers. | 
  **format** | **ImageFormat** | Determines the output format of the image - original,gif,jpg,png. | 
- **maxWidth** | **int32** | The maximum image width to return. | 
- **maxHeight** | **int32** | The maximum image height to return. | 
- **percentPlayed** | **float64** | Optional. Percent to render for the percent played overlay. | 
- **unplayedCount** | **int32** | Optional. Unplayed count overlay to render. | 
- **width** | **int32** | The fixed image width to return. | 
- **height** | **int32** | The fixed image height to return. | 
- **quality** | **int32** | Optional. Quality setting, from 0-100. Defaults to 90 and should suffice in most cases. | 
- **fillWidth** | **int32** | Width of box to fill. | 
- **fillHeight** | **int32** | Height of box to fill. | 
- **blur** | **int32** | Optional. Blur image. | 
- **backgroundColor** | **string** | Optional. Apply a background color for transparent images. | 
- **foregroundLayer** | **string** | Optional. Apply a foreground layer on top of the image. | 
- **imageIndex** | **int32** | Image index. | 
 
 ### Return type
 
@@ -3006,7 +2960,7 @@ No authorization required
 
 ## HeadUserImage
 
-> *os.File HeadUserImage(ctx).UserId(userId).Tag(tag).Format(format).MaxWidth(maxWidth).MaxHeight(maxHeight).PercentPlayed(percentPlayed).UnplayedCount(unplayedCount).Width(width).Height(height).Quality(quality).FillWidth(fillWidth).FillHeight(fillHeight).Blur(blur).BackgroundColor(backgroundColor).ForegroundLayer(foregroundLayer).ImageIndex(imageIndex).Execute()
+> *os.File HeadUserImage(ctx).UserId(userId).Tag(tag).Format(format).Execute()
 
 Get user profile image.
 
@@ -3026,23 +2980,10 @@ func main() {
 	userId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | User id. (optional)
 	tag := "tag_example" // string | Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)
 	format := "format_example" // ImageFormat | Determines the output format of the image - original,gif,jpg,png. (optional)
-	maxWidth := int32(56) // int32 | The maximum image width to return. (optional)
-	maxHeight := int32(56) // int32 | The maximum image height to return. (optional)
-	percentPlayed := float64(1.2) // float64 | Optional. Percent to render for the percent played overlay. (optional)
-	unplayedCount := int32(56) // int32 | Optional. Unplayed count overlay to render. (optional)
-	width := int32(56) // int32 | The fixed image width to return. (optional)
-	height := int32(56) // int32 | The fixed image height to return. (optional)
-	quality := int32(56) // int32 | Optional. Quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
-	fillWidth := int32(56) // int32 | Width of box to fill. (optional)
-	fillHeight := int32(56) // int32 | Height of box to fill. (optional)
-	blur := int32(56) // int32 | Optional. Blur image. (optional)
-	backgroundColor := "backgroundColor_example" // string | Optional. Apply a background color for transparent images. (optional)
-	foregroundLayer := "foregroundLayer_example" // string | Optional. Apply a foreground layer on top of the image. (optional)
-	imageIndex := int32(56) // int32 | Image index. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ImageAPI.HeadUserImage(context.Background()).UserId(userId).Tag(tag).Format(format).MaxWidth(maxWidth).MaxHeight(maxHeight).PercentPlayed(percentPlayed).UnplayedCount(unplayedCount).Width(width).Height(height).Quality(quality).FillWidth(fillWidth).FillHeight(fillHeight).Blur(blur).BackgroundColor(backgroundColor).ForegroundLayer(foregroundLayer).ImageIndex(imageIndex).Execute()
+	resp, r, err := apiClient.ImageAPI.HeadUserImage(context.Background()).UserId(userId).Tag(tag).Format(format).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ImageAPI.HeadUserImage``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3066,19 +3007,6 @@ Name | Type | Description  | Notes
  **userId** | **string** | User id. | 
  **tag** | **string** | Optional. Supply the cache tag from the item object to receive strong caching headers. | 
  **format** | **ImageFormat** | Determines the output format of the image - original,gif,jpg,png. | 
- **maxWidth** | **int32** | The maximum image width to return. | 
- **maxHeight** | **int32** | The maximum image height to return. | 
- **percentPlayed** | **float64** | Optional. Percent to render for the percent played overlay. | 
- **unplayedCount** | **int32** | Optional. Unplayed count overlay to render. | 
- **width** | **int32** | The fixed image width to return. | 
- **height** | **int32** | The fixed image height to return. | 
- **quality** | **int32** | Optional. Quality setting, from 0-100. Defaults to 90 and should suffice in most cases. | 
- **fillWidth** | **int32** | Width of box to fill. | 
- **fillHeight** | **int32** | Height of box to fill. | 
- **blur** | **int32** | Optional. Blur image. | 
- **backgroundColor** | **string** | Optional. Apply a background color for transparent images. | 
- **foregroundLayer** | **string** | Optional. Apply a foreground layer on top of the image. | 
- **imageIndex** | **int32** | Image index. | 
 
 ### Return type
 

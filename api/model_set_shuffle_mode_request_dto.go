@@ -19,7 +19,7 @@ var _ MappedNullable = &SetShuffleModeRequestDto{}
 
 // SetShuffleModeRequestDto Class SetShuffleModeRequestDto.
 type SetShuffleModeRequestDto struct {
-	// Enum GroupShuffleMode.
+	// Gets or sets the shuffle mode.
 	Mode *GroupShuffleMode `json:"Mode,omitempty"`
 }
 

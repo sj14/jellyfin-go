@@ -12439,97 +12439,6 @@
                 }
               ]
             }
-          },
-          {
-            "name": "maxWidth",
-            "in": "query",
-            "description": "The maximum image width to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "maxHeight",
-            "in": "query",
-            "description": "The maximum image height to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "width",
-            "in": "query",
-            "description": "The fixed image width to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "height",
-            "in": "query",
-            "description": "The fixed image height to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "fillWidth",
-            "in": "query",
-            "description": "Width of box to fill.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "fillHeight",
-            "in": "query",
-            "description": "Height of box to fill.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "blur",
-            "in": "query",
-            "description": "Blur image.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "backgroundColor",
-            "in": "query",
-            "description": "Apply a background color for transparent images.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "foregroundLayer",
-            "in": "query",
-            "description": "Apply a foreground layer on top of the image.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "quality",
-            "in": "query",
-            "description": "Quality setting, from 0-100.",
-            "schema": {
-              "maximum": 100,
-              "minimum": 0,
-              "type": "integer",
-              "format": "int32",
-              "default": 90
-            }
           }
         ],
         "responses": {
@@ -18958,121 +18867,6 @@
                 }
               ]
             }
-          },
-          {
-            "name": "maxWidth",
-            "in": "query",
-            "description": "The maximum image width to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "maxHeight",
-            "in": "query",
-            "description": "The maximum image height to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "percentPlayed",
-            "in": "query",
-            "description": "Optional. Percent to render for the percent played overlay.",
-            "schema": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          {
-            "name": "unplayedCount",
-            "in": "query",
-            "description": "Optional. Unplayed count overlay to render.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "width",
-            "in": "query",
-            "description": "The fixed image width to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "height",
-            "in": "query",
-            "description": "The fixed image height to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "quality",
-            "in": "query",
-            "description": "Optional. Quality setting, from 0-100. Defaults to 90 and should suffice in most cases.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "fillWidth",
-            "in": "query",
-            "description": "Width of box to fill.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "fillHeight",
-            "in": "query",
-            "description": "Height of box to fill.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "blur",
-            "in": "query",
-            "description": "Optional. Blur image.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "backgroundColor",
-            "in": "query",
-            "description": "Optional. Apply a background color for transparent images.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "foregroundLayer",
-            "in": "query",
-            "description": "Optional. Apply a foreground layer on top of the image.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "imageIndex",
-            "in": "query",
-            "description": "Image index.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
           }
         ],
         "responses": {
@@ -19187,121 +18981,6 @@
                   "$ref": "#/components/schemas/ImageFormat"
                 }
               ]
-            }
-          },
-          {
-            "name": "maxWidth",
-            "in": "query",
-            "description": "The maximum image width to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "maxHeight",
-            "in": "query",
-            "description": "The maximum image height to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "percentPlayed",
-            "in": "query",
-            "description": "Optional. Percent to render for the percent played overlay.",
-            "schema": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          {
-            "name": "unplayedCount",
-            "in": "query",
-            "description": "Optional. Unplayed count overlay to render.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "width",
-            "in": "query",
-            "description": "The fixed image width to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "height",
-            "in": "query",
-            "description": "The fixed image height to return.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "quality",
-            "in": "query",
-            "description": "Optional. Quality setting, from 0-100. Defaults to 90 and should suffice in most cases.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "fillWidth",
-            "in": "query",
-            "description": "Width of box to fill.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "fillHeight",
-            "in": "query",
-            "description": "Height of box to fill.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "blur",
-            "in": "query",
-            "description": "Optional. Blur image.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "backgroundColor",
-            "in": "query",
-            "description": "Optional. Apply a background color for transparent images.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "foregroundLayer",
-            "in": "query",
-            "description": "Optional. Apply a foreground layer on top of the image.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "imageIndex",
-            "in": "query",
-            "description": "Image index.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
             }
           }
         ],
@@ -58472,7 +58151,7 @@
                 "$ref": "#/components/schemas/DeviceProfile"
               }
             ],
-            "description": "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see> and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\">codecs</see> (video and/or audio, including codec profiles and levels)\r\nthe device is able to direct play (without transcoding or remuxing),\r\nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\">containers/codecs to transcode to</see> in case it isn't.",
+            "description": "Gets or sets the device profile.",
             "nullable": true
           },
           "DirectPlayProtocols": {
@@ -58991,7 +58670,7 @@
                 "$ref": "#/components/schemas/DeviceProfile"
               }
             ],
-            "description": "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see> and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\">codecs</see> (video and/or audio, including codec profiles and levels)\r\nthe device is able to direct play (without transcoding or remuxing),\r\nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\">containers/codecs to transcode to</see> in case it isn't.",
+            "description": "Gets or sets the device profile.",
             "nullable": true
           },
           "EnableDirectPlay": {
@@ -60666,7 +60345,7 @@
                 "$ref": "#/components/schemas/GroupQueueMode"
               }
             ],
-            "description": "Enum GroupQueueMode."
+            "description": "Gets or sets the mode in which to add the new items."
           }
         },
         "additionalProperties": false,
@@ -63192,7 +62871,7 @@
                 "$ref": "#/components/schemas/GroupRepeatMode"
               }
             ],
-            "description": "Enum GroupRepeatMode."
+            "description": "Gets or sets the repeat mode."
           }
         },
         "additionalProperties": false,
@@ -63211,7 +62890,7 @@
                 "$ref": "#/components/schemas/GroupShuffleMode"
               }
             ],
-            "description": "Enum GroupShuffleMode."
+            "description": "Gets or sets the shuffle mode."
           }
         },
         "additionalProperties": false,

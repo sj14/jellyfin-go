@@ -21,7 +21,7 @@ var _ MappedNullable = &QueueRequestDto{}
 type QueueRequestDto struct {
 	// Gets or sets the items to enqueue.
 	ItemIds []string `json:"ItemIds,omitempty"`
-	// Enum GroupQueueMode.
+	// Gets or sets the mode in which to add the new items.
 	Mode *GroupQueueMode `json:"Mode,omitempty"`
 }
 

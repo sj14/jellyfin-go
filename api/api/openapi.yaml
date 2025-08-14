@@ -11047,97 +11047,6 @@ paths:
           - Svg
           type: string
         style: form
-      - description: The maximum image width to return.
-        explode: true
-        in: query
-        name: maxWidth
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The maximum image height to return.
-        explode: true
-        in: query
-        name: maxHeight
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The fixed image width to return.
-        explode: true
-        in: query
-        name: width
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The fixed image height to return.
-        explode: true
-        in: query
-        name: height
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Width of box to fill.
-        explode: true
-        in: query
-        name: fillWidth
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Height of box to fill.
-        explode: true
-        in: query
-        name: fillHeight
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Blur image.
-        explode: true
-        in: query
-        name: blur
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Apply a background color for transparent images.
-        explode: true
-        in: query
-        name: backgroundColor
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Apply a foreground layer on top of the image.
-        explode: true
-        in: query
-        name: foregroundLayer
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: "Quality setting, from 0-100."
-        explode: true
-        in: query
-        name: quality
-        required: false
-        schema:
-          default: 90
-          format: int32
-          maximum: 100
-          minimum: 0
-          type: integer
-        style: form
       responses:
         "200":
           content:
@@ -16561,122 +16470,6 @@ paths:
           - Svg
           type: string
         style: form
-      - description: The maximum image width to return.
-        explode: true
-        in: query
-        name: maxWidth
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The maximum image height to return.
-        explode: true
-        in: query
-        name: maxHeight
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Optional. Percent to render for the percent played overlay.
-        explode: true
-        in: query
-        name: percentPlayed
-        required: false
-        schema:
-          format: double
-          type: number
-        style: form
-      - description: Optional. Unplayed count overlay to render.
-        explode: true
-        in: query
-        name: unplayedCount
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The fixed image width to return.
-        explode: true
-        in: query
-        name: width
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The fixed image height to return.
-        explode: true
-        in: query
-        name: height
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: "Optional. Quality setting, from 0-100. Defaults to 90 and should\
-          \ suffice in most cases."
-        explode: true
-        in: query
-        name: quality
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Width of box to fill.
-        explode: true
-        in: query
-        name: fillWidth
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Height of box to fill.
-        explode: true
-        in: query
-        name: fillHeight
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Optional. Blur image.
-        explode: true
-        in: query
-        name: blur
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Optional. Apply a background color for transparent images.
-        explode: true
-        in: query
-        name: backgroundColor
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Optional. Apply a foreground layer on top of the image.
-        explode: true
-        in: query
-        name: foregroundLayer
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Image index.
-        explode: true
-        in: query
-        name: imageIndex
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
       responses:
         "200":
           content:
@@ -16762,122 +16555,6 @@ paths:
           - Webp
           - Svg
           type: string
-        style: form
-      - description: The maximum image width to return.
-        explode: true
-        in: query
-        name: maxWidth
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The maximum image height to return.
-        explode: true
-        in: query
-        name: maxHeight
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Optional. Percent to render for the percent played overlay.
-        explode: true
-        in: query
-        name: percentPlayed
-        required: false
-        schema:
-          format: double
-          type: number
-        style: form
-      - description: Optional. Unplayed count overlay to render.
-        explode: true
-        in: query
-        name: unplayedCount
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The fixed image width to return.
-        explode: true
-        in: query
-        name: width
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: The fixed image height to return.
-        explode: true
-        in: query
-        name: height
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: "Optional. Quality setting, from 0-100. Defaults to 90 and should\
-          \ suffice in most cases."
-        explode: true
-        in: query
-        name: quality
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Width of box to fill.
-        explode: true
-        in: query
-        name: fillWidth
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Height of box to fill.
-        explode: true
-        in: query
-        name: fillHeight
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Optional. Blur image.
-        explode: true
-        in: query
-        name: blur
-        required: false
-        schema:
-          format: int32
-          type: integer
-        style: form
-      - description: Optional. Apply a background color for transparent images.
-        explode: true
-        in: query
-        name: backgroundColor
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Optional. Apply a foreground layer on top of the image.
-        explode: true
-        in: query
-        name: foregroundLayer
-        required: false
-        schema:
-          type: string
-        style: form
-      - description: Image index.
-        explode: true
-        in: query
-        name: imageIndex
-        required: false
-        schema:
-          format: int32
-          type: integer
         style: form
       responses:
         "200":
@@ -50412,15 +50089,7 @@ components:
         DeviceProfile:
           allOf:
           - $ref: "#/components/schemas/DeviceProfile"
-          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
-            \ metadata which determines which content a certain device is able to\
-            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
-            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
-            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
-            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
-            \nthe device is able to direct play (without transcoding or remuxing),\r\
-            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
-            >containers/codecs to transcode to</see> in case it isn't."
+          description: Gets or sets the device profile.
           nullable: true
         DirectPlayProtocols:
           description: Gets or sets the device play protocols.
@@ -50860,15 +50529,7 @@ components:
         DeviceProfile:
           allOf:
           - $ref: "#/components/schemas/DeviceProfile"
-          description: "A MediaBrowser.Model.Dlna.DeviceProfile represents a set of\
-            \ metadata which determines which content a certain device is able to\
-            \ play.\r\n<br />\r\nSpecifically, it defines the supported <see cref=\"\
-            P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\">containers</see>\
-            \ and\r\n<see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\"\
-            >codecs</see> (video and/or audio, including codec profiles and levels)\r\
-            \nthe device is able to direct play (without transcoding or remuxing),\r\
-            \nas well as which <see cref=\"P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\"\
-            >containers/codecs to transcode to</see> in case it isn't."
+          description: Gets or sets the device profile.
           nullable: true
         EnableDirectPlay:
           description: Gets or sets a value indicating whether to enable direct play.
@@ -52725,7 +52386,7 @@ components:
         Mode:
           allOf:
           - $ref: "#/components/schemas/GroupQueueMode"
-          description: Enum GroupQueueMode.
+          description: Gets or sets the mode in which to add the new items.
           enum:
           - Queue
           - QueueNext
@@ -58563,7 +58224,7 @@ components:
         Mode:
           allOf:
           - $ref: "#/components/schemas/GroupRepeatMode"
-          description: Enum GroupRepeatMode.
+          description: Gets or sets the repeat mode.
           enum:
           - RepeatOne
           - RepeatAll
@@ -58579,7 +58240,7 @@ components:
         Mode:
           allOf:
           - $ref: "#/components/schemas/GroupShuffleMode"
-          description: Enum GroupShuffleMode.
+          description: Gets or sets the shuffle mode.
           enum:
           - Sorted
           - Shuffle
