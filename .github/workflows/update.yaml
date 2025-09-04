@@ -34,7 +34,7 @@ jobs:
           set +o pipefail # it should not stop on failure
           echo "changed=$(git diff --cached --exit-code >/dev/null 2>&1 || echo $?)" >> "$GITHUB_OUTPUT"
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: stable
       - name: Go mod tidy
