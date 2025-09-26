@@ -25,7 +25,7 @@ type BaseItemPerson struct {
 	Id *string `json:"Id,omitempty"`
 	// Gets or sets the role.
 	Role NullableString `json:"Role,omitempty"`
-	// The person kind.
+	// Gets or sets the type.
 	Type *PersonKind `json:"Type,omitempty"`
 	// Gets or sets the primary image tag.
 	PrimaryImageTag NullableString `json:"PrimaryImageTag,omitempty"`
