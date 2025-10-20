@@ -27,7 +27,7 @@ type TranscodingProfile struct {
 	VideoCodec *string `json:"VideoCodec,omitempty"`
 	// Gets or sets the audio codec.
 	AudioCodec *string `json:"AudioCodec,omitempty"`
-	// Gets or sets the protocol.
+	// Media streaming protocol.  Lowercase for backwards compatibility.
 	Protocol *MediaStreamProtocol `json:"Protocol,omitempty"`
 	// Gets or sets a value indicating whether the content length should be estimated.
 	EstimateContentLength *bool `json:"EstimateContentLength,omitempty"`

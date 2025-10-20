@@ -19,7 +19,7 @@ var _ MappedNullable = &PluginInstallationFailedMessage{}
 
 // PluginInstallationFailedMessage Plugin installation failed message.
 type PluginInstallationFailedMessage struct {
-	// Class InstallationInfo.
+	// Gets or sets the data.
 	Data NullableInstallationInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`

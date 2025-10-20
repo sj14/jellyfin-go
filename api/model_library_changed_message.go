@@ -19,7 +19,7 @@ var _ MappedNullable = &LibraryChangedMessage{}
 
 // LibraryChangedMessage Library changed message.
 type LibraryChangedMessage struct {
-	// Class LibraryUpdateInfo.
+	// Gets or sets the data.
 	Data NullableLibraryUpdateInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
