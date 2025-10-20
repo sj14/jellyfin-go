@@ -19,7 +19,7 @@ var _ MappedNullable = &ScheduledTaskEndedMessage{}
 
 // ScheduledTaskEndedMessage Scheduled task ended message.
 type ScheduledTaskEndedMessage struct {
-	// Class TaskExecutionInfo.
+	// Gets or sets the data.
 	Data NullableTaskResult `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`

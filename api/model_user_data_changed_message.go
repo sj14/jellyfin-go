@@ -19,7 +19,7 @@ var _ MappedNullable = &UserDataChangedMessage{}
 
 // UserDataChangedMessage User data changed message.
 type UserDataChangedMessage struct {
-	// Class UserDataChangeInfo.
+	// Gets or sets the data.
 	Data NullableUserDataChangeInfo `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`

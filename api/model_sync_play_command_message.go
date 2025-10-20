@@ -19,7 +19,7 @@ var _ MappedNullable = &SyncPlayCommandMessage{}
 
 // SyncPlayCommandMessage Sync play command.
 type SyncPlayCommandMessage struct {
-	// Class SendCommand.
+	// Gets or sets the data.
 	Data NullableSendCommand `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`

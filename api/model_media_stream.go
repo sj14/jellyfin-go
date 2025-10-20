@@ -60,13 +60,13 @@ type MediaStream struct {
 	// Gets or sets the title.
 	Title NullableString `json:"Title,omitempty"`
 	Hdr10PlusPresentFlag NullableBool `json:"Hdr10PlusPresentFlag,omitempty"`
-	// Gets the video range.
+	// An enum representing video ranges.
 	VideoRange *VideoRange `json:"VideoRange,omitempty"`
-	// Gets the video range type.
+	// An enum representing types of video ranges.
 	VideoRangeType *VideoRangeType `json:"VideoRangeType,omitempty"`
 	// Gets the video dovi title.
 	VideoDoViTitle NullableString `json:"VideoDoViTitle,omitempty"`
-	// Gets the audio spatial format.
+	// An enum representing formats of spatial audio.
 	AudioSpatialFormat *AudioSpatialFormat `json:"AudioSpatialFormat,omitempty"`
 	LocalizedUndefined NullableString `json:"LocalizedUndefined,omitempty"`
 	LocalizedDefault NullableString `json:"LocalizedDefault,omitempty"`
