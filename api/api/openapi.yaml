@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Jellyfin API
-  version: 10.11.0
-  x-jellyfin-version: 10.11.0
+  version: 10.11.1
+  x-jellyfin-version: 10.11.1
 servers:
 - url: http://localhost
 paths:
@@ -43515,12 +43515,12 @@ components:
         User:
           allOf:
           - $ref: "#/components/schemas/UserDto"
-          description: Gets or sets the user.
+          description: Class UserDto.
           nullable: true
         SessionInfo:
           allOf:
           - $ref: "#/components/schemas/SessionInfoDto"
-          description: Gets or sets the session info.
+          description: Session info DTO.
           nullable: true
         AccessToken:
           description: Gets or sets the access token.
@@ -44681,7 +44681,7 @@ components:
         Type:
           allOf:
           - $ref: "#/components/schemas/BaseItemKind"
-          description: The base item kind.
+          description: Gets or sets the type.
           enum:
           - AggregateFolder
           - Audio
@@ -45016,7 +45016,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/MediaType"
           default: Unknown
-          description: Media types.
+          description: Gets or sets the type of the media.
           enum:
           - Unknown
           - Video
@@ -46989,7 +46989,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/PersonKind"
           default: Unknown
-          description: The person kind.
+          description: Gets or sets the type.
           enum:
           - Unknown
           - Actor
@@ -48190,7 +48190,7 @@ components:
         ScrollDirection:
           allOf:
           - $ref: "#/components/schemas/ScrollDirection"
-          description: An enum representing the axis that should be scrolled.
+          description: Gets or sets the scroll direction.
           enum:
           - Horizontal
           - Vertical
@@ -48205,7 +48205,7 @@ components:
         SortOrder:
           allOf:
           - $ref: "#/components/schemas/SortOrder"
-          description: An enum representing the sorting order.
+          description: Gets or sets the sort order.
           enum:
           - Ascending
           - Descending
@@ -49894,7 +49894,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/LibraryUpdateInfo"
-          description: Gets or sets the data.
+          description: Class LibraryUpdateInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -50885,8 +50885,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/MediaSegmentType"
           default: Unknown
-          description: Defines the types of content an individual Jellyfin.Database.Implementations.Entities.MediaSegment
-            represents.
+          description: Gets or sets the type of content this segment defines.
           enum:
           - Unknown
           - Commercial
@@ -51508,7 +51507,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/VideoRange"
           default: Unknown
-          description: An enum representing video ranges.
+          description: Gets the video range.
           enum:
           - Unknown
           - SDR
@@ -51519,7 +51518,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/VideoRangeType"
           default: Unknown
-          description: An enum representing types of video ranges.
+          description: Gets the video range type.
           enum:
           - Unknown
           - SDR
@@ -51545,7 +51544,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/AudioSpatialFormat"
           default: None
-          description: An enum representing formats of spatial audio.
+          description: Gets the audio spatial format.
           enum:
           - None
           - DolbyAtmos
@@ -53807,7 +53806,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/PlayRequest"
-          description: Gets or sets the data.
+          description: Class PlayRequest.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -54165,7 +54164,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/InstallationInfo"
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -54222,7 +54221,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/InstallationInfo"
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -54279,7 +54278,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/InstallationInfo"
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -54336,7 +54335,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/InstallationInfo"
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -54405,7 +54404,8 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/PluginInfo"
-          description: Gets or sets the data.
+          description: This is a serializable stub class that is used by the api to
+            provide information about installed plugins.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -56960,7 +56960,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/TaskResult"
-          description: Gets or sets the data.
+          description: Class TaskExecutionInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -57265,7 +57265,7 @@ components:
         Type:
           allOf:
           - $ref: "#/components/schemas/BaseItemKind"
-          description: The base item kind.
+          description: Gets or sets the type.
           enum:
           - AggregateFolder
           - Audio
@@ -57318,7 +57318,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/MediaType"
           default: Unknown
-          description: Media types.
+          description: Gets or sets the type of the media.
           enum:
           - Unknown
           - Video
@@ -60820,7 +60820,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/SendCommand"
-          description: Gets or sets the data.
+          description: Class SendCommand.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -63963,7 +63963,7 @@ components:
         Protocol:
           allOf:
           - $ref: "#/components/schemas/MediaStreamProtocol"
-          description: "Media streaming protocol.\r\nLowercase for backwards compatibility."
+          description: Gets or sets the protocol.
           enum:
           - http
           - hls
@@ -64597,7 +64597,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/UserDataChangeInfo"
-          description: Gets or sets the data.
+          description: Class UserDataChangeInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -65084,7 +65084,8 @@ components:
         SyncPlayAccess:
           allOf:
           - $ref: "#/components/schemas/SyncPlayUserAccessType"
-          description: Enum SyncPlayUserAccessType.
+          description: Gets or sets a value indicating what SyncPlay features the
+            user can access.
           enum:
           - CreateAndJoinGroups
           - JoinGroups
@@ -65101,7 +65102,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/UserDto"
-          description: Gets or sets the data.
+          description: Class UserDto.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
