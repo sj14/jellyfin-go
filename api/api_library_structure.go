@@ -176,8 +176,9 @@ func (a *LibraryStructureAPIService) AddMediaPathExecute(r ApiAddMediaPathReques
 	if r.refreshLibrary != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.refreshLibrary = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", defaultValue, "form", "")
+        r.refreshLibrary = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
@@ -336,8 +337,9 @@ func (a *LibraryStructureAPIService) AddVirtualFolderExecute(r ApiAddVirtualFold
 	if r.refreshLibrary != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.refreshLibrary = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", defaultValue, "form", "")
+        r.refreshLibrary = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
@@ -582,8 +584,9 @@ func (a *LibraryStructureAPIService) RemoveMediaPathExecute(r ApiRemoveMediaPath
 	if r.refreshLibrary != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.refreshLibrary = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", defaultValue, "form", "")
+        r.refreshLibrary = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -705,8 +708,9 @@ func (a *LibraryStructureAPIService) RemoveVirtualFolderExecute(r ApiRemoveVirtu
 	if r.refreshLibrary != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.refreshLibrary = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", defaultValue, "form", "")
+        r.refreshLibrary = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -838,8 +842,9 @@ func (a *LibraryStructureAPIService) RenameVirtualFolderExecute(r ApiRenameVirtu
 	if r.refreshLibrary != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", r.refreshLibrary, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.refreshLibrary = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "refreshLibrary", defaultValue, "form", "")
+        r.refreshLibrary = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

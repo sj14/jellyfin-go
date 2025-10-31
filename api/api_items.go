@@ -1362,14 +1362,16 @@ func (a *ItemsAPIService) GetItemsExecute(r ApiGetItemsRequest) (*BaseItemDtoQue
 	if r.enableTotalRecordCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTotalRecordCount = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+        r.enableTotalRecordCount = &defaultValue
 	}
 	if r.enableImages != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableImages = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", defaultValue, "form", "")
+        r.enableImages = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1666,20 +1668,23 @@ func (a *ItemsAPIService) GetResumeItemsExecute(r ApiGetResumeItemsRequest) (*Ba
 	if r.enableTotalRecordCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTotalRecordCount = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+        r.enableTotalRecordCount = &defaultValue
 	}
 	if r.enableImages != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableImages = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", defaultValue, "form", "")
+        r.enableImages = &defaultValue
 	}
 	if r.excludeActiveSessions != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "excludeActiveSessions", r.excludeActiveSessions, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.excludeActiveSessions = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "excludeActiveSessions", defaultValue, "form", "")
+        r.excludeActiveSessions = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -579,14 +579,16 @@ func (a *PlaystateAPIService) OnPlaybackProgressExecute(r ApiOnPlaybackProgressR
 	if r.isPaused != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "isPaused", r.isPaused, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.isPaused = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "isPaused", defaultValue, "form", "")
+        r.isPaused = &defaultValue
 	}
 	if r.isMuted != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "isMuted", r.isMuted, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.isMuted = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "isMuted", defaultValue, "form", "")
+        r.isMuted = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -765,8 +767,9 @@ func (a *PlaystateAPIService) OnPlaybackStartExecute(r ApiOnPlaybackStartRequest
 	if r.canSeek != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "canSeek", r.canSeek, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.canSeek = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "canSeek", defaultValue, "form", "")
+        r.canSeek = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

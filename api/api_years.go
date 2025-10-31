@@ -434,14 +434,16 @@ func (a *YearsAPIService) GetYearsExecute(r ApiGetYearsRequest) (*BaseItemDtoQue
 	if r.recursive != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "recursive", r.recursive, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.recursive = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "recursive", defaultValue, "form", "")
+        r.recursive = &defaultValue
 	}
 	if r.enableImages != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableImages = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", defaultValue, "form", "")
+        r.enableImages = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

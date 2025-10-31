@@ -451,14 +451,16 @@ func (a *MusicGenresAPIService) GetMusicGenresExecute(r ApiGetMusicGenresRequest
 	if r.enableImages != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableImages = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", defaultValue, "form", "")
+        r.enableImages = &defaultValue
 	}
 	if r.enableTotalRecordCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTotalRecordCount = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+        r.enableTotalRecordCount = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

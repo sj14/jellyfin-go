@@ -722,8 +722,9 @@ func (a *DynamicHlsAPIService) GetHlsAudioSegmentExecute(r ApiGetHlsAudioSegment
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1382,14 +1383,16 @@ func (a *DynamicHlsAPIService) GetHlsVideoSegmentExecute(r ApiGetHlsVideoSegment
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	if r.alwaysBurnInSubtitleWhenTranscoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", r.alwaysBurnInSubtitleWhenTranscoding, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", defaultValue, "form", "")
+        r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2034,14 +2037,16 @@ func (a *DynamicHlsAPIService) GetLiveHlsStreamExecute(r ApiGetLiveHlsStreamRequ
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	if r.alwaysBurnInSubtitleWhenTranscoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", r.alwaysBurnInSubtitleWhenTranscoding, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", defaultValue, "form", "")
+        r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2657,14 +2662,16 @@ func (a *DynamicHlsAPIService) GetMasterHlsAudioPlaylistExecute(r ApiGetMasterHl
 	if r.enableAdaptiveBitrateStreaming != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAdaptiveBitrateStreaming", r.enableAdaptiveBitrateStreaming, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.enableAdaptiveBitrateStreaming = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAdaptiveBitrateStreaming", defaultValue, "form", "")
+        r.enableAdaptiveBitrateStreaming = &defaultValue
 	}
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3304,26 +3311,30 @@ func (a *DynamicHlsAPIService) GetMasterHlsVideoPlaylistExecute(r ApiGetMasterHl
 	if r.enableAdaptiveBitrateStreaming != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAdaptiveBitrateStreaming", r.enableAdaptiveBitrateStreaming, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.enableAdaptiveBitrateStreaming = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAdaptiveBitrateStreaming", defaultValue, "form", "")
+        r.enableAdaptiveBitrateStreaming = &defaultValue
 	}
 	if r.enableTrickplay != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTrickplay", r.enableTrickplay, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTrickplay = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTrickplay", defaultValue, "form", "")
+        r.enableTrickplay = &defaultValue
 	}
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	if r.alwaysBurnInSubtitleWhenTranscoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", r.alwaysBurnInSubtitleWhenTranscoding, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", defaultValue, "form", "")
+        r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3931,8 +3942,9 @@ func (a *DynamicHlsAPIService) GetVariantHlsAudioPlaylistExecute(r ApiGetVariant
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4557,14 +4569,16 @@ func (a *DynamicHlsAPIService) GetVariantHlsVideoPlaylistExecute(r ApiGetVariant
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	if r.alwaysBurnInSubtitleWhenTranscoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", r.alwaysBurnInSubtitleWhenTranscoding, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", defaultValue, "form", "")
+        r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5180,14 +5194,16 @@ func (a *DynamicHlsAPIService) HeadMasterHlsAudioPlaylistExecute(r ApiHeadMaster
 	if r.enableAdaptiveBitrateStreaming != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAdaptiveBitrateStreaming", r.enableAdaptiveBitrateStreaming, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.enableAdaptiveBitrateStreaming = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAdaptiveBitrateStreaming", defaultValue, "form", "")
+        r.enableAdaptiveBitrateStreaming = &defaultValue
 	}
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5827,26 +5843,30 @@ func (a *DynamicHlsAPIService) HeadMasterHlsVideoPlaylistExecute(r ApiHeadMaster
 	if r.enableAdaptiveBitrateStreaming != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAdaptiveBitrateStreaming", r.enableAdaptiveBitrateStreaming, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.enableAdaptiveBitrateStreaming = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAdaptiveBitrateStreaming", defaultValue, "form", "")
+        r.enableAdaptiveBitrateStreaming = &defaultValue
 	}
 	if r.enableTrickplay != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTrickplay", r.enableTrickplay, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTrickplay = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTrickplay", defaultValue, "form", "")
+        r.enableTrickplay = &defaultValue
 	}
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	if r.alwaysBurnInSubtitleWhenTranscoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", r.alwaysBurnInSubtitleWhenTranscoding, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "alwaysBurnInSubtitleWhenTranscoding", defaultValue, "form", "")
+        r.alwaysBurnInSubtitleWhenTranscoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

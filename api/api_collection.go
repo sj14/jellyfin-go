@@ -279,8 +279,9 @@ func (a *CollectionAPIService) CreateCollectionExecute(r ApiCreateCollectionRequ
 	if r.isLocked != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "isLocked", r.isLocked, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.isLocked = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "isLocked", defaultValue, "form", "")
+        r.isLocked = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

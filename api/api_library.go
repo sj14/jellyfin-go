@@ -1303,8 +1303,9 @@ func (a *LibraryAPIService) GetLibraryOptionsInfoExecute(r ApiGetLibraryOptionsI
 	if r.isNewLibrary != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "isNewLibrary", r.isNewLibrary, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.isNewLibrary = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "isNewLibrary", defaultValue, "form", "")
+        r.isNewLibrary = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2713,8 +2714,9 @@ func (a *LibraryAPIService) GetThemeMediaExecute(r ApiGetThemeMediaRequest) (*Al
 	if r.inheritFromParent != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "inheritFromParent", r.inheritFromParent, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.inheritFromParent = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "inheritFromParent", defaultValue, "form", "")
+        r.inheritFromParent = &defaultValue
 	}
 	if r.sortBy != nil {
 		t := *r.sortBy
@@ -2887,8 +2889,9 @@ func (a *LibraryAPIService) GetThemeSongsExecute(r ApiGetThemeSongsRequest) (*Th
 	if r.inheritFromParent != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "inheritFromParent", r.inheritFromParent, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.inheritFromParent = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "inheritFromParent", defaultValue, "form", "")
+        r.inheritFromParent = &defaultValue
 	}
 	if r.sortBy != nil {
 		t := *r.sortBy
@@ -3072,8 +3075,9 @@ func (a *LibraryAPIService) GetThemeVideosExecute(r ApiGetThemeVideosRequest) (*
 	if r.inheritFromParent != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "inheritFromParent", r.inheritFromParent, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.inheritFromParent = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "inheritFromParent", defaultValue, "form", "")
+        r.inheritFromParent = &defaultValue
 	}
 	if r.sortBy != nil {
 		t := *r.sortBy

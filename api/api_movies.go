@@ -136,14 +136,16 @@ func (a *MoviesAPIService) GetMovieRecommendationsExecute(r ApiGetMovieRecommend
 	if r.categoryLimit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "categoryLimit", r.categoryLimit, "form", "")
 	} else {
-		var defaultValue int32 = 5
-		r.categoryLimit = &defaultValue
+        var defaultValue int32 = 5
+        parameterAddToHeaderOrQuery(localVarQueryParams, "categoryLimit", defaultValue, "form", "")
+        r.categoryLimit = &defaultValue
 	}
 	if r.itemLimit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "itemLimit", r.itemLimit, "form", "")
 	} else {
-		var defaultValue int32 = 8
-		r.itemLimit = &defaultValue
+        var defaultValue int32 = 8
+        parameterAddToHeaderOrQuery(localVarQueryParams, "itemLimit", defaultValue, "form", "")
+        r.itemLimit = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

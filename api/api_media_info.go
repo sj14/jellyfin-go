@@ -255,8 +255,9 @@ func (a *MediaInfoAPIService) GetBitrateTestBytesExecute(r ApiGetBitrateTestByte
 	if r.size != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "size", r.size, "form", "")
 	} else {
-		var defaultValue int32 = 102400
-		r.size = &defaultValue
+        var defaultValue int32 = 102400
+        parameterAddToHeaderOrQuery(localVarQueryParams, "size", defaultValue, "form", "")
+        r.size = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -273,8 +273,9 @@ func (a *UserViewsAPIService) GetUserViewsExecute(r ApiGetUserViewsRequest) (*Ba
 	if r.includeHidden != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includeHidden", r.includeHidden, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.includeHidden = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includeHidden", defaultValue, "form", "")
+        r.includeHidden = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -157,8 +157,9 @@ func (a *SuggestionsAPIService) GetSuggestionsExecute(r ApiGetSuggestionsRequest
 	if r.enableTotalRecordCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.enableTotalRecordCount = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+        r.enableTotalRecordCount = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -283,20 +283,23 @@ func (a *UniversalAudioAPIService) GetUniversalAudioStreamExecute(r ApiGetUniver
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	if r.breakOnNonKeyFrames != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.breakOnNonKeyFrames = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", defaultValue, "form", "")
+        r.breakOnNonKeyFrames = &defaultValue
 	}
 	if r.enableRedirection != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRedirection", r.enableRedirection, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableRedirection = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableRedirection", defaultValue, "form", "")
+        r.enableRedirection = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -606,20 +609,23 @@ func (a *UniversalAudioAPIService) HeadUniversalAudioStreamExecute(r ApiHeadUniv
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	if r.breakOnNonKeyFrames != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", r.breakOnNonKeyFrames, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.breakOnNonKeyFrames = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "breakOnNonKeyFrames", defaultValue, "form", "")
+        r.breakOnNonKeyFrames = &defaultValue
 	}
 	if r.enableRedirection != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableRedirection", r.enableRedirection, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableRedirection = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableRedirection", defaultValue, "form", "")
+        r.enableRedirection = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

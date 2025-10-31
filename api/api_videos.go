@@ -916,8 +916,9 @@ func (a *VideosAPIService) GetVideoStreamExecute(r ApiGetVideoStreamRequest) (*o
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1524,8 +1525,9 @@ func (a *VideosAPIService) GetVideoStreamByContainerExecute(r ApiGetVideoStreamB
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2139,8 +2141,9 @@ func (a *VideosAPIService) HeadVideoStreamExecute(r ApiHeadVideoStreamRequest) (
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2747,8 +2750,9 @@ func (a *VideosAPIService) HeadVideoStreamByContainerExecute(r ApiHeadVideoStrea
 	if r.enableAudioVbrEncoding != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", r.enableAudioVbrEncoding, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableAudioVbrEncoding = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableAudioVbrEncoding", defaultValue, "form", "")
+        r.enableAudioVbrEncoding = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

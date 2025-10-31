@@ -224,8 +224,9 @@ func (a *ItemLookupAPIService) ApplySearchCriteriaExecute(r ApiApplySearchCriter
 	if r.replaceAllImages != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", r.replaceAllImages, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.replaceAllImages = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", defaultValue, "form", "")
+        r.replaceAllImages = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}

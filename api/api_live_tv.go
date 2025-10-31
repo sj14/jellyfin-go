@@ -611,14 +611,16 @@ func (a *LiveTvAPIService) AddListingProviderExecute(r ApiAddListingProviderRequ
 	if r.validateListings != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "validateListings", r.validateListings, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.validateListings = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "validateListings", defaultValue, "form", "")
+        r.validateListings = &defaultValue
 	}
 	if r.validateLogin != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "validateLogin", r.validateLogin, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.validateLogin = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "validateLogin", defaultValue, "form", "")
+        r.validateLogin = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
@@ -1624,8 +1626,9 @@ func (a *LiveTvAPIService) DiscoverTunersExecute(r ApiDiscoverTunersRequest) ([]
 	if r.newDevicesOnly != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "newDevicesOnly", r.newDevicesOnly, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.newDevicesOnly = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "newDevicesOnly", defaultValue, "form", "")
+        r.newDevicesOnly = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1748,8 +1751,9 @@ func (a *LiveTvAPIService) DiscvoverTunersExecute(r ApiDiscvoverTunersRequest) (
 	if r.newDevicesOnly != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "newDevicesOnly", r.newDevicesOnly, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.newDevicesOnly = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "newDevicesOnly", defaultValue, "form", "")
+        r.newDevicesOnly = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3072,14 +3076,16 @@ func (a *LiveTvAPIService) GetLiveTvChannelsExecute(r ApiGetLiveTvChannelsReques
 	if r.enableFavoriteSorting != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableFavoriteSorting", r.enableFavoriteSorting, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.enableFavoriteSorting = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableFavoriteSorting", defaultValue, "form", "")
+        r.enableFavoriteSorting = &defaultValue
 	}
 	if r.addCurrentProgram != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "addCurrentProgram", r.addCurrentProgram, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.addCurrentProgram = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "addCurrentProgram", defaultValue, "form", "")
+        r.addCurrentProgram = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3629,8 +3635,9 @@ func (a *LiveTvAPIService) GetLiveTvProgramsExecute(r ApiGetLiveTvProgramsReques
 	if r.enableTotalRecordCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTotalRecordCount = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+        r.enableTotalRecordCount = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4182,8 +4189,9 @@ func (a *LiveTvAPIService) GetRecommendedProgramsExecute(r ApiGetRecommendedProg
 	if r.enableTotalRecordCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTotalRecordCount = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+        r.enableTotalRecordCount = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5001,8 +5009,9 @@ func (a *LiveTvAPIService) GetRecordingsExecute(r ApiGetRecordingsRequest) (*Bas
 	if r.enableTotalRecordCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTotalRecordCount = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+        r.enableTotalRecordCount = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5274,8 +5283,9 @@ func (a *LiveTvAPIService) GetRecordingsSeriesExecute(r ApiGetRecordingsSeriesRe
 	if r.enableTotalRecordCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.enableTotalRecordCount = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+        r.enableTotalRecordCount = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
