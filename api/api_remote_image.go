@@ -423,8 +423,9 @@ func (a *RemoteImageAPIService) GetRemoteImagesExecute(r ApiGetRemoteImagesReque
 	if r.includeAllLanguages != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includeAllLanguages", r.includeAllLanguages, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.includeAllLanguages = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includeAllLanguages", defaultValue, "form", "")
+        r.includeAllLanguages = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

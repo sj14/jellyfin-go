@@ -704,14 +704,16 @@ func (a *UserLibraryAPIService) GetLatestMediaExecute(r ApiGetLatestMediaRequest
 	if r.limit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
 	} else {
-		var defaultValue int32 = 20
-		r.limit = &defaultValue
+        var defaultValue int32 = 20
+        parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
+        r.limit = &defaultValue
 	}
 	if r.groupItems != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "groupItems", r.groupItems, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.groupItems = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "groupItems", defaultValue, "form", "")
+        r.groupItems = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

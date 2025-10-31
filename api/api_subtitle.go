@@ -881,20 +881,23 @@ func (a *SubtitleAPIService) GetSubtitleExecute(r ApiGetSubtitleRequest) (*os.Fi
 	if r.copyTimestamps != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.copyTimestamps = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", defaultValue, "form", "")
+        r.copyTimestamps = &defaultValue
 	}
 	if r.addVttTimeMap != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "addVttTimeMap", r.addVttTimeMap, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.addVttTimeMap = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "addVttTimeMap", defaultValue, "form", "")
+        r.addVttTimeMap = &defaultValue
 	}
 	if r.startPositionTicks != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "startPositionTicks", r.startPositionTicks, "form", "")
 	} else {
-		var defaultValue int64 = 0
-		r.startPositionTicks = &defaultValue
+        var defaultValue int64 = 0
+        parameterAddToHeaderOrQuery(localVarQueryParams, "startPositionTicks", defaultValue, "form", "")
+        r.startPositionTicks = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1240,14 +1243,16 @@ func (a *SubtitleAPIService) GetSubtitleWithTicksExecute(r ApiGetSubtitleWithTic
 	if r.copyTimestamps != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", r.copyTimestamps, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.copyTimestamps = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "copyTimestamps", defaultValue, "form", "")
+        r.copyTimestamps = &defaultValue
 	}
 	if r.addVttTimeMap != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "addVttTimeMap", r.addVttTimeMap, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.addVttTimeMap = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "addVttTimeMap", defaultValue, "form", "")
+        r.addVttTimeMap = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

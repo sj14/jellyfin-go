@@ -274,32 +274,37 @@ func (a *SearchAPIService) GetSearchHintsExecute(r ApiGetSearchHintsRequest) (*S
 	if r.includePeople != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includePeople", r.includePeople, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.includePeople = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includePeople", defaultValue, "form", "")
+        r.includePeople = &defaultValue
 	}
 	if r.includeMedia != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includeMedia", r.includeMedia, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.includeMedia = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includeMedia", defaultValue, "form", "")
+        r.includeMedia = &defaultValue
 	}
 	if r.includeGenres != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includeGenres", r.includeGenres, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.includeGenres = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includeGenres", defaultValue, "form", "")
+        r.includeGenres = &defaultValue
 	}
 	if r.includeStudios != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includeStudios", r.includeStudios, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.includeStudios = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includeStudios", defaultValue, "form", "")
+        r.includeStudios = &defaultValue
 	}
 	if r.includeArtists != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includeArtists", r.includeArtists, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.includeArtists = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includeArtists", defaultValue, "form", "")
+        r.includeArtists = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

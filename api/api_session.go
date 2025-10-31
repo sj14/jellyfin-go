@@ -1118,14 +1118,16 @@ func (a *SessionAPIService) PostCapabilitiesExecute(r ApiPostCapabilitiesRequest
 	if r.supportsMediaControl != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "supportsMediaControl", r.supportsMediaControl, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.supportsMediaControl = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "supportsMediaControl", defaultValue, "form", "")
+        r.supportsMediaControl = &defaultValue
 	}
 	if r.supportsPersistentIdentifier != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "supportsPersistentIdentifier", r.supportsPersistentIdentifier, "form", "")
 	} else {
-		var defaultValue bool = true
-		r.supportsPersistentIdentifier = &defaultValue
+        var defaultValue bool = true
+        parameterAddToHeaderOrQuery(localVarQueryParams, "supportsPersistentIdentifier", defaultValue, "form", "")
+        r.supportsPersistentIdentifier = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -121,32 +121,37 @@ func (a *ItemRefreshAPIService) RefreshItemExecute(r ApiRefreshItemRequest) (*ht
 	if r.metadataRefreshMode != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "metadataRefreshMode", r.metadataRefreshMode, "form", "")
 	} else {
-		var defaultValue MetadataRefreshMode = "None"
-		r.metadataRefreshMode = &defaultValue
+        var defaultValue MetadataRefreshMode = "None"
+        parameterAddToHeaderOrQuery(localVarQueryParams, "metadataRefreshMode", defaultValue, "form", "")
+        r.metadataRefreshMode = &defaultValue
 	}
 	if r.imageRefreshMode != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "imageRefreshMode", r.imageRefreshMode, "form", "")
 	} else {
-		var defaultValue MetadataRefreshMode = "None"
-		r.imageRefreshMode = &defaultValue
+        var defaultValue MetadataRefreshMode = "None"
+        parameterAddToHeaderOrQuery(localVarQueryParams, "imageRefreshMode", defaultValue, "form", "")
+        r.imageRefreshMode = &defaultValue
 	}
 	if r.replaceAllMetadata != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllMetadata", r.replaceAllMetadata, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.replaceAllMetadata = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllMetadata", defaultValue, "form", "")
+        r.replaceAllMetadata = &defaultValue
 	}
 	if r.replaceAllImages != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", r.replaceAllImages, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.replaceAllImages = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", defaultValue, "form", "")
+        r.replaceAllImages = &defaultValue
 	}
 	if r.regenerateTrickplay != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "regenerateTrickplay", r.regenerateTrickplay, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.regenerateTrickplay = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "regenerateTrickplay", defaultValue, "form", "")
+        r.regenerateTrickplay = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

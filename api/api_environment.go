@@ -281,14 +281,16 @@ func (a *EnvironmentAPIService) GetDirectoryContentsExecute(r ApiGetDirectoryCon
 	if r.includeFiles != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includeFiles", r.includeFiles, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.includeFiles = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includeFiles", defaultValue, "form", "")
+        r.includeFiles = &defaultValue
 	}
 	if r.includeDirectories != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "includeDirectories", r.includeDirectories, "form", "")
 	} else {
-		var defaultValue bool = false
-		r.includeDirectories = &defaultValue
+        var defaultValue bool = false
+        parameterAddToHeaderOrQuery(localVarQueryParams, "includeDirectories", defaultValue, "form", "")
+        r.includeDirectories = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
