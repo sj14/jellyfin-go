@@ -2,8 +2,8 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Jellyfin API",
-    "version": "10.11.2",
-    "x-jellyfin-version": "10.11.2"
+    "version": "10.11.3",
+    "x-jellyfin-version": "10.11.3"
   },
   "servers": [
     {
