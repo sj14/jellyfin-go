@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
   title: Jellyfin API
-  version: 10.11.6
-  x-jellyfin-version: 10.11.6
+  version: 10.11.7
+  x-jellyfin-version: 10.11.7
 servers:
 - url: http://localhost
 paths:
@@ -23159,8 +23159,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvAccess
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Get channel mapping options.
       tags:
       - LiveTv
@@ -23224,8 +23223,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvManagement
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Set channel mappings.
       tags:
       - LiveTv
@@ -23677,8 +23675,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvManagement
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Delete listing provider.
       tags:
       - LiveTv
@@ -23764,8 +23761,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvManagement
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Adds a listings provider.
       tags:
       - LiveTv
@@ -23936,8 +23932,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvAccess
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Gets available countries.
       tags:
       - LiveTv
@@ -26057,8 +26052,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvManagement
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Deletes a tuner host.
       tags:
       - LiveTv
@@ -26117,8 +26111,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvManagement
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Adds a tuner host.
       tags:
       - LiveTv
@@ -26214,8 +26207,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvManagement
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Resets a tv tuner.
       tags:
       - LiveTv
@@ -26276,8 +26268,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvManagement
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Discover tuners.
       tags:
       - LiveTv
@@ -26338,8 +26329,7 @@ paths:
           description: Forbidden
       security:
       - CustomAuthentication:
-        - LiveTvManagement
-        - DefaultAuthorization
+        - RequiresElevation
       summary: Discover tuners.
       tags:
       - LiveTv
@@ -52324,6 +52314,8 @@ components:
       properties:
         GroupName:
           description: Gets or sets the group name.
+          maxLength: 200
+          minLength: 0
           type: string
       type: object
     NextItemRequestDto:
