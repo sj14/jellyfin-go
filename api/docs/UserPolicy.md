@@ -47,7 +47,7 @@ Name | Type | Description | Notes
 **RemoteClientBitrateLimit** | Pointer to **int32** |  | [optional] 
 **AuthenticationProviderId** | **string** |  | 
 **PasswordResetProviderId** | **string** |  | 
-**SyncPlayAccess** | Pointer to [**SyncPlayUserAccessType**](SyncPlayUserAccessType.md) | Gets or sets a value indicating what SyncPlay features the user can access. | [optional] 
+**SyncPlayAccess** | Pointer to [**SyncPlayUserAccessType**](SyncPlayUserAccessType.md) | Enum SyncPlayUserAccessType. | [optional] 
 
 ## Methods
 

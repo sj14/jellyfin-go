@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **MaxAudioChannels** | Pointer to **NullableInt32** | Gets or sets the max audio channels. | [optional] 
 **MediaSourceId** | Pointer to **NullableString** | Gets or sets the media source id. | [optional] 
 **LiveStreamId** | Pointer to **NullableString** | Gets or sets the live stream id. | [optional] 
-**DeviceProfile** | Pointer to [**NullableDeviceProfile**](DeviceProfile.md) | A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.  &lt;br /&gt;  Specifically, it defines the supported &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles\&quot;&gt;containers&lt;/see&gt; and  &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles\&quot;&gt;codecs&lt;/see&gt; (video and/or audio, including codec profiles and levels)  the device is able to direct play (without transcoding or remuxing),  as well as which &lt;see cref&#x3D;\&quot;P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles\&quot;&gt;containers/codecs to transcode to&lt;/see&gt; in case it isn&#39;t. | [optional] 
+**DeviceProfile** | Pointer to [**NullableDeviceProfile**](DeviceProfile.md) | Gets or sets the device profile. | [optional] 
 **EnableDirectPlay** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable direct play. | [optional] 
 **EnableDirectStream** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable direct stream. | [optional] 
 **EnableTranscoding** | Pointer to **NullableBool** | Gets or sets a value indicating whether to enable transcoding. | [optional] 
