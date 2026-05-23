@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**User** | Pointer to [**NullableUserDto**](UserDto.md) | Class UserDto. | [optional] 
-**SessionInfo** | Pointer to [**NullableSessionInfoDto**](SessionInfoDto.md) | Session info DTO. | [optional] 
+**User** | Pointer to [**NullableUserDto**](UserDto.md) | Gets or sets the user. | [optional] 
+**SessionInfo** | Pointer to [**NullableSessionInfoDto**](SessionInfoDto.md) | Gets or sets the session info. | [optional] 
 **AccessToken** | Pointer to **NullableString** | Gets or sets the access token. | [optional] 
 **ServerId** | Pointer to **NullableString** | Gets or sets the server id. | [optional] 
 
