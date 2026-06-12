@@ -9,6 +9,7 @@ load:
 generate: clear
 	openapi-generator-cli version-manager set latest
 	openapi-generator-cli generate -c config.yaml
+	find . -name "*.go" -exec perl -i -ne 'print unless /^API version: /' {} +
 
 .PHONY: clear
 clear:
