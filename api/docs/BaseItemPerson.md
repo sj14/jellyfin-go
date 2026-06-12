@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Role** | Pointer to **NullableString** | Gets or sets the role. | [optional] 
 **Type** | Pointer to [**PersonKind**](PersonKind.md) | The person kind. | [optional] [default to PERSONKIND_UNKNOWN]
 **PrimaryImageTag** | Pointer to **NullableString** | Gets or sets the primary image tag. | [optional] 
-**ImageBlurHashes** | Pointer to [**NullableBaseItemPersonImageBlurHashes**](BaseItemPersonImageBlurHashes.md) |  | [optional] 
+**ImageBlurHashes** | Pointer to [**NullableBaseItemDtoImageBlurHashes**](BaseItemDtoImageBlurHashes.md) |  | [optional] 
 
 ## Methods
 
@@ -187,20 +187,20 @@ HasPrimaryImageTag returns a boolean if a field has been set.
 UnsetPrimaryImageTag ensures that no value is present for PrimaryImageTag, not even an explicit nil
 ### GetImageBlurHashes
 
-`func (o *BaseItemPerson) GetImageBlurHashes() BaseItemPersonImageBlurHashes`
+`func (o *BaseItemPerson) GetImageBlurHashes() BaseItemDtoImageBlurHashes`
 
 GetImageBlurHashes returns the ImageBlurHashes field if non-nil, zero value otherwise.
 
 ### GetImageBlurHashesOk
 
-`func (o *BaseItemPerson) GetImageBlurHashesOk() (*BaseItemPersonImageBlurHashes, bool)`
+`func (o *BaseItemPerson) GetImageBlurHashesOk() (*BaseItemDtoImageBlurHashes, bool)`
 
 GetImageBlurHashesOk returns a tuple with the ImageBlurHashes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageBlurHashes
 
-`func (o *BaseItemPerson) SetImageBlurHashes(v BaseItemPersonImageBlurHashes)`
+`func (o *BaseItemPerson) SetImageBlurHashes(v BaseItemDtoImageBlurHashes)`
 
 SetImageBlurHashes sets ImageBlurHashes field to given value.
 
