@@ -48,30 +48,6 @@ type SessionAPI interface {
 	DisplayContentExecute(r ApiDisplayContentRequest) (*http.Response, error)
 
 	/*
-	GetAuthProviders Get all auth providers.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAuthProvidersRequest
-	*/
-	GetAuthProviders(ctx context.Context) ApiGetAuthProvidersRequest
-
-	// GetAuthProvidersExecute executes the request
-	//  @return []NameIdPair
-	GetAuthProvidersExecute(r ApiGetAuthProvidersRequest) ([]NameIdPair, *http.Response, error)
-
-	/*
-	GetPasswordResetProviders Get all password reset providers.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetPasswordResetProvidersRequest
-	*/
-	GetPasswordResetProviders(ctx context.Context) ApiGetPasswordResetProvidersRequest
-
-	// GetPasswordResetProvidersExecute executes the request
-	//  @return []NameIdPair
-	GetPasswordResetProvidersExecute(r ApiGetPasswordResetProvidersRequest) ([]NameIdPair, *http.Response, error)
-
-	/*
 	GetSessions Gets a list of sessions.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -82,6 +58,17 @@ type SessionAPI interface {
 	// GetSessionsExecute executes the request
 	//  @return []SessionInfoDto
 	GetSessionsExecute(r ApiGetSessionsRequest) ([]SessionInfoDto, *http.Response, error)
+
+	/*
+	PingPlaybackSession Pings a playback session.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPingPlaybackSessionRequest
+	*/
+	PingPlaybackSession(ctx context.Context) ApiPingPlaybackSessionRequest
+
+	// PingPlaybackSessionExecute executes the request
+	PingPlaybackSessionExecute(r ApiPingPlaybackSessionRequest) (*http.Response, error)
 
 	/*
 	Play Instructs a session to play an item.
@@ -129,6 +116,39 @@ type SessionAPI interface {
 
 	// RemoveUserFromSessionExecute executes the request
 	RemoveUserFromSessionExecute(r ApiRemoveUserFromSessionRequest) (*http.Response, error)
+
+	/*
+	ReportPlaybackProgress Reports playback progress within a session.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiReportPlaybackProgressRequest
+	*/
+	ReportPlaybackProgress(ctx context.Context) ApiReportPlaybackProgressRequest
+
+	// ReportPlaybackProgressExecute executes the request
+	ReportPlaybackProgressExecute(r ApiReportPlaybackProgressRequest) (*http.Response, error)
+
+	/*
+	ReportPlaybackStart Reports playback has started within a session.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiReportPlaybackStartRequest
+	*/
+	ReportPlaybackStart(ctx context.Context) ApiReportPlaybackStartRequest
+
+	// ReportPlaybackStartExecute executes the request
+	ReportPlaybackStartExecute(r ApiReportPlaybackStartRequest) (*http.Response, error)
+
+	/*
+	ReportPlaybackStopped Reports playback has stopped within a session.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiReportPlaybackStoppedRequest
+	*/
+	ReportPlaybackStopped(ctx context.Context) ApiReportPlaybackStoppedRequest
+
+	// ReportPlaybackStoppedExecute executes the request
+	ReportPlaybackStoppedExecute(r ApiReportPlaybackStoppedRequest) (*http.Response, error)
 
 	/*
 	ReportSessionEnded Reports that a session has ended.
@@ -464,228 +484,6 @@ func (a *SessionAPIService) DisplayContentExecute(r ApiDisplayContentRequest) (*
 	return localVarHTTPResponse, nil
 }
 
-type ApiGetAuthProvidersRequest struct {
-	ctx context.Context
-	ApiService SessionAPI
-}
-
-func (r ApiGetAuthProvidersRequest) Execute() ([]NameIdPair, *http.Response, error) {
-	return r.ApiService.GetAuthProvidersExecute(r)
-}
-
-/*
-GetAuthProviders Get all auth providers.
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetAuthProvidersRequest
-*/
-func (a *SessionAPIService) GetAuthProviders(ctx context.Context) ApiGetAuthProvidersRequest {
-	return ApiGetAuthProvidersRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-//  @return []NameIdPair
-func (a *SessionAPIService) GetAuthProvidersExecute(r ApiGetAuthProvidersRequest) ([]NameIdPair, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []NameIdPair
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionAPIService.GetAuthProviders")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/Auth/Providers"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["CustomAuthentication"]; ok {
-				var key string
-				if apiKey.Prefix != "" {
-					key = apiKey.Prefix + " " + apiKey.Key
-				} else {
-					key = apiKey.Key
-				}
-				localVarHeaderParams["Authorization"] = key
-			}
-		}
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-type ApiGetPasswordResetProvidersRequest struct {
-	ctx context.Context
-	ApiService SessionAPI
-}
-
-func (r ApiGetPasswordResetProvidersRequest) Execute() ([]NameIdPair, *http.Response, error) {
-	return r.ApiService.GetPasswordResetProvidersExecute(r)
-}
-
-/*
-GetPasswordResetProviders Get all password reset providers.
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetPasswordResetProvidersRequest
-*/
-func (a *SessionAPIService) GetPasswordResetProviders(ctx context.Context) ApiGetPasswordResetProvidersRequest {
-	return ApiGetPasswordResetProvidersRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-//  @return []NameIdPair
-func (a *SessionAPIService) GetPasswordResetProvidersExecute(r ApiGetPasswordResetProvidersRequest) ([]NameIdPair, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []NameIdPair
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionAPIService.GetPasswordResetProviders")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/Auth/PasswordResetProviders"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["CustomAuthentication"]; ok {
-				var key string
-				if apiKey.Prefix != "" {
-					key = apiKey.Prefix + " " + apiKey.Key
-				} else {
-					key = apiKey.Key
-				}
-				localVarHeaderParams["Authorization"] = key
-			}
-		}
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
 type ApiGetSessionsRequest struct {
 	ctx context.Context
 	ApiService SessionAPI
@@ -825,6 +623,117 @@ func (a *SessionAPIService) GetSessionsExecute(r ApiGetSessionsRequest) ([]Sessi
 	}
 
 	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiPingPlaybackSessionRequest struct {
+	ctx context.Context
+	ApiService SessionAPI
+	playSessionId *string
+}
+
+// Playback session id.
+func (r ApiPingPlaybackSessionRequest) PlaySessionId(playSessionId string) ApiPingPlaybackSessionRequest {
+	r.playSessionId = &playSessionId
+	return r
+}
+
+func (r ApiPingPlaybackSessionRequest) Execute() (*http.Response, error) {
+	return r.ApiService.PingPlaybackSessionExecute(r)
+}
+
+/*
+PingPlaybackSession Pings a playback session.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPingPlaybackSessionRequest
+*/
+func (a *SessionAPIService) PingPlaybackSession(ctx context.Context) ApiPingPlaybackSessionRequest {
+	return ApiPingPlaybackSessionRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *SessionAPIService) PingPlaybackSessionExecute(r ApiPingPlaybackSessionRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionAPIService.PingPlaybackSession")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Sessions/Playing/Ping"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.playSessionId == nil {
+		return nil, reportError("playSessionId is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "playSessionId", r.playSessionId, "form", "")
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
 }
 
 type ApiPlayRequest struct {
@@ -1375,6 +1284,333 @@ func (a *SessionAPIService) RemoveUserFromSessionExecute(r ApiRemoveUserFromSess
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiReportPlaybackProgressRequest struct {
+	ctx context.Context
+	ApiService SessionAPI
+	playbackProgressInfo *PlaybackProgressInfo
+}
+
+// The playback progress info.
+func (r ApiReportPlaybackProgressRequest) PlaybackProgressInfo(playbackProgressInfo PlaybackProgressInfo) ApiReportPlaybackProgressRequest {
+	r.playbackProgressInfo = &playbackProgressInfo
+	return r
+}
+
+func (r ApiReportPlaybackProgressRequest) Execute() (*http.Response, error) {
+	return r.ApiService.ReportPlaybackProgressExecute(r)
+}
+
+/*
+ReportPlaybackProgress Reports playback progress within a session.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiReportPlaybackProgressRequest
+*/
+func (a *SessionAPIService) ReportPlaybackProgress(ctx context.Context) ApiReportPlaybackProgressRequest {
+	return ApiReportPlaybackProgressRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *SessionAPIService) ReportPlaybackProgressExecute(r ApiReportPlaybackProgressRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionAPIService.ReportPlaybackProgress")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Sessions/Playing/Progress"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.playbackProgressInfo
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiReportPlaybackStartRequest struct {
+	ctx context.Context
+	ApiService SessionAPI
+	playbackStartInfo *PlaybackStartInfo
+}
+
+// The playback start info.
+func (r ApiReportPlaybackStartRequest) PlaybackStartInfo(playbackStartInfo PlaybackStartInfo) ApiReportPlaybackStartRequest {
+	r.playbackStartInfo = &playbackStartInfo
+	return r
+}
+
+func (r ApiReportPlaybackStartRequest) Execute() (*http.Response, error) {
+	return r.ApiService.ReportPlaybackStartExecute(r)
+}
+
+/*
+ReportPlaybackStart Reports playback has started within a session.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiReportPlaybackStartRequest
+*/
+func (a *SessionAPIService) ReportPlaybackStart(ctx context.Context) ApiReportPlaybackStartRequest {
+	return ApiReportPlaybackStartRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *SessionAPIService) ReportPlaybackStartExecute(r ApiReportPlaybackStartRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionAPIService.ReportPlaybackStart")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Sessions/Playing"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.playbackStartInfo
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiReportPlaybackStoppedRequest struct {
+	ctx context.Context
+	ApiService SessionAPI
+	playbackStopInfo *PlaybackStopInfo
+}
+
+// The playback stop info.
+func (r ApiReportPlaybackStoppedRequest) PlaybackStopInfo(playbackStopInfo PlaybackStopInfo) ApiReportPlaybackStoppedRequest {
+	r.playbackStopInfo = &playbackStopInfo
+	return r
+}
+
+func (r ApiReportPlaybackStoppedRequest) Execute() (*http.Response, error) {
+	return r.ApiService.ReportPlaybackStoppedExecute(r)
+}
+
+/*
+ReportPlaybackStopped Reports playback has stopped within a session.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiReportPlaybackStoppedRequest
+*/
+func (a *SessionAPIService) ReportPlaybackStopped(ctx context.Context) ApiReportPlaybackStoppedRequest {
+	return ApiReportPlaybackStoppedRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *SessionAPIService) ReportPlaybackStoppedExecute(r ApiReportPlaybackStoppedRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionAPIService.ReportPlaybackStopped")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Sessions/Playing/Stopped"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.playbackStopInfo
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {

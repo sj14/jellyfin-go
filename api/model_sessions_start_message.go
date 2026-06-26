@@ -16,7 +16,7 @@ import (
 // checks if the SessionsStartMessage type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &SessionsStartMessage{}
 
-// SessionsStartMessage Sessions start message.  Data is the timing data encoded as \"$initialDelay,$interval\" in ms.
+// SessionsStartMessage Sessions start message. Data is the timing data encoded as \"$initialDelay,$interval\" in ms.
 type SessionsStartMessage struct {
 	// Gets or sets the data.
 	Data NullableString `json:"Data,omitempty"`

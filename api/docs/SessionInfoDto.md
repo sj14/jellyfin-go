@@ -27,8 +27,7 @@ Name | Type | Description | Notes
 **SupportsMediaControl** | Pointer to **bool** | Gets or sets a value indicating whether the session supports media control. | [optional] 
 **SupportsRemoteControl** | Pointer to **bool** | Gets or sets a value indicating whether the session supports remote control. | [optional] 
 **NowPlayingQueue** | Pointer to [**[]QueueItem**](QueueItem.md) | Gets or sets the now playing queue. | [optional] 
-**NowPlayingQueueFullItems** | Pointer to [**[]BaseItemDto**](BaseItemDto.md) | Gets or sets the now playing queue full items. | [optional] 
-**HasCustomDeviceName** | Pointer to **bool** | Gets or sets a value indicating whether the session has a custom device name. | [optional] 
+**HasCustomDeviceName** | Pointer to **bool** | Gets or sets a value indicating whether this session has a custom device name. | [optional] 
 **PlaylistItemId** | Pointer to **NullableString** | Gets or sets the playlist item id. | [optional] 
 **ServerId** | Pointer to **NullableString** | Gets or sets the server id. | [optional] 
 **UserPrimaryImageTag** | Pointer to **NullableString** | Gets or sets the user primary image tag. | [optional] 
@@ -788,41 +787,6 @@ HasNowPlayingQueue returns a boolean if a field has been set.
 `func (o *SessionInfoDto) UnsetNowPlayingQueue()`
 
 UnsetNowPlayingQueue ensures that no value is present for NowPlayingQueue, not even an explicit nil
-### GetNowPlayingQueueFullItems
-
-`func (o *SessionInfoDto) GetNowPlayingQueueFullItems() []BaseItemDto`
-
-GetNowPlayingQueueFullItems returns the NowPlayingQueueFullItems field if non-nil, zero value otherwise.
-
-### GetNowPlayingQueueFullItemsOk
-
-`func (o *SessionInfoDto) GetNowPlayingQueueFullItemsOk() (*[]BaseItemDto, bool)`
-
-GetNowPlayingQueueFullItemsOk returns a tuple with the NowPlayingQueueFullItems field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNowPlayingQueueFullItems
-
-`func (o *SessionInfoDto) SetNowPlayingQueueFullItems(v []BaseItemDto)`
-
-SetNowPlayingQueueFullItems sets NowPlayingQueueFullItems field to given value.
-
-### HasNowPlayingQueueFullItems
-
-`func (o *SessionInfoDto) HasNowPlayingQueueFullItems() bool`
-
-HasNowPlayingQueueFullItems returns a boolean if a field has been set.
-
-### SetNowPlayingQueueFullItemsNil
-
-`func (o *SessionInfoDto) SetNowPlayingQueueFullItemsNil(b bool)`
-
- SetNowPlayingQueueFullItemsNil sets the value for NowPlayingQueueFullItems to be an explicit nil
-
-### UnsetNowPlayingQueueFullItems
-`func (o *SessionInfoDto) UnsetNowPlayingQueueFullItems()`
-
-UnsetNowPlayingQueueFullItems ensures that no value is present for NowPlayingQueueFullItems, not even an explicit nil
 ### GetHasCustomDeviceName
 
 `func (o *SessionInfoDto) GetHasCustomDeviceName() bool`

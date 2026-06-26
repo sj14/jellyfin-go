@@ -18,6 +18,7 @@ import (
 	"strings"
 	"reflect"
 	"os"
+	"time"
 )
 
 
@@ -60,22 +61,6 @@ type LibraryAPI interface {
 	GetAncestorsExecute(r ApiGetAncestorsRequest) ([]BaseItemDto, *http.Response, error)
 
 	/*
-	GetCriticReviews Gets critic review for an item.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param itemId
-	@return ApiGetCriticReviewsRequest
-
-	Deprecated
-	*/
-	GetCriticReviews(ctx context.Context, itemId string) ApiGetCriticReviewsRequest
-
-	// GetCriticReviewsExecute executes the request
-	//  @return BaseItemDtoQueryResult
-	// Deprecated
-	GetCriticReviewsExecute(r ApiGetCriticReviewsRequest) (*BaseItemDtoQueryResult, *http.Response, error)
-
-	/*
 	GetDownload Downloads item media.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -102,6 +87,45 @@ type LibraryAPI interface {
 	GetFileExecute(r ApiGetFileRequest) (*os.File, *http.Response, error)
 
 	/*
+	GetIntros Gets intros to play before the main media item plays.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId Item id.
+	@return ApiGetIntrosRequest
+	*/
+	GetIntros(ctx context.Context, itemId string) ApiGetIntrosRequest
+
+	// GetIntrosExecute executes the request
+	//  @return BaseItemDtoQueryResult
+	GetIntrosExecute(r ApiGetIntrosRequest) (*BaseItemDtoQueryResult, *http.Response, error)
+
+	/*
+	GetItem Gets an item from a user's library.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId Item id.
+	@return ApiGetItemRequest
+	*/
+	GetItem(ctx context.Context, itemId string) ApiGetItemRequest
+
+	// GetItemExecute executes the request
+	//  @return BaseItemDto
+	GetItemExecute(r ApiGetItemRequest) (*BaseItemDto, *http.Response, error)
+
+	/*
+	GetItemCollections Gets the collections that include the specified item.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId The item id.
+	@return ApiGetItemCollectionsRequest
+	*/
+	GetItemCollections(ctx context.Context, itemId string) ApiGetItemCollectionsRequest
+
+	// GetItemCollectionsExecute executes the request
+	//  @return BaseItemDtoQueryResult
+	GetItemCollectionsExecute(r ApiGetItemCollectionsRequest) (*BaseItemDtoQueryResult, *http.Response, error)
+
+	/*
 	GetItemCounts Get item counts.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -114,6 +138,30 @@ type LibraryAPI interface {
 	GetItemCountsExecute(r ApiGetItemCountsRequest) (*ItemCounts, *http.Response, error)
 
 	/*
+	GetItems Gets items based on a query.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetItemsRequest
+	*/
+	GetItems(ctx context.Context) ApiGetItemsRequest
+
+	// GetItemsExecute executes the request
+	//  @return BaseItemDtoQueryResult
+	GetItemsExecute(r ApiGetItemsRequest) (*BaseItemDtoQueryResult, *http.Response, error)
+
+	/*
+	GetLatestMedia Gets latest media.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLatestMediaRequest
+	*/
+	GetLatestMedia(ctx context.Context) ApiGetLatestMediaRequest
+
+	// GetLatestMediaExecute executes the request
+	//  @return []BaseItemDto
+	GetLatestMediaExecute(r ApiGetLatestMediaRequest) ([]BaseItemDto, *http.Response, error)
+
+	/*
 	GetLibraryOptionsInfo Gets the library options info.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -124,6 +172,19 @@ type LibraryAPI interface {
 	// GetLibraryOptionsInfoExecute executes the request
 	//  @return LibraryOptionsResultDto
 	GetLibraryOptionsInfoExecute(r ApiGetLibraryOptionsInfoRequest) (*LibraryOptionsResultDto, *http.Response, error)
+
+	/*
+	GetLocalTrailers Gets local trailers for an item.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId Item id.
+	@return ApiGetLocalTrailersRequest
+	*/
+	GetLocalTrailers(ctx context.Context, itemId string) ApiGetLocalTrailersRequest
+
+	// GetLocalTrailersExecute executes the request
+	//  @return []BaseItemDto
+	GetLocalTrailersExecute(r ApiGetLocalTrailersRequest) ([]BaseItemDto, *http.Response, error)
 
 	/*
 	GetMediaFolders Gets all user media folders.
@@ -148,6 +209,30 @@ type LibraryAPI interface {
 	// GetPhysicalPathsExecute executes the request
 	//  @return []string
 	GetPhysicalPathsExecute(r ApiGetPhysicalPathsRequest) ([]string, *http.Response, error)
+
+	/*
+	GetResumeItems Gets items based on a query.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetResumeItemsRequest
+	*/
+	GetResumeItems(ctx context.Context) ApiGetResumeItemsRequest
+
+	// GetResumeItemsExecute executes the request
+	//  @return BaseItemDtoQueryResult
+	GetResumeItemsExecute(r ApiGetResumeItemsRequest) (*BaseItemDtoQueryResult, *http.Response, error)
+
+	/*
+	GetRootFolder Gets the root folder from a user's library.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetRootFolderRequest
+	*/
+	GetRootFolder(ctx context.Context) ApiGetRootFolderRequest
+
+	// GetRootFolderExecute executes the request
+	//  @return BaseItemDto
+	GetRootFolderExecute(r ApiGetRootFolderRequest) (*BaseItemDto, *http.Response, error)
 
 	/*
 	GetSimilarAlbums Gets similar items.
@@ -226,6 +311,19 @@ type LibraryAPI interface {
 	// GetSimilarTrailersExecute executes the request
 	//  @return BaseItemDtoQueryResult
 	GetSimilarTrailersExecute(r ApiGetSimilarTrailersRequest) (*BaseItemDtoQueryResult, *http.Response, error)
+
+	/*
+	GetSpecialFeatures Gets special features for an item.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId Item id.
+	@return ApiGetSpecialFeaturesRequest
+	*/
+	GetSpecialFeatures(ctx context.Context, itemId string) ApiGetSpecialFeaturesRequest
+
+	// GetSpecialFeaturesExecute executes the request
+	//  @return []BaseItemDto
+	GetSpecialFeaturesExecute(r ApiGetSpecialFeaturesRequest) ([]BaseItemDto, *http.Response, error)
 
 	/*
 	GetThemeMedia Get theme songs and videos for an item.
@@ -320,6 +418,18 @@ type LibraryAPI interface {
 
 	// PostUpdatedSeriesExecute executes the request
 	PostUpdatedSeriesExecute(r ApiPostUpdatedSeriesRequest) (*http.Response, error)
+
+	/*
+	RefreshItem Refreshes metadata for an item.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId Item id.
+	@return ApiRefreshItemRequest
+	*/
+	RefreshItem(ctx context.Context, itemId string) ApiRefreshItemRequest
+
+	// RefreshItemExecute executes the request
+	RefreshItemExecute(r ApiRefreshItemRequest) (*http.Response, error)
 
 	/*
 	RefreshLibrary Starts a library scan.
@@ -738,124 +848,6 @@ func (a *LibraryAPIService) GetAncestorsExecute(r ApiGetAncestorsRequest) ([]Bas
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiGetCriticReviewsRequest struct {
-	ctx context.Context
-	ApiService LibraryAPI
-	itemId string
-}
-
-func (r ApiGetCriticReviewsRequest) Execute() (*BaseItemDtoQueryResult, *http.Response, error) {
-	return r.ApiService.GetCriticReviewsExecute(r)
-}
-
-/*
-GetCriticReviews Gets critic review for an item.
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param itemId
- @return ApiGetCriticReviewsRequest
-
-Deprecated
-*/
-func (a *LibraryAPIService) GetCriticReviews(ctx context.Context, itemId string) ApiGetCriticReviewsRequest {
-	return ApiGetCriticReviewsRequest{
-		ApiService: a,
-		ctx: ctx,
-		itemId: itemId,
-	}
-}
-
-// Execute executes the request
-//  @return BaseItemDtoQueryResult
-// Deprecated
-func (a *LibraryAPIService) GetCriticReviewsExecute(r ApiGetCriticReviewsRequest) (*BaseItemDtoQueryResult, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *BaseItemDtoQueryResult
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetCriticReviews")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/Items/{itemId}/CriticReviews"
-	localVarPath = strings.Replace(localVarPath, "{"+"itemId"+"}", url.PathEscape(parameterValueToString(r.itemId, "itemId")), -1)
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["CustomAuthentication"]; ok {
-				var key string
-				if apiKey.Prefix != "" {
-					key = apiKey.Prefix + " " + apiKey.Key
-				} else {
-					key = apiKey.Key
-				}
-				localVarHeaderParams["Authorization"] = key
-			}
-		}
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
 type ApiGetDownloadRequest struct {
 	ctx context.Context
 	ApiService LibraryAPI
@@ -1108,6 +1100,430 @@ func (a *LibraryAPIService) GetFileExecute(r ApiGetFileRequest) (*os.File, *http
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiGetIntrosRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	itemId string
+	userId *string
+}
+
+// User id.
+func (r ApiGetIntrosRequest) UserId(userId string) ApiGetIntrosRequest {
+	r.userId = &userId
+	return r
+}
+
+func (r ApiGetIntrosRequest) Execute() (*BaseItemDtoQueryResult, *http.Response, error) {
+	return r.ApiService.GetIntrosExecute(r)
+}
+
+/*
+GetIntros Gets intros to play before the main media item plays.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param itemId Item id.
+ @return ApiGetIntrosRequest
+*/
+func (a *LibraryAPIService) GetIntros(ctx context.Context, itemId string) ApiGetIntrosRequest {
+	return ApiGetIntrosRequest{
+		ApiService: a,
+		ctx: ctx,
+		itemId: itemId,
+	}
+}
+
+// Execute executes the request
+//  @return BaseItemDtoQueryResult
+func (a *LibraryAPIService) GetIntrosExecute(r ApiGetIntrosRequest) (*BaseItemDtoQueryResult, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BaseItemDtoQueryResult
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetIntros")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items/{itemId}/Intros"
+	localVarPath = strings.Replace(localVarPath, "{"+"itemId"+"}", url.PathEscape(parameterValueToString(r.itemId, "itemId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetItemRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	itemId string
+	userId *string
+}
+
+// User id.
+func (r ApiGetItemRequest) UserId(userId string) ApiGetItemRequest {
+	r.userId = &userId
+	return r
+}
+
+func (r ApiGetItemRequest) Execute() (*BaseItemDto, *http.Response, error) {
+	return r.ApiService.GetItemExecute(r)
+}
+
+/*
+GetItem Gets an item from a user's library.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param itemId Item id.
+ @return ApiGetItemRequest
+*/
+func (a *LibraryAPIService) GetItem(ctx context.Context, itemId string) ApiGetItemRequest {
+	return ApiGetItemRequest{
+		ApiService: a,
+		ctx: ctx,
+		itemId: itemId,
+	}
+}
+
+// Execute executes the request
+//  @return BaseItemDto
+func (a *LibraryAPIService) GetItemExecute(r ApiGetItemRequest) (*BaseItemDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BaseItemDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetItem")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items/{itemId}"
+	localVarPath = strings.Replace(localVarPath, "{"+"itemId"+"}", url.PathEscape(parameterValueToString(r.itemId, "itemId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetItemCollectionsRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	itemId string
+	userId *string
+	startIndex *int32
+	limit *int32
+	fields *[]ItemFields
+}
+
+// Optional. Filter by user id, and attach user data.
+func (r ApiGetItemCollectionsRequest) UserId(userId string) ApiGetItemCollectionsRequest {
+	r.userId = &userId
+	return r
+}
+
+// Optional. The index of the first record in the output.
+func (r ApiGetItemCollectionsRequest) StartIndex(startIndex int32) ApiGetItemCollectionsRequest {
+	r.startIndex = &startIndex
+	return r
+}
+
+// Optional. The maximum number of records to return.
+func (r ApiGetItemCollectionsRequest) Limit(limit int32) ApiGetItemCollectionsRequest {
+	r.limit = &limit
+	return r
+}
+
+// Optional. Specify additional fields of information to return in the output.
+func (r ApiGetItemCollectionsRequest) Fields(fields []ItemFields) ApiGetItemCollectionsRequest {
+	r.fields = &fields
+	return r
+}
+
+func (r ApiGetItemCollectionsRequest) Execute() (*BaseItemDtoQueryResult, *http.Response, error) {
+	return r.ApiService.GetItemCollectionsExecute(r)
+}
+
+/*
+GetItemCollections Gets the collections that include the specified item.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param itemId The item id.
+ @return ApiGetItemCollectionsRequest
+*/
+func (a *LibraryAPIService) GetItemCollections(ctx context.Context, itemId string) ApiGetItemCollectionsRequest {
+	return ApiGetItemCollectionsRequest{
+		ApiService: a,
+		ctx: ctx,
+		itemId: itemId,
+	}
+}
+
+// Execute executes the request
+//  @return BaseItemDtoQueryResult
+func (a *LibraryAPIService) GetItemCollectionsExecute(r ApiGetItemCollectionsRequest) (*BaseItemDtoQueryResult, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BaseItemDtoQueryResult
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetItemCollections")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items/{itemId}/Collections"
+	localVarPath = strings.Replace(localVarPath, "{"+"itemId"+"}", url.PathEscape(parameterValueToString(r.itemId, "itemId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
+	}
+	if r.startIndex != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.fields != nil {
+		t := *r.fields
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
+		}
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v ProblemDetails
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiGetItemCountsRequest struct {
 	ctx context.Context
 	ApiService LibraryAPI
@@ -1170,6 +1586,1522 @@ func (a *LibraryAPIService) GetItemCountsExecute(r ApiGetItemCountsRequest) (*It
 	}
 	if r.isFavorite != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetItemsRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	userId *string
+	maxOfficialRating *string
+	hasThemeSong *bool
+	hasThemeVideo *bool
+	hasSubtitles *bool
+	hasSpecialFeature *bool
+	hasTrailer *bool
+	adjacentTo *string
+	indexNumber *int32
+	parentIndexNumber *int32
+	hasParentalRating *bool
+	isHd *bool
+	is4K *bool
+	locationTypes *[]LocationType
+	excludeLocationTypes *[]LocationType
+	isMissing *bool
+	isUnaired *bool
+	minCommunityRating *float64
+	minCriticRating *float64
+	minPremiereDate *time.Time
+	minDateLastSaved *time.Time
+	minDateLastSavedForUser *time.Time
+	maxPremiereDate *time.Time
+	hasOverview *bool
+	hasImdbId *bool
+	hasTmdbId *bool
+	hasTvdbId *bool
+	isMovie *bool
+	isSeries *bool
+	isNews *bool
+	isKids *bool
+	isSports *bool
+	excludeItemIds *[]string
+	startIndex *int32
+	limit *int32
+	recursive *bool
+	searchTerm *string
+	sortOrder *[]SortOrder
+	parentId *string
+	fields *[]ItemFields
+	excludeItemTypes *[]BaseItemKind
+	includeItemTypes *[]BaseItemKind
+	filters *[]ItemFilter
+	isFavorite *bool
+	mediaTypes *[]MediaType
+	imageTypes *[]ImageType
+	sortBy *[]ItemSortBy
+	isPlayed *bool
+	genres *[]string
+	officialRatings *[]string
+	tags *[]string
+	years *[]int32
+	enableUserData *bool
+	imageTypeLimit *int32
+	enableImageTypes *[]ImageType
+	person *string
+	personIds *[]string
+	personTypes *[]string
+	studios *[]string
+	artists *[]string
+	excludeArtistIds *[]string
+	artistIds *[]string
+	albumArtistIds *[]string
+	contributingArtistIds *[]string
+	albums *[]string
+	albumIds *[]string
+	ids *[]string
+	videoTypes *[]VideoType
+	minOfficialRating *string
+	isLocked *bool
+	isPlaceHolder *bool
+	hasOfficialRating *bool
+	collapseBoxSetItems *bool
+	minWidth *int32
+	minHeight *int32
+	maxWidth *int32
+	maxHeight *int32
+	is3D *bool
+	seriesStatus *[]SeriesStatus
+	nameStartsWithOrGreater *string
+	nameStartsWith *string
+	nameLessThan *string
+	studioIds *[]string
+	genreIds *[]string
+	audioLanguages *[]string
+	subtitleLanguages *[]string
+	enableTotalRecordCount *bool
+	enableImages *bool
+}
+
+// The user id supplied as query parameter; this is required when not using an API key.
+func (r ApiGetItemsRequest) UserId(userId string) ApiGetItemsRequest {
+	r.userId = &userId
+	return r
+}
+
+// Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+func (r ApiGetItemsRequest) MaxOfficialRating(maxOfficialRating string) ApiGetItemsRequest {
+	r.maxOfficialRating = &maxOfficialRating
+	return r
+}
+
+// Optional filter by items with theme songs.
+func (r ApiGetItemsRequest) HasThemeSong(hasThemeSong bool) ApiGetItemsRequest {
+	r.hasThemeSong = &hasThemeSong
+	return r
+}
+
+// Optional filter by items with theme videos.
+func (r ApiGetItemsRequest) HasThemeVideo(hasThemeVideo bool) ApiGetItemsRequest {
+	r.hasThemeVideo = &hasThemeVideo
+	return r
+}
+
+// Optional filter by items with subtitles.
+func (r ApiGetItemsRequest) HasSubtitles(hasSubtitles bool) ApiGetItemsRequest {
+	r.hasSubtitles = &hasSubtitles
+	return r
+}
+
+// Optional filter by items with special features.
+func (r ApiGetItemsRequest) HasSpecialFeature(hasSpecialFeature bool) ApiGetItemsRequest {
+	r.hasSpecialFeature = &hasSpecialFeature
+	return r
+}
+
+// Optional filter by items with trailers.
+func (r ApiGetItemsRequest) HasTrailer(hasTrailer bool) ApiGetItemsRequest {
+	r.hasTrailer = &hasTrailer
+	return r
+}
+
+// Optional. Return items that are siblings of a supplied item.
+func (r ApiGetItemsRequest) AdjacentTo(adjacentTo string) ApiGetItemsRequest {
+	r.adjacentTo = &adjacentTo
+	return r
+}
+
+// Optional filter by index number.
+func (r ApiGetItemsRequest) IndexNumber(indexNumber int32) ApiGetItemsRequest {
+	r.indexNumber = &indexNumber
+	return r
+}
+
+// Optional filter by parent index number.
+func (r ApiGetItemsRequest) ParentIndexNumber(parentIndexNumber int32) ApiGetItemsRequest {
+	r.parentIndexNumber = &parentIndexNumber
+	return r
+}
+
+// Optional filter by items that have or do not have a parental rating.
+func (r ApiGetItemsRequest) HasParentalRating(hasParentalRating bool) ApiGetItemsRequest {
+	r.hasParentalRating = &hasParentalRating
+	return r
+}
+
+// Optional filter by items that are HD or not.
+func (r ApiGetItemsRequest) IsHd(isHd bool) ApiGetItemsRequest {
+	r.isHd = &isHd
+	return r
+}
+
+// Optional filter by items that are 4K or not.
+func (r ApiGetItemsRequest) Is4K(is4K bool) ApiGetItemsRequest {
+	r.is4K = &is4K
+	return r
+}
+
+// Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimited.
+func (r ApiGetItemsRequest) LocationTypes(locationTypes []LocationType) ApiGetItemsRequest {
+	r.locationTypes = &locationTypes
+	return r
+}
+
+// Optional. If specified, results will be filtered based on the LocationType. This allows multiple, comma delimited.
+func (r ApiGetItemsRequest) ExcludeLocationTypes(excludeLocationTypes []LocationType) ApiGetItemsRequest {
+	r.excludeLocationTypes = &excludeLocationTypes
+	return r
+}
+
+// Optional filter by items that are missing episodes or not.
+func (r ApiGetItemsRequest) IsMissing(isMissing bool) ApiGetItemsRequest {
+	r.isMissing = &isMissing
+	return r
+}
+
+// Optional filter by items that are unaired episodes or not.
+func (r ApiGetItemsRequest) IsUnaired(isUnaired bool) ApiGetItemsRequest {
+	r.isUnaired = &isUnaired
+	return r
+}
+
+// Optional filter by minimum community rating.
+func (r ApiGetItemsRequest) MinCommunityRating(minCommunityRating float64) ApiGetItemsRequest {
+	r.minCommunityRating = &minCommunityRating
+	return r
+}
+
+// Optional filter by minimum critic rating.
+func (r ApiGetItemsRequest) MinCriticRating(minCriticRating float64) ApiGetItemsRequest {
+	r.minCriticRating = &minCriticRating
+	return r
+}
+
+// Optional. The minimum premiere date. Format &#x3D; ISO.
+func (r ApiGetItemsRequest) MinPremiereDate(minPremiereDate time.Time) ApiGetItemsRequest {
+	r.minPremiereDate = &minPremiereDate
+	return r
+}
+
+// Optional. The minimum last saved date. Format &#x3D; ISO.
+func (r ApiGetItemsRequest) MinDateLastSaved(minDateLastSaved time.Time) ApiGetItemsRequest {
+	r.minDateLastSaved = &minDateLastSaved
+	return r
+}
+
+// Optional. The minimum last saved date for the current user. Format &#x3D; ISO.
+func (r ApiGetItemsRequest) MinDateLastSavedForUser(minDateLastSavedForUser time.Time) ApiGetItemsRequest {
+	r.minDateLastSavedForUser = &minDateLastSavedForUser
+	return r
+}
+
+// Optional. The maximum premiere date. Format &#x3D; ISO.
+func (r ApiGetItemsRequest) MaxPremiereDate(maxPremiereDate time.Time) ApiGetItemsRequest {
+	r.maxPremiereDate = &maxPremiereDate
+	return r
+}
+
+// Optional filter by items that have an overview or not.
+func (r ApiGetItemsRequest) HasOverview(hasOverview bool) ApiGetItemsRequest {
+	r.hasOverview = &hasOverview
+	return r
+}
+
+// Optional filter by items that have an IMDb id or not.
+func (r ApiGetItemsRequest) HasImdbId(hasImdbId bool) ApiGetItemsRequest {
+	r.hasImdbId = &hasImdbId
+	return r
+}
+
+// Optional filter by items that have a TMDb id or not.
+func (r ApiGetItemsRequest) HasTmdbId(hasTmdbId bool) ApiGetItemsRequest {
+	r.hasTmdbId = &hasTmdbId
+	return r
+}
+
+// Optional filter by items that have a TVDb id or not.
+func (r ApiGetItemsRequest) HasTvdbId(hasTvdbId bool) ApiGetItemsRequest {
+	r.hasTvdbId = &hasTvdbId
+	return r
+}
+
+// Optional filter for live tv movies.
+func (r ApiGetItemsRequest) IsMovie(isMovie bool) ApiGetItemsRequest {
+	r.isMovie = &isMovie
+	return r
+}
+
+// Optional filter for live tv series.
+func (r ApiGetItemsRequest) IsSeries(isSeries bool) ApiGetItemsRequest {
+	r.isSeries = &isSeries
+	return r
+}
+
+// Optional filter for live tv news.
+func (r ApiGetItemsRequest) IsNews(isNews bool) ApiGetItemsRequest {
+	r.isNews = &isNews
+	return r
+}
+
+// Optional filter for live tv kids.
+func (r ApiGetItemsRequest) IsKids(isKids bool) ApiGetItemsRequest {
+	r.isKids = &isKids
+	return r
+}
+
+// Optional filter for live tv sports.
+func (r ApiGetItemsRequest) IsSports(isSports bool) ApiGetItemsRequest {
+	r.isSports = &isSports
+	return r
+}
+
+// Optional. If specified, results will be filtered by excluding item ids. This allows multiple, comma delimited.
+func (r ApiGetItemsRequest) ExcludeItemIds(excludeItemIds []string) ApiGetItemsRequest {
+	r.excludeItemIds = &excludeItemIds
+	return r
+}
+
+// Optional. The record index to start at. All items with a lower index will be dropped from the results.
+func (r ApiGetItemsRequest) StartIndex(startIndex int32) ApiGetItemsRequest {
+	r.startIndex = &startIndex
+	return r
+}
+
+// Optional. The maximum number of records to return.
+func (r ApiGetItemsRequest) Limit(limit int32) ApiGetItemsRequest {
+	r.limit = &limit
+	return r
+}
+
+// When searching within folders, this determines whether or not the search will be recursive. true/false.
+func (r ApiGetItemsRequest) Recursive(recursive bool) ApiGetItemsRequest {
+	r.recursive = &recursive
+	return r
+}
+
+// Optional. Filter based on a search term.
+func (r ApiGetItemsRequest) SearchTerm(searchTerm string) ApiGetItemsRequest {
+	r.searchTerm = &searchTerm
+	return r
+}
+
+// Sort Order - Ascending, Descending.
+func (r ApiGetItemsRequest) SortOrder(sortOrder []SortOrder) ApiGetItemsRequest {
+	r.sortOrder = &sortOrder
+	return r
+}
+
+// Specify this to localize the search to a specific item or folder. Omit to use the root.
+func (r ApiGetItemsRequest) ParentId(parentId string) ApiGetItemsRequest {
+	r.parentId = &parentId
+	return r
+}
+
+// Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimited. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines.
+func (r ApiGetItemsRequest) Fields(fields []ItemFields) ApiGetItemsRequest {
+	r.fields = &fields
+	return r
+}
+
+// Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited.
+func (r ApiGetItemsRequest) ExcludeItemTypes(excludeItemTypes []BaseItemKind) ApiGetItemsRequest {
+	r.excludeItemTypes = &excludeItemTypes
+	return r
+}
+
+// Optional. If specified, results will be filtered based on the item type. This allows multiple, comma delimited.
+func (r ApiGetItemsRequest) IncludeItemTypes(includeItemTypes []BaseItemKind) ApiGetItemsRequest {
+	r.includeItemTypes = &includeItemTypes
+	return r
+}
+
+// Optional. Specify additional filters to apply. This allows multiple, comma delimited. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes.
+func (r ApiGetItemsRequest) Filters(filters []ItemFilter) ApiGetItemsRequest {
+	r.filters = &filters
+	return r
+}
+
+// Optional filter by items that are marked as favorite, or not.
+func (r ApiGetItemsRequest) IsFavorite(isFavorite bool) ApiGetItemsRequest {
+	r.isFavorite = &isFavorite
+	return r
+}
+
+// Optional filter by MediaType. Allows multiple, comma delimited.
+func (r ApiGetItemsRequest) MediaTypes(mediaTypes []MediaType) ApiGetItemsRequest {
+	r.mediaTypes = &mediaTypes
+	return r
+}
+
+// Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
+func (r ApiGetItemsRequest) ImageTypes(imageTypes []ImageType) ApiGetItemsRequest {
+	r.imageTypes = &imageTypes
+	return r
+}
+
+// Optional. Specify one or more sort orders, comma delimited. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime.
+func (r ApiGetItemsRequest) SortBy(sortBy []ItemSortBy) ApiGetItemsRequest {
+	r.sortBy = &sortBy
+	return r
+}
+
+// Optional filter by items that are played, or not.
+func (r ApiGetItemsRequest) IsPlayed(isPlayed bool) ApiGetItemsRequest {
+	r.isPlayed = &isPlayed
+	return r
+}
+
+// Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) Genres(genres []string) ApiGetItemsRequest {
+	r.genres = &genres
+	return r
+}
+
+// Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) OfficialRatings(officialRatings []string) ApiGetItemsRequest {
+	r.officialRatings = &officialRatings
+	return r
+}
+
+// Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) Tags(tags []string) ApiGetItemsRequest {
+	r.tags = &tags
+	return r
+}
+
+// Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimited.
+func (r ApiGetItemsRequest) Years(years []int32) ApiGetItemsRequest {
+	r.years = &years
+	return r
+}
+
+// Optional, include user data.
+func (r ApiGetItemsRequest) EnableUserData(enableUserData bool) ApiGetItemsRequest {
+	r.enableUserData = &enableUserData
+	return r
+}
+
+// Optional, the max number of images to return, per image type.
+func (r ApiGetItemsRequest) ImageTypeLimit(imageTypeLimit int32) ApiGetItemsRequest {
+	r.imageTypeLimit = &imageTypeLimit
+	return r
+}
+
+// Optional. The image types to include in the output.
+func (r ApiGetItemsRequest) EnableImageTypes(enableImageTypes []ImageType) ApiGetItemsRequest {
+	r.enableImageTypes = &enableImageTypes
+	return r
+}
+
+// Optional. If specified, results will be filtered to include only those containing the specified person.
+func (r ApiGetItemsRequest) Person(person string) ApiGetItemsRequest {
+	r.person = &person
+	return r
+}
+
+// Optional. If specified, results will be filtered to include only those containing the specified person id.
+func (r ApiGetItemsRequest) PersonIds(personIds []string) ApiGetItemsRequest {
+	r.personIds = &personIds
+	return r
+}
+
+// Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited.
+func (r ApiGetItemsRequest) PersonTypes(personTypes []string) ApiGetItemsRequest {
+	r.personTypes = &personTypes
+	return r
+}
+
+// Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) Studios(studios []string) ApiGetItemsRequest {
+	r.studios = &studios
+	return r
+}
+
+// Optional. If specified, results will be filtered based on artists. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) Artists(artists []string) ApiGetItemsRequest {
+	r.artists = &artists
+	return r
+}
+
+// Optional. If specified, results will be filtered based on artist id. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) ExcludeArtistIds(excludeArtistIds []string) ApiGetItemsRequest {
+	r.excludeArtistIds = &excludeArtistIds
+	return r
+}
+
+// Optional. If specified, results will be filtered to include only those containing the specified artist id.
+func (r ApiGetItemsRequest) ArtistIds(artistIds []string) ApiGetItemsRequest {
+	r.artistIds = &artistIds
+	return r
+}
+
+// Optional. If specified, results will be filtered to include only those containing the specified album artist id.
+func (r ApiGetItemsRequest) AlbumArtistIds(albumArtistIds []string) ApiGetItemsRequest {
+	r.albumArtistIds = &albumArtistIds
+	return r
+}
+
+// Optional. If specified, results will be filtered to include only those containing the specified contributing artist id.
+func (r ApiGetItemsRequest) ContributingArtistIds(contributingArtistIds []string) ApiGetItemsRequest {
+	r.contributingArtistIds = &contributingArtistIds
+	return r
+}
+
+// Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) Albums(albums []string) ApiGetItemsRequest {
+	r.albums = &albums
+	return r
+}
+
+// Optional. If specified, results will be filtered based on album id. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) AlbumIds(albumIds []string) ApiGetItemsRequest {
+	r.albumIds = &albumIds
+	return r
+}
+
+// Optional. If specific items are needed, specify a list of item id&#39;s to retrieve. This allows multiple, comma delimited.
+func (r ApiGetItemsRequest) Ids(ids []string) ApiGetItemsRequest {
+	r.ids = &ids
+	return r
+}
+
+// Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimited.
+func (r ApiGetItemsRequest) VideoTypes(videoTypes []VideoType) ApiGetItemsRequest {
+	r.videoTypes = &videoTypes
+	return r
+}
+
+// Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+func (r ApiGetItemsRequest) MinOfficialRating(minOfficialRating string) ApiGetItemsRequest {
+	r.minOfficialRating = &minOfficialRating
+	return r
+}
+
+// Optional filter by items that are locked.
+func (r ApiGetItemsRequest) IsLocked(isLocked bool) ApiGetItemsRequest {
+	r.isLocked = &isLocked
+	return r
+}
+
+// Optional filter by items that are placeholders.
+func (r ApiGetItemsRequest) IsPlaceHolder(isPlaceHolder bool) ApiGetItemsRequest {
+	r.isPlaceHolder = &isPlaceHolder
+	return r
+}
+
+// Optional filter by items that have official ratings.
+func (r ApiGetItemsRequest) HasOfficialRating(hasOfficialRating bool) ApiGetItemsRequest {
+	r.hasOfficialRating = &hasOfficialRating
+	return r
+}
+
+// Whether or not to hide items behind their boxsets.
+func (r ApiGetItemsRequest) CollapseBoxSetItems(collapseBoxSetItems bool) ApiGetItemsRequest {
+	r.collapseBoxSetItems = &collapseBoxSetItems
+	return r
+}
+
+// Optional. Filter by the minimum width of the item.
+func (r ApiGetItemsRequest) MinWidth(minWidth int32) ApiGetItemsRequest {
+	r.minWidth = &minWidth
+	return r
+}
+
+// Optional. Filter by the minimum height of the item.
+func (r ApiGetItemsRequest) MinHeight(minHeight int32) ApiGetItemsRequest {
+	r.minHeight = &minHeight
+	return r
+}
+
+// Optional. Filter by the maximum width of the item.
+func (r ApiGetItemsRequest) MaxWidth(maxWidth int32) ApiGetItemsRequest {
+	r.maxWidth = &maxWidth
+	return r
+}
+
+// Optional. Filter by the maximum height of the item.
+func (r ApiGetItemsRequest) MaxHeight(maxHeight int32) ApiGetItemsRequest {
+	r.maxHeight = &maxHeight
+	return r
+}
+
+// Optional filter by items that are 3D, or not.
+func (r ApiGetItemsRequest) Is3D(is3D bool) ApiGetItemsRequest {
+	r.is3D = &is3D
+	return r
+}
+
+// Optional filter by Series Status. Allows multiple, comma delimited.
+func (r ApiGetItemsRequest) SeriesStatus(seriesStatus []SeriesStatus) ApiGetItemsRequest {
+	r.seriesStatus = &seriesStatus
+	return r
+}
+
+// Optional filter by items whose name is sorted equally or greater than a given input string.
+func (r ApiGetItemsRequest) NameStartsWithOrGreater(nameStartsWithOrGreater string) ApiGetItemsRequest {
+	r.nameStartsWithOrGreater = &nameStartsWithOrGreater
+	return r
+}
+
+// Optional filter by items whose name is sorted equally than a given input string.
+func (r ApiGetItemsRequest) NameStartsWith(nameStartsWith string) ApiGetItemsRequest {
+	r.nameStartsWith = &nameStartsWith
+	return r
+}
+
+// Optional filter by items whose name is equally or lesser than a given input string.
+func (r ApiGetItemsRequest) NameLessThan(nameLessThan string) ApiGetItemsRequest {
+	r.nameLessThan = &nameLessThan
+	return r
+}
+
+// Optional. If specified, results will be filtered based on studio id. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) StudioIds(studioIds []string) ApiGetItemsRequest {
+	r.studioIds = &studioIds
+	return r
+}
+
+// Optional. If specified, results will be filtered based on genre id. This allows multiple, pipe delimited.
+func (r ApiGetItemsRequest) GenreIds(genreIds []string) ApiGetItemsRequest {
+	r.genreIds = &genreIds
+	return r
+}
+
+// Optional. If specified, results will be filtered based on audio language. This allows multiple, comma delimited values.
+func (r ApiGetItemsRequest) AudioLanguages(audioLanguages []string) ApiGetItemsRequest {
+	r.audioLanguages = &audioLanguages
+	return r
+}
+
+// Optional. If specified, results will be filtered based on subtitle language. This allows multiple, comma delimited values.
+func (r ApiGetItemsRequest) SubtitleLanguages(subtitleLanguages []string) ApiGetItemsRequest {
+	r.subtitleLanguages = &subtitleLanguages
+	return r
+}
+
+// Optional. Enable the total record count.
+func (r ApiGetItemsRequest) EnableTotalRecordCount(enableTotalRecordCount bool) ApiGetItemsRequest {
+	r.enableTotalRecordCount = &enableTotalRecordCount
+	return r
+}
+
+// Optional, include image information in output.
+func (r ApiGetItemsRequest) EnableImages(enableImages bool) ApiGetItemsRequest {
+	r.enableImages = &enableImages
+	return r
+}
+
+func (r ApiGetItemsRequest) Execute() (*BaseItemDtoQueryResult, *http.Response, error) {
+	return r.ApiService.GetItemsExecute(r)
+}
+
+/*
+GetItems Gets items based on a query.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetItemsRequest
+*/
+func (a *LibraryAPIService) GetItems(ctx context.Context) ApiGetItemsRequest {
+	return ApiGetItemsRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return BaseItemDtoQueryResult
+func (a *LibraryAPIService) GetItemsExecute(r ApiGetItemsRequest) (*BaseItemDtoQueryResult, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BaseItemDtoQueryResult
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetItems")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
+	}
+	if r.maxOfficialRating != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxOfficialRating", r.maxOfficialRating, "form", "")
+	}
+	if r.hasThemeSong != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasThemeSong", r.hasThemeSong, "form", "")
+	}
+	if r.hasThemeVideo != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasThemeVideo", r.hasThemeVideo, "form", "")
+	}
+	if r.hasSubtitles != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasSubtitles", r.hasSubtitles, "form", "")
+	}
+	if r.hasSpecialFeature != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasSpecialFeature", r.hasSpecialFeature, "form", "")
+	}
+	if r.hasTrailer != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasTrailer", r.hasTrailer, "form", "")
+	}
+	if r.adjacentTo != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "adjacentTo", r.adjacentTo, "form", "")
+	}
+	if r.indexNumber != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "indexNumber", r.indexNumber, "form", "")
+	}
+	if r.parentIndexNumber != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentIndexNumber", r.parentIndexNumber, "form", "")
+	}
+	if r.hasParentalRating != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasParentalRating", r.hasParentalRating, "form", "")
+	}
+	if r.isHd != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isHd", r.isHd, "form", "")
+	}
+	if r.is4K != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "is4K", r.is4K, "form", "")
+	}
+	if r.locationTypes != nil {
+		t := *r.locationTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "locationTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "locationTypes", t, "form", "multi")
+		}
+	}
+	if r.excludeLocationTypes != nil {
+		t := *r.excludeLocationTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeLocationTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeLocationTypes", t, "form", "multi")
+		}
+	}
+	if r.isMissing != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMissing", r.isMissing, "form", "")
+	}
+	if r.isUnaired != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isUnaired", r.isUnaired, "form", "")
+	}
+	if r.minCommunityRating != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minCommunityRating", r.minCommunityRating, "form", "")
+	}
+	if r.minCriticRating != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minCriticRating", r.minCriticRating, "form", "")
+	}
+	if r.minPremiereDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minPremiereDate", r.minPremiereDate, "form", "")
+	}
+	if r.minDateLastSaved != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minDateLastSaved", r.minDateLastSaved, "form", "")
+	}
+	if r.minDateLastSavedForUser != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minDateLastSavedForUser", r.minDateLastSavedForUser, "form", "")
+	}
+	if r.maxPremiereDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxPremiereDate", r.maxPremiereDate, "form", "")
+	}
+	if r.hasOverview != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasOverview", r.hasOverview, "form", "")
+	}
+	if r.hasImdbId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasImdbId", r.hasImdbId, "form", "")
+	}
+	if r.hasTmdbId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasTmdbId", r.hasTmdbId, "form", "")
+	}
+	if r.hasTvdbId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasTvdbId", r.hasTvdbId, "form", "")
+	}
+	if r.isMovie != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isMovie", r.isMovie, "form", "")
+	}
+	if r.isSeries != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSeries", r.isSeries, "form", "")
+	}
+	if r.isNews != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isNews", r.isNews, "form", "")
+	}
+	if r.isKids != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isKids", r.isKids, "form", "")
+	}
+	if r.isSports != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isSports", r.isSports, "form", "")
+	}
+	if r.excludeItemIds != nil {
+		t := *r.excludeItemIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemIds", t, "form", "multi")
+		}
+	}
+	if r.startIndex != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.recursive != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "recursive", r.recursive, "form", "")
+	}
+	if r.searchTerm != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "form", "")
+	}
+	if r.sortOrder != nil {
+		t := *r.sortOrder
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "form", "multi")
+		}
+	}
+	if r.parentId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
+	}
+	if r.fields != nil {
+		t := *r.fields
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
+		}
+	}
+	if r.excludeItemTypes != nil {
+		t := *r.excludeItemTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "form", "multi")
+		}
+	}
+	if r.includeItemTypes != nil {
+		t := *r.includeItemTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
+		}
+	}
+	if r.filters != nil {
+		t := *r.filters
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "filters", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "filters", t, "form", "multi")
+		}
+	}
+	if r.isFavorite != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isFavorite", r.isFavorite, "form", "")
+	}
+	if r.mediaTypes != nil {
+		t := *r.mediaTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "form", "multi")
+		}
+	}
+	if r.imageTypes != nil {
+		t := *r.imageTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypes", t, "form", "multi")
+		}
+	}
+	if r.sortBy != nil {
+		t := *r.sortBy
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "form", "multi")
+		}
+	}
+	if r.isPlayed != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isPlayed", r.isPlayed, "form", "")
+	}
+	if r.genres != nil {
+		t := *r.genres
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genres", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genres", t, "form", "multi")
+		}
+	}
+	if r.officialRatings != nil {
+		t := *r.officialRatings
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "officialRatings", t, "form", "multi")
+		}
+	}
+	if r.tags != nil {
+		t := *r.tags
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "tags", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "tags", t, "form", "multi")
+		}
+	}
+	if r.years != nil {
+		t := *r.years
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "years", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "years", t, "form", "multi")
+		}
+	}
+	if r.enableUserData != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
+	}
+	if r.imageTypeLimit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
+	}
+	if r.enableImageTypes != nil {
+		t := *r.enableImageTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
+		}
+	}
+	if r.person != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "person", r.person, "form", "")
+	}
+	if r.personIds != nil {
+		t := *r.personIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "personIds", t, "form", "multi")
+		}
+	}
+	if r.personTypes != nil {
+		t := *r.personTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "personTypes", t, "form", "multi")
+		}
+	}
+	if r.studios != nil {
+		t := *r.studios
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "studios", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "studios", t, "form", "multi")
+		}
+	}
+	if r.artists != nil {
+		t := *r.artists
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "artists", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "artists", t, "form", "multi")
+		}
+	}
+	if r.excludeArtistIds != nil {
+		t := *r.excludeArtistIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeArtistIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeArtistIds", t, "form", "multi")
+		}
+	}
+	if r.artistIds != nil {
+		t := *r.artistIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "artistIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "artistIds", t, "form", "multi")
+		}
+	}
+	if r.albumArtistIds != nil {
+		t := *r.albumArtistIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "albumArtistIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "albumArtistIds", t, "form", "multi")
+		}
+	}
+	if r.contributingArtistIds != nil {
+		t := *r.contributingArtistIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "contributingArtistIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "contributingArtistIds", t, "form", "multi")
+		}
+	}
+	if r.albums != nil {
+		t := *r.albums
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "albums", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "albums", t, "form", "multi")
+		}
+	}
+	if r.albumIds != nil {
+		t := *r.albumIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "albumIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "albumIds", t, "form", "multi")
+		}
+	}
+	if r.ids != nil {
+		t := *r.ids
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "ids", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "ids", t, "form", "multi")
+		}
+	}
+	if r.videoTypes != nil {
+		t := *r.videoTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "videoTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "videoTypes", t, "form", "multi")
+		}
+	}
+	if r.minOfficialRating != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minOfficialRating", r.minOfficialRating, "form", "")
+	}
+	if r.isLocked != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isLocked", r.isLocked, "form", "")
+	}
+	if r.isPlaceHolder != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isPlaceHolder", r.isPlaceHolder, "form", "")
+	}
+	if r.hasOfficialRating != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasOfficialRating", r.hasOfficialRating, "form", "")
+	}
+	if r.collapseBoxSetItems != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "collapseBoxSetItems", r.collapseBoxSetItems, "form", "")
+	}
+	if r.minWidth != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minWidth", r.minWidth, "form", "")
+	}
+	if r.minHeight != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minHeight", r.minHeight, "form", "")
+	}
+	if r.maxWidth != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxWidth", r.maxWidth, "form", "")
+	}
+	if r.maxHeight != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxHeight", r.maxHeight, "form", "")
+	}
+	if r.is3D != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "is3D", r.is3D, "form", "")
+	}
+	if r.seriesStatus != nil {
+		t := *r.seriesStatus
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "seriesStatus", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "seriesStatus", t, "form", "multi")
+		}
+	}
+	if r.nameStartsWithOrGreater != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWithOrGreater", r.nameStartsWithOrGreater, "form", "")
+	}
+	if r.nameStartsWith != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameStartsWith", r.nameStartsWith, "form", "")
+	}
+	if r.nameLessThan != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "nameLessThan", r.nameLessThan, "form", "")
+	}
+	if r.studioIds != nil {
+		t := *r.studioIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "studioIds", t, "form", "multi")
+		}
+	}
+	if r.genreIds != nil {
+		t := *r.genreIds
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "genreIds", t, "form", "multi")
+		}
+	}
+	if r.audioLanguages != nil {
+		t := *r.audioLanguages
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "audioLanguages", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "audioLanguages", t, "form", "multi")
+		}
+	}
+	if r.subtitleLanguages != nil {
+		t := *r.subtitleLanguages
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleLanguages", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "subtitleLanguages", t, "form", "multi")
+		}
+	}
+	if r.enableTotalRecordCount != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
+	} else {
+		var defaultValue bool = true
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+		r.enableTotalRecordCount = &defaultValue
+	}
+	if r.enableImages != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
+	} else {
+		var defaultValue bool = true
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", defaultValue, "form", "")
+		r.enableImages = &defaultValue
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetLatestMediaRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	userId *string
+	parentId *string
+	fields *[]ItemFields
+	includeItemTypes *[]BaseItemKind
+	isPlayed *bool
+	enableImages *bool
+	imageTypeLimit *int32
+	enableImageTypes *[]ImageType
+	enableUserData *bool
+	limit *int32
+	groupItems *bool
+}
+
+// User id.
+func (r ApiGetLatestMediaRequest) UserId(userId string) ApiGetLatestMediaRequest {
+	r.userId = &userId
+	return r
+}
+
+// Specify this to localize the search to a specific item or folder. Omit to use the root.
+func (r ApiGetLatestMediaRequest) ParentId(parentId string) ApiGetLatestMediaRequest {
+	r.parentId = &parentId
+	return r
+}
+
+// Optional. Specify additional fields of information to return in the output.
+func (r ApiGetLatestMediaRequest) Fields(fields []ItemFields) ApiGetLatestMediaRequest {
+	r.fields = &fields
+	return r
+}
+
+// Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited.
+func (r ApiGetLatestMediaRequest) IncludeItemTypes(includeItemTypes []BaseItemKind) ApiGetLatestMediaRequest {
+	r.includeItemTypes = &includeItemTypes
+	return r
+}
+
+// Filter by items that are played, or not.
+func (r ApiGetLatestMediaRequest) IsPlayed(isPlayed bool) ApiGetLatestMediaRequest {
+	r.isPlayed = &isPlayed
+	return r
+}
+
+// Optional. include image information in output.
+func (r ApiGetLatestMediaRequest) EnableImages(enableImages bool) ApiGetLatestMediaRequest {
+	r.enableImages = &enableImages
+	return r
+}
+
+// Optional. the max number of images to return, per image type.
+func (r ApiGetLatestMediaRequest) ImageTypeLimit(imageTypeLimit int32) ApiGetLatestMediaRequest {
+	r.imageTypeLimit = &imageTypeLimit
+	return r
+}
+
+// Optional. The image types to include in the output.
+func (r ApiGetLatestMediaRequest) EnableImageTypes(enableImageTypes []ImageType) ApiGetLatestMediaRequest {
+	r.enableImageTypes = &enableImageTypes
+	return r
+}
+
+// Optional. include user data.
+func (r ApiGetLatestMediaRequest) EnableUserData(enableUserData bool) ApiGetLatestMediaRequest {
+	r.enableUserData = &enableUserData
+	return r
+}
+
+// Return item limit.
+func (r ApiGetLatestMediaRequest) Limit(limit int32) ApiGetLatestMediaRequest {
+	r.limit = &limit
+	return r
+}
+
+// Whether or not to group items into a parent container.
+func (r ApiGetLatestMediaRequest) GroupItems(groupItems bool) ApiGetLatestMediaRequest {
+	r.groupItems = &groupItems
+	return r
+}
+
+func (r ApiGetLatestMediaRequest) Execute() ([]BaseItemDto, *http.Response, error) {
+	return r.ApiService.GetLatestMediaExecute(r)
+}
+
+/*
+GetLatestMedia Gets latest media.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetLatestMediaRequest
+*/
+func (a *LibraryAPIService) GetLatestMedia(ctx context.Context) ApiGetLatestMediaRequest {
+	return ApiGetLatestMediaRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []BaseItemDto
+func (a *LibraryAPIService) GetLatestMediaExecute(r ApiGetLatestMediaRequest) ([]BaseItemDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []BaseItemDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetLatestMedia")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items/Latest"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
+	}
+	if r.parentId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
+	}
+	if r.fields != nil {
+		t := *r.fields
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
+		}
+	}
+	if r.includeItemTypes != nil {
+		t := *r.includeItemTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
+		}
+	}
+	if r.isPlayed != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "isPlayed", r.isPlayed, "form", "")
+	}
+	if r.enableImages != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
+	}
+	if r.imageTypeLimit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
+	}
+	if r.enableImageTypes != nil {
+		t := *r.enableImageTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
+		}
+	}
+	if r.enableUserData != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	} else {
+		var defaultValue int32 = 20
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", defaultValue, "form", "")
+		r.limit = &defaultValue
+	}
+	if r.groupItems != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "groupItems", r.groupItems, "form", "")
+	} else {
+		var defaultValue bool = true
+		parameterAddToHeaderOrQuery(localVarQueryParams, "groupItems", defaultValue, "form", "")
+		r.groupItems = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1305,6 +3237,131 @@ func (a *LibraryAPIService) GetLibraryOptionsInfoExecute(r ApiGetLibraryOptionsI
 		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "isNewLibrary", defaultValue, "form", "")
 		r.isNewLibrary = &defaultValue
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetLocalTrailersRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	itemId string
+	userId *string
+}
+
+// User id.
+func (r ApiGetLocalTrailersRequest) UserId(userId string) ApiGetLocalTrailersRequest {
+	r.userId = &userId
+	return r
+}
+
+func (r ApiGetLocalTrailersRequest) Execute() ([]BaseItemDto, *http.Response, error) {
+	return r.ApiService.GetLocalTrailersExecute(r)
+}
+
+/*
+GetLocalTrailers Gets local trailers for an item.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param itemId Item id.
+ @return ApiGetLocalTrailersRequest
+*/
+func (a *LibraryAPIService) GetLocalTrailers(ctx context.Context, itemId string) ApiGetLocalTrailersRequest {
+	return ApiGetLocalTrailersRequest{
+		ApiService: a,
+		ctx: ctx,
+		itemId: itemId,
+	}
+}
+
+// Execute executes the request
+//  @return []BaseItemDto
+func (a *LibraryAPIService) GetLocalTrailersExecute(r ApiGetLocalTrailersRequest) ([]BaseItemDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []BaseItemDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetLocalTrailers")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items/{itemId}/LocalTrailers"
+	localVarPath = strings.Replace(localVarPath, "{"+"itemId"+"}", url.PathEscape(parameterValueToString(r.itemId, "itemId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1538,6 +3595,440 @@ func (a *LibraryAPIService) GetPhysicalPathsExecute(r ApiGetPhysicalPathsRequest
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetResumeItemsRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	userId *string
+	startIndex *int32
+	limit *int32
+	searchTerm *string
+	parentId *string
+	fields *[]ItemFields
+	mediaTypes *[]MediaType
+	enableUserData *bool
+	imageTypeLimit *int32
+	enableImageTypes *[]ImageType
+	excludeItemTypes *[]BaseItemKind
+	includeItemTypes *[]BaseItemKind
+	enableTotalRecordCount *bool
+	enableImages *bool
+	excludeActiveSessions *bool
+}
+
+// The user id.
+func (r ApiGetResumeItemsRequest) UserId(userId string) ApiGetResumeItemsRequest {
+	r.userId = &userId
+	return r
+}
+
+// The start index.
+func (r ApiGetResumeItemsRequest) StartIndex(startIndex int32) ApiGetResumeItemsRequest {
+	r.startIndex = &startIndex
+	return r
+}
+
+// The item limit.
+func (r ApiGetResumeItemsRequest) Limit(limit int32) ApiGetResumeItemsRequest {
+	r.limit = &limit
+	return r
+}
+
+// The search term.
+func (r ApiGetResumeItemsRequest) SearchTerm(searchTerm string) ApiGetResumeItemsRequest {
+	r.searchTerm = &searchTerm
+	return r
+}
+
+// Specify this to localize the search to a specific item or folder. Omit to use the root.
+func (r ApiGetResumeItemsRequest) ParentId(parentId string) ApiGetResumeItemsRequest {
+	r.parentId = &parentId
+	return r
+}
+
+// Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimited. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines.
+func (r ApiGetResumeItemsRequest) Fields(fields []ItemFields) ApiGetResumeItemsRequest {
+	r.fields = &fields
+	return r
+}
+
+// Optional. Filter by MediaType. Allows multiple, comma delimited.
+func (r ApiGetResumeItemsRequest) MediaTypes(mediaTypes []MediaType) ApiGetResumeItemsRequest {
+	r.mediaTypes = &mediaTypes
+	return r
+}
+
+// Optional. Include user data.
+func (r ApiGetResumeItemsRequest) EnableUserData(enableUserData bool) ApiGetResumeItemsRequest {
+	r.enableUserData = &enableUserData
+	return r
+}
+
+// Optional. The max number of images to return, per image type.
+func (r ApiGetResumeItemsRequest) ImageTypeLimit(imageTypeLimit int32) ApiGetResumeItemsRequest {
+	r.imageTypeLimit = &imageTypeLimit
+	return r
+}
+
+// Optional. The image types to include in the output.
+func (r ApiGetResumeItemsRequest) EnableImageTypes(enableImageTypes []ImageType) ApiGetResumeItemsRequest {
+	r.enableImageTypes = &enableImageTypes
+	return r
+}
+
+// Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimited.
+func (r ApiGetResumeItemsRequest) ExcludeItemTypes(excludeItemTypes []BaseItemKind) ApiGetResumeItemsRequest {
+	r.excludeItemTypes = &excludeItemTypes
+	return r
+}
+
+// Optional. If specified, results will be filtered based on the item type. This allows multiple, comma delimited.
+func (r ApiGetResumeItemsRequest) IncludeItemTypes(includeItemTypes []BaseItemKind) ApiGetResumeItemsRequest {
+	r.includeItemTypes = &includeItemTypes
+	return r
+}
+
+// Optional. Enable the total record count.
+func (r ApiGetResumeItemsRequest) EnableTotalRecordCount(enableTotalRecordCount bool) ApiGetResumeItemsRequest {
+	r.enableTotalRecordCount = &enableTotalRecordCount
+	return r
+}
+
+// Optional. Include image information in output.
+func (r ApiGetResumeItemsRequest) EnableImages(enableImages bool) ApiGetResumeItemsRequest {
+	r.enableImages = &enableImages
+	return r
+}
+
+// Optional. Whether to exclude the currently active sessions.
+func (r ApiGetResumeItemsRequest) ExcludeActiveSessions(excludeActiveSessions bool) ApiGetResumeItemsRequest {
+	r.excludeActiveSessions = &excludeActiveSessions
+	return r
+}
+
+func (r ApiGetResumeItemsRequest) Execute() (*BaseItemDtoQueryResult, *http.Response, error) {
+	return r.ApiService.GetResumeItemsExecute(r)
+}
+
+/*
+GetResumeItems Gets items based on a query.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetResumeItemsRequest
+*/
+func (a *LibraryAPIService) GetResumeItems(ctx context.Context) ApiGetResumeItemsRequest {
+	return ApiGetResumeItemsRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return BaseItemDtoQueryResult
+func (a *LibraryAPIService) GetResumeItemsExecute(r ApiGetResumeItemsRequest) (*BaseItemDtoQueryResult, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BaseItemDtoQueryResult
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetResumeItems")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/UserItems/Resume"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
+	}
+	if r.startIndex != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.searchTerm != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "searchTerm", r.searchTerm, "form", "")
+	}
+	if r.parentId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "parentId", r.parentId, "form", "")
+	}
+	if r.fields != nil {
+		t := *r.fields
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "fields", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
+		}
+	}
+	if r.mediaTypes != nil {
+		t := *r.mediaTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "mediaTypes", t, "form", "multi")
+		}
+	}
+	if r.enableUserData != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableUserData", r.enableUserData, "form", "")
+	}
+	if r.imageTypeLimit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageTypeLimit", r.imageTypeLimit, "form", "")
+	}
+	if r.enableImageTypes != nil {
+		t := *r.enableImageTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "enableImageTypes", t, "form", "multi")
+		}
+	}
+	if r.excludeItemTypes != nil {
+		t := *r.excludeItemTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "excludeItemTypes", t, "form", "multi")
+		}
+	}
+	if r.includeItemTypes != nil {
+		t := *r.includeItemTypes
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "includeItemTypes", t, "form", "multi")
+		}
+	}
+	if r.enableTotalRecordCount != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", r.enableTotalRecordCount, "form", "")
+	} else {
+		var defaultValue bool = true
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableTotalRecordCount", defaultValue, "form", "")
+		r.enableTotalRecordCount = &defaultValue
+	}
+	if r.enableImages != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", r.enableImages, "form", "")
+	} else {
+		var defaultValue bool = true
+		parameterAddToHeaderOrQuery(localVarQueryParams, "enableImages", defaultValue, "form", "")
+		r.enableImages = &defaultValue
+	}
+	if r.excludeActiveSessions != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "excludeActiveSessions", r.excludeActiveSessions, "form", "")
+	} else {
+		var defaultValue bool = false
+		parameterAddToHeaderOrQuery(localVarQueryParams, "excludeActiveSessions", defaultValue, "form", "")
+		r.excludeActiveSessions = &defaultValue
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetRootFolderRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	userId *string
+}
+
+// User id.
+func (r ApiGetRootFolderRequest) UserId(userId string) ApiGetRootFolderRequest {
+	r.userId = &userId
+	return r
+}
+
+func (r ApiGetRootFolderRequest) Execute() (*BaseItemDto, *http.Response, error) {
+	return r.ApiService.GetRootFolderExecute(r)
+}
+
+/*
+GetRootFolder Gets the root folder from a user's library.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetRootFolderRequest
+*/
+func (a *LibraryAPIService) GetRootFolder(ctx context.Context) ApiGetRootFolderRequest {
+	return ApiGetRootFolderRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return BaseItemDto
+func (a *LibraryAPIService) GetRootFolderExecute(r ApiGetRootFolderRequest) (*BaseItemDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BaseItemDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetRootFolder")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items/Root"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -2563,6 +5054,131 @@ func (a *LibraryAPIService) GetSimilarTrailersExecute(r ApiGetSimilarTrailersReq
 		} else {
 			parameterAddToHeaderOrQuery(localVarQueryParams, "fields", t, "form", "multi")
 		}
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetSpecialFeaturesRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	itemId string
+	userId *string
+}
+
+// User id.
+func (r ApiGetSpecialFeaturesRequest) UserId(userId string) ApiGetSpecialFeaturesRequest {
+	r.userId = &userId
+	return r
+}
+
+func (r ApiGetSpecialFeaturesRequest) Execute() ([]BaseItemDto, *http.Response, error) {
+	return r.ApiService.GetSpecialFeaturesExecute(r)
+}
+
+/*
+GetSpecialFeatures Gets special features for an item.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param itemId Item id.
+ @return ApiGetSpecialFeaturesRequest
+*/
+func (a *LibraryAPIService) GetSpecialFeatures(ctx context.Context, itemId string) ApiGetSpecialFeaturesRequest {
+	return ApiGetSpecialFeaturesRequest{
+		ApiService: a,
+		ctx: ctx,
+		itemId: itemId,
+	}
+}
+
+// Execute executes the request
+//  @return []BaseItemDto
+func (a *LibraryAPIService) GetSpecialFeaturesExecute(r ApiGetSpecialFeaturesRequest) ([]BaseItemDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []BaseItemDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.GetSpecialFeatures")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items/{itemId}/SpecialFeatures"
+	localVarPath = strings.Replace(localVarPath, "{"+"itemId"+"}", url.PathEscape(parameterValueToString(r.itemId, "itemId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.userId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "userId", r.userId, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3744,6 +6360,191 @@ func (a *LibraryAPIService) PostUpdatedSeriesExecute(r ApiPostUpdatedSeriesReque
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiRefreshItemRequest struct {
+	ctx context.Context
+	ApiService LibraryAPI
+	itemId string
+	metadataRefreshMode *MetadataRefreshMode
+	imageRefreshMode *MetadataRefreshMode
+	replaceAllMetadata *bool
+	replaceAllImages *bool
+	regenerateTrickplay *bool
+}
+
+// (Optional) Specifies the metadata refresh mode.
+func (r ApiRefreshItemRequest) MetadataRefreshMode(metadataRefreshMode MetadataRefreshMode) ApiRefreshItemRequest {
+	r.metadataRefreshMode = &metadataRefreshMode
+	return r
+}
+
+// (Optional) Specifies the image refresh mode.
+func (r ApiRefreshItemRequest) ImageRefreshMode(imageRefreshMode MetadataRefreshMode) ApiRefreshItemRequest {
+	r.imageRefreshMode = &imageRefreshMode
+	return r
+}
+
+// (Optional) Determines if metadata should be replaced. Only applicable if mode is FullRefresh.
+func (r ApiRefreshItemRequest) ReplaceAllMetadata(replaceAllMetadata bool) ApiRefreshItemRequest {
+	r.replaceAllMetadata = &replaceAllMetadata
+	return r
+}
+
+// (Optional) Determines if images should be replaced. Only applicable if mode is FullRefresh.
+func (r ApiRefreshItemRequest) ReplaceAllImages(replaceAllImages bool) ApiRefreshItemRequest {
+	r.replaceAllImages = &replaceAllImages
+	return r
+}
+
+// (Optional) Determines if trickplay images should be replaced. Only applicable if mode is FullRefresh.
+func (r ApiRefreshItemRequest) RegenerateTrickplay(regenerateTrickplay bool) ApiRefreshItemRequest {
+	r.regenerateTrickplay = &regenerateTrickplay
+	return r
+}
+
+func (r ApiRefreshItemRequest) Execute() (*http.Response, error) {
+	return r.ApiService.RefreshItemExecute(r)
+}
+
+/*
+RefreshItem Refreshes metadata for an item.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param itemId Item id.
+ @return ApiRefreshItemRequest
+*/
+func (a *LibraryAPIService) RefreshItem(ctx context.Context, itemId string) ApiRefreshItemRequest {
+	return ApiRefreshItemRequest{
+		ApiService: a,
+		ctx: ctx,
+		itemId: itemId,
+	}
+}
+
+// Execute executes the request
+func (a *LibraryAPIService) RefreshItemExecute(r ApiRefreshItemRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryAPIService.RefreshItem")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/Items/{itemId}/Refresh"
+	localVarPath = strings.Replace(localVarPath, "{"+"itemId"+"}", url.PathEscape(parameterValueToString(r.itemId, "itemId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.metadataRefreshMode != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "metadataRefreshMode", r.metadataRefreshMode, "form", "")
+	} else {
+		var defaultValue MetadataRefreshMode = "None"
+		parameterAddToHeaderOrQuery(localVarQueryParams, "metadataRefreshMode", defaultValue, "form", "")
+		r.metadataRefreshMode = &defaultValue
+	}
+	if r.imageRefreshMode != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageRefreshMode", r.imageRefreshMode, "form", "")
+	} else {
+		var defaultValue MetadataRefreshMode = "None"
+		parameterAddToHeaderOrQuery(localVarQueryParams, "imageRefreshMode", defaultValue, "form", "")
+		r.imageRefreshMode = &defaultValue
+	}
+	if r.replaceAllMetadata != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllMetadata", r.replaceAllMetadata, "form", "")
+	} else {
+		var defaultValue bool = false
+		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllMetadata", defaultValue, "form", "")
+		r.replaceAllMetadata = &defaultValue
+	}
+	if r.replaceAllImages != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", r.replaceAllImages, "form", "")
+	} else {
+		var defaultValue bool = false
+		parameterAddToHeaderOrQuery(localVarQueryParams, "replaceAllImages", defaultValue, "form", "")
+		r.replaceAllImages = &defaultValue
+	}
+	if r.regenerateTrickplay != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "regenerateTrickplay", r.regenerateTrickplay, "form", "")
+	} else {
+		var defaultValue bool = false
+		parameterAddToHeaderOrQuery(localVarQueryParams, "regenerateTrickplay", defaultValue, "form", "")
+		r.regenerateTrickplay = &defaultValue
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v ProblemDetails
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarHTTPResponse, newErr
 		}
 		return localVarHTTPResponse, newErr
 	}

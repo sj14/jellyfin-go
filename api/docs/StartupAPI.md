@@ -267,7 +267,7 @@ import (
 )
 
 func main() {
-	startupRemoteAccessDto := *openapiclient.NewStartupRemoteAccessDto(false, false) // StartupRemoteAccessDto | The startup remote access dto.
+	startupRemoteAccessDto := *openapiclient.NewStartupRemoteAccessDto(false) // StartupRemoteAccessDto | The startup remote access dto.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

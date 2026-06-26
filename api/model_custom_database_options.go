@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the CustomDatabaseOptions type satisfies the MappedNullable interface at compile time
@@ -19,21 +21,26 @@ var _ MappedNullable = &CustomDatabaseOptions{}
 // CustomDatabaseOptions Defines the options for a custom database connector.
 type CustomDatabaseOptions struct {
 	// Gets or sets the Plugin name to search for database providers.
-	PluginName *string `json:"PluginName,omitempty"`
+	PluginName string `json:"PluginName"`
 	// Gets or sets the plugin assembly to search for providers.
-	PluginAssembly *string `json:"PluginAssembly,omitempty"`
+	PluginAssembly string `json:"PluginAssembly"`
 	// Gets or sets the connection string for the custom database provider.
-	ConnectionString *string `json:"ConnectionString,omitempty"`
+	ConnectionString string `json:"ConnectionString"`
 	// Gets or sets the list of extra options for the custom provider.
 	Options []CustomDatabaseOption `json:"Options,omitempty"`
 }
+
+type _CustomDatabaseOptions CustomDatabaseOptions
 
 // NewCustomDatabaseOptions instantiates a new CustomDatabaseOptions object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCustomDatabaseOptions() *CustomDatabaseOptions {
+func NewCustomDatabaseOptions(pluginName string, pluginAssembly string, connectionString string) *CustomDatabaseOptions {
 	this := CustomDatabaseOptions{}
+	this.PluginName = pluginName
+	this.PluginAssembly = pluginAssembly
+	this.ConnectionString = connectionString
 	return &this
 }
 
@@ -45,100 +52,76 @@ func NewCustomDatabaseOptionsWithDefaults() *CustomDatabaseOptions {
 	return &this
 }
 
-// GetPluginName returns the PluginName field value if set, zero value otherwise.
+// GetPluginName returns the PluginName field value
 func (o *CustomDatabaseOptions) GetPluginName() string {
-	if o == nil || IsNil(o.PluginName) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.PluginName
+
+	return o.PluginName
 }
 
-// GetPluginNameOk returns a tuple with the PluginName field value if set, nil otherwise
+// GetPluginNameOk returns a tuple with the PluginName field value
 // and a boolean to check if the value has been set.
 func (o *CustomDatabaseOptions) GetPluginNameOk() (*string, bool) {
-	if o == nil || IsNil(o.PluginName) {
+	if o == nil {
 		return nil, false
 	}
-	return o.PluginName, true
+	return &o.PluginName, true
 }
 
-// HasPluginName returns a boolean if a field has been set.
-func (o *CustomDatabaseOptions) HasPluginName() bool {
-	if o != nil && !IsNil(o.PluginName) {
-		return true
-	}
-
-	return false
-}
-
-// SetPluginName gets a reference to the given string and assigns it to the PluginName field.
+// SetPluginName sets field value
 func (o *CustomDatabaseOptions) SetPluginName(v string) {
-	o.PluginName = &v
+	o.PluginName = v
 }
 
-// GetPluginAssembly returns the PluginAssembly field value if set, zero value otherwise.
+// GetPluginAssembly returns the PluginAssembly field value
 func (o *CustomDatabaseOptions) GetPluginAssembly() string {
-	if o == nil || IsNil(o.PluginAssembly) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.PluginAssembly
+
+	return o.PluginAssembly
 }
 
-// GetPluginAssemblyOk returns a tuple with the PluginAssembly field value if set, nil otherwise
+// GetPluginAssemblyOk returns a tuple with the PluginAssembly field value
 // and a boolean to check if the value has been set.
 func (o *CustomDatabaseOptions) GetPluginAssemblyOk() (*string, bool) {
-	if o == nil || IsNil(o.PluginAssembly) {
+	if o == nil {
 		return nil, false
 	}
-	return o.PluginAssembly, true
+	return &o.PluginAssembly, true
 }
 
-// HasPluginAssembly returns a boolean if a field has been set.
-func (o *CustomDatabaseOptions) HasPluginAssembly() bool {
-	if o != nil && !IsNil(o.PluginAssembly) {
-		return true
-	}
-
-	return false
-}
-
-// SetPluginAssembly gets a reference to the given string and assigns it to the PluginAssembly field.
+// SetPluginAssembly sets field value
 func (o *CustomDatabaseOptions) SetPluginAssembly(v string) {
-	o.PluginAssembly = &v
+	o.PluginAssembly = v
 }
 
-// GetConnectionString returns the ConnectionString field value if set, zero value otherwise.
+// GetConnectionString returns the ConnectionString field value
 func (o *CustomDatabaseOptions) GetConnectionString() string {
-	if o == nil || IsNil(o.ConnectionString) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.ConnectionString
+
+	return o.ConnectionString
 }
 
-// GetConnectionStringOk returns a tuple with the ConnectionString field value if set, nil otherwise
+// GetConnectionStringOk returns a tuple with the ConnectionString field value
 // and a boolean to check if the value has been set.
 func (o *CustomDatabaseOptions) GetConnectionStringOk() (*string, bool) {
-	if o == nil || IsNil(o.ConnectionString) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ConnectionString, true
+	return &o.ConnectionString, true
 }
 
-// HasConnectionString returns a boolean if a field has been set.
-func (o *CustomDatabaseOptions) HasConnectionString() bool {
-	if o != nil && !IsNil(o.ConnectionString) {
-		return true
-	}
-
-	return false
-}
-
-// SetConnectionString gets a reference to the given string and assigns it to the ConnectionString field.
+// SetConnectionString sets field value
 func (o *CustomDatabaseOptions) SetConnectionString(v string) {
-	o.ConnectionString = &v
+	o.ConnectionString = v
 }
 
 // GetOptions returns the Options field value if set, zero value otherwise.
@@ -183,19 +166,52 @@ func (o CustomDatabaseOptions) MarshalJSON() ([]byte, error) {
 
 func (o CustomDatabaseOptions) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.PluginName) {
-		toSerialize["PluginName"] = o.PluginName
-	}
-	if !IsNil(o.PluginAssembly) {
-		toSerialize["PluginAssembly"] = o.PluginAssembly
-	}
-	if !IsNil(o.ConnectionString) {
-		toSerialize["ConnectionString"] = o.ConnectionString
-	}
+	toSerialize["PluginName"] = o.PluginName
+	toSerialize["PluginAssembly"] = o.PluginAssembly
+	toSerialize["ConnectionString"] = o.ConnectionString
 	if !IsNil(o.Options) {
 		toSerialize["Options"] = o.Options
 	}
 	return toSerialize, nil
+}
+
+func (o *CustomDatabaseOptions) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"PluginName",
+		"PluginAssembly",
+		"ConnectionString",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varCustomDatabaseOptions := _CustomDatabaseOptions{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varCustomDatabaseOptions)
+
+	if err != nil {
+		return err
+	}
+
+	*o = CustomDatabaseOptions(varCustomDatabaseOptions)
+
+	return err
 }
 
 type NullableCustomDatabaseOptions struct {

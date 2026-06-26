@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Gets or sets the id for the lyric. | [optional] 
-**ProviderName** | Pointer to **string** | Gets the provider name. | [optional] 
-**Lyrics** | Pointer to [**LyricDto**](LyricDto.md) | Gets the lyrics. | [optional] 
+**Id** | **string** | Gets or sets the id for the lyric. | 
+**ProviderName** | **string** | Gets the provider name. | 
+**Lyrics** | [**LyricDto**](LyricDto.md) | Gets the lyrics. | 
 
 ## Methods
 
 ### NewRemoteLyricInfoDto
 
-`func NewRemoteLyricInfoDto() *RemoteLyricInfoDto`
+`func NewRemoteLyricInfoDto(id string, providerName string, lyrics LyricDto, ) *RemoteLyricInfoDto`
 
 NewRemoteLyricInfoDto instantiates a new RemoteLyricInfoDto object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *RemoteLyricInfoDto) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetProviderName
 
@@ -71,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetProviderName sets ProviderName field to given value.
 
-### HasProviderName
-
-`func (o *RemoteLyricInfoDto) HasProviderName() bool`
-
-HasProviderName returns a boolean if a field has been set.
 
 ### GetLyrics
 
@@ -96,11 +86,6 @@ and a boolean to check if the value has been set.
 
 SetLyrics sets Lyrics field to given value.
 
-### HasLyrics
-
-`func (o *RemoteLyricInfoDto) HasLyrics() bool`
-
-HasLyrics returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

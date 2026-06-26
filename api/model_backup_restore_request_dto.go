@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the BackupRestoreRequestDto type satisfies the MappedNullable interface at compile time
@@ -19,15 +21,18 @@ var _ MappedNullable = &BackupRestoreRequestDto{}
 // BackupRestoreRequestDto Defines properties used to start a restore process.
 type BackupRestoreRequestDto struct {
 	// Gets or Sets the name of the backup archive to restore from. Must be present in MediaBrowser.Common.Configuration.IApplicationPaths.BackupPath.
-	ArchiveFileName *string `json:"ArchiveFileName,omitempty"`
+	ArchiveFileName string `json:"ArchiveFileName"`
 }
+
+type _BackupRestoreRequestDto BackupRestoreRequestDto
 
 // NewBackupRestoreRequestDto instantiates a new BackupRestoreRequestDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBackupRestoreRequestDto() *BackupRestoreRequestDto {
+func NewBackupRestoreRequestDto(archiveFileName string) *BackupRestoreRequestDto {
 	this := BackupRestoreRequestDto{}
+	this.ArchiveFileName = archiveFileName
 	return &this
 }
 
@@ -39,36 +44,28 @@ func NewBackupRestoreRequestDtoWithDefaults() *BackupRestoreRequestDto {
 	return &this
 }
 
-// GetArchiveFileName returns the ArchiveFileName field value if set, zero value otherwise.
+// GetArchiveFileName returns the ArchiveFileName field value
 func (o *BackupRestoreRequestDto) GetArchiveFileName() string {
-	if o == nil || IsNil(o.ArchiveFileName) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.ArchiveFileName
+
+	return o.ArchiveFileName
 }
 
-// GetArchiveFileNameOk returns a tuple with the ArchiveFileName field value if set, nil otherwise
+// GetArchiveFileNameOk returns a tuple with the ArchiveFileName field value
 // and a boolean to check if the value has been set.
 func (o *BackupRestoreRequestDto) GetArchiveFileNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ArchiveFileName) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ArchiveFileName, true
+	return &o.ArchiveFileName, true
 }
 
-// HasArchiveFileName returns a boolean if a field has been set.
-func (o *BackupRestoreRequestDto) HasArchiveFileName() bool {
-	if o != nil && !IsNil(o.ArchiveFileName) {
-		return true
-	}
-
-	return false
-}
-
-// SetArchiveFileName gets a reference to the given string and assigns it to the ArchiveFileName field.
+// SetArchiveFileName sets field value
 func (o *BackupRestoreRequestDto) SetArchiveFileName(v string) {
-	o.ArchiveFileName = &v
+	o.ArchiveFileName = v
 }
 
 func (o BackupRestoreRequestDto) MarshalJSON() ([]byte, error) {
@@ -81,10 +78,45 @@ func (o BackupRestoreRequestDto) MarshalJSON() ([]byte, error) {
 
 func (o BackupRestoreRequestDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ArchiveFileName) {
-		toSerialize["ArchiveFileName"] = o.ArchiveFileName
-	}
+	toSerialize["ArchiveFileName"] = o.ArchiveFileName
 	return toSerialize, nil
+}
+
+func (o *BackupRestoreRequestDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"ArchiveFileName",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varBackupRestoreRequestDto := _BackupRestoreRequestDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varBackupRestoreRequestDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = BackupRestoreRequestDto(varBackupRestoreRequestDto)
+
+	return err
 }
 
 type NullableBackupRestoreRequestDto struct {

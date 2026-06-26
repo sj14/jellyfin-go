@@ -5,13 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EnableRemoteAccess** | **bool** | Gets or sets a value indicating whether enable remote access. | 
-**EnableAutomaticPortMapping** | **bool** | Gets or sets a value indicating whether enable automatic port mapping. | 
 
 ## Methods
 
 ### NewStartupRemoteAccessDto
 
-`func NewStartupRemoteAccessDto(enableRemoteAccess bool, enableAutomaticPortMapping bool, ) *StartupRemoteAccessDto`
+`func NewStartupRemoteAccessDto(enableRemoteAccess bool, ) *StartupRemoteAccessDto`
 
 NewStartupRemoteAccessDto instantiates a new StartupRemoteAccessDto object
 This constructor will assign default values to properties that have it defined,
@@ -44,26 +43,6 @@ and a boolean to check if the value has been set.
 `func (o *StartupRemoteAccessDto) SetEnableRemoteAccess(v bool)`
 
 SetEnableRemoteAccess sets EnableRemoteAccess field to given value.
-
-
-### GetEnableAutomaticPortMapping
-
-`func (o *StartupRemoteAccessDto) GetEnableAutomaticPortMapping() bool`
-
-GetEnableAutomaticPortMapping returns the EnableAutomaticPortMapping field if non-nil, zero value otherwise.
-
-### GetEnableAutomaticPortMappingOk
-
-`func (o *StartupRemoteAccessDto) GetEnableAutomaticPortMappingOk() (*bool, bool)`
-
-GetEnableAutomaticPortMappingOk returns a tuple with the EnableAutomaticPortMapping field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnableAutomaticPortMapping
-
-`func (o *StartupRemoteAccessDto) SetEnableAutomaticPortMapping(v bool)`
-
-SetEnableAutomaticPortMapping sets EnableAutomaticPortMapping field to given value.
 
 
 

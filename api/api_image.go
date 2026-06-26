@@ -535,7 +535,7 @@ type ImageAPI interface {
 	UpdateItemImageIndexExecute(r ApiUpdateItemImageIndexRequest) (*http.Response, error)
 
 	/*
-	UploadCustomSplashscreen Uploads a custom splashscreen.  The body is expected to the image contents base64 encoded.
+	UploadCustomSplashscreen Uploads a custom splashscreen. The body is expected to the image contents base64 encoded.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return ApiUploadCustomSplashscreenRequest
@@ -8372,7 +8372,7 @@ func (r ApiUploadCustomSplashscreenRequest) Execute() (*http.Response, error) {
 }
 
 /*
-UploadCustomSplashscreen Uploads a custom splashscreen.  The body is expected to the image contents base64 encoded.
+UploadCustomSplashscreen Uploads a custom splashscreen. The body is expected to the image contents base64 encoded.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiUploadCustomSplashscreenRequest

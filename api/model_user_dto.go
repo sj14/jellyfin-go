@@ -23,19 +23,21 @@ type UserDto struct {
 	Name NullableString `json:"Name,omitempty"`
 	// Gets or sets the server identifier.
 	ServerId NullableString `json:"ServerId,omitempty"`
-	// Gets or sets the name of the server.  This is not used by the server and is for client-side usage only.
+	// Gets or sets the name of the server. This is not used by the server and is for client-side usage only.
 	ServerName NullableString `json:"ServerName,omitempty"`
 	// Gets or sets the id.
 	Id *string `json:"Id,omitempty"`
 	// Gets or sets the primary image tag.
 	PrimaryImageTag NullableString `json:"PrimaryImageTag,omitempty"`
 	// Gets or sets a value indicating whether this instance has password.
-	HasPassword *bool `json:"HasPassword,omitempty"`
+	// Deprecated
+	HasPassword NullableBool `json:"HasPassword,omitempty"`
 	// Gets or sets a value indicating whether this instance has configured password.
-	HasConfiguredPassword *bool `json:"HasConfiguredPassword,omitempty"`
+	// Deprecated
+	HasConfiguredPassword NullableBool `json:"HasConfiguredPassword,omitempty"`
 	// Gets or sets a value indicating whether this instance has configured easy password.
 	// Deprecated
-	HasConfiguredEasyPassword *bool `json:"HasConfiguredEasyPassword,omitempty"`
+	HasConfiguredEasyPassword NullableBool `json:"HasConfiguredEasyPassword,omitempty"`
 	// Gets or sets whether async login is enabled or not.
 	EnableAutoLogin NullableBool `json:"EnableAutoLogin,omitempty"`
 	// Gets or sets the last login date.
@@ -267,103 +269,139 @@ func (o *UserDto) UnsetPrimaryImageTag() {
 	o.PrimaryImageTag.Unset()
 }
 
-// GetHasPassword returns the HasPassword field value if set, zero value otherwise.
+// GetHasPassword returns the HasPassword field value if set, zero value otherwise (both if not set or set to explicit null).
+// Deprecated
 func (o *UserDto) GetHasPassword() bool {
-	if o == nil || IsNil(o.HasPassword) {
+	if o == nil || IsNil(o.HasPassword.Get()) {
 		var ret bool
 		return ret
 	}
-	return *o.HasPassword
+	return *o.HasPassword.Get()
 }
 
 // GetHasPasswordOk returns a tuple with the HasPassword field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+// Deprecated
 func (o *UserDto) GetHasPasswordOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasPassword) {
+	if o == nil {
 		return nil, false
 	}
-	return o.HasPassword, true
+	return o.HasPassword.Get(), o.HasPassword.IsSet()
 }
 
 // HasHasPassword returns a boolean if a field has been set.
 func (o *UserDto) HasHasPassword() bool {
-	if o != nil && !IsNil(o.HasPassword) {
+	if o != nil && o.HasPassword.IsSet() {
 		return true
 	}
 
 	return false
 }
 
-// SetHasPassword gets a reference to the given bool and assigns it to the HasPassword field.
+// SetHasPassword gets a reference to the given NullableBool and assigns it to the HasPassword field.
+// Deprecated
 func (o *UserDto) SetHasPassword(v bool) {
-	o.HasPassword = &v
+	o.HasPassword.Set(&v)
+}
+// SetHasPasswordNil sets the value for HasPassword to be an explicit nil
+func (o *UserDto) SetHasPasswordNil() {
+	o.HasPassword.Set(nil)
 }
 
-// GetHasConfiguredPassword returns the HasConfiguredPassword field value if set, zero value otherwise.
+// UnsetHasPassword ensures that no value is present for HasPassword, not even an explicit nil
+func (o *UserDto) UnsetHasPassword() {
+	o.HasPassword.Unset()
+}
+
+// GetHasConfiguredPassword returns the HasConfiguredPassword field value if set, zero value otherwise (both if not set or set to explicit null).
+// Deprecated
 func (o *UserDto) GetHasConfiguredPassword() bool {
-	if o == nil || IsNil(o.HasConfiguredPassword) {
+	if o == nil || IsNil(o.HasConfiguredPassword.Get()) {
 		var ret bool
 		return ret
 	}
-	return *o.HasConfiguredPassword
+	return *o.HasConfiguredPassword.Get()
 }
 
 // GetHasConfiguredPasswordOk returns a tuple with the HasConfiguredPassword field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+// Deprecated
 func (o *UserDto) GetHasConfiguredPasswordOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasConfiguredPassword) {
+	if o == nil {
 		return nil, false
 	}
-	return o.HasConfiguredPassword, true
+	return o.HasConfiguredPassword.Get(), o.HasConfiguredPassword.IsSet()
 }
 
 // HasHasConfiguredPassword returns a boolean if a field has been set.
 func (o *UserDto) HasHasConfiguredPassword() bool {
-	if o != nil && !IsNil(o.HasConfiguredPassword) {
+	if o != nil && o.HasConfiguredPassword.IsSet() {
 		return true
 	}
 
 	return false
 }
 
-// SetHasConfiguredPassword gets a reference to the given bool and assigns it to the HasConfiguredPassword field.
+// SetHasConfiguredPassword gets a reference to the given NullableBool and assigns it to the HasConfiguredPassword field.
+// Deprecated
 func (o *UserDto) SetHasConfiguredPassword(v bool) {
-	o.HasConfiguredPassword = &v
+	o.HasConfiguredPassword.Set(&v)
+}
+// SetHasConfiguredPasswordNil sets the value for HasConfiguredPassword to be an explicit nil
+func (o *UserDto) SetHasConfiguredPasswordNil() {
+	o.HasConfiguredPassword.Set(nil)
 }
 
-// GetHasConfiguredEasyPassword returns the HasConfiguredEasyPassword field value if set, zero value otherwise.
+// UnsetHasConfiguredPassword ensures that no value is present for HasConfiguredPassword, not even an explicit nil
+func (o *UserDto) UnsetHasConfiguredPassword() {
+	o.HasConfiguredPassword.Unset()
+}
+
+// GetHasConfiguredEasyPassword returns the HasConfiguredEasyPassword field value if set, zero value otherwise (both if not set or set to explicit null).
 // Deprecated
 func (o *UserDto) GetHasConfiguredEasyPassword() bool {
-	if o == nil || IsNil(o.HasConfiguredEasyPassword) {
+	if o == nil || IsNil(o.HasConfiguredEasyPassword.Get()) {
 		var ret bool
 		return ret
 	}
-	return *o.HasConfiguredEasyPassword
+	return *o.HasConfiguredEasyPassword.Get()
 }
 
 // GetHasConfiguredEasyPasswordOk returns a tuple with the HasConfiguredEasyPassword field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
 // Deprecated
 func (o *UserDto) GetHasConfiguredEasyPasswordOk() (*bool, bool) {
-	if o == nil || IsNil(o.HasConfiguredEasyPassword) {
+	if o == nil {
 		return nil, false
 	}
-	return o.HasConfiguredEasyPassword, true
+	return o.HasConfiguredEasyPassword.Get(), o.HasConfiguredEasyPassword.IsSet()
 }
 
 // HasHasConfiguredEasyPassword returns a boolean if a field has been set.
 func (o *UserDto) HasHasConfiguredEasyPassword() bool {
-	if o != nil && !IsNil(o.HasConfiguredEasyPassword) {
+	if o != nil && o.HasConfiguredEasyPassword.IsSet() {
 		return true
 	}
 
 	return false
 }
 
-// SetHasConfiguredEasyPassword gets a reference to the given bool and assigns it to the HasConfiguredEasyPassword field.
+// SetHasConfiguredEasyPassword gets a reference to the given NullableBool and assigns it to the HasConfiguredEasyPassword field.
 // Deprecated
 func (o *UserDto) SetHasConfiguredEasyPassword(v bool) {
-	o.HasConfiguredEasyPassword = &v
+	o.HasConfiguredEasyPassword.Set(&v)
+}
+// SetHasConfiguredEasyPasswordNil sets the value for HasConfiguredEasyPassword to be an explicit nil
+func (o *UserDto) SetHasConfiguredEasyPasswordNil() {
+	o.HasConfiguredEasyPassword.Set(nil)
+}
+
+// UnsetHasConfiguredEasyPassword ensures that no value is present for HasConfiguredEasyPassword, not even an explicit nil
+func (o *UserDto) UnsetHasConfiguredEasyPassword() {
+	o.HasConfiguredEasyPassword.Unset()
 }
 
 // GetEnableAutoLogin returns the EnableAutoLogin field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -643,14 +681,14 @@ func (o UserDto) ToMap() (map[string]interface{}, error) {
 	if o.PrimaryImageTag.IsSet() {
 		toSerialize["PrimaryImageTag"] = o.PrimaryImageTag.Get()
 	}
-	if !IsNil(o.HasPassword) {
-		toSerialize["HasPassword"] = o.HasPassword
+	if o.HasPassword.IsSet() {
+		toSerialize["HasPassword"] = o.HasPassword.Get()
 	}
-	if !IsNil(o.HasConfiguredPassword) {
-		toSerialize["HasConfiguredPassword"] = o.HasConfiguredPassword
+	if o.HasConfiguredPassword.IsSet() {
+		toSerialize["HasConfiguredPassword"] = o.HasConfiguredPassword.Get()
 	}
-	if !IsNil(o.HasConfiguredEasyPassword) {
-		toSerialize["HasConfiguredEasyPassword"] = o.HasConfiguredEasyPassword
+	if o.HasConfiguredEasyPassword.IsSet() {
+		toSerialize["HasConfiguredEasyPassword"] = o.HasConfiguredEasyPassword.Get()
 	}
 	if o.EnableAutoLogin.IsSet() {
 		toSerialize["EnableAutoLogin"] = o.EnableAutoLogin.Get()

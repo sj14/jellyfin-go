@@ -79,7 +79,7 @@ type EncodingOptions struct {
 	// Gets or sets the H265 CRF.
 	H265Crf *int32 `json:"H265Crf,omitempty"`
 	// Gets or sets the encoder preset.
-	EncoderPreset NullableEncoderPreset `json:"EncoderPreset,omitempty"`
+	EncoderPreset *EncoderPreset `json:"EncoderPreset,omitempty"`
 	// Gets or sets a value indicating whether the framerate is doubled when deinterlacing.
 	DeinterlaceDoubleRate *bool `json:"DeinterlaceDoubleRate,omitempty"`
 	// Gets or sets the deinterlace method.
@@ -108,10 +108,14 @@ type EncodingOptions struct {
 	AllowAv1Encoding *bool `json:"AllowAv1Encoding,omitempty"`
 	// Gets or sets a value indicating whether subtitle extraction is enabled.
 	EnableSubtitleExtraction *bool `json:"EnableSubtitleExtraction,omitempty"`
+	// Gets or sets the timeout for subtitle extraction in minutes.
+	SubtitleExtractionTimeoutMinutes *int32 `json:"SubtitleExtractionTimeoutMinutes,omitempty"`
 	// Gets or sets the codecs hardware encoding is used for.
 	HardwareDecodingCodecs []string `json:"HardwareDecodingCodecs,omitempty"`
 	// Gets or sets the file extensions on-demand metadata based keyframe extraction is enabled for.
 	AllowOnDemandMetadataBasedKeyframeExtractionForExtensions []string `json:"AllowOnDemandMetadataBasedKeyframeExtractionForExtensions,omitempty"`
+	// Gets or sets the method used for audio seeking in HLS.
+	HlsAudioSeekStrategy *HlsAudioSeekStrategy `json:"HlsAudioSeekStrategy,omitempty"`
 }
 
 // NewEncodingOptions instantiates a new EncodingOptions object
@@ -120,6 +124,8 @@ type EncodingOptions struct {
 // will change when the set of required properties is changed
 func NewEncodingOptions() *EncodingOptions {
 	this := EncodingOptions{}
+	var hlsAudioSeekStrategy HlsAudioSeekStrategy = HLSAUDIOSEEKSTRATEGY_TRIM_COPIED_AUDIO
+	this.HlsAudioSeekStrategy = &hlsAudioSeekStrategy
 	return &this
 }
 
@@ -128,6 +134,8 @@ func NewEncodingOptions() *EncodingOptions {
 // but it doesn't guarantee that properties required by API are set
 func NewEncodingOptionsWithDefaults() *EncodingOptions {
 	this := EncodingOptions{}
+	var hlsAudioSeekStrategy HlsAudioSeekStrategy = HLSAUDIOSEEKSTRATEGY_TRIM_COPIED_AUDIO
+	this.HlsAudioSeekStrategy = &hlsAudioSeekStrategy
 	return &this
 }
 
@@ -1151,46 +1159,36 @@ func (o *EncodingOptions) SetH265Crf(v int32) {
 	o.H265Crf = &v
 }
 
-// GetEncoderPreset returns the EncoderPreset field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetEncoderPreset returns the EncoderPreset field value if set, zero value otherwise.
 func (o *EncodingOptions) GetEncoderPreset() EncoderPreset {
-	if o == nil || IsNil(o.EncoderPreset.Get()) {
+	if o == nil || IsNil(o.EncoderPreset) {
 		var ret EncoderPreset
 		return ret
 	}
-	return *o.EncoderPreset.Get()
+	return *o.EncoderPreset
 }
 
 // GetEncoderPresetOk returns a tuple with the EncoderPreset field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *EncodingOptions) GetEncoderPresetOk() (*EncoderPreset, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.EncoderPreset) {
 		return nil, false
 	}
-	return o.EncoderPreset.Get(), o.EncoderPreset.IsSet()
+	return o.EncoderPreset, true
 }
 
 // HasEncoderPreset returns a boolean if a field has been set.
 func (o *EncodingOptions) HasEncoderPreset() bool {
-	if o != nil && o.EncoderPreset.IsSet() {
+	if o != nil && !IsNil(o.EncoderPreset) {
 		return true
 	}
 
 	return false
 }
 
-// SetEncoderPreset gets a reference to the given NullableEncoderPreset and assigns it to the EncoderPreset field.
+// SetEncoderPreset gets a reference to the given EncoderPreset and assigns it to the EncoderPreset field.
 func (o *EncodingOptions) SetEncoderPreset(v EncoderPreset) {
-	o.EncoderPreset.Set(&v)
-}
-// SetEncoderPresetNil sets the value for EncoderPreset to be an explicit nil
-func (o *EncodingOptions) SetEncoderPresetNil() {
-	o.EncoderPreset.Set(nil)
-}
-
-// UnsetEncoderPreset ensures that no value is present for EncoderPreset, not even an explicit nil
-func (o *EncodingOptions) UnsetEncoderPreset() {
-	o.EncoderPreset.Unset()
+	o.EncoderPreset = &v
 }
 
 // GetDeinterlaceDoubleRate returns the DeinterlaceDoubleRate field value if set, zero value otherwise.
@@ -1641,6 +1639,38 @@ func (o *EncodingOptions) SetEnableSubtitleExtraction(v bool) {
 	o.EnableSubtitleExtraction = &v
 }
 
+// GetSubtitleExtractionTimeoutMinutes returns the SubtitleExtractionTimeoutMinutes field value if set, zero value otherwise.
+func (o *EncodingOptions) GetSubtitleExtractionTimeoutMinutes() int32 {
+	if o == nil || IsNil(o.SubtitleExtractionTimeoutMinutes) {
+		var ret int32
+		return ret
+	}
+	return *o.SubtitleExtractionTimeoutMinutes
+}
+
+// GetSubtitleExtractionTimeoutMinutesOk returns a tuple with the SubtitleExtractionTimeoutMinutes field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *EncodingOptions) GetSubtitleExtractionTimeoutMinutesOk() (*int32, bool) {
+	if o == nil || IsNil(o.SubtitleExtractionTimeoutMinutes) {
+		return nil, false
+	}
+	return o.SubtitleExtractionTimeoutMinutes, true
+}
+
+// HasSubtitleExtractionTimeoutMinutes returns a boolean if a field has been set.
+func (o *EncodingOptions) HasSubtitleExtractionTimeoutMinutes() bool {
+	if o != nil && !IsNil(o.SubtitleExtractionTimeoutMinutes) {
+		return true
+	}
+
+	return false
+}
+
+// SetSubtitleExtractionTimeoutMinutes gets a reference to the given int32 and assigns it to the SubtitleExtractionTimeoutMinutes field.
+func (o *EncodingOptions) SetSubtitleExtractionTimeoutMinutes(v int32) {
+	o.SubtitleExtractionTimeoutMinutes = &v
+}
+
 // GetHardwareDecodingCodecs returns the HardwareDecodingCodecs field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *EncodingOptions) GetHardwareDecodingCodecs() []string {
 	if o == nil {
@@ -1705,6 +1735,38 @@ func (o *EncodingOptions) HasAllowOnDemandMetadataBasedKeyframeExtractionForExte
 // SetAllowOnDemandMetadataBasedKeyframeExtractionForExtensions gets a reference to the given []string and assigns it to the AllowOnDemandMetadataBasedKeyframeExtractionForExtensions field.
 func (o *EncodingOptions) SetAllowOnDemandMetadataBasedKeyframeExtractionForExtensions(v []string) {
 	o.AllowOnDemandMetadataBasedKeyframeExtractionForExtensions = v
+}
+
+// GetHlsAudioSeekStrategy returns the HlsAudioSeekStrategy field value if set, zero value otherwise.
+func (o *EncodingOptions) GetHlsAudioSeekStrategy() HlsAudioSeekStrategy {
+	if o == nil || IsNil(o.HlsAudioSeekStrategy) {
+		var ret HlsAudioSeekStrategy
+		return ret
+	}
+	return *o.HlsAudioSeekStrategy
+}
+
+// GetHlsAudioSeekStrategyOk returns a tuple with the HlsAudioSeekStrategy field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *EncodingOptions) GetHlsAudioSeekStrategyOk() (*HlsAudioSeekStrategy, bool) {
+	if o == nil || IsNil(o.HlsAudioSeekStrategy) {
+		return nil, false
+	}
+	return o.HlsAudioSeekStrategy, true
+}
+
+// HasHlsAudioSeekStrategy returns a boolean if a field has been set.
+func (o *EncodingOptions) HasHlsAudioSeekStrategy() bool {
+	if o != nil && !IsNil(o.HlsAudioSeekStrategy) {
+		return true
+	}
+
+	return false
+}
+
+// SetHlsAudioSeekStrategy gets a reference to the given HlsAudioSeekStrategy and assigns it to the HlsAudioSeekStrategy field.
+func (o *EncodingOptions) SetHlsAudioSeekStrategy(v HlsAudioSeekStrategy) {
+	o.HlsAudioSeekStrategy = &v
 }
 
 func (o EncodingOptions) MarshalJSON() ([]byte, error) {
@@ -1807,8 +1869,8 @@ func (o EncodingOptions) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.H265Crf) {
 		toSerialize["H265Crf"] = o.H265Crf
 	}
-	if o.EncoderPreset.IsSet() {
-		toSerialize["EncoderPreset"] = o.EncoderPreset.Get()
+	if !IsNil(o.EncoderPreset) {
+		toSerialize["EncoderPreset"] = o.EncoderPreset
 	}
 	if !IsNil(o.DeinterlaceDoubleRate) {
 		toSerialize["DeinterlaceDoubleRate"] = o.DeinterlaceDoubleRate
@@ -1852,11 +1914,17 @@ func (o EncodingOptions) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.EnableSubtitleExtraction) {
 		toSerialize["EnableSubtitleExtraction"] = o.EnableSubtitleExtraction
 	}
+	if !IsNil(o.SubtitleExtractionTimeoutMinutes) {
+		toSerialize["SubtitleExtractionTimeoutMinutes"] = o.SubtitleExtractionTimeoutMinutes
+	}
 	if o.HardwareDecodingCodecs != nil {
 		toSerialize["HardwareDecodingCodecs"] = o.HardwareDecodingCodecs
 	}
 	if o.AllowOnDemandMetadataBasedKeyframeExtractionForExtensions != nil {
 		toSerialize["AllowOnDemandMetadataBasedKeyframeExtractionForExtensions"] = o.AllowOnDemandMetadataBasedKeyframeExtractionForExtensions
+	}
+	if !IsNil(o.HlsAudioSeekStrategy) {
+		toSerialize["HlsAudioSeekStrategy"] = o.HlsAudioSeekStrategy
 	}
 	return toSerialize, nil
 }

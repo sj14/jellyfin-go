@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Overview** | Pointer to **string** | Gets or sets a short overview of what the plugin does. | [optional] 
 **Owner** | Pointer to **string** | Gets or sets the owner. | [optional] 
 **Category** | Pointer to **string** | Gets or sets the category. | [optional] 
-**Guid** | Pointer to **string** | Gets or sets the guid of the assembly associated with this plugin.  This is used to identify the proper item for automatic updates. | [optional] 
+**Guid** | Pointer to **string** | Gets or sets the guid of the assembly associated with this plugin. This is used to identify the proper item for automatic updates. | [optional] 
 **Versions** | Pointer to [**[]VersionInfo**](VersionInfo.md) | Gets or sets the versions. | [optional] 
 **ImageUrl** | Pointer to **NullableString** | Gets or sets the image url for the package. | [optional] 
 

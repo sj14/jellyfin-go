@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EnableHwAcceleration** | Pointer to **bool** | Gets or sets a value indicating whether or not to use HW acceleration. | [optional] 
 **EnableHwEncoding** | Pointer to **bool** | Gets or sets a value indicating whether or not to use HW accelerated MJPEG encoding. | [optional] 
-**EnableKeyFrameOnlyExtraction** | Pointer to **bool** | Gets or sets a value indicating whether to only extract key frames.  Significantly faster, but is not compatible with all decoders and/or video files. | [optional] 
+**EnableKeyFrameOnlyExtraction** | Pointer to **bool** | Gets or sets a value indicating whether to only extract key frames. Significantly faster, but is not compatible with all decoders and/or video files. | [optional] 
 **ScanBehavior** | Pointer to [**TrickplayScanBehavior**](TrickplayScanBehavior.md) | Gets or sets the behavior used by trickplay provider on library scan/update. | [optional] 
 **ProcessPriority** | Pointer to [**ProcessPriorityClass**](ProcessPriorityClass.md) | Gets or sets the process priority for the ffmpeg process. | [optional] 
 **Interval** | Pointer to **int32** | Gets or sets the interval, in ms, between each new trickplay image. | [optional] 

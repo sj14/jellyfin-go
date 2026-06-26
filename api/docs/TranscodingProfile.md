@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Type** | Pointer to [**DlnaProfileType**](DlnaProfileType.md) | Gets or sets the DLNA profile type. | [optional] 
 **VideoCodec** | Pointer to **string** | Gets or sets the video codec. | [optional] 
 **AudioCodec** | Pointer to **string** | Gets or sets the audio codec. | [optional] 
-**Protocol** | Pointer to [**MediaStreamProtocol**](MediaStreamProtocol.md) | Media streaming protocol.  Lowercase for backwards compatibility. | [optional] 
+**Protocol** | Pointer to [**MediaStreamProtocol**](MediaStreamProtocol.md) | Media streaming protocol. Lowercase for backwards compatibility. | [optional] 
 **EstimateContentLength** | Pointer to **bool** | Gets or sets a value indicating whether the content length should be estimated. | [optional] [default to false]
 **EnableMpegtsM2TsMode** | Pointer to **bool** | Gets or sets a value indicating whether M2TS mode is enabled. | [optional] [default to false]
 **TranscodeSeekInfo** | Pointer to [**TranscodeSeekInfo**](TranscodeSeekInfo.md) | Gets or sets the transcoding seek info mode. | [optional] [default to TRANSCODESEEKINFO_AUTO]
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **MaxAudioChannels** | Pointer to **NullableString** | Gets or sets the maximum audio channels. | [optional] 
 **MinSegments** | Pointer to **int32** | Gets or sets the minimum amount of segments. | [optional] [default to 0]
 **SegmentLength** | Pointer to **int32** | Gets or sets the segment length. | [optional] [default to 0]
-**BreakOnNonKeyFrames** | Pointer to **bool** | Gets or sets a value indicating whether breaking the video stream on non-keyframes is supported. | [optional] [default to false]
+**BreakOnNonKeyFrames** | Pointer to **NullableBool** | Gets or sets a value indicating whether breaking the video stream on non-keyframes is supported. | [optional] [default to false]
 **Conditions** | Pointer to [**[]ProfileCondition**](ProfileCondition.md) | Gets or sets the profile conditions. | [optional] 
 **EnableAudioVbrEncoding** | Pointer to **bool** | Gets or sets a value indicating whether variable bitrate encoding is supported. | [optional] [default to true]
 
@@ -426,6 +426,16 @@ SetBreakOnNonKeyFrames sets BreakOnNonKeyFrames field to given value.
 
 HasBreakOnNonKeyFrames returns a boolean if a field has been set.
 
+### SetBreakOnNonKeyFramesNil
+
+`func (o *TranscodingProfile) SetBreakOnNonKeyFramesNil(b bool)`
+
+ SetBreakOnNonKeyFramesNil sets the value for BreakOnNonKeyFrames to be an explicit nil
+
+### UnsetBreakOnNonKeyFrames
+`func (o *TranscodingProfile) UnsetBreakOnNonKeyFrames()`
+
+UnsetBreakOnNonKeyFrames ensures that no value is present for BreakOnNonKeyFrames, not even an explicit nil
 ### GetConditions
 
 `func (o *TranscodingProfile) GetConditions() []ProfileCondition`

@@ -16,7 +16,7 @@ import (
 // checks if the ActivityLogEntryStartMessage type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ActivityLogEntryStartMessage{}
 
-// ActivityLogEntryStartMessage Activity log entry start message.  Data is the timing data encoded as \"$initialDelay,$interval\" in ms.
+// ActivityLogEntryStartMessage Activity log entry start message. Data is the timing data encoded as \"$initialDelay,$interval\" in ms.
 type ActivityLogEntryStartMessage struct {
 	// Gets or sets the data.
 	Data NullableString `json:"Data,omitempty"`

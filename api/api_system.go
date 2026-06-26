@@ -15,11 +15,38 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
+	"time"
+	"reflect"
 	"os"
 )
 
 
 type SystemAPI interface {
+
+	/*
+	GetConfiguration Gets application configuration.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetConfigurationRequest
+	*/
+	GetConfiguration(ctx context.Context) ApiGetConfigurationRequest
+
+	// GetConfigurationExecute executes the request
+	//  @return ServerConfiguration
+	GetConfigurationExecute(r ApiGetConfigurationRequest) (*ServerConfiguration, *http.Response, error)
+
+	/*
+	GetDefaultMetadataOptions Gets a default MetadataOptions object.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetDefaultMetadataOptionsRequest
+	*/
+	GetDefaultMetadataOptions(ctx context.Context) ApiGetDefaultMetadataOptionsRequest
+
+	// GetDefaultMetadataOptionsExecute executes the request
+	//  @return MetadataOptions
+	GetDefaultMetadataOptionsExecute(r ApiGetDefaultMetadataOptionsRequest) (*MetadataOptions, *http.Response, error)
 
 	/*
 	GetEndpointInfo Gets information about the request endpoint.
@@ -34,6 +61,18 @@ type SystemAPI interface {
 	GetEndpointInfoExecute(r ApiGetEndpointInfoRequest) (*EndPointInfo, *http.Response, error)
 
 	/*
+	GetLogEntries Gets activity log entries.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLogEntriesRequest
+	*/
+	GetLogEntries(ctx context.Context) ApiGetLogEntriesRequest
+
+	// GetLogEntriesExecute executes the request
+	//  @return ActivityLogEntryQueryResult
+	GetLogEntriesExecute(r ApiGetLogEntriesRequest) (*ActivityLogEntryQueryResult, *http.Response, error)
+
+	/*
 	GetLogFile Gets a log file.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -44,6 +83,19 @@ type SystemAPI interface {
 	// GetLogFileExecute executes the request
 	//  @return *os.File
 	GetLogFileExecute(r ApiGetLogFileRequest) (*os.File, *http.Response, error)
+
+	/*
+	GetNamedConfiguration Gets a named configuration.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param key Configuration key.
+	@return ApiGetNamedConfigurationRequest
+	*/
+	GetNamedConfiguration(ctx context.Context, key string) ApiGetNamedConfigurationRequest
+
+	// GetNamedConfigurationExecute executes the request
+	//  @return *os.File
+	GetNamedConfigurationExecute(r ApiGetNamedConfigurationRequest) (*os.File, *http.Response, error)
 
 	/*
 	GetPingSystem Pings the system.
@@ -106,6 +158,30 @@ type SystemAPI interface {
 	GetSystemStorageExecute(r ApiGetSystemStorageRequest) (*SystemStorageDto, *http.Response, error)
 
 	/*
+	GetUtcTime Gets the current UTC time.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUtcTimeRequest
+	*/
+	GetUtcTime(ctx context.Context) ApiGetUtcTimeRequest
+
+	// GetUtcTimeExecute executes the request
+	//  @return UtcTimeResponse
+	GetUtcTimeExecute(r ApiGetUtcTimeRequest) (*UtcTimeResponse, *http.Response, error)
+
+	/*
+	LogFile Upload a document.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiLogFileRequest
+	*/
+	LogFile(ctx context.Context) ApiLogFileRequest
+
+	// LogFileExecute executes the request
+	//  @return ClientLogDocumentResponseDto
+	LogFileExecute(r ApiLogFileRequest) (*ClientLogDocumentResponseDto, *http.Response, error)
+
+	/*
 	PostPingSystem Pings the system.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -138,10 +214,266 @@ type SystemAPI interface {
 
 	// ShutdownApplicationExecute executes the request
 	ShutdownApplicationExecute(r ApiShutdownApplicationRequest) (*http.Response, error)
+
+	/*
+	UpdateBrandingConfiguration Updates branding configuration.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUpdateBrandingConfigurationRequest
+	*/
+	UpdateBrandingConfiguration(ctx context.Context) ApiUpdateBrandingConfigurationRequest
+
+	// UpdateBrandingConfigurationExecute executes the request
+	UpdateBrandingConfigurationExecute(r ApiUpdateBrandingConfigurationRequest) (*http.Response, error)
+
+	/*
+	UpdateConfiguration Updates application configuration.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUpdateConfigurationRequest
+	*/
+	UpdateConfiguration(ctx context.Context) ApiUpdateConfigurationRequest
+
+	// UpdateConfigurationExecute executes the request
+	UpdateConfigurationExecute(r ApiUpdateConfigurationRequest) (*http.Response, error)
+
+	/*
+	UpdateNamedConfiguration Updates named configuration.
+
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param key Configuration key.
+	@return ApiUpdateNamedConfigurationRequest
+	*/
+	UpdateNamedConfiguration(ctx context.Context, key string) ApiUpdateNamedConfigurationRequest
+
+	// UpdateNamedConfigurationExecute executes the request
+	UpdateNamedConfigurationExecute(r ApiUpdateNamedConfigurationRequest) (*http.Response, error)
 }
 
 // SystemAPIService SystemAPI service
 type SystemAPIService service
+
+type ApiGetConfigurationRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+}
+
+func (r ApiGetConfigurationRequest) Execute() (*ServerConfiguration, *http.Response, error) {
+	return r.ApiService.GetConfigurationExecute(r)
+}
+
+/*
+GetConfiguration Gets application configuration.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetConfigurationRequest
+*/
+func (a *SystemAPIService) GetConfiguration(ctx context.Context) ApiGetConfigurationRequest {
+	return ApiGetConfigurationRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return ServerConfiguration
+func (a *SystemAPIService) GetConfigurationExecute(r ApiGetConfigurationRequest) (*ServerConfiguration, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *ServerConfiguration
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.GetConfiguration")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/System/Configuration"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetDefaultMetadataOptionsRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+}
+
+func (r ApiGetDefaultMetadataOptionsRequest) Execute() (*MetadataOptions, *http.Response, error) {
+	return r.ApiService.GetDefaultMetadataOptionsExecute(r)
+}
+
+/*
+GetDefaultMetadataOptions Gets a default MetadataOptions object.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetDefaultMetadataOptionsRequest
+*/
+func (a *SystemAPIService) GetDefaultMetadataOptions(ctx context.Context) ApiGetDefaultMetadataOptionsRequest {
+	return ApiGetDefaultMetadataOptionsRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return MetadataOptions
+func (a *SystemAPIService) GetDefaultMetadataOptionsExecute(r ApiGetDefaultMetadataOptionsRequest) (*MetadataOptions, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *MetadataOptions
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.GetDefaultMetadataOptions")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/System/Configuration/MetadataOptions/Default"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
 
 type ApiGetEndpointInfoRequest struct {
 	ctx context.Context
@@ -249,6 +581,273 @@ func (a *SystemAPIService) GetEndpointInfoExecute(r ApiGetEndpointInfoRequest) (
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetLogEntriesRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+	startIndex *int32
+	limit *int32
+	minDate *time.Time
+	maxDate *time.Time
+	hasUserId *bool
+	name *string
+	overview *string
+	shortOverview *string
+	type_ *string
+	itemId *string
+	username *string
+	severity *LogLevel
+	sortBy *[]ActivityLogSortBy
+	sortOrder *[]SortOrder
+}
+
+// The record index to start at. All items with a lower index will be dropped from the results.
+func (r ApiGetLogEntriesRequest) StartIndex(startIndex int32) ApiGetLogEntriesRequest {
+	r.startIndex = &startIndex
+	return r
+}
+
+// The maximum number of records to return.
+func (r ApiGetLogEntriesRequest) Limit(limit int32) ApiGetLogEntriesRequest {
+	r.limit = &limit
+	return r
+}
+
+// The minimum date.
+func (r ApiGetLogEntriesRequest) MinDate(minDate time.Time) ApiGetLogEntriesRequest {
+	r.minDate = &minDate
+	return r
+}
+
+// The maximum date.
+func (r ApiGetLogEntriesRequest) MaxDate(maxDate time.Time) ApiGetLogEntriesRequest {
+	r.maxDate = &maxDate
+	return r
+}
+
+// Filter log entries if it has user id, or not.
+func (r ApiGetLogEntriesRequest) HasUserId(hasUserId bool) ApiGetLogEntriesRequest {
+	r.hasUserId = &hasUserId
+	return r
+}
+
+// Filter by name.
+func (r ApiGetLogEntriesRequest) Name(name string) ApiGetLogEntriesRequest {
+	r.name = &name
+	return r
+}
+
+// Filter by overview.
+func (r ApiGetLogEntriesRequest) Overview(overview string) ApiGetLogEntriesRequest {
+	r.overview = &overview
+	return r
+}
+
+// Filter by short overview.
+func (r ApiGetLogEntriesRequest) ShortOverview(shortOverview string) ApiGetLogEntriesRequest {
+	r.shortOverview = &shortOverview
+	return r
+}
+
+// Filter by type.
+func (r ApiGetLogEntriesRequest) Type_(type_ string) ApiGetLogEntriesRequest {
+	r.type_ = &type_
+	return r
+}
+
+// Filter by item id.
+func (r ApiGetLogEntriesRequest) ItemId(itemId string) ApiGetLogEntriesRequest {
+	r.itemId = &itemId
+	return r
+}
+
+// Filter by username.
+func (r ApiGetLogEntriesRequest) Username(username string) ApiGetLogEntriesRequest {
+	r.username = &username
+	return r
+}
+
+// Filter by log severity.
+func (r ApiGetLogEntriesRequest) Severity(severity LogLevel) ApiGetLogEntriesRequest {
+	r.severity = &severity
+	return r
+}
+
+// Specify one or more sort orders. Format: SortBy&#x3D;Name,Type.
+func (r ApiGetLogEntriesRequest) SortBy(sortBy []ActivityLogSortBy) ApiGetLogEntriesRequest {
+	r.sortBy = &sortBy
+	return r
+}
+
+// Sort Order..
+func (r ApiGetLogEntriesRequest) SortOrder(sortOrder []SortOrder) ApiGetLogEntriesRequest {
+	r.sortOrder = &sortOrder
+	return r
+}
+
+func (r ApiGetLogEntriesRequest) Execute() (*ActivityLogEntryQueryResult, *http.Response, error) {
+	return r.ApiService.GetLogEntriesExecute(r)
+}
+
+/*
+GetLogEntries Gets activity log entries.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetLogEntriesRequest
+*/
+func (a *SystemAPIService) GetLogEntries(ctx context.Context) ApiGetLogEntriesRequest {
+	return ApiGetLogEntriesRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return ActivityLogEntryQueryResult
+func (a *SystemAPIService) GetLogEntriesExecute(r ApiGetLogEntriesRequest) (*ActivityLogEntryQueryResult, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *ActivityLogEntryQueryResult
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.GetLogEntries")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/System/ActivityLog/Entries"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startIndex != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "startIndex", r.startIndex, "form", "")
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	}
+	if r.minDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "minDate", r.minDate, "form", "")
+	}
+	if r.maxDate != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "maxDate", r.maxDate, "form", "")
+	}
+	if r.hasUserId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "hasUserId", r.hasUserId, "form", "")
+	}
+	if r.name != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "name", r.name, "form", "")
+	}
+	if r.overview != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "overview", r.overview, "form", "")
+	}
+	if r.shortOverview != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "shortOverview", r.shortOverview, "form", "")
+	}
+	if r.type_ != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "form", "")
+	}
+	if r.itemId != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "itemId", r.itemId, "form", "")
+	}
+	if r.username != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "username", r.username, "form", "")
+	}
+	if r.severity != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "severity", r.severity, "form", "")
+	}
+	if r.sortBy != nil {
+		t := *r.sortBy
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortBy", t, "form", "multi")
+		}
+	}
+	if r.sortOrder != nil {
+		t := *r.sortOrder
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", s.Index(i).Interface(), "form", "multi")
+			}
+		} else {
+			parameterAddToHeaderOrQuery(localVarQueryParams, "sortOrder", t, "form", "multi")
+		}
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -393,6 +992,121 @@ func (a *SystemAPIService) GetLogFileExecute(r ApiGetLogFileRequest) (*os.File, 
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetNamedConfigurationRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+	key string
+}
+
+func (r ApiGetNamedConfigurationRequest) Execute() (*os.File, *http.Response, error) {
+	return r.ApiService.GetNamedConfigurationExecute(r)
+}
+
+/*
+GetNamedConfiguration Gets a named configuration.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param key Configuration key.
+ @return ApiGetNamedConfigurationRequest
+*/
+func (a *SystemAPIService) GetNamedConfiguration(ctx context.Context, key string) ApiGetNamedConfigurationRequest {
+	return ApiGetNamedConfigurationRequest{
+		ApiService: a,
+		ctx: ctx,
+		key: key,
+	}
+}
+
+// Execute executes the request
+//  @return *os.File
+func (a *SystemAPIService) GetNamedConfigurationExecute(r ApiGetNamedConfigurationRequest) (*os.File, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *os.File
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.GetNamedConfiguration")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/System/Configuration/{key}"
+	localVarPath = strings.Replace(localVarPath, "{"+"key"+"}", url.PathEscape(parameterValueToString(r.key, "key")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -969,6 +1683,244 @@ func (a *SystemAPIService) GetSystemStorageExecute(r ApiGetSystemStorageRequest)
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiGetUtcTimeRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+}
+
+func (r ApiGetUtcTimeRequest) Execute() (*UtcTimeResponse, *http.Response, error) {
+	return r.ApiService.GetUtcTimeExecute(r)
+}
+
+/*
+GetUtcTime Gets the current UTC time.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetUtcTimeRequest
+*/
+func (a *SystemAPIService) GetUtcTime(ctx context.Context) ApiGetUtcTimeRequest {
+	return ApiGetUtcTimeRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return UtcTimeResponse
+func (a *SystemAPIService) GetUtcTimeExecute(r ApiGetUtcTimeRequest) (*UtcTimeResponse, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *UtcTimeResponse
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.GetUtcTime")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/GetUtcTime"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiLogFileRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+	body *os.File
+}
+
+func (r ApiLogFileRequest) Body(body *os.File) ApiLogFileRequest {
+	r.body = body
+	return r
+}
+
+func (r ApiLogFileRequest) Execute() (*ClientLogDocumentResponseDto, *http.Response, error) {
+	return r.ApiService.LogFileExecute(r)
+}
+
+/*
+LogFile Upload a document.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiLogFileRequest
+*/
+func (a *SystemAPIService) LogFile(ctx context.Context) ApiLogFileRequest {
+	return ApiLogFileRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return ClientLogDocumentResponseDto
+func (a *SystemAPIService) LogFileExecute(r ApiLogFileRequest) (*ClientLogDocumentResponseDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *ClientLogDocumentResponseDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.LogFile")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/ClientLog/Document"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"text/plain"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json; profile=CamelCase", "application/json; profile=PascalCase", "text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.body
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 403 {
+			var v ProblemDetails
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 413 {
+			var v ProblemDetails
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiPostPingSystemRequest struct {
 	ctx context.Context
 	ApiService SystemAPI
@@ -1281,6 +2233,346 @@ func (a *SystemAPIService) ShutdownApplicationExecute(r ApiShutdownApplicationRe
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 			return localVarHTTPResponse, newErr
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiUpdateBrandingConfigurationRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+	brandingOptionsDto *BrandingOptionsDto
+}
+
+// Branding configuration.
+func (r ApiUpdateBrandingConfigurationRequest) BrandingOptionsDto(brandingOptionsDto BrandingOptionsDto) ApiUpdateBrandingConfigurationRequest {
+	r.brandingOptionsDto = &brandingOptionsDto
+	return r
+}
+
+func (r ApiUpdateBrandingConfigurationRequest) Execute() (*http.Response, error) {
+	return r.ApiService.UpdateBrandingConfigurationExecute(r)
+}
+
+/*
+UpdateBrandingConfiguration Updates branding configuration.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUpdateBrandingConfigurationRequest
+*/
+func (a *SystemAPIService) UpdateBrandingConfiguration(ctx context.Context) ApiUpdateBrandingConfigurationRequest {
+	return ApiUpdateBrandingConfigurationRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *SystemAPIService) UpdateBrandingConfigurationExecute(r ApiUpdateBrandingConfigurationRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.UpdateBrandingConfiguration")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/System/Configuration/Branding"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.brandingOptionsDto == nil {
+		return nil, reportError("brandingOptionsDto is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.brandingOptionsDto
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiUpdateConfigurationRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+	serverConfiguration *ServerConfiguration
+}
+
+// Configuration.
+func (r ApiUpdateConfigurationRequest) ServerConfiguration(serverConfiguration ServerConfiguration) ApiUpdateConfigurationRequest {
+	r.serverConfiguration = &serverConfiguration
+	return r
+}
+
+func (r ApiUpdateConfigurationRequest) Execute() (*http.Response, error) {
+	return r.ApiService.UpdateConfigurationExecute(r)
+}
+
+/*
+UpdateConfiguration Updates application configuration.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUpdateConfigurationRequest
+*/
+func (a *SystemAPIService) UpdateConfiguration(ctx context.Context) ApiUpdateConfigurationRequest {
+	return ApiUpdateConfigurationRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *SystemAPIService) UpdateConfigurationExecute(r ApiUpdateConfigurationRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.UpdateConfiguration")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/System/Configuration"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.serverConfiguration == nil {
+		return nil, reportError("serverConfiguration is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.serverConfiguration
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiUpdateNamedConfigurationRequest struct {
+	ctx context.Context
+	ApiService SystemAPI
+	key string
+	body *interface{}
+}
+
+// Configuration.
+func (r ApiUpdateNamedConfigurationRequest) Body(body interface{}) ApiUpdateNamedConfigurationRequest {
+	r.body = &body
+	return r
+}
+
+func (r ApiUpdateNamedConfigurationRequest) Execute() (*http.Response, error) {
+	return r.ApiService.UpdateNamedConfigurationExecute(r)
+}
+
+/*
+UpdateNamedConfiguration Updates named configuration.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param key Configuration key.
+ @return ApiUpdateNamedConfigurationRequest
+*/
+func (a *SystemAPIService) UpdateNamedConfiguration(ctx context.Context, key string) ApiUpdateNamedConfigurationRequest {
+	return ApiUpdateNamedConfigurationRequest{
+		ApiService: a,
+		ctx: ctx,
+		key: key,
+	}
+}
+
+// Execute executes the request
+func (a *SystemAPIService) UpdateNamedConfigurationExecute(r ApiUpdateNamedConfigurationRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemAPIService.UpdateNamedConfiguration")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/System/Configuration/{key}"
+	localVarPath = strings.Replace(localVarPath, "{"+"key"+"}", url.PathEscape(parameterValueToString(r.key, "key")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.body == nil {
+		return nil, reportError("body is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/html"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.body
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["CustomAuthentication"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["Authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
 		}
 		return localVarHTTPResponse, newErr
 	}

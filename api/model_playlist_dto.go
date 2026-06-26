@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the PlaylistDto type satisfies the MappedNullable interface at compile time
@@ -21,17 +23,21 @@ type PlaylistDto struct {
 	// Gets or sets a value indicating whether the playlist is publicly readable.
 	OpenAccess *bool `json:"OpenAccess,omitempty"`
 	// Gets or sets the share permissions.
-	Shares []PlaylistUserPermissions `json:"Shares,omitempty"`
+	Shares []PlaylistUserPermissions `json:"Shares"`
 	// Gets or sets the item ids.
-	ItemIds []string `json:"ItemIds,omitempty"`
+	ItemIds []string `json:"ItemIds"`
 }
+
+type _PlaylistDto PlaylistDto
 
 // NewPlaylistDto instantiates a new PlaylistDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPlaylistDto() *PlaylistDto {
+func NewPlaylistDto(shares []PlaylistUserPermissions, itemIds []string) *PlaylistDto {
 	this := PlaylistDto{}
+	this.Shares = shares
+	this.ItemIds = itemIds
 	return &this
 }
 
@@ -75,66 +81,50 @@ func (o *PlaylistDto) SetOpenAccess(v bool) {
 	o.OpenAccess = &v
 }
 
-// GetShares returns the Shares field value if set, zero value otherwise.
+// GetShares returns the Shares field value
 func (o *PlaylistDto) GetShares() []PlaylistUserPermissions {
-	if o == nil || IsNil(o.Shares) {
+	if o == nil {
 		var ret []PlaylistUserPermissions
 		return ret
 	}
+
 	return o.Shares
 }
 
-// GetSharesOk returns a tuple with the Shares field value if set, nil otherwise
+// GetSharesOk returns a tuple with the Shares field value
 // and a boolean to check if the value has been set.
 func (o *PlaylistDto) GetSharesOk() ([]PlaylistUserPermissions, bool) {
-	if o == nil || IsNil(o.Shares) {
+	if o == nil {
 		return nil, false
 	}
 	return o.Shares, true
 }
 
-// HasShares returns a boolean if a field has been set.
-func (o *PlaylistDto) HasShares() bool {
-	if o != nil && !IsNil(o.Shares) {
-		return true
-	}
-
-	return false
-}
-
-// SetShares gets a reference to the given []PlaylistUserPermissions and assigns it to the Shares field.
+// SetShares sets field value
 func (o *PlaylistDto) SetShares(v []PlaylistUserPermissions) {
 	o.Shares = v
 }
 
-// GetItemIds returns the ItemIds field value if set, zero value otherwise.
+// GetItemIds returns the ItemIds field value
 func (o *PlaylistDto) GetItemIds() []string {
-	if o == nil || IsNil(o.ItemIds) {
+	if o == nil {
 		var ret []string
 		return ret
 	}
+
 	return o.ItemIds
 }
 
-// GetItemIdsOk returns a tuple with the ItemIds field value if set, nil otherwise
+// GetItemIdsOk returns a tuple with the ItemIds field value
 // and a boolean to check if the value has been set.
 func (o *PlaylistDto) GetItemIdsOk() ([]string, bool) {
-	if o == nil || IsNil(o.ItemIds) {
+	if o == nil {
 		return nil, false
 	}
 	return o.ItemIds, true
 }
 
-// HasItemIds returns a boolean if a field has been set.
-func (o *PlaylistDto) HasItemIds() bool {
-	if o != nil && !IsNil(o.ItemIds) {
-		return true
-	}
-
-	return false
-}
-
-// SetItemIds gets a reference to the given []string and assigns it to the ItemIds field.
+// SetItemIds sets field value
 func (o *PlaylistDto) SetItemIds(v []string) {
 	o.ItemIds = v
 }
@@ -152,13 +142,47 @@ func (o PlaylistDto) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.OpenAccess) {
 		toSerialize["OpenAccess"] = o.OpenAccess
 	}
-	if !IsNil(o.Shares) {
-		toSerialize["Shares"] = o.Shares
-	}
-	if !IsNil(o.ItemIds) {
-		toSerialize["ItemIds"] = o.ItemIds
-	}
+	toSerialize["Shares"] = o.Shares
+	toSerialize["ItemIds"] = o.ItemIds
 	return toSerialize, nil
+}
+
+func (o *PlaylistDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"Shares",
+		"ItemIds",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varPlaylistDto := _PlaylistDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varPlaylistDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = PlaylistDto(varPlaylistDto)
+
+	return err
 }
 
 type NullablePlaylistDto struct {

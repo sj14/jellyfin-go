@@ -20,7 +20,7 @@ var _ MappedNullable = &MediaUpdateInfoPathDto{}
 type MediaUpdateInfoPathDto struct {
 	// Gets or sets media path.
 	Path NullableString `json:"Path,omitempty"`
-	// Gets or sets media update type.  Created, Modified, Deleted.
+	// Gets or sets media update type. Created, Modified, Deleted.
 	UpdateType NullableString `json:"UpdateType,omitempty"`
 }
 

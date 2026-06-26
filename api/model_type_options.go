@@ -24,6 +24,8 @@ type TypeOptions struct {
 	ImageFetchers []string `json:"ImageFetchers,omitempty"`
 	ImageFetcherOrder []string `json:"ImageFetcherOrder,omitempty"`
 	ImageOptions []ImageOption `json:"ImageOptions,omitempty"`
+	SimilarItemProviders []string `json:"SimilarItemProviders,omitempty"`
+	SimilarItemProviderOrder []string `json:"SimilarItemProviderOrder,omitempty"`
 }
 
 // NewTypeOptions instantiates a new TypeOptions object
@@ -250,6 +252,72 @@ func (o *TypeOptions) SetImageOptions(v []ImageOption) {
 	o.ImageOptions = v
 }
 
+// GetSimilarItemProviders returns the SimilarItemProviders field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *TypeOptions) GetSimilarItemProviders() []string {
+	if o == nil {
+		var ret []string
+		return ret
+	}
+	return o.SimilarItemProviders
+}
+
+// GetSimilarItemProvidersOk returns a tuple with the SimilarItemProviders field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *TypeOptions) GetSimilarItemProvidersOk() ([]string, bool) {
+	if o == nil || IsNil(o.SimilarItemProviders) {
+		return nil, false
+	}
+	return o.SimilarItemProviders, true
+}
+
+// HasSimilarItemProviders returns a boolean if a field has been set.
+func (o *TypeOptions) HasSimilarItemProviders() bool {
+	if o != nil && !IsNil(o.SimilarItemProviders) {
+		return true
+	}
+
+	return false
+}
+
+// SetSimilarItemProviders gets a reference to the given []string and assigns it to the SimilarItemProviders field.
+func (o *TypeOptions) SetSimilarItemProviders(v []string) {
+	o.SimilarItemProviders = v
+}
+
+// GetSimilarItemProviderOrder returns the SimilarItemProviderOrder field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *TypeOptions) GetSimilarItemProviderOrder() []string {
+	if o == nil {
+		var ret []string
+		return ret
+	}
+	return o.SimilarItemProviderOrder
+}
+
+// GetSimilarItemProviderOrderOk returns a tuple with the SimilarItemProviderOrder field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *TypeOptions) GetSimilarItemProviderOrderOk() ([]string, bool) {
+	if o == nil || IsNil(o.SimilarItemProviderOrder) {
+		return nil, false
+	}
+	return o.SimilarItemProviderOrder, true
+}
+
+// HasSimilarItemProviderOrder returns a boolean if a field has been set.
+func (o *TypeOptions) HasSimilarItemProviderOrder() bool {
+	if o != nil && !IsNil(o.SimilarItemProviderOrder) {
+		return true
+	}
+
+	return false
+}
+
+// SetSimilarItemProviderOrder gets a reference to the given []string and assigns it to the SimilarItemProviderOrder field.
+func (o *TypeOptions) SetSimilarItemProviderOrder(v []string) {
+	o.SimilarItemProviderOrder = v
+}
+
 func (o TypeOptions) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -277,6 +345,12 @@ func (o TypeOptions) ToMap() (map[string]interface{}, error) {
 	}
 	if o.ImageOptions != nil {
 		toSerialize["ImageOptions"] = o.ImageOptions
+	}
+	if o.SimilarItemProviders != nil {
+		toSerialize["SimilarItemProviders"] = o.SimilarItemProviders
+	}
+	if o.SimilarItemProviderOrder != nil {
+		toSerialize["SimilarItemProviderOrder"] = o.SimilarItemProviderOrder
 	}
 	return toSerialize, nil
 }

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Path** | Pointer to **string** | Gets the path of the folder in question. | [optional] 
+**Path** | **string** | Gets the path of the folder in question. | 
 **FreeSpace** | Pointer to **int64** | Gets the free space of the underlying storage device of the Jellyfin.Api.Models.SystemInfoDtos.FolderStorageDto.Path. | [optional] 
 **UsedSpace** | Pointer to **int64** | Gets the used space of the underlying storage device of the Jellyfin.Api.Models.SystemInfoDtos.FolderStorageDto.Path. | [optional] 
 **StorageType** | Pointer to **NullableString** | Gets the kind of storage device of the Jellyfin.Api.Models.SystemInfoDtos.FolderStorageDto.Path. | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewFolderStorageDto
 
-`func NewFolderStorageDto() *FolderStorageDto`
+`func NewFolderStorageDto(path string, ) *FolderStorageDto`
 
 NewFolderStorageDto instantiates a new FolderStorageDto object
 This constructor will assign default values to properties that have it defined,
@@ -48,11 +48,6 @@ and a boolean to check if the value has been set.
 
 SetPath sets Path field to given value.
 
-### HasPath
-
-`func (o *FolderStorageDto) HasPath() bool`
-
-HasPath returns a boolean if a field has been set.
 
 ### GetFreeSpace
 

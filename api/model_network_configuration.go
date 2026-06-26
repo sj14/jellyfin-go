@@ -59,7 +59,7 @@ type NetworkConfiguration struct {
 	VirtualInterfaceNames []string `json:"VirtualInterfaceNames,omitempty"`
 	// Gets or sets a value indicating whether the published server uri is based on information in HTTP requests.
 	EnablePublishedServerUriByRequest *bool `json:"EnablePublishedServerUriByRequest,omitempty"`
-	// Gets or sets the PublishedServerUriBySubnet  Gets or sets PublishedServerUri to advertise for specific subnets.
+	// Gets or sets the PublishedServerUriBySubnet Gets or sets PublishedServerUri to advertise for specific subnets.
 	PublishedServerUriBySubnet []string `json:"PublishedServerUriBySubnet,omitempty"`
 	// Gets or sets the filter for remote IP connectivity. Used in conjunction with <seealso cref=\"P:MediaBrowser.Common.Net.NetworkConfiguration.IsRemoteIPFilterBlacklist\" />.
 	RemoteIPFilter []string `json:"RemoteIPFilter,omitempty"`

@@ -40,7 +40,7 @@ Method | HTTP request | Description
 [**SetItemImage**](ImageAPI.md#SetItemImage) | **Post** /Items/{itemId}/Images/{imageType} | Set item image.
 [**SetItemImageByIndex**](ImageAPI.md#SetItemImageByIndex) | **Post** /Items/{itemId}/Images/{imageType}/{imageIndex} | Set item image.
 [**UpdateItemImageIndex**](ImageAPI.md#UpdateItemImageIndex) | **Post** /Items/{itemId}/Images/{imageType}/{imageIndex}/Index | Updates the index for an item image.
-[**UploadCustomSplashscreen**](ImageAPI.md#UploadCustomSplashscreen) | **Post** /Branding/Splashscreen | Uploads a custom splashscreen.  The body is expected to the image contents base64 encoded.
+[**UploadCustomSplashscreen**](ImageAPI.md#UploadCustomSplashscreen) | **Post** /Branding/Splashscreen | Uploads a custom splashscreen. The body is expected to the image contents base64 encoded.
 
 
 
@@ -3313,7 +3313,7 @@ Name | Type | Description  | Notes
 
 > UploadCustomSplashscreen(ctx).Body(body).Execute()
 
-Uploads a custom splashscreen.  The body is expected to the image contents base64 encoded.
+Uploads a custom splashscreen. The body is expected to the image contents base64 encoded.
 
 ### Example
 

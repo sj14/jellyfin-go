@@ -16,7 +16,7 @@ import (
 // checks if the BrandingOptionsDto type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &BrandingOptionsDto{}
 
-// BrandingOptionsDto The branding options DTO for API use.  This DTO excludes SplashscreenLocation to prevent it from being updated via API.
+// BrandingOptionsDto The branding options DTO for API use. This DTO excludes SplashscreenLocation to prevent it from being updated via API.
 type BrandingOptionsDto struct {
 	// Gets or sets the login disclaimer.
 	LoginDisclaimer NullableString `json:"LoginDisclaimer,omitempty"`

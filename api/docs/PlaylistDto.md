@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **OpenAccess** | Pointer to **bool** | Gets or sets a value indicating whether the playlist is publicly readable. | [optional] 
-**Shares** | Pointer to [**[]PlaylistUserPermissions**](PlaylistUserPermissions.md) | Gets or sets the share permissions. | [optional] 
-**ItemIds** | Pointer to **[]string** | Gets or sets the item ids. | [optional] 
+**Shares** | [**[]PlaylistUserPermissions**](PlaylistUserPermissions.md) | Gets or sets the share permissions. | 
+**ItemIds** | **[]string** | Gets or sets the item ids. | 
 
 ## Methods
 
 ### NewPlaylistDto
 
-`func NewPlaylistDto() *PlaylistDto`
+`func NewPlaylistDto(shares []PlaylistUserPermissions, itemIds []string, ) *PlaylistDto`
 
 NewPlaylistDto instantiates a new PlaylistDto object
 This constructor will assign default values to properties that have it defined,
@@ -71,11 +71,6 @@ and a boolean to check if the value has been set.
 
 SetShares sets Shares field to given value.
 
-### HasShares
-
-`func (o *PlaylistDto) HasShares() bool`
-
-HasShares returns a boolean if a field has been set.
 
 ### GetItemIds
 
@@ -96,11 +91,6 @@ and a boolean to check if the value has been set.
 
 SetItemIds sets ItemIds field to given value.
 
-### HasItemIds
-
-`func (o *PlaylistDto) HasItemIds() bool`
-
-HasItemIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

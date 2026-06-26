@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UserId** | Pointer to **string** | Gets or sets the user id. | [optional] 
-**UserDataList** | Pointer to [**[]UserItemDataDto**](UserItemDataDto.md) | Gets or sets the user data list. | [optional] 
+**UserDataList** | [**[]UserItemDataDto**](UserItemDataDto.md) | Gets or sets the user data list. | 
 
 ## Methods
 
 ### NewUserDataChangeInfo
 
-`func NewUserDataChangeInfo() *UserDataChangeInfo`
+`func NewUserDataChangeInfo(userDataList []UserItemDataDto, ) *UserDataChangeInfo`
 
 NewUserDataChangeInfo instantiates a new UserDataChangeInfo object
 This constructor will assign default values to properties that have it defined,
@@ -70,11 +70,6 @@ and a boolean to check if the value has been set.
 
 SetUserDataList sets UserDataList field to given value.
 
-### HasUserDataList
-
-`func (o *UserDataChangeInfo) HasUserDataList() bool`
-
-HasUserDataList returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

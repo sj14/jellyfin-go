@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Type** | Pointer to **NullableString** | Gets or sets the type. | [optional] 
 **MetadataFetchers** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the metadata fetchers. | [optional] 
 **ImageFetchers** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the image fetchers. | [optional] 
+**SimilarItemProviders** | Pointer to [**[]LibraryOptionInfoDto**](LibraryOptionInfoDto.md) | Gets or sets the similar item providers. | [optional] 
 **SupportedImageTypes** | Pointer to [**[]ImageType**](ImageType.md) | Gets or sets the supported image types. | [optional] 
 **DefaultImageOptions** | Pointer to [**[]ImageOption**](ImageOption.md) | Gets or sets the default image options. | [optional] 
 
@@ -113,6 +114,31 @@ SetImageFetchers sets ImageFetchers field to given value.
 `func (o *LibraryTypeOptionsDto) HasImageFetchers() bool`
 
 HasImageFetchers returns a boolean if a field has been set.
+
+### GetSimilarItemProviders
+
+`func (o *LibraryTypeOptionsDto) GetSimilarItemProviders() []LibraryOptionInfoDto`
+
+GetSimilarItemProviders returns the SimilarItemProviders field if non-nil, zero value otherwise.
+
+### GetSimilarItemProvidersOk
+
+`func (o *LibraryTypeOptionsDto) GetSimilarItemProvidersOk() (*[]LibraryOptionInfoDto, bool)`
+
+GetSimilarItemProvidersOk returns a tuple with the SimilarItemProviders field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSimilarItemProviders
+
+`func (o *LibraryTypeOptionsDto) SetSimilarItemProviders(v []LibraryOptionInfoDto)`
+
+SetSimilarItemProviders sets SimilarItemProviders field to given value.
+
+### HasSimilarItemProviders
+
+`func (o *LibraryTypeOptionsDto) HasSimilarItemProviders() bool`
+
+HasSimilarItemProviders returns a boolean if a field has been set.
 
 ### GetSupportedImageTypes
 

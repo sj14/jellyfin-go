@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the CreatePlaylistDto type satisfies the MappedNullable interface at compile time
@@ -19,7 +21,7 @@ var _ MappedNullable = &CreatePlaylistDto{}
 // CreatePlaylistDto Create new playlist dto.
 type CreatePlaylistDto struct {
 	// Gets or sets the name of the new playlist.
-	Name *string `json:"Name,omitempty"`
+	Name string `json:"Name"`
 	// Gets or sets item ids to add to the playlist.
 	Ids []string `json:"Ids,omitempty"`
 	// Gets or sets the user id.
@@ -32,12 +34,15 @@ type CreatePlaylistDto struct {
 	IsPublic *bool `json:"IsPublic,omitempty"`
 }
 
+type _CreatePlaylistDto CreatePlaylistDto
+
 // NewCreatePlaylistDto instantiates a new CreatePlaylistDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCreatePlaylistDto() *CreatePlaylistDto {
+func NewCreatePlaylistDto(name string) *CreatePlaylistDto {
 	this := CreatePlaylistDto{}
+	this.Name = name
 	return &this
 }
 
@@ -49,36 +54,28 @@ func NewCreatePlaylistDtoWithDefaults() *CreatePlaylistDto {
 	return &this
 }
 
-// GetName returns the Name field value if set, zero value otherwise.
+// GetName returns the Name field value
 func (o *CreatePlaylistDto) GetName() string {
-	if o == nil || IsNil(o.Name) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Name
+
+	return o.Name
 }
 
-// GetNameOk returns a tuple with the Name field value if set, nil otherwise
+// GetNameOk returns a tuple with the Name field value
 // and a boolean to check if the value has been set.
 func (o *CreatePlaylistDto) GetNameOk() (*string, bool) {
-	if o == nil || IsNil(o.Name) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Name, true
+	return &o.Name, true
 }
 
-// HasName returns a boolean if a field has been set.
-func (o *CreatePlaylistDto) HasName() bool {
-	if o != nil && !IsNil(o.Name) {
-		return true
-	}
-
-	return false
-}
-
-// SetName gets a reference to the given string and assigns it to the Name field.
+// SetName sets field value
 func (o *CreatePlaylistDto) SetName(v string) {
-	o.Name = &v
+	o.Name = v
 }
 
 // GetIds returns the Ids field value if set, zero value otherwise.
@@ -271,9 +268,7 @@ func (o CreatePlaylistDto) MarshalJSON() ([]byte, error) {
 
 func (o CreatePlaylistDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Name) {
-		toSerialize["Name"] = o.Name
-	}
+	toSerialize["Name"] = o.Name
 	if !IsNil(o.Ids) {
 		toSerialize["Ids"] = o.Ids
 	}
@@ -290,6 +285,43 @@ func (o CreatePlaylistDto) ToMap() (map[string]interface{}, error) {
 		toSerialize["IsPublic"] = o.IsPublic
 	}
 	return toSerialize, nil
+}
+
+func (o *CreatePlaylistDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"Name",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varCreatePlaylistDto := _CreatePlaylistDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varCreatePlaylistDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = CreatePlaylistDto(varCreatePlaylistDto)
+
+	return err
 }
 
 type NullableCreatePlaylistDto struct {

@@ -217,7 +217,7 @@ import (
 )
 
 func main() {
-	backupRestoreRequestDto := *openapiclient.NewBackupRestoreRequestDto() // BackupRestoreRequestDto | The data to start a restore process.
+	backupRestoreRequestDto := *openapiclient.NewBackupRestoreRequestDto("ArchiveFileName_example") // BackupRestoreRequestDto | The data to start a restore process.
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

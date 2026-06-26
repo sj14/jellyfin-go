@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the SystemStorageDto type satisfies the MappedNullable interface at compile time
@@ -19,29 +21,39 @@ var _ MappedNullable = &SystemStorageDto{}
 // SystemStorageDto Contains informations about the systems storage.
 type SystemStorageDto struct {
 	// Gets or sets the Storage information of the program data folder.
-	ProgramDataFolder *FolderStorageDto `json:"ProgramDataFolder,omitempty"`
+	ProgramDataFolder FolderStorageDto `json:"ProgramDataFolder"`
 	// Gets or sets the Storage information of the web UI resources folder.
-	WebFolder *FolderStorageDto `json:"WebFolder,omitempty"`
+	WebFolder FolderStorageDto `json:"WebFolder"`
 	// Gets or sets the Storage information of the folder where images are cached.
-	ImageCacheFolder *FolderStorageDto `json:"ImageCacheFolder,omitempty"`
+	ImageCacheFolder FolderStorageDto `json:"ImageCacheFolder"`
 	// Gets or sets the Storage information of the cache folder.
-	CacheFolder *FolderStorageDto `json:"CacheFolder,omitempty"`
+	CacheFolder FolderStorageDto `json:"CacheFolder"`
 	// Gets or sets the Storage information of the folder where logfiles are saved to.
-	LogFolder *FolderStorageDto `json:"LogFolder,omitempty"`
+	LogFolder FolderStorageDto `json:"LogFolder"`
 	// Gets or sets the Storage information of the folder where metadata is stored.
-	InternalMetadataFolder *FolderStorageDto `json:"InternalMetadataFolder,omitempty"`
+	InternalMetadataFolder FolderStorageDto `json:"InternalMetadataFolder"`
 	// Gets or sets the Storage information of the transcoding cache.
-	TranscodingTempFolder *FolderStorageDto `json:"TranscodingTempFolder,omitempty"`
+	TranscodingTempFolder FolderStorageDto `json:"TranscodingTempFolder"`
 	// Gets or sets the storage informations of all libraries.
-	Libraries []LibraryStorageDto `json:"Libraries,omitempty"`
+	Libraries []LibraryStorageDto `json:"Libraries"`
 }
+
+type _SystemStorageDto SystemStorageDto
 
 // NewSystemStorageDto instantiates a new SystemStorageDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSystemStorageDto() *SystemStorageDto {
+func NewSystemStorageDto(programDataFolder FolderStorageDto, webFolder FolderStorageDto, imageCacheFolder FolderStorageDto, cacheFolder FolderStorageDto, logFolder FolderStorageDto, internalMetadataFolder FolderStorageDto, transcodingTempFolder FolderStorageDto, libraries []LibraryStorageDto) *SystemStorageDto {
 	this := SystemStorageDto{}
+	this.ProgramDataFolder = programDataFolder
+	this.WebFolder = webFolder
+	this.ImageCacheFolder = imageCacheFolder
+	this.CacheFolder = cacheFolder
+	this.LogFolder = logFolder
+	this.InternalMetadataFolder = internalMetadataFolder
+	this.TranscodingTempFolder = transcodingTempFolder
+	this.Libraries = libraries
 	return &this
 }
 
@@ -53,258 +65,194 @@ func NewSystemStorageDtoWithDefaults() *SystemStorageDto {
 	return &this
 }
 
-// GetProgramDataFolder returns the ProgramDataFolder field value if set, zero value otherwise.
+// GetProgramDataFolder returns the ProgramDataFolder field value
 func (o *SystemStorageDto) GetProgramDataFolder() FolderStorageDto {
-	if o == nil || IsNil(o.ProgramDataFolder) {
+	if o == nil {
 		var ret FolderStorageDto
 		return ret
 	}
-	return *o.ProgramDataFolder
+
+	return o.ProgramDataFolder
 }
 
-// GetProgramDataFolderOk returns a tuple with the ProgramDataFolder field value if set, nil otherwise
+// GetProgramDataFolderOk returns a tuple with the ProgramDataFolder field value
 // and a boolean to check if the value has been set.
 func (o *SystemStorageDto) GetProgramDataFolderOk() (*FolderStorageDto, bool) {
-	if o == nil || IsNil(o.ProgramDataFolder) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ProgramDataFolder, true
+	return &o.ProgramDataFolder, true
 }
 
-// HasProgramDataFolder returns a boolean if a field has been set.
-func (o *SystemStorageDto) HasProgramDataFolder() bool {
-	if o != nil && !IsNil(o.ProgramDataFolder) {
-		return true
-	}
-
-	return false
-}
-
-// SetProgramDataFolder gets a reference to the given FolderStorageDto and assigns it to the ProgramDataFolder field.
+// SetProgramDataFolder sets field value
 func (o *SystemStorageDto) SetProgramDataFolder(v FolderStorageDto) {
-	o.ProgramDataFolder = &v
+	o.ProgramDataFolder = v
 }
 
-// GetWebFolder returns the WebFolder field value if set, zero value otherwise.
+// GetWebFolder returns the WebFolder field value
 func (o *SystemStorageDto) GetWebFolder() FolderStorageDto {
-	if o == nil || IsNil(o.WebFolder) {
+	if o == nil {
 		var ret FolderStorageDto
 		return ret
 	}
-	return *o.WebFolder
+
+	return o.WebFolder
 }
 
-// GetWebFolderOk returns a tuple with the WebFolder field value if set, nil otherwise
+// GetWebFolderOk returns a tuple with the WebFolder field value
 // and a boolean to check if the value has been set.
 func (o *SystemStorageDto) GetWebFolderOk() (*FolderStorageDto, bool) {
-	if o == nil || IsNil(o.WebFolder) {
+	if o == nil {
 		return nil, false
 	}
-	return o.WebFolder, true
+	return &o.WebFolder, true
 }
 
-// HasWebFolder returns a boolean if a field has been set.
-func (o *SystemStorageDto) HasWebFolder() bool {
-	if o != nil && !IsNil(o.WebFolder) {
-		return true
-	}
-
-	return false
-}
-
-// SetWebFolder gets a reference to the given FolderStorageDto and assigns it to the WebFolder field.
+// SetWebFolder sets field value
 func (o *SystemStorageDto) SetWebFolder(v FolderStorageDto) {
-	o.WebFolder = &v
+	o.WebFolder = v
 }
 
-// GetImageCacheFolder returns the ImageCacheFolder field value if set, zero value otherwise.
+// GetImageCacheFolder returns the ImageCacheFolder field value
 func (o *SystemStorageDto) GetImageCacheFolder() FolderStorageDto {
-	if o == nil || IsNil(o.ImageCacheFolder) {
+	if o == nil {
 		var ret FolderStorageDto
 		return ret
 	}
-	return *o.ImageCacheFolder
+
+	return o.ImageCacheFolder
 }
 
-// GetImageCacheFolderOk returns a tuple with the ImageCacheFolder field value if set, nil otherwise
+// GetImageCacheFolderOk returns a tuple with the ImageCacheFolder field value
 // and a boolean to check if the value has been set.
 func (o *SystemStorageDto) GetImageCacheFolderOk() (*FolderStorageDto, bool) {
-	if o == nil || IsNil(o.ImageCacheFolder) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ImageCacheFolder, true
+	return &o.ImageCacheFolder, true
 }
 
-// HasImageCacheFolder returns a boolean if a field has been set.
-func (o *SystemStorageDto) HasImageCacheFolder() bool {
-	if o != nil && !IsNil(o.ImageCacheFolder) {
-		return true
-	}
-
-	return false
-}
-
-// SetImageCacheFolder gets a reference to the given FolderStorageDto and assigns it to the ImageCacheFolder field.
+// SetImageCacheFolder sets field value
 func (o *SystemStorageDto) SetImageCacheFolder(v FolderStorageDto) {
-	o.ImageCacheFolder = &v
+	o.ImageCacheFolder = v
 }
 
-// GetCacheFolder returns the CacheFolder field value if set, zero value otherwise.
+// GetCacheFolder returns the CacheFolder field value
 func (o *SystemStorageDto) GetCacheFolder() FolderStorageDto {
-	if o == nil || IsNil(o.CacheFolder) {
+	if o == nil {
 		var ret FolderStorageDto
 		return ret
 	}
-	return *o.CacheFolder
+
+	return o.CacheFolder
 }
 
-// GetCacheFolderOk returns a tuple with the CacheFolder field value if set, nil otherwise
+// GetCacheFolderOk returns a tuple with the CacheFolder field value
 // and a boolean to check if the value has been set.
 func (o *SystemStorageDto) GetCacheFolderOk() (*FolderStorageDto, bool) {
-	if o == nil || IsNil(o.CacheFolder) {
+	if o == nil {
 		return nil, false
 	}
-	return o.CacheFolder, true
+	return &o.CacheFolder, true
 }
 
-// HasCacheFolder returns a boolean if a field has been set.
-func (o *SystemStorageDto) HasCacheFolder() bool {
-	if o != nil && !IsNil(o.CacheFolder) {
-		return true
-	}
-
-	return false
-}
-
-// SetCacheFolder gets a reference to the given FolderStorageDto and assigns it to the CacheFolder field.
+// SetCacheFolder sets field value
 func (o *SystemStorageDto) SetCacheFolder(v FolderStorageDto) {
-	o.CacheFolder = &v
+	o.CacheFolder = v
 }
 
-// GetLogFolder returns the LogFolder field value if set, zero value otherwise.
+// GetLogFolder returns the LogFolder field value
 func (o *SystemStorageDto) GetLogFolder() FolderStorageDto {
-	if o == nil || IsNil(o.LogFolder) {
+	if o == nil {
 		var ret FolderStorageDto
 		return ret
 	}
-	return *o.LogFolder
+
+	return o.LogFolder
 }
 
-// GetLogFolderOk returns a tuple with the LogFolder field value if set, nil otherwise
+// GetLogFolderOk returns a tuple with the LogFolder field value
 // and a boolean to check if the value has been set.
 func (o *SystemStorageDto) GetLogFolderOk() (*FolderStorageDto, bool) {
-	if o == nil || IsNil(o.LogFolder) {
+	if o == nil {
 		return nil, false
 	}
-	return o.LogFolder, true
+	return &o.LogFolder, true
 }
 
-// HasLogFolder returns a boolean if a field has been set.
-func (o *SystemStorageDto) HasLogFolder() bool {
-	if o != nil && !IsNil(o.LogFolder) {
-		return true
-	}
-
-	return false
-}
-
-// SetLogFolder gets a reference to the given FolderStorageDto and assigns it to the LogFolder field.
+// SetLogFolder sets field value
 func (o *SystemStorageDto) SetLogFolder(v FolderStorageDto) {
-	o.LogFolder = &v
+	o.LogFolder = v
 }
 
-// GetInternalMetadataFolder returns the InternalMetadataFolder field value if set, zero value otherwise.
+// GetInternalMetadataFolder returns the InternalMetadataFolder field value
 func (o *SystemStorageDto) GetInternalMetadataFolder() FolderStorageDto {
-	if o == nil || IsNil(o.InternalMetadataFolder) {
+	if o == nil {
 		var ret FolderStorageDto
 		return ret
 	}
-	return *o.InternalMetadataFolder
+
+	return o.InternalMetadataFolder
 }
 
-// GetInternalMetadataFolderOk returns a tuple with the InternalMetadataFolder field value if set, nil otherwise
+// GetInternalMetadataFolderOk returns a tuple with the InternalMetadataFolder field value
 // and a boolean to check if the value has been set.
 func (o *SystemStorageDto) GetInternalMetadataFolderOk() (*FolderStorageDto, bool) {
-	if o == nil || IsNil(o.InternalMetadataFolder) {
+	if o == nil {
 		return nil, false
 	}
-	return o.InternalMetadataFolder, true
+	return &o.InternalMetadataFolder, true
 }
 
-// HasInternalMetadataFolder returns a boolean if a field has been set.
-func (o *SystemStorageDto) HasInternalMetadataFolder() bool {
-	if o != nil && !IsNil(o.InternalMetadataFolder) {
-		return true
-	}
-
-	return false
-}
-
-// SetInternalMetadataFolder gets a reference to the given FolderStorageDto and assigns it to the InternalMetadataFolder field.
+// SetInternalMetadataFolder sets field value
 func (o *SystemStorageDto) SetInternalMetadataFolder(v FolderStorageDto) {
-	o.InternalMetadataFolder = &v
+	o.InternalMetadataFolder = v
 }
 
-// GetTranscodingTempFolder returns the TranscodingTempFolder field value if set, zero value otherwise.
+// GetTranscodingTempFolder returns the TranscodingTempFolder field value
 func (o *SystemStorageDto) GetTranscodingTempFolder() FolderStorageDto {
-	if o == nil || IsNil(o.TranscodingTempFolder) {
+	if o == nil {
 		var ret FolderStorageDto
 		return ret
 	}
-	return *o.TranscodingTempFolder
+
+	return o.TranscodingTempFolder
 }
 
-// GetTranscodingTempFolderOk returns a tuple with the TranscodingTempFolder field value if set, nil otherwise
+// GetTranscodingTempFolderOk returns a tuple with the TranscodingTempFolder field value
 // and a boolean to check if the value has been set.
 func (o *SystemStorageDto) GetTranscodingTempFolderOk() (*FolderStorageDto, bool) {
-	if o == nil || IsNil(o.TranscodingTempFolder) {
+	if o == nil {
 		return nil, false
 	}
-	return o.TranscodingTempFolder, true
+	return &o.TranscodingTempFolder, true
 }
 
-// HasTranscodingTempFolder returns a boolean if a field has been set.
-func (o *SystemStorageDto) HasTranscodingTempFolder() bool {
-	if o != nil && !IsNil(o.TranscodingTempFolder) {
-		return true
-	}
-
-	return false
-}
-
-// SetTranscodingTempFolder gets a reference to the given FolderStorageDto and assigns it to the TranscodingTempFolder field.
+// SetTranscodingTempFolder sets field value
 func (o *SystemStorageDto) SetTranscodingTempFolder(v FolderStorageDto) {
-	o.TranscodingTempFolder = &v
+	o.TranscodingTempFolder = v
 }
 
-// GetLibraries returns the Libraries field value if set, zero value otherwise.
+// GetLibraries returns the Libraries field value
 func (o *SystemStorageDto) GetLibraries() []LibraryStorageDto {
-	if o == nil || IsNil(o.Libraries) {
+	if o == nil {
 		var ret []LibraryStorageDto
 		return ret
 	}
+
 	return o.Libraries
 }
 
-// GetLibrariesOk returns a tuple with the Libraries field value if set, nil otherwise
+// GetLibrariesOk returns a tuple with the Libraries field value
 // and a boolean to check if the value has been set.
 func (o *SystemStorageDto) GetLibrariesOk() ([]LibraryStorageDto, bool) {
-	if o == nil || IsNil(o.Libraries) {
+	if o == nil {
 		return nil, false
 	}
 	return o.Libraries, true
 }
 
-// HasLibraries returns a boolean if a field has been set.
-func (o *SystemStorageDto) HasLibraries() bool {
-	if o != nil && !IsNil(o.Libraries) {
-		return true
-	}
-
-	return false
-}
-
-// SetLibraries gets a reference to the given []LibraryStorageDto and assigns it to the Libraries field.
+// SetLibraries sets field value
 func (o *SystemStorageDto) SetLibraries(v []LibraryStorageDto) {
 	o.Libraries = v
 }
@@ -319,31 +267,59 @@ func (o SystemStorageDto) MarshalJSON() ([]byte, error) {
 
 func (o SystemStorageDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ProgramDataFolder) {
-		toSerialize["ProgramDataFolder"] = o.ProgramDataFolder
-	}
-	if !IsNil(o.WebFolder) {
-		toSerialize["WebFolder"] = o.WebFolder
-	}
-	if !IsNil(o.ImageCacheFolder) {
-		toSerialize["ImageCacheFolder"] = o.ImageCacheFolder
-	}
-	if !IsNil(o.CacheFolder) {
-		toSerialize["CacheFolder"] = o.CacheFolder
-	}
-	if !IsNil(o.LogFolder) {
-		toSerialize["LogFolder"] = o.LogFolder
-	}
-	if !IsNil(o.InternalMetadataFolder) {
-		toSerialize["InternalMetadataFolder"] = o.InternalMetadataFolder
-	}
-	if !IsNil(o.TranscodingTempFolder) {
-		toSerialize["TranscodingTempFolder"] = o.TranscodingTempFolder
-	}
-	if !IsNil(o.Libraries) {
-		toSerialize["Libraries"] = o.Libraries
-	}
+	toSerialize["ProgramDataFolder"] = o.ProgramDataFolder
+	toSerialize["WebFolder"] = o.WebFolder
+	toSerialize["ImageCacheFolder"] = o.ImageCacheFolder
+	toSerialize["CacheFolder"] = o.CacheFolder
+	toSerialize["LogFolder"] = o.LogFolder
+	toSerialize["InternalMetadataFolder"] = o.InternalMetadataFolder
+	toSerialize["TranscodingTempFolder"] = o.TranscodingTempFolder
+	toSerialize["Libraries"] = o.Libraries
 	return toSerialize, nil
+}
+
+func (o *SystemStorageDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"ProgramDataFolder",
+		"WebFolder",
+		"ImageCacheFolder",
+		"CacheFolder",
+		"LogFolder",
+		"InternalMetadataFolder",
+		"TranscodingTempFolder",
+		"Libraries",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varSystemStorageDto := _SystemStorageDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varSystemStorageDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = SystemStorageDto(varSystemStorageDto)
+
+	return err
 }
 
 type NullableSystemStorageDto struct {

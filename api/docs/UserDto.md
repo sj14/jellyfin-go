@@ -6,12 +6,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **NullableString** | Gets or sets the name. | [optional] 
 **ServerId** | Pointer to **NullableString** | Gets or sets the server identifier. | [optional] 
-**ServerName** | Pointer to **NullableString** | Gets or sets the name of the server.  This is not used by the server and is for client-side usage only. | [optional] 
+**ServerName** | Pointer to **NullableString** | Gets or sets the name of the server. This is not used by the server and is for client-side usage only. | [optional] 
 **Id** | Pointer to **string** | Gets or sets the id. | [optional] 
 **PrimaryImageTag** | Pointer to **NullableString** | Gets or sets the primary image tag. | [optional] 
-**HasPassword** | Pointer to **bool** | Gets or sets a value indicating whether this instance has password. | [optional] 
-**HasConfiguredPassword** | Pointer to **bool** | Gets or sets a value indicating whether this instance has configured password. | [optional] 
-**HasConfiguredEasyPassword** | Pointer to **bool** | Gets or sets a value indicating whether this instance has configured easy password. | [optional] 
+**HasPassword** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance has password. | [optional] 
+**HasConfiguredPassword** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance has configured password. | [optional] 
+**HasConfiguredEasyPassword** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance has configured easy password. | [optional] 
 **EnableAutoLogin** | Pointer to **NullableBool** | Gets or sets whether async login is enabled or not. | [optional] 
 **LastLoginDate** | Pointer to **NullableTime** | Gets or sets the last login date. | [optional] 
 **LastActivityDate** | Pointer to **NullableTime** | Gets or sets the last activity date. | [optional] 
@@ -228,6 +228,16 @@ SetHasPassword sets HasPassword field to given value.
 
 HasHasPassword returns a boolean if a field has been set.
 
+### SetHasPasswordNil
+
+`func (o *UserDto) SetHasPasswordNil(b bool)`
+
+ SetHasPasswordNil sets the value for HasPassword to be an explicit nil
+
+### UnsetHasPassword
+`func (o *UserDto) UnsetHasPassword()`
+
+UnsetHasPassword ensures that no value is present for HasPassword, not even an explicit nil
 ### GetHasConfiguredPassword
 
 `func (o *UserDto) GetHasConfiguredPassword() bool`
@@ -253,6 +263,16 @@ SetHasConfiguredPassword sets HasConfiguredPassword field to given value.
 
 HasHasConfiguredPassword returns a boolean if a field has been set.
 
+### SetHasConfiguredPasswordNil
+
+`func (o *UserDto) SetHasConfiguredPasswordNil(b bool)`
+
+ SetHasConfiguredPasswordNil sets the value for HasConfiguredPassword to be an explicit nil
+
+### UnsetHasConfiguredPassword
+`func (o *UserDto) UnsetHasConfiguredPassword()`
+
+UnsetHasConfiguredPassword ensures that no value is present for HasConfiguredPassword, not even an explicit nil
 ### GetHasConfiguredEasyPassword
 
 `func (o *UserDto) GetHasConfiguredEasyPassword() bool`
@@ -278,6 +298,16 @@ SetHasConfiguredEasyPassword sets HasConfiguredEasyPassword field to given value
 
 HasHasConfiguredEasyPassword returns a boolean if a field has been set.
 
+### SetHasConfiguredEasyPasswordNil
+
+`func (o *UserDto) SetHasConfiguredEasyPasswordNil(b bool)`
+
+ SetHasConfiguredEasyPasswordNil sets the value for HasConfiguredEasyPassword to be an explicit nil
+
+### UnsetHasConfiguredEasyPassword
+`func (o *UserDto) UnsetHasConfiguredEasyPassword()`
+
+UnsetHasConfiguredEasyPassword ensures that no value is present for HasConfiguredEasyPassword, not even an explicit nil
 ### GetEnableAutoLogin
 
 `func (o *UserDto) GetEnableAutoLogin() bool`

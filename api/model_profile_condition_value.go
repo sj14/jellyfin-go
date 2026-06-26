@@ -44,6 +44,7 @@ const (
 	PROFILECONDITIONVALUE_AUDIO_BIT_DEPTH ProfileConditionValue = "AudioBitDepth"
 	PROFILECONDITIONVALUE_VIDEO_RANGE_TYPE ProfileConditionValue = "VideoRangeType"
 	PROFILECONDITIONVALUE_NUM_STREAMS ProfileConditionValue = "NumStreams"
+	PROFILECONDITIONVALUE_VIDEO_ROTATION ProfileConditionValue = "VideoRotation"
 )
 
 // All allowed values of ProfileConditionValue enum
@@ -73,6 +74,7 @@ var AllowedProfileConditionValueEnumValues = []ProfileConditionValue{
 	"AudioBitDepth",
 	"VideoRangeType",
 	"NumStreams",
+	"VideoRotation",
 }
 
 func (v *ProfileConditionValue) UnmarshalJSON(src []byte) error {

@@ -22,9 +22,6 @@ var _ MappedNullable = &StartupRemoteAccessDto{}
 type StartupRemoteAccessDto struct {
 	// Gets or sets a value indicating whether enable remote access.
 	EnableRemoteAccess bool `json:"EnableRemoteAccess"`
-	// Gets or sets a value indicating whether enable automatic port mapping.
-	// Deprecated
-	EnableAutomaticPortMapping bool `json:"EnableAutomaticPortMapping"`
 }
 
 type _StartupRemoteAccessDto StartupRemoteAccessDto
@@ -33,10 +30,9 @@ type _StartupRemoteAccessDto StartupRemoteAccessDto
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewStartupRemoteAccessDto(enableRemoteAccess bool, enableAutomaticPortMapping bool) *StartupRemoteAccessDto {
+func NewStartupRemoteAccessDto(enableRemoteAccess bool) *StartupRemoteAccessDto {
 	this := StartupRemoteAccessDto{}
 	this.EnableRemoteAccess = enableRemoteAccess
-	this.EnableAutomaticPortMapping = enableAutomaticPortMapping
 	return &this
 }
 
@@ -72,33 +68,6 @@ func (o *StartupRemoteAccessDto) SetEnableRemoteAccess(v bool) {
 	o.EnableRemoteAccess = v
 }
 
-// GetEnableAutomaticPortMapping returns the EnableAutomaticPortMapping field value
-// Deprecated
-func (o *StartupRemoteAccessDto) GetEnableAutomaticPortMapping() bool {
-	if o == nil {
-		var ret bool
-		return ret
-	}
-
-	return o.EnableAutomaticPortMapping
-}
-
-// GetEnableAutomaticPortMappingOk returns a tuple with the EnableAutomaticPortMapping field value
-// and a boolean to check if the value has been set.
-// Deprecated
-func (o *StartupRemoteAccessDto) GetEnableAutomaticPortMappingOk() (*bool, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.EnableAutomaticPortMapping, true
-}
-
-// SetEnableAutomaticPortMapping sets field value
-// Deprecated
-func (o *StartupRemoteAccessDto) SetEnableAutomaticPortMapping(v bool) {
-	o.EnableAutomaticPortMapping = v
-}
-
 func (o StartupRemoteAccessDto) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -110,7 +79,6 @@ func (o StartupRemoteAccessDto) MarshalJSON() ([]byte, error) {
 func (o StartupRemoteAccessDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["EnableRemoteAccess"] = o.EnableRemoteAccess
-	toSerialize["EnableAutomaticPortMapping"] = o.EnableAutomaticPortMapping
 	return toSerialize, nil
 }
 
@@ -120,7 +88,6 @@ func (o *StartupRemoteAccessDto) UnmarshalJSON(data []byte) (err error) {
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"EnableRemoteAccess",
-		"EnableAutomaticPortMapping",
 	}
 
 	allProperties := make(map[string]interface{})

@@ -36,11 +36,14 @@ type StartupAPI interface {
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return ApiGetFirstUserRequest
+
+	Deprecated
 	*/
 	GetFirstUser(ctx context.Context) ApiGetFirstUserRequest
 
 	// GetFirstUserExecute executes the request
 	//  @return StartupUserDto
+	// Deprecated
 	GetFirstUserExecute(r ApiGetFirstUserRequest) (*StartupUserDto, *http.Response, error)
 
 	/*
@@ -48,11 +51,14 @@ type StartupAPI interface {
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return ApiGetFirstUser2Request
+
+	Deprecated
 	*/
 	GetFirstUser2(ctx context.Context) ApiGetFirstUser2Request
 
 	// GetFirstUser2Execute executes the request
 	//  @return StartupUserDto
+	// Deprecated
 	GetFirstUser2Execute(r ApiGetFirstUser2Request) (*StartupUserDto, *http.Response, error)
 
 	/*
@@ -60,11 +66,14 @@ type StartupAPI interface {
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return ApiGetStartupConfigurationRequest
+
+	Deprecated
 	*/
 	GetStartupConfiguration(ctx context.Context) ApiGetStartupConfigurationRequest
 
 	// GetStartupConfigurationExecute executes the request
 	//  @return StartupConfigurationDto
+	// Deprecated
 	GetStartupConfigurationExecute(r ApiGetStartupConfigurationRequest) (*StartupConfigurationDto, *http.Response, error)
 
 	/*
@@ -72,10 +81,13 @@ type StartupAPI interface {
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return ApiSetRemoteAccessRequest
+
+	Deprecated
 	*/
 	SetRemoteAccess(ctx context.Context) ApiSetRemoteAccessRequest
 
 	// SetRemoteAccessExecute executes the request
+	// Deprecated
 	SetRemoteAccessExecute(r ApiSetRemoteAccessRequest) (*http.Response, error)
 
 	/*
@@ -83,10 +95,13 @@ type StartupAPI interface {
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return ApiUpdateInitialConfigurationRequest
+
+	Deprecated
 	*/
 	UpdateInitialConfiguration(ctx context.Context) ApiUpdateInitialConfigurationRequest
 
 	// UpdateInitialConfigurationExecute executes the request
+	// Deprecated
 	UpdateInitialConfigurationExecute(r ApiUpdateInitialConfigurationRequest) (*http.Response, error)
 
 	/*
@@ -218,6 +233,8 @@ GetFirstUser Gets the first user.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiGetFirstUserRequest
+
+Deprecated
 */
 func (a *StartupAPIService) GetFirstUser(ctx context.Context) ApiGetFirstUserRequest {
 	return ApiGetFirstUserRequest{
@@ -228,6 +245,7 @@ func (a *StartupAPIService) GetFirstUser(ctx context.Context) ApiGetFirstUserReq
 
 // Execute executes the request
 //  @return StartupUserDto
+// Deprecated
 func (a *StartupAPIService) GetFirstUserExecute(r ApiGetFirstUserRequest) (*StartupUserDto, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
@@ -329,6 +347,8 @@ GetFirstUser2 Gets the first user.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiGetFirstUser2Request
+
+Deprecated
 */
 func (a *StartupAPIService) GetFirstUser2(ctx context.Context) ApiGetFirstUser2Request {
 	return ApiGetFirstUser2Request{
@@ -339,6 +359,7 @@ func (a *StartupAPIService) GetFirstUser2(ctx context.Context) ApiGetFirstUser2R
 
 // Execute executes the request
 //  @return StartupUserDto
+// Deprecated
 func (a *StartupAPIService) GetFirstUser2Execute(r ApiGetFirstUser2Request) (*StartupUserDto, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
@@ -440,6 +461,8 @@ GetStartupConfiguration Gets the initial startup wizard configuration.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiGetStartupConfigurationRequest
+
+Deprecated
 */
 func (a *StartupAPIService) GetStartupConfiguration(ctx context.Context) ApiGetStartupConfigurationRequest {
 	return ApiGetStartupConfigurationRequest{
@@ -450,6 +473,7 @@ func (a *StartupAPIService) GetStartupConfiguration(ctx context.Context) ApiGetS
 
 // Execute executes the request
 //  @return StartupConfigurationDto
+// Deprecated
 func (a *StartupAPIService) GetStartupConfigurationExecute(r ApiGetStartupConfigurationRequest) (*StartupConfigurationDto, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
@@ -558,6 +582,8 @@ SetRemoteAccess Sets remote access and UPnP.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiSetRemoteAccessRequest
+
+Deprecated
 */
 func (a *StartupAPIService) SetRemoteAccess(ctx context.Context) ApiSetRemoteAccessRequest {
 	return ApiSetRemoteAccessRequest{
@@ -567,6 +593,7 @@ func (a *StartupAPIService) SetRemoteAccess(ctx context.Context) ApiSetRemoteAcc
 }
 
 // Execute executes the request
+// Deprecated
 func (a *StartupAPIService) SetRemoteAccessExecute(r ApiSetRemoteAccessRequest) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
@@ -670,6 +697,8 @@ UpdateInitialConfiguration Sets the initial startup wizard configuration.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiUpdateInitialConfigurationRequest
+
+Deprecated
 */
 func (a *StartupAPIService) UpdateInitialConfiguration(ctx context.Context) ApiUpdateInitialConfigurationRequest {
 	return ApiUpdateInitialConfigurationRequest{
@@ -679,6 +708,7 @@ func (a *StartupAPIService) UpdateInitialConfiguration(ctx context.Context) ApiU
 }
 
 // Execute executes the request
+// Deprecated
 func (a *StartupAPIService) UpdateInitialConfigurationExecute(r ApiUpdateInitialConfigurationRequest) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost

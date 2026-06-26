@@ -27,7 +27,7 @@ type MediaSourceInfo struct {
 	Container NullableString `json:"Container,omitempty"`
 	Size NullableInt64 `json:"Size,omitempty"`
 	Name NullableString `json:"Name,omitempty"`
-	// Gets or sets a value indicating whether the media is remote.  Differentiate internet url vs local network.
+	// Gets or sets a value indicating whether the media is remote. Differentiate internet url vs local network.
 	IsRemote *bool `json:"IsRemote,omitempty"`
 	ETag NullableString `json:"ETag,omitempty"`
 	RunTimeTicks NullableInt64 `json:"RunTimeTicks,omitempty"`
@@ -58,7 +58,7 @@ type MediaSourceInfo struct {
 	Timestamp NullableTransportStreamTimestamp `json:"Timestamp,omitempty"`
 	RequiredHttpHeaders map[string]string `json:"RequiredHttpHeaders,omitempty"`
 	TranscodingUrl NullableString `json:"TranscodingUrl,omitempty"`
-	// Media streaming protocol.  Lowercase for backwards compatibility.
+	// Media streaming protocol. Lowercase for backwards compatibility.
 	TranscodingSubProtocol *MediaStreamProtocol `json:"TranscodingSubProtocol,omitempty"`
 	TranscodingContainer NullableString `json:"TranscodingContainer,omitempty"`
 	AnalyzeDurationMs NullableInt32 `json:"AnalyzeDurationMs,omitempty"`

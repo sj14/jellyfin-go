@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Path** | Pointer to **NullableString** | Gets or sets media path. | [optional] 
-**UpdateType** | Pointer to **NullableString** | Gets or sets media update type.  Created, Modified, Deleted. | [optional] 
+**UpdateType** | Pointer to **NullableString** | Gets or sets media update type. Created, Modified, Deleted. | [optional] 
 
 ## Methods
 
