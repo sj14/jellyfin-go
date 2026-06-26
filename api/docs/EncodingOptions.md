@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 **VppTonemappingContrast** | Pointer to **float64** | Gets or sets the VPP tone-mapping contrast. | [optional] 
 **H264Crf** | Pointer to **int32** | Gets or sets the H264 CRF. | [optional] 
 **H265Crf** | Pointer to **int32** | Gets or sets the H265 CRF. | [optional] 
-**EncoderPreset** | Pointer to [**NullableEncoderPreset**](EncoderPreset.md) | Gets or sets the encoder preset. | [optional] 
+**EncoderPreset** | Pointer to [**EncoderPreset**](EncoderPreset.md) | Gets or sets the encoder preset. | [optional] 
 **DeinterlaceDoubleRate** | Pointer to **bool** | Gets or sets a value indicating whether the framerate is doubled when deinterlacing. | [optional] 
 **DeinterlaceMethod** | Pointer to [**DeinterlaceMethod**](DeinterlaceMethod.md) | Gets or sets the deinterlace method. | [optional] 
 **EnableDecodingColorDepth10Hevc** | Pointer to **bool** | Gets or sets a value indicating whether 10bit HEVC decoding is enabled. | [optional] 
@@ -49,8 +49,10 @@ Name | Type | Description | Notes
 **AllowHevcEncoding** | Pointer to **bool** | Gets or sets a value indicating whether HEVC encoding is enabled. | [optional] 
 **AllowAv1Encoding** | Pointer to **bool** | Gets or sets a value indicating whether AV1 encoding is enabled. | [optional] 
 **EnableSubtitleExtraction** | Pointer to **bool** | Gets or sets a value indicating whether subtitle extraction is enabled. | [optional] 
+**SubtitleExtractionTimeoutMinutes** | Pointer to **int32** | Gets or sets the timeout for subtitle extraction in minutes. | [optional] 
 **HardwareDecodingCodecs** | Pointer to **[]string** | Gets or sets the codecs hardware encoding is used for. | [optional] 
 **AllowOnDemandMetadataBasedKeyframeExtractionForExtensions** | Pointer to **[]string** | Gets or sets the file extensions on-demand metadata based keyframe extraction is enabled for. | [optional] 
+**HlsAudioSeekStrategy** | Pointer to [**HlsAudioSeekStrategy**](HlsAudioSeekStrategy.md) | Gets or sets the method used for audio seeking in HLS. | [optional] [default to HLSAUDIOSEEKSTRATEGY_TRIM_COPIED_AUDIO]
 
 ## Methods
 
@@ -906,16 +908,6 @@ SetEncoderPreset sets EncoderPreset field to given value.
 
 HasEncoderPreset returns a boolean if a field has been set.
 
-### SetEncoderPresetNil
-
-`func (o *EncodingOptions) SetEncoderPresetNil(b bool)`
-
- SetEncoderPresetNil sets the value for EncoderPreset to be an explicit nil
-
-### UnsetEncoderPreset
-`func (o *EncodingOptions) UnsetEncoderPreset()`
-
-UnsetEncoderPreset ensures that no value is present for EncoderPreset, not even an explicit nil
 ### GetDeinterlaceDoubleRate
 
 `func (o *EncodingOptions) GetDeinterlaceDoubleRate() bool`
@@ -1266,6 +1258,31 @@ SetEnableSubtitleExtraction sets EnableSubtitleExtraction field to given value.
 
 HasEnableSubtitleExtraction returns a boolean if a field has been set.
 
+### GetSubtitleExtractionTimeoutMinutes
+
+`func (o *EncodingOptions) GetSubtitleExtractionTimeoutMinutes() int32`
+
+GetSubtitleExtractionTimeoutMinutes returns the SubtitleExtractionTimeoutMinutes field if non-nil, zero value otherwise.
+
+### GetSubtitleExtractionTimeoutMinutesOk
+
+`func (o *EncodingOptions) GetSubtitleExtractionTimeoutMinutesOk() (*int32, bool)`
+
+GetSubtitleExtractionTimeoutMinutesOk returns a tuple with the SubtitleExtractionTimeoutMinutes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubtitleExtractionTimeoutMinutes
+
+`func (o *EncodingOptions) SetSubtitleExtractionTimeoutMinutes(v int32)`
+
+SetSubtitleExtractionTimeoutMinutes sets SubtitleExtractionTimeoutMinutes field to given value.
+
+### HasSubtitleExtractionTimeoutMinutes
+
+`func (o *EncodingOptions) HasSubtitleExtractionTimeoutMinutes() bool`
+
+HasSubtitleExtractionTimeoutMinutes returns a boolean if a field has been set.
+
 ### GetHardwareDecodingCodecs
 
 `func (o *EncodingOptions) GetHardwareDecodingCodecs() []string`
@@ -1336,6 +1353,31 @@ HasAllowOnDemandMetadataBasedKeyframeExtractionForExtensions returns a boolean i
 `func (o *EncodingOptions) UnsetAllowOnDemandMetadataBasedKeyframeExtractionForExtensions()`
 
 UnsetAllowOnDemandMetadataBasedKeyframeExtractionForExtensions ensures that no value is present for AllowOnDemandMetadataBasedKeyframeExtractionForExtensions, not even an explicit nil
+### GetHlsAudioSeekStrategy
+
+`func (o *EncodingOptions) GetHlsAudioSeekStrategy() HlsAudioSeekStrategy`
+
+GetHlsAudioSeekStrategy returns the HlsAudioSeekStrategy field if non-nil, zero value otherwise.
+
+### GetHlsAudioSeekStrategyOk
+
+`func (o *EncodingOptions) GetHlsAudioSeekStrategyOk() (*HlsAudioSeekStrategy, bool)`
+
+GetHlsAudioSeekStrategyOk returns a tuple with the HlsAudioSeekStrategy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHlsAudioSeekStrategy
+
+`func (o *EncodingOptions) SetHlsAudioSeekStrategy(v HlsAudioSeekStrategy)`
+
+SetHlsAudioSeekStrategy sets HlsAudioSeekStrategy field to given value.
+
+### HasHlsAudioSeekStrategy
+
+`func (o *EncodingOptions) HasHlsAudioSeekStrategy() bool`
+
+HasHlsAudioSeekStrategy returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

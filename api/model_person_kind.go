@@ -44,6 +44,7 @@ const (
 	PERSONKIND_COVER_ARTIST PersonKind = "CoverArtist"
 	PERSONKIND_EDITOR PersonKind = "Editor"
 	PERSONKIND_TRANSLATOR PersonKind = "Translator"
+	PERSONKIND_NARRATOR PersonKind = "Narrator"
 )
 
 // All allowed values of PersonKind enum
@@ -73,6 +74,7 @@ var AllowedPersonKindEnumValues = []PersonKind{
 	"CoverArtist",
 	"Editor",
 	"Translator",
+	"Narrator",
 }
 
 func (v *PersonKind) UnmarshalJSON(src []byte) error {

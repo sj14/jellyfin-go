@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TunerChannels** | Pointer to [**[]TunerChannelMapping**](TunerChannelMapping.md) | Gets or sets list of tuner channels. | [optional] 
-**ProviderChannels** | Pointer to [**[]NameIdPair**](NameIdPair.md) | Gets or sets list of provider channels. | [optional] 
+**TunerChannels** | [**[]TunerChannelMapping**](TunerChannelMapping.md) | Gets or sets list of tuner channels. | 
+**ProviderChannels** | [**[]NameIdPair**](NameIdPair.md) | Gets or sets list of provider channels. | 
 **Mappings** | Pointer to [**[]NameValuePair**](NameValuePair.md) | Gets or sets list of mappings. | [optional] 
 **ProviderName** | Pointer to **NullableString** | Gets or sets provider name. | [optional] 
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewChannelMappingOptionsDto
 
-`func NewChannelMappingOptionsDto() *ChannelMappingOptionsDto`
+`func NewChannelMappingOptionsDto(tunerChannels []TunerChannelMapping, providerChannels []NameIdPair, ) *ChannelMappingOptionsDto`
 
 NewChannelMappingOptionsDto instantiates a new ChannelMappingOptionsDto object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetTunerChannels sets TunerChannels field to given value.
 
-### HasTunerChannels
-
-`func (o *ChannelMappingOptionsDto) HasTunerChannels() bool`
-
-HasTunerChannels returns a boolean if a field has been set.
 
 ### GetProviderChannels
 
@@ -72,11 +67,6 @@ and a boolean to check if the value has been set.
 
 SetProviderChannels sets ProviderChannels field to given value.
 
-### HasProviderChannels
-
-`func (o *ChannelMappingOptionsDto) HasProviderChannels() bool`
-
-HasProviderChannels returns a boolean if a field has been set.
 
 ### GetMappings
 

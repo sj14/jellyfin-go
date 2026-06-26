@@ -24,6 +24,8 @@ type LibraryTypeOptionsDto struct {
 	MetadataFetchers []LibraryOptionInfoDto `json:"MetadataFetchers,omitempty"`
 	// Gets or sets the image fetchers.
 	ImageFetchers []LibraryOptionInfoDto `json:"ImageFetchers,omitempty"`
+	// Gets or sets the similar item providers.
+	SimilarItemProviders []LibraryOptionInfoDto `json:"SimilarItemProviders,omitempty"`
 	// Gets or sets the supported image types.
 	SupportedImageTypes []ImageType `json:"SupportedImageTypes,omitempty"`
 	// Gets or sets the default image options.
@@ -153,6 +155,38 @@ func (o *LibraryTypeOptionsDto) SetImageFetchers(v []LibraryOptionInfoDto) {
 	o.ImageFetchers = v
 }
 
+// GetSimilarItemProviders returns the SimilarItemProviders field value if set, zero value otherwise.
+func (o *LibraryTypeOptionsDto) GetSimilarItemProviders() []LibraryOptionInfoDto {
+	if o == nil || IsNil(o.SimilarItemProviders) {
+		var ret []LibraryOptionInfoDto
+		return ret
+	}
+	return o.SimilarItemProviders
+}
+
+// GetSimilarItemProvidersOk returns a tuple with the SimilarItemProviders field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *LibraryTypeOptionsDto) GetSimilarItemProvidersOk() ([]LibraryOptionInfoDto, bool) {
+	if o == nil || IsNil(o.SimilarItemProviders) {
+		return nil, false
+	}
+	return o.SimilarItemProviders, true
+}
+
+// HasSimilarItemProviders returns a boolean if a field has been set.
+func (o *LibraryTypeOptionsDto) HasSimilarItemProviders() bool {
+	if o != nil && !IsNil(o.SimilarItemProviders) {
+		return true
+	}
+
+	return false
+}
+
+// SetSimilarItemProviders gets a reference to the given []LibraryOptionInfoDto and assigns it to the SimilarItemProviders field.
+func (o *LibraryTypeOptionsDto) SetSimilarItemProviders(v []LibraryOptionInfoDto) {
+	o.SimilarItemProviders = v
+}
+
 // GetSupportedImageTypes returns the SupportedImageTypes field value if set, zero value otherwise.
 func (o *LibraryTypeOptionsDto) GetSupportedImageTypes() []ImageType {
 	if o == nil || IsNil(o.SupportedImageTypes) {
@@ -235,6 +269,9 @@ func (o LibraryTypeOptionsDto) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.ImageFetchers) {
 		toSerialize["ImageFetchers"] = o.ImageFetchers
+	}
+	if !IsNil(o.SimilarItemProviders) {
+		toSerialize["SimilarItemProviders"] = o.SimilarItemProviders
 	}
 	if !IsNil(o.SupportedImageTypes) {
 		toSerialize["SupportedImageTypes"] = o.SupportedImageTypes

@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the UserDataChangeInfo type satisfies the MappedNullable interface at compile time
@@ -21,15 +23,18 @@ type UserDataChangeInfo struct {
 	// Gets or sets the user id.
 	UserId *string `json:"UserId,omitempty"`
 	// Gets or sets the user data list.
-	UserDataList []UserItemDataDto `json:"UserDataList,omitempty"`
+	UserDataList []UserItemDataDto `json:"UserDataList"`
 }
+
+type _UserDataChangeInfo UserDataChangeInfo
 
 // NewUserDataChangeInfo instantiates a new UserDataChangeInfo object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUserDataChangeInfo() *UserDataChangeInfo {
+func NewUserDataChangeInfo(userDataList []UserItemDataDto) *UserDataChangeInfo {
 	this := UserDataChangeInfo{}
+	this.UserDataList = userDataList
 	return &this
 }
 
@@ -73,34 +78,26 @@ func (o *UserDataChangeInfo) SetUserId(v string) {
 	o.UserId = &v
 }
 
-// GetUserDataList returns the UserDataList field value if set, zero value otherwise.
+// GetUserDataList returns the UserDataList field value
 func (o *UserDataChangeInfo) GetUserDataList() []UserItemDataDto {
-	if o == nil || IsNil(o.UserDataList) {
+	if o == nil {
 		var ret []UserItemDataDto
 		return ret
 	}
+
 	return o.UserDataList
 }
 
-// GetUserDataListOk returns a tuple with the UserDataList field value if set, nil otherwise
+// GetUserDataListOk returns a tuple with the UserDataList field value
 // and a boolean to check if the value has been set.
 func (o *UserDataChangeInfo) GetUserDataListOk() ([]UserItemDataDto, bool) {
-	if o == nil || IsNil(o.UserDataList) {
+	if o == nil {
 		return nil, false
 	}
 	return o.UserDataList, true
 }
 
-// HasUserDataList returns a boolean if a field has been set.
-func (o *UserDataChangeInfo) HasUserDataList() bool {
-	if o != nil && !IsNil(o.UserDataList) {
-		return true
-	}
-
-	return false
-}
-
-// SetUserDataList gets a reference to the given []UserItemDataDto and assigns it to the UserDataList field.
+// SetUserDataList sets field value
 func (o *UserDataChangeInfo) SetUserDataList(v []UserItemDataDto) {
 	o.UserDataList = v
 }
@@ -118,10 +115,45 @@ func (o UserDataChangeInfo) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.UserId) {
 		toSerialize["UserId"] = o.UserId
 	}
-	if !IsNil(o.UserDataList) {
-		toSerialize["UserDataList"] = o.UserDataList
-	}
+	toSerialize["UserDataList"] = o.UserDataList
 	return toSerialize, nil
+}
+
+func (o *UserDataChangeInfo) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"UserDataList",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varUserDataChangeInfo := _UserDataChangeInfo{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varUserDataChangeInfo)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UserDataChangeInfo(varUserDataChangeInfo)
+
+	return err
 }
 
 type NullableUserDataChangeInfo struct {

@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Genres** | Pointer to [**[]NameGuidPair**](NameGuidPair.md) |  | [optional] 
 **Tags** | Pointer to **[]string** |  | [optional] 
+**AudioLanguages** | Pointer to [**[]NameValuePair**](NameValuePair.md) |  | [optional] 
+**SubtitleLanguages** | Pointer to [**[]NameValuePair**](NameValuePair.md) |  | [optional] 
 
 ## Methods
 
@@ -96,6 +98,76 @@ HasTags returns a boolean if a field has been set.
 `func (o *QueryFilters) UnsetTags()`
 
 UnsetTags ensures that no value is present for Tags, not even an explicit nil
+### GetAudioLanguages
+
+`func (o *QueryFilters) GetAudioLanguages() []NameValuePair`
+
+GetAudioLanguages returns the AudioLanguages field if non-nil, zero value otherwise.
+
+### GetAudioLanguagesOk
+
+`func (o *QueryFilters) GetAudioLanguagesOk() (*[]NameValuePair, bool)`
+
+GetAudioLanguagesOk returns a tuple with the AudioLanguages field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAudioLanguages
+
+`func (o *QueryFilters) SetAudioLanguages(v []NameValuePair)`
+
+SetAudioLanguages sets AudioLanguages field to given value.
+
+### HasAudioLanguages
+
+`func (o *QueryFilters) HasAudioLanguages() bool`
+
+HasAudioLanguages returns a boolean if a field has been set.
+
+### SetAudioLanguagesNil
+
+`func (o *QueryFilters) SetAudioLanguagesNil(b bool)`
+
+ SetAudioLanguagesNil sets the value for AudioLanguages to be an explicit nil
+
+### UnsetAudioLanguages
+`func (o *QueryFilters) UnsetAudioLanguages()`
+
+UnsetAudioLanguages ensures that no value is present for AudioLanguages, not even an explicit nil
+### GetSubtitleLanguages
+
+`func (o *QueryFilters) GetSubtitleLanguages() []NameValuePair`
+
+GetSubtitleLanguages returns the SubtitleLanguages field if non-nil, zero value otherwise.
+
+### GetSubtitleLanguagesOk
+
+`func (o *QueryFilters) GetSubtitleLanguagesOk() (*[]NameValuePair, bool)`
+
+GetSubtitleLanguagesOk returns a tuple with the SubtitleLanguages field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubtitleLanguages
+
+`func (o *QueryFilters) SetSubtitleLanguages(v []NameValuePair)`
+
+SetSubtitleLanguages sets SubtitleLanguages field to given value.
+
+### HasSubtitleLanguages
+
+`func (o *QueryFilters) HasSubtitleLanguages() bool`
+
+HasSubtitleLanguages returns a boolean if a field has been set.
+
+### SetSubtitleLanguagesNil
+
+`func (o *QueryFilters) SetSubtitleLanguagesNil(b bool)`
+
+ SetSubtitleLanguagesNil sets the value for SubtitleLanguages to be an explicit nil
+
+### UnsetSubtitleLanguages
+`func (o *QueryFilters) UnsetSubtitleLanguages()`
+
+UnsetSubtitleLanguages ensures that no value is present for SubtitleLanguages, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

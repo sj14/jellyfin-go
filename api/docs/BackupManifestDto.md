@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ServerVersion** | Pointer to **string** | Gets or sets the jellyfin version this backup was created with. | [optional] 
-**BackupEngineVersion** | Pointer to **string** | Gets or sets the backup engine version this backup was created with. | [optional] 
-**DateCreated** | Pointer to **time.Time** | Gets or sets the date this backup was created with. | [optional] 
-**Path** | Pointer to **string** | Gets or sets the path to the backup on the system. | [optional] 
-**Options** | Pointer to [**BackupOptionsDto**](BackupOptionsDto.md) | Gets or sets the contents of the backup archive. | [optional] 
+**ServerVersion** | **string** | Gets or sets the jellyfin version this backup was created with. | 
+**BackupEngineVersion** | **string** | Gets or sets the backup engine version this backup was created with. | 
+**DateCreated** | **time.Time** | Gets or sets the date this backup was created with. | 
+**Path** | **string** | Gets or sets the path to the backup on the system. | 
+**Options** | [**BackupOptionsDto**](BackupOptionsDto.md) | Gets or sets the contents of the backup archive. | 
 
 ## Methods
 
 ### NewBackupManifestDto
 
-`func NewBackupManifestDto() *BackupManifestDto`
+`func NewBackupManifestDto(serverVersion string, backupEngineVersion string, dateCreated time.Time, path string, options BackupOptionsDto, ) *BackupManifestDto`
 
 NewBackupManifestDto instantiates a new BackupManifestDto object
 This constructor will assign default values to properties that have it defined,
@@ -48,11 +48,6 @@ and a boolean to check if the value has been set.
 
 SetServerVersion sets ServerVersion field to given value.
 
-### HasServerVersion
-
-`func (o *BackupManifestDto) HasServerVersion() bool`
-
-HasServerVersion returns a boolean if a field has been set.
 
 ### GetBackupEngineVersion
 
@@ -73,11 +68,6 @@ and a boolean to check if the value has been set.
 
 SetBackupEngineVersion sets BackupEngineVersion field to given value.
 
-### HasBackupEngineVersion
-
-`func (o *BackupManifestDto) HasBackupEngineVersion() bool`
-
-HasBackupEngineVersion returns a boolean if a field has been set.
 
 ### GetDateCreated
 
@@ -98,11 +88,6 @@ and a boolean to check if the value has been set.
 
 SetDateCreated sets DateCreated field to given value.
 
-### HasDateCreated
-
-`func (o *BackupManifestDto) HasDateCreated() bool`
-
-HasDateCreated returns a boolean if a field has been set.
 
 ### GetPath
 
@@ -123,11 +108,6 @@ and a boolean to check if the value has been set.
 
 SetPath sets Path field to given value.
 
-### HasPath
-
-`func (o *BackupManifestDto) HasPath() bool`
-
-HasPath returns a boolean if a field has been set.
 
 ### GetOptions
 
@@ -148,11 +128,6 @@ and a boolean to check if the value has been set.
 
 SetOptions sets Options field to given value.
 
-### HasOptions
-
-`func (o *BackupManifestDto) HasOptions() bool`
-
-HasOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

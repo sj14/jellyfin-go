@@ -12,6 +12,8 @@ package api
 import (
 	"encoding/json"
 	"time"
+	"bytes"
+	"fmt"
 )
 
 // checks if the BackupManifestDto type satisfies the MappedNullable interface at compile time
@@ -20,23 +22,30 @@ var _ MappedNullable = &BackupManifestDto{}
 // BackupManifestDto Manifest type for backups internal structure.
 type BackupManifestDto struct {
 	// Gets or sets the jellyfin version this backup was created with.
-	ServerVersion *string `json:"ServerVersion,omitempty"`
+	ServerVersion string `json:"ServerVersion"`
 	// Gets or sets the backup engine version this backup was created with.
-	BackupEngineVersion *string `json:"BackupEngineVersion,omitempty"`
+	BackupEngineVersion string `json:"BackupEngineVersion"`
 	// Gets or sets the date this backup was created with.
-	DateCreated *time.Time `json:"DateCreated,omitempty"`
+	DateCreated time.Time `json:"DateCreated"`
 	// Gets or sets the path to the backup on the system.
-	Path *string `json:"Path,omitempty"`
+	Path string `json:"Path"`
 	// Gets or sets the contents of the backup archive.
-	Options *BackupOptionsDto `json:"Options,omitempty"`
+	Options BackupOptionsDto `json:"Options"`
 }
+
+type _BackupManifestDto BackupManifestDto
 
 // NewBackupManifestDto instantiates a new BackupManifestDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBackupManifestDto() *BackupManifestDto {
+func NewBackupManifestDto(serverVersion string, backupEngineVersion string, dateCreated time.Time, path string, options BackupOptionsDto) *BackupManifestDto {
 	this := BackupManifestDto{}
+	this.ServerVersion = serverVersion
+	this.BackupEngineVersion = backupEngineVersion
+	this.DateCreated = dateCreated
+	this.Path = path
+	this.Options = options
 	return &this
 }
 
@@ -48,164 +57,124 @@ func NewBackupManifestDtoWithDefaults() *BackupManifestDto {
 	return &this
 }
 
-// GetServerVersion returns the ServerVersion field value if set, zero value otherwise.
+// GetServerVersion returns the ServerVersion field value
 func (o *BackupManifestDto) GetServerVersion() string {
-	if o == nil || IsNil(o.ServerVersion) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.ServerVersion
+
+	return o.ServerVersion
 }
 
-// GetServerVersionOk returns a tuple with the ServerVersion field value if set, nil otherwise
+// GetServerVersionOk returns a tuple with the ServerVersion field value
 // and a boolean to check if the value has been set.
 func (o *BackupManifestDto) GetServerVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.ServerVersion) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ServerVersion, true
+	return &o.ServerVersion, true
 }
 
-// HasServerVersion returns a boolean if a field has been set.
-func (o *BackupManifestDto) HasServerVersion() bool {
-	if o != nil && !IsNil(o.ServerVersion) {
-		return true
-	}
-
-	return false
-}
-
-// SetServerVersion gets a reference to the given string and assigns it to the ServerVersion field.
+// SetServerVersion sets field value
 func (o *BackupManifestDto) SetServerVersion(v string) {
-	o.ServerVersion = &v
+	o.ServerVersion = v
 }
 
-// GetBackupEngineVersion returns the BackupEngineVersion field value if set, zero value otherwise.
+// GetBackupEngineVersion returns the BackupEngineVersion field value
 func (o *BackupManifestDto) GetBackupEngineVersion() string {
-	if o == nil || IsNil(o.BackupEngineVersion) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.BackupEngineVersion
+
+	return o.BackupEngineVersion
 }
 
-// GetBackupEngineVersionOk returns a tuple with the BackupEngineVersion field value if set, nil otherwise
+// GetBackupEngineVersionOk returns a tuple with the BackupEngineVersion field value
 // and a boolean to check if the value has been set.
 func (o *BackupManifestDto) GetBackupEngineVersionOk() (*string, bool) {
-	if o == nil || IsNil(o.BackupEngineVersion) {
+	if o == nil {
 		return nil, false
 	}
-	return o.BackupEngineVersion, true
+	return &o.BackupEngineVersion, true
 }
 
-// HasBackupEngineVersion returns a boolean if a field has been set.
-func (o *BackupManifestDto) HasBackupEngineVersion() bool {
-	if o != nil && !IsNil(o.BackupEngineVersion) {
-		return true
-	}
-
-	return false
-}
-
-// SetBackupEngineVersion gets a reference to the given string and assigns it to the BackupEngineVersion field.
+// SetBackupEngineVersion sets field value
 func (o *BackupManifestDto) SetBackupEngineVersion(v string) {
-	o.BackupEngineVersion = &v
+	o.BackupEngineVersion = v
 }
 
-// GetDateCreated returns the DateCreated field value if set, zero value otherwise.
+// GetDateCreated returns the DateCreated field value
 func (o *BackupManifestDto) GetDateCreated() time.Time {
-	if o == nil || IsNil(o.DateCreated) {
+	if o == nil {
 		var ret time.Time
 		return ret
 	}
-	return *o.DateCreated
+
+	return o.DateCreated
 }
 
-// GetDateCreatedOk returns a tuple with the DateCreated field value if set, nil otherwise
+// GetDateCreatedOk returns a tuple with the DateCreated field value
 // and a boolean to check if the value has been set.
 func (o *BackupManifestDto) GetDateCreatedOk() (*time.Time, bool) {
-	if o == nil || IsNil(o.DateCreated) {
+	if o == nil {
 		return nil, false
 	}
-	return o.DateCreated, true
+	return &o.DateCreated, true
 }
 
-// HasDateCreated returns a boolean if a field has been set.
-func (o *BackupManifestDto) HasDateCreated() bool {
-	if o != nil && !IsNil(o.DateCreated) {
-		return true
-	}
-
-	return false
-}
-
-// SetDateCreated gets a reference to the given time.Time and assigns it to the DateCreated field.
+// SetDateCreated sets field value
 func (o *BackupManifestDto) SetDateCreated(v time.Time) {
-	o.DateCreated = &v
+	o.DateCreated = v
 }
 
-// GetPath returns the Path field value if set, zero value otherwise.
+// GetPath returns the Path field value
 func (o *BackupManifestDto) GetPath() string {
-	if o == nil || IsNil(o.Path) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Path
+
+	return o.Path
 }
 
-// GetPathOk returns a tuple with the Path field value if set, nil otherwise
+// GetPathOk returns a tuple with the Path field value
 // and a boolean to check if the value has been set.
 func (o *BackupManifestDto) GetPathOk() (*string, bool) {
-	if o == nil || IsNil(o.Path) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Path, true
+	return &o.Path, true
 }
 
-// HasPath returns a boolean if a field has been set.
-func (o *BackupManifestDto) HasPath() bool {
-	if o != nil && !IsNil(o.Path) {
-		return true
-	}
-
-	return false
-}
-
-// SetPath gets a reference to the given string and assigns it to the Path field.
+// SetPath sets field value
 func (o *BackupManifestDto) SetPath(v string) {
-	o.Path = &v
+	o.Path = v
 }
 
-// GetOptions returns the Options field value if set, zero value otherwise.
+// GetOptions returns the Options field value
 func (o *BackupManifestDto) GetOptions() BackupOptionsDto {
-	if o == nil || IsNil(o.Options) {
+	if o == nil {
 		var ret BackupOptionsDto
 		return ret
 	}
-	return *o.Options
+
+	return o.Options
 }
 
-// GetOptionsOk returns a tuple with the Options field value if set, nil otherwise
+// GetOptionsOk returns a tuple with the Options field value
 // and a boolean to check if the value has been set.
 func (o *BackupManifestDto) GetOptionsOk() (*BackupOptionsDto, bool) {
-	if o == nil || IsNil(o.Options) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Options, true
+	return &o.Options, true
 }
 
-// HasOptions returns a boolean if a field has been set.
-func (o *BackupManifestDto) HasOptions() bool {
-	if o != nil && !IsNil(o.Options) {
-		return true
-	}
-
-	return false
-}
-
-// SetOptions gets a reference to the given BackupOptionsDto and assigns it to the Options field.
+// SetOptions sets field value
 func (o *BackupManifestDto) SetOptions(v BackupOptionsDto) {
-	o.Options = &v
+	o.Options = v
 }
 
 func (o BackupManifestDto) MarshalJSON() ([]byte, error) {
@@ -218,22 +187,53 @@ func (o BackupManifestDto) MarshalJSON() ([]byte, error) {
 
 func (o BackupManifestDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ServerVersion) {
-		toSerialize["ServerVersion"] = o.ServerVersion
-	}
-	if !IsNil(o.BackupEngineVersion) {
-		toSerialize["BackupEngineVersion"] = o.BackupEngineVersion
-	}
-	if !IsNil(o.DateCreated) {
-		toSerialize["DateCreated"] = o.DateCreated
-	}
-	if !IsNil(o.Path) {
-		toSerialize["Path"] = o.Path
-	}
-	if !IsNil(o.Options) {
-		toSerialize["Options"] = o.Options
-	}
+	toSerialize["ServerVersion"] = o.ServerVersion
+	toSerialize["BackupEngineVersion"] = o.BackupEngineVersion
+	toSerialize["DateCreated"] = o.DateCreated
+	toSerialize["Path"] = o.Path
+	toSerialize["Options"] = o.Options
 	return toSerialize, nil
+}
+
+func (o *BackupManifestDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"ServerVersion",
+		"BackupEngineVersion",
+		"DateCreated",
+		"Path",
+		"Options",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varBackupManifestDto := _BackupManifestDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varBackupManifestDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = BackupManifestDto(varBackupManifestDto)
+
+	return err
 }
 
 type NullableBackupManifestDto struct {

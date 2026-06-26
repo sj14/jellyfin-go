@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the ChannelMappingOptionsDto type satisfies the MappedNullable interface at compile time
@@ -19,21 +21,25 @@ var _ MappedNullable = &ChannelMappingOptionsDto{}
 // ChannelMappingOptionsDto Channel mapping options dto.
 type ChannelMappingOptionsDto struct {
 	// Gets or sets list of tuner channels.
-	TunerChannels []TunerChannelMapping `json:"TunerChannels,omitempty"`
+	TunerChannels []TunerChannelMapping `json:"TunerChannels"`
 	// Gets or sets list of provider channels.
-	ProviderChannels []NameIdPair `json:"ProviderChannels,omitempty"`
+	ProviderChannels []NameIdPair `json:"ProviderChannels"`
 	// Gets or sets list of mappings.
 	Mappings []NameValuePair `json:"Mappings,omitempty"`
 	// Gets or sets provider name.
 	ProviderName NullableString `json:"ProviderName,omitempty"`
 }
 
+type _ChannelMappingOptionsDto ChannelMappingOptionsDto
+
 // NewChannelMappingOptionsDto instantiates a new ChannelMappingOptionsDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewChannelMappingOptionsDto() *ChannelMappingOptionsDto {
+func NewChannelMappingOptionsDto(tunerChannels []TunerChannelMapping, providerChannels []NameIdPair) *ChannelMappingOptionsDto {
 	this := ChannelMappingOptionsDto{}
+	this.TunerChannels = tunerChannels
+	this.ProviderChannels = providerChannels
 	return &this
 }
 
@@ -45,66 +51,50 @@ func NewChannelMappingOptionsDtoWithDefaults() *ChannelMappingOptionsDto {
 	return &this
 }
 
-// GetTunerChannels returns the TunerChannels field value if set, zero value otherwise.
+// GetTunerChannels returns the TunerChannels field value
 func (o *ChannelMappingOptionsDto) GetTunerChannels() []TunerChannelMapping {
-	if o == nil || IsNil(o.TunerChannels) {
+	if o == nil {
 		var ret []TunerChannelMapping
 		return ret
 	}
+
 	return o.TunerChannels
 }
 
-// GetTunerChannelsOk returns a tuple with the TunerChannels field value if set, nil otherwise
+// GetTunerChannelsOk returns a tuple with the TunerChannels field value
 // and a boolean to check if the value has been set.
 func (o *ChannelMappingOptionsDto) GetTunerChannelsOk() ([]TunerChannelMapping, bool) {
-	if o == nil || IsNil(o.TunerChannels) {
+	if o == nil {
 		return nil, false
 	}
 	return o.TunerChannels, true
 }
 
-// HasTunerChannels returns a boolean if a field has been set.
-func (o *ChannelMappingOptionsDto) HasTunerChannels() bool {
-	if o != nil && !IsNil(o.TunerChannels) {
-		return true
-	}
-
-	return false
-}
-
-// SetTunerChannels gets a reference to the given []TunerChannelMapping and assigns it to the TunerChannels field.
+// SetTunerChannels sets field value
 func (o *ChannelMappingOptionsDto) SetTunerChannels(v []TunerChannelMapping) {
 	o.TunerChannels = v
 }
 
-// GetProviderChannels returns the ProviderChannels field value if set, zero value otherwise.
+// GetProviderChannels returns the ProviderChannels field value
 func (o *ChannelMappingOptionsDto) GetProviderChannels() []NameIdPair {
-	if o == nil || IsNil(o.ProviderChannels) {
+	if o == nil {
 		var ret []NameIdPair
 		return ret
 	}
+
 	return o.ProviderChannels
 }
 
-// GetProviderChannelsOk returns a tuple with the ProviderChannels field value if set, nil otherwise
+// GetProviderChannelsOk returns a tuple with the ProviderChannels field value
 // and a boolean to check if the value has been set.
 func (o *ChannelMappingOptionsDto) GetProviderChannelsOk() ([]NameIdPair, bool) {
-	if o == nil || IsNil(o.ProviderChannels) {
+	if o == nil {
 		return nil, false
 	}
 	return o.ProviderChannels, true
 }
 
-// HasProviderChannels returns a boolean if a field has been set.
-func (o *ChannelMappingOptionsDto) HasProviderChannels() bool {
-	if o != nil && !IsNil(o.ProviderChannels) {
-		return true
-	}
-
-	return false
-}
-
-// SetProviderChannels gets a reference to the given []NameIdPair and assigns it to the ProviderChannels field.
+// SetProviderChannels sets field value
 func (o *ChannelMappingOptionsDto) SetProviderChannels(v []NameIdPair) {
 	o.ProviderChannels = v
 }
@@ -193,12 +183,8 @@ func (o ChannelMappingOptionsDto) MarshalJSON() ([]byte, error) {
 
 func (o ChannelMappingOptionsDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.TunerChannels) {
-		toSerialize["TunerChannels"] = o.TunerChannels
-	}
-	if !IsNil(o.ProviderChannels) {
-		toSerialize["ProviderChannels"] = o.ProviderChannels
-	}
+	toSerialize["TunerChannels"] = o.TunerChannels
+	toSerialize["ProviderChannels"] = o.ProviderChannels
 	if !IsNil(o.Mappings) {
 		toSerialize["Mappings"] = o.Mappings
 	}
@@ -206,6 +192,44 @@ func (o ChannelMappingOptionsDto) ToMap() (map[string]interface{}, error) {
 		toSerialize["ProviderName"] = o.ProviderName.Get()
 	}
 	return toSerialize, nil
+}
+
+func (o *ChannelMappingOptionsDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"TunerChannels",
+		"ProviderChannels",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varChannelMappingOptionsDto := _ChannelMappingOptionsDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varChannelMappingOptionsDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = ChannelMappingOptionsDto(varChannelMappingOptionsDto)
+
+	return err
 }
 
 type NullableChannelMappingOptionsDto struct {

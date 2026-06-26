@@ -57,6 +57,8 @@
 
 * `STREAM_COUNT_EXCEEDS_LIMIT` (value: `"StreamCountExceedsLimit"`)
 
+* `VIDEO_ROTATION_NOT_SUPPORTED` (value: `"VideoRotationNotSupported"`)
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

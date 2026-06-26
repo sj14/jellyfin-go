@@ -17,7 +17,7 @@ import (
 // checks if the BaseItemDto type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &BaseItemDto{}
 
-// BaseItemDto This is strictly used as a data transfer object from the api layer.  This holds information about a BaseItem in a format that is convenient for the client.
+// BaseItemDto This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.
 type BaseItemDto struct {
 	// Gets or sets the name.
 	Name NullableString `json:"Name,omitempty"`
@@ -286,8 +286,11 @@ type BaseItemDto struct {
 	TimerId NullableString `json:"TimerId,omitempty"`
 	// Gets or sets the gain required for audio normalization.
 	NormalizationGain NullableFloat32 `json:"NormalizationGain,omitempty"`
+	// Gets or sets the gain required for audio normalization. This field is inherited from music album normalization gain.
+	AlbumNormalizationGain NullableFloat32 `json:"AlbumNormalizationGain,omitempty"`
 	// Gets or sets the current program.
 	CurrentProgram NullableBaseItemDto `json:"CurrentProgram,omitempty"`
+	OriginalLanguage NullableString `json:"OriginalLanguage,omitempty"`
 }
 
 // NewBaseItemDto instantiates a new BaseItemDto object
@@ -6458,6 +6461,48 @@ func (o *BaseItemDto) UnsetNormalizationGain() {
 	o.NormalizationGain.Unset()
 }
 
+// GetAlbumNormalizationGain returns the AlbumNormalizationGain field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *BaseItemDto) GetAlbumNormalizationGain() float32 {
+	if o == nil || IsNil(o.AlbumNormalizationGain.Get()) {
+		var ret float32
+		return ret
+	}
+	return *o.AlbumNormalizationGain.Get()
+}
+
+// GetAlbumNormalizationGainOk returns a tuple with the AlbumNormalizationGain field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *BaseItemDto) GetAlbumNormalizationGainOk() (*float32, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.AlbumNormalizationGain.Get(), o.AlbumNormalizationGain.IsSet()
+}
+
+// HasAlbumNormalizationGain returns a boolean if a field has been set.
+func (o *BaseItemDto) HasAlbumNormalizationGain() bool {
+	if o != nil && o.AlbumNormalizationGain.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetAlbumNormalizationGain gets a reference to the given NullableFloat32 and assigns it to the AlbumNormalizationGain field.
+func (o *BaseItemDto) SetAlbumNormalizationGain(v float32) {
+	o.AlbumNormalizationGain.Set(&v)
+}
+// SetAlbumNormalizationGainNil sets the value for AlbumNormalizationGain to be an explicit nil
+func (o *BaseItemDto) SetAlbumNormalizationGainNil() {
+	o.AlbumNormalizationGain.Set(nil)
+}
+
+// UnsetAlbumNormalizationGain ensures that no value is present for AlbumNormalizationGain, not even an explicit nil
+func (o *BaseItemDto) UnsetAlbumNormalizationGain() {
+	o.AlbumNormalizationGain.Unset()
+}
+
 // GetCurrentProgram returns the CurrentProgram field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BaseItemDto) GetCurrentProgram() BaseItemDto {
 	if o == nil || IsNil(o.CurrentProgram.Get()) {
@@ -6498,6 +6543,48 @@ func (o *BaseItemDto) SetCurrentProgramNil() {
 // UnsetCurrentProgram ensures that no value is present for CurrentProgram, not even an explicit nil
 func (o *BaseItemDto) UnsetCurrentProgram() {
 	o.CurrentProgram.Unset()
+}
+
+// GetOriginalLanguage returns the OriginalLanguage field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *BaseItemDto) GetOriginalLanguage() string {
+	if o == nil || IsNil(o.OriginalLanguage.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.OriginalLanguage.Get()
+}
+
+// GetOriginalLanguageOk returns a tuple with the OriginalLanguage field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *BaseItemDto) GetOriginalLanguageOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.OriginalLanguage.Get(), o.OriginalLanguage.IsSet()
+}
+
+// HasOriginalLanguage returns a boolean if a field has been set.
+func (o *BaseItemDto) HasOriginalLanguage() bool {
+	if o != nil && o.OriginalLanguage.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetOriginalLanguage gets a reference to the given NullableString and assigns it to the OriginalLanguage field.
+func (o *BaseItemDto) SetOriginalLanguage(v string) {
+	o.OriginalLanguage.Set(&v)
+}
+// SetOriginalLanguageNil sets the value for OriginalLanguage to be an explicit nil
+func (o *BaseItemDto) SetOriginalLanguageNil() {
+	o.OriginalLanguage.Set(nil)
+}
+
+// UnsetOriginalLanguage ensures that no value is present for OriginalLanguage, not even an explicit nil
+func (o *BaseItemDto) UnsetOriginalLanguage() {
+	o.OriginalLanguage.Unset()
 }
 
 func (o BaseItemDto) MarshalJSON() ([]byte, error) {
@@ -6966,8 +7053,14 @@ func (o BaseItemDto) ToMap() (map[string]interface{}, error) {
 	if o.NormalizationGain.IsSet() {
 		toSerialize["NormalizationGain"] = o.NormalizationGain.Get()
 	}
+	if o.AlbumNormalizationGain.IsSet() {
+		toSerialize["AlbumNormalizationGain"] = o.AlbumNormalizationGain.Get()
+	}
 	if o.CurrentProgram.IsSet() {
 		toSerialize["CurrentProgram"] = o.CurrentProgram.Get()
+	}
+	if o.OriginalLanguage.IsSet() {
+		toSerialize["OriginalLanguage"] = o.OriginalLanguage.Get()
 	}
 	return toSerialize, nil
 }

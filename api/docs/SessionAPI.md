@@ -6,13 +6,15 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AddUserToSession**](SessionAPI.md#AddUserToSession) | **Post** /Sessions/{sessionId}/User/{userId} | Adds an additional user to a session.
 [**DisplayContent**](SessionAPI.md#DisplayContent) | **Post** /Sessions/{sessionId}/Viewing | Instructs a session to browse to an item or view.
-[**GetAuthProviders**](SessionAPI.md#GetAuthProviders) | **Get** /Auth/Providers | Get all auth providers.
-[**GetPasswordResetProviders**](SessionAPI.md#GetPasswordResetProviders) | **Get** /Auth/PasswordResetProviders | Get all password reset providers.
 [**GetSessions**](SessionAPI.md#GetSessions) | **Get** /Sessions | Gets a list of sessions.
+[**PingPlaybackSession**](SessionAPI.md#PingPlaybackSession) | **Post** /Sessions/Playing/Ping | Pings a playback session.
 [**Play**](SessionAPI.md#Play) | **Post** /Sessions/{sessionId}/Playing | Instructs a session to play an item.
 [**PostCapabilities**](SessionAPI.md#PostCapabilities) | **Post** /Sessions/Capabilities | Updates capabilities for a device.
 [**PostFullCapabilities**](SessionAPI.md#PostFullCapabilities) | **Post** /Sessions/Capabilities/Full | Updates capabilities for a device.
 [**RemoveUserFromSession**](SessionAPI.md#RemoveUserFromSession) | **Delete** /Sessions/{sessionId}/User/{userId} | Removes an additional user from a session.
+[**ReportPlaybackProgress**](SessionAPI.md#ReportPlaybackProgress) | **Post** /Sessions/Playing/Progress | Reports playback progress within a session.
+[**ReportPlaybackStart**](SessionAPI.md#ReportPlaybackStart) | **Post** /Sessions/Playing | Reports playback has started within a session.
+[**ReportPlaybackStopped**](SessionAPI.md#ReportPlaybackStopped) | **Post** /Sessions/Playing/Stopped | Reports playback has stopped within a session.
 [**ReportSessionEnded**](SessionAPI.md#ReportSessionEnded) | **Post** /Sessions/Logout | Reports that a session has ended.
 [**ReportViewing**](SessionAPI.md#ReportViewing) | **Post** /Sessions/Viewing | Reports that a session is viewing an item.
 [**SendFullGeneralCommand**](SessionAPI.md#SendFullGeneralCommand) | **Post** /Sessions/{sessionId}/Command | Issues a full general command to a client.
@@ -164,124 +166,6 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## GetAuthProviders
-
-> []NameIdPair GetAuthProviders(ctx).Execute()
-
-Get all auth providers.
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/sj14/jellyfin-go/api"
-)
-
-func main() {
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SessionAPI.GetAuthProviders(context.Background()).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SessionAPI.GetAuthProviders``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `GetAuthProviders`: []NameIdPair
-	fmt.Fprintf(os.Stdout, "Response from `SessionAPI.GetAuthProviders`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetAuthProvidersRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]NameIdPair**](NameIdPair.md)
-
-### Authorization
-
-[CustomAuthentication](../README.md#CustomAuthentication)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetPasswordResetProviders
-
-> []NameIdPair GetPasswordResetProviders(ctx).Execute()
-
-Get all password reset providers.
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/sj14/jellyfin-go/api"
-)
-
-func main() {
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SessionAPI.GetPasswordResetProviders(context.Background()).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SessionAPI.GetPasswordResetProviders``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `GetPasswordResetProviders`: []NameIdPair
-	fmt.Fprintf(os.Stdout, "Response from `SessionAPI.GetPasswordResetProviders`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetPasswordResetProvidersRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]NameIdPair**](NameIdPair.md)
-
-### Authorization
-
-[CustomAuthentication](../README.md#CustomAuthentication)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## GetSessions
 
 > []SessionInfoDto GetSessions(ctx).ControllableByUserId(controllableByUserId).DeviceId(deviceId).ActiveWithinSeconds(activeWithinSeconds).Execute()
@@ -344,6 +228,68 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PingPlaybackSession
+
+> PingPlaybackSession(ctx).PlaySessionId(playSessionId).Execute()
+
+Pings a playback session.
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/sj14/jellyfin-go/api"
+)
+
+func main() {
+	playSessionId := "playSessionId_example" // string | Playback session id.
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.SessionAPI.PingPlaybackSession(context.Background()).PlaySessionId(playSessionId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SessionAPI.PingPlaybackSession``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPingPlaybackSessionRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **playSessionId** | **string** | Playback session id. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[CustomAuthentication](../README.md#CustomAuthentication)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -626,6 +572,192 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: text/html
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ReportPlaybackProgress
+
+> ReportPlaybackProgress(ctx).PlaybackProgressInfo(playbackProgressInfo).Execute()
+
+Reports playback progress within a session.
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/sj14/jellyfin-go/api"
+)
+
+func main() {
+	playbackProgressInfo := *openapiclient.NewPlaybackProgressInfo() // PlaybackProgressInfo | The playback progress info. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.SessionAPI.ReportPlaybackProgress(context.Background()).PlaybackProgressInfo(playbackProgressInfo).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SessionAPI.ReportPlaybackProgress``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiReportPlaybackProgressRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **playbackProgressInfo** | [**PlaybackProgressInfo**](PlaybackProgressInfo.md) | The playback progress info. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[CustomAuthentication](../README.md#CustomAuthentication)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/html
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ReportPlaybackStart
+
+> ReportPlaybackStart(ctx).PlaybackStartInfo(playbackStartInfo).Execute()
+
+Reports playback has started within a session.
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/sj14/jellyfin-go/api"
+)
+
+func main() {
+	playbackStartInfo := *openapiclient.NewPlaybackStartInfo() // PlaybackStartInfo | The playback start info. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.SessionAPI.ReportPlaybackStart(context.Background()).PlaybackStartInfo(playbackStartInfo).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SessionAPI.ReportPlaybackStart``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiReportPlaybackStartRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **playbackStartInfo** | [**PlaybackStartInfo**](PlaybackStartInfo.md) | The playback start info. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[CustomAuthentication](../README.md#CustomAuthentication)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/html
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ReportPlaybackStopped
+
+> ReportPlaybackStopped(ctx).PlaybackStopInfo(playbackStopInfo).Execute()
+
+Reports playback has stopped within a session.
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/sj14/jellyfin-go/api"
+)
+
+func main() {
+	playbackStopInfo := *openapiclient.NewPlaybackStopInfo() // PlaybackStopInfo | The playback stop info. (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.SessionAPI.ReportPlaybackStopped(context.Background()).PlaybackStopInfo(playbackStopInfo).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SessionAPI.ReportPlaybackStopped``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiReportPlaybackStoppedRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **playbackStopInfo** | [**PlaybackStopInfo**](PlaybackStopInfo.md) | The playback stop info. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[CustomAuthentication](../README.md#CustomAuthentication)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
 - **Accept**: text/html
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)

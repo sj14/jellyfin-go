@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProgramDataFolder** | Pointer to [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the program data folder. | [optional] 
-**WebFolder** | Pointer to [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the web UI resources folder. | [optional] 
-**ImageCacheFolder** | Pointer to [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the folder where images are cached. | [optional] 
-**CacheFolder** | Pointer to [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the cache folder. | [optional] 
-**LogFolder** | Pointer to [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the folder where logfiles are saved to. | [optional] 
-**InternalMetadataFolder** | Pointer to [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the folder where metadata is stored. | [optional] 
-**TranscodingTempFolder** | Pointer to [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the transcoding cache. | [optional] 
-**Libraries** | Pointer to [**[]LibraryStorageDto**](LibraryStorageDto.md) | Gets or sets the storage informations of all libraries. | [optional] 
+**ProgramDataFolder** | [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the program data folder. | 
+**WebFolder** | [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the web UI resources folder. | 
+**ImageCacheFolder** | [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the folder where images are cached. | 
+**CacheFolder** | [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the cache folder. | 
+**LogFolder** | [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the folder where logfiles are saved to. | 
+**InternalMetadataFolder** | [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the folder where metadata is stored. | 
+**TranscodingTempFolder** | [**FolderStorageDto**](FolderStorageDto.md) | Gets or sets the Storage information of the transcoding cache. | 
+**Libraries** | [**[]LibraryStorageDto**](LibraryStorageDto.md) | Gets or sets the storage informations of all libraries. | 
 
 ## Methods
 
 ### NewSystemStorageDto
 
-`func NewSystemStorageDto() *SystemStorageDto`
+`func NewSystemStorageDto(programDataFolder FolderStorageDto, webFolder FolderStorageDto, imageCacheFolder FolderStorageDto, cacheFolder FolderStorageDto, logFolder FolderStorageDto, internalMetadataFolder FolderStorageDto, transcodingTempFolder FolderStorageDto, libraries []LibraryStorageDto, ) *SystemStorageDto`
 
 NewSystemStorageDto instantiates a new SystemStorageDto object
 This constructor will assign default values to properties that have it defined,
@@ -51,11 +51,6 @@ and a boolean to check if the value has been set.
 
 SetProgramDataFolder sets ProgramDataFolder field to given value.
 
-### HasProgramDataFolder
-
-`func (o *SystemStorageDto) HasProgramDataFolder() bool`
-
-HasProgramDataFolder returns a boolean if a field has been set.
 
 ### GetWebFolder
 
@@ -76,11 +71,6 @@ and a boolean to check if the value has been set.
 
 SetWebFolder sets WebFolder field to given value.
 
-### HasWebFolder
-
-`func (o *SystemStorageDto) HasWebFolder() bool`
-
-HasWebFolder returns a boolean if a field has been set.
 
 ### GetImageCacheFolder
 
@@ -101,11 +91,6 @@ and a boolean to check if the value has been set.
 
 SetImageCacheFolder sets ImageCacheFolder field to given value.
 
-### HasImageCacheFolder
-
-`func (o *SystemStorageDto) HasImageCacheFolder() bool`
-
-HasImageCacheFolder returns a boolean if a field has been set.
 
 ### GetCacheFolder
 
@@ -126,11 +111,6 @@ and a boolean to check if the value has been set.
 
 SetCacheFolder sets CacheFolder field to given value.
 
-### HasCacheFolder
-
-`func (o *SystemStorageDto) HasCacheFolder() bool`
-
-HasCacheFolder returns a boolean if a field has been set.
 
 ### GetLogFolder
 
@@ -151,11 +131,6 @@ and a boolean to check if the value has been set.
 
 SetLogFolder sets LogFolder field to given value.
 
-### HasLogFolder
-
-`func (o *SystemStorageDto) HasLogFolder() bool`
-
-HasLogFolder returns a boolean if a field has been set.
 
 ### GetInternalMetadataFolder
 
@@ -176,11 +151,6 @@ and a boolean to check if the value has been set.
 
 SetInternalMetadataFolder sets InternalMetadataFolder field to given value.
 
-### HasInternalMetadataFolder
-
-`func (o *SystemStorageDto) HasInternalMetadataFolder() bool`
-
-HasInternalMetadataFolder returns a boolean if a field has been set.
 
 ### GetTranscodingTempFolder
 
@@ -201,11 +171,6 @@ and a boolean to check if the value has been set.
 
 SetTranscodingTempFolder sets TranscodingTempFolder field to given value.
 
-### HasTranscodingTempFolder
-
-`func (o *SystemStorageDto) HasTranscodingTempFolder() bool`
-
-HasTranscodingTempFolder returns a boolean if a field has been set.
 
 ### GetLibraries
 
@@ -226,11 +191,6 @@ and a boolean to check if the value has been set.
 
 SetLibraries sets Libraries field to given value.
 
-### HasLibraries
-
-`func (o *SystemStorageDto) HasLibraries() bool`
-
-HasLibraries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

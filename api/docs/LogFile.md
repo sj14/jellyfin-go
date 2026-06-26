@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **DateCreated** | Pointer to **time.Time** | Gets or sets the date created. | [optional] 
 **DateModified** | Pointer to **time.Time** | Gets or sets the date modified. | [optional] 
 **Size** | Pointer to **int64** | Gets or sets the size. | [optional] 
-**Name** | Pointer to **string** | Gets or sets the name. | [optional] 
+**Name** | **string** | Gets or sets the name. | 
 
 ## Methods
 
 ### NewLogFile
 
-`func NewLogFile() *LogFile`
+`func NewLogFile(name string, ) *LogFile`
 
 NewLogFile instantiates a new LogFile object
 This constructor will assign default values to properties that have it defined,
@@ -122,11 +122,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *LogFile) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -22,7 +22,7 @@ type RemoteSearchResult struct {
 	// Gets or sets the name.
 	Name NullableString `json:"Name,omitempty"`
 	// Gets or sets the provider ids.
-	ProviderIds map[string]string `json:"ProviderIds,omitempty"`
+	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
 	// Gets or sets the year.
 	ProductionYear NullableInt32 `json:"ProductionYear,omitempty"`
 	IndexNumber NullableInt32 `json:"IndexNumber,omitempty"`
@@ -95,23 +95,22 @@ func (o *RemoteSearchResult) UnsetName() {
 	o.Name.Unset()
 }
 
-// GetProviderIds returns the ProviderIds field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetProviderIds returns the ProviderIds field value if set, zero value otherwise.
 func (o *RemoteSearchResult) GetProviderIds() map[string]string {
-	if o == nil {
+	if o == nil || IsNil(o.ProviderIds) {
 		var ret map[string]string
 		return ret
 	}
-	return o.ProviderIds
+	return *o.ProviderIds
 }
 
 // GetProviderIdsOk returns a tuple with the ProviderIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *RemoteSearchResult) GetProviderIdsOk() (*map[string]string, bool) {
 	if o == nil || IsNil(o.ProviderIds) {
 		return nil, false
 	}
-	return &o.ProviderIds, true
+	return o.ProviderIds, true
 }
 
 // HasProviderIds returns a boolean if a field has been set.
@@ -125,7 +124,7 @@ func (o *RemoteSearchResult) HasProviderIds() bool {
 
 // SetProviderIds gets a reference to the given map[string]string and assigns it to the ProviderIds field.
 func (o *RemoteSearchResult) SetProviderIds(v map[string]string) {
-	o.ProviderIds = v
+	o.ProviderIds = &v
 }
 
 // GetProductionYear returns the ProductionYear field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -506,9 +505,9 @@ func (o *RemoteSearchResult) UnsetAlbumArtist() {
 	o.AlbumArtist.Unset()
 }
 
-// GetArtists returns the Artists field value if set, zero value otherwise (both if not set or set to explicit null).
+// GetArtists returns the Artists field value if set, zero value otherwise.
 func (o *RemoteSearchResult) GetArtists() []RemoteSearchResult {
-	if o == nil {
+	if o == nil || IsNil(o.Artists) {
 		var ret []RemoteSearchResult
 		return ret
 	}
@@ -517,7 +516,6 @@ func (o *RemoteSearchResult) GetArtists() []RemoteSearchResult {
 
 // GetArtistsOk returns a tuple with the Artists field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
 func (o *RemoteSearchResult) GetArtistsOk() ([]RemoteSearchResult, bool) {
 	if o == nil || IsNil(o.Artists) {
 		return nil, false
@@ -552,7 +550,7 @@ func (o RemoteSearchResult) ToMap() (map[string]interface{}, error) {
 	if o.Name.IsSet() {
 		toSerialize["Name"] = o.Name.Get()
 	}
-	if o.ProviderIds != nil {
+	if !IsNil(o.ProviderIds) {
 		toSerialize["ProviderIds"] = o.ProviderIds
 	}
 	if o.ProductionYear.IsSet() {
@@ -582,7 +580,7 @@ func (o RemoteSearchResult) ToMap() (map[string]interface{}, error) {
 	if o.AlbumArtist.IsSet() {
 		toSerialize["AlbumArtist"] = o.AlbumArtist.Get()
 	}
-	if o.Artists != nil {
+	if !IsNil(o.Artists) {
 		toSerialize["Artists"] = o.Artists
 	}
 	return toSerialize, nil

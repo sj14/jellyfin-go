@@ -13,14 +13,14 @@ Name | Type | Description | Notes
 **Likes** | Pointer to **NullableBool** | Gets or sets a value indicating whether this MediaBrowser.Model.Dto.UserItemDataDto is likes. | [optional] 
 **LastPlayedDate** | Pointer to **NullableTime** | Gets or sets the last played date. | [optional] 
 **Played** | Pointer to **bool** | Gets or sets a value indicating whether this MediaBrowser.Model.Dto.UserItemDataDto is played. | [optional] 
-**Key** | Pointer to **string** | Gets or sets the key. | [optional] 
+**Key** | **string** | Gets or sets the key. | 
 **ItemId** | Pointer to **string** | Gets or sets the item identifier. | [optional] 
 
 ## Methods
 
 ### NewUserItemDataDto
 
-`func NewUserItemDataDto() *UserItemDataDto`
+`func NewUserItemDataDto(key string, ) *UserItemDataDto`
 
 NewUserItemDataDto instantiates a new UserItemDataDto object
 This constructor will assign default values to properties that have it defined,
@@ -329,11 +329,6 @@ and a boolean to check if the value has been set.
 
 SetKey sets Key field to given value.
 
-### HasKey
-
-`func (o *UserItemDataDto) HasKey() bool`
-
-HasKey returns a boolean if a field has been set.
 
 ### GetItemId
 

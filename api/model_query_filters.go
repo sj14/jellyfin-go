@@ -20,6 +20,8 @@ var _ MappedNullable = &QueryFilters{}
 type QueryFilters struct {
 	Genres []NameGuidPair `json:"Genres,omitempty"`
 	Tags []string `json:"Tags,omitempty"`
+	AudioLanguages []NameValuePair `json:"AudioLanguages,omitempty"`
+	SubtitleLanguages []NameValuePair `json:"SubtitleLanguages,omitempty"`
 }
 
 // NewQueryFilters instantiates a new QueryFilters object
@@ -105,6 +107,72 @@ func (o *QueryFilters) SetTags(v []string) {
 	o.Tags = v
 }
 
+// GetAudioLanguages returns the AudioLanguages field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *QueryFilters) GetAudioLanguages() []NameValuePair {
+	if o == nil {
+		var ret []NameValuePair
+		return ret
+	}
+	return o.AudioLanguages
+}
+
+// GetAudioLanguagesOk returns a tuple with the AudioLanguages field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *QueryFilters) GetAudioLanguagesOk() ([]NameValuePair, bool) {
+	if o == nil || IsNil(o.AudioLanguages) {
+		return nil, false
+	}
+	return o.AudioLanguages, true
+}
+
+// HasAudioLanguages returns a boolean if a field has been set.
+func (o *QueryFilters) HasAudioLanguages() bool {
+	if o != nil && !IsNil(o.AudioLanguages) {
+		return true
+	}
+
+	return false
+}
+
+// SetAudioLanguages gets a reference to the given []NameValuePair and assigns it to the AudioLanguages field.
+func (o *QueryFilters) SetAudioLanguages(v []NameValuePair) {
+	o.AudioLanguages = v
+}
+
+// GetSubtitleLanguages returns the SubtitleLanguages field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *QueryFilters) GetSubtitleLanguages() []NameValuePair {
+	if o == nil {
+		var ret []NameValuePair
+		return ret
+	}
+	return o.SubtitleLanguages
+}
+
+// GetSubtitleLanguagesOk returns a tuple with the SubtitleLanguages field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *QueryFilters) GetSubtitleLanguagesOk() ([]NameValuePair, bool) {
+	if o == nil || IsNil(o.SubtitleLanguages) {
+		return nil, false
+	}
+	return o.SubtitleLanguages, true
+}
+
+// HasSubtitleLanguages returns a boolean if a field has been set.
+func (o *QueryFilters) HasSubtitleLanguages() bool {
+	if o != nil && !IsNil(o.SubtitleLanguages) {
+		return true
+	}
+
+	return false
+}
+
+// SetSubtitleLanguages gets a reference to the given []NameValuePair and assigns it to the SubtitleLanguages field.
+func (o *QueryFilters) SetSubtitleLanguages(v []NameValuePair) {
+	o.SubtitleLanguages = v
+}
+
 func (o QueryFilters) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -120,6 +188,12 @@ func (o QueryFilters) ToMap() (map[string]interface{}, error) {
 	}
 	if o.Tags != nil {
 		toSerialize["Tags"] = o.Tags
+	}
+	if o.AudioLanguages != nil {
+		toSerialize["AudioLanguages"] = o.AudioLanguages
+	}
+	if o.SubtitleLanguages != nil {
+		toSerialize["SubtitleLanguages"] = o.SubtitleLanguages
 	}
 	return toSerialize, nil
 }

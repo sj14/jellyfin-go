@@ -46,6 +46,7 @@ const (
 	TRANSCODEREASON_VIDEO_RANGE_TYPE_NOT_SUPPORTED TranscodeReason = "VideoRangeTypeNotSupported"
 	TRANSCODEREASON_VIDEO_CODEC_TAG_NOT_SUPPORTED TranscodeReason = "VideoCodecTagNotSupported"
 	TRANSCODEREASON_STREAM_COUNT_EXCEEDS_LIMIT TranscodeReason = "StreamCountExceedsLimit"
+	TRANSCODEREASON_VIDEO_ROTATION_NOT_SUPPORTED TranscodeReason = "VideoRotationNotSupported"
 )
 
 // All allowed values of TranscodeReason enum
@@ -77,6 +78,7 @@ var AllowedTranscodeReasonEnumValues = []TranscodeReason{
 	"VideoRangeTypeNotSupported",
 	"VideoCodecTagNotSupported",
 	"StreamCountExceedsLimit",
+	"VideoRotationNotSupported",
 }
 
 func (v *TranscodeReason) UnmarshalJSON(src []byte) error {

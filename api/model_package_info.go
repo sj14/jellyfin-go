@@ -28,7 +28,7 @@ type PackageInfo struct {
 	Owner *string `json:"owner,omitempty"`
 	// Gets or sets the category.
 	Category *string `json:"category,omitempty"`
-	// Gets or sets the guid of the assembly associated with this plugin.  This is used to identify the proper item for automatic updates.
+	// Gets or sets the guid of the assembly associated with this plugin. This is used to identify the proper item for automatic updates.
 	Guid *string `json:"guid,omitempty"`
 	// Gets or sets the versions.
 	Versions []VersionInfo `json:"versions,omitempty"`

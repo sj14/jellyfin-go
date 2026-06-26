@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **ImageFetchers** | Pointer to **[]string** |  | [optional] 
 **ImageFetcherOrder** | Pointer to **[]string** |  | [optional] 
 **ImageOptions** | Pointer to [**[]ImageOption**](ImageOption.md) |  | [optional] 
+**SimilarItemProviders** | Pointer to **[]string** |  | [optional] 
+**SimilarItemProviderOrder** | Pointer to **[]string** |  | [optional] 
 
 ## Methods
 
@@ -240,6 +242,76 @@ HasImageOptions returns a boolean if a field has been set.
 `func (o *TypeOptions) UnsetImageOptions()`
 
 UnsetImageOptions ensures that no value is present for ImageOptions, not even an explicit nil
+### GetSimilarItemProviders
+
+`func (o *TypeOptions) GetSimilarItemProviders() []string`
+
+GetSimilarItemProviders returns the SimilarItemProviders field if non-nil, zero value otherwise.
+
+### GetSimilarItemProvidersOk
+
+`func (o *TypeOptions) GetSimilarItemProvidersOk() (*[]string, bool)`
+
+GetSimilarItemProvidersOk returns a tuple with the SimilarItemProviders field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSimilarItemProviders
+
+`func (o *TypeOptions) SetSimilarItemProviders(v []string)`
+
+SetSimilarItemProviders sets SimilarItemProviders field to given value.
+
+### HasSimilarItemProviders
+
+`func (o *TypeOptions) HasSimilarItemProviders() bool`
+
+HasSimilarItemProviders returns a boolean if a field has been set.
+
+### SetSimilarItemProvidersNil
+
+`func (o *TypeOptions) SetSimilarItemProvidersNil(b bool)`
+
+ SetSimilarItemProvidersNil sets the value for SimilarItemProviders to be an explicit nil
+
+### UnsetSimilarItemProviders
+`func (o *TypeOptions) UnsetSimilarItemProviders()`
+
+UnsetSimilarItemProviders ensures that no value is present for SimilarItemProviders, not even an explicit nil
+### GetSimilarItemProviderOrder
+
+`func (o *TypeOptions) GetSimilarItemProviderOrder() []string`
+
+GetSimilarItemProviderOrder returns the SimilarItemProviderOrder field if non-nil, zero value otherwise.
+
+### GetSimilarItemProviderOrderOk
+
+`func (o *TypeOptions) GetSimilarItemProviderOrderOk() (*[]string, bool)`
+
+GetSimilarItemProviderOrderOk returns a tuple with the SimilarItemProviderOrder field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSimilarItemProviderOrder
+
+`func (o *TypeOptions) SetSimilarItemProviderOrder(v []string)`
+
+SetSimilarItemProviderOrder sets SimilarItemProviderOrder field to given value.
+
+### HasSimilarItemProviderOrder
+
+`func (o *TypeOptions) HasSimilarItemProviderOrder() bool`
+
+HasSimilarItemProviderOrder returns a boolean if a field has been set.
+
+### SetSimilarItemProviderOrderNil
+
+`func (o *TypeOptions) SetSimilarItemProviderOrderNil(b bool)`
+
+ SetSimilarItemProviderOrderNil sets the value for SimilarItemProviderOrder to be an explicit nil
+
+### UnsetSimilarItemProviderOrder
+`func (o *TypeOptions) UnsetSimilarItemProviderOrder()`
+
+UnsetSimilarItemProviderOrder ensures that no value is present for SimilarItemProviderOrder, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

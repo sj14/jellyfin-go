@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DatabaseType** | Pointer to **string** | Gets or Sets the type of database jellyfin should use. | [optional] 
+**DatabaseType** | **string** | Gets or Sets the type of database jellyfin should use. | 
 **CustomProviderOptions** | Pointer to [**NullableCustomDatabaseOptions**](CustomDatabaseOptions.md) | Gets or sets the options required to use a custom database provider. | [optional] 
-**LockingBehavior** | Pointer to [**DatabaseLockingBehaviorTypes**](DatabaseLockingBehaviorTypes.md) | Gets or Sets the kind of locking behavior jellyfin should perform. Possible options are \&quot;NoLock\&quot;, \&quot;Pessimistic\&quot;, \&quot;Optimistic\&quot;.  Defaults to \&quot;NoLock\&quot;. | [optional] 
+**LockingBehavior** | Pointer to [**DatabaseLockingBehaviorTypes**](DatabaseLockingBehaviorTypes.md) | Gets or Sets the kind of locking behavior jellyfin should perform. Possible options are \&quot;NoLock\&quot;, \&quot;Pessimistic\&quot;, \&quot;Optimistic\&quot;. Defaults to \&quot;NoLock\&quot;. | [optional] 
 
 ## Methods
 
 ### NewDatabaseConfigurationOptions
 
-`func NewDatabaseConfigurationOptions() *DatabaseConfigurationOptions`
+`func NewDatabaseConfigurationOptions(databaseType string, ) *DatabaseConfigurationOptions`
 
 NewDatabaseConfigurationOptions instantiates a new DatabaseConfigurationOptions object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetDatabaseType sets DatabaseType field to given value.
 
-### HasDatabaseType
-
-`func (o *DatabaseConfigurationOptions) HasDatabaseType() bool`
-
-HasDatabaseType returns a boolean if a field has been set.
 
 ### GetCustomProviderOptions
 

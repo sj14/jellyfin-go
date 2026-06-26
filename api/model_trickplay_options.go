@@ -22,7 +22,7 @@ type TrickplayOptions struct {
 	EnableHwAcceleration *bool `json:"EnableHwAcceleration,omitempty"`
 	// Gets or sets a value indicating whether or not to use HW accelerated MJPEG encoding.
 	EnableHwEncoding *bool `json:"EnableHwEncoding,omitempty"`
-	// Gets or sets a value indicating whether to only extract key frames.  Significantly faster, but is not compatible with all decoders and/or video files.
+	// Gets or sets a value indicating whether to only extract key frames. Significantly faster, but is not compatible with all decoders and/or video files.
 	EnableKeyFrameOnlyExtraction *bool `json:"EnableKeyFrameOnlyExtraction,omitempty"`
 	// Gets or sets the behavior used by trickplay provider on library scan/update.
 	ScanBehavior *TrickplayScanBehavior `json:"ScanBehavior,omitempty"`

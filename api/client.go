@@ -40,7 +40,7 @@ var (
 	queryDescape    = strings.NewReplacer( "%5B", "[", "%5D", "]" )
 )
 
-// APIClient manages communication with the Jellyfin API API v10.11.11
+// APIClient manages communication with the Jellyfin API API v12.0.0
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -48,41 +48,29 @@ type APIClient struct {
 
 	// API Services
 
-	ActivityLogAPI ActivityLogAPI
-
-	ApiKeyAPI ApiKeyAPI
-
-	ArtistsAPI ArtistsAPI
+	ArtistAPI ArtistAPI
 
 	AudioAPI AudioAPI
+
+	AuthenticationAPI AuthenticationAPI
 
 	BackupAPI BackupAPI
 
 	BrandingAPI BrandingAPI
 
-	ChannelsAPI ChannelsAPI
-
-	ClientLogAPI ClientLogAPI
+	ChannelAPI ChannelAPI
 
 	CollectionAPI CollectionAPI
 
-	ConfigurationAPI ConfigurationAPI
+	DeviceAPI DeviceAPI
 
-	DashboardAPI DashboardAPI
-
-	DevicesAPI DevicesAPI
-
-	DisplayPreferencesAPI DisplayPreferencesAPI
-
-	DynamicHlsAPI DynamicHlsAPI
+	DisplayPreferenceAPI DisplayPreferenceAPI
 
 	EnvironmentAPI EnvironmentAPI
 
 	FilterAPI FilterAPI
 
-	GenresAPI GenresAPI
-
-	HlsSegmentAPI HlsSegmentAPI
+	GenreAPI GenreAPI
 
 	ImageAPI ImageAPI
 
@@ -90,11 +78,7 @@ type APIClient struct {
 
 	ItemLookupAPI ItemLookupAPI
 
-	ItemRefreshAPI ItemRefreshAPI
-
 	ItemUpdateAPI ItemUpdateAPI
-
-	ItemsAPI ItemsAPI
 
 	LibraryAPI LibraryAPI
 
@@ -104,71 +88,57 @@ type APIClient struct {
 
 	LocalizationAPI LocalizationAPI
 
-	LyricsAPI LyricsAPI
+	LyricAPI LyricAPI
 
 	MediaInfoAPI MediaInfoAPI
 
-	MediaSegmentsAPI MediaSegmentsAPI
+	MediaSegmentAPI MediaSegmentAPI
 
-	MoviesAPI MoviesAPI
+	MovieAPI MovieAPI
 
-	MusicGenresAPI MusicGenresAPI
+	MusicGenreAPI MusicGenreAPI
 
-	PackageAPI PackageAPI
+	PersonAPI PersonAPI
 
-	PersonsAPI PersonsAPI
+	PlaylistAPI PlaylistAPI
 
-	PlaylistsAPI PlaylistsAPI
-
-	PlaystateAPI PlaystateAPI
-
-	PluginsAPI PluginsAPI
-
-	QuickConnectAPI QuickConnectAPI
+	PluginAPI PluginAPI
 
 	RemoteImageAPI RemoteImageAPI
 
-	ScheduledTasksAPI ScheduledTasksAPI
+	ScheduledTaskAPI ScheduledTaskAPI
 
 	SearchAPI SearchAPI
 
 	SessionAPI SessionAPI
 
+	ShowAPI ShowAPI
+
 	StartupAPI StartupAPI
 
-	StudiosAPI StudiosAPI
+	StudioAPI StudioAPI
 
 	SubtitleAPI SubtitleAPI
 
-	SuggestionsAPI SuggestionsAPI
+	SuggestionAPI SuggestionAPI
 
 	SyncPlayAPI SyncPlayAPI
 
 	SystemAPI SystemAPI
 
-	TimeSyncAPI TimeSyncAPI
+	TrailerAPI TrailerAPI
 
-	TmdbAPI TmdbAPI
-
-	TrailersAPI TrailersAPI
-
-	TrickplayAPI TrickplayAPI
-
-	TvShowsAPI TvShowsAPI
-
-	UniversalAudioAPI UniversalAudioAPI
+	TrickPlayAPI TrickPlayAPI
 
 	UserAPI UserAPI
 
-	UserLibraryAPI UserLibraryAPI
+	UserDataAPI UserDataAPI
 
-	UserViewsAPI UserViewsAPI
+	UserViewAPI UserViewAPI
 
-	VideoAttachmentsAPI VideoAttachmentsAPI
+	VideoAPI VideoAPI
 
-	VideosAPI VideosAPI
-
-	YearsAPI YearsAPI
+	YearAPI YearAPI
 }
 
 type service struct {
@@ -187,67 +157,52 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.ActivityLogAPI = (*ActivityLogAPIService)(&c.common)
-	c.ApiKeyAPI = (*ApiKeyAPIService)(&c.common)
-	c.ArtistsAPI = (*ArtistsAPIService)(&c.common)
+	c.ArtistAPI = (*ArtistAPIService)(&c.common)
 	c.AudioAPI = (*AudioAPIService)(&c.common)
+	c.AuthenticationAPI = (*AuthenticationAPIService)(&c.common)
 	c.BackupAPI = (*BackupAPIService)(&c.common)
 	c.BrandingAPI = (*BrandingAPIService)(&c.common)
-	c.ChannelsAPI = (*ChannelsAPIService)(&c.common)
-	c.ClientLogAPI = (*ClientLogAPIService)(&c.common)
+	c.ChannelAPI = (*ChannelAPIService)(&c.common)
 	c.CollectionAPI = (*CollectionAPIService)(&c.common)
-	c.ConfigurationAPI = (*ConfigurationAPIService)(&c.common)
-	c.DashboardAPI = (*DashboardAPIService)(&c.common)
-	c.DevicesAPI = (*DevicesAPIService)(&c.common)
-	c.DisplayPreferencesAPI = (*DisplayPreferencesAPIService)(&c.common)
-	c.DynamicHlsAPI = (*DynamicHlsAPIService)(&c.common)
+	c.DeviceAPI = (*DeviceAPIService)(&c.common)
+	c.DisplayPreferenceAPI = (*DisplayPreferenceAPIService)(&c.common)
 	c.EnvironmentAPI = (*EnvironmentAPIService)(&c.common)
 	c.FilterAPI = (*FilterAPIService)(&c.common)
-	c.GenresAPI = (*GenresAPIService)(&c.common)
-	c.HlsSegmentAPI = (*HlsSegmentAPIService)(&c.common)
+	c.GenreAPI = (*GenreAPIService)(&c.common)
 	c.ImageAPI = (*ImageAPIService)(&c.common)
 	c.InstantMixAPI = (*InstantMixAPIService)(&c.common)
 	c.ItemLookupAPI = (*ItemLookupAPIService)(&c.common)
-	c.ItemRefreshAPI = (*ItemRefreshAPIService)(&c.common)
 	c.ItemUpdateAPI = (*ItemUpdateAPIService)(&c.common)
-	c.ItemsAPI = (*ItemsAPIService)(&c.common)
 	c.LibraryAPI = (*LibraryAPIService)(&c.common)
 	c.LibraryStructureAPI = (*LibraryStructureAPIService)(&c.common)
 	c.LiveTvAPI = (*LiveTvAPIService)(&c.common)
 	c.LocalizationAPI = (*LocalizationAPIService)(&c.common)
-	c.LyricsAPI = (*LyricsAPIService)(&c.common)
+	c.LyricAPI = (*LyricAPIService)(&c.common)
 	c.MediaInfoAPI = (*MediaInfoAPIService)(&c.common)
-	c.MediaSegmentsAPI = (*MediaSegmentsAPIService)(&c.common)
-	c.MoviesAPI = (*MoviesAPIService)(&c.common)
-	c.MusicGenresAPI = (*MusicGenresAPIService)(&c.common)
-	c.PackageAPI = (*PackageAPIService)(&c.common)
-	c.PersonsAPI = (*PersonsAPIService)(&c.common)
-	c.PlaylistsAPI = (*PlaylistsAPIService)(&c.common)
-	c.PlaystateAPI = (*PlaystateAPIService)(&c.common)
-	c.PluginsAPI = (*PluginsAPIService)(&c.common)
-	c.QuickConnectAPI = (*QuickConnectAPIService)(&c.common)
+	c.MediaSegmentAPI = (*MediaSegmentAPIService)(&c.common)
+	c.MovieAPI = (*MovieAPIService)(&c.common)
+	c.MusicGenreAPI = (*MusicGenreAPIService)(&c.common)
+	c.PersonAPI = (*PersonAPIService)(&c.common)
+	c.PlaylistAPI = (*PlaylistAPIService)(&c.common)
+	c.PluginAPI = (*PluginAPIService)(&c.common)
 	c.RemoteImageAPI = (*RemoteImageAPIService)(&c.common)
-	c.ScheduledTasksAPI = (*ScheduledTasksAPIService)(&c.common)
+	c.ScheduledTaskAPI = (*ScheduledTaskAPIService)(&c.common)
 	c.SearchAPI = (*SearchAPIService)(&c.common)
 	c.SessionAPI = (*SessionAPIService)(&c.common)
+	c.ShowAPI = (*ShowAPIService)(&c.common)
 	c.StartupAPI = (*StartupAPIService)(&c.common)
-	c.StudiosAPI = (*StudiosAPIService)(&c.common)
+	c.StudioAPI = (*StudioAPIService)(&c.common)
 	c.SubtitleAPI = (*SubtitleAPIService)(&c.common)
-	c.SuggestionsAPI = (*SuggestionsAPIService)(&c.common)
+	c.SuggestionAPI = (*SuggestionAPIService)(&c.common)
 	c.SyncPlayAPI = (*SyncPlayAPIService)(&c.common)
 	c.SystemAPI = (*SystemAPIService)(&c.common)
-	c.TimeSyncAPI = (*TimeSyncAPIService)(&c.common)
-	c.TmdbAPI = (*TmdbAPIService)(&c.common)
-	c.TrailersAPI = (*TrailersAPIService)(&c.common)
-	c.TrickplayAPI = (*TrickplayAPIService)(&c.common)
-	c.TvShowsAPI = (*TvShowsAPIService)(&c.common)
-	c.UniversalAudioAPI = (*UniversalAudioAPIService)(&c.common)
+	c.TrailerAPI = (*TrailerAPIService)(&c.common)
+	c.TrickPlayAPI = (*TrickPlayAPIService)(&c.common)
 	c.UserAPI = (*UserAPIService)(&c.common)
-	c.UserLibraryAPI = (*UserLibraryAPIService)(&c.common)
-	c.UserViewsAPI = (*UserViewsAPIService)(&c.common)
-	c.VideoAttachmentsAPI = (*VideoAttachmentsAPIService)(&c.common)
-	c.VideosAPI = (*VideosAPIService)(&c.common)
-	c.YearsAPI = (*YearsAPIService)(&c.common)
+	c.UserDataAPI = (*UserDataAPIService)(&c.common)
+	c.UserViewAPI = (*UserViewAPIService)(&c.common)
+	c.VideoAPI = (*VideoAPIService)(&c.common)
+	c.YearAPI = (*YearAPIService)(&c.common)
 
 	return c
 }

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Gets or sets the cast receiver application id. | [optional] 
-**Name** | Pointer to **string** | Gets or sets the cast receiver application name. | [optional] 
+**Id** | **string** | Gets or sets the cast receiver application id. | 
+**Name** | **string** | Gets or sets the cast receiver application name. | 
 
 ## Methods
 
 ### NewCastReceiverApplication
 
-`func NewCastReceiverApplication() *CastReceiverApplication`
+`func NewCastReceiverApplication(id string, name string, ) *CastReceiverApplication`
 
 NewCastReceiverApplication instantiates a new CastReceiverApplication object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *CastReceiverApplication) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *CastReceiverApplication) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

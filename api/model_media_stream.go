@@ -72,6 +72,8 @@ type MediaStream struct {
 	LocalizedForced NullableString `json:"LocalizedForced,omitempty"`
 	LocalizedExternal NullableString `json:"LocalizedExternal,omitempty"`
 	LocalizedHearingImpaired NullableString `json:"LocalizedHearingImpaired,omitempty"`
+	LocalizedLanguage NullableString `json:"LocalizedLanguage,omitempty"`
+	LocalizedOriginal NullableString `json:"LocalizedOriginal,omitempty"`
 	DisplayTitle NullableString `json:"DisplayTitle,omitempty"`
 	NalLengthSize NullableString `json:"NalLengthSize,omitempty"`
 	// Gets or sets a value indicating whether this instance is interlaced.
@@ -97,6 +99,8 @@ type MediaStream struct {
 	IsForced *bool `json:"IsForced,omitempty"`
 	// Gets or sets a value indicating whether this instance is for the hearing impaired.
 	IsHearingImpaired *bool `json:"IsHearingImpaired,omitempty"`
+	// Gets or sets a value indicating whether this instance is original.
+	IsOriginal *bool `json:"IsOriginal,omitempty"`
 	// Gets or sets the height.
 	Height NullableInt32 `json:"Height,omitempty"`
 	// Gets or sets the width.
@@ -105,7 +109,7 @@ type MediaStream struct {
 	AverageFrameRate NullableFloat32 `json:"AverageFrameRate,omitempty"`
 	// Gets or sets the real frame rate.
 	RealFrameRate NullableFloat32 `json:"RealFrameRate,omitempty"`
-	// Gets the framerate used as reference.  Prefer AverageFrameRate, if that is null or an unrealistic value  then fallback to RealFrameRate.
+	// Gets the framerate used as reference. Prefer AverageFrameRate, if that is null or an unrealistic value then fallback to RealFrameRate.
 	ReferenceFrameRate NullableFloat32 `json:"ReferenceFrameRate,omitempty"`
 	// Gets or sets the profile.
 	Profile NullableString `json:"Profile,omitempty"`
@@ -1385,6 +1389,90 @@ func (o *MediaStream) UnsetLocalizedHearingImpaired() {
 	o.LocalizedHearingImpaired.Unset()
 }
 
+// GetLocalizedLanguage returns the LocalizedLanguage field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *MediaStream) GetLocalizedLanguage() string {
+	if o == nil || IsNil(o.LocalizedLanguage.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.LocalizedLanguage.Get()
+}
+
+// GetLocalizedLanguageOk returns a tuple with the LocalizedLanguage field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *MediaStream) GetLocalizedLanguageOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.LocalizedLanguage.Get(), o.LocalizedLanguage.IsSet()
+}
+
+// HasLocalizedLanguage returns a boolean if a field has been set.
+func (o *MediaStream) HasLocalizedLanguage() bool {
+	if o != nil && o.LocalizedLanguage.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetLocalizedLanguage gets a reference to the given NullableString and assigns it to the LocalizedLanguage field.
+func (o *MediaStream) SetLocalizedLanguage(v string) {
+	o.LocalizedLanguage.Set(&v)
+}
+// SetLocalizedLanguageNil sets the value for LocalizedLanguage to be an explicit nil
+func (o *MediaStream) SetLocalizedLanguageNil() {
+	o.LocalizedLanguage.Set(nil)
+}
+
+// UnsetLocalizedLanguage ensures that no value is present for LocalizedLanguage, not even an explicit nil
+func (o *MediaStream) UnsetLocalizedLanguage() {
+	o.LocalizedLanguage.Unset()
+}
+
+// GetLocalizedOriginal returns the LocalizedOriginal field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *MediaStream) GetLocalizedOriginal() string {
+	if o == nil || IsNil(o.LocalizedOriginal.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.LocalizedOriginal.Get()
+}
+
+// GetLocalizedOriginalOk returns a tuple with the LocalizedOriginal field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *MediaStream) GetLocalizedOriginalOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.LocalizedOriginal.Get(), o.LocalizedOriginal.IsSet()
+}
+
+// HasLocalizedOriginal returns a boolean if a field has been set.
+func (o *MediaStream) HasLocalizedOriginal() bool {
+	if o != nil && o.LocalizedOriginal.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetLocalizedOriginal gets a reference to the given NullableString and assigns it to the LocalizedOriginal field.
+func (o *MediaStream) SetLocalizedOriginal(v string) {
+	o.LocalizedOriginal.Set(&v)
+}
+// SetLocalizedOriginalNil sets the value for LocalizedOriginal to be an explicit nil
+func (o *MediaStream) SetLocalizedOriginalNil() {
+	o.LocalizedOriginal.Set(nil)
+}
+
+// UnsetLocalizedOriginal ensures that no value is present for LocalizedOriginal, not even an explicit nil
+func (o *MediaStream) UnsetLocalizedOriginal() {
+	o.LocalizedOriginal.Unset()
+}
+
 // GetDisplayTitle returns the DisplayTitle field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *MediaStream) GetDisplayTitle() string {
 	if o == nil || IsNil(o.DisplayTitle.Get()) {
@@ -1931,6 +2019,38 @@ func (o *MediaStream) HasIsHearingImpaired() bool {
 // SetIsHearingImpaired gets a reference to the given bool and assigns it to the IsHearingImpaired field.
 func (o *MediaStream) SetIsHearingImpaired(v bool) {
 	o.IsHearingImpaired = &v
+}
+
+// GetIsOriginal returns the IsOriginal field value if set, zero value otherwise.
+func (o *MediaStream) GetIsOriginal() bool {
+	if o == nil || IsNil(o.IsOriginal) {
+		var ret bool
+		return ret
+	}
+	return *o.IsOriginal
+}
+
+// GetIsOriginalOk returns a tuple with the IsOriginal field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *MediaStream) GetIsOriginalOk() (*bool, bool) {
+	if o == nil || IsNil(o.IsOriginal) {
+		return nil, false
+	}
+	return o.IsOriginal, true
+}
+
+// HasIsOriginal returns a boolean if a field has been set.
+func (o *MediaStream) HasIsOriginal() bool {
+	if o != nil && !IsNil(o.IsOriginal) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsOriginal gets a reference to the given bool and assigns it to the IsOriginal field.
+func (o *MediaStream) SetIsOriginal(v bool) {
+	o.IsOriginal = &v
 }
 
 // GetHeight returns the Height field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -2823,6 +2943,12 @@ func (o MediaStream) ToMap() (map[string]interface{}, error) {
 	if o.LocalizedHearingImpaired.IsSet() {
 		toSerialize["LocalizedHearingImpaired"] = o.LocalizedHearingImpaired.Get()
 	}
+	if o.LocalizedLanguage.IsSet() {
+		toSerialize["LocalizedLanguage"] = o.LocalizedLanguage.Get()
+	}
+	if o.LocalizedOriginal.IsSet() {
+		toSerialize["LocalizedOriginal"] = o.LocalizedOriginal.Get()
+	}
 	if o.DisplayTitle.IsSet() {
 		toSerialize["DisplayTitle"] = o.DisplayTitle.Get()
 	}
@@ -2864,6 +2990,9 @@ func (o MediaStream) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.IsHearingImpaired) {
 		toSerialize["IsHearingImpaired"] = o.IsHearingImpaired
+	}
+	if !IsNil(o.IsOriginal) {
+		toSerialize["IsOriginal"] = o.IsOriginal
 	}
 	if o.Height.IsSet() {
 		toSerialize["Height"] = o.Height.Get()

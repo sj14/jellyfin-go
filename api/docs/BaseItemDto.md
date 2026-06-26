@@ -156,7 +156,9 @@ Name | Type | Description | Notes
 **IsPremiere** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance is premiere. | [optional] 
 **TimerId** | Pointer to **NullableString** | Gets or sets the timer identifier. | [optional] 
 **NormalizationGain** | Pointer to **NullableFloat32** | Gets or sets the gain required for audio normalization. | [optional] 
+**AlbumNormalizationGain** | Pointer to **NullableFloat32** | Gets or sets the gain required for audio normalization. This field is inherited from music album normalization gain. | [optional] 
 **CurrentProgram** | Pointer to [**NullableBaseItemDto**](BaseItemDto.md) | Gets or sets the current program. | [optional] 
+**OriginalLanguage** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -5467,6 +5469,41 @@ HasNormalizationGain returns a boolean if a field has been set.
 `func (o *BaseItemDto) UnsetNormalizationGain()`
 
 UnsetNormalizationGain ensures that no value is present for NormalizationGain, not even an explicit nil
+### GetAlbumNormalizationGain
+
+`func (o *BaseItemDto) GetAlbumNormalizationGain() float32`
+
+GetAlbumNormalizationGain returns the AlbumNormalizationGain field if non-nil, zero value otherwise.
+
+### GetAlbumNormalizationGainOk
+
+`func (o *BaseItemDto) GetAlbumNormalizationGainOk() (*float32, bool)`
+
+GetAlbumNormalizationGainOk returns a tuple with the AlbumNormalizationGain field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlbumNormalizationGain
+
+`func (o *BaseItemDto) SetAlbumNormalizationGain(v float32)`
+
+SetAlbumNormalizationGain sets AlbumNormalizationGain field to given value.
+
+### HasAlbumNormalizationGain
+
+`func (o *BaseItemDto) HasAlbumNormalizationGain() bool`
+
+HasAlbumNormalizationGain returns a boolean if a field has been set.
+
+### SetAlbumNormalizationGainNil
+
+`func (o *BaseItemDto) SetAlbumNormalizationGainNil(b bool)`
+
+ SetAlbumNormalizationGainNil sets the value for AlbumNormalizationGain to be an explicit nil
+
+### UnsetAlbumNormalizationGain
+`func (o *BaseItemDto) UnsetAlbumNormalizationGain()`
+
+UnsetAlbumNormalizationGain ensures that no value is present for AlbumNormalizationGain, not even an explicit nil
 ### GetCurrentProgram
 
 `func (o *BaseItemDto) GetCurrentProgram() BaseItemDto`
@@ -5502,6 +5539,41 @@ HasCurrentProgram returns a boolean if a field has been set.
 `func (o *BaseItemDto) UnsetCurrentProgram()`
 
 UnsetCurrentProgram ensures that no value is present for CurrentProgram, not even an explicit nil
+### GetOriginalLanguage
+
+`func (o *BaseItemDto) GetOriginalLanguage() string`
+
+GetOriginalLanguage returns the OriginalLanguage field if non-nil, zero value otherwise.
+
+### GetOriginalLanguageOk
+
+`func (o *BaseItemDto) GetOriginalLanguageOk() (*string, bool)`
+
+GetOriginalLanguageOk returns a tuple with the OriginalLanguage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOriginalLanguage
+
+`func (o *BaseItemDto) SetOriginalLanguage(v string)`
+
+SetOriginalLanguage sets OriginalLanguage field to given value.
+
+### HasOriginalLanguage
+
+`func (o *BaseItemDto) HasOriginalLanguage() bool`
+
+HasOriginalLanguage returns a boolean if a field has been set.
+
+### SetOriginalLanguageNil
+
+`func (o *BaseItemDto) SetOriginalLanguageNil(b bool)`
+
+ SetOriginalLanguageNil sets the value for OriginalLanguage to be an explicit nil
+
+### UnsetOriginalLanguage
+`func (o *BaseItemDto) UnsetOriginalLanguage()`
+
+UnsetOriginalLanguage ensures that no value is present for OriginalLanguage, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

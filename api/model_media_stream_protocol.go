@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// MediaStreamProtocol Media streaming protocol.  Lowercase for backwards compatibility.
+// MediaStreamProtocol Media streaming protocol. Lowercase for backwards compatibility.
 type MediaStreamProtocol string
 
 // List of MediaStreamProtocol

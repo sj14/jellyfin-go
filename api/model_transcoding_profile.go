@@ -16,7 +16,7 @@ import (
 // checks if the TranscodingProfile type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &TranscodingProfile{}
 
-// TranscodingProfile A class for transcoding profile information.  Note for client developers: Conditions defined in MediaBrowser.Model.Dlna.CodecProfile has higher priority and can override values defined here.
+// TranscodingProfile A class for transcoding profile information. Note for client developers: Conditions defined in MediaBrowser.Model.Dlna.CodecProfile has higher priority and can override values defined here.
 type TranscodingProfile struct {
 	// Gets or sets the container.
 	Container *string `json:"Container,omitempty"`
@@ -26,7 +26,7 @@ type TranscodingProfile struct {
 	VideoCodec *string `json:"VideoCodec,omitempty"`
 	// Gets or sets the audio codec.
 	AudioCodec *string `json:"AudioCodec,omitempty"`
-	// Media streaming protocol.  Lowercase for backwards compatibility.
+	// Media streaming protocol. Lowercase for backwards compatibility.
 	Protocol *MediaStreamProtocol `json:"Protocol,omitempty"`
 	// Gets or sets a value indicating whether the content length should be estimated.
 	EstimateContentLength *bool `json:"EstimateContentLength,omitempty"`
@@ -47,7 +47,8 @@ type TranscodingProfile struct {
 	// Gets or sets the segment length.
 	SegmentLength *int32 `json:"SegmentLength,omitempty"`
 	// Gets or sets a value indicating whether breaking the video stream on non-keyframes is supported.
-	BreakOnNonKeyFrames *bool `json:"BreakOnNonKeyFrames,omitempty"`
+	// Deprecated
+	BreakOnNonKeyFrames NullableBool `json:"BreakOnNonKeyFrames,omitempty"`
 	// Gets or sets the profile conditions.
 	Conditions []ProfileCondition `json:"Conditions,omitempty"`
 	// Gets or sets a value indicating whether variable bitrate encoding is supported.
@@ -77,7 +78,7 @@ func NewTranscodingProfile() *TranscodingProfile {
 	var segmentLength int32 = 0
 	this.SegmentLength = &segmentLength
 	var breakOnNonKeyFrames bool = false
-	this.BreakOnNonKeyFrames = &breakOnNonKeyFrames
+	this.BreakOnNonKeyFrames = *NewNullableBool(&breakOnNonKeyFrames)
 	var enableAudioVbrEncoding bool = true
 	this.EnableAudioVbrEncoding = &enableAudioVbrEncoding
 	return &this
@@ -105,7 +106,7 @@ func NewTranscodingProfileWithDefaults() *TranscodingProfile {
 	var segmentLength int32 = 0
 	this.SegmentLength = &segmentLength
 	var breakOnNonKeyFrames bool = false
-	this.BreakOnNonKeyFrames = &breakOnNonKeyFrames
+	this.BreakOnNonKeyFrames = *NewNullableBool(&breakOnNonKeyFrames)
 	var enableAudioVbrEncoding bool = true
 	this.EnableAudioVbrEncoding = &enableAudioVbrEncoding
 	return &this
@@ -569,36 +570,49 @@ func (o *TranscodingProfile) SetSegmentLength(v int32) {
 	o.SegmentLength = &v
 }
 
-// GetBreakOnNonKeyFrames returns the BreakOnNonKeyFrames field value if set, zero value otherwise.
+// GetBreakOnNonKeyFrames returns the BreakOnNonKeyFrames field value if set, zero value otherwise (both if not set or set to explicit null).
+// Deprecated
 func (o *TranscodingProfile) GetBreakOnNonKeyFrames() bool {
-	if o == nil || IsNil(o.BreakOnNonKeyFrames) {
+	if o == nil || IsNil(o.BreakOnNonKeyFrames.Get()) {
 		var ret bool
 		return ret
 	}
-	return *o.BreakOnNonKeyFrames
+	return *o.BreakOnNonKeyFrames.Get()
 }
 
 // GetBreakOnNonKeyFramesOk returns a tuple with the BreakOnNonKeyFrames field value if set, nil otherwise
 // and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+// Deprecated
 func (o *TranscodingProfile) GetBreakOnNonKeyFramesOk() (*bool, bool) {
-	if o == nil || IsNil(o.BreakOnNonKeyFrames) {
+	if o == nil {
 		return nil, false
 	}
-	return o.BreakOnNonKeyFrames, true
+	return o.BreakOnNonKeyFrames.Get(), o.BreakOnNonKeyFrames.IsSet()
 }
 
 // HasBreakOnNonKeyFrames returns a boolean if a field has been set.
 func (o *TranscodingProfile) HasBreakOnNonKeyFrames() bool {
-	if o != nil && !IsNil(o.BreakOnNonKeyFrames) {
+	if o != nil && o.BreakOnNonKeyFrames.IsSet() {
 		return true
 	}
 
 	return false
 }
 
-// SetBreakOnNonKeyFrames gets a reference to the given bool and assigns it to the BreakOnNonKeyFrames field.
+// SetBreakOnNonKeyFrames gets a reference to the given NullableBool and assigns it to the BreakOnNonKeyFrames field.
+// Deprecated
 func (o *TranscodingProfile) SetBreakOnNonKeyFrames(v bool) {
-	o.BreakOnNonKeyFrames = &v
+	o.BreakOnNonKeyFrames.Set(&v)
+}
+// SetBreakOnNonKeyFramesNil sets the value for BreakOnNonKeyFrames to be an explicit nil
+func (o *TranscodingProfile) SetBreakOnNonKeyFramesNil() {
+	o.BreakOnNonKeyFrames.Set(nil)
+}
+
+// UnsetBreakOnNonKeyFrames ensures that no value is present for BreakOnNonKeyFrames, not even an explicit nil
+func (o *TranscodingProfile) UnsetBreakOnNonKeyFrames() {
+	o.BreakOnNonKeyFrames.Unset()
 }
 
 // GetConditions returns the Conditions field value if set, zero value otherwise.
@@ -717,8 +731,8 @@ func (o TranscodingProfile) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.SegmentLength) {
 		toSerialize["SegmentLength"] = o.SegmentLength
 	}
-	if !IsNil(o.BreakOnNonKeyFrames) {
-		toSerialize["BreakOnNonKeyFrames"] = o.BreakOnNonKeyFrames
+	if o.BreakOnNonKeyFrames.IsSet() {
+		toSerialize["BreakOnNonKeyFrames"] = o.BreakOnNonKeyFrames.Get()
 	}
 	if !IsNil(o.Conditions) {
 		toSerialize["Conditions"] = o.Conditions

@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the DatabaseConfigurationOptions type satisfies the MappedNullable interface at compile time
@@ -19,19 +21,22 @@ var _ MappedNullable = &DatabaseConfigurationOptions{}
 // DatabaseConfigurationOptions Options to configure jellyfins managed database.
 type DatabaseConfigurationOptions struct {
 	// Gets or Sets the type of database jellyfin should use.
-	DatabaseType *string `json:"DatabaseType,omitempty"`
+	DatabaseType string `json:"DatabaseType"`
 	// Gets or sets the options required to use a custom database provider.
 	CustomProviderOptions NullableCustomDatabaseOptions `json:"CustomProviderOptions,omitempty"`
-	// Gets or Sets the kind of locking behavior jellyfin should perform. Possible options are \"NoLock\", \"Pessimistic\", \"Optimistic\".  Defaults to \"NoLock\".
+	// Gets or Sets the kind of locking behavior jellyfin should perform. Possible options are \"NoLock\", \"Pessimistic\", \"Optimistic\". Defaults to \"NoLock\".
 	LockingBehavior *DatabaseLockingBehaviorTypes `json:"LockingBehavior,omitempty"`
 }
+
+type _DatabaseConfigurationOptions DatabaseConfigurationOptions
 
 // NewDatabaseConfigurationOptions instantiates a new DatabaseConfigurationOptions object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewDatabaseConfigurationOptions() *DatabaseConfigurationOptions {
+func NewDatabaseConfigurationOptions(databaseType string) *DatabaseConfigurationOptions {
 	this := DatabaseConfigurationOptions{}
+	this.DatabaseType = databaseType
 	return &this
 }
 
@@ -43,36 +48,28 @@ func NewDatabaseConfigurationOptionsWithDefaults() *DatabaseConfigurationOptions
 	return &this
 }
 
-// GetDatabaseType returns the DatabaseType field value if set, zero value otherwise.
+// GetDatabaseType returns the DatabaseType field value
 func (o *DatabaseConfigurationOptions) GetDatabaseType() string {
-	if o == nil || IsNil(o.DatabaseType) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.DatabaseType
+
+	return o.DatabaseType
 }
 
-// GetDatabaseTypeOk returns a tuple with the DatabaseType field value if set, nil otherwise
+// GetDatabaseTypeOk returns a tuple with the DatabaseType field value
 // and a boolean to check if the value has been set.
 func (o *DatabaseConfigurationOptions) GetDatabaseTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.DatabaseType) {
+	if o == nil {
 		return nil, false
 	}
-	return o.DatabaseType, true
+	return &o.DatabaseType, true
 }
 
-// HasDatabaseType returns a boolean if a field has been set.
-func (o *DatabaseConfigurationOptions) HasDatabaseType() bool {
-	if o != nil && !IsNil(o.DatabaseType) {
-		return true
-	}
-
-	return false
-}
-
-// SetDatabaseType gets a reference to the given string and assigns it to the DatabaseType field.
+// SetDatabaseType sets field value
 func (o *DatabaseConfigurationOptions) SetDatabaseType(v string) {
-	o.DatabaseType = &v
+	o.DatabaseType = v
 }
 
 // GetCustomProviderOptions returns the CustomProviderOptions field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -159,9 +156,7 @@ func (o DatabaseConfigurationOptions) MarshalJSON() ([]byte, error) {
 
 func (o DatabaseConfigurationOptions) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.DatabaseType) {
-		toSerialize["DatabaseType"] = o.DatabaseType
-	}
+	toSerialize["DatabaseType"] = o.DatabaseType
 	if o.CustomProviderOptions.IsSet() {
 		toSerialize["CustomProviderOptions"] = o.CustomProviderOptions.Get()
 	}
@@ -169,6 +164,43 @@ func (o DatabaseConfigurationOptions) ToMap() (map[string]interface{}, error) {
 		toSerialize["LockingBehavior"] = o.LockingBehavior
 	}
 	return toSerialize, nil
+}
+
+func (o *DatabaseConfigurationOptions) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"DatabaseType",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varDatabaseConfigurationOptions := _DatabaseConfigurationOptions{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varDatabaseConfigurationOptions)
+
+	if err != nil {
+		return err
+	}
+
+	*o = DatabaseConfigurationOptions(varDatabaseConfigurationOptions)
+
+	return err
 }
 
 type NullableDatabaseConfigurationOptions struct {

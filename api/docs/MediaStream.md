@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **LocalizedForced** | Pointer to **NullableString** |  | [optional] 
 **LocalizedExternal** | Pointer to **NullableString** |  | [optional] 
 **LocalizedHearingImpaired** | Pointer to **NullableString** |  | [optional] 
+**LocalizedLanguage** | Pointer to **NullableString** |  | [optional] 
+**LocalizedOriginal** | Pointer to **NullableString** |  | [optional] 
 **DisplayTitle** | Pointer to **NullableString** |  | [optional] [readonly] 
 **NalLengthSize** | Pointer to **NullableString** |  | [optional] 
 **IsInterlaced** | Pointer to **bool** | Gets or sets a value indicating whether this instance is interlaced. | [optional] 
@@ -48,11 +50,12 @@ Name | Type | Description | Notes
 **IsDefault** | Pointer to **bool** | Gets or sets a value indicating whether this instance is default. | [optional] 
 **IsForced** | Pointer to **bool** | Gets or sets a value indicating whether this instance is forced. | [optional] 
 **IsHearingImpaired** | Pointer to **bool** | Gets or sets a value indicating whether this instance is for the hearing impaired. | [optional] 
+**IsOriginal** | Pointer to **bool** | Gets or sets a value indicating whether this instance is original. | [optional] 
 **Height** | Pointer to **NullableInt32** | Gets or sets the height. | [optional] 
 **Width** | Pointer to **NullableInt32** | Gets or sets the width. | [optional] 
 **AverageFrameRate** | Pointer to **NullableFloat32** | Gets or sets the average frame rate. | [optional] 
 **RealFrameRate** | Pointer to **NullableFloat32** | Gets or sets the real frame rate. | [optional] 
-**ReferenceFrameRate** | Pointer to **NullableFloat32** | Gets the framerate used as reference.  Prefer AverageFrameRate, if that is null or an unrealistic value  then fallback to RealFrameRate. | [optional] [readonly] 
+**ReferenceFrameRate** | Pointer to **NullableFloat32** | Gets the framerate used as reference. Prefer AverageFrameRate, if that is null or an unrealistic value then fallback to RealFrameRate. | [optional] [readonly] 
 **Profile** | Pointer to **NullableString** | Gets or sets the profile. | [optional] 
 **Type** | Pointer to [**MediaStreamType**](MediaStreamType.md) | Gets or sets the type. | [optional] 
 **AspectRatio** | Pointer to **NullableString** | Gets or sets the aspect ratio. | [optional] 
@@ -1108,6 +1111,76 @@ HasLocalizedHearingImpaired returns a boolean if a field has been set.
 `func (o *MediaStream) UnsetLocalizedHearingImpaired()`
 
 UnsetLocalizedHearingImpaired ensures that no value is present for LocalizedHearingImpaired, not even an explicit nil
+### GetLocalizedLanguage
+
+`func (o *MediaStream) GetLocalizedLanguage() string`
+
+GetLocalizedLanguage returns the LocalizedLanguage field if non-nil, zero value otherwise.
+
+### GetLocalizedLanguageOk
+
+`func (o *MediaStream) GetLocalizedLanguageOk() (*string, bool)`
+
+GetLocalizedLanguageOk returns a tuple with the LocalizedLanguage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocalizedLanguage
+
+`func (o *MediaStream) SetLocalizedLanguage(v string)`
+
+SetLocalizedLanguage sets LocalizedLanguage field to given value.
+
+### HasLocalizedLanguage
+
+`func (o *MediaStream) HasLocalizedLanguage() bool`
+
+HasLocalizedLanguage returns a boolean if a field has been set.
+
+### SetLocalizedLanguageNil
+
+`func (o *MediaStream) SetLocalizedLanguageNil(b bool)`
+
+ SetLocalizedLanguageNil sets the value for LocalizedLanguage to be an explicit nil
+
+### UnsetLocalizedLanguage
+`func (o *MediaStream) UnsetLocalizedLanguage()`
+
+UnsetLocalizedLanguage ensures that no value is present for LocalizedLanguage, not even an explicit nil
+### GetLocalizedOriginal
+
+`func (o *MediaStream) GetLocalizedOriginal() string`
+
+GetLocalizedOriginal returns the LocalizedOriginal field if non-nil, zero value otherwise.
+
+### GetLocalizedOriginalOk
+
+`func (o *MediaStream) GetLocalizedOriginalOk() (*string, bool)`
+
+GetLocalizedOriginalOk returns a tuple with the LocalizedOriginal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocalizedOriginal
+
+`func (o *MediaStream) SetLocalizedOriginal(v string)`
+
+SetLocalizedOriginal sets LocalizedOriginal field to given value.
+
+### HasLocalizedOriginal
+
+`func (o *MediaStream) HasLocalizedOriginal() bool`
+
+HasLocalizedOriginal returns a boolean if a field has been set.
+
+### SetLocalizedOriginalNil
+
+`func (o *MediaStream) SetLocalizedOriginalNil(b bool)`
+
+ SetLocalizedOriginalNil sets the value for LocalizedOriginal to be an explicit nil
+
+### UnsetLocalizedOriginal
+`func (o *MediaStream) UnsetLocalizedOriginal()`
+
+UnsetLocalizedOriginal ensures that no value is present for LocalizedOriginal, not even an explicit nil
 ### GetDisplayTitle
 
 `func (o *MediaStream) GetDisplayTitle() string`
@@ -1557,6 +1630,31 @@ SetIsHearingImpaired sets IsHearingImpaired field to given value.
 `func (o *MediaStream) HasIsHearingImpaired() bool`
 
 HasIsHearingImpaired returns a boolean if a field has been set.
+
+### GetIsOriginal
+
+`func (o *MediaStream) GetIsOriginal() bool`
+
+GetIsOriginal returns the IsOriginal field if non-nil, zero value otherwise.
+
+### GetIsOriginalOk
+
+`func (o *MediaStream) GetIsOriginalOk() (*bool, bool)`
+
+GetIsOriginalOk returns a tuple with the IsOriginal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsOriginal
+
+`func (o *MediaStream) SetIsOriginal(v bool)`
+
+SetIsOriginal sets IsOriginal field to given value.
+
+### HasIsOriginal
+
+`func (o *MediaStream) HasIsOriginal() bool`
+
+HasIsOriginal returns a boolean if a field has been set.
 
 ### GetHeight
 

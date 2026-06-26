@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PluginName** | Pointer to **string** | Gets or sets the Plugin name to search for database providers. | [optional] 
-**PluginAssembly** | Pointer to **string** | Gets or sets the plugin assembly to search for providers. | [optional] 
-**ConnectionString** | Pointer to **string** | Gets or sets the connection string for the custom database provider. | [optional] 
+**PluginName** | **string** | Gets or sets the Plugin name to search for database providers. | 
+**PluginAssembly** | **string** | Gets or sets the plugin assembly to search for providers. | 
+**ConnectionString** | **string** | Gets or sets the connection string for the custom database provider. | 
 **Options** | Pointer to [**[]CustomDatabaseOption**](CustomDatabaseOption.md) | Gets or sets the list of extra options for the custom provider. | [optional] 
 
 ## Methods
 
 ### NewCustomDatabaseOptions
 
-`func NewCustomDatabaseOptions() *CustomDatabaseOptions`
+`func NewCustomDatabaseOptions(pluginName string, pluginAssembly string, connectionString string, ) *CustomDatabaseOptions`
 
 NewCustomDatabaseOptions instantiates a new CustomDatabaseOptions object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetPluginName sets PluginName field to given value.
 
-### HasPluginName
-
-`func (o *CustomDatabaseOptions) HasPluginName() bool`
-
-HasPluginName returns a boolean if a field has been set.
 
 ### GetPluginAssembly
 
@@ -72,11 +67,6 @@ and a boolean to check if the value has been set.
 
 SetPluginAssembly sets PluginAssembly field to given value.
 
-### HasPluginAssembly
-
-`func (o *CustomDatabaseOptions) HasPluginAssembly() bool`
-
-HasPluginAssembly returns a boolean if a field has been set.
 
 ### GetConnectionString
 
@@ -97,11 +87,6 @@ and a boolean to check if the value has been set.
 
 SetConnectionString sets ConnectionString field to given value.
 
-### HasConnectionString
-
-`func (o *CustomDatabaseOptions) HasConnectionString() bool`
-
-HasConnectionString returns a boolean if a field has been set.
 
 ### GetOptions
 

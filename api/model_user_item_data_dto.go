@@ -12,6 +12,8 @@ package api
 import (
 	"encoding/json"
 	"time"
+	"bytes"
+	"fmt"
 )
 
 // checks if the UserItemDataDto type satisfies the MappedNullable interface at compile time
@@ -38,17 +40,20 @@ type UserItemDataDto struct {
 	// Gets or sets a value indicating whether this MediaBrowser.Model.Dto.UserItemDataDto is played.
 	Played *bool `json:"Played,omitempty"`
 	// Gets or sets the key.
-	Key *string `json:"Key,omitempty"`
+	Key string `json:"Key"`
 	// Gets or sets the item identifier.
 	ItemId *string `json:"ItemId,omitempty"`
 }
+
+type _UserItemDataDto UserItemDataDto
 
 // NewUserItemDataDto instantiates a new UserItemDataDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewUserItemDataDto() *UserItemDataDto {
+func NewUserItemDataDto(key string) *UserItemDataDto {
 	this := UserItemDataDto{}
+	this.Key = key
 	return &this
 }
 
@@ -398,36 +403,28 @@ func (o *UserItemDataDto) SetPlayed(v bool) {
 	o.Played = &v
 }
 
-// GetKey returns the Key field value if set, zero value otherwise.
+// GetKey returns the Key field value
 func (o *UserItemDataDto) GetKey() string {
-	if o == nil || IsNil(o.Key) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Key
+
+	return o.Key
 }
 
-// GetKeyOk returns a tuple with the Key field value if set, nil otherwise
+// GetKeyOk returns a tuple with the Key field value
 // and a boolean to check if the value has been set.
 func (o *UserItemDataDto) GetKeyOk() (*string, bool) {
-	if o == nil || IsNil(o.Key) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Key, true
+	return &o.Key, true
 }
 
-// HasKey returns a boolean if a field has been set.
-func (o *UserItemDataDto) HasKey() bool {
-	if o != nil && !IsNil(o.Key) {
-		return true
-	}
-
-	return false
-}
-
-// SetKey gets a reference to the given string and assigns it to the Key field.
+// SetKey sets field value
 func (o *UserItemDataDto) SetKey(v string) {
-	o.Key = &v
+	o.Key = v
 }
 
 // GetItemId returns the ItemId field value if set, zero value otherwise.
@@ -499,13 +496,48 @@ func (o UserItemDataDto) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Played) {
 		toSerialize["Played"] = o.Played
 	}
-	if !IsNil(o.Key) {
-		toSerialize["Key"] = o.Key
-	}
+	toSerialize["Key"] = o.Key
 	if !IsNil(o.ItemId) {
 		toSerialize["ItemId"] = o.ItemId
 	}
 	return toSerialize, nil
+}
+
+func (o *UserItemDataDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"Key",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varUserItemDataDto := _UserItemDataDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varUserItemDataDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UserItemDataDto(varUserItemDataDto)
+
+	return err
 }
 
 type NullableUserItemDataDto struct {

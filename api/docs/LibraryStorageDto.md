@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Gets or sets the Library Id. | [optional] 
-**Name** | Pointer to **string** | Gets or sets the name of the library. | [optional] 
-**Folders** | Pointer to [**[]FolderStorageDto**](FolderStorageDto.md) | Gets or sets the storage informations about the folders used in a library. | [optional] 
+**Id** | **string** | Gets or sets the Library Id. | 
+**Name** | **string** | Gets or sets the name of the library. | 
+**Folders** | [**[]FolderStorageDto**](FolderStorageDto.md) | Gets or sets the storage informations about the folders used in a library. | 
 
 ## Methods
 
 ### NewLibraryStorageDto
 
-`func NewLibraryStorageDto() *LibraryStorageDto`
+`func NewLibraryStorageDto(id string, name string, folders []FolderStorageDto, ) *LibraryStorageDto`
 
 NewLibraryStorageDto instantiates a new LibraryStorageDto object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *LibraryStorageDto) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -71,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *LibraryStorageDto) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetFolders
 
@@ -96,11 +86,6 @@ and a boolean to check if the value has been set.
 
 SetFolders sets Folders field to given value.
 
-### HasFolders
-
-`func (o *LibraryStorageDto) HasFolders() bool`
-
-HasFolders returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

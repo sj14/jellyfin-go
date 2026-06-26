@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArchiveFileName** | Pointer to **string** | Gets or Sets the name of the backup archive to restore from. Must be present in MediaBrowser.Common.Configuration.IApplicationPaths.BackupPath. | [optional] 
+**ArchiveFileName** | **string** | Gets or Sets the name of the backup archive to restore from. Must be present in MediaBrowser.Common.Configuration.IApplicationPaths.BackupPath. | 
 
 ## Methods
 
 ### NewBackupRestoreRequestDto
 
-`func NewBackupRestoreRequestDto() *BackupRestoreRequestDto`
+`func NewBackupRestoreRequestDto(archiveFileName string, ) *BackupRestoreRequestDto`
 
 NewBackupRestoreRequestDto instantiates a new BackupRestoreRequestDto object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetArchiveFileName sets ArchiveFileName field to given value.
 
-### HasArchiveFileName
-
-`func (o *BackupRestoreRequestDto) HasArchiveFileName() bool`
-
-HasArchiveFileName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

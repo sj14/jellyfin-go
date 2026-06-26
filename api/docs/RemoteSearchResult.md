@@ -96,16 +96,6 @@ SetProviderIds sets ProviderIds field to given value.
 
 HasProviderIds returns a boolean if a field has been set.
 
-### SetProviderIdsNil
-
-`func (o *RemoteSearchResult) SetProviderIdsNil(b bool)`
-
- SetProviderIdsNil sets the value for ProviderIds to be an explicit nil
-
-### UnsetProviderIds
-`func (o *RemoteSearchResult) UnsetProviderIds()`
-
-UnsetProviderIds ensures that no value is present for ProviderIds, not even an explicit nil
 ### GetProductionYear
 
 `func (o *RemoteSearchResult) GetProductionYear() int32`
@@ -446,16 +436,6 @@ SetArtists sets Artists field to given value.
 
 HasArtists returns a boolean if a field has been set.
 
-### SetArtistsNil
-
-`func (o *RemoteSearchResult) SetArtistsNil(b bool)`
-
- SetArtistsNil sets the value for Artists to be an explicit nil
-
-### UnsetArtists
-`func (o *RemoteSearchResult) UnsetArtists()`
-
-UnsetArtists ensures that no value is present for Artists, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

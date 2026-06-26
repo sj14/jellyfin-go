@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Gets or sets the name of the new playlist. | [optional] 
+**Name** | **string** | Gets or sets the name of the new playlist. | 
 **Ids** | Pointer to **[]string** | Gets or sets item ids to add to the playlist. | [optional] 
 **UserId** | Pointer to **NullableString** | Gets or sets the user id. | [optional] 
 **MediaType** | Pointer to [**NullableMediaType**](MediaType.md) | Gets or sets the media type. | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 ### NewCreatePlaylistDto
 
-`func NewCreatePlaylistDto() *CreatePlaylistDto`
+`func NewCreatePlaylistDto(name string, ) *CreatePlaylistDto`
 
 NewCreatePlaylistDto instantiates a new CreatePlaylistDto object
 This constructor will assign default values to properties that have it defined,
@@ -49,11 +49,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *CreatePlaylistDto) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetIds
 

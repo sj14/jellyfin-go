@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**GetDefaultDirectoryBrowser**](EnvironmentAPI.md#GetDefaultDirectoryBrowser) | **Get** /Environment/DefaultDirectoryBrowser | Get Default directory browser.
 [**GetDirectoryContents**](EnvironmentAPI.md#GetDirectoryContents) | **Get** /Environment/DirectoryContents | Gets the contents of a given directory in the file system.
 [**GetDrives**](EnvironmentAPI.md#GetDrives) | **Get** /Environment/Drives | Gets available drives from the server&#39;s file system.
-[**GetNetworkShares**](EnvironmentAPI.md#GetNetworkShares) | **Get** /Environment/NetworkShares | Gets network paths.
 [**GetParentPath**](EnvironmentAPI.md#GetParentPath) | **Get** /Environment/ParentPath | Gets the parent path of a given path.
 [**ValidatePath**](EnvironmentAPI.md#ValidatePath) | **Post** /Environment/ValidatePath | Validates path.
 
@@ -179,65 +178,6 @@ This endpoint does not need any parameter.
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetDrivesRequest struct via the builder pattern
-
-
-### Return type
-
-[**[]FileSystemEntryInfo**](FileSystemEntryInfo.md)
-
-### Authorization
-
-[CustomAuthentication](../README.md#CustomAuthentication)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/json; profile=CamelCase, application/json; profile=PascalCase, text/html
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkShares
-
-> []FileSystemEntryInfo GetNetworkShares(ctx).Execute()
-
-Gets network paths.
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/sj14/jellyfin-go/api"
-)
-
-func main() {
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.EnvironmentAPI.GetNetworkShares(context.Background()).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `EnvironmentAPI.GetNetworkShares``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `GetNetworkShares`: []FileSystemEntryInfo
-	fmt.Fprintf(os.Stdout, "Response from `EnvironmentAPI.GetNetworkShares`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkSharesRequest struct via the builder pattern
 
 
 ### Return type

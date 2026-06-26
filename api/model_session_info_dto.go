@@ -65,9 +65,7 @@ type SessionInfoDto struct {
 	SupportsRemoteControl *bool `json:"SupportsRemoteControl,omitempty"`
 	// Gets or sets the now playing queue.
 	NowPlayingQueue []QueueItem `json:"NowPlayingQueue,omitempty"`
-	// Gets or sets the now playing queue full items.
-	NowPlayingQueueFullItems []BaseItemDto `json:"NowPlayingQueueFullItems,omitempty"`
-	// Gets or sets a value indicating whether the session has a custom device name.
+	// Gets or sets a value indicating whether this session has a custom device name.
 	HasCustomDeviceName *bool `json:"HasCustomDeviceName,omitempty"`
 	// Gets or sets the playlist item id.
 	PlaylistItemId NullableString `json:"PlaylistItemId,omitempty"`
@@ -974,39 +972,6 @@ func (o *SessionInfoDto) SetNowPlayingQueue(v []QueueItem) {
 	o.NowPlayingQueue = v
 }
 
-// GetNowPlayingQueueFullItems returns the NowPlayingQueueFullItems field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *SessionInfoDto) GetNowPlayingQueueFullItems() []BaseItemDto {
-	if o == nil {
-		var ret []BaseItemDto
-		return ret
-	}
-	return o.NowPlayingQueueFullItems
-}
-
-// GetNowPlayingQueueFullItemsOk returns a tuple with the NowPlayingQueueFullItems field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *SessionInfoDto) GetNowPlayingQueueFullItemsOk() ([]BaseItemDto, bool) {
-	if o == nil || IsNil(o.NowPlayingQueueFullItems) {
-		return nil, false
-	}
-	return o.NowPlayingQueueFullItems, true
-}
-
-// HasNowPlayingQueueFullItems returns a boolean if a field has been set.
-func (o *SessionInfoDto) HasNowPlayingQueueFullItems() bool {
-	if o != nil && !IsNil(o.NowPlayingQueueFullItems) {
-		return true
-	}
-
-	return false
-}
-
-// SetNowPlayingQueueFullItems gets a reference to the given []BaseItemDto and assigns it to the NowPlayingQueueFullItems field.
-func (o *SessionInfoDto) SetNowPlayingQueueFullItems(v []BaseItemDto) {
-	o.NowPlayingQueueFullItems = v
-}
-
 // GetHasCustomDeviceName returns the HasCustomDeviceName field value if set, zero value otherwise.
 func (o *SessionInfoDto) GetHasCustomDeviceName() bool {
 	if o == nil || IsNil(o.HasCustomDeviceName) {
@@ -1275,9 +1240,6 @@ func (o SessionInfoDto) ToMap() (map[string]interface{}, error) {
 	}
 	if o.NowPlayingQueue != nil {
 		toSerialize["NowPlayingQueue"] = o.NowPlayingQueue
-	}
-	if o.NowPlayingQueueFullItems != nil {
-		toSerialize["NowPlayingQueueFullItems"] = o.NowPlayingQueueFullItems
 	}
 	if !IsNil(o.HasCustomDeviceName) {
 		toSerialize["HasCustomDeviceName"] = o.HasCustomDeviceName

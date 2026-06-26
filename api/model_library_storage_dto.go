@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the LibraryStorageDto type satisfies the MappedNullable interface at compile time
@@ -19,19 +21,24 @@ var _ MappedNullable = &LibraryStorageDto{}
 // LibraryStorageDto Contains informations about a libraries storage informations.
 type LibraryStorageDto struct {
 	// Gets or sets the Library Id.
-	Id *string `json:"Id,omitempty"`
+	Id string `json:"Id"`
 	// Gets or sets the name of the library.
-	Name *string `json:"Name,omitempty"`
+	Name string `json:"Name"`
 	// Gets or sets the storage informations about the folders used in a library.
-	Folders []FolderStorageDto `json:"Folders,omitempty"`
+	Folders []FolderStorageDto `json:"Folders"`
 }
+
+type _LibraryStorageDto LibraryStorageDto
 
 // NewLibraryStorageDto instantiates a new LibraryStorageDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewLibraryStorageDto() *LibraryStorageDto {
+func NewLibraryStorageDto(id string, name string, folders []FolderStorageDto) *LibraryStorageDto {
 	this := LibraryStorageDto{}
+	this.Id = id
+	this.Name = name
+	this.Folders = folders
 	return &this
 }
 
@@ -43,98 +50,74 @@ func NewLibraryStorageDtoWithDefaults() *LibraryStorageDto {
 	return &this
 }
 
-// GetId returns the Id field value if set, zero value otherwise.
+// GetId returns the Id field value
 func (o *LibraryStorageDto) GetId() string {
-	if o == nil || IsNil(o.Id) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Id
+
+	return o.Id
 }
 
-// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
 func (o *LibraryStorageDto) GetIdOk() (*string, bool) {
-	if o == nil || IsNil(o.Id) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Id, true
+	return &o.Id, true
 }
 
-// HasId returns a boolean if a field has been set.
-func (o *LibraryStorageDto) HasId() bool {
-	if o != nil && !IsNil(o.Id) {
-		return true
-	}
-
-	return false
-}
-
-// SetId gets a reference to the given string and assigns it to the Id field.
+// SetId sets field value
 func (o *LibraryStorageDto) SetId(v string) {
-	o.Id = &v
+	o.Id = v
 }
 
-// GetName returns the Name field value if set, zero value otherwise.
+// GetName returns the Name field value
 func (o *LibraryStorageDto) GetName() string {
-	if o == nil || IsNil(o.Name) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Name
+
+	return o.Name
 }
 
-// GetNameOk returns a tuple with the Name field value if set, nil otherwise
+// GetNameOk returns a tuple with the Name field value
 // and a boolean to check if the value has been set.
 func (o *LibraryStorageDto) GetNameOk() (*string, bool) {
-	if o == nil || IsNil(o.Name) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Name, true
+	return &o.Name, true
 }
 
-// HasName returns a boolean if a field has been set.
-func (o *LibraryStorageDto) HasName() bool {
-	if o != nil && !IsNil(o.Name) {
-		return true
-	}
-
-	return false
-}
-
-// SetName gets a reference to the given string and assigns it to the Name field.
+// SetName sets field value
 func (o *LibraryStorageDto) SetName(v string) {
-	o.Name = &v
+	o.Name = v
 }
 
-// GetFolders returns the Folders field value if set, zero value otherwise.
+// GetFolders returns the Folders field value
 func (o *LibraryStorageDto) GetFolders() []FolderStorageDto {
-	if o == nil || IsNil(o.Folders) {
+	if o == nil {
 		var ret []FolderStorageDto
 		return ret
 	}
+
 	return o.Folders
 }
 
-// GetFoldersOk returns a tuple with the Folders field value if set, nil otherwise
+// GetFoldersOk returns a tuple with the Folders field value
 // and a boolean to check if the value has been set.
 func (o *LibraryStorageDto) GetFoldersOk() ([]FolderStorageDto, bool) {
-	if o == nil || IsNil(o.Folders) {
+	if o == nil {
 		return nil, false
 	}
 	return o.Folders, true
 }
 
-// HasFolders returns a boolean if a field has been set.
-func (o *LibraryStorageDto) HasFolders() bool {
-	if o != nil && !IsNil(o.Folders) {
-		return true
-	}
-
-	return false
-}
-
-// SetFolders gets a reference to the given []FolderStorageDto and assigns it to the Folders field.
+// SetFolders sets field value
 func (o *LibraryStorageDto) SetFolders(v []FolderStorageDto) {
 	o.Folders = v
 }
@@ -149,16 +132,49 @@ func (o LibraryStorageDto) MarshalJSON() ([]byte, error) {
 
 func (o LibraryStorageDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Id) {
-		toSerialize["Id"] = o.Id
-	}
-	if !IsNil(o.Name) {
-		toSerialize["Name"] = o.Name
-	}
-	if !IsNil(o.Folders) {
-		toSerialize["Folders"] = o.Folders
-	}
+	toSerialize["Id"] = o.Id
+	toSerialize["Name"] = o.Name
+	toSerialize["Folders"] = o.Folders
 	return toSerialize, nil
+}
+
+func (o *LibraryStorageDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"Id",
+		"Name",
+		"Folders",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varLibraryStorageDto := _LibraryStorageDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varLibraryStorageDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = LibraryStorageDto(varLibraryStorageDto)
+
+	return err
 }
 
 type NullableLibraryStorageDto struct {

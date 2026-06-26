@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the FolderStorageDto type satisfies the MappedNullable interface at compile time
@@ -19,7 +21,7 @@ var _ MappedNullable = &FolderStorageDto{}
 // FolderStorageDto Contains information about a specific folder.
 type FolderStorageDto struct {
 	// Gets the path of the folder in question.
-	Path *string `json:"Path,omitempty"`
+	Path string `json:"Path"`
 	// Gets the free space of the underlying storage device of the Jellyfin.Api.Models.SystemInfoDtos.FolderStorageDto.Path.
 	FreeSpace *int64 `json:"FreeSpace,omitempty"`
 	// Gets the used space of the underlying storage device of the Jellyfin.Api.Models.SystemInfoDtos.FolderStorageDto.Path.
@@ -30,12 +32,15 @@ type FolderStorageDto struct {
 	DeviceId NullableString `json:"DeviceId,omitempty"`
 }
 
+type _FolderStorageDto FolderStorageDto
+
 // NewFolderStorageDto instantiates a new FolderStorageDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewFolderStorageDto() *FolderStorageDto {
+func NewFolderStorageDto(path string) *FolderStorageDto {
 	this := FolderStorageDto{}
+	this.Path = path
 	return &this
 }
 
@@ -47,36 +52,28 @@ func NewFolderStorageDtoWithDefaults() *FolderStorageDto {
 	return &this
 }
 
-// GetPath returns the Path field value if set, zero value otherwise.
+// GetPath returns the Path field value
 func (o *FolderStorageDto) GetPath() string {
-	if o == nil || IsNil(o.Path) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Path
+
+	return o.Path
 }
 
-// GetPathOk returns a tuple with the Path field value if set, nil otherwise
+// GetPathOk returns a tuple with the Path field value
 // and a boolean to check if the value has been set.
 func (o *FolderStorageDto) GetPathOk() (*string, bool) {
-	if o == nil || IsNil(o.Path) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Path, true
+	return &o.Path, true
 }
 
-// HasPath returns a boolean if a field has been set.
-func (o *FolderStorageDto) HasPath() bool {
-	if o != nil && !IsNil(o.Path) {
-		return true
-	}
-
-	return false
-}
-
-// SetPath gets a reference to the given string and assigns it to the Path field.
+// SetPath sets field value
 func (o *FolderStorageDto) SetPath(v string) {
-	o.Path = &v
+	o.Path = v
 }
 
 // GetFreeSpace returns the FreeSpace field value if set, zero value otherwise.
@@ -237,9 +234,7 @@ func (o FolderStorageDto) MarshalJSON() ([]byte, error) {
 
 func (o FolderStorageDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Path) {
-		toSerialize["Path"] = o.Path
-	}
+	toSerialize["Path"] = o.Path
 	if !IsNil(o.FreeSpace) {
 		toSerialize["FreeSpace"] = o.FreeSpace
 	}
@@ -253,6 +248,43 @@ func (o FolderStorageDto) ToMap() (map[string]interface{}, error) {
 		toSerialize["DeviceId"] = o.DeviceId.Get()
 	}
 	return toSerialize, nil
+}
+
+func (o *FolderStorageDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"Path",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varFolderStorageDto := _FolderStorageDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varFolderStorageDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = FolderStorageDto(varFolderStorageDto)
+
+	return err
 }
 
 type NullableFolderStorageDto struct {

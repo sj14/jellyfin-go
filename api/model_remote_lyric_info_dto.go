@@ -11,6 +11,8 @@ package api
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the RemoteLyricInfoDto type satisfies the MappedNullable interface at compile time
@@ -19,19 +21,24 @@ var _ MappedNullable = &RemoteLyricInfoDto{}
 // RemoteLyricInfoDto The remote lyric info dto.
 type RemoteLyricInfoDto struct {
 	// Gets or sets the id for the lyric.
-	Id *string `json:"Id,omitempty"`
+	Id string `json:"Id"`
 	// Gets the provider name.
-	ProviderName *string `json:"ProviderName,omitempty"`
+	ProviderName string `json:"ProviderName"`
 	// Gets the lyrics.
-	Lyrics *LyricDto `json:"Lyrics,omitempty"`
+	Lyrics LyricDto `json:"Lyrics"`
 }
+
+type _RemoteLyricInfoDto RemoteLyricInfoDto
 
 // NewRemoteLyricInfoDto instantiates a new RemoteLyricInfoDto object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewRemoteLyricInfoDto() *RemoteLyricInfoDto {
+func NewRemoteLyricInfoDto(id string, providerName string, lyrics LyricDto) *RemoteLyricInfoDto {
 	this := RemoteLyricInfoDto{}
+	this.Id = id
+	this.ProviderName = providerName
+	this.Lyrics = lyrics
 	return &this
 }
 
@@ -43,100 +50,76 @@ func NewRemoteLyricInfoDtoWithDefaults() *RemoteLyricInfoDto {
 	return &this
 }
 
-// GetId returns the Id field value if set, zero value otherwise.
+// GetId returns the Id field value
 func (o *RemoteLyricInfoDto) GetId() string {
-	if o == nil || IsNil(o.Id) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.Id
+
+	return o.Id
 }
 
-// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
 func (o *RemoteLyricInfoDto) GetIdOk() (*string, bool) {
-	if o == nil || IsNil(o.Id) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Id, true
+	return &o.Id, true
 }
 
-// HasId returns a boolean if a field has been set.
-func (o *RemoteLyricInfoDto) HasId() bool {
-	if o != nil && !IsNil(o.Id) {
-		return true
-	}
-
-	return false
-}
-
-// SetId gets a reference to the given string and assigns it to the Id field.
+// SetId sets field value
 func (o *RemoteLyricInfoDto) SetId(v string) {
-	o.Id = &v
+	o.Id = v
 }
 
-// GetProviderName returns the ProviderName field value if set, zero value otherwise.
+// GetProviderName returns the ProviderName field value
 func (o *RemoteLyricInfoDto) GetProviderName() string {
-	if o == nil || IsNil(o.ProviderName) {
+	if o == nil {
 		var ret string
 		return ret
 	}
-	return *o.ProviderName
+
+	return o.ProviderName
 }
 
-// GetProviderNameOk returns a tuple with the ProviderName field value if set, nil otherwise
+// GetProviderNameOk returns a tuple with the ProviderName field value
 // and a boolean to check if the value has been set.
 func (o *RemoteLyricInfoDto) GetProviderNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ProviderName) {
+	if o == nil {
 		return nil, false
 	}
-	return o.ProviderName, true
+	return &o.ProviderName, true
 }
 
-// HasProviderName returns a boolean if a field has been set.
-func (o *RemoteLyricInfoDto) HasProviderName() bool {
-	if o != nil && !IsNil(o.ProviderName) {
-		return true
-	}
-
-	return false
-}
-
-// SetProviderName gets a reference to the given string and assigns it to the ProviderName field.
+// SetProviderName sets field value
 func (o *RemoteLyricInfoDto) SetProviderName(v string) {
-	o.ProviderName = &v
+	o.ProviderName = v
 }
 
-// GetLyrics returns the Lyrics field value if set, zero value otherwise.
+// GetLyrics returns the Lyrics field value
 func (o *RemoteLyricInfoDto) GetLyrics() LyricDto {
-	if o == nil || IsNil(o.Lyrics) {
+	if o == nil {
 		var ret LyricDto
 		return ret
 	}
-	return *o.Lyrics
+
+	return o.Lyrics
 }
 
-// GetLyricsOk returns a tuple with the Lyrics field value if set, nil otherwise
+// GetLyricsOk returns a tuple with the Lyrics field value
 // and a boolean to check if the value has been set.
 func (o *RemoteLyricInfoDto) GetLyricsOk() (*LyricDto, bool) {
-	if o == nil || IsNil(o.Lyrics) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Lyrics, true
+	return &o.Lyrics, true
 }
 
-// HasLyrics returns a boolean if a field has been set.
-func (o *RemoteLyricInfoDto) HasLyrics() bool {
-	if o != nil && !IsNil(o.Lyrics) {
-		return true
-	}
-
-	return false
-}
-
-// SetLyrics gets a reference to the given LyricDto and assigns it to the Lyrics field.
+// SetLyrics sets field value
 func (o *RemoteLyricInfoDto) SetLyrics(v LyricDto) {
-	o.Lyrics = &v
+	o.Lyrics = v
 }
 
 func (o RemoteLyricInfoDto) MarshalJSON() ([]byte, error) {
@@ -149,16 +132,49 @@ func (o RemoteLyricInfoDto) MarshalJSON() ([]byte, error) {
 
 func (o RemoteLyricInfoDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Id) {
-		toSerialize["Id"] = o.Id
-	}
-	if !IsNil(o.ProviderName) {
-		toSerialize["ProviderName"] = o.ProviderName
-	}
-	if !IsNil(o.Lyrics) {
-		toSerialize["Lyrics"] = o.Lyrics
-	}
+	toSerialize["Id"] = o.Id
+	toSerialize["ProviderName"] = o.ProviderName
+	toSerialize["Lyrics"] = o.Lyrics
 	return toSerialize, nil
+}
+
+func (o *RemoteLyricInfoDto) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"Id",
+		"ProviderName",
+		"Lyrics",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varRemoteLyricInfoDto := _RemoteLyricInfoDto{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varRemoteLyricInfoDto)
+
+	if err != nil {
+		return err
+	}
+
+	*o = RemoteLyricInfoDto(varRemoteLyricInfoDto)
+
+	return err
 }
 
 type NullableRemoteLyricInfoDto struct {

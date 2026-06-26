@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Key** | Pointer to **string** | Gets or sets the key of the value. | [optional] 
-**Value** | Pointer to **string** | Gets or sets the value. | [optional] 
+**Key** | **string** | Gets or sets the key of the value. | 
+**Value** | **string** | Gets or sets the value. | 
 
 ## Methods
 
 ### NewCustomDatabaseOption
 
-`func NewCustomDatabaseOption() *CustomDatabaseOption`
+`func NewCustomDatabaseOption(key string, value string, ) *CustomDatabaseOption`
 
 NewCustomDatabaseOption instantiates a new CustomDatabaseOption object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetKey sets Key field to given value.
 
-### HasKey
-
-`func (o *CustomDatabaseOption) HasKey() bool`
-
-HasKey returns a boolean if a field has been set.
 
 ### GetValue
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetValue sets Value field to given value.
 
-### HasValue
-
-`func (o *CustomDatabaseOption) HasValue() bool`
-
-HasValue returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -16,7 +16,7 @@ import (
 // checks if the ScheduledTasksInfoStartMessage type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ScheduledTasksInfoStartMessage{}
 
-// ScheduledTasksInfoStartMessage Scheduled tasks info start message.  Data is the timing data encoded as \"$initialDelay,$interval\" in ms.
+// ScheduledTasksInfoStartMessage Scheduled tasks info start message. Data is the timing data encoded as \"$initialDelay,$interval\" in ms.
 type ScheduledTasksInfoStartMessage struct {
 	// Gets or sets the data.
 	Data NullableString `json:"Data,omitempty"`

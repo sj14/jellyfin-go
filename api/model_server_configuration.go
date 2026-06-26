@@ -26,7 +26,7 @@ type ServerConfiguration struct {
 	CachePath NullableString `json:"CachePath,omitempty"`
 	// Gets or sets the last known version that was ran using the configuration.
 	PreviousVersion NullableString `json:"PreviousVersion,omitempty"`
-	// Gets or sets the stringified PreviousVersion to be stored/loaded,  because System.Version itself isn't xml-serializable.
+	// Gets or sets the stringified PreviousVersion to be stored/loaded, because System.Version itself isn't xml-serializable.
 	PreviousVersionStr NullableString `json:"PreviousVersionStr,omitempty"`
 	// Gets or sets a value indicating whether to enable prometheus metrics exporting.
 	EnableMetrics *bool `json:"EnableMetrics,omitempty"`
@@ -60,9 +60,9 @@ type ServerConfiguration struct {
 	MinAudiobookResume *int32 `json:"MinAudiobookResume,omitempty"`
 	// Gets or sets the remaining minutes of a book that can be played while still saving playstate. If this percentage is crossed playstate will be reset to the beginning and the item will be marked watched.
 	MaxAudiobookResume *int32 `json:"MaxAudiobookResume,omitempty"`
-	// Gets or sets the threshold in minutes after a inactive session gets closed automatically.  If set to 0 the check for inactive sessions gets disabled.
+	// Gets or sets the threshold in minutes after a inactive session gets closed automatically. If set to 0 the check for inactive sessions gets disabled.
 	InactiveSessionThreshold *int32 `json:"InactiveSessionThreshold,omitempty"`
-	// Gets or sets the delay in seconds that we will wait after a file system change to try and discover what has been added/removed  Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several  different directories and files.
+	// Gets or sets the delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.
 	LibraryMonitorDelay *int32 `json:"LibraryMonitorDelay,omitempty"`
 	// Gets or sets the duration in seconds that we will wait after a library updated event before executing the library changed notification.
 	LibraryUpdateDuration *int32 `json:"LibraryUpdateDuration,omitempty"`

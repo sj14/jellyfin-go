@@ -16,7 +16,7 @@ import (
 // checks if the BaseItemDtoImageBlurHashes type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &BaseItemDtoImageBlurHashes{}
 
-// BaseItemDtoImageBlurHashes Gets or sets the blurhashes for the image tags.  Maps image type to dictionary mapping image tag to blurhash value.
+// BaseItemDtoImageBlurHashes Gets or sets the blurhashes for the image tags. Maps image type to dictionary mapping image tag to blurhash value.
 type BaseItemDtoImageBlurHashes struct {
 	Primary *map[string]string `json:"Primary,omitempty"`
 	Art *map[string]string `json:"Art,omitempty"`
