@@ -16,14 +16,14 @@ func main() {
 	}
 	client := jellyfin.NewAPIClient(config)
 
-	result, resp, err := client.ActivityLogAPI.GetLogEntries(context.Background()).Execute()
+	result, resp, err := client.LibraryAPI.GetItems(context.Background()).Execute()
 	if err != nil {
-		log.Printf("Error when calling `GetLogEntries``: %v\n", err)
+		log.Printf("Error when calling `GetItems`: %v\n", err)
 		log.Printf("Full HTTP response: %v\n", resp)
 		os.Exit(1)
 	}
 
 	for _, i := range result.Items {
-		fmt.Println(*i.Name)
+		fmt.Println(i.GetName())
 	}
 }
