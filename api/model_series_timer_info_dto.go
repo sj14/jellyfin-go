@@ -75,7 +75,7 @@ type SeriesTimerInfoDto struct {
 	// Gets or sets the day pattern.
 	DayPattern NullableDayPattern `json:"DayPattern,omitempty"`
 	// Gets or sets the image tags.
-	ImageTags map[string]string `json:"ImageTags,omitempty"`
+	ImageTags map[string]*string `json:"ImageTags,omitempty"`
 	// Gets or sets the parent thumb item id.
 	ParentThumbItemId NullableString `json:"ParentThumbItemId,omitempty"`
 	// Gets or sets the parent thumb image tag.
@@ -1206,9 +1206,9 @@ func (o *SeriesTimerInfoDto) UnsetDayPattern() {
 }
 
 // GetImageTags returns the ImageTags field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *SeriesTimerInfoDto) GetImageTags() map[string]string {
+func (o *SeriesTimerInfoDto) GetImageTags() map[string]*string {
 	if o == nil {
-		var ret map[string]string
+		var ret map[string]*string
 		return ret
 	}
 	return o.ImageTags
@@ -1217,7 +1217,7 @@ func (o *SeriesTimerInfoDto) GetImageTags() map[string]string {
 // GetImageTagsOk returns a tuple with the ImageTags field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *SeriesTimerInfoDto) GetImageTagsOk() (*map[string]string, bool) {
+func (o *SeriesTimerInfoDto) GetImageTagsOk() (*map[string]*string, bool) {
 	if o == nil || IsNil(o.ImageTags) {
 		return nil, false
 	}
@@ -1233,8 +1233,8 @@ func (o *SeriesTimerInfoDto) HasImageTags() bool {
 	return false
 }
 
-// SetImageTags gets a reference to the given map[string]string and assigns it to the ImageTags field.
-func (o *SeriesTimerInfoDto) SetImageTags(v map[string]string) {
+// SetImageTags gets a reference to the given map[string]*string and assigns it to the ImageTags field.
+func (o *SeriesTimerInfoDto) SetImageTags(v map[string]*string) {
 	o.ImageTags = v
 }
 

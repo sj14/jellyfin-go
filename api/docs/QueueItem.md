@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**PlaylistItemId** | Pointer to **NullableString** |  | [optional] 
+**Id** | Pointer to **string** | Gets or sets the item id. | [optional] 
+**PlaylistItemId** | Pointer to **NullableString** | Gets or sets the playlist item id. | [optional] 
 
 ## Methods
 

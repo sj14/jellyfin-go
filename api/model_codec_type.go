@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// CodecType the model 'CodecType'
+// CodecType The codec type of a codec profile.
 type CodecType string
 
 // List of CodecType

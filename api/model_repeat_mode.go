@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// RepeatMode the model 'RepeatMode'
+// RepeatMode The repeat mode of a play queue.
 type RepeatMode string
 
 // List of RepeatMode

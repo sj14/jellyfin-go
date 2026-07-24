@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Header** | Pointer to **NullableString** |  | [optional] 
-**Text** | **string** |  | 
-**TimeoutMs** | Pointer to **NullableInt64** |  | [optional] 
+**Header** | Pointer to **NullableString** | Gets or sets the message header. | [optional] 
+**Text** | **string** | Gets or sets the message text. | 
+**TimeoutMs** | Pointer to **NullableInt64** | Gets or sets the timeout in milliseconds after which the message should be dismissed. | [optional] 
 
 ## Methods
 

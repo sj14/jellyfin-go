@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **ParentIndexNumber** | Pointer to **NullableInt32** |  | [optional] 
 **PremiereDate** | Pointer to **NullableTime** |  | [optional] 
 **IsAutomated** | Pointer to **bool** |  | [optional] 
-**SeriesName** | Pointer to **NullableString** |  | [optional] 
+**SeriesName** | Pointer to **NullableString** | Gets or sets the name of the series the book belongs to. | [optional] 
 
 ## Methods
 
@@ -213,20 +213,20 @@ HasMetadataCountryCode returns a boolean if a field has been set.
 UnsetMetadataCountryCode ensures that no value is present for MetadataCountryCode, not even an explicit nil
 ### GetProviderIds
 
-`func (o *BookInfo) GetProviderIds() map[string]string`
+`func (o *BookInfo) GetProviderIds() map[string]*string`
 
 GetProviderIds returns the ProviderIds field if non-nil, zero value otherwise.
 
 ### GetProviderIdsOk
 
-`func (o *BookInfo) GetProviderIdsOk() (*map[string]string, bool)`
+`func (o *BookInfo) GetProviderIdsOk() (*map[string]*string, bool)`
 
 GetProviderIdsOk returns a tuple with the ProviderIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProviderIds
 
-`func (o *BookInfo) SetProviderIds(v map[string]string)`
+`func (o *BookInfo) SetProviderIds(v map[string]*string)`
 
 SetProviderIds sets ProviderIds field to given value.
 

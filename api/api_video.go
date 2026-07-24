@@ -544,7 +544,7 @@ type ApiGetVideoStreamRequest struct {
 	audioStreamIndex *int32
 	videoStreamIndex *int32
 	context *EncodingContext
-	streamOptions *map[string]string
+	streamOptions *map[string]*string
 	enableAudioVbrEncoding *bool
 }
 
@@ -838,7 +838,7 @@ func (r ApiGetVideoStreamRequest) Context(context EncodingContext) ApiGetVideoSt
 }
 
 // Optional. The streaming options.
-func (r ApiGetVideoStreamRequest) StreamOptions(streamOptions map[string]string) ApiGetVideoStreamRequest {
+func (r ApiGetVideoStreamRequest) StreamOptions(streamOptions map[string]*string) ApiGetVideoStreamRequest {
 	r.streamOptions = &streamOptions
 	return r
 }
@@ -1150,7 +1150,7 @@ type ApiGetVideoStreamByContainerRequest struct {
 	audioStreamIndex *int32
 	videoStreamIndex *int32
 	context *EncodingContext
-	streamOptions *map[string]string
+	streamOptions *map[string]*string
 	enableAudioVbrEncoding *bool
 }
 
@@ -1437,7 +1437,7 @@ func (r ApiGetVideoStreamByContainerRequest) Context(context EncodingContext) Ap
 }
 
 // Optional. The streaming options.
-func (r ApiGetVideoStreamByContainerRequest) StreamOptions(streamOptions map[string]string) ApiGetVideoStreamByContainerRequest {
+func (r ApiGetVideoStreamByContainerRequest) StreamOptions(streamOptions map[string]*string) ApiGetVideoStreamByContainerRequest {
 	r.streamOptions = &streamOptions
 	return r
 }
@@ -1749,7 +1749,7 @@ type ApiHeadVideoStreamRequest struct {
 	audioStreamIndex *int32
 	videoStreamIndex *int32
 	context *EncodingContext
-	streamOptions *map[string]string
+	streamOptions *map[string]*string
 	enableAudioVbrEncoding *bool
 }
 
@@ -2043,7 +2043,7 @@ func (r ApiHeadVideoStreamRequest) Context(context EncodingContext) ApiHeadVideo
 }
 
 // Optional. The streaming options.
-func (r ApiHeadVideoStreamRequest) StreamOptions(streamOptions map[string]string) ApiHeadVideoStreamRequest {
+func (r ApiHeadVideoStreamRequest) StreamOptions(streamOptions map[string]*string) ApiHeadVideoStreamRequest {
 	r.streamOptions = &streamOptions
 	return r
 }
@@ -2355,7 +2355,7 @@ type ApiHeadVideoStreamByContainerRequest struct {
 	audioStreamIndex *int32
 	videoStreamIndex *int32
 	context *EncodingContext
-	streamOptions *map[string]string
+	streamOptions *map[string]*string
 	enableAudioVbrEncoding *bool
 }
 
@@ -2642,7 +2642,7 @@ func (r ApiHeadVideoStreamByContainerRequest) Context(context EncodingContext) A
 }
 
 // Optional. The streaming options.
-func (r ApiHeadVideoStreamByContainerRequest) StreamOptions(streamOptions map[string]string) ApiHeadVideoStreamByContainerRequest {
+func (r ApiHeadVideoStreamByContainerRequest) StreamOptions(streamOptions map[string]*string) ApiHeadVideoStreamByContainerRequest {
 	r.streamOptions = &streamOptions
 	return r
 }

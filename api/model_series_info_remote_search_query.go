@@ -18,6 +18,7 @@ var _ MappedNullable = &SeriesInfoRemoteSearchQuery{}
 
 // SeriesInfoRemoteSearchQuery struct for SeriesInfoRemoteSearchQuery
 type SeriesInfoRemoteSearchQuery struct {
+	// The lookup info for series.
 	SearchInfo NullableSeriesInfo `json:"SearchInfo,omitempty"`
 	ItemId *string `json:"ItemId,omitempty"`
 	// Gets or sets the provider name to search within if set.

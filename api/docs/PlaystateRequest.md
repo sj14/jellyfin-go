@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Command** | Pointer to [**PlaystateCommand**](PlaystateCommand.md) | Enum PlaystateCommand. | [optional] 
-**SeekPositionTicks** | Pointer to **NullableInt64** |  | [optional] 
+**Command** | Pointer to [**PlaystateCommand**](PlaystateCommand.md) | Gets or sets the playstate command. | [optional] 
+**SeekPositionTicks** | Pointer to **NullableInt64** | Gets or sets the seek position in ticks. | [optional] 
 **ControllingUserId** | Pointer to **NullableString** | Gets or sets the controlling user identifier. | [optional] 
 
 ## Methods

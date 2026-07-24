@@ -12,10 +12,10 @@ Name | Type | Description | Notes
 **PrimaryImageHeight** | Pointer to **int32** | Gets or sets the height of the primary image. | [optional] 
 **PrimaryImageWidth** | Pointer to **int32** | Gets or sets the width of the primary image. | [optional] 
 **CustomPrefs** | Pointer to **map[string]string** | Gets or sets the custom prefs. | [optional] 
-**ScrollDirection** | Pointer to [**ScrollDirection**](ScrollDirection.md) | An enum representing the axis that should be scrolled. | [optional] 
+**ScrollDirection** | Pointer to [**ScrollDirection**](ScrollDirection.md) | Gets or sets the scroll direction. | [optional] 
 **ShowBackdrop** | Pointer to **bool** | Gets or sets a value indicating whether to show backdrops on this item. | [optional] 
 **RememberSorting** | Pointer to **bool** | Gets or sets a value indicating whether [remember sorting]. | [optional] 
-**SortOrder** | Pointer to [**SortOrder**](SortOrder.md) | An enum representing the sorting order. | [optional] 
+**SortOrder** | Pointer to [**SortOrder**](SortOrder.md) | Gets or sets the sort order. | [optional] 
 **ShowSidebar** | Pointer to **bool** | Gets or sets a value indicating whether [show sidebar]. | [optional] 
 **Client** | Pointer to **NullableString** | Gets or sets the client. | [optional] 
 
@@ -255,20 +255,20 @@ HasPrimaryImageWidth returns a boolean if a field has been set.
 
 ### GetCustomPrefs
 
-`func (o *DisplayPreferencesDto) GetCustomPrefs() map[string]string`
+`func (o *DisplayPreferencesDto) GetCustomPrefs() map[string]*string`
 
 GetCustomPrefs returns the CustomPrefs field if non-nil, zero value otherwise.
 
 ### GetCustomPrefsOk
 
-`func (o *DisplayPreferencesDto) GetCustomPrefsOk() (*map[string]string, bool)`
+`func (o *DisplayPreferencesDto) GetCustomPrefsOk() (*map[string]*string, bool)`
 
 GetCustomPrefsOk returns a tuple with the CustomPrefs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomPrefs
 
-`func (o *DisplayPreferencesDto) SetCustomPrefs(v map[string]string)`
+`func (o *DisplayPreferencesDto) SetCustomPrefs(v map[string]*string)`
 
 SetCustomPrefs sets CustomPrefs field to given value.
 

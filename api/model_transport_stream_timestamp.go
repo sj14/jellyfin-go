@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// TransportStreamTimestamp the model 'TransportStreamTimestamp'
+// TransportStreamTimestamp The type of timestamps used in a transport stream.
 type TransportStreamTimestamp string
 
 // List of TransportStreamTimestamp

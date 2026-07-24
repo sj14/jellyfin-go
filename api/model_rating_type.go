@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// RatingType the model 'RatingType'
+// RatingType The type of a community rating.
 type RatingType string
 
 // List of RatingType

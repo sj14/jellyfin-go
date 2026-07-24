@@ -16,9 +16,11 @@ import (
 // checks if the QueueItem type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &QueueItem{}
 
-// QueueItem struct for QueueItem
+// QueueItem An item in a play queue.
 type QueueItem struct {
+	// Gets or sets the item id.
 	Id *string `json:"Id,omitempty"`
+	// Gets or sets the playlist item id.
 	PlaylistItemId NullableString `json:"PlaylistItemId,omitempty"`
 }
 

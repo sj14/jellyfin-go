@@ -18,6 +18,7 @@ var _ MappedNullable = &PersonLookupInfoRemoteSearchQuery{}
 
 // PersonLookupInfoRemoteSearchQuery struct for PersonLookupInfoRemoteSearchQuery
 type PersonLookupInfoRemoteSearchQuery struct {
+	// The lookup info for persons.
 	SearchInfo NullablePersonLookupInfo `json:"SearchInfo,omitempty"`
 	ItemId *string `json:"ItemId,omitempty"`
 	// Gets or sets the provider name to search within if set.

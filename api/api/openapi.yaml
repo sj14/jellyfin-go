@@ -26397,14 +26397,17 @@ paths:
             schema:
               allOf:
               - $ref: "#/components/schemas/MessageCommand"
+              description: A command to display a message on a client.
           text/json:
             schema:
               allOf:
               - $ref: "#/components/schemas/MessageCommand"
+              description: A command to display a message on a client.
           application/*+json:
             schema:
               allOf:
               - $ref: "#/components/schemas/MessageCommand"
+              description: A command to display a message on a client.
         description: "The MediaBrowser.Model.Session.MessageCommand object containing\
           \ Header, Message Text, and TimeoutMs."
         required: true
@@ -38794,7 +38797,7 @@ components:
         Type:
           allOf:
           - $ref: "#/components/schemas/BaseItemKind"
-          description: The base item kind.
+          description: Gets or sets the type.
           enum:
           - AggregateFolder
           - Audio
@@ -39131,7 +39134,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/MediaType"
           default: Unknown
-          description: Media types.
+          description: Gets or sets the type of the media.
           enum:
           - Unknown
           - Video
@@ -41153,7 +41156,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/PersonKind"
           default: Unknown
-          description: The person kind.
+          description: Gets or sets the type.
           enum:
           - Unknown
           - Actor
@@ -41187,7 +41190,7 @@ components:
           nullable: true
           type: string
         ImageBlurHashes:
-          $ref: "#/components/schemas/BaseItemDto_ImageBlurHashes"
+          $ref: "#/components/schemas/BaseItemPerson_ImageBlurHashes"
       type: object
     BasePluginConfiguration:
       additionalProperties: false
@@ -41195,6 +41198,7 @@ components:
       type: object
     BookInfo:
       additionalProperties: false
+      description: The lookup info for books.
       properties:
         Name:
           description: Gets or sets the name.
@@ -41243,6 +41247,7 @@ components:
         IsAutomated:
           type: boolean
         SeriesName:
+          description: Gets or sets the name of the series the book belongs to.
           nullable: true
           type: string
       type: object
@@ -41257,6 +41262,7 @@ components:
         SearchInfo:
           allOf:
           - $ref: "#/components/schemas/BookInfo"
+          description: The lookup info for books.
           nullable: true
         ItemId:
           format: uuid
@@ -41272,6 +41278,7 @@ components:
       type: object
     BoxSetInfo:
       additionalProperties: false
+      description: The lookup info for box sets.
       properties:
         Name:
           description: Gets or sets the name.
@@ -41331,6 +41338,7 @@ components:
         SearchInfo:
           allOf:
           - $ref: "#/components/schemas/BoxSetInfo"
+          description: The lookup info for box sets.
           nullable: true
         ItemId:
           format: uuid
@@ -41692,6 +41700,7 @@ components:
           type: string
       type: object
     CodecType:
+      description: The codec type of a codec profile.
       enum:
       - Video
       - VideoAudio
@@ -42016,6 +42025,7 @@ components:
       - Saturday
       type: string
     DayPattern:
+      description: The day pattern of a recurring timer.
       enum:
       - Daily
       - Weekdays
@@ -42321,7 +42331,7 @@ components:
         ScrollDirection:
           allOf:
           - $ref: "#/components/schemas/ScrollDirection"
-          description: An enum representing the axis that should be scrolled.
+          description: Gets or sets the scroll direction.
           enum:
           - Horizontal
           - Vertical
@@ -42336,7 +42346,7 @@ components:
         SortOrder:
           allOf:
           - $ref: "#/components/schemas/SortOrder"
-          description: An enum representing the sorting order.
+          description: Gets or sets the sort order.
           enum:
           - Ascending
           - Descending
@@ -42406,6 +42416,7 @@ components:
       - ultrafast
       type: string
     EncodingContext:
+      description: The encoding context.
       enum:
       - Streaming
       - Static
@@ -43719,6 +43730,7 @@ components:
       - P2160
       type: string
     ImageSavingConvention:
+      description: The convention used for naming saved images.
       enum:
       - Legacy
       - Compatible
@@ -44757,6 +44769,7 @@ components:
           type: array
       type: object
     LiveTvServiceStatus:
+      description: The status of a live TV service.
       enum:
       - Ok
       - Unavailable
@@ -45066,8 +45079,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/MediaSegmentType"
           default: Unknown
-          description: Defines the types of content an individual Jellyfin.Database.Implementations.Entities.MediaSegment
-            represents.
+          description: Gets or sets the type of content this segment defines.
           enum:
           - Unknown
           - Commercial
@@ -45365,6 +45377,7 @@ components:
         Type:
           allOf:
           - $ref: "#/components/schemas/MediaSourceType"
+          description: The type of a media source.
           enum:
           - Default
           - Grouping
@@ -45528,6 +45541,7 @@ components:
           type: boolean
       type: object
     MediaSourceType:
+      description: The type of a media source.
       enum:
       - Default
       - Grouping
@@ -45701,7 +45715,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/VideoRange"
           default: Unknown
-          description: An enum representing video ranges.
+          description: Gets the video range.
           enum:
           - Unknown
           - SDR
@@ -45712,7 +45726,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/VideoRangeType"
           default: Unknown
-          description: An enum representing types of video ranges.
+          description: Gets the video range type.
           enum:
           - Unknown
           - SDR
@@ -45738,7 +45752,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/AudioSpatialFormat"
           default: None
-          description: An enum representing formats of spatial audio.
+          description: Gets the audio spatial format.
           enum:
           - None
           - DolbyAtmos
@@ -46009,18 +46023,23 @@ components:
       type: object
     MessageCommand:
       additionalProperties: false
+      description: A command to display a message on a client.
       example:
         Header: Header
         Text: Text
         TimeoutMs: 0
       properties:
         Header:
+          description: Gets or sets the message header.
           nullable: true
           type: string
         Text:
+          description: Gets or sets the message text.
           minLength: 1
           type: string
         TimeoutMs:
+          description: Gets or sets the timeout in milliseconds after which the message
+            should be dismissed.
           format: int64
           nullable: true
           type: integer
@@ -46224,6 +46243,7 @@ components:
       type: object
     MovieInfo:
       additionalProperties: false
+      description: The lookup info for movies.
       properties:
         Name:
           description: Gets or sets the name.
@@ -46283,6 +46303,7 @@ components:
         SearchInfo:
           allOf:
           - $ref: "#/components/schemas/MovieInfo"
+          description: The lookup info for movies.
           nullable: true
         ItemId:
           format: uuid
@@ -46905,6 +46926,7 @@ components:
       type: string
     PersonLookupInfo:
       additionalProperties: false
+      description: The lookup info for persons.
       properties:
         Name:
           description: Gets or sets the name.
@@ -46964,6 +46986,7 @@ components:
         SearchInfo:
           allOf:
           - $ref: "#/components/schemas/PersonLookupInfo"
+          description: The lookup info for persons.
           nullable: true
         ItemId:
           format: uuid
@@ -47007,6 +47030,7 @@ components:
           type: integer
       type: object
     PlayAccess:
+      description: The play access of an item.
       enum:
       - Full
       - None
@@ -47078,6 +47102,7 @@ components:
           type: string
       type: object
     PlayMethod:
+      description: The play method.
       enum:
       - Transcode
       - DirectStream
@@ -47229,6 +47254,7 @@ components:
           type: integer
       type: object
     PlaybackErrorCode:
+      description: The playback error code.
       enum:
       - NotAllowed
       - NoCompatibleStream
@@ -48255,7 +48281,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/PlaystateRequest"
-          description: Gets or sets the data.
+          description: A request to change the playstate of a session.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -48307,11 +48333,12 @@ components:
       type: object
     PlaystateRequest:
       additionalProperties: false
+      description: A request to change the playstate of a session.
       properties:
         Command:
           allOf:
           - $ref: "#/components/schemas/PlaystateCommand"
-          description: Enum PlaystateCommand.
+          description: Gets or sets the playstate command.
           enum:
           - Stop
           - Pause
@@ -48324,6 +48351,7 @@ components:
           - PlayPause
           type: string
         SeekPositionTicks:
+          description: Gets or sets the seek position in ticks.
           format: int64
           nullable: true
           type: integer
@@ -48951,14 +48979,17 @@ components:
       type: object
     QueueItem:
       additionalProperties: false
+      description: An item in a play queue.
       example:
         Id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         PlaylistItemId: PlaylistItemId
       properties:
         Id:
+          description: Gets or sets the item id.
           format: uuid
           type: string
         PlaylistItemId:
+          description: Gets or sets the playlist item id.
           nullable: true
           type: string
       type: object
@@ -49041,6 +49072,7 @@ components:
           type: string
       type: object
     RatingType:
+      description: The type of a community rating.
       enum:
       - Score
       - Likes
@@ -51168,6 +51200,7 @@ components:
           type: boolean
       type: object
     RepeatMode:
+      description: The repeat mode of a play queue.
       enum:
       - RepeatNone
       - RepeatAll
@@ -51558,7 +51591,7 @@ components:
         Type:
           allOf:
           - $ref: "#/components/schemas/BaseItemKind"
-          description: The base item kind.
+          description: Gets or sets the type.
           enum:
           - AggregateFolder
           - Audio
@@ -51611,7 +51644,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/MediaType"
           default: Unknown
-          description: Media types.
+          description: Gets or sets the type of the media.
           enum:
           - Unknown
           - Video
@@ -51816,6 +51849,7 @@ components:
       type: string
     SeriesInfo:
       additionalProperties: false
+      description: The lookup info for series.
       properties:
         Name:
           description: Gets or sets the name.
@@ -51875,6 +51909,7 @@ components:
         SearchInfo:
           allOf:
           - $ref: "#/components/schemas/SeriesInfo"
+          description: The lookup info for series.
           nullable: true
         ItemId:
           format: uuid
@@ -56398,6 +56433,7 @@ components:
       type: string
     TrailerInfo:
       additionalProperties: false
+      description: The lookup info for trailers.
       properties:
         Name:
           description: Gets or sets the name.
@@ -56457,6 +56493,7 @@ components:
         SearchInfo:
           allOf:
           - $ref: "#/components/schemas/TrailerInfo"
+          description: The lookup info for trailers.
           nullable: true
         ItemId:
           format: uuid
@@ -56502,6 +56539,7 @@ components:
       - VideoRotationNotSupported
       type: string
     TranscodeSeekInfo:
+      description: The transcode seek info.
       enum:
       - Auto
       - Bytes
@@ -56610,9 +56648,7 @@ components:
         Protocol:
           allOf:
           - $ref: "#/components/schemas/MediaStreamProtocol"
-          description: |-
-            Media streaming protocol.
-            Lowercase for backwards compatibility.
+          description: Gets or sets the protocol.
           enum:
           - http
           - hls
@@ -56687,6 +56723,7 @@ components:
           type: boolean
       type: object
     TransportStreamTimestamp:
+      description: The type of timestamps used in a transport stream.
       enum:
       - None
       - Zero
@@ -57761,7 +57798,8 @@ components:
         SyncPlayAccess:
           allOf:
           - $ref: "#/components/schemas/SyncPlayUserAccessType"
-          description: Enum SyncPlayUserAccessType.
+          description: Gets or sets a value indicating what SyncPlay features the
+            user can access.
           enum:
           - CreateAndJoinGroups
           - JoinGroups
@@ -58040,6 +58078,104 @@ components:
       description: |-
         Gets or sets the blurhashes for the image tags.
         Maps image type to dictionary mapping image tag to blurhash value.
+      example:
+        Primary:
+          key: Primary
+        Art:
+          key: Art
+        Backdrop:
+          key: Backdrop
+        Banner:
+          key: Banner
+        Logo:
+          key: Logo
+        Thumb:
+          key: Thumb
+        Disc:
+          key: Disc
+        Box:
+          key: Box
+        Screenshot:
+          key: Screenshot
+        Menu:
+          key: Menu
+        Chapter:
+          key: Chapter
+        BoxRear:
+          key: BoxRear
+        Profile:
+          key: Profile
+      nullable: true
+      properties:
+        Primary:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Art:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Backdrop:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Banner:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Logo:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Thumb:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Disc:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Box:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Screenshot:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Menu:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Chapter:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        BoxRear:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+        Profile:
+          additionalProperties:
+            nullable: true
+            type: string
+          type: object
+      type: object
+    BaseItemPerson_ImageBlurHashes:
+      additionalProperties: false
+      description: Gets or sets the primary image blurhash.
       example:
         Primary:
           key: Primary

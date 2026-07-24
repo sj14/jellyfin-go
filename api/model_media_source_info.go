@@ -23,6 +23,7 @@ type MediaSourceInfo struct {
 	Path NullableString `json:"Path,omitempty"`
 	EncoderPath NullableString `json:"EncoderPath,omitempty"`
 	EncoderProtocol NullableMediaProtocol `json:"EncoderProtocol,omitempty"`
+	// The type of a media source.
 	Type *MediaSourceType `json:"Type,omitempty"`
 	Container NullableString `json:"Container,omitempty"`
 	Size NullableInt64 `json:"Size,omitempty"`
@@ -56,7 +57,7 @@ type MediaSourceInfo struct {
 	Bitrate NullableInt32 `json:"Bitrate,omitempty"`
 	FallbackMaxStreamingBitrate NullableInt32 `json:"FallbackMaxStreamingBitrate,omitempty"`
 	Timestamp NullableTransportStreamTimestamp `json:"Timestamp,omitempty"`
-	RequiredHttpHeaders map[string]string `json:"RequiredHttpHeaders,omitempty"`
+	RequiredHttpHeaders map[string]*string `json:"RequiredHttpHeaders,omitempty"`
 	TranscodingUrl NullableString `json:"TranscodingUrl,omitempty"`
 	// Media streaming protocol. Lowercase for backwards compatibility.
 	TranscodingSubProtocol *MediaStreamProtocol `json:"TranscodingSubProtocol,omitempty"`
@@ -1456,9 +1457,9 @@ func (o *MediaSourceInfo) UnsetTimestamp() {
 }
 
 // GetRequiredHttpHeaders returns the RequiredHttpHeaders field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *MediaSourceInfo) GetRequiredHttpHeaders() map[string]string {
+func (o *MediaSourceInfo) GetRequiredHttpHeaders() map[string]*string {
 	if o == nil {
-		var ret map[string]string
+		var ret map[string]*string
 		return ret
 	}
 	return o.RequiredHttpHeaders
@@ -1467,7 +1468,7 @@ func (o *MediaSourceInfo) GetRequiredHttpHeaders() map[string]string {
 // GetRequiredHttpHeadersOk returns a tuple with the RequiredHttpHeaders field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *MediaSourceInfo) GetRequiredHttpHeadersOk() (*map[string]string, bool) {
+func (o *MediaSourceInfo) GetRequiredHttpHeadersOk() (*map[string]*string, bool) {
 	if o == nil || IsNil(o.RequiredHttpHeaders) {
 		return nil, false
 	}
@@ -1483,8 +1484,8 @@ func (o *MediaSourceInfo) HasRequiredHttpHeaders() bool {
 	return false
 }
 
-// SetRequiredHttpHeaders gets a reference to the given map[string]string and assigns it to the RequiredHttpHeaders field.
-func (o *MediaSourceInfo) SetRequiredHttpHeaders(v map[string]string) {
+// SetRequiredHttpHeaders gets a reference to the given map[string]*string and assigns it to the RequiredHttpHeaders field.
+func (o *MediaSourceInfo) SetRequiredHttpHeaders(v map[string]*string) {
 	o.RequiredHttpHeaders = v
 }
 

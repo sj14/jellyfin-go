@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// PlayMethod the model 'PlayMethod'
+// PlayMethod The play method.
 type PlayMethod string
 
 // List of PlayMethod

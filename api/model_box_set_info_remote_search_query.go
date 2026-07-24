@@ -18,6 +18,7 @@ var _ MappedNullable = &BoxSetInfoRemoteSearchQuery{}
 
 // BoxSetInfoRemoteSearchQuery struct for BoxSetInfoRemoteSearchQuery
 type BoxSetInfoRemoteSearchQuery struct {
+	// The lookup info for box sets.
 	SearchInfo NullableBoxSetInfo `json:"SearchInfo,omitempty"`
 	ItemId *string `json:"ItemId,omitempty"`
 	// Gets or sets the provider name to search within if set.

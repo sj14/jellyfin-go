@@ -17,7 +17,7 @@ import (
 // checks if the BookInfo type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &BookInfo{}
 
-// BookInfo struct for BookInfo
+// BookInfo The lookup info for books.
 type BookInfo struct {
 	// Gets or sets the name.
 	Name NullableString `json:"Name,omitempty"`
@@ -30,13 +30,14 @@ type BookInfo struct {
 	// Gets or sets the metadata country code.
 	MetadataCountryCode NullableString `json:"MetadataCountryCode,omitempty"`
 	// Gets or sets the provider ids.
-	ProviderIds map[string]string `json:"ProviderIds,omitempty"`
+	ProviderIds map[string]*string `json:"ProviderIds,omitempty"`
 	// Gets or sets the year.
 	Year NullableInt32 `json:"Year,omitempty"`
 	IndexNumber NullableInt32 `json:"IndexNumber,omitempty"`
 	ParentIndexNumber NullableInt32 `json:"ParentIndexNumber,omitempty"`
 	PremiereDate NullableTime `json:"PremiereDate,omitempty"`
 	IsAutomated *bool `json:"IsAutomated,omitempty"`
+	// Gets or sets the name of the series the book belongs to.
 	SeriesName NullableString `json:"SeriesName,omitempty"`
 }
 
@@ -268,9 +269,9 @@ func (o *BookInfo) UnsetMetadataCountryCode() {
 }
 
 // GetProviderIds returns the ProviderIds field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *BookInfo) GetProviderIds() map[string]string {
+func (o *BookInfo) GetProviderIds() map[string]*string {
 	if o == nil {
-		var ret map[string]string
+		var ret map[string]*string
 		return ret
 	}
 	return o.ProviderIds
@@ -279,7 +280,7 @@ func (o *BookInfo) GetProviderIds() map[string]string {
 // GetProviderIdsOk returns a tuple with the ProviderIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BookInfo) GetProviderIdsOk() (*map[string]string, bool) {
+func (o *BookInfo) GetProviderIdsOk() (*map[string]*string, bool) {
 	if o == nil || IsNil(o.ProviderIds) {
 		return nil, false
 	}
@@ -295,8 +296,8 @@ func (o *BookInfo) HasProviderIds() bool {
 	return false
 }
 
-// SetProviderIds gets a reference to the given map[string]string and assigns it to the ProviderIds field.
-func (o *BookInfo) SetProviderIds(v map[string]string) {
+// SetProviderIds gets a reference to the given map[string]*string and assigns it to the ProviderIds field.
+func (o *BookInfo) SetProviderIds(v map[string]*string) {
 	o.ProviderIds = v
 }
 

@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// LiveTvServiceStatus the model 'LiveTvServiceStatus'
+// LiveTvServiceStatus The status of a live TV service.
 type LiveTvServiceStatus string
 
 // List of LiveTvServiceStatus

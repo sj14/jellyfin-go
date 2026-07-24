@@ -18,10 +18,13 @@ import (
 // checks if the MessageCommand type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &MessageCommand{}
 
-// MessageCommand struct for MessageCommand
+// MessageCommand A command to display a message on a client.
 type MessageCommand struct {
+	// Gets or sets the message header.
 	Header NullableString `json:"Header,omitempty"`
+	// Gets or sets the message text.
 	Text string `json:"Text"`
+	// Gets or sets the timeout in milliseconds after which the message should be dismissed.
 	TimeoutMs NullableInt64 `json:"TimeoutMs,omitempty"`
 }
 

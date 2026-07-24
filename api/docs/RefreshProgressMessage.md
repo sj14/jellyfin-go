@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetData
 
-`func (o *RefreshProgressMessage) GetData() map[string]string`
+`func (o *RefreshProgressMessage) GetData() map[string]*string`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *RefreshProgressMessage) GetDataOk() (*map[string]string, bool)`
+`func (o *RefreshProgressMessage) GetDataOk() (*map[string]*string, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *RefreshProgressMessage) SetData(v map[string]string)`
+`func (o *RefreshProgressMessage) SetData(v map[string]*string)`
 
 SetData sets Data field to given value.
 

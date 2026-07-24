@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// EncodingContext the model 'EncodingContext'
+// EncodingContext The encoding context.
 type EncodingContext string
 
 // List of EncodingContext

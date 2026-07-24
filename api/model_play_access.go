@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// PlayAccess the model 'PlayAccess'
+// PlayAccess The play access of an item.
 type PlayAccess string
 
 // List of PlayAccess
