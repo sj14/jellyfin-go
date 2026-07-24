@@ -18,6 +18,7 @@ var _ MappedNullable = &BookInfoRemoteSearchQuery{}
 
 // BookInfoRemoteSearchQuery struct for BookInfoRemoteSearchQuery
 type BookInfoRemoteSearchQuery struct {
+	// The lookup info for books.
 	SearchInfo NullableBookInfo `json:"SearchInfo,omitempty"`
 	ItemId *string `json:"ItemId,omitempty"`
 	// Gets or sets the provider name to search within if set.

@@ -33696,7 +33696,8 @@
                   {
                     "$ref": "#/components/schemas/MessageCommand"
                   }
-                ]
+                ],
+                "description": "A command to display a message on a client."
               }
             },
             "text/json": {
@@ -33705,7 +33706,8 @@
                   {
                     "$ref": "#/components/schemas/MessageCommand"
                   }
-                ]
+                ],
+                "description": "A command to display a message on a client."
               }
             },
             "application/*+json": {
@@ -33714,7 +33716,8 @@
                   {
                     "$ref": "#/components/schemas/MessageCommand"
                   }
-                ]
+                ],
+                "description": "A command to display a message on a client."
               }
             }
           },
@@ -48303,7 +48306,7 @@
                 "$ref": "#/components/schemas/BaseItemKind"
               }
             ],
-            "description": "The base item kind."
+            "description": "Gets or sets the type."
           },
           "People": {
             "type": "array",
@@ -48786,7 +48789,7 @@
                 "$ref": "#/components/schemas/MediaType"
               }
             ],
-            "description": "Media types.",
+            "description": "Gets or sets the type of the media.",
             "default": "Unknown"
           },
           "EndDate": {
@@ -49195,7 +49198,7 @@
                 "$ref": "#/components/schemas/PersonKind"
               }
             ],
-            "description": "The person kind.",
+            "description": "Gets or sets the type.",
             "default": "Unknown"
           },
           "PrimaryImageTag": {
@@ -49374,10 +49377,12 @@
           },
           "SeriesName": {
             "type": "string",
+            "description": "Gets or sets the name of the series the book belongs to.",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The lookup info for books."
       },
       "BookInfoRemoteSearchQuery": {
         "type": "object",
@@ -49388,6 +49393,7 @@
                 "$ref": "#/components/schemas/BookInfo"
               }
             ],
+            "description": "The lookup info for books.",
             "nullable": true
           },
           "ItemId": {
@@ -49468,7 +49474,8 @@
             "type": "boolean"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The lookup info for box sets."
       },
       "BoxSetInfoRemoteSearchQuery": {
         "type": "object",
@@ -49479,6 +49486,7 @@
                 "$ref": "#/components/schemas/BoxSetInfo"
               }
             ],
+            "description": "The lookup info for box sets.",
             "nullable": true
           },
           "ItemId": {
@@ -49853,7 +49861,8 @@
           "VideoAudio",
           "Audio"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The codec type of a codec profile."
       },
       "CollectionCreationResult": {
         "type": "object",
@@ -50219,7 +50228,8 @@
           "Weekdays",
           "Weekends"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The day pattern of a recurring timer."
       },
       "DefaultDirectoryBrowserInfoDto": {
         "type": "object",
@@ -50522,7 +50532,7 @@
                 "$ref": "#/components/schemas/ScrollDirection"
               }
             ],
-            "description": "An enum representing the axis that should be scrolled."
+            "description": "Gets or sets the scroll direction."
           },
           "ShowBackdrop": {
             "type": "boolean",
@@ -50542,7 +50552,7 @@
                 "$ref": "#/components/schemas/SortOrder"
               }
             ],
-            "description": "An enum representing the sorting order."
+            "description": "Gets or sets the sort order."
           },
           "ShowSidebar": {
             "type": "boolean",
@@ -50626,7 +50636,8 @@
           "Streaming",
           "Static"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The encoding context."
       },
       "EncodingOptions": {
         "type": "object",
@@ -52100,7 +52111,8 @@
           "Legacy",
           "Compatible"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The convention used for naming saved images."
       },
       "ImageType": {
         "enum": [
@@ -53181,7 +53193,8 @@
           "Ok",
           "Unavailable"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The status of a live TV service."
       },
       "LocalizationOption": {
         "type": "object",
@@ -53500,7 +53513,7 @@
                 "$ref": "#/components/schemas/MediaSegmentType"
               }
             ],
-            "description": "Defines the types of content an individual Jellyfin.Database.Implementations.Entities.MediaSegment represents.",
+            "description": "Gets or sets the type of content this segment defines.",
             "default": "Unknown"
           },
           "StartTicks": {
@@ -53611,7 +53624,8 @@
               {
                 "$ref": "#/components/schemas/MediaSourceType"
               }
-            ]
+            ],
+            "description": "The type of a media source."
           },
           "Container": {
             "type": "string",
@@ -53832,7 +53846,8 @@
           "Grouping",
           "Placeholder"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The type of a media source."
       },
       "MediaStream": {
         "type": "object",
@@ -53961,7 +53976,7 @@
                 "$ref": "#/components/schemas/VideoRange"
               }
             ],
-            "description": "An enum representing video ranges.",
+            "description": "Gets the video range.",
             "default": "Unknown",
             "readOnly": true
           },
@@ -53986,7 +54001,7 @@
                 "$ref": "#/components/schemas/VideoRangeType"
               }
             ],
-            "description": "An enum representing types of video ranges.",
+            "description": "Gets the video range type.",
             "default": "Unknown",
             "readOnly": true
           },
@@ -54007,7 +54022,7 @@
                 "$ref": "#/components/schemas/AudioSpatialFormat"
               }
             ],
-            "description": "An enum representing formats of spatial audio.",
+            "description": "Gets the audio spatial format.",
             "default": "None",
             "readOnly": true
           },
@@ -54328,19 +54343,23 @@
         "properties": {
           "Header": {
             "type": "string",
+            "description": "Gets or sets the message header.",
             "nullable": true
           },
           "Text": {
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "Gets or sets the message text."
           },
           "TimeoutMs": {
             "type": "integer",
+            "description": "Gets or sets the timeout in milliseconds after which the message should be dismissed.",
             "format": "int64",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A command to display a message on a client."
       },
       "MetadataConfiguration": {
         "type": "object",
@@ -54573,7 +54592,8 @@
             "type": "boolean"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The lookup info for movies."
       },
       "MovieInfoRemoteSearchQuery": {
         "type": "object",
@@ -54584,6 +54604,7 @@
                 "$ref": "#/components/schemas/MovieInfo"
               }
             ],
+            "description": "The lookup info for movies.",
             "nullable": true
           },
           "ItemId": {
@@ -55361,7 +55382,8 @@
             "type": "boolean"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The lookup info for persons."
       },
       "PersonLookupInfoRemoteSearchQuery": {
         "type": "object",
@@ -55372,6 +55394,7 @@
                 "$ref": "#/components/schemas/PersonLookupInfo"
               }
             ],
+            "description": "The lookup info for persons.",
             "nullable": true
           },
           "ItemId": {
@@ -55424,7 +55447,8 @@
           "Full",
           "None"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The play access of an item."
       },
       "PlayCommand": {
         "enum": [
@@ -55510,7 +55534,8 @@
           "DirectStream",
           "DirectPlay"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The play method."
       },
       "PlayQueueUpdate": {
         "type": "object",
@@ -55698,7 +55723,8 @@
           "NoCompatibleStream",
           "RateLimitExceeded"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The playback error code."
       },
       "PlaybackInfoDto": {
         "type": "object",
@@ -56377,7 +56403,7 @@
                 "$ref": "#/components/schemas/PlaystateRequest"
               }
             ],
-            "description": "Gets or sets the data.",
+            "description": "A request to change the playstate of a session.",
             "nullable": true
           },
           "MessageId": {
@@ -56455,10 +56481,11 @@
                 "$ref": "#/components/schemas/PlaystateCommand"
               }
             ],
-            "description": "Enum PlaystateCommand."
+            "description": "Gets or sets the playstate command."
           },
           "SeekPositionTicks": {
             "type": "integer",
+            "description": "Gets or sets the seek position in ticks.",
             "format": "int64",
             "nullable": true
           },
@@ -56468,7 +56495,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "A request to change the playstate of a session."
       },
       "PluginInfo": {
         "type": "object",
@@ -57154,14 +57182,17 @@
         "properties": {
           "Id": {
             "type": "string",
+            "description": "Gets or sets the item id.",
             "format": "uuid"
           },
           "PlaylistItemId": {
             "type": "string",
+            "description": "Gets or sets the playlist item id.",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "An item in a play queue."
       },
       "QueueRequestDto": {
         "type": "object",
@@ -57250,7 +57281,8 @@
           "Score",
           "Likes"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The type of a community rating."
       },
       "ReadyRequestDto": {
         "type": "object",
@@ -57719,7 +57751,8 @@
           "RepeatAll",
           "RepeatOne"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The repeat mode of a play queue."
       },
       "RepositoryInfo": {
         "type": "object",
@@ -58163,7 +58196,7 @@
                 "$ref": "#/components/schemas/BaseItemKind"
               }
             ],
-            "description": "The base item kind."
+            "description": "Gets or sets the type."
           },
           "IsFolder": {
             "type": "boolean",
@@ -58189,7 +58222,7 @@
                 "$ref": "#/components/schemas/MediaType"
               }
             ],
-            "description": "Media types.",
+            "description": "Gets or sets the type of the media.",
             "default": "Unknown"
           },
           "StartDate": {
@@ -58420,7 +58453,8 @@
             "type": "boolean"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The lookup info for series."
       },
       "SeriesInfoRemoteSearchQuery": {
         "type": "object",
@@ -58431,6 +58465,7 @@
                 "$ref": "#/components/schemas/SeriesInfo"
               }
             ],
+            "description": "The lookup info for series.",
             "nullable": true
           },
           "ItemId": {
@@ -61395,7 +61430,8 @@
             "type": "boolean"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The lookup info for trailers."
       },
       "TrailerInfoRemoteSearchQuery": {
         "type": "object",
@@ -61406,6 +61442,7 @@
                 "$ref": "#/components/schemas/TrailerInfo"
               }
             ],
+            "description": "The lookup info for trailers.",
             "nullable": true
           },
           "ItemId": {
@@ -61462,7 +61499,8 @@
           "Auto",
           "Bytes"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The transcode seek info."
       },
       "TranscodingInfo": {
         "type": "object",
@@ -61596,7 +61634,7 @@
                 "$ref": "#/components/schemas/MediaStreamProtocol"
               }
             ],
-            "description": "Media streaming protocol.\nLowercase for backwards compatibility."
+            "description": "Gets or sets the protocol."
           },
           "EstimateContentLength": {
             "type": "boolean",
@@ -61690,7 +61728,8 @@
           "Zero",
           "Valid"
         ],
-        "type": "string"
+        "type": "string",
+        "description": "The type of timestamps used in a transport stream."
       },
       "TrickplayInfoDto": {
         "type": "object",
@@ -62819,7 +62858,7 @@
                 "$ref": "#/components/schemas/SyncPlayUserAccessType"
               }
             ],
-            "description": "Enum SyncPlayUserAccessType."
+            "description": "Gets or sets a value indicating what SyncPlay features the user can access."
           }
         },
         "additionalProperties": false

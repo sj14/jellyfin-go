@@ -24,11 +24,11 @@ type BaseItemPerson struct {
 	Id *string `json:"Id,omitempty"`
 	// Gets or sets the role.
 	Role NullableString `json:"Role,omitempty"`
-	// The person kind.
+	// Gets or sets the type.
 	Type *PersonKind `json:"Type,omitempty"`
 	// Gets or sets the primary image tag.
 	PrimaryImageTag NullableString `json:"PrimaryImageTag,omitempty"`
-	ImageBlurHashes NullableBaseItemDtoImageBlurHashes `json:"ImageBlurHashes,omitempty"`
+	ImageBlurHashes NullableBaseItemPersonImageBlurHashes `json:"ImageBlurHashes,omitempty"`
 }
 
 // NewBaseItemPerson instantiates a new BaseItemPerson object
@@ -243,9 +243,9 @@ func (o *BaseItemPerson) UnsetPrimaryImageTag() {
 }
 
 // GetImageBlurHashes returns the ImageBlurHashes field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *BaseItemPerson) GetImageBlurHashes() BaseItemDtoImageBlurHashes {
+func (o *BaseItemPerson) GetImageBlurHashes() BaseItemPersonImageBlurHashes {
 	if o == nil || IsNil(o.ImageBlurHashes.Get()) {
-		var ret BaseItemDtoImageBlurHashes
+		var ret BaseItemPersonImageBlurHashes
 		return ret
 	}
 	return *o.ImageBlurHashes.Get()
@@ -254,7 +254,7 @@ func (o *BaseItemPerson) GetImageBlurHashes() BaseItemDtoImageBlurHashes {
 // GetImageBlurHashesOk returns a tuple with the ImageBlurHashes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BaseItemPerson) GetImageBlurHashesOk() (*BaseItemDtoImageBlurHashes, bool) {
+func (o *BaseItemPerson) GetImageBlurHashesOk() (*BaseItemPersonImageBlurHashes, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -270,8 +270,8 @@ func (o *BaseItemPerson) HasImageBlurHashes() bool {
 	return false
 }
 
-// SetImageBlurHashes gets a reference to the given NullableBaseItemDtoImageBlurHashes and assigns it to the ImageBlurHashes field.
-func (o *BaseItemPerson) SetImageBlurHashes(v BaseItemDtoImageBlurHashes) {
+// SetImageBlurHashes gets a reference to the given NullableBaseItemPersonImageBlurHashes and assigns it to the ImageBlurHashes field.
+func (o *BaseItemPerson) SetImageBlurHashes(v BaseItemPersonImageBlurHashes) {
 	o.ImageBlurHashes.Set(&v)
 }
 // SetImageBlurHashesNil sets the value for ImageBlurHashes to be an explicit nil

@@ -102,14 +102,14 @@ type BaseItemDto struct {
 	// Gets or sets the trailer urls.
 	RemoteTrailers []MediaUrl `json:"RemoteTrailers,omitempty"`
 	// Gets or sets the provider ids.
-	ProviderIds map[string]string `json:"ProviderIds,omitempty"`
+	ProviderIds map[string]*string `json:"ProviderIds,omitempty"`
 	// Gets or sets a value indicating whether this instance is HD.
 	IsHD NullableBool `json:"IsHD,omitempty"`
 	// Gets or sets a value indicating whether this instance is folder.
 	IsFolder NullableBool `json:"IsFolder,omitempty"`
 	// Gets or sets the parent id.
 	ParentId NullableString `json:"ParentId,omitempty"`
-	// The base item kind.
+	// Gets or sets the type.
 	Type *BaseItemKind `json:"Type,omitempty"`
 	// Gets or sets the people.
 	People []BaseItemPerson `json:"People,omitempty"`
@@ -180,7 +180,7 @@ type BaseItemDto struct {
 	PartCount NullableInt32 `json:"PartCount,omitempty"`
 	MediaSourceCount NullableInt32 `json:"MediaSourceCount,omitempty"`
 	// Gets or sets the image tags.
-	ImageTags map[string]string `json:"ImageTags,omitempty"`
+	ImageTags map[string]*string `json:"ImageTags,omitempty"`
 	// Gets or sets the backdrop image tags.
 	BackdropImageTags []string `json:"BackdropImageTags,omitempty"`
 	// Gets or sets the screenshot image tags.
@@ -212,7 +212,7 @@ type BaseItemDto struct {
 	LocationType NullableLocationType `json:"LocationType,omitempty"`
 	// Gets or sets the type of the iso.
 	IsoType NullableIsoType `json:"IsoType,omitempty"`
-	// Media types.
+	// Gets or sets the type of the media.
 	MediaType *MediaType `json:"MediaType,omitempty"`
 	// Gets or sets the end date.
 	EndDate NullableTime `json:"EndDate,omitempty"`
@@ -2351,9 +2351,9 @@ func (o *BaseItemDto) SetRemoteTrailers(v []MediaUrl) {
 }
 
 // GetProviderIds returns the ProviderIds field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *BaseItemDto) GetProviderIds() map[string]string {
+func (o *BaseItemDto) GetProviderIds() map[string]*string {
 	if o == nil {
-		var ret map[string]string
+		var ret map[string]*string
 		return ret
 	}
 	return o.ProviderIds
@@ -2362,7 +2362,7 @@ func (o *BaseItemDto) GetProviderIds() map[string]string {
 // GetProviderIdsOk returns a tuple with the ProviderIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BaseItemDto) GetProviderIdsOk() (*map[string]string, bool) {
+func (o *BaseItemDto) GetProviderIdsOk() (*map[string]*string, bool) {
 	if o == nil || IsNil(o.ProviderIds) {
 		return nil, false
 	}
@@ -2378,8 +2378,8 @@ func (o *BaseItemDto) HasProviderIds() bool {
 	return false
 }
 
-// SetProviderIds gets a reference to the given map[string]string and assigns it to the ProviderIds field.
-func (o *BaseItemDto) SetProviderIds(v map[string]string) {
+// SetProviderIds gets a reference to the given map[string]*string and assigns it to the ProviderIds field.
+func (o *BaseItemDto) SetProviderIds(v map[string]*string) {
 	o.ProviderIds = v
 }
 
@@ -3922,9 +3922,9 @@ func (o *BaseItemDto) UnsetMediaSourceCount() {
 }
 
 // GetImageTags returns the ImageTags field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *BaseItemDto) GetImageTags() map[string]string {
+func (o *BaseItemDto) GetImageTags() map[string]*string {
 	if o == nil {
-		var ret map[string]string
+		var ret map[string]*string
 		return ret
 	}
 	return o.ImageTags
@@ -3933,7 +3933,7 @@ func (o *BaseItemDto) GetImageTags() map[string]string {
 // GetImageTagsOk returns a tuple with the ImageTags field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BaseItemDto) GetImageTagsOk() (*map[string]string, bool) {
+func (o *BaseItemDto) GetImageTagsOk() (*map[string]*string, bool) {
 	if o == nil || IsNil(o.ImageTags) {
 		return nil, false
 	}
@@ -3949,8 +3949,8 @@ func (o *BaseItemDto) HasImageTags() bool {
 	return false
 }
 
-// SetImageTags gets a reference to the given map[string]string and assigns it to the ImageTags field.
-func (o *BaseItemDto) SetImageTags(v map[string]string) {
+// SetImageTags gets a reference to the given map[string]*string and assigns it to the ImageTags field.
+func (o *BaseItemDto) SetImageTags(v map[string]*string) {
 	o.ImageTags = v
 }
 

@@ -18,6 +18,7 @@ var _ MappedNullable = &MovieInfoRemoteSearchQuery{}
 
 // MovieInfoRemoteSearchQuery struct for MovieInfoRemoteSearchQuery
 type MovieInfoRemoteSearchQuery struct {
+	// The lookup info for movies.
 	SearchInfo NullableMovieInfo `json:"SearchInfo,omitempty"`
 	ItemId *string `json:"ItemId,omitempty"`
 	// Gets or sets the provider name to search within if set.

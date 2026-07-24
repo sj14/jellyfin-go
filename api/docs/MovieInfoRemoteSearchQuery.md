@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SearchInfo** | Pointer to [**NullableMovieInfo**](MovieInfo.md) |  | [optional] 
+**SearchInfo** | Pointer to [**NullableMovieInfo**](MovieInfo.md) | The lookup info for movies. | [optional] 
 **ItemId** | Pointer to **string** |  | [optional] 
 **SearchProviderName** | Pointer to **NullableString** | Gets or sets the provider name to search within if set. | [optional] 
 **IncludeDisabledProviders** | Pointer to **bool** | Gets or sets a value indicating whether disabled providers should be included. | [optional] 

@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// PlaybackErrorCode the model 'PlaybackErrorCode'
+// PlaybackErrorCode The playback error code.
 type PlaybackErrorCode string
 
 // List of PlaybackErrorCode

@@ -33,14 +33,14 @@ type DisplayPreferencesDto struct {
 	// Gets or sets the width of the primary image.
 	PrimaryImageWidth *int32 `json:"PrimaryImageWidth,omitempty"`
 	// Gets or sets the custom prefs.
-	CustomPrefs *map[string]string `json:"CustomPrefs,omitempty"`
-	// An enum representing the axis that should be scrolled.
+	CustomPrefs *map[string]*string `json:"CustomPrefs,omitempty"`
+	// Gets or sets the scroll direction.
 	ScrollDirection *ScrollDirection `json:"ScrollDirection,omitempty"`
 	// Gets or sets a value indicating whether to show backdrops on this item.
 	ShowBackdrop *bool `json:"ShowBackdrop,omitempty"`
 	// Gets or sets a value indicating whether [remember sorting].
 	RememberSorting *bool `json:"RememberSorting,omitempty"`
-	// An enum representing the sorting order.
+	// Gets or sets the sort order.
 	SortOrder *SortOrder `json:"SortOrder,omitempty"`
 	// Gets or sets a value indicating whether [show sidebar].
 	ShowSidebar *bool `json:"ShowSidebar,omitempty"`
@@ -330,9 +330,9 @@ func (o *DisplayPreferencesDto) SetPrimaryImageWidth(v int32) {
 }
 
 // GetCustomPrefs returns the CustomPrefs field value if set, zero value otherwise.
-func (o *DisplayPreferencesDto) GetCustomPrefs() map[string]string {
+func (o *DisplayPreferencesDto) GetCustomPrefs() map[string]*string {
 	if o == nil || IsNil(o.CustomPrefs) {
-		var ret map[string]string
+		var ret map[string]*string
 		return ret
 	}
 	return *o.CustomPrefs
@@ -340,7 +340,7 @@ func (o *DisplayPreferencesDto) GetCustomPrefs() map[string]string {
 
 // GetCustomPrefsOk returns a tuple with the CustomPrefs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DisplayPreferencesDto) GetCustomPrefsOk() (*map[string]string, bool) {
+func (o *DisplayPreferencesDto) GetCustomPrefsOk() (*map[string]*string, bool) {
 	if o == nil || IsNil(o.CustomPrefs) {
 		return nil, false
 	}
@@ -356,8 +356,8 @@ func (o *DisplayPreferencesDto) HasCustomPrefs() bool {
 	return false
 }
 
-// SetCustomPrefs gets a reference to the given map[string]string and assigns it to the CustomPrefs field.
-func (o *DisplayPreferencesDto) SetCustomPrefs(v map[string]string) {
+// SetCustomPrefs gets a reference to the given map[string]*string and assigns it to the CustomPrefs field.
+func (o *DisplayPreferencesDto) SetCustomPrefs(v map[string]*string) {
 	o.CustomPrefs = &v
 }
 

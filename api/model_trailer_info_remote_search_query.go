@@ -18,6 +18,7 @@ var _ MappedNullable = &TrailerInfoRemoteSearchQuery{}
 
 // TrailerInfoRemoteSearchQuery struct for TrailerInfoRemoteSearchQuery
 type TrailerInfoRemoteSearchQuery struct {
+	// The lookup info for trailers.
 	SearchInfo NullableTrailerInfo `json:"SearchInfo,omitempty"`
 	ItemId *string `json:"ItemId,omitempty"`
 	// Gets or sets the provider name to search within if set.

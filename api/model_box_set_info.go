@@ -17,7 +17,7 @@ import (
 // checks if the BoxSetInfo type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &BoxSetInfo{}
 
-// BoxSetInfo struct for BoxSetInfo
+// BoxSetInfo The lookup info for box sets.
 type BoxSetInfo struct {
 	// Gets or sets the name.
 	Name NullableString `json:"Name,omitempty"`
@@ -30,7 +30,7 @@ type BoxSetInfo struct {
 	// Gets or sets the metadata country code.
 	MetadataCountryCode NullableString `json:"MetadataCountryCode,omitempty"`
 	// Gets or sets the provider ids.
-	ProviderIds map[string]string `json:"ProviderIds,omitempty"`
+	ProviderIds map[string]*string `json:"ProviderIds,omitempty"`
 	// Gets or sets the year.
 	Year NullableInt32 `json:"Year,omitempty"`
 	IndexNumber NullableInt32 `json:"IndexNumber,omitempty"`
@@ -267,9 +267,9 @@ func (o *BoxSetInfo) UnsetMetadataCountryCode() {
 }
 
 // GetProviderIds returns the ProviderIds field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *BoxSetInfo) GetProviderIds() map[string]string {
+func (o *BoxSetInfo) GetProviderIds() map[string]*string {
 	if o == nil {
-		var ret map[string]string
+		var ret map[string]*string
 		return ret
 	}
 	return o.ProviderIds
@@ -278,7 +278,7 @@ func (o *BoxSetInfo) GetProviderIds() map[string]string {
 // GetProviderIdsOk returns a tuple with the ProviderIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BoxSetInfo) GetProviderIdsOk() (*map[string]string, bool) {
+func (o *BoxSetInfo) GetProviderIdsOk() (*map[string]*string, bool) {
 	if o == nil || IsNil(o.ProviderIds) {
 		return nil, false
 	}
@@ -294,8 +294,8 @@ func (o *BoxSetInfo) HasProviderIds() bool {
 	return false
 }
 
-// SetProviderIds gets a reference to the given map[string]string and assigns it to the ProviderIds field.
-func (o *BoxSetInfo) SetProviderIds(v map[string]string) {
+// SetProviderIds gets a reference to the given map[string]*string and assigns it to the ProviderIds field.
+func (o *BoxSetInfo) SetProviderIds(v map[string]*string) {
 	o.ProviderIds = v
 }
 

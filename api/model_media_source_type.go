@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// MediaSourceType the model 'MediaSourceType'
+// MediaSourceType The type of a media source.
 type MediaSourceType string
 
 // List of MediaSourceType

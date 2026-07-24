@@ -58,7 +58,7 @@ Name | Type | Description | Notes
 **IsHD** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance is HD. | [optional] 
 **IsFolder** | Pointer to **NullableBool** | Gets or sets a value indicating whether this instance is folder. | [optional] 
 **ParentId** | Pointer to **NullableString** | Gets or sets the parent id. | [optional] 
-**Type** | Pointer to [**BaseItemKind**](BaseItemKind.md) | The base item kind. | [optional] 
+**Type** | Pointer to [**BaseItemKind**](BaseItemKind.md) | Gets or sets the type. | [optional] 
 **People** | Pointer to [**[]BaseItemPerson**](BaseItemPerson.md) | Gets or sets the people. | [optional] 
 **Studios** | Pointer to [**[]NameGuidPair**](NameGuidPair.md) | Gets or sets the studios. | [optional] 
 **GenreItems** | Pointer to [**[]NameGuidPair**](NameGuidPair.md) |  | [optional] 
@@ -111,7 +111,7 @@ Name | Type | Description | Notes
 **Trickplay** | Pointer to [**map[string]map[string]TrickplayInfoDto**](map.md) | Gets or sets the trickplay manifest. | [optional] 
 **LocationType** | Pointer to [**NullableLocationType**](LocationType.md) | Gets or sets the type of the location. | [optional] 
 **IsoType** | Pointer to [**NullableIsoType**](IsoType.md) | Gets or sets the type of the iso. | [optional] 
-**MediaType** | Pointer to [**MediaType**](MediaType.md) | Media types. | [optional] [default to MEDIATYPE_UNKNOWN]
+**MediaType** | Pointer to [**MediaType**](MediaType.md) | Gets or sets the type of the media. | [optional] [default to MEDIATYPE_UNKNOWN]
 **EndDate** | Pointer to **NullableTime** | Gets or sets the end date. | [optional] 
 **LockedFields** | Pointer to [**[]MetadataField**](MetadataField.md) | Gets or sets the locked fields. | [optional] 
 **TrailerCount** | Pointer to **NullableInt32** | Gets or sets the trailer count. | [optional] 
@@ -1921,20 +1921,20 @@ HasRemoteTrailers returns a boolean if a field has been set.
 UnsetRemoteTrailers ensures that no value is present for RemoteTrailers, not even an explicit nil
 ### GetProviderIds
 
-`func (o *BaseItemDto) GetProviderIds() map[string]string`
+`func (o *BaseItemDto) GetProviderIds() map[string]*string`
 
 GetProviderIds returns the ProviderIds field if non-nil, zero value otherwise.
 
 ### GetProviderIdsOk
 
-`func (o *BaseItemDto) GetProviderIdsOk() (*map[string]string, bool)`
+`func (o *BaseItemDto) GetProviderIdsOk() (*map[string]*string, bool)`
 
 GetProviderIdsOk returns a tuple with the ProviderIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProviderIds
 
-`func (o *BaseItemDto) SetProviderIds(v map[string]string)`
+`func (o *BaseItemDto) SetProviderIds(v map[string]*string)`
 
 SetProviderIds sets ProviderIds field to given value.
 
@@ -3311,20 +3311,20 @@ HasMediaSourceCount returns a boolean if a field has been set.
 UnsetMediaSourceCount ensures that no value is present for MediaSourceCount, not even an explicit nil
 ### GetImageTags
 
-`func (o *BaseItemDto) GetImageTags() map[string]string`
+`func (o *BaseItemDto) GetImageTags() map[string]*string`
 
 GetImageTags returns the ImageTags field if non-nil, zero value otherwise.
 
 ### GetImageTagsOk
 
-`func (o *BaseItemDto) GetImageTagsOk() (*map[string]string, bool)`
+`func (o *BaseItemDto) GetImageTagsOk() (*map[string]*string, bool)`
 
 GetImageTagsOk returns a tuple with the ImageTags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageTags
 
-`func (o *BaseItemDto) SetImageTags(v map[string]string)`
+`func (o *BaseItemDto) SetImageTags(v map[string]*string)`
 
 SetImageTags sets ImageTags field to given value.
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Path** | Pointer to **NullableString** |  | [optional] 
 **EncoderPath** | Pointer to **NullableString** |  | [optional] 
 **EncoderProtocol** | Pointer to [**NullableMediaProtocol**](MediaProtocol.md) |  | [optional] 
-**Type** | Pointer to [**MediaSourceType**](MediaSourceType.md) |  | [optional] 
+**Type** | Pointer to [**MediaSourceType**](MediaSourceType.md) | The type of a media source. | [optional] 
 **Container** | Pointer to **NullableString** |  | [optional] 
 **Size** | Pointer to **NullableInt64** |  | [optional] 
 **Name** | Pointer to **NullableString** |  | [optional] 
@@ -1206,20 +1206,20 @@ HasTimestamp returns a boolean if a field has been set.
 UnsetTimestamp ensures that no value is present for Timestamp, not even an explicit nil
 ### GetRequiredHttpHeaders
 
-`func (o *MediaSourceInfo) GetRequiredHttpHeaders() map[string]string`
+`func (o *MediaSourceInfo) GetRequiredHttpHeaders() map[string]*string`
 
 GetRequiredHttpHeaders returns the RequiredHttpHeaders field if non-nil, zero value otherwise.
 
 ### GetRequiredHttpHeadersOk
 
-`func (o *MediaSourceInfo) GetRequiredHttpHeadersOk() (*map[string]string, bool)`
+`func (o *MediaSourceInfo) GetRequiredHttpHeadersOk() (*map[string]*string, bool)`
 
 GetRequiredHttpHeadersOk returns a tuple with the RequiredHttpHeaders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequiredHttpHeaders
 
-`func (o *MediaSourceInfo) SetRequiredHttpHeaders(v map[string]string)`
+`func (o *MediaSourceInfo) SetRequiredHttpHeaders(v map[string]*string)`
 
 SetRequiredHttpHeaders sets RequiredHttpHeaders field to given value.
 

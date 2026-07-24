@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// TranscodeSeekInfo the model 'TranscodeSeekInfo'
+// TranscodeSeekInfo The transcode seek info.
 type TranscodeSeekInfo string
 
 // List of TranscodeSeekInfo

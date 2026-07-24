@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// DayPattern the model 'DayPattern'
+// DayPattern The day pattern of a recurring timer.
 type DayPattern string
 
 // List of DayPattern

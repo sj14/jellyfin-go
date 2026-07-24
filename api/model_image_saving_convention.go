@@ -14,7 +14,7 @@ import (
 	"fmt"
 )
 
-// ImageSavingConvention the model 'ImageSavingConvention'
+// ImageSavingConvention The convention used for naming saved images.
 type ImageSavingConvention string
 
 // List of ImageSavingConvention

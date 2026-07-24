@@ -19,7 +19,7 @@ var _ MappedNullable = &RefreshProgressMessage{}
 // RefreshProgressMessage Refresh progress message.
 type RefreshProgressMessage struct {
 	// Gets or sets the data.
-	Data map[string]string `json:"Data,omitempty"`
+	Data map[string]*string `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
@@ -44,9 +44,9 @@ func NewRefreshProgressMessageWithDefaults() *RefreshProgressMessage {
 }
 
 // GetData returns the Data field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *RefreshProgressMessage) GetData() map[string]string {
+func (o *RefreshProgressMessage) GetData() map[string]*string {
 	if o == nil {
-		var ret map[string]string
+		var ret map[string]*string
 		return ret
 	}
 	return o.Data
@@ -55,7 +55,7 @@ func (o *RefreshProgressMessage) GetData() map[string]string {
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *RefreshProgressMessage) GetDataOk() (*map[string]string, bool) {
+func (o *RefreshProgressMessage) GetDataOk() (*map[string]*string, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -71,8 +71,8 @@ func (o *RefreshProgressMessage) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given map[string]string and assigns it to the Data field.
-func (o *RefreshProgressMessage) SetData(v map[string]string) {
+// SetData gets a reference to the given map[string]*string and assigns it to the Data field.
+func (o *RefreshProgressMessage) SetData(v map[string]*string) {
 	o.Data = v
 }
 

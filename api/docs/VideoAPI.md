@@ -293,7 +293,7 @@ func main() {
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
-	streamOptions := map[string]string{"key": map[string]string{"key": "Inner_example"}} // map[string]string | Optional. The streaming options. (optional)
+	streamOptions := map[string]*string{"key": map[string]*string{"key": "Inner_example"}} // map[string]*string | Optional. The streaming options. (optional)
 	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
- **streamOptions** | **map[string]map[string]string** | Optional. The streaming options. | 
+ **streamOptions** | **map[string]map[string]*string** | Optional. The streaming options. | 
  **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
@@ -461,7 +461,7 @@ func main() {
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
-	streamOptions := map[string]string{"key": map[string]string{"key": "Inner_example"}} // map[string]string | Optional. The streaming options. (optional)
+	streamOptions := map[string]*string{"key": map[string]*string{"key": "Inner_example"}} // map[string]*string | Optional. The streaming options. (optional)
 	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
- **streamOptions** | **map[string]map[string]string** | Optional. The streaming options. | 
+ **streamOptions** | **map[string]map[string]*string** | Optional. The streaming options. | 
  **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
@@ -630,7 +630,7 @@ func main() {
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
-	streamOptions := map[string]string{"key": map[string]string{"key": "Inner_example"}} // map[string]string | Optional. The streaming options. (optional)
+	streamOptions := map[string]*string{"key": map[string]*string{"key": "Inner_example"}} // map[string]*string | Optional. The streaming options. (optional)
 	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
@@ -709,7 +709,7 @@ Name | Type | Description  | Notes
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
- **streamOptions** | **map[string]map[string]string** | Optional. The streaming options. | 
+ **streamOptions** | **map[string]map[string]*string** | Optional. The streaming options. | 
  **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type
@@ -798,7 +798,7 @@ func main() {
 	audioStreamIndex := int32(56) // int32 | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
 	videoStreamIndex := int32(56) // int32 | Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
 	context := "context_example" // EncodingContext | Optional. The MediaBrowser.Model.Dlna.EncodingContext. (optional)
-	streamOptions := map[string]string{"key": map[string]string{"key": "Inner_example"}} // map[string]string | Optional. The streaming options. (optional)
+	streamOptions := map[string]*string{"key": map[string]*string{"key": "Inner_example"}} // map[string]*string | Optional. The streaming options. (optional)
 	enableAudioVbrEncoding := true // bool | Optional. Whether to enable Audio Encoding. (optional) (default to true)
 
 	configuration := openapiclient.NewConfiguration()
@@ -878,7 +878,7 @@ Name | Type | Description  | Notes
  **audioStreamIndex** | **int32** | Optional. The index of the audio stream to use. If omitted the first audio stream will be used. | 
  **videoStreamIndex** | **int32** | Optional. The index of the video stream to use. If omitted the first video stream will be used. | 
  **context** | **EncodingContext** | Optional. The MediaBrowser.Model.Dlna.EncodingContext. | 
- **streamOptions** | **map[string]map[string]string** | Optional. The streaming options. | 
+ **streamOptions** | **map[string]map[string]*string** | Optional. The streaming options. | 
  **enableAudioVbrEncoding** | **bool** | Optional. Whether to enable Audio Encoding. | [default to true]
 
 ### Return type

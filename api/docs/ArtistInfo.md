@@ -213,20 +213,20 @@ HasMetadataCountryCode returns a boolean if a field has been set.
 UnsetMetadataCountryCode ensures that no value is present for MetadataCountryCode, not even an explicit nil
 ### GetProviderIds
 
-`func (o *ArtistInfo) GetProviderIds() map[string]string`
+`func (o *ArtistInfo) GetProviderIds() map[string]*string`
 
 GetProviderIds returns the ProviderIds field if non-nil, zero value otherwise.
 
 ### GetProviderIdsOk
 
-`func (o *ArtistInfo) GetProviderIdsOk() (*map[string]string, bool)`
+`func (o *ArtistInfo) GetProviderIdsOk() (*map[string]*string, bool)`
 
 GetProviderIdsOk returns a tuple with the ProviderIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProviderIds
 
-`func (o *ArtistInfo) SetProviderIds(v map[string]string)`
+`func (o *ArtistInfo) SetProviderIds(v map[string]*string)`
 
 SetProviderIds sets ProviderIds field to given value.
 

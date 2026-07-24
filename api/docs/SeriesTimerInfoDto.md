@@ -971,20 +971,20 @@ HasDayPattern returns a boolean if a field has been set.
 UnsetDayPattern ensures that no value is present for DayPattern, not even an explicit nil
 ### GetImageTags
 
-`func (o *SeriesTimerInfoDto) GetImageTags() map[string]string`
+`func (o *SeriesTimerInfoDto) GetImageTags() map[string]*string`
 
 GetImageTags returns the ImageTags field if non-nil, zero value otherwise.
 
 ### GetImageTagsOk
 
-`func (o *SeriesTimerInfoDto) GetImageTagsOk() (*map[string]string, bool)`
+`func (o *SeriesTimerInfoDto) GetImageTagsOk() (*map[string]*string, bool)`
 
 GetImageTagsOk returns a tuple with the ImageTags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImageTags
 
-`func (o *SeriesTimerInfoDto) SetImageTags(v map[string]string)`
+`func (o *SeriesTimerInfoDto) SetImageTags(v map[string]*string)`
 
 SetImageTags sets ImageTags field to given value.
 

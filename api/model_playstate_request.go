@@ -16,10 +16,11 @@ import (
 // checks if the PlaystateRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &PlaystateRequest{}
 
-// PlaystateRequest struct for PlaystateRequest
+// PlaystateRequest A request to change the playstate of a session.
 type PlaystateRequest struct {
-	// Enum PlaystateCommand.
+	// Gets or sets the playstate command.
 	Command *PlaystateCommand `json:"Command,omitempty"`
+	// Gets or sets the seek position in ticks.
 	SeekPositionTicks NullableInt64 `json:"SeekPositionTicks,omitempty"`
 	// Gets or sets the controlling user identifier.
 	ControllingUserId NullableString `json:"ControllingUserId,omitempty"`
