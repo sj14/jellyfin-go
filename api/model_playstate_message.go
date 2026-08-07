@@ -18,7 +18,7 @@ var _ MappedNullable = &PlaystateMessage{}
 
 // PlaystateMessage Playstate message.
 type PlaystateMessage struct {
-	// A request to change the playstate of a session.
+	// Gets or sets the data.
 	Data NullablePlaystateRequest `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
