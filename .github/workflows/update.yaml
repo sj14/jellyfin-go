@@ -39,6 +39,8 @@ jobs:
           go-version: stable
       - name: Go mod tidy
         run: go mod tidy
+      - name: Verify build
+        run: go build ./...
       - name: Create pull request
         if: ${{ steps.generate.outputs.changed == '1' }}
         run: |

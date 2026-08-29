@@ -2,6 +2,14 @@
 name: Go
 on:
   push:
+    branches:
+      - main
+    paths:
+      - go.mod
+      - go.sum
+      - "**.go"
+      - ".github/workflows/go.yaml"
+  pull_request:
     paths:
       - go.mod
       - go.sum
