@@ -23,32 +23,54 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Set up Go
+        uses: actions/setup-go@v7
+        with:
+          go-version: stable
       - name: Generate
-        id: generate
         run: |
           set -xue
           npm install @openapitools/openapi-generator-cli -g
           make load
           make generate
+      - name: Detect changes in the specification
+        id: detect
+        run: |
+          set -xue
           git add --all
-          set +o pipefail # it should not stop on failure
-          echo "changed=$(git diff --cached --exit-code >/dev/null 2>&1 || echo $?)" >> "$GITHUB_OUTPUT"
-      - name: Set up Go
-        uses: actions/setup-go@v7
-        with:
-          go-version: stable
+          if git diff --cached --quiet; then
+            echo "changed=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=1" >> "$GITHUB_OUTPUT"
+          fi
       - name: Go mod tidy
         run: go mod tidy
+      # A PR opened with GITHUB_TOKEN does not trigger the Go workflow, so the
+      # generated code is verified here instead. continue-on-error keeps a broken
+      # generation from blocking its own PR - the diff is what needs inspecting.
+      # The result is reported in the PR body and re-raised as a job failure by
+      # the last step.
       - name: Verify build
+        id: verify
+        continue-on-error: true
         run: go build ./...
       - name: Create pull request
-        if: ${{ steps.generate.outputs.changed == '1' }}
+        if: ${{ steps.detect.outputs.changed == '1' }}
         run: |
           set -xueo pipefail
           t=$(date +%s)
           git checkout -b $t
           git commit -am "Auto-Update"
           git push origin $t
-          gh pr create --base main --head $t --title 'Auto-Update' --body 'Created by Update Action'
+          gh pr create --base main --head $t --title 'Auto-Update' --body "$BODY"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: |
+            Created by Update Action.
+
+            `go build ./...`: ${{ steps.verify.outcome == 'success' && 'passing' || 'FAILING - see the "Verify build" step in the run log' }}
+      - name: Report broken build
+        if: ${{ steps.verify.outcome == 'failure' }}
+        run: |
+          echo "::error::go build ./... failed. The PR was still created so the diff can be inspected."
+          exit 1
