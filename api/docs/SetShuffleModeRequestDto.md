@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to [**GroupShuffleMode**](GroupShuffleMode.md) | Gets or sets the shuffle mode. | [optional] 
+**Mode** | Pointer to [**GroupShuffleMode**](GroupShuffleMode.md) | Enum GroupShuffleMode. | [optional] 
 
 ## Methods
 

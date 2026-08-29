@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to [**GroupRepeatMode**](GroupRepeatMode.md) | Gets or sets the repeat mode. | [optional] 
+**Mode** | Pointer to [**GroupRepeatMode**](GroupRepeatMode.md) | Enum GroupRepeatMode. | [optional] 
 
 ## Methods
 
