@@ -17812,6 +17812,18 @@ paths:
       responses:
         "204":
           description: Folder renamed.
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+            application/json; profile="CamelCase":
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+            application/json; profile="PascalCase":
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+          description: The new name is not a valid library name.
         "404":
           content:
             application/json:
