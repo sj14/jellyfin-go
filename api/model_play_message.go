@@ -18,7 +18,7 @@ var _ MappedNullable = &PlayMessage{}
 
 // PlayMessage Play command websocket message.
 type PlayMessage struct {
-	// Gets or sets the data.
+	// Class PlayRequest.
 	Data NullablePlayRequest `json:"Data,omitempty"`
 	// Gets or sets the message id.
 	MessageId *string `json:"MessageId,omitempty"`
