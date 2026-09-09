@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Data** | Pointer to [**NullableInstallationInfo**](InstallationInfo.md) | Gets or sets the data. | [optional] 
+**Data** | Pointer to [**NullableInstallationInfo**](InstallationInfo.md) | Class InstallationInfo. | [optional] 
 **MessageId** | Pointer to **string** | Gets or sets the message id. | [optional] 
 **MessageType** | Pointer to [**SessionMessageType**](SessionMessageType.md) | The different kinds of messages that are used in the WebSocket api. | [optional] [readonly] [default to SESSIONMESSAGETYPE_PACKAGE_INSTALLATION_COMPLETED]
 

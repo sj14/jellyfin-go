@@ -37615,12 +37615,12 @@ components:
         User:
           allOf:
           - $ref: "#/components/schemas/UserDto"
-          description: Gets or sets the user.
+          description: Class UserDto.
           nullable: true
         SessionInfo:
           allOf:
           - $ref: "#/components/schemas/SessionInfoDto"
-          description: Gets or sets the session info.
+          description: Session info DTO.
           nullable: true
         AccessToken:
           description: Gets or sets the access token.
@@ -38809,7 +38809,7 @@ components:
         Type:
           allOf:
           - $ref: "#/components/schemas/BaseItemKind"
-          description: Gets or sets the type.
+          description: The base item kind.
           enum:
           - AggregateFolder
           - Audio
@@ -39146,7 +39146,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/MediaType"
           default: Unknown
-          description: Gets or sets the type of the media.
+          description: Media types.
           enum:
           - Unknown
           - Video
@@ -41168,7 +41168,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/PersonKind"
           default: Unknown
-          description: Gets or sets the type.
+          description: The person kind.
           enum:
           - Unknown
           - Actor
@@ -44072,7 +44072,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/LibraryUpdateInfo"
-          description: Gets or sets the data.
+          description: Class LibraryUpdateInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -45728,7 +45728,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/VideoRange"
           default: Unknown
-          description: Gets the video range.
+          description: An enum representing video ranges.
           enum:
           - Unknown
           - SDR
@@ -45739,7 +45739,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/VideoRangeType"
           default: Unknown
-          description: Gets the video range type.
+          description: An enum representing types of video ranges.
           enum:
           - Unknown
           - SDR
@@ -45765,7 +45765,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/AudioSpatialFormat"
           default: None
-          description: Gets the audio spatial format.
+          description: An enum representing formats of spatial audio.
           enum:
           - None
           - DolbyAtmos
@@ -46664,14 +46664,7 @@ components:
         DeviceProfile:
           allOf:
           - $ref: "#/components/schemas/DeviceProfile"
-          description: |-
-            A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.
-
-
-            Specifically, it defines the supported <see cref="P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles">containers</see> and
-            <see cref="P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles">codecs</see> (video and/or audio, including codec profiles and levels)
-            the device is able to direct play (without transcoding or remuxing),
-            as well as which <see cref="P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles">containers/codecs to transcode to</see> in case it isn't.
+          description: Gets or sets the device profile.
           nullable: true
         DirectPlayProtocols:
           description: Gets or sets the device play protocols.
@@ -47064,7 +47057,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/PlayRequest"
-          description: Gets or sets the data.
+          description: Class PlayRequest.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -47335,14 +47328,7 @@ components:
         DeviceProfile:
           allOf:
           - $ref: "#/components/schemas/DeviceProfile"
-          description: |-
-            A MediaBrowser.Model.Dlna.DeviceProfile represents a set of metadata which determines which content a certain device is able to play.
-
-
-            Specifically, it defines the supported <see cref="P:MediaBrowser.Model.Dlna.DeviceProfile.ContainerProfiles">containers</see> and
-            <see cref="P:MediaBrowser.Model.Dlna.DeviceProfile.CodecProfiles">codecs</see> (video and/or audio, including codec profiles and levels)
-            the device is able to direct play (without transcoding or remuxing),
-            as well as which <see cref="P:MediaBrowser.Model.Dlna.DeviceProfile.TranscodingProfiles">containers/codecs to transcode to</see> in case it isn't.
+          description: Gets or sets the device profile.
           nullable: true
         EnableDirectPlay:
           description: Gets or sets a value indicating whether to enable direct play.
@@ -48294,7 +48280,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/PlaystateRequest"
-          description: Gets or sets the data.
+          description: A request to change the playstate of a session.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -48433,7 +48419,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/InstallationInfo"
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -48490,7 +48476,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/InstallationInfo"
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -48547,7 +48533,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/InstallationInfo"
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -48604,7 +48590,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/InstallationInfo"
-          description: Gets or sets the data.
+          description: Class InstallationInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -48673,7 +48659,8 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/PluginInfo"
-          description: Gets or sets the data.
+          description: This is a serializable stub class that is used by the api to
+            provide information about installed plugins.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -49023,7 +49010,7 @@ components:
         Mode:
           allOf:
           - $ref: "#/components/schemas/GroupQueueMode"
-          description: Enum GroupQueueMode.
+          description: Gets or sets the mode in which to add the new items.
           enum:
           - Queue
           - QueueNext
@@ -51297,7 +51284,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/TaskResult"
-          description: Gets or sets the data.
+          description: Class TaskExecutionInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -51603,7 +51590,7 @@ components:
         Type:
           allOf:
           - $ref: "#/components/schemas/BaseItemKind"
-          description: Gets or sets the type.
+          description: The base item kind.
           enum:
           - AggregateFolder
           - Audio
@@ -51656,7 +51643,7 @@ components:
           allOf:
           - $ref: "#/components/schemas/MediaType"
           default: Unknown
-          description: Gets or sets the type of the media.
+          description: Media types.
           enum:
           - Unknown
           - Video
@@ -53274,7 +53261,7 @@ components:
         Mode:
           allOf:
           - $ref: "#/components/schemas/GroupRepeatMode"
-          description: Enum GroupRepeatMode.
+          description: Gets or sets the repeat mode.
           enum:
           - RepeatOne
           - RepeatAll
@@ -53290,7 +53277,7 @@ components:
         Mode:
           allOf:
           - $ref: "#/components/schemas/GroupShuffleMode"
-          description: Enum GroupShuffleMode.
+          description: Gets or sets the shuffle mode.
           enum:
           - Sorted
           - Shuffle
@@ -53492,7 +53479,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/SendCommand"
-          description: Gets or sets the data.
+          description: Class SendCommand.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -56660,7 +56647,9 @@ components:
         Protocol:
           allOf:
           - $ref: "#/components/schemas/MediaStreamProtocol"
-          description: Gets or sets the protocol.
+          description: |-
+            Media streaming protocol.
+            Lowercase for backwards compatibility.
           enum:
           - http
           - hls
@@ -57327,7 +57316,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/UserDataChangeInfo"
-          description: Gets or sets the data.
+          description: Class UserDataChangeInfo.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
@@ -57827,7 +57816,7 @@ components:
         Data:
           allOf:
           - $ref: "#/components/schemas/UserDto"
-          description: Gets or sets the data.
+          description: Class UserDto.
           nullable: true
         MessageId:
           description: Gets or sets the message id.
