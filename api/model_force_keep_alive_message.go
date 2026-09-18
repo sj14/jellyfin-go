@@ -16,7 +16,7 @@ import (
 // checks if the ForceKeepAliveMessage type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ForceKeepAliveMessage{}
 
-// ForceKeepAliveMessage Force keep alive websocket messages.
+// ForceKeepAliveMessage Force keep alive websocket messages. The data is the timeout in seconds after which the server considers the connection lost; clients are expected to answer with a KeepAlive message and to keep sending one at least every half of that timeout.
 type ForceKeepAliveMessage struct {
 	// Gets or sets the data.
 	Data *int32 `json:"Data,omitempty"`
