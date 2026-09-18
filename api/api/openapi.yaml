@@ -1,8 +1,8 @@
 openapi: 3.0.4
 info:
   title: Jellyfin API
-  version: 12.0.0
-  x-jellyfin-version: 12.0.0
+  version: 12.1.0
+  x-jellyfin-version: 12.1.0
 servers:
 - url: http://localhost
 tags:
@@ -42894,7 +42894,10 @@ components:
       type: object
     ForceKeepAliveMessage:
       additionalProperties: false
-      description: Force keep alive websocket messages.
+      description: |-
+        Force keep alive websocket messages. The data is the timeout in seconds after which the
+        server considers the connection lost; clients are expected to answer with a KeepAlive
+        message and to keep sending one at least every half of that timeout.
       properties:
         Data:
           description: Gets or sets the data.
