@@ -12,10 +12,10 @@ Name | Type | Description | Notes
 **PrimaryImageHeight** | Pointer to **int32** | Gets or sets the height of the primary image. | [optional] 
 **PrimaryImageWidth** | Pointer to **int32** | Gets or sets the width of the primary image. | [optional] 
 **CustomPrefs** | Pointer to **map[string]string** | Gets or sets the custom prefs. | [optional] 
-**ScrollDirection** | Pointer to [**ScrollDirection**](ScrollDirection.md) | An enum representing the axis that should be scrolled. | [optional] 
+**ScrollDirection** | Pointer to [**ScrollDirection**](ScrollDirection.md) | Gets or sets the scroll direction. | [optional] 
 **ShowBackdrop** | Pointer to **bool** | Gets or sets a value indicating whether to show backdrops on this item. | [optional] 
 **RememberSorting** | Pointer to **bool** | Gets or sets a value indicating whether [remember sorting]. | [optional] 
-**SortOrder** | Pointer to [**SortOrder**](SortOrder.md) | An enum representing the sorting order. | [optional] 
+**SortOrder** | Pointer to [**SortOrder**](SortOrder.md) | Gets or sets the sort order. | [optional] 
 **ShowSidebar** | Pointer to **bool** | Gets or sets a value indicating whether [show sidebar]. | [optional] 
 **Client** | Pointer to **NullableString** | Gets or sets the client. | [optional] 
 
