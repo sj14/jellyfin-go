@@ -1,8 +1,8 @@
 openapi: 3.0.4
 info:
   title: Jellyfin API
-  version: 12.2.0
-  x-jellyfin-version: 12.2.0
+  version: 12.3.0
+  x-jellyfin-version: 12.3.0
 servers:
 - url: http://localhost
 tags:
