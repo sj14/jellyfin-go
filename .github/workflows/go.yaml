@@ -4,17 +4,18 @@ on:
   push:
     branches:
       - main
+      - "renovate/**"
     paths:
       - go.mod
       - go.sum
       - "**.go"
-      - ".github/workflows/go.yaml"
+      - ".github/workflows/**"
   pull_request:
     paths:
       - go.mod
       - go.sum
       - "**.go"
-      - ".github/workflows/go.yaml"
+      - ".github/workflows/**"
 jobs:
   build:
     name: Test
