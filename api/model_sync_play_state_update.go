@@ -11,6 +11,7 @@ package api
 
 import (
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the SyncPlayStateUpdate type satisfies the MappedNullable interface at compile time
@@ -24,6 +25,42 @@ type SyncPlayStateUpdate struct {
 	Data *GroupStateUpdate `json:"Data,omitempty"`
 	// Enum GroupUpdateType.
 	Type *GroupUpdateType `json:"Type,omitempty"`
+}
+
+func (o *SyncPlayStateUpdate) validateStringEnumValues(data []byte) error {
+	var fields struct {
+		Type json.RawMessage `json:"Type,omitempty"`
+	}
+	if err := json.Unmarshal(data, &fields); err != nil {
+		return err
+	}
+	if raw := fields.Type; raw != nil {
+		if string(raw) == "null" {
+			return fmt.Errorf("invalid null value for property %s", "Type")
+		}
+		var value string
+		if err := json.Unmarshal(raw, &value); err != nil {
+			return err
+		}
+		if value != "UserJoined" && value != "UserLeft" && value != "GroupJoined" && value != "GroupLeft" && value != "StateUpdate" && value != "PlayQueue" && value != "NotInGroup" && value != "GroupDoesNotExist" && value != "LibraryAccessDenied" {
+			return fmt.Errorf("invalid value %q for property %s", value, "Type")
+		}
+	}
+	return nil
+}
+
+type _SyncPlayStateUpdate SyncPlayStateUpdate
+
+func (o *SyncPlayStateUpdate) UnmarshalJSON(data []byte) error {
+	if err := o.validateStringEnumValues(data); err != nil {
+		return err
+	}
+	value := _SyncPlayStateUpdate(*o)
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*o = SyncPlayStateUpdate(value)
+	return nil
 }
 
 // NewSyncPlayStateUpdate instantiates a new SyncPlayStateUpdate object
