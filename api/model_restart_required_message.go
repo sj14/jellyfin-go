@@ -11,6 +11,7 @@ package api
 
 import (
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the RestartRequiredMessage type satisfies the MappedNullable interface at compile time
@@ -22,6 +23,42 @@ type RestartRequiredMessage struct {
 	MessageId *string `json:"MessageId,omitempty"`
 	// The different kinds of messages that are used in the WebSocket api.
 	MessageType *SessionMessageType `json:"MessageType,omitempty"`
+}
+
+func (o *RestartRequiredMessage) validateStringEnumValues(data []byte) error {
+	var fields struct {
+		MessageType json.RawMessage `json:"MessageType,omitempty"`
+	}
+	if err := json.Unmarshal(data, &fields); err != nil {
+		return err
+	}
+	if raw := fields.MessageType; raw != nil {
+		if string(raw) == "null" {
+			return fmt.Errorf("invalid null value for property %s", "MessageType")
+		}
+		var value string
+		if err := json.Unmarshal(raw, &value); err != nil {
+			return err
+		}
+		if value != "ForceKeepAlive" && value != "GeneralCommand" && value != "UserDataChanged" && value != "Sessions" && value != "Play" && value != "SyncPlayCommand" && value != "SyncPlayGroupUpdate" && value != "Playstate" && value != "RestartRequired" && value != "ServerShuttingDown" && value != "ServerRestarting" && value != "LibraryChanged" && value != "UserDeleted" && value != "UserUpdated" && value != "SeriesTimerCreated" && value != "TimerCreated" && value != "SeriesTimerCancelled" && value != "TimerCancelled" && value != "RefreshProgress" && value != "ScheduledTaskEnded" && value != "PackageInstallationCancelled" && value != "PackageInstallationFailed" && value != "PackageInstallationCompleted" && value != "PackageInstalling" && value != "PackageUninstalled" && value != "ActivityLogEntry" && value != "ScheduledTasksInfo" && value != "ActivityLogEntryStart" && value != "ActivityLogEntryStop" && value != "SessionsStart" && value != "SessionsStop" && value != "ScheduledTasksInfoStart" && value != "ScheduledTasksInfoStop" && value != "KeepAlive" {
+			return fmt.Errorf("invalid value %q for property %s", value, "MessageType")
+		}
+	}
+	return nil
+}
+
+type _RestartRequiredMessage RestartRequiredMessage
+
+func (o *RestartRequiredMessage) UnmarshalJSON(data []byte) error {
+	if err := o.validateStringEnumValues(data); err != nil {
+		return err
+	}
+	value := _RestartRequiredMessage(*o)
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*o = RestartRequiredMessage(value)
+	return nil
 }
 
 // NewRestartRequiredMessage instantiates a new RestartRequiredMessage object
